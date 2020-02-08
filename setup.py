@@ -36,7 +36,7 @@ except ImportError:
 
 NAME = 'Arithmos'
 
-VERSION = '1.0'
+VERSION = '2.0.3'
 ISRELEASED = False
 # full version identifier including a git revision identifier for development
 # build/releases (this is filled/updated in `write_version_py`)
