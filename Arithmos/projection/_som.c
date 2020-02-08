@@ -590,8 +590,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__projection___som
-#define __PYX_HAVE_API__Orange__projection___som
+#define __PYX_HAVE__Arithmos__projection___som
+#define __PYX_HAVE_API__Arithmos__projection___som
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -832,7 +832,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/projection/_som.pyx",
+  "Arithmos/projection/_som.pyx",
   "__init__.pxd",
   "stringsource",
   "type.pxd",
@@ -2128,7 +2128,7 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'Orange.projection._som' */
+/* Module declarations from 'Arithmos.projection._som' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -2177,11 +2177,11 @@ static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int16_t = { "int16_t", NU
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t = { "int32_t", NULL, sizeof(__pyx_t_5numpy_int32_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int32_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int32_t), 0 };
-#define __Pyx_MODULE_NAME "Orange.projection._som"
-extern int __pyx_module_is_main_Orange__projection___som;
-int __pyx_module_is_main_Orange__projection___som = 0;
+#define __Pyx_MODULE_NAME "Arithmos.projection._som"
+extern int __pyx_module_is_main_Arithmos__projection___som;
+int __pyx_module_is_main_Arithmos__projection___som = 0;
 
-/* Implementation of 'Orange.projection._som' */
+/* Implementation of 'Arithmos.projection._som' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -2300,12 +2300,12 @@ static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
-static const char __pyx_k_Orange_projection__som[] = "Orange.projection._som";
+static const char __pyx_k_Arithmos_projection__som[] = "Arithmos.projection._som";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
 static const char __pyx_k_Cannot_index_with_type_s[] = "Cannot index with type '%s'";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
-static const char __pyx_k_Orange_projection__som_pyx[] = "Orange/projection/_som.pyx";
+static const char __pyx_k_Arithmos_projection__som_pyx[] = "Arithmos/projection/_som.pyx";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
@@ -2351,8 +2351,8 @@ static PyObject *__pyx_kp_s_MemoryView_of_r_at_0x_x;
 static PyObject *__pyx_kp_s_MemoryView_of_r_object;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_b_O;
-static PyObject *__pyx_n_s_Orange_projection__som;
-static PyObject *__pyx_kp_s_Orange_projection__som_pyx;
+static PyObject *__pyx_n_s_Arithmos_projection__som;
+static PyObject *__pyx_kp_s_Arithmos_projection__som_pyx;
 static PyObject *__pyx_kp_s_Out_of_bounds_on_buffer_access_a;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_RuntimeError;
@@ -2470,12 +2470,12 @@ static PyObject *__pyx_n_s_winner;
 static PyObject *__pyx_n_s_winners;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_y;
-static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, int __pyx_v_hex); /* proto */
-static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
-static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
-static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_ssumweights, PyObject *__pyx_v_X, int __pyx_v_hex); /* proto */
-static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
-static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_get_winners(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, int __pyx_v_hex); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_2update(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_4update_hex(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_6get_winners_sparse(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_ssumweights, PyObject *__pyx_v_X, int __pyx_v_hex); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_8update_sparse(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_10update_sparse_hex(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
@@ -2576,7 +2576,7 @@ static PyObject *__pyx_codeobj__38;
 static PyObject *__pyx_codeobj__45;
 /* Late includes */
 
-/* "Orange/projection/_som.pyx":18
+/* "Arithmos/projection/_som.pyx":18
  * 
  * 
  * def get_winners(np.float64_t[:, :, :] weights, np.float64_t[:, :] X, int hex):             # <<<<<<<<<<<<<<
@@ -2585,10 +2585,10 @@ static PyObject *__pyx_codeobj__45;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_1get_winners(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_get_winners[] = "get_winners(float64_t[:, :, :] weights, float64_t[:, :] X, int hex)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_1get_winners = {"get_winners", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_1get_winners, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_get_winners};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_1get_winners(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_1get_winners(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_get_winners[] = "get_winners(float64_t[:, :, :] weights, float64_t[:, :] X, int hex)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_1get_winners = {"get_winners", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_1get_winners, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_get_winners};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_1get_winners(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_hex;
@@ -2647,18 +2647,18 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_1get_winners(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_winners", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 18, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.get_winners", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.get_winners", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_get_winners(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_hex);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_get_winners(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_hex);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, int __pyx_v_hex) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_get_winners(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, int __pyx_v_hex) {
   int __pyx_v_x;
   int __pyx_v_y;
   int __pyx_v_win_x;
@@ -2708,7 +2708,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED P
   __pyx_pybuffernd_winners.data = NULL;
   __pyx_pybuffernd_winners.rcbuffer = &__pyx_pybuffer_winners;
 
-  /* "Orange/projection/_som.pyx":24
+  /* "Arithmos/projection/_som.pyx":24
  *         np.float64_t[:] row
  *         np.ndarray[np.int16_t, ndim=2] winners = \
  *             np.empty((X.shape[0], 2), dtype=np.int16)             # <<<<<<<<<<<<<<
@@ -2763,7 +2763,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED P
   __pyx_v_winners = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "Orange/projection/_som.pyx":25
+  /* "Arithmos/projection/_som.pyx":25
  *         np.ndarray[np.int16_t, ndim=2] winners = \
  *             np.empty((X.shape[0], 2), dtype=np.int16)
  *         int nrows = X.shape[0]             # <<<<<<<<<<<<<<
@@ -2772,7 +2772,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED P
  */
   __pyx_v_nrows = (__pyx_v_X.shape[0]);
 
-  /* "Orange/projection/_som.pyx":27
+  /* "Arithmos/projection/_som.pyx":27
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2787,7 +2787,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED P
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":28
+        /* "Arithmos/projection/_som.pyx":28
  * 
  *     with nogil:
  *         for rowi in range(nrows):             # <<<<<<<<<<<<<<
@@ -2799,7 +2799,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_get_winners(CYTHON_UNUSED P
         for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
           __pyx_v_rowi = __pyx_t_9;
 
-          /* "Orange/projection/_som.pyx":29
+          /* "Arithmos/projection/_som.pyx":29
  *     with nogil:
  *         for rowi in range(nrows):
  *             row = X[rowi]             # <<<<<<<<<<<<<<
@@ -2825,7 +2825,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_10.memview = NULL;
           __pyx_t_10.data = NULL;
 
-          /* "Orange/projection/_som.pyx":31
+          /* "Arithmos/projection/_som.pyx":31
  *             row = X[rowi]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -2834,7 +2834,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":32
+          /* "Arithmos/projection/_som.pyx":32
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -2846,7 +2846,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
             __pyx_v_y = __pyx_t_13;
 
-            /* "Orange/projection/_som.pyx":33
+            /* "Arithmos/projection/_som.pyx":33
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - hex * (y % 2)):             # <<<<<<<<<<<<<<
@@ -2858,7 +2858,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_x = __pyx_t_16;
 
-              /* "Orange/projection/_som.pyx":34
+              /* "Arithmos/projection/_som.pyx":34
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - hex * (y % 2)):
  *                     diff = 0             # <<<<<<<<<<<<<<
@@ -2867,7 +2867,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_diff = 0.0;
 
-              /* "Orange/projection/_som.pyx":35
+              /* "Arithmos/projection/_som.pyx":35
  *                 for x in range(weights.shape[1] - hex * (y % 2)):
  *                     diff = 0
  *                     for col in range(weights.shape[2]):             # <<<<<<<<<<<<<<
@@ -2879,7 +2879,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_col = __pyx_t_19;
 
-                /* "Orange/projection/_som.pyx":36
+                /* "Arithmos/projection/_som.pyx":36
  *                     diff = 0
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2             # <<<<<<<<<<<<<<
@@ -2893,7 +2893,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_20 * __pyx_v_row.strides[0]) ))) - (*((__pyx_t_5numpy_float64_t *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_21 * __pyx_v_weights.strides[0]) ) + __pyx_t_22 * __pyx_v_weights.strides[1]) ) + __pyx_t_23 * __pyx_v_weights.strides[2]) )))), 2.0));
               }
 
-              /* "Orange/projection/_som.pyx":37
+              /* "Arithmos/projection/_som.pyx":37
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -2903,7 +2903,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_24 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_24) {
 
-                /* "Orange/projection/_som.pyx":38
+                /* "Arithmos/projection/_som.pyx":38
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -2912,7 +2912,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":39
+                /* "Arithmos/projection/_som.pyx":39
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -2921,7 +2921,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":40
+                /* "Arithmos/projection/_som.pyx":40
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -2930,7 +2930,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":37
+                /* "Arithmos/projection/_som.pyx":37
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -2941,7 +2941,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":41
+          /* "Arithmos/projection/_som.pyx":41
  *                         win_y = y
  *                         min_diff = diff
  *             winners[rowi, 0] = win_x             # <<<<<<<<<<<<<<
@@ -2952,7 +2952,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_26 = 0;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int16_t *, __pyx_pybuffernd_winners.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_winners.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_winners.diminfo[1].strides) = __pyx_v_win_x;
 
-          /* "Orange/projection/_som.pyx":42
+          /* "Arithmos/projection/_som.pyx":42
  *                         min_diff = diff
  *             winners[rowi, 0] = win_x
  *             winners[rowi, 1] = win_y             # <<<<<<<<<<<<<<
@@ -2965,7 +2965,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":27
+      /* "Arithmos/projection/_som.pyx":27
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -2991,7 +2991,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":44
+  /* "Arithmos/projection/_som.pyx":44
  *             winners[rowi, 1] = win_y
  * 
  *     return winners             # <<<<<<<<<<<<<<
@@ -3003,7 +3003,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   __pyx_r = ((PyObject *)__pyx_v_winners);
   goto __pyx_L0;
 
-  /* "Orange/projection/_som.pyx":18
+  /* "Arithmos/projection/_som.pyx":18
  * 
  * 
  * def get_winners(np.float64_t[:, :, :] weights, np.float64_t[:, :] X, int hex):             # <<<<<<<<<<<<<<
@@ -3025,7 +3025,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_winners.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.projection._som.get_winners", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.get_winners", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -3040,7 +3040,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   return __pyx_r;
 }
 
-/* "Orange/projection/_som.pyx":47
+/* "Arithmos/projection/_som.pyx":47
  * 
  * 
  * def update(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -3049,10 +3049,10 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_3update(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_2update[] = "update(float64_t[:, :, :] weights, float64_t[:, :] X, double eta, double sigma)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_3update = {"update", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_3update, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_2update};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_3update(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_3update(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_2update[] = "update(float64_t[:, :, :] weights, float64_t[:, :] X, double eta, double sigma)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_3update = {"update", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_3update, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_2update};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_3update(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_eta;
@@ -3122,18 +3122,18 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_3update(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 47, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_2update(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_2update(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_2update(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
   int __pyx_v_rowi;
   int __pyx_v_x;
   int __pyx_v_y;
@@ -3185,7 +3185,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
   Py_ssize_t __pyx_t_34;
   __Pyx_RefNannySetupContext("update", 0);
 
-  /* "Orange/projection/_som.pyx":53
+  /* "Arithmos/projection/_som.pyx":53
  *         int rowi, x, y, win_x, win_y
  *         np.float64_t[:] row
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2             # <<<<<<<<<<<<<<
@@ -3194,7 +3194,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
  */
   __pyx_v_max_dist = (__Pyx_pow_Py_ssize_t((__pyx_v_weights.shape[0]), 2) + __Pyx_pow_Py_ssize_t((__pyx_v_weights.shape[1]), 2));
 
-  /* "Orange/projection/_som.pyx":54
+  /* "Arithmos/projection/_som.pyx":54
  *         np.float64_t[:] row
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2
  *         double[:] w_lookup = np.empty(max_dist + 1)             # <<<<<<<<<<<<<<
@@ -3230,7 +3230,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "Orange/projection/_som.pyx":55
+  /* "Arithmos/projection/_som.pyx":55
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2
  *         double[:] w_lookup = np.empty(max_dist + 1)
  *         double d = 6.28 * sigma * sigma             # <<<<<<<<<<<<<<
@@ -3239,7 +3239,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
  */
   __pyx_v_d = ((6.28 * __pyx_v_sigma) * __pyx_v_sigma);
 
-  /* "Orange/projection/_som.pyx":58
+  /* "Arithmos/projection/_som.pyx":58
  *         double w, diff, min_diff
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -3254,7 +3254,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":59
+        /* "Arithmos/projection/_som.pyx":59
  * 
  *     with nogil:
  *         for x in range(max_dist + 1):             # <<<<<<<<<<<<<<
@@ -3266,7 +3266,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
         for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
           __pyx_v_x = __pyx_t_8;
 
-          /* "Orange/projection/_som.pyx":60
+          /* "Arithmos/projection/_som.pyx":60
  *     with nogil:
  *         for x in range(max_dist + 1):
  *             w_lookup[x] = eta * exp(-x / d)             # <<<<<<<<<<<<<<
@@ -3277,7 +3277,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
           *((double *) ( /* dim=0 */ (__pyx_v_w_lookup.data + __pyx_t_9 * __pyx_v_w_lookup.strides[0]) )) = (__pyx_v_eta * exp((((double)(-__pyx_v_x)) / __pyx_v_d)));
         }
 
-        /* "Orange/projection/_som.pyx":62
+        /* "Arithmos/projection/_som.pyx":62
  *             w_lookup[x] = eta * exp(-x / d)
  * 
  *         for rowi in range(X.shape[0]):             # <<<<<<<<<<<<<<
@@ -3289,7 +3289,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_2update(CYTHON_UNUSED PyObj
         for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
           __pyx_v_rowi = __pyx_t_8;
 
-          /* "Orange/projection/_som.pyx":63
+          /* "Arithmos/projection/_som.pyx":63
  * 
  *         for rowi in range(X.shape[0]):
  *             row = X[rowi]             # <<<<<<<<<<<<<<
@@ -3315,7 +3315,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_12.memview = NULL;
           __pyx_t_12.data = NULL;
 
-          /* "Orange/projection/_som.pyx":65
+          /* "Arithmos/projection/_som.pyx":65
  *             row = X[rowi]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -3324,7 +3324,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":66
+          /* "Arithmos/projection/_som.pyx":66
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -3336,7 +3336,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
             __pyx_v_y = __pyx_t_15;
 
-            /* "Orange/projection/_som.pyx":67
+            /* "Arithmos/projection/_som.pyx":67
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):             # <<<<<<<<<<<<<<
@@ -3348,7 +3348,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_18 = 0; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
               __pyx_v_x = __pyx_t_18;
 
-              /* "Orange/projection/_som.pyx":68
+              /* "Arithmos/projection/_som.pyx":68
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):
  *                     diff = 0             # <<<<<<<<<<<<<<
@@ -3357,7 +3357,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_diff = 0.0;
 
-              /* "Orange/projection/_som.pyx":69
+              /* "Arithmos/projection/_som.pyx":69
  *                 for x in range(weights.shape[1]):
  *                     diff = 0
  *                     for col in range(weights.shape[2]):             # <<<<<<<<<<<<<<
@@ -3369,7 +3369,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_21 = 0; __pyx_t_21 < __pyx_t_20; __pyx_t_21+=1) {
                 __pyx_v_col = __pyx_t_21;
 
-                /* "Orange/projection/_som.pyx":70
+                /* "Arithmos/projection/_som.pyx":70
  *                     diff = 0
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2             # <<<<<<<<<<<<<<
@@ -3383,7 +3383,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_22 * __pyx_v_row.strides[0]) ))) - (*((__pyx_t_5numpy_float64_t *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_23 * __pyx_v_weights.strides[0]) ) + __pyx_t_24 * __pyx_v_weights.strides[1]) ) + __pyx_t_25 * __pyx_v_weights.strides[2]) )))), 2.0));
               }
 
-              /* "Orange/projection/_som.pyx":71
+              /* "Arithmos/projection/_som.pyx":71
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -3393,7 +3393,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_26 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_26) {
 
-                /* "Orange/projection/_som.pyx":72
+                /* "Arithmos/projection/_som.pyx":72
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -3402,7 +3402,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":73
+                /* "Arithmos/projection/_som.pyx":73
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -3411,7 +3411,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":74
+                /* "Arithmos/projection/_som.pyx":74
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -3420,7 +3420,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":71
+                /* "Arithmos/projection/_som.pyx":71
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -3431,7 +3431,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":76
+          /* "Arithmos/projection/_som.pyx":76
  *                         min_diff = diff
  * 
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -3443,7 +3443,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
             __pyx_v_y = __pyx_t_15;
 
-            /* "Orange/projection/_som.pyx":77
+            /* "Arithmos/projection/_som.pyx":77
  * 
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):             # <<<<<<<<<<<<<<
@@ -3455,7 +3455,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_18 = 0; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
               __pyx_v_x = __pyx_t_18;
 
-              /* "Orange/projection/_som.pyx":78
+              /* "Arithmos/projection/_som.pyx":78
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]             # <<<<<<<<<<<<<<
@@ -3465,7 +3465,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_27 = (__Pyx_pow_long(((long)(__pyx_v_y - __pyx_v_win_y)), 2) + __Pyx_pow_long(((long)(__pyx_v_x - __pyx_v_win_x)), 2));
               __pyx_v_w = (*((double *) ( /* dim=0 */ (__pyx_v_w_lookup.data + __pyx_t_27 * __pyx_v_w_lookup.strides[0]) )));
 
-              /* "Orange/projection/_som.pyx":79
+              /* "Arithmos/projection/_som.pyx":79
  *                 for x in range(weights.shape[1]):
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]
  *                     for col in range(weights.shape[2]):             # <<<<<<<<<<<<<<
@@ -3477,7 +3477,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_21 = 0; __pyx_t_21 < __pyx_t_20; __pyx_t_21+=1) {
                 __pyx_v_col = __pyx_t_21;
 
-                /* "Orange/projection/_som.pyx":80
+                /* "Arithmos/projection/_som.pyx":80
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]
  *                     for col in range(weights.shape[2]):
  *                         weights[y, x, col] += w * (row[col] - weights[y, x, col])             # <<<<<<<<<<<<<<
@@ -3498,7 +3498,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":58
+      /* "Arithmos/projection/_som.pyx":58
  *         double w, diff, min_diff
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -3524,7 +3524,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":47
+  /* "Arithmos/projection/_som.pyx":47
  * 
  * 
  * def update(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -3542,7 +3542,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   __Pyx_XDECREF(__pyx_t_4);
   __PYX_XDEC_MEMVIEW(&__pyx_t_5, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_12, 1);
-  __Pyx_AddTraceback("Orange.projection._som.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_row, 1);
@@ -3554,7 +3554,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   return __pyx_r;
 }
 
-/* "Orange/projection/_som.pyx":83
+/* "Arithmos/projection/_som.pyx":83
  * 
  * 
  * def update_hex(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -3563,10 +3563,10 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_5update_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_4update_hex[] = "update_hex(float64_t[:, :, :] weights, float64_t[:, :] X, double eta, double sigma)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_5update_hex = {"update_hex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_5update_hex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_4update_hex};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_5update_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_5update_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_4update_hex[] = "update_hex(float64_t[:, :, :] weights, float64_t[:, :] X, double eta, double sigma)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_5update_hex = {"update_hex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_5update_hex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_4update_hex};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_5update_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_X = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_eta;
@@ -3636,18 +3636,18 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_5update_hex(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_hex", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 83, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.update_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_4update_hex(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_4update_hex(__pyx_self, __pyx_v_weights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_4update_hex(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
   int __pyx_v_rowi;
   int __pyx_v_x;
   int __pyx_v_y;
@@ -3690,7 +3690,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED P
   Py_ssize_t __pyx_t_25;
   __Pyx_RefNannySetupContext("update_hex", 0);
 
-  /* "Orange/projection/_som.pyx":89
+  /* "Arithmos/projection/_som.pyx":89
  *         int rowi, x, y, win_x, win_y
  *         np.float64_t[:] row
  *         double d = 6.28 * sigma * sigma             # <<<<<<<<<<<<<<
@@ -3699,7 +3699,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED P
  */
   __pyx_v_d = ((6.28 * __pyx_v_sigma) * __pyx_v_sigma);
 
-  /* "Orange/projection/_som.pyx":93
+  /* "Arithmos/projection/_som.pyx":93
  *         double w, diff, min_diff
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -3714,7 +3714,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED P
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":94
+        /* "Arithmos/projection/_som.pyx":94
  * 
  *     with nogil:
  *         for rowi in range(X.shape[0]):             # <<<<<<<<<<<<<<
@@ -3726,7 +3726,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_4update_hex(CYTHON_UNUSED P
         for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
           __pyx_v_rowi = __pyx_t_3;
 
-          /* "Orange/projection/_som.pyx":95
+          /* "Arithmos/projection/_som.pyx":95
  *     with nogil:
  *         for rowi in range(X.shape[0]):
  *             row = X[rowi]             # <<<<<<<<<<<<<<
@@ -3752,7 +3752,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_4.memview = NULL;
           __pyx_t_4.data = NULL;
 
-          /* "Orange/projection/_som.pyx":97
+          /* "Arithmos/projection/_som.pyx":97
  *             row = X[rowi]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -3761,7 +3761,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":98
+          /* "Arithmos/projection/_som.pyx":98
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -3773,7 +3773,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
             __pyx_v_y = __pyx_t_7;
 
-            /* "Orange/projection/_som.pyx":99
+            /* "Arithmos/projection/_som.pyx":99
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):             # <<<<<<<<<<<<<<
@@ -3785,7 +3785,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
               __pyx_v_x = __pyx_t_10;
 
-              /* "Orange/projection/_som.pyx":100
+              /* "Arithmos/projection/_som.pyx":100
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):
  *                     diff = 0             # <<<<<<<<<<<<<<
@@ -3794,7 +3794,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_diff = 0.0;
 
-              /* "Orange/projection/_som.pyx":101
+              /* "Arithmos/projection/_som.pyx":101
  *                 for x in range(weights.shape[1] - y % 2):
  *                     diff = 0
  *                     for col in range(weights.shape[2]):             # <<<<<<<<<<<<<<
@@ -3806,7 +3806,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
                 __pyx_v_col = __pyx_t_13;
 
-                /* "Orange/projection/_som.pyx":102
+                /* "Arithmos/projection/_som.pyx":102
  *                     diff = 0
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2             # <<<<<<<<<<<<<<
@@ -3820,7 +3820,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_14 * __pyx_v_row.strides[0]) ))) - (*((__pyx_t_5numpy_float64_t *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_15 * __pyx_v_weights.strides[0]) ) + __pyx_t_16 * __pyx_v_weights.strides[1]) ) + __pyx_t_17 * __pyx_v_weights.strides[2]) )))), 2.0));
               }
 
-              /* "Orange/projection/_som.pyx":103
+              /* "Arithmos/projection/_som.pyx":103
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -3830,7 +3830,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_18 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_18) {
 
-                /* "Orange/projection/_som.pyx":104
+                /* "Arithmos/projection/_som.pyx":104
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -3839,7 +3839,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":105
+                /* "Arithmos/projection/_som.pyx":105
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -3848,7 +3848,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":106
+                /* "Arithmos/projection/_som.pyx":106
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -3857,7 +3857,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":103
+                /* "Arithmos/projection/_som.pyx":103
  *                     for col in range(weights.shape[2]):
  *                         diff += (row[col] - weights[y, x, col]) ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -3868,7 +3868,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":108
+          /* "Arithmos/projection/_som.pyx":108
  *                         min_diff = diff
  * 
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -3880,7 +3880,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
             __pyx_v_y = __pyx_t_7;
 
-            /* "Orange/projection/_som.pyx":109
+            /* "Arithmos/projection/_som.pyx":109
  * 
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):             # <<<<<<<<<<<<<<
@@ -3892,7 +3892,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
               __pyx_v_x = __pyx_t_10;
 
-              /* "Orange/projection/_som.pyx":110
+              /* "Arithmos/projection/_som.pyx":110
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):
  *                     dy = y - win_y             # <<<<<<<<<<<<<<
@@ -3901,7 +3901,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_dy = (__pyx_v_y - __pyx_v_win_y);
 
-              /* "Orange/projection/_som.pyx":111
+              /* "Arithmos/projection/_som.pyx":111
  *                 for x in range(weights.shape[1]):
  *                     dy = y - win_y
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2             # <<<<<<<<<<<<<<
@@ -3910,7 +3910,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_dist = (((pow(__pyx_v_dy, 2.0) * 3.0) / 4.0) + pow(((__pyx_v_x - __pyx_v_win_x) + (fmod(__pyx_v_dy, 2.0) / 2.0)), 2.0));
 
-              /* "Orange/projection/_som.pyx":112
+              /* "Arithmos/projection/_som.pyx":112
  *                     dy = y - win_y
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2
  *                     w = eta * exp(-dist / d)             # <<<<<<<<<<<<<<
@@ -3919,7 +3919,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_w = (__pyx_v_eta * exp(((-__pyx_v_dist) / __pyx_v_d)));
 
-              /* "Orange/projection/_som.pyx":113
+              /* "Arithmos/projection/_som.pyx":113
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2
  *                     w = eta * exp(-dist / d)
  *                     for col in range(weights.shape[2]):             # <<<<<<<<<<<<<<
@@ -3931,7 +3931,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
                 __pyx_v_col = __pyx_t_13;
 
-                /* "Orange/projection/_som.pyx":114
+                /* "Arithmos/projection/_som.pyx":114
  *                     w = eta * exp(-dist / d)
  *                     for col in range(weights.shape[2]):
  *                         weights[y, x, col] += w * (row[col] - weights[y, x, col])             # <<<<<<<<<<<<<<
@@ -3952,7 +3952,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":93
+      /* "Arithmos/projection/_som.pyx":93
  *         double w, diff, min_diff
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -3978,7 +3978,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":83
+  /* "Arithmos/projection/_som.pyx":83
  * 
  * 
  * def update_hex(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -3991,7 +3991,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   goto __pyx_L0;
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_4, 1);
-  __Pyx_AddTraceback("Orange.projection._som.update_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_row, 1);
@@ -4002,7 +4002,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   return __pyx_r;
 }
 
-/* "Orange/projection/_som.pyx":117
+/* "Arithmos/projection/_som.pyx":117
  * 
  * 
  * def get_winners_sparse(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -4011,10 +4011,10 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_7get_winners_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_6get_winners_sparse[] = "get_winners_sparse(float64_t[:, :, :] weights, float64_t[:, :] ssumweights, X, int hex)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_7get_winners_sparse = {"get_winners_sparse", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_7get_winners_sparse, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_6get_winners_sparse};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_7get_winners_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_7get_winners_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_6get_winners_sparse[] = "get_winners_sparse(float64_t[:, :, :] weights, float64_t[:, :] ssumweights, X, int hex)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_7get_winners_sparse = {"get_winners_sparse", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_7get_winners_sparse, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_6get_winners_sparse};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_7get_winners_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_ssumweights = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_X = 0;
@@ -4084,18 +4084,18 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_7get_winners_sparse(PyObjec
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("get_winners_sparse", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 117, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.get_winners_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.get_winners_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_hex);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_6get_winners_sparse(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_hex);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_ssumweights, PyObject *__pyx_v_X, int __pyx_v_hex) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_6get_winners_sparse(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_weights, __Pyx_memviewslice __pyx_v_ssumweights, PyObject *__pyx_v_X, int __pyx_v_hex) {
   int __pyx_v_x;
   int __pyx_v_y;
   int __pyx_v_i;
@@ -4161,7 +4161,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __pyx_pybuffernd_winners.data = NULL;
   __pyx_pybuffernd_winners.rcbuffer = &__pyx_pybuffer_winners;
 
-  /* "Orange/projection/_som.pyx":123
+  /* "Arithmos/projection/_som.pyx":123
  *         int x, y, best_x, best_y, i, col
  *         double diff, min_diff
  *         np.float64_t[:] data = X.data             # <<<<<<<<<<<<<<
@@ -4176,7 +4176,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __pyx_t_2.memview = NULL;
   __pyx_t_2.data = NULL;
 
-  /* "Orange/projection/_som.pyx":124
+  /* "Arithmos/projection/_som.pyx":124
  *         double diff, min_diff
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices             # <<<<<<<<<<<<<<
@@ -4191,7 +4191,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "Orange/projection/_som.pyx":125
+  /* "Arithmos/projection/_som.pyx":125
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices
  *         np.int32_t[:] indptr = X.indptr             # <<<<<<<<<<<<<<
@@ -4206,7 +4206,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __pyx_t_3.memview = NULL;
   __pyx_t_3.data = NULL;
 
-  /* "Orange/projection/_som.pyx":129
+  /* "Arithmos/projection/_som.pyx":129
  *         np.float64_t[:] row,
  *         np.ndarray[np.int16_t, ndim=2] winners = \
  *             np.empty((X.shape[0], 2), dtype=np.int16)             # <<<<<<<<<<<<<<
@@ -4264,7 +4264,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __pyx_v_winners = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "Orange/projection/_som.pyx":130
+  /* "Arithmos/projection/_som.pyx":130
  *         np.ndarray[np.int16_t, ndim=2] winners = \
  *             np.empty((X.shape[0], 2), dtype=np.int16)
  *         int nrows = X.shape[0]             # <<<<<<<<<<<<<<
@@ -4280,7 +4280,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_nrows = __pyx_t_9;
 
-  /* "Orange/projection/_som.pyx":132
+  /* "Arithmos/projection/_som.pyx":132
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4295,7 +4295,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":133
+        /* "Arithmos/projection/_som.pyx":133
  * 
  *     with nogil:
  *         for rowi in range(nrows):             # <<<<<<<<<<<<<<
@@ -4307,7 +4307,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_6get_winners_sparse(CYTHON_
         for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
           __pyx_v_rowi = __pyx_t_11;
 
-          /* "Orange/projection/_som.pyx":134
+          /* "Arithmos/projection/_som.pyx":134
  *     with nogil:
  *         for rowi in range(nrows):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -4342,7 +4342,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_columns, 0);
           __pyx_t_3.memview = NULL;
           __pyx_t_3.data = NULL;
 
-          /* "Orange/projection/_som.pyx":135
+          /* "Arithmos/projection/_som.pyx":135
  *         for rowi in range(nrows):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]
  *             row = data[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -4377,7 +4377,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_2.memview = NULL;
           __pyx_t_2.data = NULL;
 
-          /* "Orange/projection/_som.pyx":137
+          /* "Arithmos/projection/_som.pyx":137
  *             row = data[indptr[rowi]:indptr[rowi + 1]]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -4386,7 +4386,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":138
+          /* "Arithmos/projection/_som.pyx":138
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -4398,7 +4398,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_18; __pyx_t_14+=1) {
             __pyx_v_y = __pyx_t_14;
 
-            /* "Orange/projection/_som.pyx":139
+            /* "Arithmos/projection/_som.pyx":139
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - hex * (y % 2)):             # <<<<<<<<<<<<<<
@@ -4410,7 +4410,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_21 = 0; __pyx_t_21 < __pyx_t_20; __pyx_t_21+=1) {
               __pyx_v_x = __pyx_t_21;
 
-              /* "Orange/projection/_som.pyx":140
+              /* "Arithmos/projection/_som.pyx":140
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - hex * (y % 2)):
  *                     diff = ssumweights[y, x]  # First assume that all values are zero             # <<<<<<<<<<<<<<
@@ -4421,7 +4421,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_23 = __pyx_v_x;
               __pyx_v_diff = (*((__pyx_t_5numpy_float64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ssumweights.data + __pyx_t_22 * __pyx_v_ssumweights.strides[0]) ) + __pyx_t_23 * __pyx_v_ssumweights.strides[1]) )));
 
-              /* "Orange/projection/_som.pyx":141
+              /* "Arithmos/projection/_som.pyx":141
  *                 for x in range(weights.shape[1] - hex * (y % 2)):
  *                     diff = ssumweights[y, x]  # First assume that all values are zero
  *                     for i in range(columns.shape[0]):             # <<<<<<<<<<<<<<
@@ -4433,7 +4433,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_26 = 0; __pyx_t_26 < __pyx_t_25; __pyx_t_26+=1) {
                 __pyx_v_i = __pyx_t_26;
 
-                /* "Orange/projection/_som.pyx":142
+                /* "Arithmos/projection/_som.pyx":142
  *                     diff = ssumweights[y, x]  # First assume that all values are zero
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]             # <<<<<<<<<<<<<<
@@ -4443,7 +4443,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_27 = __pyx_v_i;
                 __pyx_v_col = (*((__pyx_t_5numpy_int32_t *) ( /* dim=0 */ (__pyx_v_columns.data + __pyx_t_27 * __pyx_v_columns.strides[0]) )));
 
-                /* "Orange/projection/_som.pyx":143
+                /* "Arithmos/projection/_som.pyx":143
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (data[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -4455,7 +4455,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_30 = __pyx_v_x;
                 __pyx_t_31 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":144
+                /* "Arithmos/projection/_som.pyx":144
  *                         col = columns[i]
  *                         diff += (data[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -4466,7 +4466,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_33 = __pyx_v_x;
                 __pyx_t_34 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":143
+                /* "Arithmos/projection/_som.pyx":143
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (data[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -4476,7 +4476,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + (pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_data.data + __pyx_t_28 * __pyx_v_data.strides[0]) ))) - (*((__pyx_t_5numpy_float64_t *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_29 * __pyx_v_weights.strides[0]) ) + __pyx_t_30 * __pyx_v_weights.strides[1]) ) + __pyx_t_31 * __pyx_v_weights.strides[2]) )))), 2.0) - pow((*((__pyx_t_5numpy_float64_t *) ( /* dim=2 */ (( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_32 * __pyx_v_weights.strides[0]) ) + __pyx_t_33 * __pyx_v_weights.strides[1]) ) + __pyx_t_34 * __pyx_v_weights.strides[2]) ))), 2.0)));
               }
 
-              /* "Orange/projection/_som.pyx":145
+              /* "Arithmos/projection/_som.pyx":145
  *                         diff += (data[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -4486,7 +4486,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_35 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_35) {
 
-                /* "Orange/projection/_som.pyx":146
+                /* "Arithmos/projection/_som.pyx":146
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -4495,7 +4495,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":147
+                /* "Arithmos/projection/_som.pyx":147
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -4504,7 +4504,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":148
+                /* "Arithmos/projection/_som.pyx":148
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -4513,7 +4513,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":145
+                /* "Arithmos/projection/_som.pyx":145
  *                         diff += (data[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -4524,7 +4524,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":150
+          /* "Arithmos/projection/_som.pyx":150
  *                         min_diff = diff
  * 
  *             winners[rowi, 0] = win_x             # <<<<<<<<<<<<<<
@@ -4535,7 +4535,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_37 = 0;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int16_t *, __pyx_pybuffernd_winners.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_winners.diminfo[0].strides, __pyx_t_37, __pyx_pybuffernd_winners.diminfo[1].strides) = __pyx_v_win_x;
 
-          /* "Orange/projection/_som.pyx":151
+          /* "Arithmos/projection/_som.pyx":151
  * 
  *             winners[rowi, 0] = win_x
  *             winners[rowi, 1] = win_y             # <<<<<<<<<<<<<<
@@ -4548,7 +4548,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":132
+      /* "Arithmos/projection/_som.pyx":132
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4574,7 +4574,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":152
+  /* "Arithmos/projection/_som.pyx":152
  *             winners[rowi, 0] = win_x
  *             winners[rowi, 1] = win_y
  *     return winners             # <<<<<<<<<<<<<<
@@ -4586,7 +4586,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   __pyx_r = ((PyObject *)__pyx_v_winners);
   goto __pyx_L0;
 
-  /* "Orange/projection/_som.pyx":117
+  /* "Arithmos/projection/_som.pyx":117
  * 
  * 
  * def get_winners_sparse(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -4609,7 +4609,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_winners.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.projection._som.get_winners_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.get_winners_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4628,7 +4628,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   return __pyx_r;
 }
 
-/* "Orange/projection/_som.pyx":155
+/* "Arithmos/projection/_som.pyx":155
  * 
  * 
  * def update_sparse(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -4637,10 +4637,10 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_9update_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_8update_sparse[] = "update_sparse(ndarray weights, ndarray ssumweights, X, double eta, double sigma)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_9update_sparse = {"update_sparse", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_9update_sparse, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_8update_sparse};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_9update_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_9update_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_8update_sparse[] = "update_sparse(ndarray weights, ndarray ssumweights, X, double eta, double sigma)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_9update_sparse = {"update_sparse", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_9update_sparse, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_8update_sparse};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_9update_sparse(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_weights = 0;
   PyArrayObject *__pyx_v_ssumweights = 0;
   PyObject *__pyx_v_X = 0;
@@ -4721,13 +4721,13 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_9update_sparse(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_sparse", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 155, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.update_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) __PYX_ERR(0, 155, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ssumweights), __pyx_ptype_5numpy_ndarray, 1, "ssumweights", 0))) __PYX_ERR(0, 156, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_8update_sparse(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_8update_sparse(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4738,7 +4738,7 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_9update_sparse(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_8update_sparse(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
   int __pyx_v_rowi;
   int __pyx_v_x;
   int __pyx_v_y;
@@ -4840,7 +4840,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   }
   __pyx_pybuffernd_ssumweights.diminfo[0].strides = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ssumweights.diminfo[0].shape = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ssumweights.diminfo[1].strides = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ssumweights.diminfo[1].shape = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/projection/_som.pyx":161
+  /* "Arithmos/projection/_som.pyx":161
  *     cdef:
  *         int rowi, x, y, win_x, win_y, i, col
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2             # <<<<<<<<<<<<<<
@@ -4849,7 +4849,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
  */
   __pyx_v_max_dist = (__Pyx_pow_long(((long)(__pyx_v_weights->dimensions[0])), 2) + __Pyx_pow_long(((long)(__pyx_v_weights->dimensions[1])), 2));
 
-  /* "Orange/projection/_som.pyx":162
+  /* "Arithmos/projection/_som.pyx":162
  *         int rowi, x, y, win_x, win_y, i, col
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2
  *         double[:] w_lookup = np.empty(max_dist + 1)             # <<<<<<<<<<<<<<
@@ -4885,7 +4885,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "Orange/projection/_som.pyx":163
+  /* "Arithmos/projection/_som.pyx":163
  *         int max_dist = weights.shape[0] ** 2 + weights.shape[1] ** 2
  *         double[:] w_lookup = np.empty(max_dist + 1)
  *         double d = 6.28 * sigma * sigma             # <<<<<<<<<<<<<<
@@ -4894,7 +4894,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
  */
   __pyx_v_d = ((6.28 * __pyx_v_sigma) * __pyx_v_sigma);
 
-  /* "Orange/projection/_som.pyx":165
+  /* "Arithmos/projection/_som.pyx":165
  *         double d = 6.28 * sigma * sigma
  *         double w, diff, min_diff
  *         np.float64_t[:] data = X.data             # <<<<<<<<<<<<<<
@@ -4909,7 +4909,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/projection/_som.pyx":166
+  /* "Arithmos/projection/_som.pyx":166
  *         double w, diff, min_diff
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices             # <<<<<<<<<<<<<<
@@ -4924,7 +4924,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/projection/_som.pyx":167
+  /* "Arithmos/projection/_som.pyx":167
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices
  *         np.int32_t[:] indptr = X.indptr             # <<<<<<<<<<<<<<
@@ -4939,7 +4939,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/projection/_som.pyx":170
+  /* "Arithmos/projection/_som.pyx":170
  *         np.float64_t[:] row
  *         np.int32_t[:] columns
  *         int nrows = X.shape[0]             # <<<<<<<<<<<<<<
@@ -4955,7 +4955,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_nrows = __pyx_t_8;
 
-  /* "Orange/projection/_som.pyx":172
+  /* "Arithmos/projection/_som.pyx":172
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4970,7 +4970,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":173
+        /* "Arithmos/projection/_som.pyx":173
  * 
  *     with nogil:
  *         for x in range(max_dist + 1):             # <<<<<<<<<<<<<<
@@ -4982,7 +4982,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
         for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_10; __pyx_t_8+=1) {
           __pyx_v_x = __pyx_t_8;
 
-          /* "Orange/projection/_som.pyx":174
+          /* "Arithmos/projection/_som.pyx":174
  *     with nogil:
  *         for x in range(max_dist + 1):
  *             w_lookup[x] = eta * exp(-x / d)             # <<<<<<<<<<<<<<
@@ -4993,7 +4993,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
           *((double *) ( /* dim=0 */ (__pyx_v_w_lookup.data + __pyx_t_11 * __pyx_v_w_lookup.strides[0]) )) = (__pyx_v_eta * exp((((double)(-__pyx_v_x)) / __pyx_v_d)));
         }
 
-        /* "Orange/projection/_som.pyx":176
+        /* "Arithmos/projection/_som.pyx":176
  *             w_lookup[x] = eta * exp(-x / d)
  * 
  *         for rowi in range(nrows):             # <<<<<<<<<<<<<<
@@ -5005,7 +5005,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_8update_sparse(CYTHON_UNUSE
         for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
           __pyx_v_rowi = __pyx_t_13;
 
-          /* "Orange/projection/_som.pyx":177
+          /* "Arithmos/projection/_som.pyx":177
  * 
  *         for rowi in range(nrows):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -5040,7 +5040,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_columns, 0);
           __pyx_t_7.memview = NULL;
           __pyx_t_7.data = NULL;
 
-          /* "Orange/projection/_som.pyx":178
+          /* "Arithmos/projection/_som.pyx":178
  *         for rowi in range(nrows):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]
  *             row = data[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -5075,7 +5075,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_6.memview = NULL;
           __pyx_t_6.data = NULL;
 
-          /* "Orange/projection/_som.pyx":180
+          /* "Arithmos/projection/_som.pyx":180
  *             row = data[indptr[rowi]:indptr[rowi + 1]]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -5084,7 +5084,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":181
+          /* "Arithmos/projection/_som.pyx":181
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -5096,7 +5096,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_20; __pyx_t_16+=1) {
             __pyx_v_y = __pyx_t_16;
 
-            /* "Orange/projection/_som.pyx":182
+            /* "Arithmos/projection/_som.pyx":182
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):             # <<<<<<<<<<<<<<
@@ -5108,7 +5108,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_23 = 0; __pyx_t_23 < __pyx_t_22; __pyx_t_23+=1) {
               __pyx_v_x = __pyx_t_23;
 
-              /* "Orange/projection/_som.pyx":183
+              /* "Arithmos/projection/_som.pyx":183
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):
  *                     diff = ssumweights[y, x]             # <<<<<<<<<<<<<<
@@ -5119,7 +5119,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_25 = __pyx_v_x;
               __pyx_v_diff = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_ssumweights.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_ssumweights.diminfo[1].strides));
 
-              /* "Orange/projection/_som.pyx":184
+              /* "Arithmos/projection/_som.pyx":184
  *                 for x in range(weights.shape[1]):
  *                     diff = ssumweights[y, x]
  *                     for i in range(columns.shape[0]):             # <<<<<<<<<<<<<<
@@ -5131,7 +5131,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_28 = 0; __pyx_t_28 < __pyx_t_27; __pyx_t_28+=1) {
                 __pyx_v_i = __pyx_t_28;
 
-                /* "Orange/projection/_som.pyx":185
+                /* "Arithmos/projection/_som.pyx":185
  *                     diff = ssumweights[y, x]
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]             # <<<<<<<<<<<<<<
@@ -5141,7 +5141,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_29 = __pyx_v_i;
                 __pyx_v_col = (*((__pyx_t_5numpy_int32_t *) ( /* dim=0 */ (__pyx_v_columns.data + __pyx_t_29 * __pyx_v_columns.strides[0]) )));
 
-                /* "Orange/projection/_som.pyx":186
+                /* "Arithmos/projection/_som.pyx":186
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -5153,7 +5153,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_32 = __pyx_v_x;
                 __pyx_t_33 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":187
+                /* "Arithmos/projection/_som.pyx":187
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -5164,7 +5164,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_35 = __pyx_v_x;
                 __pyx_t_36 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":186
+                /* "Arithmos/projection/_som.pyx":186
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -5174,7 +5174,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + (pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_30 * __pyx_v_row.strides[0]) ))) - (*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_33, __pyx_pybuffernd_weights.diminfo[2].strides))), 2.0) - pow((*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_34, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_35, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_36, __pyx_pybuffernd_weights.diminfo[2].strides)), 2.0)));
               }
 
-              /* "Orange/projection/_som.pyx":188
+              /* "Arithmos/projection/_som.pyx":188
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -5184,7 +5184,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_37 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_37) {
 
-                /* "Orange/projection/_som.pyx":189
+                /* "Arithmos/projection/_som.pyx":189
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -5193,7 +5193,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":190
+                /* "Arithmos/projection/_som.pyx":190
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -5202,7 +5202,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":191
+                /* "Arithmos/projection/_som.pyx":191
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -5211,7 +5211,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":188
+                /* "Arithmos/projection/_som.pyx":188
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -5222,7 +5222,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":193
+          /* "Arithmos/projection/_som.pyx":193
  *                         min_diff = diff
  * 
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -5234,7 +5234,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_20; __pyx_t_16+=1) {
             __pyx_v_y = __pyx_t_16;
 
-            /* "Orange/projection/_som.pyx":194
+            /* "Arithmos/projection/_som.pyx":194
  * 
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):             # <<<<<<<<<<<<<<
@@ -5246,7 +5246,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_23 = 0; __pyx_t_23 < __pyx_t_10; __pyx_t_23+=1) {
               __pyx_v_x = __pyx_t_23;
 
-              /* "Orange/projection/_som.pyx":195
+              /* "Arithmos/projection/_som.pyx":195
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]             # <<<<<<<<<<<<<<
@@ -5256,7 +5256,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_38 = (__Pyx_pow_long(((long)(__pyx_v_y - __pyx_v_win_y)), 2) + __Pyx_pow_long(((long)(__pyx_v_x - __pyx_v_win_x)), 2));
               __pyx_v_w = (*((double *) ( /* dim=0 */ (__pyx_v_w_lookup.data + __pyx_t_38 * __pyx_v_w_lookup.strides[0]) )));
 
-              /* "Orange/projection/_som.pyx":196
+              /* "Arithmos/projection/_som.pyx":196
  *                 for x in range(weights.shape[1] - y % 2):
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]
  *                     for i in range(columns.shape[0]):             # <<<<<<<<<<<<<<
@@ -5268,7 +5268,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_28 = 0; __pyx_t_28 < __pyx_t_27; __pyx_t_28+=1) {
                 __pyx_v_i = __pyx_t_28;
 
-                /* "Orange/projection/_som.pyx":197
+                /* "Arithmos/projection/_som.pyx":197
  *                     w = w_lookup[(y - win_y) ** 2 + (x - win_x) ** 2]
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]             # <<<<<<<<<<<<<<
@@ -5278,7 +5278,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_39 = __pyx_v_i;
                 __pyx_v_col = (*((__pyx_t_5numpy_int32_t *) ( /* dim=0 */ (__pyx_v_columns.data + __pyx_t_39 * __pyx_v_columns.strides[0]) )));
 
-                /* "Orange/projection/_som.pyx":198
+                /* "Arithmos/projection/_som.pyx":198
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -5292,7 +5292,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_44 = __pyx_v_x;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.buf, __pyx_t_43, __pyx_pybuffernd_ssumweights.diminfo[0].strides, __pyx_t_44, __pyx_pybuffernd_ssumweights.diminfo[1].strides) -= pow((*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_40, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_41, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_42, __pyx_pybuffernd_weights.diminfo[2].strides)), 2.0);
 
-                /* "Orange/projection/_som.pyx":199
+                /* "Arithmos/projection/_som.pyx":199
  *                         col = columns[i]
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2
  *                         weights[y, x, col] += w * (row[i] - weights[y, x, col])             # <<<<<<<<<<<<<<
@@ -5308,7 +5308,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_51 = __pyx_v_col;
                 *__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_49, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_50, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_51, __pyx_pybuffernd_weights.diminfo[2].strides) += (__pyx_v_w * ((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_45 * __pyx_v_row.strides[0]) ))) - (*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_46, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_47, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_48, __pyx_pybuffernd_weights.diminfo[2].strides))));
 
-                /* "Orange/projection/_som.pyx":200
+                /* "Arithmos/projection/_som.pyx":200
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2
  *                         weights[y, x, col] += w * (row[i] - weights[y, x, col])
  *                         ssumweights[y, x] += weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -5327,7 +5327,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":172
+      /* "Arithmos/projection/_som.pyx":172
  *         int nrows = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -5353,7 +5353,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":155
+  /* "Arithmos/projection/_som.pyx":155
  * 
  * 
  * def update_sparse(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -5379,7 +5379,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ssumweights.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_weights.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.projection._som.update_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_sparse", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5397,7 +5397,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
   return __pyx_r;
 }
 
-/* "Orange/projection/_som.pyx":203
+/* "Arithmos/projection/_som.pyx":203
  * 
  * 
  * def update_sparse_hex(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -5406,10 +5406,10 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10projection_4_som_11update_sparse_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10projection_4_som_10update_sparse_hex[] = "update_sparse_hex(ndarray weights, ndarray ssumweights, X, double eta, double sigma)";
-static PyMethodDef __pyx_mdef_6Orange_10projection_4_som_11update_sparse_hex = {"update_sparse_hex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_10projection_4_som_11update_sparse_hex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10projection_4_som_10update_sparse_hex};
-static PyObject *__pyx_pw_6Orange_10projection_4_som_11update_sparse_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_11update_sparse_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10projection_4_som_10update_sparse_hex[] = "update_sparse_hex(ndarray weights, ndarray ssumweights, X, double eta, double sigma)";
+static PyMethodDef __pyx_mdef_6Arithmos_10projection_4_som_11update_sparse_hex = {"update_sparse_hex", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_10projection_4_som_11update_sparse_hex, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10projection_4_som_10update_sparse_hex};
+static PyObject *__pyx_pw_6Arithmos_10projection_4_som_11update_sparse_hex(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_weights = 0;
   PyArrayObject *__pyx_v_ssumweights = 0;
   PyObject *__pyx_v_X = 0;
@@ -5490,13 +5490,13 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_11update_sparse_hex(PyObjec
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("update_sparse_hex", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 203, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.projection._som.update_sparse_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_sparse_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) __PYX_ERR(0, 203, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ssumweights), __pyx_ptype_5numpy_ndarray, 1, "ssumweights", 0))) __PYX_ERR(0, 204, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
+  __pyx_r = __pyx_pf_6Arithmos_10projection_4_som_10update_sparse_hex(__pyx_self, __pyx_v_weights, __pyx_v_ssumweights, __pyx_v_X, __pyx_v_eta, __pyx_v_sigma);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5507,7 +5507,7 @@ static PyObject *__pyx_pw_6Orange_10projection_4_som_11update_sparse_hex(PyObjec
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
+static PyObject *__pyx_pf_6Arithmos_10projection_4_som_10update_sparse_hex(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, PyArrayObject *__pyx_v_ssumweights, PyObject *__pyx_v_X, double __pyx_v_eta, double __pyx_v_sigma) {
   int __pyx_v_rowi;
   int __pyx_v_x;
   int __pyx_v_y;
@@ -5614,7 +5614,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   }
   __pyx_pybuffernd_ssumweights.diminfo[0].strides = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ssumweights.diminfo[0].shape = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_ssumweights.diminfo[1].strides = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_ssumweights.diminfo[1].shape = __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/projection/_som.pyx":209
+  /* "Arithmos/projection/_som.pyx":209
  *     cdef:
  *         int rowi, x, y, win_x, win_y, i, col
  *         np.ndarray[np.int16_t, ndim=1] winner = np.empty(2, dtype=np.int16)             # <<<<<<<<<<<<<<
@@ -5653,7 +5653,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   __pyx_v_winner = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "Orange/projection/_som.pyx":210
+  /* "Arithmos/projection/_som.pyx":210
  *         int rowi, x, y, win_x, win_y, i, col
  *         np.ndarray[np.int16_t, ndim=1] winner = np.empty(2, dtype=np.int16)
  *         double d = 6.28 * sigma * sigma             # <<<<<<<<<<<<<<
@@ -5662,7 +5662,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
  */
   __pyx_v_d = ((6.28 * __pyx_v_sigma) * __pyx_v_sigma);
 
-  /* "Orange/projection/_som.pyx":212
+  /* "Arithmos/projection/_som.pyx":212
  *         double d = 6.28 * sigma * sigma
  *         double w, diff, min_diff
  *         np.float64_t[:] data = X.data             # <<<<<<<<<<<<<<
@@ -5677,7 +5677,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/projection/_som.pyx":213
+  /* "Arithmos/projection/_som.pyx":213
  *         double w, diff, min_diff
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices             # <<<<<<<<<<<<<<
@@ -5692,7 +5692,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/projection/_som.pyx":214
+  /* "Arithmos/projection/_som.pyx":214
  *         np.float64_t[:] data = X.data
  *         np.int32_t[:] indices = X.indices
  *         np.int32_t[:] indptr = X.indptr             # <<<<<<<<<<<<<<
@@ -5707,7 +5707,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/projection/_som.pyx":217
+  /* "Arithmos/projection/_som.pyx":217
  *         np.float64_t[:] row
  *         np.int32_t[:] columns
  *         int ncols = X.shape[0]             # <<<<<<<<<<<<<<
@@ -5723,7 +5723,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ncols = __pyx_t_8;
 
-  /* "Orange/projection/_som.pyx":219
+  /* "Arithmos/projection/_som.pyx":219
  *         int ncols = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -5738,7 +5738,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
       #endif
       /*try:*/ {
 
-        /* "Orange/projection/_som.pyx":220
+        /* "Arithmos/projection/_som.pyx":220
  * 
  *     with nogil:
  *         for rowi in range(ncols):             # <<<<<<<<<<<<<<
@@ -5750,7 +5750,7 @@ static PyObject *__pyx_pf_6Orange_10projection_4_som_10update_sparse_hex(CYTHON_
         for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
           __pyx_v_rowi = __pyx_t_10;
 
-          /* "Orange/projection/_som.pyx":221
+          /* "Arithmos/projection/_som.pyx":221
  *     with nogil:
  *         for rowi in range(ncols):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -5785,7 +5785,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_columns, 0);
           __pyx_t_7.memview = NULL;
           __pyx_t_7.data = NULL;
 
-          /* "Orange/projection/_som.pyx":222
+          /* "Arithmos/projection/_som.pyx":222
  *         for rowi in range(ncols):
  *             columns = indices[indptr[rowi]:indptr[rowi + 1]]
  *             row = data[indptr[rowi]:indptr[rowi + 1]]             # <<<<<<<<<<<<<<
@@ -5820,7 +5820,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           __pyx_t_6.memview = NULL;
           __pyx_t_6.data = NULL;
 
-          /* "Orange/projection/_som.pyx":224
+          /* "Arithmos/projection/_som.pyx":224
  *             row = data[indptr[rowi]:indptr[rowi + 1]]
  * 
  *             min_diff = 1e30             # <<<<<<<<<<<<<<
@@ -5829,7 +5829,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
           __pyx_v_min_diff = 1e30;
 
-          /* "Orange/projection/_som.pyx":225
+          /* "Arithmos/projection/_som.pyx":225
  * 
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -5841,7 +5841,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_17; __pyx_t_13+=1) {
             __pyx_v_y = __pyx_t_13;
 
-            /* "Orange/projection/_som.pyx":226
+            /* "Arithmos/projection/_som.pyx":226
  *             min_diff = 1e30
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):             # <<<<<<<<<<<<<<
@@ -5853,7 +5853,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
               __pyx_v_x = __pyx_t_20;
 
-              /* "Orange/projection/_som.pyx":227
+              /* "Arithmos/projection/_som.pyx":227
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1]):
  *                     diff = ssumweights[y, x]  # First assume that all values are zero             # <<<<<<<<<<<<<<
@@ -5864,7 +5864,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_22 = __pyx_v_x;
               __pyx_v_diff = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_ssumweights.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_ssumweights.diminfo[1].strides));
 
-              /* "Orange/projection/_som.pyx":228
+              /* "Arithmos/projection/_som.pyx":228
  *                 for x in range(weights.shape[1]):
  *                     diff = ssumweights[y, x]  # First assume that all values are zero
  *                     for i in range(columns.shape[0]):             # <<<<<<<<<<<<<<
@@ -5876,7 +5876,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_25 = 0; __pyx_t_25 < __pyx_t_24; __pyx_t_25+=1) {
                 __pyx_v_i = __pyx_t_25;
 
-                /* "Orange/projection/_som.pyx":229
+                /* "Arithmos/projection/_som.pyx":229
  *                     diff = ssumweights[y, x]  # First assume that all values are zero
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]             # <<<<<<<<<<<<<<
@@ -5886,7 +5886,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_26 = __pyx_v_i;
                 __pyx_v_col = (*((__pyx_t_5numpy_int32_t *) ( /* dim=0 */ (__pyx_v_columns.data + __pyx_t_26 * __pyx_v_columns.strides[0]) )));
 
-                /* "Orange/projection/_som.pyx":230
+                /* "Arithmos/projection/_som.pyx":230
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -5898,7 +5898,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_29 = __pyx_v_x;
                 __pyx_t_30 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":231
+                /* "Arithmos/projection/_som.pyx":231
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -5909,7 +5909,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_32 = __pyx_v_x;
                 __pyx_t_33 = __pyx_v_col;
 
-                /* "Orange/projection/_som.pyx":230
+                /* "Arithmos/projection/_som.pyx":230
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \             # <<<<<<<<<<<<<<
@@ -5919,7 +5919,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_v_diff = (__pyx_v_diff + (pow(((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_27 * __pyx_v_row.strides[0]) ))) - (*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_weights.diminfo[2].strides))), 2.0) - pow((*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_33, __pyx_pybuffernd_weights.diminfo[2].strides)), 2.0)));
               }
 
-              /* "Orange/projection/_som.pyx":232
+              /* "Arithmos/projection/_som.pyx":232
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -5929,7 +5929,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               __pyx_t_34 = ((__pyx_v_diff < __pyx_v_min_diff) != 0);
               if (__pyx_t_34) {
 
-                /* "Orange/projection/_som.pyx":233
+                /* "Arithmos/projection/_som.pyx":233
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:
  *                         win_x = x             # <<<<<<<<<<<<<<
@@ -5938,7 +5938,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_x = __pyx_v_x;
 
-                /* "Orange/projection/_som.pyx":234
+                /* "Arithmos/projection/_som.pyx":234
  *                     if diff < min_diff:
  *                         win_x = x
  *                         win_y = y             # <<<<<<<<<<<<<<
@@ -5947,7 +5947,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_win_y = __pyx_v_y;
 
-                /* "Orange/projection/_som.pyx":235
+                /* "Arithmos/projection/_som.pyx":235
  *                         win_x = x
  *                         win_y = y
  *                         min_diff = diff             # <<<<<<<<<<<<<<
@@ -5956,7 +5956,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
                 __pyx_v_min_diff = __pyx_v_diff;
 
-                /* "Orange/projection/_som.pyx":232
+                /* "Arithmos/projection/_som.pyx":232
  *                         diff += (row[i] - weights[y, x, col]) ** 2 \
  *                                 - weights[y, x, col] ** 2
  *                     if diff < min_diff:             # <<<<<<<<<<<<<<
@@ -5967,7 +5967,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             }
           }
 
-          /* "Orange/projection/_som.pyx":237
+          /* "Arithmos/projection/_som.pyx":237
  *                         min_diff = diff
  * 
  *             for y in range(weights.shape[0]):             # <<<<<<<<<<<<<<
@@ -5979,7 +5979,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
           for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_17; __pyx_t_13+=1) {
             __pyx_v_y = __pyx_t_13;
 
-            /* "Orange/projection/_som.pyx":238
+            /* "Arithmos/projection/_som.pyx":238
  * 
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):             # <<<<<<<<<<<<<<
@@ -5991,7 +5991,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
             for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_36; __pyx_t_20+=1) {
               __pyx_v_x = __pyx_t_20;
 
-              /* "Orange/projection/_som.pyx":239
+              /* "Arithmos/projection/_som.pyx":239
  *             for y in range(weights.shape[0]):
  *                 for x in range(weights.shape[1] - y % 2):
  *                     dy = y - win_y             # <<<<<<<<<<<<<<
@@ -6000,7 +6000,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_dy = (__pyx_v_y - __pyx_v_win_y);
 
-              /* "Orange/projection/_som.pyx":240
+              /* "Arithmos/projection/_som.pyx":240
  *                 for x in range(weights.shape[1] - y % 2):
  *                     dy = y - win_y
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2             # <<<<<<<<<<<<<<
@@ -6009,7 +6009,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_dist = (((__Pyx_pow_long(((long)__pyx_v_dy), 2) * 3) / 4) + __Pyx_pow_long(((__pyx_v_x - __pyx_v_win_x) + ((__pyx_v_dy % 2) / 2)), 2));
 
-              /* "Orange/projection/_som.pyx":241
+              /* "Arithmos/projection/_som.pyx":241
  *                     dy = y - win_y
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2
  *                     w = eta * exp(-dist / d)             # <<<<<<<<<<<<<<
@@ -6018,7 +6018,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
  */
               __pyx_v_w = (__pyx_v_eta * exp((((double)(-__pyx_v_dist)) / __pyx_v_d)));
 
-              /* "Orange/projection/_som.pyx":242
+              /* "Arithmos/projection/_som.pyx":242
  *                     dist = dy ** 2 * 3 / 4 + (x - win_x + (dy % 2) / 2) ** 2
  *                     w = eta * exp(-dist / d)
  *                     for i in range(columns.shape[0]):             # <<<<<<<<<<<<<<
@@ -6030,7 +6030,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
               for (__pyx_t_25 = 0; __pyx_t_25 < __pyx_t_24; __pyx_t_25+=1) {
                 __pyx_v_i = __pyx_t_25;
 
-                /* "Orange/projection/_som.pyx":243
+                /* "Arithmos/projection/_som.pyx":243
  *                     w = eta * exp(-dist / d)
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]             # <<<<<<<<<<<<<<
@@ -6040,7 +6040,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_37 = __pyx_v_i;
                 __pyx_v_col = (*((__pyx_t_5numpy_int32_t *) ( /* dim=0 */ (__pyx_v_columns.data + __pyx_t_37 * __pyx_v_columns.strides[0]) )));
 
-                /* "Orange/projection/_som.pyx":244
+                /* "Arithmos/projection/_som.pyx":244
  *                     for i in range(columns.shape[0]):
  *                         col = columns[i]
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -6054,7 +6054,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_42 = __pyx_v_x;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ssumweights.rcbuffer->pybuffer.buf, __pyx_t_41, __pyx_pybuffernd_ssumweights.diminfo[0].strides, __pyx_t_42, __pyx_pybuffernd_ssumweights.diminfo[1].strides) -= pow((*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_38, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_39, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_40, __pyx_pybuffernd_weights.diminfo[2].strides)), 2.0);
 
-                /* "Orange/projection/_som.pyx":245
+                /* "Arithmos/projection/_som.pyx":245
  *                         col = columns[i]
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2
  *                         weights[y, x, col] += w * (row[i] - weights[y, x, col])             # <<<<<<<<<<<<<<
@@ -6069,7 +6069,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
                 __pyx_t_49 = __pyx_v_col;
                 *__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_47, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_48, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_49, __pyx_pybuffernd_weights.diminfo[2].strides) += (__pyx_v_w * ((*((__pyx_t_5numpy_float64_t *) ( /* dim=0 */ (__pyx_v_row.data + __pyx_t_43 * __pyx_v_row.strides[0]) ))) - (*__Pyx_BufPtrStrided3d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_44, __pyx_pybuffernd_weights.diminfo[0].strides, __pyx_t_45, __pyx_pybuffernd_weights.diminfo[1].strides, __pyx_t_46, __pyx_pybuffernd_weights.diminfo[2].strides))));
 
-                /* "Orange/projection/_som.pyx":246
+                /* "Arithmos/projection/_som.pyx":246
  *                         ssumweights[y, x] -= weights[y, x, col] ** 2
  *                         weights[y, x, col] += w * (row[i] - weights[y, x, col])
  *                         ssumweights[y, x] += weights[y, x, col] ** 2             # <<<<<<<<<<<<<<
@@ -6086,7 +6086,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
         }
       }
 
-      /* "Orange/projection/_som.pyx":219
+      /* "Arithmos/projection/_som.pyx":219
  *         int ncols = X.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -6112,7 +6112,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
       }
   }
 
-  /* "Orange/projection/_som.pyx":203
+  /* "Arithmos/projection/_som.pyx":203
  * 
  * 
  * def update_sparse_hex(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -6138,7 +6138,7 @@ __PYX_XDEC_MEMVIEW(&__pyx_v_row, 0);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_weights.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_winner.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.projection._som.update_sparse_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.projection._som.update_sparse_hex", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -21471,7 +21471,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.projection._som.array", /*tp_name*/
+  "Arithmos.projection._som.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -21582,7 +21582,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.projection._som.Enum", /*tp_name*/
+  "Arithmos.projection._som.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -21835,7 +21835,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.projection._som.memoryview", /*tp_name*/
+  "Arithmos.projection._som.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -21965,7 +21965,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.projection._som._memoryviewslice", /*tp_name*/
+  "Arithmos.projection._som._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -22099,8 +22099,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_MemoryView_of_r_object, __pyx_k_MemoryView_of_r_object, sizeof(__pyx_k_MemoryView_of_r_object), 0, 0, 1, 0},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_b_O, __pyx_k_O, sizeof(__pyx_k_O), 0, 0, 0, 1},
-  {&__pyx_n_s_Orange_projection__som, __pyx_k_Orange_projection__som, sizeof(__pyx_k_Orange_projection__som), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_projection__som_pyx, __pyx_k_Orange_projection__som_pyx, sizeof(__pyx_k_Orange_projection__som_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_projection__som, __pyx_k_Arithmos_projection__som, sizeof(__pyx_k_Arithmos_projection__som), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_projection__som_pyx, __pyx_k_Arithmos_projection__som_pyx, sizeof(__pyx_k_Arithmos_projection__som_pyx), 0, 0, 1, 0},
   {&__pyx_kp_s_Out_of_bounds_on_buffer_access_a, __pyx_k_Out_of_bounds_on_buffer_access_a, sizeof(__pyx_k_Out_of_bounds_on_buffer_access_a), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
@@ -22240,7 +22240,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/projection/_som.pyx":209
+  /* "Arithmos/projection/_som.pyx":209
  *     cdef:
  *         int rowi, x, y, win_x, win_y, i, col
  *         np.ndarray[np.int16_t, ndim=1] winner = np.empty(2, dtype=np.int16)             # <<<<<<<<<<<<<<
@@ -22520,7 +22520,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
 
-  /* "Orange/projection/_som.pyx":18
+  /* "Arithmos/projection/_som.pyx":18
  * 
  * 
  * def get_winners(np.float64_t[:, :, :] weights, np.float64_t[:, :] X, int hex):             # <<<<<<<<<<<<<<
@@ -22530,9 +22530,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(14, __pyx_n_s_weights, __pyx_n_s_X, __pyx_n_s_hex, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_win_x, __pyx_n_s_win_y, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_row, __pyx_n_s_winners, __pyx_n_s_nrows, __pyx_n_s_rowi, __pyx_n_s_col); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(3, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_get_winners, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(3, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_get_winners, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "Orange/projection/_som.pyx":47
+  /* "Arithmos/projection/_som.pyx":47
  * 
  * 
  * def update(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -22542,9 +22542,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__29 = PyTuple_Pack(17, __pyx_n_s_weights, __pyx_n_s_X, __pyx_n_s_eta, __pyx_n_s_sigma, __pyx_n_s_rowi, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_win_x, __pyx_n_s_win_y, __pyx_n_s_row, __pyx_n_s_max_dist, __pyx_n_s_w_lookup, __pyx_n_s_d, __pyx_n_s_w, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_col); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
-  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(4, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_update, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(4, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_update, 47, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 47, __pyx_L1_error)
 
-  /* "Orange/projection/_som.pyx":83
+  /* "Arithmos/projection/_som.pyx":83
  * 
  * 
  * def update_hex(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -22554,9 +22554,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__31 = PyTuple_Pack(17, __pyx_n_s_weights, __pyx_n_s_X, __pyx_n_s_eta, __pyx_n_s_sigma, __pyx_n_s_rowi, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_win_x, __pyx_n_s_win_y, __pyx_n_s_row, __pyx_n_s_d, __pyx_n_s_dist, __pyx_n_s_dy, __pyx_n_s_w, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_col); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(4, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_update_hex, 83, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(4, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_update_hex, 83, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 83, __pyx_L1_error)
 
-  /* "Orange/projection/_som.pyx":117
+  /* "Arithmos/projection/_som.pyx":117
  * 
  * 
  * def get_winners_sparse(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
@@ -22566,9 +22566,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(22, __pyx_n_s_weights, __pyx_n_s_ssumweights, __pyx_n_s_X, __pyx_n_s_hex, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_best_x, __pyx_n_s_best_y, __pyx_n_s_i, __pyx_n_s_col, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_data, __pyx_n_s_indices, __pyx_n_s_indptr, __pyx_n_s_columns, __pyx_n_s_row, __pyx_n_s_winners, __pyx_n_s_nrows, __pyx_n_s_rowi, __pyx_n_s_win_x, __pyx_n_s_win_y); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_get_winners_sparse, 117, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_get_winners_sparse, 117, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 117, __pyx_L1_error)
 
-  /* "Orange/projection/_som.pyx":155
+  /* "Arithmos/projection/_som.pyx":155
  * 
  * 
  * def update_sparse(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -22578,9 +22578,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(24, __pyx_n_s_weights, __pyx_n_s_ssumweights, __pyx_n_s_X, __pyx_n_s_eta, __pyx_n_s_sigma, __pyx_n_s_rowi, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_win_x, __pyx_n_s_win_y, __pyx_n_s_i, __pyx_n_s_col, __pyx_n_s_max_dist, __pyx_n_s_w_lookup, __pyx_n_s_d, __pyx_n_s_w, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_data, __pyx_n_s_indices, __pyx_n_s_indptr, __pyx_n_s_row, __pyx_n_s_columns, __pyx_n_s_nrows); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(5, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_update_sparse, 155, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(5, 0, 24, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_update_sparse, 155, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 155, __pyx_L1_error)
 
-  /* "Orange/projection/_som.pyx":203
+  /* "Arithmos/projection/_som.pyx":203
  * 
  * 
  * def update_sparse_hex(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
@@ -22590,7 +22590,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__37 = PyTuple_Pack(25, __pyx_n_s_weights, __pyx_n_s_ssumweights, __pyx_n_s_X, __pyx_n_s_eta, __pyx_n_s_sigma, __pyx_n_s_rowi, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_win_x, __pyx_n_s_win_y, __pyx_n_s_i, __pyx_n_s_col, __pyx_n_s_winner, __pyx_n_s_d, __pyx_n_s_w, __pyx_n_s_diff, __pyx_n_s_min_diff, __pyx_n_s_data, __pyx_n_s_indices, __pyx_n_s_indptr, __pyx_n_s_row, __pyx_n_s_columns, __pyx_n_s_ncols, __pyx_n_s_dy, __pyx_n_s_dist); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(5, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_projection__som_pyx, __pyx_n_s_update_sparse_hex, 203, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(5, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_projection__som_pyx, __pyx_n_s_update_sparse_hex, 203, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 203, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -22997,14 +22997,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__projection___som) {
+  if (__pyx_module_is_main_Arithmos__projection___som) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.projection._som")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.projection._som", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.projection._som")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.projection._som", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -23025,7 +23025,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/projection/_som.pyx":8
+  /* "Arithmos/projection/_som.pyx":8
  * #cython: language_level=3
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -23037,79 +23037,79 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":18
+  /* "Arithmos/projection/_som.pyx":18
  * 
  * 
  * def get_winners(np.float64_t[:, :, :] weights, np.float64_t[:, :] X, int hex):             # <<<<<<<<<<<<<<
  *     cdef:
  *         int x, y, win_x, win_y
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_1get_winners, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_1get_winners, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_winners, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":47
+  /* "Arithmos/projection/_som.pyx":47
  * 
  * 
  * def update(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
  *            np.float64_t[:, :] X,
  *            double eta, double sigma):
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_3update, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_3update, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_update, __pyx_t_1) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":83
+  /* "Arithmos/projection/_som.pyx":83
  * 
  * 
  * def update_hex(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
  *                np.float64_t[:, :] X,
  *                double eta, double sigma):
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_5update_hex, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_5update_hex, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_update_hex, __pyx_t_1) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":117
+  /* "Arithmos/projection/_som.pyx":117
  * 
  * 
  * def get_winners_sparse(np.float64_t[:, :, :] weights,             # <<<<<<<<<<<<<<
  *                        np.float64_t[:, :] ssumweights,
  *                        X, int hex):
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_7get_winners_sparse, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_7get_winners_sparse, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_winners_sparse, __pyx_t_1) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":155
+  /* "Arithmos/projection/_som.pyx":155
  * 
  * 
  * def update_sparse(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
  *                   np.ndarray[np.float64_t, ndim=2] ssumweights,
  *                   X,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_9update_sparse, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_9update_sparse, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_update_sparse, __pyx_t_1) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":203
+  /* "Arithmos/projection/_som.pyx":203
  * 
  * 
  * def update_sparse_hex(np.ndarray[np.float64_t, ndim=3] weights,             # <<<<<<<<<<<<<<
  *                   np.ndarray[np.float64_t, ndim=2] ssumweights,
  *                   X,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10projection_4_som_11update_sparse_hex, NULL, __pyx_n_s_Orange_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10projection_4_som_11update_sparse_hex, NULL, __pyx_n_s_Arithmos_projection__som); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_update_sparse_hex, __pyx_t_1) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/projection/_som.pyx":1
+  /* "Arithmos/projection/_som.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * #cython: infer_types=True
  * #cython: cdivision=True
@@ -23279,11 +23279,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.projection._som", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.projection._som", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.projection._som");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.projection._som");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

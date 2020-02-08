@@ -4,7 +4,7 @@ import zlib
 
 import numpy as np
 
-from Orange import data
+from Arithmos import data
 
 
 def _get_variable(dat, variable, expected_type=None, expected_name=""):
@@ -267,7 +267,7 @@ class Continuous(Distribution):
                 dist = np.ones((2, len(col)), dtype=dtype)
                 dist[0, :] = col
             dist.sort(axis=0)
-            dist = np.array(_orange.valuecount(dist))
+            dist = np.array(_arithmos.valuecount(dist))
             unknowns = len(col) - dist.shape[1]
 
         self = super().__new__(cls, dist.shape)
@@ -363,7 +363,7 @@ def get_distributions_for_columns(data, columns):
     ----------
     data : data.Table
         List of column indices into the `data.domain` (indices can be
-        :class:`int` or instances of `Orange.data.Variable`)
+        :class:`int` or instances of `Arithmos.data.Variable`)
 
     """
     domain = data.domain

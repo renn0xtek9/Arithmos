@@ -1,7 +1,7 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("iris")
-learner = Orange.classification.CN2UnorderedLearner()
+data = Arithmos.data.Table("iris")
+learner = Arithmos.classification.CN2UnorderedLearner()
 
 # consider up to 10 solution streams at one time
 learner.rule_finder.search_algorithm.beam_width = 10

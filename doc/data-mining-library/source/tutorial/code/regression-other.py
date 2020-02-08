@@ -1,15 +1,15 @@
-import Orange
+import Arithmos
 import random
 
 random.seed(42)
-data = Orange.data.Table("housing")
-test = Orange.data.Table(data.domain, random.sample(data, 5))
-train = Orange.data.Table(data.domain, [d for d in data if d not in test])
+data = Arithmos.data.Table("housing")
+test = Arithmos.data.Table(data.domain, random.sample(data, 5))
+train = Arithmos.data.Table(data.domain, [d for d in data if d not in test])
 
-lin = Orange.regression.linear.LinearRegressionLearner()
-rf = Orange.regression.random_forest.RandomForestRegressionLearner()
+lin = Arithmos.regression.linear.LinearRegressionLearner()
+rf = Arithmos.regression.random_forest.RandomForestRegressionLearner()
 rf.name = "rf"
-ridge = Orange.regression.RidgeRegressionLearner()
+ridge = Arithmos.regression.RidgeRegressionLearner()
 
 learners = [lin, rf, ridge]
 regressors = [learner(train) for learner in learners]

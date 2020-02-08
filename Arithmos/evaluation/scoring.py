@@ -3,10 +3,10 @@ Methods for scoring prediction results (CA, AUC, ...).
 
 Examples
 --------
->>> import Orange
->>> data = Orange.data.Table('iris')
->>> learner = Orange.classification.LogisticRegressionLearner()
->>> results = Orange.evaluation.TestOnTrainingData(data, [learner])
+>>> import Arithmos
+>>> data = Arithmos.data.Table('iris')
+>>> learner = Arithmos.classification.LogisticRegressionLearner()
+>>> results = Arithmos.evaluation.TestOnTrainingData(data, [learner])
 
 """
 
@@ -16,8 +16,8 @@ import numpy as np
 import sklearn.metrics as skl_metrics
 from sklearn.metrics import confusion_matrix
 
-from Orange.data import DiscreteVariable, ContinuousVariable
-from Orange.misc.wrapper_meta import WrapperMeta
+from Arithmos.data import DiscreteVariable, ContinuousVariable
+from Arithmos.misc.wrapper_meta import WrapperMeta
 
 __all__ = ["CA", "Precision", "Recall", "F1", "PrecisionRecallFSupport", "AUC",
            "MSE", "RMSE", "MAE", "R2", "compute_CD", "graph_ranks", "LogLoss"]
@@ -51,7 +51,7 @@ class Score(metaclass=ScoreMetaType):
     ${sklpar}
     Parameters
     ----------
-    results : Orange.evaluation.Results
+    results : Arithmos.evaluation.Results
         Stored predictions and actual data in model testing.
     """
     __wraps__ = None
@@ -138,7 +138,7 @@ class TargetScore(ClassificationScore):
 
     Parameters
     ----------
-    results : Orange.evaluation.Results
+    results : Arithmos.evaluation.Results
         Stored predictions and actual data in model testing.
 
     target : int, optional (default=None)
@@ -189,7 +189,7 @@ class AUC(ClassificationScore):
 
     Parameters
     ----------
-    results : Orange.evaluation.Results
+    results : Arithmos.evaluation.Results
         Stored predictions and actual data in model testing.
 
     target : int, optional (default=None)
@@ -249,7 +249,7 @@ class LogLoss(ClassificationScore):
 
     Parameters
     ----------
-    results : Orange.evaluation.Results
+    results : Arithmos.evaluation.Results
         Stored predictions and actual data in model testing.
 
     eps : float
@@ -265,7 +265,7 @@ class LogLoss(ClassificationScore):
 
     Examples
     --------
-    >>> Orange.evaluation.LogLoss(results)
+    >>> Arithmos.evaluation.LogLoss(results)
     array([ 0.3...])
 
     """

@@ -11,15 +11,15 @@ from AnyQt.QtCore import QModelIndex, QItemSelectionModel, Qt, QItemSelection
 from AnyQt.QtWidgets import QAction, QComboBox, QLineEdit, QStyleOptionViewItem
 from AnyQt.QtTest import QTest, QSignalSpy
 
-from orangewidget.tests.utils import simulate
-from orangewidget.utils.itemmodels import PyListModel
+from arithmoswidget.tests.utils import simulate
+from arithmoswidget.utils.itemmodels import PyListModel
 
-from Orange.data import (
+from Arithmos.data import (
     ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable,
     Table, Domain
 )
-from Orange.preprocess.transformation import Identity, Lookup
-from Orange.widgets.data.oweditdomain import (
+from Arithmos.preprocess.transformation import Identity, Lookup
+from Arithmos.widgets.data.oweditdomain import (
     OWEditDomain,
     ContinuousVariableEditor, DiscreteVariableEditor, VariableEditor,
     TimeVariableEditor, Categorical, Real, Time, String,
@@ -31,9 +31,9 @@ from Orange.widgets.data.oweditdomain import (
     RealVector, TimeVector, StringVector, make_dict_mapper, DictMissingConst,
     LookupMappingTransform, as_float_or_nan, column_str_repr
 )
-from Orange.widgets.data.owcolor import OWColor, ColorRole
-from Orange.widgets.tests.base import WidgetTest, GuiTest
-from Orange.tests import test_filename, assert_array_nanequal
+from Arithmos.widgets.data.owcolor import OWColor, ColorRole
+from Arithmos.widgets.tests.base import WidgetTest, GuiTest
+from Arithmos.tests import test_filename, assert_array_nanequal
 
 MArray = np.ma.MaskedArray
 

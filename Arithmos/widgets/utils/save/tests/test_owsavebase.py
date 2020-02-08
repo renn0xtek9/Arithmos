@@ -9,10 +9,10 @@ from unittest.mock import Mock
 import os
 import collections
 
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils import getmembers
-from Orange.widgets.utils.save.owsavebase import OWSaveBase
-from orangewidget.widget import Input
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils import getmembers
+from Arithmos.widgets.utils.save.owsavebase import OWSaveBase
+from arithmoswidget.widget import Input
 
 
 class SaveWidgetsTestBaseMixin:

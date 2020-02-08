@@ -4,11 +4,11 @@ from unittest.mock import Mock
 from collections import OrderedDict
 from types import SimpleNamespace
 
-from Orange.data import Table
-from Orange.data.sql.backend import Backend
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.owbasesql import OWBaseSql
-from Orange.data.sql.backend.base import BackendError
+from Arithmos.data import Table
+from Arithmos.data.sql.backend import Backend
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.owbasesql import OWBaseSql
+from Arithmos.data.sql.backend.base import BackendError
 
 
 USERNAME = "UN"

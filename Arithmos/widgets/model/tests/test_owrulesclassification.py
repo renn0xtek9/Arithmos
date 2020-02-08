@@ -8,9 +8,9 @@ from AnyQt.QtWidgets import (
     QButtonGroup, QRadioButton, QSpinBox, QDoubleSpinBox, QComboBox
 )
 
-from Orange.data import Table
-from Orange.widgets.model.owrules import OWRuleLearner
-from Orange.widgets.tests.base import (WidgetTest, WidgetLearnerTestMixin,
+from Arithmos.data import Table
+from Arithmos.widgets.model.owrules import OWRuleLearner
+from Arithmos.widgets.tests.base import (WidgetTest, WidgetLearnerTestMixin,
                                        ParameterMapping)
 
 
@@ -127,7 +127,7 @@ class TestOWRulesClassification(WidgetTest, WidgetLearnerTestMixin):
         data = Table("iris")[::3]
         self.assertFalse(self.widget.Error.out_of_memory.is_shown())
         with unittest.mock.patch(
-            "Orange.widgets.model.owrules.CustomRuleLearner.__call__",
+            "Arithmos.widgets.model.owrules.CustomRuleLearner.__call__",
             side_effect=MemoryError):
             self.send_signal("Data", data)
             self.assertTrue(self.widget.Error.out_of_memory.is_shown())

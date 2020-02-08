@@ -4,16 +4,16 @@
 import unittest
 import numpy as np
 
-from Orange.classification import (CN2Learner, CN2UnorderedLearner,
+from Arithmos.classification import (CN2Learner, CN2UnorderedLearner,
                                    CN2SDLearner, CN2SDUnorderedLearner)
-from Orange.classification.rules import (_RuleLearner, _RuleClassifier,
+from Arithmos.classification.rules import (_RuleLearner, _RuleClassifier,
                                          RuleHunter, Rule, EntropyEvaluator,
                                          LaplaceAccuracyEvaluator,
                                          WeightedRelativeAccuracyEvaluator,
                                          argmaxrnd, hash_dist)
-from Orange.data import Table
-from Orange.data.filter import HasClass
-from Orange.preprocess import Impute
+from Arithmos.data import Table
+from Arithmos.data.filter import HasClass
+from Arithmos.preprocess import Impute
 
 
 class TestRuleInduction(unittest.TestCase):

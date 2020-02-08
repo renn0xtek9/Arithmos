@@ -8,13 +8,13 @@ from AnyQt.QtCore import Qt, QAbstractTableModel
 from AnyQt.QtGui import QColor, QFont
 from AnyQt.QtWidgets import QComboBox, QTableView, QSizePolicy
 
-from Orange.data import DiscreteVariable, ContinuousVariable, StringVariable, \
+from Arithmos.data import DiscreteVariable, ContinuousVariable, StringVariable, \
     TimeVariable, Domain
-from Orange.statistics.util import unique
-from Orange.widgets import gui
-from Orange.widgets.gui import HorizontalGridDelegate
-from Orange.widgets.settings import ContextSetting
-from Orange.widgets.utils.itemmodels import TableModel
+from Arithmos.statistics.util import unique
+from Arithmos.widgets import gui
+from Arithmos.widgets.gui import HorizontalGridDelegate
+from Arithmos.widgets.settings import ContextSetting
+from Arithmos.widgets.utils.itemmodels import TableModel
 
 
 class Column:

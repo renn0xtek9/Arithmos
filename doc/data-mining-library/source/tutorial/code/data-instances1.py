@@ -1,6 +1,6 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("iris")
+data = Arithmos.data.Table("iris")
 print("First three data instances:")
 for d in data[:3]:
     print(d)

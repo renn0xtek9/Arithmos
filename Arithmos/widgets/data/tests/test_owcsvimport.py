@@ -12,13 +12,13 @@ from numpy.testing import assert_array_equal
 
 from AnyQt.QtCore import QSettings
 
-from Orange.tests import named_file
-from Orange.widgets.tests.base import WidgetTest, GuiTest
-from Orange.widgets.data import owcsvimport
-from Orange.widgets.data.owcsvimport import (
+from Arithmos.tests import named_file
+from Arithmos.widgets.tests.base import WidgetTest, GuiTest
+from Arithmos.widgets.data import owcsvimport
+from Arithmos.widgets.data.owcsvimport import (
     pandas_to_table, ColumnType, RowSpec
 )
-from Orange.widgets.utils.settings import QSettings_writeArray
+from Arithmos.widgets.utils.settings import QSettings_writeArray
 
 
 class TestOWCSVFileImport(WidgetTest):

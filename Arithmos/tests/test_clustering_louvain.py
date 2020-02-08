@@ -7,10 +7,10 @@ import numpy as np
 import networkx
 from scipy.sparse import csc_matrix, csr_matrix
 
-from Orange.clustering.clustering import ClusteringModel
-from Orange.clustering.louvain import matrix_to_knn_graph
-from Orange.data import Table
-from Orange.clustering.louvain import Louvain
+from Arithmos.clustering.clustering import ClusteringModel
+from Arithmos.clustering.louvain import matrix_to_knn_graph
+from Arithmos.data import Table
+from Arithmos.clustering.louvain import Louvain
 
 
 class TestLouvain(unittest.TestCase):

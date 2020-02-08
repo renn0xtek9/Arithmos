@@ -1,11 +1,11 @@
 from collections import OrderedDict
 
-from Orange.base import Learner
-from Orange.data import Table
-from Orange.ensembles.stack import StackedFitter
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.widget import Input
+from Arithmos.base import Learner
+from Arithmos.data import Table
+from Arithmos.ensembles.stack import StackedFitter
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.widget import Input
 
 
 class OWStackedLearner(OWBaseLearner):

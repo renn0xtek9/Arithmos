@@ -6,10 +6,10 @@ import scipy.sparse as sp
 
 from AnyQt.QtCore import QRectF, QPointF
 
-from Orange.data import Table, DiscreteVariable, ContinuousVariable, Domain
-from Orange.widgets.data import owpaintdata
-from Orange.widgets.data.owpaintdata import OWPaintData
-from Orange.widgets.tests.base import WidgetTest, datasets
+from Arithmos.data import Table, DiscreteVariable, ContinuousVariable, Domain
+from Arithmos.widgets.data import owpaintdata
+from Arithmos.widgets.data.owpaintdata import OWPaintData
+from Arithmos.widgets.tests.base import WidgetTest, datasets
 
 
 class TestOWPaintData(WidgetTest):

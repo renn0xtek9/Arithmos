@@ -5,9 +5,9 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.preprocess import Remove
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.preprocess import Remove
+from Arithmos.tests import test_filename
 
 
 class TestRemover(unittest.TestCase):

@@ -7,22 +7,22 @@ import numpy
 from AnyQt.QtWidgets import QTableWidget, QTableWidgetItem
 from AnyQt.QtCore import QThread, pyqtSlot
 
-import Orange.data
-import Orange.classification
-import Orange.evaluation
+import Arithmos.data
+import Arithmos.classification
+import Arithmos.evaluation
 
-from Orange.widgets import widget, gui, settings
-from Orange.evaluation.testing import Results
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.evaluation.testing import Results
 
 # [start-snippet-1]
 import concurrent.futures
-from Orange.widgets.utils.concurrent import ThreadExecutor, FutureWatcher, methodinvoke
+from Arithmos.widgets.utils.concurrent import ThreadExecutor, FutureWatcher, methodinvoke
 
 # [end-snippet-1]
 
 
 # [start-snippet-2]
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class Task:
@@ -72,11 +72,11 @@ class OWLearningCurveC(widget.OWWidget):
     priority = 1010
 
     inputs = [
-        ("Data", Orange.data.Table, "set_dataset", widget.Default),
-        ("Test Data", Orange.data.Table, "set_testdataset"),
+        ("Data", Arithmos.data.Table, "set_dataset", widget.Default),
+        ("Test Data", Arithmos.data.Table, "set_testdataset"),
         (
             "Learner",
-            Orange.classification.Learner,
+            Arithmos.classification.Learner,
             "set_learner",
             widget.Multiple + widget.Default,
         ),
@@ -99,10 +99,10 @@ class OWLearningCurveC(widget.OWWidget):
         self.updateCurvePoints()
 
         self.scoring = [
-            ("Classification Accuracy", Orange.evaluation.scoring.CA),
-            ("AUC", Orange.evaluation.scoring.AUC),
-            ("Precision", Orange.evaluation.scoring.Precision),
-            ("Recall", Orange.evaluation.scoring.Recall),
+            ("Classification Accuracy", Arithmos.evaluation.scoring.CA),
+            ("AUC", Arithmos.evaluation.scoring.AUC),
+            ("Precision", Arithmos.evaluation.scoring.Precision),
+            ("Recall", Arithmos.evaluation.scoring.Recall),
         ]
         #: input data on which to construct the learning curve
         self.data = None
@@ -444,7 +444,7 @@ class OWLearningCurveC(widget.OWWidget):
         self.curvePoints = [(x + 1.0) / self.steps for x in range(self.steps)]
 
     def test_run_signals(self):
-        data = Orange.data.Table("iris")
+        data = Arithmos.data.Table("iris")
         indices = numpy.random.permutation(len(data))
 
         traindata = data[indices[:-20]]
@@ -453,15 +453,15 @@ class OWLearningCurveC(widget.OWWidget):
         self.set_dataset(traindata)
         self.set_testdataset(testdata)
 
-        l1 = Orange.classification.NaiveBayesLearner()
+        l1 = Arithmos.classification.NaiveBayesLearner()
         l1.name = "Naive Bayes"
         self.set_learner(l1, 1)
 
-        l2 = Orange.classification.LogisticRegressionLearner()
+        l2 = Arithmos.classification.LogisticRegressionLearner()
         l2.name = "Logistic Regression"
         self.set_learner(l2, 2)
 
-        l4 = Orange.classification.SklTreeLearner()
+        l4 = Arithmos.classification.SklTreeLearner()
         l4.name = "Decision Tree"
         self.set_learner(l4, 3)
 
@@ -489,7 +489,7 @@ def learning_curve(
         callback_wrapped = lambda part: None
 
     results = [
-        Orange.evaluation.CrossValidation(
+        Arithmos.evaluation.CrossValidation(
             data,
             learners,
             k=folds,
@@ -530,7 +530,7 @@ def learning_curve_with_test_data(
 
     results = [
         [
-            Orange.evaluation.TestOnTestData(
+            Arithmos.evaluation.TestOnTestData(
                 traindata,
                 testdata,
                 learners,
@@ -541,7 +541,7 @@ def learning_curve_with_test_data(
         ]
         for i, p in enumerate(proportions)
     ]
-    results = [reduce(results_add, res, Orange.evaluation.Results()) for res in results]
+    results = [reduce(results_add, res, Arithmos.evaluation.Results()) for res in results]
     return results
 
 
@@ -578,7 +578,7 @@ def results_add(x, y):
     else:
         raise ValueError()
 
-    res = Orange.evaluation.Results()
+    res = Arithmos.evaluation.Results()
     res.data = x.data
     res.domain = x.domain
     res.learners = x.learners

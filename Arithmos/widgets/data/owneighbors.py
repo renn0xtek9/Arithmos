@@ -2,15 +2,15 @@ import numpy as np
 
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.data.util import get_unique_names
-from Orange.preprocess import RemoveNaNColumns, Impute
-from Orange import distance
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.widget import OWWidget, Msg
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.data.util import get_unique_names
+from Arithmos.preprocess import RemoveNaNColumns, Impute
+from Arithmos import distance
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.widget import OWWidget, Msg
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 METRICS = [
     ("Euclidean", distance.Euclidean),
@@ -30,7 +30,7 @@ class OWNeighbors(OWWidget):
     description = "Compute nearest neighbors in data according to reference."
     icon = "icons/Neighbors.svg"
 
-    replaces = ["orangecontrib.prototypes.widgets.owneighbours.OWNeighbours"]
+    replaces = ["arithmoscontrib.prototypes.widgets.owneighbours.OWNeighbours"]
 
     class Inputs:
         data = Input("Data", Table)

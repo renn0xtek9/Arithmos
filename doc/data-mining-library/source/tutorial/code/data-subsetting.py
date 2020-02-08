@@ -1,6 +1,6 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("iris.tab")
+data = Arithmos.data.Table("iris.tab")
 print("Dataset instances:", len(data))
-subset = Orange.data.Table(data.domain, [d for d in data if d["petal length"] > 3.0])
+subset = Arithmos.data.Table(data.domain, [d for d in data if d["petal length"] > 3.0])
 print("Subset size:", len(subset))

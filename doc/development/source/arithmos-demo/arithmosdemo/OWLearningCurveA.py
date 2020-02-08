@@ -3,14 +3,14 @@ from collections import OrderedDict
 import numpy
 from AnyQt.QtWidgets import QTableWidget, QTableWidgetItem
 
-import Orange.data
-import Orange.classification
-import Orange.evaluation
+import Arithmos.data
+import Arithmos.classification
+import Arithmos.evaluation
 
-from Orange.widgets import gui, settings
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input
-from Orange.evaluation.testing import Results
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input
+from Arithmos.evaluation.testing import Results
 
 
 class OWLearningCurveA(OWWidget):
@@ -24,8 +24,8 @@ class OWLearningCurveA(OWWidget):
 
     # [start-snippet-1]
     class Inputs:
-        data = Input("Data", Orange.data.Table)
-        learner = Input("Learner", Orange.classification.Learner, multiple=True)
+        data = Input("Data", Arithmos.data.Table)
+        learner = Input("Learner", Arithmos.classification.Learner, multiple=True)
 
     # [end-snippet-1]
 
@@ -47,10 +47,10 @@ class OWLearningCurveA(OWWidget):
 
         # [start-snippet-2]
         self.scoring = [
-            ("Classification Accuracy", Orange.evaluation.scoring.CA),
-            ("AUC", Orange.evaluation.scoring.AUC),
-            ("Precision", Orange.evaluation.scoring.Precision),
-            ("Recall", Orange.evaluation.scoring.Recall),
+            ("Classification Accuracy", Arithmos.evaluation.scoring.CA),
+            ("AUC", Arithmos.evaluation.scoring.AUC),
+            ("Precision", Arithmos.evaluation.scoring.Precision),
+            ("Recall", Arithmos.evaluation.scoring.Recall),
         ]
         # [end-snippet-2]
         #: input data on which to construct the learning curve
@@ -252,18 +252,18 @@ class OWLearningCurveA(OWWidget):
 
     # [start-snippet-3]
     def test_run_signals(self):
-        data = Orange.data.Table("iris")
+        data = Arithmos.data.Table("iris")
         self.set_dataset(data)
 
-        l1 = Orange.classification.NaiveBayesLearner()
+        l1 = Arithmos.classification.NaiveBayesLearner()
         l1.name = "Naive Bayes"
         self.set_learner(l1, 1)
 
-        l2 = Orange.classification.LogisticRegressionLearner()
+        l2 = Arithmos.classification.LogisticRegressionLearner()
         l2.name = "Logistic Regression"
         self.set_learner(l2, 2)
 
-        l4 = Orange.classification.SklTreeLearner()
+        l4 = Arithmos.classification.SklTreeLearner()
         l4.name = "Decision Tree"
         self.set_learner(l4, 3)
 
@@ -305,7 +305,7 @@ def learning_curve(
         callback_wrapped = lambda part: None
 
     results = [
-        Orange.evaluation.CrossValidation(
+        Arithmos.evaluation.CrossValidation(
             data,
             learners,
             k=folds,

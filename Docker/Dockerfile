@@ -17,4 +17,4 @@ CMD /bin/bash
 # RUN python3 -m virtualenv  --python=python3 arithmosvenv
 # RUN pip3 install --user  PyQt5 PyQtWebEngine -y
 # RUN pip3 install --user arithmos -y
-# CMD python3 -m Orange.canvas
+# CMD python3 -m Arithmos.canvas

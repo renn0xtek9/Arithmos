@@ -2,7 +2,7 @@
 Clustering (``clustering``)
 ###########################
 
-.. automodule:: Orange.clustering
+.. automodule:: Arithmos.clustering
 
 .. toctree::
    :maxdepth: 2

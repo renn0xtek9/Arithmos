@@ -7,11 +7,11 @@ import itertools
 
 import numpy as np
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.data.filter import \
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.data.filter import \
     FilterContinuous, FilterDiscrete, FilterString, Values, HasClass, \
     IsDefined, SameValue, Random, ValueFilter, FilterStringList, FilterRegex
-from Orange.tests import test_filename
+from Arithmos.tests import test_filename
 
 NIMOCK = MagicMock(side_effect=NotImplementedError())
 
@@ -20,7 +20,7 @@ class TestFilterValues(unittest.TestCase):
     def setUp(self):
         self.iris = Table('iris')
 
-    @patch("Orange.data.Table._filter_values", NIMOCK)
+    @patch("Arithmos.data.Table._filter_values", NIMOCK)
     def test_values(self):
         vs = self.iris.domain.variables
         f1 = FilterContinuous(vs[0], FilterContinuous.Less, 5)
@@ -69,7 +69,7 @@ class TestIsDefinedFilter(unittest.TestCase):
         self.assertTrue(filter_(instance_with_missing))
         self.assertFalse(filter_(instance_without_missing))
 
-    @patch('Orange.data.Table._filter_is_defined', NIMOCK)
+    @patch('Arithmos.data.Table._filter_is_defined', NIMOCK)
     def test_is_defined_filter_not_implemented(self):
         self.test_is_defined_filter_table()
 
@@ -117,7 +117,7 @@ class TestHasClassFilter(unittest.TestCase):
         self.assertTrue(filter_(class_missing))
         self.assertFalse(filter_(class_present))
 
-    @patch('Orange.data.Table._filter_has_class', NIMOCK)
+    @patch('Arithmos.data.Table._filter_has_class', NIMOCK)
     def test_has_class_filter_not_implemented(self):
         self.test_has_class_filter_table()
 
@@ -425,7 +425,7 @@ class TestSameValueFilter(unittest.TestCase):
         filter_n = SameValue(self.attr_disc, self.value_disc, negate=True)(inst)
         self.assertEqual(filter_n, inst[self.attr_disc] != self.value_disc)
 
-    @patch('Orange.data.Table._filter_same_value', NIMOCK)
+    @patch('Arithmos.data.Table._filter_same_value', NIMOCK)
     def test_has_class_filter_not_implemented(self):
         self.test_same_value_filter_table()
 

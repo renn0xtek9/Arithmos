@@ -1,7 +1,7 @@
 import sklearn.cluster
 
-from Orange.clustering.clustering import Clustering
-from Orange.data import Table
+from Arithmos.clustering.clustering import Clustering
+from Arithmos.data import Table
 
 
 __all__ = ["DBSCAN"]

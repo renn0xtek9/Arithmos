@@ -1,6 +1,6 @@
 NAME = "Data"
 
-ID = "orange.widgets.data"
+ID = "arithmos.widgets.data"
 
 DESCRIPTION = """Widgets for data manipulation."""
 

@@ -5,9 +5,9 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.classification import MajorityLearner
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.classification import MajorityLearner
+from Arithmos.tests import test_filename
 
 
 class TestMajorityLearner(unittest.TestCase):

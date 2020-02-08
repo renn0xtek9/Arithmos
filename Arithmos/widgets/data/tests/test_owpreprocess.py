@@ -3,17 +3,17 @@
 from unittest.mock import Mock
 import numpy as np
 
-from Orange.data import Table
-from Orange.preprocess import (
+from Arithmos.data import Table
+from Arithmos.preprocess import (
     Randomize, Scale, Discretize, Continuize, Impute, ProjectPCA, \
          ProjectCUR, RemoveSparse
 )
-from Orange.preprocess import discretize, impute, fss, score
-from Orange.widgets.data import owpreprocess
-from Orange.widgets.data.owpreprocess import OWPreprocess, \
+from Arithmos.preprocess import discretize, impute, fss, score
+from Arithmos.widgets.data import owpreprocess
+from Arithmos.widgets.data.owpreprocess import OWPreprocess, \
     UnivariateFeatureSelect, Scale as ScaleEditor
-from Orange.widgets.tests.base import WidgetTest, datasets
-from orangewidget.widget import StateInfo
+from Arithmos.widgets.tests.base import WidgetTest, datasets
+from arithmoswidget.widget import StateInfo
 
 
 class TestOWPreprocess(WidgetTest):
@@ -22,7 +22,7 @@ class TestOWPreprocess(WidgetTest):
         self.zoo = Table("zoo")
 
     def test_randomize(self):
-        saved = {"preprocessors": [("orange.preprocess.randomize",
+        saved = {"preprocessors": [("arithmos.preprocess.randomize",
                                     {"rand_type": Randomize.RandomizeClasses,
                                      "rand_seed": 1})]}
         model = self.widget.load(saved)
@@ -44,7 +44,7 @@ class TestOWPreprocess(WidgetTest):
         data = Table("iris")
         idx = int(data.X.shape[0]/10)
         data.X[:idx+1, 0] = np.zeros((idx+1,))
-        saved = {"preprocessors": [("orange.preprocess.remove_sparse",
+        saved = {"preprocessors": [("arithmos.preprocess.remove_sparse",
                                     {'filter0': True, 'useFixedThreshold': False,
                                      'percThresh':10, 'fixedThresh': 50})]}
         model = self.widget.load(saved)
@@ -58,7 +58,7 @@ class TestOWPreprocess(WidgetTest):
 
     def test_normalize(self):
         data = Table("iris")
-        saved = {"preprocessors": [("orange.preprocess.scale",
+        saved = {"preprocessors": [("arithmos.preprocess.scale",
                                     {"method": ScaleEditor.NormalizeBySD})]}
         model = self.widget.load(saved)
         self.widget.set_model(model)
@@ -67,7 +67,7 @@ class TestOWPreprocess(WidgetTest):
         np.testing.assert_allclose(output.X.mean(0), 0, atol=1e-7)
         np.testing.assert_allclose(output.X.std(0), 1, atol=1e-7)
 
-        saved = {"preprocessors": [("orange.preprocess.scale",
+        saved = {"preprocessors": [("arithmos.preprocess.scale",
                                     {"method": ScaleEditor.CenterByMean})]}
         model = self.widget.load(saved)
         self.widget.set_model(model)
@@ -76,7 +76,7 @@ class TestOWPreprocess(WidgetTest):
         np.testing.assert_allclose(output.X.mean(0), 0, atol=1e-7)
         self.assertTrue((output.X.std(0) > 0).all())
 
-        saved = {"preprocessors": [("orange.preprocess.scale",
+        saved = {"preprocessors": [("arithmos.preprocess.scale",
                                     {"method": ScaleEditor.ScaleBySD})]}
         model = self.widget.load(saved)
         self.widget.set_model(model)
@@ -86,7 +86,7 @@ class TestOWPreprocess(WidgetTest):
         np.testing.assert_allclose(output.X.std(0), 1, atol=1e-7)
 
         saved = {"preprocessors":
-                 [("orange.preprocess.scale",
+                 [("arithmos.preprocess.scale",
                    {"method": ScaleEditor.NormalizeBySpan_ZeroBased})]}
         model = self.widget.load(saved)
         self.widget.set_model(model)
@@ -96,7 +96,7 @@ class TestOWPreprocess(WidgetTest):
         self.assertAlmostEqual(output.X.max(), 1)
 
         saved = {"preprocessors":
-                 [("orange.preprocess.scale",
+                 [("arithmos.preprocess.scale",
                    {"method": ScaleEditor.NormalizeSpan_NonZeroBased})]}
         model = self.widget.load(saved)
         self.widget.set_model(model)
@@ -107,7 +107,7 @@ class TestOWPreprocess(WidgetTest):
 
     def test_select_features(self):
         data = Table("iris")
-        saved = {"preprocessors": [("orange.preprocess.fss",
+        saved = {"preprocessors": [("arithmos.preprocess.fss",
                                     {"strategy": UnivariateFeatureSelect.Fixed,
                                      "k": 2})]}
         model = self.widget.load(saved)
@@ -117,7 +117,7 @@ class TestOWPreprocess(WidgetTest):
         self.assertEqual(len(output.domain.attributes), 2)
 
         saved = {"preprocessors": [
-            ("orange.preprocess.fss",
+            ("arithmos.preprocess.fss",
              {"strategy": UnivariateFeatureSelect.Proportion,
               "p": 75})]}
         model = self.widget.load(saved)
@@ -133,7 +133,7 @@ class TestOWPreprocess(WidgetTest):
         GH-2064
         """
         table = datasets.data_one_column_nans()
-        saved = {"preprocessors": [("orange.preprocess.scale",
+        saved = {"preprocessors": [("arithmos.preprocess.scale",
                                     {"center": Scale.CenteringType.Mean,
                                      "scale": Scale.ScalingType.Std})]}
         model = self.widget.load(saved)

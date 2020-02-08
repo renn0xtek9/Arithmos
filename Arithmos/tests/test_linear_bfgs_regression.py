@@ -3,9 +3,9 @@
 
 import unittest
 
-from Orange.data import Table
-from Orange.evaluation import CrossValidation, RMSE
-from Orange.regression.linear_bfgs import LinearRegressionLearner
+from Arithmos.data import Table
+from Arithmos.evaluation import CrossValidation, RMSE
+from Arithmos.regression.linear_bfgs import LinearRegressionLearner
 
 
 class TestLinearRegressionLearner(unittest.TestCase):

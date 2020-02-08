@@ -11,21 +11,21 @@ from AnyQt.QtGui import QColor
 
 import pyqtgraph as pg
 
-from Orange.data import Table, Domain, DiscreteVariable, Variable, \
+from Arithmos.data import Table, Domain, DiscreteVariable, Variable, \
     ContinuousVariable
-from Orange.data.sql.table import SqlTable, AUTO_DL_LIMIT
-from Orange.preprocess.score import ReliefF, RReliefF
+from Arithmos.data.sql.table import SqlTable, AUTO_DL_LIMIT
+from Arithmos.preprocess.score import ReliefF, RReliefF
 
-from Orange.widgets import gui
-from Orange.widgets.io import MatplotlibFormat, MatplotlibPDFFormat
-from Orange.widgets.settings import (
+from Arithmos.widgets import gui
+from Arithmos.widgets.io import MatplotlibFormat, MatplotlibPDFFormat
+from Arithmos.widgets.settings import (
     Setting, ContextSetting, SettingProvider, IncompatibleContext)
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
-from Orange.widgets.visualize.utils import VizRankDialogAttrPair
-from Orange.widgets.visualize.utils.widget import OWDataProjectionWidget
-from Orange.widgets.widget import AttributeList, Msg, Input, Output
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
+from Arithmos.widgets.visualize.utils import VizRankDialogAttrPair
+from Arithmos.widgets.visualize.utils.widget import OWDataProjectionWidget
+from Arithmos.widgets.widget import AttributeList, Msg, Input, Output
 
 
 class ScatterPlotVizRank(VizRankDialogAttrPair):
@@ -240,8 +240,8 @@ class OWScatterPlot(OWDataProjectionWidget):
             "Points with missing '{}' or '{}' are not displayed")
 
     def __init__(self):
-        self.sql_data = None  # Orange.data.sql.table.SqlTable
-        self.attribute_selection_list = None  # list of Orange.data.Variable
+        self.sql_data = None  # Arithmos.data.sql.table.SqlTable
+        self.attribute_selection_list = None  # list of Arithmos.data.Variable
         self.__timer = QTimer(self, interval=1200)
         self.__timer.timeout.connect(self.add_data)
         super().__init__()
@@ -321,7 +321,7 @@ class OWScatterPlot(OWDataProjectionWidget):
         self._vizrank_color_change()
 
         def findvar(name, iterable):
-            """Find a Orange.data.Variable in `iterable` by name"""
+            """Find a Arithmos.data.Variable in `iterable` by name"""
             for el in iterable:
                 if isinstance(el, Variable) and el.name == name:
                     return el

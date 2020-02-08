@@ -4,9 +4,9 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.widgets.data.owneighbors import OWNeighbors, METRICS
-from Orange.widgets.tests.base import WidgetTest, ParameterMapping
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.widgets.data.owneighbors import OWNeighbors, METRICS
+from Arithmos.widgets.tests.base import WidgetTest, ParameterMapping
 
 
 class TestOWNeighbors(WidgetTest):

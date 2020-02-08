@@ -1,7 +1,7 @@
 import sklearn.svm as skl_svm
 
-from Orange.classification import SklLearner, SklModel
-from Orange.preprocess import AdaptiveNormalize
+from Arithmos.classification import SklLearner, SklModel
+from Arithmos.preprocess import AdaptiveNormalize
 
 __all__ = ["SVMLearner", "LinearSVMLearner", "NuSVMLearner"]
 
@@ -60,10 +60,10 @@ class NuSVMLearner(SklLearner):
 
 
 if __name__ == '__main__':
-    import Orange
+    import Arithmos
 
-    data = Orange.data.Table('iris')
+    data = Arithmos.data.Table('iris')
     learners = [SVMLearner(), NuSVMLearner(), LinearSVMLearner()]
-    res = Orange.evaluation.CrossValidation(data, learners)
-    for l, ca in zip(learners, Orange.evaluation.CA(res)):
+    res = Arithmos.evaluation.CrossValidation(data, learners)
+    for l, ca in zip(learners, Arithmos.evaluation.CA(res)):
         print("learner: {}\nCA: {}\n".format(l, ca))

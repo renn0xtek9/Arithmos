@@ -2,9 +2,9 @@
 from itertools import chain
 
 
-from Orange.data import Domain
-from Orange.statistics.basic_stats import DomainBasicStats
-from Orange.widgets.utils.datacaching import getCached, setCached
+from Arithmos.data import Domain
+from Arithmos.statistics.basic_stats import DomainBasicStats
+from Arithmos.widgets.utils.datacaching import getCached, setCached
 
 from collections import Counter, defaultdict
 import sys
@@ -30,14 +30,14 @@ from pyqtgraph.graphicsItems.TextItem import TextItem
 from pyqtgraph.graphicsItems.InfiniteLine import InfiniteLine
 from pyqtgraph.Point import Point
 
-from Orange.widgets import gui
-from Orange.widgets.utils import classdensity, get_variable_values_sorted
-from Orange.widgets.utils.colorpalette import (ColorPaletteGenerator,
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils import classdensity, get_variable_values_sorted
+from Arithmos.widgets.utils.colorpalette import (ColorPaletteGenerator,
                                                ContinuousPaletteGenerator, DefaultRGBColors)
-from Orange.widgets.utils.plot import \
+from Arithmos.widgets.utils.plot import \
     OWPalette, SELECT, PANNING, ZOOMING
-from Orange.widgets.utils.plot.owplotgui_obsolete import OWPlotGUI
-from Orange.widgets.settings import Setting, ContextSetting
+from Arithmos.widgets.utils.plot.owplotgui_obsolete import OWPlotGUI
+from Arithmos.widgets.settings import Setting, ContextSetting
 
 
 class ScaleData:
@@ -46,7 +46,7 @@ class ScaleData:
 
     def _reset_data(self):
         self.domain = None
-        self.data = None  # as Orange Table
+        self.data = None  # as Arithmos Table
         self.scaled_data = None  # in [0, 1]
         self.jittered_data = None
         self.attr_values = {}
@@ -560,7 +560,7 @@ class InteractiveViewBox(ViewBox):
             ev.ignore()
 
     def updateAutoRange(self):
-        # indirectly called by the autorange button on the graph
+        # indirectly called by the autarithmos button on the graph
         super().updateAutoRange()
         self.tag_history()
 

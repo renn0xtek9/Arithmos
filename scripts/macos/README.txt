@@ -1,4 +1,4 @@
-Orange macOS application (.app) build scripts
+Arithmos macOS application (.app) build scripts
 ---------------------------------------------
 
 Contents:
@@ -8,7 +8,7 @@ python-framework.sh
     installers (used by build-macos-app.sh)
 
 build-macos-app.sh
-    Build an Orange.app application bundle from scratch
+    Build an Arithmos.app application bundle from scratch
 
 create-dmg-installer.sh
-    Pack the Orange.app applicaiton into a .dmg installer disk image
+    Pack the Arithmos.app applicaiton into a .dmg installer disk image

@@ -5,7 +5,7 @@ set -e
 function print_usage() {
     echo 'create-dmg-installer.sh --app BUILD_APP_PATH OUTPUT_BUNDLE.dmg
 
-Create an disk image installer (.dmg) for Orange OSX application.
+Create an disk image installer (.dmg) for Arithmos OSX application.
 
 Options:
     -a --app PATH
@@ -68,7 +68,7 @@ fi
 
 TMP_DIR=$(mktemp -d -t create-dmg-installer)
 TMP_TEMPLATE="${TMP_DIR}"/template
-TMP_DMG="${TMP_DIR}"/orange.dmg
+TMP_DMG="${TMP_DIR}"/arithmos.dmg
 TMP_MOUNT="${TMP_DIR}"/mnt
 
 echo "Preparing an image template in ${TMP_TEMPLATE}"
@@ -101,7 +101,7 @@ touch "${TMP_TEMPLATE}"/.fseventsd/no_log
 
 
 echo "Creating a temporary disk image"
-hdiutil create -format UDRW -volname Orange -fs HFS+ \
+hdiutil create -format UDRW -volname Arithmos -fs HFS+ \
        -fsargs "-c c=64,a=16,e=16" \
        -srcfolder "${TMP_TEMPLATE}" \
        "${TMP_DMG}"
@@ -123,7 +123,7 @@ bless -openfolder "${TMP_MOUNT}"
 SetFile -a V "${TMP_MOUNT}/.background/"
 
 # Sets the custom icon volume flag so that volume has nice
-# Orange icon after mount (.VolumeIcon.icns)
+# Arithmos icon after mount (.VolumeIcon.icns)
 SetFile -a C "${TMP_MOUNT}"
 
 echo "Unmouting the temporary image"

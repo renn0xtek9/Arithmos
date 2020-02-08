@@ -10,9 +10,9 @@ from AnyQt.QtWidgets import (
     QGraphicsLineItem,
 )
 
-import Orange.statistics.util as ut
-from Orange.data.util import one_hot
-from Orange.widgets.utils.colorpalette import ContinuousPaletteGenerator
+import Arithmos.statistics.util as ut
+from Arithmos.data.util import one_hot
+from Arithmos.widgets.utils.colorpalette import ContinuousPaletteGenerator
 
 
 class BarItem(QGraphicsWidget):
@@ -388,7 +388,7 @@ class Histogram(QGraphicsWidget):
 
 if __name__ == '__main__':
     import sys
-    from Orange.data.table import Table
+    from Arithmos.data.table import Table
     from AnyQt.QtWidgets import (  # pylint: disable=ungrouped-imports
         QGraphicsView, QGraphicsScene, QApplication, QWidget
     )

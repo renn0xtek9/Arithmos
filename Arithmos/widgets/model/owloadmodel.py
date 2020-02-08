@@ -6,20 +6,20 @@ from AnyQt.QtWidgets import (
     QSizePolicy, QHBoxLayout, QComboBox, QStyle, QFileDialog
 )
 
-from Orange.base import Model
-from Orange.widgets import widget, gui
-from Orange.widgets.model import owsavemodel
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils import stdpaths
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Output
+from Arithmos.base import Model
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.model import owsavemodel
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils import stdpaths
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Output
 
 
 class OWLoadModel(widget.OWWidget):
     name = "Load Model"
     description = "Load a model from an input file."
     priority = 3050
-    replaces = ["Orange.widgets.classify.owloadclassifier.OWLoadClassifier"]
+    replaces = ["Arithmos.widgets.classify.owloadclassifier.OWLoadClassifier"]
     icon = "icons/LoadModel.svg"
     keywords = ["file", "open"]
 

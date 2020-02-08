@@ -17,22 +17,22 @@ from AnyQt.QtCore import Qt, QRectF, QLineF, pyqtSignal as Signal
 
 import pyqtgraph as pg
 
-from Orange.data import Table, Domain
-from Orange.preprocess import Normalize
-from Orange.preprocess.score import ReliefF, RReliefF
-from Orange.projection import PCA, LDA, LinearProjector
-from Orange.util import Enum
-from Orange.widgets import gui, report
-from Orange.widgets.gui import OWComponent
-from Orange.widgets.settings import Setting, ContextSetting, SettingProvider
-from Orange.widgets.utils.plot import variables_selection
-from Orange.widgets.utils.plot.owplotgui import VariableSelectionModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils import VizRankDialog
-from Orange.widgets.visualize.utils.component import OWGraphWithAnchors
-from Orange.widgets.visualize.utils.plotutils import AnchorItem
-from Orange.widgets.visualize.utils.widget import OWAnchorProjectionWidget
-from Orange.widgets.widget import Msg
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess import Normalize
+from Arithmos.preprocess.score import ReliefF, RReliefF
+from Arithmos.projection import PCA, LDA, LinearProjector
+from Arithmos.util import Enum
+from Arithmos.widgets import gui, report
+from Arithmos.widgets.gui import OWComponent
+from Arithmos.widgets.settings import Setting, ContextSetting, SettingProvider
+from Arithmos.widgets.utils.plot import variables_selection
+from Arithmos.widgets.utils.plot.owplotgui import VariableSelectionModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils import VizRankDialog
+from Arithmos.widgets.visualize.utils.component import OWGraphWithAnchors
+from Arithmos.widgets.visualize.utils.plotutils import AnchorItem
+from Arithmos.widgets.visualize.utils.widget import OWAnchorProjectionWidget
+from Arithmos.widgets.widget import Msg
 
 
 MAX_LABEL_LEN = 20
@@ -44,7 +44,7 @@ class LinearProjectionVizRank(VizRankDialog, OWComponent):
     minK = 10
 
     attrsSelected = Signal([])
-    _AttrRole = next(gui.OrangeUserRole)
+    _AttrRole = next(gui.ArithmosUserRole)
 
     def __init__(self, master):
         # Add the spin box for a number of attributes to take into account.

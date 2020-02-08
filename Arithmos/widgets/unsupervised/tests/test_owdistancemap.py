@@ -3,9 +3,9 @@
 import random
 import unittest
 
-from Orange.distance import Euclidean
-from Orange.widgets.unsupervised.owdistancemap import OWDistanceMap
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.distance import Euclidean
+from Arithmos.widgets.unsupervised.owdistancemap import OWDistanceMap
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
 
 
 class TestOWDistanceMap(WidgetTest, WidgetOutputsTestMixin):

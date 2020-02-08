@@ -1,6 +1,6 @@
 import sklearn.neighbors as skl_neighbors
-from Orange.base import KNNBase
-from Orange.regression import SklLearner
+from Arithmos.base import KNNBase
+from Arithmos.regression import SklLearner
 
 __all__ = ["KNNRegressionLearner"]
 

@@ -1,10 +1,10 @@
 import sklearn.ensemble as skl_ensemble
 
-from Orange.base import SklLearner
-from Orange.classification.base_classification import (
+from Arithmos.base import SklLearner
+from Arithmos.classification.base_classification import (
     SklLearnerClassification, SklModelClassification
 )
-from Orange.regression.base_regression import (
+from Arithmos.regression.base_regression import (
     SklLearnerRegression, SklModelRegression
 )
 
@@ -21,7 +21,7 @@ class SklAdaBoostClassificationLearner(SklLearnerClassification):
 
     def __init__(self, base_estimator=None, n_estimators=50, learning_rate=1.,
                  algorithm='SAMME.R', random_state=None, preprocessors=None):
-        from Orange.modelling import Fitter
+        from Arithmos.modelling import Fitter
         # If fitter, get the appropriate Learner instance
         if isinstance(base_estimator, Fitter):
             base_estimator = base_estimator.get_learner(
@@ -43,7 +43,7 @@ class SklAdaBoostRegressionLearner(SklLearnerRegression):
 
     def __init__(self, base_estimator=None, n_estimators=50, learning_rate=1.,
                  loss='linear', random_state=None, preprocessors=None):
-        from Orange.modelling import Fitter
+        from Arithmos.modelling import Fitter
         # If fitter, get the appropriate Learner instance
         if isinstance(base_estimator, Fitter):
             base_estimator = base_estimator.get_learner(

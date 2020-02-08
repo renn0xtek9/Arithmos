@@ -1,7 +1,7 @@
 import numpy as np
 
-from Orange.regression import Learner
-from Orange.classification.simple_random_forest import SimpleRandomForestModel as SRFM
+from Arithmos.regression import Learner
+from Arithmos.classification.simple_random_forest import SimpleRandomForestModel as SRFM
 
 __all__ = ['SimpleRandomForestLearner']
 

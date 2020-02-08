@@ -1,10 +1,10 @@
-.. currentmodule:: Orange.data
+.. currentmodule:: Arithmos.data
 
 ######################
 Data Table (``table``)
 ######################
 
-.. autoclass:: Orange.data.Table
+.. autoclass:: Arithmos.data.Table
     :members: columns
 
     Stores data instances as a set of 2d tables representing the independent
@@ -36,8 +36,8 @@ Data Table (``table``)
     - If there are two indices, where the first is an int (a row number) and
       the second can be interpreted as columns, e.g. `table[3, 5]` or
       `table[3, 'gender']` or `table[3, y]` (where `y` is an instance of
-      :obj:`~Orange.data.Variable`), a single value is returned as an instance
-      of :obj:`~Orange.data.Value`.
+      :obj:`~Arithmos.data.Variable`), a single value is returned as an instance
+      of :obj:`~Arithmos.data.Value`.
 
     - In all other cases, the first index should be a row index, a slice or
       a sequence, and the second index, which represent a set of columns,
@@ -52,7 +52,7 @@ Data Table (``table``)
       is, `table[r] = v` is equivalent to `table.X[r] = v`.
 
     - If there is a single index and the value is a data instance
-      (:obj:`Orange.data.Instance`), it is converted into the table's domain
+      (:obj:`Arithmos.data.Instance`), it is converted into the table's domain
       and set to the corresponding rows.
 
     - Final option for a single index is that the value is a sequence whose
@@ -61,7 +61,7 @@ Data Table (``table``)
 
     - For two indices, the row can again be given as a single `int`, a
        `slice` or a sequence of indices. Column indices can be a single
-       `int`, `str` or :obj:`Orange.data.Variable`, a sequence of them,
+       `int`, `str` or :obj:`Arithmos.data.Variable`, a sequence of them,
        a `slice` or any iterable. The value can be a single value, or a
        sequence of appropriate length.
 
@@ -99,7 +99,7 @@ Row manipulation
 .. note::
    Methods that change the table length (`append`, `extend`, `insert`, `clear`,
    and resizing through deleting, slicing or by other means), were deprecated
-   and removed in Orange 3.24.
+   and removed in Arithmos 3.24.
 
 .. automethod:: Table.shuffle
 

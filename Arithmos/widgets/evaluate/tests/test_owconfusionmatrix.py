@@ -1,13 +1,13 @@
 # pylint: disable=missing-docstring
 import numpy as np
 
-from Orange.data import Table
-from Orange.classification import NaiveBayesLearner, TreeLearner
-from Orange.regression import MeanLearner
-from Orange.evaluation.testing import CrossValidation, TestOnTrainingData, \
+from Arithmos.data import Table
+from Arithmos.classification import NaiveBayesLearner, TreeLearner
+from Arithmos.regression import MeanLearner
+from Arithmos.evaluation.testing import CrossValidation, TestOnTrainingData, \
     ShuffleSplit, Results
-from Orange.widgets.evaluate.owconfusionmatrix import OWConfusionMatrix
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.evaluate.owconfusionmatrix import OWConfusionMatrix
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
 
 
 class TestOWConfusionMatrix(WidgetTest, WidgetOutputsTestMixin):

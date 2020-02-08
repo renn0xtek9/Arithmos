@@ -2,10 +2,10 @@
 # pylint: disable=missing-docstring,unsubscriptable-object
 from unittest.mock import Mock
 
-from Orange.data import Table
-from Orange.widgets.data.owdiscretize import OWDiscretize
-from Orange.widgets.tests.base import WidgetTest
-from orangewidget.widget import StateInfo
+from Arithmos.data import Table
+from Arithmos.widgets.data.owdiscretize import OWDiscretize
+from Arithmos.widgets.tests.base import WidgetTest
+from arithmoswidget.widget import StateInfo
 
 
 class TestOWDiscretize(WidgetTest):

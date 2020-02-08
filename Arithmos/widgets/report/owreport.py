@@ -1,7 +1,7 @@
-from orangewidget.report.owreport import OWReport, HAVE_REPORT
+from arithmoswidget.report.owreport import OWReport, HAVE_REPORT
 
 # back-compatibility for deserialization
-from orangewidget.report.owreport import ReportItem  # pylint: disable=unused-import
+from arithmoswidget.report.owreport import ReportItem  # pylint: disable=unused-import
 
 __all__ = [
     "OWReport", "HAVE_REPORT"
@@ -10,11 +10,11 @@ __all__ = [
 if __name__ == "__main__":
     import sys
     from AnyQt.QtWidgets import QApplication
-    from Orange.data import Table
-    from Orange.widgets.data.owfile import OWFile
-    from Orange.widgets.data.owtable import OWDataTable
-    from Orange.widgets.data.owdiscretize import OWDiscretize
-    from Orange.widgets.model.owrandomforest import OWRandomForest
+    from Arithmos.data import Table
+    from Arithmos.widgets.data.owfile import OWFile
+    from Arithmos.widgets.data.owtable import OWDataTable
+    from Arithmos.widgets.data.owdiscretize import OWDiscretize
+    from Arithmos.widgets.model.owrandomforest import OWRandomForest
 
     iris = Table("iris")
     app = QApplication(sys.argv)

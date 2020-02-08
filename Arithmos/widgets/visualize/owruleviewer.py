@@ -8,13 +8,13 @@ from AnyQt.QtWidgets import (
     QItemDelegate, QHeaderView, QPushButton, QApplication
 )
 
-from Orange.data import Table
-from Orange.classification.rules import _RuleClassifier
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.data import Table
+from Arithmos.classification.rules import _RuleClassifier
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 class OWRuleViewer(widget.OWWidget):
@@ -382,7 +382,7 @@ class DistributionItemDelegate(QItemDelegate):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.classification import CN2Learner
+    from Arithmos.classification import CN2Learner
     data = Table("iris")
     learner = CN2Learner()
     model = learner(data)

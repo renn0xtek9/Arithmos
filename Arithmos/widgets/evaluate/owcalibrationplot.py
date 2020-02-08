@@ -7,18 +7,18 @@ from AnyQt.QtWidgets import QListWidget, QSizePolicy
 
 import pyqtgraph as pg
 
-from Orange.base import Model
-from Orange.classification import ThresholdClassifier, CalibratedLearner
-from Orange.evaluation import Results
-from Orange.evaluation.performance_curves import Curves
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.evaluate.contexthandlers import \
+from Arithmos.base import Model
+from Arithmos.classification import ThresholdClassifier, CalibratedLearner
+from Arithmos.evaluation import Results
+from Arithmos.evaluation.performance_curves import Curves
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.evaluate.contexthandlers import \
     EvaluationResultsContextHandler
-from Orange.widgets.evaluate.utils import results_for_preview
-from Orange.widgets.utils import colorpalette, colorbrewer
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, Msg
-from Orange.widgets import report
+from Arithmos.widgets.evaluate.utils import results_for_preview
+from Arithmos.widgets.utils import colorpalette, colorbrewer
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, Msg
+from Arithmos.widgets import report
 
 
 MetricDefinition = namedtuple(

@@ -5,8 +5,8 @@ from math import sqrt
 import numpy as np
 from scipy.sparse import csr_matrix
 
-from Orange.data import ContinuousVariable, DiscreteVariable, Domain, Table
-from Orange import distance
+from Arithmos.data import ContinuousVariable, DiscreteVariable, Domain, Table
+from Arithmos import distance
 
 
 class CommonTests:

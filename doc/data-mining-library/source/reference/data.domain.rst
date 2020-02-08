@@ -1,4 +1,4 @@
-.. currentmodule:: Orange.data
+.. currentmodule:: Arithmos.data
 
 ###############################
 Domain description (``domain``)
@@ -6,30 +6,30 @@ Domain description (``domain``)
 
 Description of a domain stores a list of features, class(es) and meta
 attribute descriptors. A domain descriptor is attached to all tables in
-Orange to assign names and types to the corresponding columns. Columns in
-the :obj:`Orange.data.Table` have the roles of attributes (features,
+Arithmos to assign names and types to the corresponding columns. Columns in
+the :obj:`Arithmos.data.Table` have the roles of attributes (features,
 independent variables), class(es) (targets, outcomes, dependent variables)
 and meta attributes; in parallel to that, the domain descriptor stores
 their corresponding
 descriptions in collections of variable descriptors of type
-:obj:`Orange.data.Variable`.
+:obj:`Arithmos.data.Variable`.
 
 Domain descriptors are also stored in predictive models and other objects to
 facilitate automated conversions between domains, as described below.
 
 Domains are most often constructed automatically when loading the data or
-wrapping the numpy arrays into Orange's :obj:`~Orange.data.Table`. ::
+wrapping the numpy arrays into Arithmos's :obj:`~Arithmos.data.Table`. ::
 
-    >>> from Orange.data import Table
+    >>> from Arithmos.data import Table
     >>> iris = Table("iris")
     >>> iris.domain
     [sepal length, sepal width, petal length, petal width | iris]
 
-.. autoclass:: Orange.data.Domain
+.. autoclass:: Arithmos.data.Domain
 
     .. attribute:: attributes
 
-        A tuple of descriptors (instances of :class:`Orange.data.Variable`)
+        A tuple of descriptors (instances of :class:`Arithmos.data.Variable`)
         for attributes (features, independent variables). ::
 
             >>> iris.domain.attributes
@@ -68,7 +68,7 @@ wrapping the numpy arrays into Orange's :obj:`~Orange.data.Table`. ::
     .. attribute:: anonymous
 
         `True` if the domain was constructed when converting numpy array to
-        :class:`Orange.data.Table`. Such domains can be converted to and
+        :class:`Arithmos.data.Table`. Such domains can be converted to and
         from other domains even if they consist of different variable
         descriptors for as long as their number and types match.
 
@@ -78,7 +78,7 @@ wrapping the numpy arrays into Orange's :obj:`~Orange.data.Table`. ::
         *gender* and continuous feature *age*, and a continuous target *salary*.
         ::
 
-            >>> from Orange.data import Domain, DiscreteVariable, ContinuousVariable
+            >>> from Arithmos.data import Domain, DiscreteVariable, ContinuousVariable
             >>> domain = Domain([DiscreteVariable.make("gender"),
             ...                  ContinuousVariable.make("age")],
             ...                 ContinuousVariable.make("salary"))
@@ -101,7 +101,7 @@ wrapping the numpy arrays into Orange's :obj:`~Orange.data.Table`. ::
         ::
 
             >>> import numpy as np
-            >>> from Orange.data import Domain
+            >>> from Arithmos.data import Domain
             >>> X = np.arange(20, dtype=float).reshape(5, 4)
             >>> Y = np.arange(5, dtype=int)
             >>> domain = Domain.from_numpy(X, Y)
@@ -155,9 +155,9 @@ Domain conversion
     Domain descriptors also convert data instances between different domains.
 
     In a typical scenario, we may want to discretize some continuous data before
-    inducing a model. Discretizers (:mod:`Orange.preprocess`)
+    inducing a model. Discretizers (:mod:`Arithmos.preprocess`)
     construct a new data table with attribute descriptors
-    (:class:`Orange.data.variable`), that include the corresponding functions
+    (:class:`Arithmos.data.variable`), that include the corresponding functions
     for conversion from continuous to discrete values. The trained model stores
     this domain descriptor and uses it to convert instances from the original
     domain to the discretized one at prediction phase.

@@ -6,13 +6,13 @@ from unittest.mock import patch
 import numpy as np
 from AnyQt.QtCore import QItemSelectionModel
 
-from Orange.data import Table, ContinuousVariable, StringVariable, Domain, \
+from Arithmos.data import Table, ContinuousVariable, StringVariable, Domain, \
     DiscreteVariable
-from Orange.widgets.visualize.owboxplot import (
+from Arithmos.widgets.visualize.owboxplot import (
     OWBoxPlot, FilterGraphicsRectItem, _quantiles
 )
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.tests import test_filename
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.tests import test_filename
 
 
 class TestOWBoxPlot(WidgetTest, WidgetOutputsTestMixin):

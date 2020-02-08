@@ -6,10 +6,10 @@ import unittest
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.classification.tree import \
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.classification.tree import \
     TreeModel, Node, DiscreteNode, MappedDiscreteNode, NumericNode
-from Orange.tests import test_filename
+from Arithmos.tests import test_filename
 
 
 class TestTree:
@@ -202,7 +202,7 @@ class TestTree:
 
 
 class TestClassifier(TestTree, unittest.TestCase):
-    from Orange.classification import TreeLearner
+    from Arithmos.classification import TreeLearner
 
     @classmethod
     def setUpClass(cls):
@@ -219,7 +219,7 @@ class TestClassifier(TestTree, unittest.TestCase):
 
 
 class TestRegressor(TestTree, unittest.TestCase):
-    from Orange.regression import TreeLearner
+    from Arithmos.regression import TreeLearner
 
     @classmethod
     def setUpClass(cls):

@@ -5,8 +5,8 @@ Distance (``distance``)
 The following example demonstrates how to compute distances between all data
 instances from Iris:
 
-    >>> from Orange.data import Table
-    >>> from Orange.distance import Euclidean
+    >>> from Arithmos.data import Table
+    >>> from Arithmos.distance import Euclidean
     >>> iris = Table('iris')
     >>> dist_matrix = Euclidean(iris)
     >>> # Distance between first two examples
@@ -57,7 +57,7 @@ Here are five closest neighbors of `iris2[0]` from `iris1`::
 
 All distances share a common interface.
 
-.. autoclass:: Orange.distance.Distance
+.. autoclass:: Arithmos.distance.Distance
 
 Handling discrete and missing data
 ==================================
@@ -152,7 +152,7 @@ Jaccard similarity between two sets is defined as the size of their
 intersection divided by the size of the union. Jaccard distance is computed
 by subtracting the similarity from one.
 
-In Orange, attribute values are interpreted as membership indicator. In
+In Arithmos, attribute values are interpreted as membership indicator. In
 row-wise distances, columns are interpreted as sets, and non-zero
 values in a row (including negative values of numeric features) indicate that
 the row belongs to the particular sets. In column-wise distances, rows are sets

@@ -10,11 +10,11 @@ from itertools import islice
 from time import strftime
 
 import numpy as np
-from Orange.data import (
+from Arithmos.data import (
     Table, Domain, Value, Instance, filter)
-from Orange.data.sql import filter as sql_filter
-from Orange.data.sql.backend import Backend
-from Orange.data.sql.backend.base import TableDesc, BackendError
+from Arithmos.data.sql import filter as sql_filter
+from Arithmos.data.sql.backend import Backend
+from Arithmos.data.sql.backend.base import TableDesc, BackendError
 
 LARGE_TABLE = 100000
 AUTO_DL_LIMIT = 10000
@@ -657,7 +657,7 @@ class SqlTable(Table):
 
 class SqlRowInstance(Instance):
     """
-    Extends :obj:`Orange.data.Instance` to correctly handle values of meta
+    Extends :obj:`Arithmos.data.Instance` to correctly handle values of meta
     attributes.
     """
 

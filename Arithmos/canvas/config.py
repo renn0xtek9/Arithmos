@@ -1,5 +1,5 @@
 """
-Orange Canvas Configuration
+Arithmos Canvas Configuration
 
 """
 import uuid
@@ -18,16 +18,16 @@ import requests
 from AnyQt.QtGui import QPainter, QFont, QFontMetrics, QColor, QPixmap, QIcon
 from AnyQt.QtCore import Qt, QPoint, QRect
 
-from orangecanvas import config as occonfig
-from orangecanvas.utils.settings import config_slot
-from orangewidget.workflow import config
+from arithmoscanvas import config as occonfig
+from arithmoscanvas.utils.settings import config_slot
+from arithmoswidget.workflow import config
 
-import Orange
+import Arithmos
 
 # generated from biolab/arithmos-addons repository
-OFFICIAL_ADDON_LIST = "https://orange.biolab.si/addons/list"
+OFFICIAL_ADDON_LIST = "https://arithmos.biolab.si/addons/list"
 
-WIDGETS_ENTRY = "orange.widgets"
+WIDGETS_ENTRY = "arithmos.widgets"
 
 spec = [
     ("startup/check-updates", bool, False, "Check for updates"),
@@ -60,11 +60,11 @@ spec = [config_slot(*t) for t in spec]
 
 class Config(config.Config):
     """
-    Orange application configuration
+    Arithmos application configuration
     """
     OrganizationDomain = "biolab.si"
-    ApplicationName = "Orange"
-    ApplicationVersion = Orange.__version__
+    ApplicationName = "Arithmos"
+    ApplicationVersion = Arithmos.__version__
 
     def init(self):
         super().init()
@@ -77,14 +77,14 @@ class Config(config.Config):
         Return the main application icon.
         """
         path = pkg_resources.resource_filename(
-            __name__, "icons/orange-canvas.svg"
+            __name__, "icons/arithmos-canvas.svg"
         )
         return QIcon(path)
 
     @staticmethod
     def splash_screen():
         path = pkg_resources.resource_filename(
-            __name__, "icons/orange-splash-screen.png")
+            __name__, "icons/arithmos-splash-screen.png")
         pm = QPixmap(path)
 
         version = Config.ApplicationVersion
@@ -114,7 +114,7 @@ class Config(config.Config):
     @staticmethod
     def widgets_entry_points():
         """
-        Return an `EntryPoint` iterator for all 'orange.widget' entry
+        Return an `EntryPoint` iterator for all 'arithmos.widget' entry
         points.
         """
         # Ensure the 'this' distribution's ep is the first. iter_entry_points
@@ -162,28 +162,28 @@ class Config(config.Config):
         # `iter_entry_points` yields them in unspecified order, so we insert
         # our first
         default_ep = pkg_resources.EntryPoint(
-            "Arithmos", "Orange.canvas.workflows",
+            "Arithmos", "Arithmos.canvas.workflows",
             dist=pkg_resources.get_distribution("Arithmos"))
 
         return itertools.chain(
             (default_ep,),
-            pkg_resources.iter_entry_points("orange.widgets.tutorials")
+            pkg_resources.iter_entry_points("arithmos.widgets.tutorials")
         )
 
     APPLICATION_URLS = {
         #: Submit a bug report action in the Help menu
         "Bug Report": "https://github.com/biolab/arithmos/issues",
         #: A url quick tour/getting started url
-        "Quick Start": "https://orange.biolab.si/getting-started/",
+        "Quick Start": "https://arithmos.biolab.si/getting-started/",
         #: The 'full' documentation, should be something like current /docs/
         #: but specific for 'Visual Programing' only
-        "Documentation": "https://orange.biolab.si/widget-catalog/",
+        "Documentation": "https://arithmos.biolab.si/widget-catalog/",
         #: YouTube tutorials
         "Screencasts":
             "https://www.youtube.com/watch"
             "?v=HXjnDIgGDuI&list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy&index=1",
         #: Used for 'Submit Feedback' action in the help menu
-        "Feedback": "https://orange.biolab.si/survey/long.html",
+        "Feedback": "https://arithmos.biolab.si/survey/long.html",
     }
 
 
@@ -194,10 +194,10 @@ def init():
 
 def data_dir():
     """
-    Return the Orange application data directory. If the directory path
+    Return the Arithmos application data directory. If the directory path
     does not yet exists then create it.
     """
-    from Orange.misc import environ
+    from Arithmos.misc import environ
     path = os.path.join(environ.data_dir(), "canvas")
     try:
         os.makedirs(path, exist_ok=True)
@@ -208,10 +208,10 @@ def data_dir():
 
 def cache_dir():
     """
-    Return the Orange application cache directory. If the directory path
+    Return the Arithmos application cache directory. If the directory path
     does not yet exists then create it.
     """
-    from Orange.misc import environ
+    from Arithmos.misc import environ
     path = os.path.join(environ.cache_dir(), "canvas")
     try:
         os.makedirs(path, exist_ok=True)
@@ -247,8 +247,8 @@ def widget_settings_dir():
         f"'{__name__}.widget_settings_dir' is deprecated.",
         DeprecationWarning, stacklevel=2
     )
-    import orangewidget.settings
-    return orangewidget.settings.widget_settings_dir()
+    import arithmoswidget.settings
+    return arithmoswidget.settings.widget_settings_dir()
 
 
 def widgets_entry_points():

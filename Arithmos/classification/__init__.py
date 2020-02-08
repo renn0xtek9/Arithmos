@@ -1,4 +1,4 @@
-# Pull members from modules to Orange.classification namespace
+# Pull members from modules to Arithmos.classification namespace
 # pylint: disable=wildcard-import
 
 from .base_classification import (ModelClassification as Model,

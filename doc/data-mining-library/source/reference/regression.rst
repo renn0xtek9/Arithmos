@@ -2,7 +2,7 @@
 Regression (``regression``)
 ###########################
 
-.. automodule:: Orange.regression
+.. automodule:: Arithmos.regression
 
 
 .. index:: .. index:: linear fitter
@@ -21,8 +21,8 @@ linear regression is therefore to fit the unknown coefficients.
 Example
 =======
 
-    >>> from Orange.regression.linear import LinearRegressionLearner
-    >>> mpg = Orange.data.Table('auto-mpg')
+    >>> from Arithmos.regression.linear import LinearRegressionLearner
+    >>> mpg = Arithmos.data.Table('auto-mpg')
     >>> mean_ = LinearRegressionLearner()
     >>> model = mean_(mpg[40:110])
     >>> print(model)
@@ -32,11 +32,11 @@ Example
     >>> model(mpg[0])
     Value('mpg', 24.6)
 
-.. autoclass:: Orange.regression.linear.LinearRegressionLearner
-.. autoclass:: Orange.regression.linear.RidgeRegressionLearner
-.. autoclass:: Orange.regression.linear.LassoRegressionLearner
-.. autoclass:: Orange.regression.linear.SGDRegressionLearner
-.. autoclass:: Orange.regression.linear.LinearModel
+.. autoclass:: Arithmos.regression.linear.LinearRegressionLearner
+.. autoclass:: Arithmos.regression.linear.RidgeRegressionLearner
+.. autoclass:: Arithmos.regression.linear.LassoRegressionLearner
+.. autoclass:: Arithmos.regression.linear.SGDRegressionLearner
+.. autoclass:: Arithmos.regression.linear.LinearModel
 
 
 
@@ -50,7 +50,7 @@ Polynomial
 *Polynomial model* is a wrapper that constructs polynomial features of
 a specified degree and learns a model on them.
 
-.. autoclass:: Orange.regression.linear.PolynomialLearner
+.. autoclass:: Arithmos.regression.linear.PolynomialLearner
 
 
 Mean
@@ -66,8 +66,8 @@ distribution. The model is stored as an instance of :class:`MeanModel`.
 Example
 =======
 
-    >>> from Orange.data import Table
-    >>> from Orange.regression import MeanLearner
+    >>> from Arithmos.data import Table
+    >>> from Arithmos.regression import MeanLearner
     >>> data = Table('auto-mpg')
     >>> learner = MeanLearner()
     >>> model = learner(data)
@@ -108,7 +108,7 @@ Simple Random Forest
 Regression Tree
 -------------------
 
-Orange includes two implemenations of regression tres: a home-grown one, and one
+Arithmos includes two implemenations of regression tres: a home-grown one, and one
 from scikit-learn. The former properly handles multinominal and missing values,
 and the latter is faster.
 

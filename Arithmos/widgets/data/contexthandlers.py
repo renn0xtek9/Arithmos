@@ -1,4 +1,4 @@
-from Orange.widgets.settings import DomainContextHandler
+from Arithmos.widgets.settings import DomainContextHandler
 
 
 class SelectAttributesDomainContextHandler(DomainContextHandler):

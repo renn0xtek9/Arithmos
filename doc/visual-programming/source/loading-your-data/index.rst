@@ -1,7 +1,7 @@
 Loading your Data
 =================
 
-Orange comes with its `own data format <https://docs.biolab.si//3/data-mining-library/tutorial/data.html#data-input>`_, but can
+Arithmos comes with its `own data format <https://docs.biolab.si//3/data-mining-library/tutorial/data.html#data-input>`_, but can
 also handle native Excel (.xlsx or .xls), comma- or tab-delimited data files. The input data
 set is usually a table, with data instances (samples) in rows and
 data attributes in columns. Attributes can be of different `types`
@@ -12,14 +12,14 @@ while data role can also be modified with :doc:`Select Columns<../widgets/data/s
 In a Nutshell
 -------------
 
--   Orange can import any comma- or tab-delimited data file, or Excel's native files or Google Sheets document. Use :doc:`File<../widgets/data/file>`
+-   Arithmos can import any comma- or tab-delimited data file, or Excel's native files or Google Sheets document. Use :doc:`File<../widgets/data/file>`
     widget to load the data and, if needed, define the class and meta attributes.
 -   Attribute names in the column header
     can be preceded with a label followed by a hash. Use c for class
     and m for meta attribute, i to ignore a column, w for weights column, and C, D, T, S for
     continuous, discrete, time, and string attribute types. Examples: C\#mph,
     mS\#name, i\#dummy.
--   An alternative to the hash notation is Orange's native format with three
+-   An alternative to the hash notation is Arithmos's native format with three
     header rows: the first with attribute names, the second specifying
     the type (**continuous**, **discrete**, **time**, or **string**), and the third
     proving information on the attribute role (**class**, **meta**, **weight** or **ignore**).
@@ -56,12 +56,12 @@ The **File** widget sends the data to the **Data Table**. Double click the **Dat
     :width: 900 px
     :align: center
 
-Orange correctly assumed that a column with gene names is meta information, which is displayed in the **Data Table** in columns shaded with light-brown. It has not guessed that `function`, the first non-meta column in our data file, is a class column. To correct this in Orange, we can adjust attribute role in the column display of File widget (below). Double-click the `feature` label in the `function` row and select `target` instead. This will set `function` attribute as our target (class) variable.
+Arithmos correctly assumed that a column with gene names is meta information, which is displayed in the **Data Table** in columns shaded with light-brown. It has not guessed that `function`, the first non-meta column in our data file, is a class column. To correct this in Arithmos, we can adjust attribute role in the column display of File widget (below). Double-click the `feature` label in the `function` row and select `target` instead. This will set `function` attribute as our target (class) variable.
 
 .. image:: File-set-feature-kind.png
     :align: center
 
-You can also change attribute type from nominal to numeric, from string to datetime, and so on. Naturally, data values have to suit the specified attribute type. Datetime accepts only values in `ISO 8601`_ format, e.g. 2016-01-01 16:16:01. Orange would also assume the attribute is numeric if it has several different values, else it would be considered nominal. All other types are considered strings and are as such automatically categorized as meta attributes.
+You can also change attribute type from nominal to numeric, from string to datetime, and so on. Naturally, data values have to suit the specified attribute type. Datetime accepts only values in `ISO 8601`_ format, e.g. 2016-01-01 16:16:01. Arithmos would also assume the attribute is numeric if it has several different values, else it would be considered nominal. All other types are considered strings and are as such automatically categorized as meta attributes.
 
 Change of attribute roles and types should be confirmed by clicking the **Apply** button.
 
@@ -74,7 +74,7 @@ Another way to set the data role is to feed the data to the :doc:`Select Columns
 .. image:: select-columns-schema.png
     :align: center
 
-Opening :doc:`Select Columns<../widgets/data/selectcolumns>` reveals Orange's classification of attributes. We would like all of our continuous attributes to be data features, gene function to be our target variable and gene names considered as meta attributes. We can obtain this by dragging the attribute names around the boxes in **Select Columns**:
+Opening :doc:`Select Columns<../widgets/data/selectcolumns>` reveals Arithmos's classification of attributes. We would like all of our continuous attributes to be data features, gene function to be our target variable and gene names considered as meta attributes. We can obtain this by dragging the attribute names around the boxes in **Select Columns**:
 
 .. image:: select-columns-start.png
     :width: 413 px
@@ -151,7 +151,7 @@ attribute name) are not present in the dataset.
 Three-Row Header Format
 -----------------------
 
-Orange's legacy native data format is a tab-delimited text file with three header rows. The first row lists the attribute names, the second row defines their type (continuous, discrete, time and string, or abbreviated c, d, t, and s), and the third row an optional role (class, meta, weight, or ignore). Here is an example:
+Arithmos's legacy native data format is a tab-delimited text file with three header rows. The first row lists the attribute names, the second row defines their type (continuous, discrete, time and string, or abbreviated c, d, t, and s), and the third row an optional role (class, meta, weight, or ignore). Here is an example:
 
 .. image:: excel-with-tab1.png
     :width: 585 px
@@ -160,7 +160,7 @@ Orange's legacy native data format is a tab-delimited text file with three heade
 Data from Google Sheets
 -----------------------
 
-Orange can read data from Google Sheets, as long as it conforms to the data presentation rules we have presented above. In Google Sheets, copy the shareable link (Share button, then Get shareable link) and paste it in the `Data File / URL` box of the File widget. For a taste, here's one such link you can use: `http://bit.ly/1J12Tdp <http://bit.ly/1J12Tdp>`_, and the way we have entered it in the **File** widget:
+Arithmos can read data from Google Sheets, as long as it conforms to the data presentation rules we have presented above. In Google Sheets, copy the shareable link (Share button, then Get shareable link) and paste it in the `Data File / URL` box of the File widget. For a taste, here's one such link you can use: `http://bit.ly/1J12Tdp <http://bit.ly/1J12Tdp>`_, and the way we have entered it in the **File** widget:
 
 .. image:: File-Google-Sheet.png
     :align: center
@@ -175,7 +175,7 @@ If you are using LibreOffice, simply save your files in Excel (.xlsx or .xls) fo
 
 Datetime Format
 ---------------
-To avoid ambiguity, Orange supports date and/or time formatted in one of `ISO 8601`_ formats.
+To avoid ambiguity, Arithmos supports date and/or time formatted in one of `ISO 8601`_ formats.
 E.g., the following values are all valid::
 
     2016

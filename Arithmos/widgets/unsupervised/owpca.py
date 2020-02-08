@@ -4,14 +4,14 @@ import numpy
 from AnyQt.QtWidgets import QFormLayout
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, StringVariable, ContinuousVariable
-from Orange.data.sql.table import SqlTable, AUTO_DL_LIMIT
-from Orange.preprocess import preprocess
-from Orange.projection import PCA
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils.slidergraph import SliderGraph
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.data import Table, Domain, StringVariable, ContinuousVariable
+from Arithmos.data.sql.table import SqlTable, AUTO_DL_LIMIT
+from Arithmos.preprocess import preprocess
+from Arithmos.projection import PCA
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils.slidergraph import SliderGraph
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 # Maximum number of PCA components that we can set in the widget

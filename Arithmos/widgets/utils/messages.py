@@ -3,7 +3,7 @@
 A class derived from `OWWidget` can include member classes `Error`, `Warning`
 and `Information`, derived from the same-named `OWWidget` classes. Each of
 those contains members that are instances of `UnboundMsg`, which is, for
-convenience, also exposed as `Orange.widgets.widget.Msg`. These members
+convenience, also exposed as `Arithmos.widgets.widget.Msg`. These members
 represent all possible errors, like `Error.no_discrete_vars`, with exception
 of the deprecated old-style errors.
 
@@ -27,7 +27,7 @@ canvas.
 
 Clearing messages work analogously.
 """
-from orangewidget.utils.messages import (
+from arithmoswidget.utils.messages import (
     UnboundMsg, MessageGroup, MessagesMixin, WidgetMessagesMixin
 )
 __all__ = [

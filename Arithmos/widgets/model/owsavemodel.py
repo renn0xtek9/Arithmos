@@ -1,16 +1,16 @@
 import pickle
 
-from Orange.widgets.widget import Input
-from Orange.base import Model
-from Orange.widgets.utils.save.owsavebase import OWSaveBase
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input
+from Arithmos.base import Model
+from Arithmos.widgets.utils.save.owsavebase import OWSaveBase
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWSaveModel(OWSaveBase):
     name = "Save Model"
     description = "Save a trained model to an output file."
     icon = "icons/SaveModel.svg"
-    replaces = ["Orange.widgets.classify.owsaveclassifier.OWSaveClassifier"]
+    replaces = ["Arithmos.widgets.classify.owsaveclassifier.OWSaveClassifier"]
     priority = 3000
     keywords = []
 

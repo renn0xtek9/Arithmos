@@ -3,8 +3,8 @@ import sys
 
 from AnyQt.QtCore import QObject
 
-from Orange.data.variable import TimeVariable
-from Orange.util import deepgetattr
+from Arithmos.data.variable import TimeVariable
+from Arithmos.util import deepgetattr
 
 
 def vartype(var):

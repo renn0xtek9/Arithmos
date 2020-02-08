@@ -24,7 +24,7 @@ def valuecount(np.ndarray[np.float64_t, ndim=2] a not None):
     Examples
     --------
     >>> a = np.array([[1, 1, 2, 3, 3], [0.1, 0.2, 0.3, 0.4, 0.5]])
-    >>> _orange.valuecount(a)
+    >>> _arithmos.valuecount(a)
     [[ 1.   2.   3. ]
      [ 0.3  0.3  0.9]]
 

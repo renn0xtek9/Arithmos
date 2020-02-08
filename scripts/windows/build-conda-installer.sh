@@ -303,7 +303,7 @@ win-path() {
 
 make-installer() {
     local scriptdir="$(dirname "$0")"
-    local nsis_script="${scriptdir:?}/orange-conda.nsi"
+    local nsis_script="${scriptdir:?}/arithmos-conda.nsi"
     local outpath=${DISTDIR:?}
     local filename=${NAME:?}-${VERSION:?}-Miniconda-${CONDAPLATTAG}.exe
     local pyinstaller=Miniconda3-${MINICONDA_VERSION:?}-Windows-${CONDAPLATTAG}.exe
@@ -335,18 +335,18 @@ EOF
     mkdir -p "${DISTDIR}"
 
     makensis -DOUTFILENAME="${outpath}/${filename}" \
-             -DAPPNAME=Orange \
+             -DAPPNAME=Arithmos \
              -DVERSION=${VERSION} \
              -DVERMAJOR=${major} -DVERMINOR=${minor} -DVERMICRO=${micro} \
              -DPYMAJOR=${pymajor} -DPYMINOR=${pyminor} -DPYMICRO=${pymicro} \
              -DPYARCH=${PLATTAG} \
              -DBASEDIR="${basedir}" \
              -DPYINSTALLER=${pyinstaller} \
-             -DINSTALL_REGISTRY_KEY=OrangeCanvas \
-             -DINSTALLERICON=scripts/windows/Orange.ico \
+             -DINSTALL_REGISTRY_KEY=ArithmosCanvas \
+             -DINSTALLERICON=scripts/windows/Arithmos.ico \
              -DICONDIR="arithmos\icons" \
              -DLICENSE_FILE="${BASEDIR}"/license.txt \
-             -DLAUNCHERMODULE="Orange.canvas" \
+             -DLAUNCHERMODULE="Arithmos.canvas" \
              "${extransisparams[@]}" \
              -NOCD \
              -V4 -WX \
@@ -358,7 +358,7 @@ fetch-miniconda ${MINICONDA_VERSION} ${PLATTAG} "${CACHEDIR:?}"/miniconda
 
 if [[ "${ONLINE}" == yes ]]; then
     cat > "${BASEDIR}"/conda-spec.txt < "${ENV_SPEC_FILE}"
-    # extract the orange version from env spec
+    # extract the arithmos version from env spec
     VERSION=$(cat < "${BASEDIR}"/conda-spec.txt |
               grep -E 'arithmos-.*tar.bz2' |
               sed -e 's@^.*arithmos-\([^-]*\)-.*tar.bz2.*@\1@')
@@ -366,7 +366,7 @@ if [[ "${ONLINE}" == yes ]]; then
                      < "${BASEDIR:?}"/conda-spec.txt)
 else
     conda-fetch-packages "${BASEDIR:?}"/conda-pkgs "${ENV_SPEC_FILE}"
-    # extract the orange version from env spec
+    # extract the arithmos version from env spec
     VERSION=$(cat < "${BASEDIR:?}"/conda-pkgs/conda-spec.txt |
               grep -E 'arithmos-.*tar.bz2' |
               cut -d "-" -f 2)
@@ -375,7 +375,7 @@ else
 fi
 
 if [[ ! "${VERSION}" ]]; then
-    echo "Cannot determine orange version from the environment spec" >&2
+    echo "Cannot determine arithmos version from the environment spec" >&2
     exit 1
 fi
 
@@ -383,6 +383,6 @@ cp "${CACHEDIR:?}/miniconda/Miniconda3-${MINICONDA_VERSION}-Windows-${CONDAPLATT
    "${BASEDIR:?}/"
 
 mkdir -p "${BASEDIR:?}/icons"
-cp scripts/windows/{Orange.ico,OrangeOWS.ico} "${BASEDIR:?}/icons"
+cp scripts/windows/{Arithmos.ico,ArithmosOWS.ico} "${BASEDIR:?}/icons"
 cp "$(dirname "$0")"/sitecustomize.py "${BASEDIR:?}"/conda-pkgs
 make-installer

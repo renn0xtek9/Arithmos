@@ -1,11 +1,11 @@
 import unittest
 
-from Orange.classification.majority import MajorityLearner
-from Orange.data import Table
-from Orange.widgets.model.owsavemodel import OWSaveModel
-from Orange.widgets.utils.save.tests.test_owsavebase import \
+from Arithmos.classification.majority import MajorityLearner
+from Arithmos.data import Table
+from Arithmos.widgets.model.owsavemodel import OWSaveModel
+from Arithmos.widgets.utils.save.tests.test_owsavebase import \
     SaveWidgetsTestBaseMixin
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class OWSaveTestBase(WidgetTest, SaveWidgetsTestBaseMixin):

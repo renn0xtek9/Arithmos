@@ -9,11 +9,11 @@ import numpy as np
 from AnyQt.QtCore import QItemSelection, QItemSelectionRange, \
     QItemSelectionModel, Qt
 
-from Orange.data import Table, Domain, StringVariable, ContinuousVariable, \
+from Arithmos.data import Table, Domain, StringVariable, ContinuousVariable, \
     DiscreteVariable, TimeVariable
-from Orange.widgets.tests.base import WidgetTest, datasets
-from Orange.widgets.tests.utils import simulate, table_dense_sparse
-from Orange.widgets.data.owfeaturestatistics import \
+from Arithmos.widgets.tests.base import WidgetTest, datasets
+from Arithmos.widgets.tests.utils import simulate, table_dense_sparse
+from Arithmos.widgets.data.owfeaturestatistics import \
     OWFeatureStatistics
 
 VarDataPair = namedtuple('VarDataPair', ['variable', 'data'])

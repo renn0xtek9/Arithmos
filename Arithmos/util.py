@@ -15,31 +15,31 @@ import warnings
 from unittest.mock import patch  # pylint: disable=unused-import
 
 # Backwards-compat
-from Orange.data.util import scale  # pylint: disable=unused-import
+from Arithmos.data.util import scale  # pylint: disable=unused-import
 
 
 log = logging.getLogger(__name__)
 
 
-class OrangeWarning(UserWarning):
+class ArithmosWarning(UserWarning):
     pass
 
 
-class OrangeDeprecationWarning(OrangeWarning, DeprecationWarning):
+class ArithmosDeprecationWarning(ArithmosWarning, DeprecationWarning):
     pass
 
 
-warnings.simplefilter('default', OrangeWarning)
+warnings.simplefilter('default', ArithmosWarning)
 
 if os.environ.get('ORANGE_DEPRECATIONS_ERROR'):
-    warnings.simplefilter('error', OrangeDeprecationWarning)
+    warnings.simplefilter('error', ArithmosDeprecationWarning)
 
 
 def resource_filename(path):
     """
-    Return the resource filename path relative to the Orange package.
+    Return the resource filename path relative to the Arithmos package.
     """
-    return pkg_resources.resource_filename("Orange", path)
+    return pkg_resources.resource_filename("Arithmos", path)
 
 
 def deprecated(obj):
@@ -50,7 +50,7 @@ def deprecated(obj):
     ----------
     obj: callable or str
         If callable, it is marked as deprecated and its calling raises
-        OrangeDeprecationWarning. If str, it is the alternative to be used
+        ArithmosDeprecationWarning. If str, it is the alternative to be used
         instead of the decorated function.
 
     Returns
@@ -64,7 +64,7 @@ def deprecated(obj):
     ... def old():
     ...     return 'old behavior'
     >>> old()  # doctest: +SKIP
-    /... OrangeDeprecationWarning: Call to deprecated ... old ...
+    /... ArithmosDeprecationWarning: Call to deprecated ... old ...
     'old behavior'
 
     >>> class C:
@@ -74,7 +74,7 @@ def deprecated(obj):
     ...     def new(self):
     ...         return 'new behavior'
     >>> C().old() # doctest: +SKIP
-    /... OrangeDeprecationWarning: Call to deprecated ... C.old ...
+    /... ArithmosDeprecationWarning: Call to deprecated ... C.old ...
       Instead, use C.new() ...
     'old behavior'
     """
@@ -87,7 +87,7 @@ def deprecated(obj):
                 func.__self__.__class__,
                 func.__name__) if hasattr(func, '__self__') else func
             warnings.warn('Call to deprecated {}{}'.format(name, alternative),
-                          OrangeDeprecationWarning, stacklevel=2)
+                          ArithmosDeprecationWarning, stacklevel=2)
             return func(*args, **kwargs)
         return wrapper
 
@@ -343,7 +343,7 @@ class Reprable:
         >>> class C(Reprable):
         ...     _reprable_module = True
         >>> C()
-        Orange.util.C()
+        Arithmos.util.C()
         >>> class C(Reprable):
         ...     _reprable_module = 'something_else'
         >>> C()

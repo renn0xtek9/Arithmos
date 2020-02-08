@@ -559,8 +559,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__data___variable
-#define __PYX_HAVE_API__Orange__data___variable
+#define __PYX_HAVE__Arithmos__data___variable
+#define __PYX_HAVE_API__Arithmos__data___variable
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -765,7 +765,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/data/_variable.pyx",
+  "Arithmos/data/_variable.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -1017,12 +1017,12 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'Orange.data._variable' */
-#define __Pyx_MODULE_NAME "Orange.data._variable"
-extern int __pyx_module_is_main_Orange__data___variable;
-int __pyx_module_is_main_Orange__data___variable = 0;
+/* Module declarations from 'Arithmos.data._variable' */
+#define __Pyx_MODULE_NAME "Arithmos.data._variable"
+extern int __pyx_module_is_main_Arithmos__data___variable;
+int __pyx_module_is_main_Arithmos__data___variable = 0;
 
-/* Implementation of 'Orange.data._variable' */
+/* Implementation of 'Arithmos.data._variable' */
 static const char __pyx_k_[] = ".";
 static const char __pyx_k_i[] = "i";
 static const char __pyx_k_s[] = "s";
@@ -1041,12 +1041,12 @@ static const char __pyx_k_adjust_decimals[] = "adjust_decimals";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_number_of_decimals[] = "_number_of_decimals";
 static const char __pyx_k_number_of_decimals_2[] = "number_of_decimals";
-static const char __pyx_k_Orange_data__variable[] = "Orange.data._variable";
+static const char __pyx_k_Arithmos_data__variable[] = "Arithmos.data._variable";
 static const char __pyx_k_val_from_str_add_cont[] = "val_from_str_add_cont";
-static const char __pyx_k_Orange_data__variable_pyx[] = "Orange/data/_variable.pyx";
+static const char __pyx_k_Arithmos_data__variable_pyx[] = "Arithmos/data/_variable.pyx";
 static PyObject *__pyx_kp_u_;
-static PyObject *__pyx_n_s_Orange_data__variable;
-static PyObject *__pyx_kp_s_Orange_data__variable_pyx;
+static PyObject *__pyx_n_s_Arithmos_data__variable;
+static PyObject *__pyx_kp_s_Arithmos_data__variable_pyx;
 static PyObject *__pyx_n_s_Unknown;
 static PyObject *__pyx_n_s_ad;
 static PyObject *__pyx_n_s_adjust_decimals;
@@ -1065,13 +1065,13 @@ static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_unknown_str;
 static PyObject *__pyx_n_s_val;
 static PyObject *__pyx_n_s_val_from_str_add_cont;
-static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_s); /* proto */
+static PyObject *__pyx_pf_6Arithmos_4data_9_variable_val_from_str_add_cont(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_s); /* proto */
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_codeobj__3;
 /* Late includes */
 
-/* "Orange/data/_variable.pyx":7
+/* "Arithmos/data/_variable.pyx":7
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):             # <<<<<<<<<<<<<<
@@ -1080,10 +1080,10 @@ static PyObject *__pyx_codeobj__3;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_4data_9_variable_1val_from_str_add_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_4data_9_variable_val_from_str_add_cont[] = "val_from_str_add_cont(self, s)";
-static PyMethodDef __pyx_mdef_6Orange_4data_9_variable_1val_from_str_add_cont = {"val_from_str_add_cont", (PyCFunction)__pyx_pw_6Orange_4data_9_variable_1val_from_str_add_cont, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_4data_9_variable_val_from_str_add_cont};
-static PyObject *__pyx_pw_6Orange_4data_9_variable_1val_from_str_add_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_4data_9_variable_1val_from_str_add_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_4data_9_variable_val_from_str_add_cont[] = "val_from_str_add_cont(self, s)";
+static PyMethodDef __pyx_mdef_6Arithmos_4data_9_variable_1val_from_str_add_cont = {"val_from_str_add_cont", (PyCFunction)__pyx_pw_6Arithmos_4data_9_variable_1val_from_str_add_cont, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_4data_9_variable_val_from_str_add_cont};
+static PyObject *__pyx_pw_6Arithmos_4data_9_variable_1val_from_str_add_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_s = 0;
   PyObject *__pyx_r = 0;
@@ -1131,18 +1131,18 @@ static PyObject *__pyx_pw_6Orange_4data_9_variable_1val_from_str_add_cont(PyObje
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("val_from_str_add_cont", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 7, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.data._variable.val_from_str_add_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._variable.val_from_str_add_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(__pyx_self, __pyx_v_self, __pyx_v_s);
+  __pyx_r = __pyx_pf_6Arithmos_4data_9_variable_val_from_str_add_cont(__pyx_self, __pyx_v_self, __pyx_v_s);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_s) {
+static PyObject *__pyx_pf_6Arithmos_4data_9_variable_val_from_str_add_cont(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_s) {
   double __pyx_v_val;
   int __pyx_v_i;
   int __pyx_v_ndec;
@@ -1163,7 +1163,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   Py_ssize_t __pyx_t_10;
   __Pyx_RefNannySetupContext("val_from_str_add_cont", 0);
 
-  /* "Orange/data/_variable.pyx":8
+  /* "Arithmos/data/_variable.pyx":8
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):
  *     if s in self.unknown_str:             # <<<<<<<<<<<<<<
@@ -1177,7 +1177,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "Orange/data/_variable.pyx":9
+    /* "Arithmos/data/_variable.pyx":9
  * def val_from_str_add_cont(self, s):
  *     if s in self.unknown_str:
  *         return self.Unknown             # <<<<<<<<<<<<<<
@@ -1191,7 +1191,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "Orange/data/_variable.pyx":8
+    /* "Arithmos/data/_variable.pyx":8
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):
  *     if s in self.unknown_str:             # <<<<<<<<<<<<<<
@@ -1200,7 +1200,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
  */
   }
 
-  /* "Orange/data/_variable.pyx":10
+  /* "Arithmos/data/_variable.pyx":10
  *     if s in self.unknown_str:
  *         return self.Unknown
  *     val = float(s)             # <<<<<<<<<<<<<<
@@ -1210,7 +1210,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __pyx_t_4 = __Pyx_PyObject_AsDouble(__pyx_v_s); if (unlikely(__pyx_t_4 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 10, __pyx_L1_error)
   __pyx_v_val = __pyx_t_4;
 
-  /* "Orange/data/_variable.pyx":15
+  /* "Arithmos/data/_variable.pyx":15
  *     cdef str s1
  *     cdef int nd
  *     cdef int ad = self.adjust_decimals             # <<<<<<<<<<<<<<
@@ -1223,7 +1223,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ad = __pyx_t_5;
 
-  /* "Orange/data/_variable.pyx":16
+  /* "Arithmos/data/_variable.pyx":16
  *     cdef int nd
  *     cdef int ad = self.adjust_decimals
  *     if ad and isinstance(s, str):             # <<<<<<<<<<<<<<
@@ -1242,7 +1242,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "Orange/data/_variable.pyx":17
+    /* "Arithmos/data/_variable.pyx":17
  *     cdef int ad = self.adjust_decimals
  *     if ad and isinstance(s, str):
  *         nd = self._number_of_decimals             # <<<<<<<<<<<<<<
@@ -1255,7 +1255,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_nd = __pyx_t_5;
 
-    /* "Orange/data/_variable.pyx":18
+    /* "Arithmos/data/_variable.pyx":18
  *     if ad and isinstance(s, str):
  *         nd = self._number_of_decimals
  *         s1 = s.strip()             # <<<<<<<<<<<<<<
@@ -1286,7 +1286,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     __pyx_v_s1 = ((PyObject*)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "Orange/data/_variable.pyx":19
+    /* "Arithmos/data/_variable.pyx":19
  *         nd = self._number_of_decimals
  *         s1 = s.strip()
  *         i = s1.find(".")             # <<<<<<<<<<<<<<
@@ -1300,7 +1300,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     __pyx_t_9 = PyUnicode_Find(__pyx_v_s1, __pyx_kp_u_, 0, PY_SSIZE_T_MAX, 1); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-2))) __PYX_ERR(0, 19, __pyx_L1_error)
     __pyx_v_i = __pyx_t_9;
 
-    /* "Orange/data/_variable.pyx":20
+    /* "Arithmos/data/_variable.pyx":20
  *         s1 = s.strip()
  *         i = s1.find(".")
  *         ndec = len(s1) - i - 1 if i > 0 else 0             # <<<<<<<<<<<<<<
@@ -1319,7 +1319,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     }
     __pyx_v_ndec = __pyx_t_9;
 
-    /* "Orange/data/_variable.pyx":21
+    /* "Arithmos/data/_variable.pyx":21
  *         i = s1.find(".")
  *         ndec = len(s1) - i - 1 if i > 0 else 0
  *         if ndec > nd or ad == 2:             # <<<<<<<<<<<<<<
@@ -1337,7 +1337,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
     __pyx_L8_bool_binop_done:;
     if (__pyx_t_3) {
 
-      /* "Orange/data/_variable.pyx":22
+      /* "Arithmos/data/_variable.pyx":22
  *         ndec = len(s1) - i - 1 if i > 0 else 0
  *         if ndec > nd or ad == 2:
  *             self.number_of_decimals = ndec             # <<<<<<<<<<<<<<
@@ -1349,7 +1349,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_number_of_decimals_2, __pyx_t_1) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "Orange/data/_variable.pyx":23
+      /* "Arithmos/data/_variable.pyx":23
  *         if ndec > nd or ad == 2:
  *             self.number_of_decimals = ndec
  *             self.adjust_decimals = 1             # <<<<<<<<<<<<<<
@@ -1357,7 +1357,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
  */
       if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_adjust_decimals, __pyx_int_1) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
 
-      /* "Orange/data/_variable.pyx":21
+      /* "Arithmos/data/_variable.pyx":21
  *         i = s1.find(".")
  *         ndec = len(s1) - i - 1 if i > 0 else 0
  *         if ndec > nd or ad == 2:             # <<<<<<<<<<<<<<
@@ -1366,7 +1366,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
  */
     }
 
-    /* "Orange/data/_variable.pyx":16
+    /* "Arithmos/data/_variable.pyx":16
  *     cdef int nd
  *     cdef int ad = self.adjust_decimals
  *     if ad and isinstance(s, str):             # <<<<<<<<<<<<<<
@@ -1375,7 +1375,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
  */
   }
 
-  /* "Orange/data/_variable.pyx":24
+  /* "Arithmos/data/_variable.pyx":24
  *             self.number_of_decimals = ndec
  *             self.adjust_decimals = 1
  *     return val             # <<<<<<<<<<<<<<
@@ -1387,7 +1387,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "Orange/data/_variable.pyx":7
+  /* "Arithmos/data/_variable.pyx":7
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):             # <<<<<<<<<<<<<<
@@ -1400,7 +1400,7 @@ static PyObject *__pyx_pf_6Orange_4data_9_variable_val_from_str_add_cont(CYTHON_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("Orange.data._variable.val_from_str_add_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._variable.val_from_str_add_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_s1);
@@ -1447,8 +1447,8 @@ static struct PyModuleDef __pyx_moduledef = {
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
-  {&__pyx_n_s_Orange_data__variable, __pyx_k_Orange_data__variable, sizeof(__pyx_k_Orange_data__variable), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_data__variable_pyx, __pyx_k_Orange_data__variable_pyx, sizeof(__pyx_k_Orange_data__variable_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_data__variable, __pyx_k_Arithmos_data__variable, sizeof(__pyx_k_Arithmos_data__variable), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_data__variable_pyx, __pyx_k_Arithmos_data__variable_pyx, sizeof(__pyx_k_Arithmos_data__variable_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_Unknown, __pyx_k_Unknown, sizeof(__pyx_k_Unknown), 0, 0, 1, 1},
   {&__pyx_n_s_ad, __pyx_k_ad, sizeof(__pyx_k_ad), 0, 0, 1, 1},
   {&__pyx_n_s_adjust_decimals, __pyx_k_adjust_decimals, sizeof(__pyx_k_adjust_decimals), 0, 0, 1, 1},
@@ -1477,7 +1477,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/data/_variable.pyx":7
+  /* "Arithmos/data/_variable.pyx":7
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):             # <<<<<<<<<<<<<<
@@ -1487,7 +1487,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__2 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_s, __pyx_n_s_val, __pyx_n_s_i, __pyx_n_s_ndec, __pyx_n_s_s1, __pyx_n_s_nd, __pyx_n_s_ad); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_data__variable_pyx, __pyx_n_s_val_from_str_add_cont, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_data__variable_pyx, __pyx_n_s_val_from_str_add_cont, 7, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1712,14 +1712,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__data___variable) {
+  if (__pyx_module_is_main_Arithmos__data___variable) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.data._variable")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.data._variable", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.data._variable")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.data._variable", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -1740,19 +1740,19 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/data/_variable.pyx":7
+  /* "Arithmos/data/_variable.pyx":7
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def val_from_str_add_cont(self, s):             # <<<<<<<<<<<<<<
  *     if s in self.unknown_str:
  *         return self.Unknown
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_4data_9_variable_1val_from_str_add_cont, NULL, __pyx_n_s_Orange_data__variable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_4data_9_variable_1val_from_str_add_cont, NULL, __pyx_n_s_Arithmos_data__variable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_val_from_str_add_cont, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/data/_variable.pyx":1
+  /* "Arithmos/data/_variable.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * 
  * import cython
@@ -1769,11 +1769,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.data._variable", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.data._variable", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.data._variable");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.data._variable");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

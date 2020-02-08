@@ -10,9 +10,9 @@ from pickle import PickleError
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import _variable
-from Orange.util import Registry, hex_to_color, Reprable,\
-    OrangeDeprecationWarning
+from Arithmos.data import _variable
+from Arithmos.util import Registry, hex_to_color, Reprable,\
+    ArithmosDeprecationWarning
 
 __all__ = ["Unknown", "MISSING_VALUES", "make_variable", "is_discrete_values",
            "Value", "Variable", "ContinuousVariable", "DiscreteVariable",
@@ -104,7 +104,7 @@ class Value(float):
     variables.
 
     The class is derived from `float`, with an additional attribute `variable`
-    which holds the descriptor of type :obj:`Orange.data.Variable`. If the
+    which holds the descriptor of type :obj:`Arithmos.data.Variable`. If the
     value continuous or discrete, it is stored as a float. Other types of
     values, like strings, are stored in the attribute `value`.
 
@@ -128,7 +128,7 @@ class Value(float):
     Finally, value defines a hash, so values can be put in sets and appear as
     keys in dictionaries.
 
-    .. attribute:: variable (:obj:`Orange.data.Variable`)
+    .. attribute:: variable (:obj:`Arithmos.data.Variable`)
 
         Descriptor; used for printing out and for comparing with strings
 
@@ -149,7 +149,7 @@ class Value(float):
         attribute `value`.
 
         :param variable: descriptor
-        :type variable: Orange.data.Variable
+        :type variable: Arithmos.data.Variable
         :param value: value
         """
         if variable.is_primitive():
@@ -289,7 +289,7 @@ class Variable(Reprable, metaclass=VariableMeta):
 
         A function for computing the variable's value when converting from
         another domain which does not contain this variable. The function will
-        be called with a data set (`Orange.data.Table`) and has to return
+        be called with a data set (`Arithmos.data.Table`) and has to return
         an array of computed values for all its instances. The base class
         defines a static method `compute_value`, which returns `Unknown`.
         Non-primitive variables must redefine it to return `None`.
@@ -315,7 +315,7 @@ class Variable(Reprable, metaclass=VariableMeta):
         Construct a variable descriptor.
         """
         if not name:
-            warnings.warn("Variable must have a name", OrangeDeprecationWarning,
+            warnings.warn("Variable must have a name", ArithmosDeprecationWarning,
                           stacklevel=3)
         self._name = name
         self._compute_value = compute_value
@@ -417,8 +417,8 @@ class Variable(Reprable, metaclass=VariableMeta):
         Convert the given argument to a value of the variable. The
         argument can be a string, a number or `None`. For primitive variables,
         the base class provides a method that returns
-        :obj:`~Orange.data.Unknown` if `s` is found in
-        :obj:`~Orange.data.Variable.unknown_str`, and raises an exception
+        :obj:`~Arithmos.data.Unknown` if `s` is found in
+        :obj:`~Arithmos.data.Variable.unknown_str`, and raises an exception
         otherwise. For non-primitive variables it returns the argument itself.
 
         Derived classes of primitive variables must overload the function.
@@ -703,7 +703,7 @@ class DiscreteVariable(Variable):
         elif not self.values:
             colors = np.zeros((0, 3))  # to match additional colors in vstacks
         else:
-            from Orange.widgets.utils.colorpalette import ColorPaletteGenerator
+            from Arithmos.widgets.utils.colorpalette import ColorPaletteGenerator
             default = tuple(ColorPaletteGenerator.palette(self))
             colors = self.attributes.get('colors', ())
             colors = tuple(hex_to_color(color) for color in colors) \

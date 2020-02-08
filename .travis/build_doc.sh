@@ -21,7 +21,7 @@ done < <(echo "$images")
 [ "$not_ok" ] && false
 echo -e 'all ok\n'
 
-# build Orange inplace (needed for docs to build)
+# build Arithmos inplace (needed for docs to build)
 python setup.py egg_info build_ext --inplace
 
 # build docs for upload to the old web page
@@ -32,7 +32,7 @@ make html
 cd $TRAVIS_BUILD_DIR/doc/visual-programming
 make html
 
-# create widget catalog for the old (django) Orange webpage
+# create widget catalog for the old (django) Arithmos webpage
 export PYTHONPATH=$TRAVIS_BUILD_DIR:$PYTHONPATH
 # Screen must be 24bpp lest pyqt5 crashes, see pytest-dev/pytest-qt/35
 XVFBARGS="-screen 0 1280x1024x24"
@@ -41,9 +41,9 @@ catchsegv xvfb-run -a -s "$XVFBARGS" \
         --output build/html/ \
         --url-prefix "http://docs.biolab.si/3/visual-programming/"
 
-# check if the widget catalog in the repository (for orange-hugo is up to date
+# check if the widget catalog in the repository (for arithmos-hugo is up to date
 cd $TRAVIS_BUILD_DIR/doc/
-wget_command="wget -N https://raw.githubusercontent.com/biolab/orange-hugo/master/scripts/create_widget_catalog.py"
+wget_command="wget -N https://raw.githubusercontent.com/biolab/arithmos-hugo/master/scripts/create_widget_catalog.py"
 run_command="python create_widget_catalog.py --categories Data,Visualize,Model,Evaluate,Unsupervised --doc visual-programming/source/"
 eval "$wget_command"
 eval "catchsegv xvfb-run -a -s "\"$XVFBARGS"\" $run_command"

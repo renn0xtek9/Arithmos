@@ -1,10 +1,10 @@
 import contextlib
 import warnings
 
-from orangewidget.utils.progressbar import (
+from arithmoswidget.utils.progressbar import (
     ProgressBarMixin as _ProgressBarMixin
 )
-from Orange.widgets import gui
+from Arithmos.widgets import gui
 
 __all__ = [
     "ProgressBarMixin"

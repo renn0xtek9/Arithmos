@@ -3,9 +3,9 @@ import unittest
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable, \
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable, \
     StringVariable
-from Orange.preprocess.transformation import Identity, Transformation, Lookup
+from Arithmos.preprocess.transformation import Identity, Transformation, Lookup
 
 
 class TestTransformation(unittest.TestCase):

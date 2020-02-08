@@ -3,9 +3,9 @@
 
 import unittest
 
-from Orange.data import Table
-from Orange.preprocess import ProjectCUR
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.preprocess import ProjectCUR
+from Arithmos.tests import test_filename
 
 
 class TestCURProjector(unittest.TestCase):

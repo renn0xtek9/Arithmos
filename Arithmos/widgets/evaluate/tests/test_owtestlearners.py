@@ -9,23 +9,23 @@ from AnyQt.QtCore import Qt
 from AnyQt.QtTest import QTest
 import baycomp
 
-from Orange.classification import MajorityLearner, LogisticRegressionLearner
-from Orange.classification.majority import ConstantModel
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.evaluation import Results, TestOnTestData, scoring
-from Orange.evaluation.scoring import ClassificationScore, RegressionScore, \
+from Arithmos.classification import MajorityLearner, LogisticRegressionLearner
+from Arithmos.classification.majority import ConstantModel
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.evaluation import Results, TestOnTestData, scoring
+from Arithmos.evaluation.scoring import ClassificationScore, RegressionScore, \
     Score
-from Orange.base import Learner
-from Orange.modelling import ConstantLearner
-from Orange.regression import MeanLearner
-from Orange.widgets.evaluate.owtestlearners import (
+from Arithmos.base import Learner
+from Arithmos.modelling import ConstantLearner
+from Arithmos.regression import MeanLearner
+from Arithmos.widgets.evaluate.owtestlearners import (
     OWTestLearners, results_one_vs_rest)
-from Orange.widgets.evaluate.utils import BUILTIN_SCORERS_ORDER
-from Orange.widgets.settings import (
+from Arithmos.widgets.evaluate.utils import BUILTIN_SCORERS_ORDER
+from Arithmos.widgets.settings import (
     ClassValuesContextHandler, PerfectDomainContextHandler)
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.tests import test_filename
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.tests import test_filename
 
 
 class BadLearner(Learner):
@@ -145,7 +145,7 @@ class TestOWTestLearners(WidgetTest):
         self.assertFalse(self.widget.Error.memory_error.is_shown())
 
         with unittest.mock.patch(
-                "Orange.evaluation.testing.Results.get_augmented_data",
+                "Arithmos.evaluation.testing.Results.get_augmented_data",
                 side_effect=MemoryError):
             self.send_signal(self.widget.Inputs.learner, MajorityLearner(), 0, wait=5000)
             self.assertTrue(self.widget.Error.memory_error.is_shown())

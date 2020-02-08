@@ -3,7 +3,7 @@ Regression
 
 .. index:: regression
 
-Regression in Orange is, from the interface, very similar to classification. These both require class-labeled data. Just like in classification, regression is implemented with learners and regression models (regressors). Regression learners are objects that accept data and return regressors. Regression models are given data items to predict the value of continuous class:
+Regression in Arithmos is, from the interface, very similar to classification. These both require class-labeled data. Just like in classification, regression is implemented with learners and regression models (regressors). Regression learners are objects that accept data and return regressors. Regression models are given data items to predict the value of continuous class:
 
 .. literalinclude:: code/regression.py
 
@@ -53,7 +53,7 @@ Looks like the housing prices are not that hard to predict::
 Cross Validation
 ----------------
 
-Evaluation and scoring methods are available at ``Orange.evaluation``:
+Evaluation and scoring methods are available at ``Arithmos.evaluation``:
 
 .. literalinclude:: code/regression-cv.py
    :lines: 3-

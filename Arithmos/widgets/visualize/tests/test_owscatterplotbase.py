@@ -9,13 +9,13 @@ from AnyQt.QtTest import QSignalSpy
 
 from pyqtgraph import mkPen
 
-from Orange.widgets.settings import SettingProvider
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.colorpalette import ColorPaletteGenerator, \
+from Arithmos.widgets.settings import SettingProvider
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.colorpalette import ColorPaletteGenerator, \
     ContinuousPaletteGenerator, NAN_GREY
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase, \
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase, \
     ScatterPlotItem, SELECTION_WIDTH
-from Orange.widgets.widget import OWWidget
+from Arithmos.widgets.widget import OWWidget
 
 
 class MockWidget(OWWidget):
@@ -305,7 +305,7 @@ class TestOWScatterPlotBase(WidgetTest):
         graph.set_sample_size(None)
         np.testing.assert_almost_equal(graph.selection, np.arange(100) % 2)
 
-    base = "Orange.widgets.visualize.owscatterplotgraph.OWScatterPlotBase."
+    base = "Arithmos.widgets.visualize.owscatterplotgraph.OWScatterPlotBase."
 
     @patch(base + "update_sizes")
     @patch(base + "update_colors")
@@ -459,7 +459,7 @@ class TestOWScatterPlotBase(WidgetTest):
             - graph.scatterplot_item.data["size"],
             SELECTION_WIDTH)
 
-    @patch("Orange.widgets.visualize.owscatterplotgraph"
+    @patch("Arithmos.widgets.visualize.owscatterplotgraph"
            ".MAX_N_VALID_SIZE_ANIMATE", 5)
     def test_size_animation(self):
         begin_resizing = QSignalSpy(self.graph.begin_resizing)
@@ -704,7 +704,7 @@ class TestOWScatterPlotBase(WidgetTest):
     def test_density(self):
         graph = self.graph
         density = object()
-        with patch("Orange.widgets.utils.classdensity.class_density_image",
+        with patch("Arithmos.widgets.utils.classdensity.class_density_image",
                    return_value=density):
             graph.reset_graph()
             self.assertIsNone(graph.density_img)

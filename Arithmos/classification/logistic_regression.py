@@ -4,11 +4,11 @@ import numpy as np
 
 import sklearn.linear_model as skl_linear_model
 
-import Orange
-from Orange.classification import SklLearner, SklModel
-from Orange.preprocess import Normalize
-from Orange.preprocess.score import LearnerScorer
-from Orange.data import Variable, DiscreteVariable
+import Arithmos
+from Arithmos.classification import SklLearner, SklModel
+from Arithmos.preprocess import Normalize
+from Arithmos.preprocess.score import LearnerScorer
+from Arithmos.data import Variable, DiscreteVariable
 
 __all__ = ["LogisticRegressionLearner"]
 
@@ -50,6 +50,6 @@ class LogisticRegressionLearner(SklLearner, _FeatureScorerMixin):
             return super().__call__(data)
         else:
             warnings.warn("Single class in data, returning Constant Model.")
-            maj = Orange.classification.MajorityLearner()
+            maj = Arithmos.classification.MajorityLearner()
             const = maj(data)
             return const

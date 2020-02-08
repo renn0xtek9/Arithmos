@@ -1,8 +1,8 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
 
-from Orange.widgets.model.owconstant import OWConstant
-from Orange.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
+from Arithmos.widgets.model.owconstant import OWConstant
+from Arithmos.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
 
 
 class TestOWConstant(WidgetTest, WidgetLearnerTestMixin):

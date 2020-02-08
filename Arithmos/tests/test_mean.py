@@ -4,9 +4,9 @@
 import unittest
 import numpy as np
 
-from Orange.data import Table
-from Orange.regression import MeanLearner
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.regression import MeanLearner
+from Arithmos.tests import test_filename
 
 
 class TestMeanLearner(unittest.TestCase):

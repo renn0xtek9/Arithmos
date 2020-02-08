@@ -3,11 +3,11 @@ from collections import OrderedDict
 import random
 
 import numpy as np
-from Orange.widgets.visualize.utils.tree.treeadapter import BaseTreeAdapter
+from Arithmos.widgets.visualize.utils.tree.treeadapter import BaseTreeAdapter
 
-from Orange.misc.cache import memoize_method
-from Orange.preprocess.transformation import Indicator
-from Orange.widgets.visualize.utils.tree.rules import (
+from Arithmos.misc.cache import memoize_method
+from Arithmos.preprocess.transformation import Indicator
+from Arithmos.widgets.visualize.utils.tree.rules import (
     DiscreteRule,
     ContinuousRule
 )
@@ -175,7 +175,7 @@ class SklTreeAdapter(BaseTreeAdapter):
 
         See Also
         --------
-        Orange.widgets.model.owclassificationtreegraph.OWTreeGraph
+        Arithmos.widgets.model.owclassificationtreegraph.OWTreeGraph
         """
 
         def find_largest_idx(n):

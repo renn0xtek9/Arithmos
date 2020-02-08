@@ -2,7 +2,7 @@
 Evaluation (``evaluation``)
 ###########################
 
-.. automodule:: Orange.evaluation
+.. automodule:: Arithmos.evaluation
 
 .. toctree::
    :maxdepth: 2

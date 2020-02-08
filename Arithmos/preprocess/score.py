@@ -5,12 +5,12 @@ from itertools import chain
 import numpy as np
 from sklearn import feature_selection as skl_fss
 
-from Orange.data import Domain, Variable, DiscreteVariable, ContinuousVariable
-from Orange.data.filter import HasClass
-from Orange.misc.wrapper_meta import WrapperMeta
-from Orange.preprocess.preprocess import Discretize, SklImpute, RemoveNaNColumns
-from Orange.statistics import contingency, distribution
-from Orange.util import Reprable
+from Arithmos.data import Domain, Variable, DiscreteVariable, ContinuousVariable
+from Arithmos.data.filter import HasClass
+from Arithmos.misc.wrapper_meta import WrapperMeta
+from Arithmos.preprocess.preprocess import Discretize, SklImpute, RemoveNaNColumns
+from Arithmos.statistics import contingency, distribution
+from Arithmos.util import Reprable
 
 __all__ = ["Chi2",
            "ANOVA",
@@ -194,17 +194,17 @@ class ClassificationScorer(Scorer):
 
     Parameters
     ----------
-    feature : int, string, Orange.data.Variable
+    feature : int, string, Arithmos.data.Variable
         Feature id
-    data : Orange.data.Table
+    data : Arithmos.data.Table
         Dataset
 
     Attributes
     ----------
-    feature_type : Orange.data.Variable
+    feature_type : Arithmos.data.Variable
         Required type of features.
 
-    class_type : Orange.data.Variable
+    class_type : Arithmos.data.Variable
         Required type of class variable.
     """
     feature_type = DiscreteVariable
@@ -364,7 +364,7 @@ class ReliefF(Scorer):
         else:
             rstate = np.random.RandomState(self.random_state)
 
-        from Orange.preprocess._relieff import relieff
+        from Arithmos.preprocess._relieff import relieff
         weights = np.asarray(relieff(data.X, data.Y,
                                      self.n_iterations, self.k_nearest,
                                      np.array([a.is_discrete for a in data.domain.attributes]),
@@ -396,7 +396,7 @@ class RReliefF(Scorer):
             rstate = self.random_state
         else:
             rstate = np.random.RandomState(self.random_state)
-        from Orange.preprocess._relieff import rrelieff
+        from Arithmos.preprocess._relieff import rrelieff
         weights = np.asarray(rrelieff(data.X, data.Y,
                                       self.n_iterations, self.k_nearest,
                                       np.array([a.is_discrete for a in data.domain.attributes]),
@@ -407,7 +407,7 @@ class RReliefF(Scorer):
 
 
 if __name__ == '__main__':
-    from Orange.data import Table
+    from Arithmos.data import Table
     X = np.random.random((500, 20))
     X[np.random.random(X.shape) > .95] = np.nan
     y_cls = np.zeros(X.shape[0])

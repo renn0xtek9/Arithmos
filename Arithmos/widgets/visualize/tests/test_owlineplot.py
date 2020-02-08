@@ -11,11 +11,11 @@ from AnyQt.QtCore import Qt
 
 from pyqtgraph.Point import Point
 
-from Orange.data import Table
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, datasets
 )
-from Orange.widgets.visualize.owlineplot import (
+from Arithmos.widgets.visualize.owlineplot import (
     OWLinePlot, ccw, intersects, line_intersects_profiles
 )
 
@@ -156,7 +156,7 @@ class TestOWLinePLot(WidgetTest, WidgetOutputsTestMixin):
         self.widget.graph.view_box.mouseClickEvent(event)
         self.assertListEqual(self.widget.selection, [])
 
-    @patch("Orange.widgets.visualize.owlineplot.SEL_MAX_INSTANCES", 100)
+    @patch("Arithmos.widgets.visualize.owlineplot.SEL_MAX_INSTANCES", 100)
     def test_select_lines_enabled(self):
         self.send_signal(self.widget.Inputs.data, self.data[::2])
         self.assertTrue(self.widget.graph.view_box._can_select)
@@ -165,7 +165,7 @@ class TestOWLinePLot(WidgetTest, WidgetOutputsTestMixin):
         self.send_signal(self.widget.Inputs.data, None)
         self.assertTrue(self.widget.graph.view_box._can_select)
 
-    @patch("Orange.widgets.visualize.owlineplot.MAX_FEATURES", 2)
+    @patch("Arithmos.widgets.visualize.owlineplot.MAX_FEATURES", 2)
     def test_max_features(self):
         self.send_signal(self.widget.Inputs.data, self.data)
         self.assertEqual(len(self.widget.graph_variables), 2)

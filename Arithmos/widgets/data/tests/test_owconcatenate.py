@@ -6,14 +6,14 @@ from unittest.mock import patch
 
 import numpy as np
 
-from Orange.data import (
+from Arithmos.data import (
     Table, Domain, ContinuousVariable, DiscreteVariable, StringVariable
 )
-from Orange.widgets.data.owconcatenate import (
+from Arithmos.widgets.data.owconcatenate import (
     OWConcatenate, domain_intersection, domain_union
 )
 
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWConcatenate(WidgetTest):

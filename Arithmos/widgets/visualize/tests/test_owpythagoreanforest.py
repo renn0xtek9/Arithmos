@@ -4,13 +4,13 @@ from unittest.mock import Mock
 
 from AnyQt.QtCore import Qt, QItemSelection, QItemSelectionModel
 
-from Orange.classification.random_forest import RandomForestLearner
-from Orange.data import Table
-from Orange.regression.random_forest import RandomForestRegressionLearner
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owpythagoreanforest import OWPythagoreanForest
-from Orange.widgets.visualize.pythagorastreeviewer import PythagorasTreeViewer
+from Arithmos.classification.random_forest import RandomForestLearner
+from Arithmos.data import Table
+from Arithmos.regression.random_forest import RandomForestRegressionLearner
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owpythagoreanforest import OWPythagoreanForest
+from Arithmos.widgets.visualize.pythagorastreeviewer import PythagorasTreeViewer
 
 
 class TestOWPythagoreanForest(WidgetTest):

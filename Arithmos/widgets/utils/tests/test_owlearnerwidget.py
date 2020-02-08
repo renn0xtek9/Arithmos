@@ -1,15 +1,15 @@
 import scipy.sparse as sp
 
 # pylint: disable=missing-docstring
-from Orange.base import Learner, Model
-from Orange.classification import KNNLearner
-from Orange.data import Table, Domain
-from Orange.modelling import TreeLearner
-from Orange.preprocess import continuize
-from Orange.regression import MeanLearner, LinearRegressionLearner
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.signals import Output
+from Arithmos.base import Learner, Model
+from Arithmos.classification import KNNLearner
+from Arithmos.data import Table, Domain
+from Arithmos.modelling import TreeLearner
+from Arithmos.preprocess import continuize
+from Arithmos.regression import MeanLearner, LinearRegressionLearner
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.signals import Output
 
 
 class TestOWBaseLearner(WidgetTest):
@@ -118,7 +118,7 @@ class TestOWBaseLearner(WidgetTest):
 
         w = self.create_widget(WidgetLR)
 
-        # Orange will want do do one-hot encoding when continuizing discrete variable
+        # Arithmos will want do do one-hot encoding when continuizing discrete variable
         pp = continuize.DomainContinuizer(
             multinomial_treatment=continuize.Continuize.AsOrdinal,
             transform_class=True,

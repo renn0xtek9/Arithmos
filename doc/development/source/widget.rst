@@ -1,11 +1,11 @@
-.. currentmodule:: Orange.widgets.widget
+.. currentmodule:: Arithmos.widgets.widget
 
 OWWidget
 ########
 
 
 The :class:`~OWWidget` is the main component for implementing a widget in
-the Orange Canvas workflow. It both defines the widget input/output
+the Arithmos Canvas workflow. It both defines the widget input/output
 capabilities and implements it's functionality within the canvas.
 
 
@@ -112,7 +112,7 @@ Accessing Controls though Attribute Names
 -----------------------------------------
 
 The preferred way for constructing the user interface is to use functions from
-module :obj:`Orange.widgets.gui` that insert a Qt widget and establish the
+module :obj:`Arithmos.widgets.gui` that insert a Qt widget and establish the
 signals for synchronization with the widget's attributes.
 
      gui.checkBox(box, self, "binary_trees", "Induce binary tree")
@@ -133,15 +133,15 @@ widget that controls it, e.g. with
 Class Member Documentation
 --------------------------
 
-.. autoclass:: Orange.widgets.widget.OWWidget
+.. autoclass:: Arithmos.widgets.widget.OWWidget
    :members:
    :member-order: bysource
 
 
-.. autoclass:: Orange.widgets.widget.Message
+.. autoclass:: Arithmos.widgets.widget.Message
 
 
-.. autoclass:: Orange.widgets.widget.StateInfo
+.. autoclass:: Arithmos.widgets.widget.StateInfo
    :members: Summary, Empty, Partial, input_summary_changed,
        output_summary_changed
    :exclude-members: Summary, Empty, Partial,
@@ -149,13 +149,13 @@ Class Member Documentation
       set_input_summary, set_output_summary,
       NoInput, NoOutput
 
-   .. autoclass:: Orange.widgets.widget::StateInfo.Summary
+   .. autoclass:: Arithmos.widgets.widget::StateInfo.Summary
       :members:
 
-   .. autoclass:: Orange.widgets.widget::StateInfo.Empty
+   .. autoclass:: Arithmos.widgets.widget::StateInfo.Empty
       :show-inheritance:
 
-   .. autoclass:: Orange.widgets.widget::StateInfo.Partial
+   .. autoclass:: Arithmos.widgets.widget::StateInfo.Partial
       :show-inheritance:
 
    .. autoattribute:: NoInput

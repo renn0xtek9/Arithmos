@@ -21,15 +21,15 @@ from AnyQt.QtCore import pyqtSignal as Signal
 
 import pyqtgraph as pg
 
-import Orange.data
+import Arithmos.data
 
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils import itemmodels, colorpalette
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils import itemmodels, colorpalette
 
-from Orange.util import scale, namegen
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.util import scale, namegen
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
 
 
 def indices_to_mask(indices, size):
@@ -744,10 +744,10 @@ class OWPaintData(OWWidget):
     keywords = ["create", "draw"]
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     autocommit = Setting(True)
     table_name = Setting("Painted data")
@@ -1269,21 +1269,21 @@ class OWPaintData(OWWidget):
         data = np.array(self.data)
         if self.hasAttr2:
             X, Y = data[:, :2], data[:, 2]
-            attrs = (Orange.data.ContinuousVariable(self.attr1),
-                     Orange.data.ContinuousVariable(self.attr2))
+            attrs = (Arithmos.data.ContinuousVariable(self.attr1),
+                     Arithmos.data.ContinuousVariable(self.attr2))
         else:
             X, Y = data[:, np.newaxis, 0], data[:, 2]
-            attrs = (Orange.data.ContinuousVariable(self.attr1),)
+            attrs = (Arithmos.data.ContinuousVariable(self.attr1),)
         if len(np.unique(Y)) >= 2:
-            domain = Orange.data.Domain(
+            domain = Arithmos.data.Domain(
                 attrs,
-                Orange.data.DiscreteVariable(
+                Arithmos.data.DiscreteVariable(
                     "Class", values=list(self.class_model))
             )
-            data = Orange.data.Table.from_numpy(domain, X, Y)
+            data = Arithmos.data.Table.from_numpy(domain, X, Y)
         else:
-            domain = Orange.data.Domain(attrs)
-            data = Orange.data.Table.from_numpy(domain, X)
+            domain = Arithmos.data.Domain(attrs)
+            data = Arithmos.data.Table.from_numpy(domain, X)
         data.name = self.table_name
         self.Outputs.data.send(data)
 

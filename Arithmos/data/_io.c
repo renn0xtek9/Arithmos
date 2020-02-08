@@ -559,8 +559,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__data___io
-#define __PYX_HAVE_API__Orange__data___io
+#define __PYX_HAVE__Arithmos__data___io
+#define __PYX_HAVE_API__Arithmos__data___io
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -767,47 +767,47 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/data/_io.pyx",
+  "Arithmos/data/_io.pyx",
 };
 
 /*--- Type declarations ---*/
 
-/* "Orange/data/_io.pyx":7
+/* "Arithmos/data/_io.pyx":7
  * 
  * 
  * cdef enum State:             # <<<<<<<<<<<<<<
  *     BEGIN_LINE, READ_START_ATOM, READ, QUOTED, END_QUOTED, END_ATOM,
  *     COMMENT, CARRIAGE_RETURNED, ESCAPE, EQUALS,
  */
-enum __pyx_t_6Orange_4data_3_io_State {
-  __pyx_e_6Orange_4data_3_io_BEGIN_LINE,
-  __pyx_e_6Orange_4data_3_io_READ_START_ATOM,
-  __pyx_e_6Orange_4data_3_io_READ,
-  __pyx_e_6Orange_4data_3_io_QUOTED,
-  __pyx_e_6Orange_4data_3_io_END_QUOTED,
-  __pyx_e_6Orange_4data_3_io_END_ATOM,
-  __pyx_e_6Orange_4data_3_io_COMMENT,
-  __pyx_e_6Orange_4data_3_io_CARRIAGE_RETURNED,
-  __pyx_e_6Orange_4data_3_io_ESCAPE,
-  __pyx_e_6Orange_4data_3_io_EQUALS,
-  __pyx_e_6Orange_4data_3_io_SET_VALUE,
-  __pyx_e_6Orange_4data_3_io_WAIT_VALUE,
-  __pyx_e_6Orange_4data_3_io_READ_VALUE,
-  __pyx_e_6Orange_4data_3_io_READ_DECS,
-  __pyx_e_6Orange_4data_3_io_TO_NEXT
+enum __pyx_t_6Arithmos_4data_3_io_State {
+  __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE,
+  __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM,
+  __pyx_e_6Arithmos_4data_3_io_READ,
+  __pyx_e_6Arithmos_4data_3_io_QUOTED,
+  __pyx_e_6Arithmos_4data_3_io_END_QUOTED,
+  __pyx_e_6Arithmos_4data_3_io_END_ATOM,
+  __pyx_e_6Arithmos_4data_3_io_COMMENT,
+  __pyx_e_6Arithmos_4data_3_io_CARRIAGE_RETURNED,
+  __pyx_e_6Arithmos_4data_3_io_ESCAPE,
+  __pyx_e_6Arithmos_4data_3_io_EQUALS,
+  __pyx_e_6Arithmos_4data_3_io_SET_VALUE,
+  __pyx_e_6Arithmos_4data_3_io_WAIT_VALUE,
+  __pyx_e_6Arithmos_4data_3_io_READ_VALUE,
+  __pyx_e_6Arithmos_4data_3_io_READ_DECS,
+  __pyx_e_6Arithmos_4data_3_io_TO_NEXT
 };
 
-/* "Orange/data/_io.pyx":12
+/* "Arithmos/data/_io.pyx":12
  *     SET_VALUE, WAIT_VALUE, READ_VALUE, READ_DECS, TO_NEXT
  * 
  * cdef enum ColKinds:             # <<<<<<<<<<<<<<
  *     ATTRIBUTE, CLASS, META
  * 
  */
-enum __pyx_t_6Orange_4data_3_io_ColKinds {
-  __pyx_e_6Orange_4data_3_io_ATTRIBUTE,
-  __pyx_e_6Orange_4data_3_io_CLASS,
-  __pyx_e_6Orange_4data_3_io_META
+enum __pyx_t_6Arithmos_4data_3_io_ColKinds {
+  __pyx_e_6Arithmos_4data_3_io_ATTRIBUTE,
+  __pyx_e_6Arithmos_4data_3_io_CLASS,
+  __pyx_e_6Arithmos_4data_3_io_META
 };
 
 /* --- Runtime support code (head) --- */
@@ -1110,12 +1110,12 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'libc.stdio' */
 
-/* Module declarations from 'Orange.data._io' */
-#define __Pyx_MODULE_NAME "Orange.data._io"
-extern int __pyx_module_is_main_Orange__data___io;
-int __pyx_module_is_main_Orange__data___io = 0;
+/* Module declarations from 'Arithmos.data._io' */
+#define __Pyx_MODULE_NAME "Arithmos.data._io"
+extern int __pyx_module_is_main_Arithmos__data___io;
+int __pyx_module_is_main_Arithmos__data___io = 0;
 
-/* Implementation of 'Orange.data._io' */
+/* Implementation of 'Arithmos.data._io' */
 static PyObject *__pyx_builtin_IOError;
 static PyObject *__pyx_builtin_ValueError;
 static const char __pyx_k_[] = "*";
@@ -1171,12 +1171,12 @@ static const char __pyx_k_scipy_sparse[] = "scipy.sparse";
 static const char __pyx_k_sort_indices[] = "sort_indices";
 static const char __pyx_k_class_indices[] = "class_indices";
 static const char __pyx_k_invalid_value[] = "{}:{}:{}: invalid value";
-static const char __pyx_k_Orange_data__io[] = "Orange.data._io";
+static const char __pyx_k_Arithmos_data__io[] = "Arithmos.data._io";
 static const char __pyx_k_empty_value_name[] = "{}:{}:{}: empty value name";
 static const char __pyx_k_sparse_read_float[] = "sparse_read_float";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_missing_value_name[] = "{}:{}:{}: missing value name";
-static const char __pyx_k_Orange_data__io_pyx[] = "Orange/data/_io.pyx";
+static const char __pyx_k_Arithmos_data__io_pyx[] = "Arithmos/data/_io.pyx";
 static const char __pyx_k_value_name_too_long[] = "{}:{}:{}: value name too long";
 static const char __pyx_k_File_cannot_be_opened[] = "File '{}' cannot be opened";
 static const char __pyx_k_duplicated_semi_colons[] = "{}:{}:{} duplicated semi-colons";
@@ -1193,8 +1193,8 @@ static PyObject *__pyx_n_s_IOError;
 static PyObject *__pyx_n_s_M_cols;
 static PyObject *__pyx_n_s_M_data;
 static PyObject *__pyx_n_s_M_rows;
-static PyObject *__pyx_n_s_Orange_data__io;
-static PyObject *__pyx_kp_s_Orange_data__io_pyx;
+static PyObject *__pyx_n_s_Arithmos_data__io;
+static PyObject *__pyx_kp_s_Arithmos_data__io_pyx;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_X_cols;
 static PyObject *__pyx_n_s_X_data;
@@ -1256,13 +1256,13 @@ static PyObject *__pyx_n_s_tocsr;
 static PyObject *__pyx_kp_u_unrecognized_escape_sequence;
 static PyObject *__pyx_n_s_value;
 static PyObject *__pyx_kp_u_value_name_too_long;
-static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fname); /* proto */
+static PyObject *__pyx_pf_6Arithmos_4data_3_io_sparse_read_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fname); /* proto */
 static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_setdefault = {0, &__pyx_n_s_setdefault, 0, 0, 0};
 static PyObject *__pyx_tuple__2;
 static PyObject *__pyx_codeobj__3;
 /* Late includes */
 
-/* "Orange/data/_io.pyx":16
+/* "Arithmos/data/_io.pyx":16
  * 
  * 
  * def sparse_read_float(fname):             # <<<<<<<<<<<<<<
@@ -1271,21 +1271,21 @@ static PyObject *__pyx_codeobj__3;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_4data_3_io_1sparse_read_float(PyObject *__pyx_self, PyObject *__pyx_v_fname); /*proto*/
-static PyMethodDef __pyx_mdef_6Orange_4data_3_io_1sparse_read_float = {"sparse_read_float", (PyCFunction)__pyx_pw_6Orange_4data_3_io_1sparse_read_float, METH_O, 0};
-static PyObject *__pyx_pw_6Orange_4data_3_io_1sparse_read_float(PyObject *__pyx_self, PyObject *__pyx_v_fname) {
+static PyObject *__pyx_pw_6Arithmos_4data_3_io_1sparse_read_float(PyObject *__pyx_self, PyObject *__pyx_v_fname); /*proto*/
+static PyMethodDef __pyx_mdef_6Arithmos_4data_3_io_1sparse_read_float = {"sparse_read_float", (PyCFunction)__pyx_pw_6Arithmos_4data_3_io_1sparse_read_float, METH_O, 0};
+static PyObject *__pyx_pw_6Arithmos_4data_3_io_1sparse_read_float(PyObject *__pyx_self, PyObject *__pyx_v_fname) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("sparse_read_float (wrapper)", 0);
-  __pyx_r = __pyx_pf_6Orange_4data_3_io_sparse_read_float(__pyx_self, ((PyObject *)__pyx_v_fname));
+  __pyx_r = __pyx_pf_6Arithmos_4data_3_io_sparse_read_float(__pyx_self, ((PyObject *)__pyx_v_fname));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fname) {
-  enum __pyx_t_6Orange_4data_3_io_State __pyx_v_state;
+static PyObject *__pyx_pf_6Arithmos_4data_3_io_sparse_read_float(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fname) {
+  enum __pyx_t_6Arithmos_4data_3_io_State __pyx_v_state;
   char __pyx_v_c;
   int __pyx_v_ci;
   char *__pyx_v_not_in_atom;
@@ -1350,7 +1350,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   PyObject *__pyx_t_23 = NULL;
   __Pyx_RefNannySetupContext("sparse_read_float", 0);
 
-  /* "Orange/data/_io.pyx":21
+  /* "Arithmos/data/_io.pyx":21
  *         char c
  *         int ci
  *         char *not_in_atom = "#,|;\n\r\x00"             # <<<<<<<<<<<<<<
@@ -1359,7 +1359,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_not_in_atom = ((char *)"#,|;\n\r\000");
 
-  /* "Orange/data/_io.pyx":26
+  /* "Arithmos/data/_io.pyx":26
  *         char atom[10240]
  *         char *atomp
  *         char *atome = atom + 10240             # <<<<<<<<<<<<<<
@@ -1368,7 +1368,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_atome = (__pyx_v_atom + 0x2800);
 
-  /* "Orange/data/_io.pyx":28
+  /* "Arithmos/data/_io.pyx":28
  *         char *atome = atom + 10240
  *         char *endc
  *         char f_eof = 0             # <<<<<<<<<<<<<<
@@ -1377,7 +1377,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_f_eof = 0;
 
-  /* "Orange/data/_io.pyx":33
+  /* "Arithmos/data/_io.pyx":33
  *         char col_kind
  * 
  *         list X_data = []             # <<<<<<<<<<<<<<
@@ -1389,7 +1389,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_X_data = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":34
+  /* "Arithmos/data/_io.pyx":34
  * 
  *         list X_data = []
  *         list X_rows = []             # <<<<<<<<<<<<<<
@@ -1401,7 +1401,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_X_rows = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":35
+  /* "Arithmos/data/_io.pyx":35
  *         list X_data = []
  *         list X_rows = []
  *         list X_cols = []             # <<<<<<<<<<<<<<
@@ -1413,7 +1413,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_X_cols = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":37
+  /* "Arithmos/data/_io.pyx":37
  *         list X_cols = []
  * 
  *         list Y_data = []             # <<<<<<<<<<<<<<
@@ -1425,7 +1425,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_Y_data = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":38
+  /* "Arithmos/data/_io.pyx":38
  * 
  *         list Y_data = []
  *         list Y_rows = []             # <<<<<<<<<<<<<<
@@ -1437,7 +1437,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_Y_rows = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":39
+  /* "Arithmos/data/_io.pyx":39
  *         list Y_data = []
  *         list Y_rows = []
  *         list Y_cols = []             # <<<<<<<<<<<<<<
@@ -1449,7 +1449,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_Y_cols = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":41
+  /* "Arithmos/data/_io.pyx":41
  *         list Y_cols = []
  * 
  *         list M_data = []             # <<<<<<<<<<<<<<
@@ -1461,7 +1461,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_M_data = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":42
+  /* "Arithmos/data/_io.pyx":42
  * 
  *         list M_data = []
  *         list M_rows = []             # <<<<<<<<<<<<<<
@@ -1473,7 +1473,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_M_rows = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":43
+  /* "Arithmos/data/_io.pyx":43
  *         list M_data = []
  *         list M_rows = []
  *         list M_cols = []             # <<<<<<<<<<<<<<
@@ -1485,7 +1485,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_M_cols = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":45
+  /* "Arithmos/data/_io.pyx":45
  *         list M_cols = []
  * 
  *         dict attr_indices = {}             # <<<<<<<<<<<<<<
@@ -1497,7 +1497,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_attr_indices = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":46
+  /* "Arithmos/data/_io.pyx":46
  * 
  *         dict attr_indices = {}
  *         dict class_indices = {}             # <<<<<<<<<<<<<<
@@ -1509,7 +1509,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_class_indices = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":47
+  /* "Arithmos/data/_io.pyx":47
  *         dict attr_indices = {}
  *         dict class_indices = {}
  *         dict meta_indices = {}             # <<<<<<<<<<<<<<
@@ -1521,7 +1521,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_meta_indices = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_io.pyx":49
+  /* "Arithmos/data/_io.pyx":49
  *         dict meta_indices = {}
  * 
  *     cdef FILE *f = fopen(fname, "rb")             # <<<<<<<<<<<<<<
@@ -1531,7 +1531,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_t_2 = __Pyx_PyObject_AsString(__pyx_v_fname); if (unlikely((!__pyx_t_2) && PyErr_Occurred())) __PYX_ERR(0, 49, __pyx_L1_error)
   __pyx_v_f = fopen(__pyx_t_2, ((char const *)"rb"));
 
-  /* "Orange/data/_io.pyx":50
+  /* "Arithmos/data/_io.pyx":50
  * 
  *     cdef FILE *f = fopen(fname, "rb")
  *     if f == NULL:             # <<<<<<<<<<<<<<
@@ -1541,7 +1541,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_t_3 = ((__pyx_v_f == NULL) != 0);
   if (unlikely(__pyx_t_3)) {
 
-    /* "Orange/data/_io.pyx":51
+    /* "Arithmos/data/_io.pyx":51
  *     cdef FILE *f = fopen(fname, "rb")
  *     if f == NULL:
  *         raise IOError("File '{}' cannot be opened".format(fname))             # <<<<<<<<<<<<<<
@@ -1600,7 +1600,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __PYX_ERR(0, 51, __pyx_L1_error)
 
-    /* "Orange/data/_io.pyx":50
+    /* "Arithmos/data/_io.pyx":50
  * 
  *     cdef FILE *f = fopen(fname, "rb")
  *     if f == NULL:             # <<<<<<<<<<<<<<
@@ -1609,7 +1609,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   }
 
-  /* "Orange/data/_io.pyx":53
+  /* "Arithmos/data/_io.pyx":53
  *         raise IOError("File '{}' cannot be opened".format(fname))
  * 
  *     line = 0             # <<<<<<<<<<<<<<
@@ -1618,7 +1618,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_line = 0;
 
-  /* "Orange/data/_io.pyx":54
+  /* "Arithmos/data/_io.pyx":54
  * 
  *     line = 0
  *     cur_line = 0             # <<<<<<<<<<<<<<
@@ -1627,7 +1627,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_cur_line = 0;
 
-  /* "Orange/data/_io.pyx":55
+  /* "Arithmos/data/_io.pyx":55
  *     line = 0
  *     cur_line = 0
  *     in_line = 0             # <<<<<<<<<<<<<<
@@ -1636,7 +1636,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   __pyx_v_in_line = 0;
 
-  /* "Orange/data/_io.pyx":57
+  /* "Arithmos/data/_io.pyx":57
  *     in_line = 0
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -1645,16 +1645,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   /*try:*/ {
 
-    /* "Orange/data/_io.pyx":58
+    /* "Arithmos/data/_io.pyx":58
  * 
  *     try:
  *         state = BEGIN_LINE             # <<<<<<<<<<<<<<
  *         while not (f_eof and state == BEGIN_LINE):
  *             if state == BEGIN_LINE:
  */
-    __pyx_v_state = __pyx_e_6Orange_4data_3_io_BEGIN_LINE;
+    __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE;
 
-    /* "Orange/data/_io.pyx":59
+    /* "Arithmos/data/_io.pyx":59
  *     try:
  *         state = BEGIN_LINE
  *         while not (f_eof and state == BEGIN_LINE):             # <<<<<<<<<<<<<<
@@ -1668,32 +1668,32 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_3 = __pyx_t_7;
         goto __pyx_L9_bool_binop_done;
       }
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_BEGIN_LINE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE) != 0);
       __pyx_t_3 = __pyx_t_7;
       __pyx_L9_bool_binop_done:;
       __pyx_t_7 = ((!__pyx_t_3) != 0);
       if (!__pyx_t_7) break;
 
-      /* "Orange/data/_io.pyx":60
+      /* "Arithmos/data/_io.pyx":60
  *         state = BEGIN_LINE
  *         while not (f_eof and state == BEGIN_LINE):
  *             if state == BEGIN_LINE:             # <<<<<<<<<<<<<<
  *                 col_kind = ATTRIBUTE
  *                 if in_line or line == 0:
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_BEGIN_LINE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":61
+        /* "Arithmos/data/_io.pyx":61
  *         while not (f_eof and state == BEGIN_LINE):
  *             if state == BEGIN_LINE:
  *                 col_kind = ATTRIBUTE             # <<<<<<<<<<<<<<
  *                 if in_line or line == 0:
  *                     line += 1
  */
-        __pyx_v_col_kind = __pyx_e_6Orange_4data_3_io_ATTRIBUTE;
+        __pyx_v_col_kind = __pyx_e_6Arithmos_4data_3_io_ATTRIBUTE;
 
-        /* "Orange/data/_io.pyx":62
+        /* "Arithmos/data/_io.pyx":62
  *             if state == BEGIN_LINE:
  *                 col_kind = ATTRIBUTE
  *                 if in_line or line == 0:             # <<<<<<<<<<<<<<
@@ -1711,7 +1711,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L13_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":63
+          /* "Arithmos/data/_io.pyx":63
  *                 col_kind = ATTRIBUTE
  *                 if in_line or line == 0:
  *                     line += 1             # <<<<<<<<<<<<<<
@@ -1720,7 +1720,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_line = (__pyx_v_line + 1);
 
-          /* "Orange/data/_io.pyx":64
+          /* "Arithmos/data/_io.pyx":64
  *                 if in_line or line == 0:
  *                     line += 1
  *                     t_names = attr_indices             # <<<<<<<<<<<<<<
@@ -1730,7 +1730,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_INCREF(__pyx_v_attr_indices);
           __Pyx_XDECREF_SET(__pyx_v_t_names, __pyx_v_attr_indices);
 
-          /* "Orange/data/_io.pyx":62
+          /* "Arithmos/data/_io.pyx":62
  *             if state == BEGIN_LINE:
  *                 col_kind = ATTRIBUTE
  *                 if in_line or line == 0:             # <<<<<<<<<<<<<<
@@ -1739,7 +1739,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":65
+        /* "Arithmos/data/_io.pyx":65
  *                     line += 1
  *                     t_names = attr_indices
  *                 cur_line += 1             # <<<<<<<<<<<<<<
@@ -1748,7 +1748,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_cur_line = (__pyx_v_cur_line + 1);
 
-        /* "Orange/data/_io.pyx":66
+        /* "Arithmos/data/_io.pyx":66
  *                     t_names = attr_indices
  *                 cur_line += 1
  *                 col = in_line = 0             # <<<<<<<<<<<<<<
@@ -1758,16 +1758,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_v_col = 0;
         __pyx_v_in_line = 0;
 
-        /* "Orange/data/_io.pyx":67
+        /* "Arithmos/data/_io.pyx":67
  *                 cur_line += 1
  *                 col = in_line = 0
  *                 state = READ_START_ATOM             # <<<<<<<<<<<<<<
  * 
  *             if state != SET_VALUE:
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_START_ATOM;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM;
 
-        /* "Orange/data/_io.pyx":60
+        /* "Arithmos/data/_io.pyx":60
  *         state = BEGIN_LINE
  *         while not (f_eof and state == BEGIN_LINE):
  *             if state == BEGIN_LINE:             # <<<<<<<<<<<<<<
@@ -1776,17 +1776,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":69
+      /* "Arithmos/data/_io.pyx":69
  *                 state = READ_START_ATOM
  * 
  *             if state != SET_VALUE:             # <<<<<<<<<<<<<<
  *                 ci = fgetc(f)
  *                 if ci == EOF:
  */
-      __pyx_t_7 = ((__pyx_v_state != __pyx_e_6Orange_4data_3_io_SET_VALUE) != 0);
+      __pyx_t_7 = ((__pyx_v_state != __pyx_e_6Arithmos_4data_3_io_SET_VALUE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":70
+        /* "Arithmos/data/_io.pyx":70
  * 
  *             if state != SET_VALUE:
  *                 ci = fgetc(f)             # <<<<<<<<<<<<<<
@@ -1795,7 +1795,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_ci = fgetc(__pyx_v_f);
 
-        /* "Orange/data/_io.pyx":71
+        /* "Arithmos/data/_io.pyx":71
  *             if state != SET_VALUE:
  *                 ci = fgetc(f)
  *                 if ci == EOF:             # <<<<<<<<<<<<<<
@@ -1805,7 +1805,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_ci == EOF) != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":72
+          /* "Arithmos/data/_io.pyx":72
  *                 ci = fgetc(f)
  *                 if ci == EOF:
  *                     f_eof = 1             # <<<<<<<<<<<<<<
@@ -1814,7 +1814,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_f_eof = 1;
 
-          /* "Orange/data/_io.pyx":73
+          /* "Arithmos/data/_io.pyx":73
  *                 if ci == EOF:
  *                     f_eof = 1
  *                     c = b"\x00"             # <<<<<<<<<<<<<<
@@ -1823,7 +1823,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_c = '\x00';
 
-          /* "Orange/data/_io.pyx":71
+          /* "Arithmos/data/_io.pyx":71
  *             if state != SET_VALUE:
  *                 ci = fgetc(f)
  *                 if ci == EOF:             # <<<<<<<<<<<<<<
@@ -1833,7 +1833,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L16;
         }
 
-        /* "Orange/data/_io.pyx":75
+        /* "Arithmos/data/_io.pyx":75
  *                     c = b"\x00"
  *                 else:
  *                     c = <char>ci             # <<<<<<<<<<<<<<
@@ -1845,7 +1845,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L16:;
 
-        /* "Orange/data/_io.pyx":76
+        /* "Arithmos/data/_io.pyx":76
  *                 else:
  *                     c = <char>ci
  *                 col += 1             # <<<<<<<<<<<<<<
@@ -1854,7 +1854,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_col = (__pyx_v_col + 1);
 
-        /* "Orange/data/_io.pyx":69
+        /* "Arithmos/data/_io.pyx":69
  *                 state = READ_START_ATOM
  * 
  *             if state != SET_VALUE:             # <<<<<<<<<<<<<<
@@ -1863,17 +1863,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":78
+      /* "Arithmos/data/_io.pyx":78
  *                 col += 1
  * 
  *             if state == READ_START_ATOM:             # <<<<<<<<<<<<<<
  *                 atomp = atom
  *                 value = 1
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_READ_START_ATOM) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":79
+        /* "Arithmos/data/_io.pyx":79
  * 
  *             if state == READ_START_ATOM:
  *                 atomp = atom             # <<<<<<<<<<<<<<
@@ -1882,7 +1882,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_atomp = __pyx_v_atom;
 
-        /* "Orange/data/_io.pyx":80
+        /* "Arithmos/data/_io.pyx":80
  *             if state == READ_START_ATOM:
  *                 atomp = atom
  *                 value = 1             # <<<<<<<<<<<<<<
@@ -1891,7 +1891,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_value = 1.0;
 
-        /* "Orange/data/_io.pyx":81
+        /* "Arithmos/data/_io.pyx":81
  *                 atomp = atom
  *                 value = 1
  *                 if c == b"," or c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -1903,7 +1903,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           case ' ':
           case '\t':
 
-          /* "Orange/data/_io.pyx":82
+          /* "Arithmos/data/_io.pyx":82
  *                 value = 1
  *                 if c == b"," or c == b" " or c == b"\t":
  *                     continue             # <<<<<<<<<<<<<<
@@ -1912,7 +1912,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":81
+          /* "Arithmos/data/_io.pyx":81
  *                 atomp = atom
  *                 value = 1
  *                 if c == b"," or c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -1921,7 +1921,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           break;
 
-          /* "Orange/data/_io.pyx":83
+          /* "Arithmos/data/_io.pyx":83
  *                 if c == b"," or c == b" " or c == b"\t":
  *                     continue
  *                 elif c == b'"':             # <<<<<<<<<<<<<<
@@ -1930,16 +1930,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           case '"':
 
-          /* "Orange/data/_io.pyx":84
+          /* "Arithmos/data/_io.pyx":84
  *                     continue
  *                 elif c == b'"':
  *                     state = QUOTED             # <<<<<<<<<<<<<<
  *                     continue
  *                 elif c == b"=":
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_QUOTED;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_QUOTED;
 
-          /* "Orange/data/_io.pyx":85
+          /* "Arithmos/data/_io.pyx":85
  *                 elif c == b'"':
  *                     state = QUOTED
  *                     continue             # <<<<<<<<<<<<<<
@@ -1948,7 +1948,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":83
+          /* "Arithmos/data/_io.pyx":83
  *                 if c == b"," or c == b" " or c == b"\t":
  *                     continue
  *                 elif c == b'"':             # <<<<<<<<<<<<<<
@@ -1957,7 +1957,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           break;
 
-          /* "Orange/data/_io.pyx":86
+          /* "Arithmos/data/_io.pyx":86
  *                     state = QUOTED
  *                     continue
  *                 elif c == b"=":             # <<<<<<<<<<<<<<
@@ -1966,7 +1966,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           case '=':
 
-          /* "Orange/data/_io.pyx":88
+          /* "Arithmos/data/_io.pyx":88
  *                 elif c == b"=":
  *                     raise ValueError("{}:{}:{}: missing value name"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2032,7 +2032,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "Orange/data/_io.pyx":87
+          /* "Arithmos/data/_io.pyx":87
  *                     continue
  *                 elif c == b"=":
  *                     raise ValueError("{}:{}:{}: missing value name"             # <<<<<<<<<<<<<<
@@ -2046,7 +2046,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __PYX_ERR(0, 87, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":86
+          /* "Arithmos/data/_io.pyx":86
  *                     state = QUOTED
  *                     continue
  *                 elif c == b"=":             # <<<<<<<<<<<<<<
@@ -2057,16 +2057,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           default: break;
         }
 
-        /* "Orange/data/_io.pyx":90
+        /* "Arithmos/data/_io.pyx":90
  *                         .format(fname, cur_line, col))
  *                 # fall through
  *                 state = READ             # <<<<<<<<<<<<<<
  * 
  *             if state == ESCAPE:
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ;
 
-        /* "Orange/data/_io.pyx":78
+        /* "Arithmos/data/_io.pyx":78
  *                 col += 1
  * 
  *             if state == READ_START_ATOM:             # <<<<<<<<<<<<<<
@@ -2075,17 +2075,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":92
+      /* "Arithmos/data/_io.pyx":92
  *                 state = READ
  * 
  *             if state == ESCAPE:             # <<<<<<<<<<<<<<
  *                 if c == b"t":    c = b"\t"
  *                 elif c == b"n":    c = b"\n"
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_ESCAPE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_ESCAPE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":93
+        /* "Arithmos/data/_io.pyx":93
  * 
  *             if state == ESCAPE:
  *                 if c == b"t":    c = b"\t"             # <<<<<<<<<<<<<<
@@ -2098,7 +2098,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L19;
         }
 
-        /* "Orange/data/_io.pyx":94
+        /* "Arithmos/data/_io.pyx":94
  *             if state == ESCAPE:
  *                 if c == b"t":    c = b"\t"
  *                 elif c == b"n":    c = b"\n"             # <<<<<<<<<<<<<<
@@ -2111,7 +2111,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L19;
         }
 
-        /* "Orange/data/_io.pyx":95
+        /* "Arithmos/data/_io.pyx":95
  *                 if c == b"t":    c = b"\t"
  *                 elif c == b"n":    c = b"\n"
  *                 elif c == b"r":    c = b"\r"             # <<<<<<<<<<<<<<
@@ -2124,7 +2124,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L19;
         }
 
-        /* "Orange/data/_io.pyx":96
+        /* "Arithmos/data/_io.pyx":96
  *                 elif c == b"n":    c = b"\n"
  *                 elif c == b"r":    c = b"\r"
  *                 elif c == b'"' or c == b"'" or c == b"\\" or c == b" ":             # <<<<<<<<<<<<<<
@@ -2146,7 +2146,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L19;
         }
 
-        /* "Orange/data/_io.pyx":98
+        /* "Arithmos/data/_io.pyx":98
  *                 elif c == b'"' or c == b"'" or c == b"\\" or c == b" ":
  *                     pass
  *                 elif c == b"\r" or c == b"\n":             # <<<<<<<<<<<<<<
@@ -2164,7 +2164,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         if (unlikely(__pyx_t_7)) {
 
-          /* "Orange/data/_io.pyx":100
+          /* "Arithmos/data/_io.pyx":100
  *                 elif c == b"\r" or c == b"\n":
  *                     raise ValueError("{}:{}:{}: end of line in escape sequence"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2230,7 +2230,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "Orange/data/_io.pyx":99
+          /* "Arithmos/data/_io.pyx":99
  *                     pass
  *                 elif c == b"\r" or c == b"\n":
  *                     raise ValueError("{}:{}:{}: end of line in escape sequence"             # <<<<<<<<<<<<<<
@@ -2244,7 +2244,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __PYX_ERR(0, 99, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":98
+          /* "Arithmos/data/_io.pyx":98
  *                 elif c == b'"' or c == b"'" or c == b"\\" or c == b" ":
  *                     pass
  *                 elif c == b"\r" or c == b"\n":             # <<<<<<<<<<<<<<
@@ -2253,7 +2253,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":101
+        /* "Arithmos/data/_io.pyx":101
  *                     raise ValueError("{}:{}:{}: end of line in escape sequence"
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:             # <<<<<<<<<<<<<<
@@ -2263,7 +2263,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = (__pyx_v_f_eof != 0);
         if (unlikely(__pyx_t_7)) {
 
-          /* "Orange/data/_io.pyx":103
+          /* "Arithmos/data/_io.pyx":103
  *                 elif f_eof:
  *                     raise ValueError("{}:{}:{}: end of file in escape sequence"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2329,7 +2329,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "Orange/data/_io.pyx":102
+          /* "Arithmos/data/_io.pyx":102
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:
  *                     raise ValueError("{}:{}:{}: end of file in escape sequence"             # <<<<<<<<<<<<<<
@@ -2343,7 +2343,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __PYX_ERR(0, 102, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":101
+          /* "Arithmos/data/_io.pyx":101
  *                     raise ValueError("{}:{}:{}: end of line in escape sequence"
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:             # <<<<<<<<<<<<<<
@@ -2352,7 +2352,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":105
+        /* "Arithmos/data/_io.pyx":105
  *                         .format(fname, cur_line, col))
  *                 else:
  *                     raise ValueError("{}:{}:{}: unrecognized escape sequence"             # <<<<<<<<<<<<<<
@@ -2361,7 +2361,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         /*else*/ {
 
-          /* "Orange/data/_io.pyx":106
+          /* "Arithmos/data/_io.pyx":106
  *                 else:
  *                     raise ValueError("{}:{}:{}: unrecognized escape sequence"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2427,7 +2427,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "Orange/data/_io.pyx":105
+          /* "Arithmos/data/_io.pyx":105
  *                         .format(fname, cur_line, col))
  *                 else:
  *                     raise ValueError("{}:{}:{}: unrecognized escape sequence"             # <<<<<<<<<<<<<<
@@ -2443,16 +2443,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L19:;
 
-        /* "Orange/data/_io.pyx":108
+        /* "Arithmos/data/_io.pyx":108
  *                         .format(fname, cur_line, col))
  *                 # fall through
  *                 state = READ             # <<<<<<<<<<<<<<
  * 
  *             if state == READ:
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ;
 
-        /* "Orange/data/_io.pyx":92
+        /* "Arithmos/data/_io.pyx":92
  *                 state = READ
  * 
  *             if state == ESCAPE:             # <<<<<<<<<<<<<<
@@ -2461,17 +2461,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":110
+      /* "Arithmos/data/_io.pyx":110
  *                 state = READ
  * 
  *             if state == READ:             # <<<<<<<<<<<<<<
  *                 if c == b"\\":
  *                     state = ESCAPE
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_READ) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_READ) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":111
+        /* "Arithmos/data/_io.pyx":111
  * 
  *             if state == READ:
  *                 if c == b"\\":             # <<<<<<<<<<<<<<
@@ -2481,16 +2481,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '\\') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":112
+          /* "Arithmos/data/_io.pyx":112
  *             if state == READ:
  *                 if c == b"\\":
  *                     state = ESCAPE             # <<<<<<<<<<<<<<
  *                     continue
  *                 endc = strchr(not_in_atom, c)
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_ESCAPE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_ESCAPE;
 
-          /* "Orange/data/_io.pyx":113
+          /* "Arithmos/data/_io.pyx":113
  *                 if c == b"\\":
  *                     state = ESCAPE
  *                     continue             # <<<<<<<<<<<<<<
@@ -2499,7 +2499,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":111
+          /* "Arithmos/data/_io.pyx":111
  * 
  *             if state == READ:
  *                 if c == b"\\":             # <<<<<<<<<<<<<<
@@ -2508,7 +2508,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":114
+        /* "Arithmos/data/_io.pyx":114
  *                     state = ESCAPE
  *                     continue
  *                 endc = strchr(not_in_atom, c)             # <<<<<<<<<<<<<<
@@ -2517,7 +2517,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_endc = strchr(__pyx_v_not_in_atom, __pyx_v_c);
 
-        /* "Orange/data/_io.pyx":115
+        /* "Arithmos/data/_io.pyx":115
  *                     continue
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":             # <<<<<<<<<<<<<<
@@ -2535,7 +2535,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L23_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":116
+          /* "Arithmos/data/_io.pyx":116
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":
  *                     atomp[0] = c             # <<<<<<<<<<<<<<
@@ -2544,7 +2544,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           (__pyx_v_atomp[0]) = __pyx_v_c;
 
-          /* "Orange/data/_io.pyx":117
+          /* "Arithmos/data/_io.pyx":117
  *                 if endc == NULL and c != b"=":
  *                     atomp[0] = c
  *                     atomp += 1             # <<<<<<<<<<<<<<
@@ -2553,7 +2553,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_atomp = (__pyx_v_atomp + 1);
 
-          /* "Orange/data/_io.pyx":118
+          /* "Arithmos/data/_io.pyx":118
  *                     atomp[0] = c
  *                     atomp += 1
  *                     if atomp == atome:             # <<<<<<<<<<<<<<
@@ -2563,7 +2563,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_7 = ((__pyx_v_atomp == __pyx_v_atome) != 0);
           if (unlikely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":120
+            /* "Arithmos/data/_io.pyx":120
  *                     if atomp == atome:
  *                         raise ValueError("{}:{}:{}: value name too long"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2629,7 +2629,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-            /* "Orange/data/_io.pyx":119
+            /* "Arithmos/data/_io.pyx":119
  *                     atomp += 1
  *                     if atomp == atome:
  *                         raise ValueError("{}:{}:{}: value name too long"             # <<<<<<<<<<<<<<
@@ -2643,7 +2643,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __PYX_ERR(0, 119, __pyx_L5_error)
 
-            /* "Orange/data/_io.pyx":118
+            /* "Arithmos/data/_io.pyx":118
  *                     atomp[0] = c
  *                     atomp += 1
  *                     if atomp == atome:             # <<<<<<<<<<<<<<
@@ -2652,7 +2652,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":121
+          /* "Arithmos/data/_io.pyx":121
  *                         raise ValueError("{}:{}:{}: value name too long"
  *                             .format(fname, cur_line, col))
  *                     continue             # <<<<<<<<<<<<<<
@@ -2661,7 +2661,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":115
+          /* "Arithmos/data/_io.pyx":115
  *                     continue
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":             # <<<<<<<<<<<<<<
@@ -2670,7 +2670,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":124
+        /* "Arithmos/data/_io.pyx":124
  *                 else:
  *                     # fall through to END_ATOM
  *                     state = END_ATOM             # <<<<<<<<<<<<<<
@@ -2678,10 +2678,10 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  *             if state == QUOTED:
  */
         /*else*/ {
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_END_ATOM;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_END_ATOM;
         }
 
-        /* "Orange/data/_io.pyx":110
+        /* "Arithmos/data/_io.pyx":110
  *                 state = READ
  * 
  *             if state == READ:             # <<<<<<<<<<<<<<
@@ -2690,17 +2690,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":126
+      /* "Arithmos/data/_io.pyx":126
  *                     state = END_ATOM
  * 
  *             if state == QUOTED:             # <<<<<<<<<<<<<<
  *                 if c == b"\r" or c == b"\n":
  *                     raise ValueError(
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_QUOTED) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_QUOTED) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":127
+        /* "Arithmos/data/_io.pyx":127
  * 
  *             if state == QUOTED:
  *                 if c == b"\r" or c == b"\n":             # <<<<<<<<<<<<<<
@@ -2718,7 +2718,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         if (unlikely(__pyx_t_7)) {
 
-          /* "Orange/data/_io.pyx":130
+          /* "Arithmos/data/_io.pyx":130
  *                     raise ValueError(
  *                         "{}:{}:{}: end of line within a quoted value"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2784,7 +2784,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "Orange/data/_io.pyx":128
+          /* "Arithmos/data/_io.pyx":128
  *             if state == QUOTED:
  *                 if c == b"\r" or c == b"\n":
  *                     raise ValueError(             # <<<<<<<<<<<<<<
@@ -2798,7 +2798,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __PYX_ERR(0, 128, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":127
+          /* "Arithmos/data/_io.pyx":127
  * 
  *             if state == QUOTED:
  *                 if c == b"\r" or c == b"\n":             # <<<<<<<<<<<<<<
@@ -2807,7 +2807,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":131
+        /* "Arithmos/data/_io.pyx":131
  *                         "{}:{}:{}: end of line within a quoted value"
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:             # <<<<<<<<<<<<<<
@@ -2817,7 +2817,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = (__pyx_v_f_eof != 0);
         if (unlikely(__pyx_t_7)) {
 
-          /* "Orange/data/_io.pyx":134
+          /* "Arithmos/data/_io.pyx":134
  *                     raise ValueError(
  *                         "{}:{}:{}: end of file within a quoted value"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -2883,7 +2883,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "Orange/data/_io.pyx":132
+          /* "Arithmos/data/_io.pyx":132
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:
  *                     raise ValueError(             # <<<<<<<<<<<<<<
@@ -2897,7 +2897,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __PYX_ERR(0, 132, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":131
+          /* "Arithmos/data/_io.pyx":131
  *                         "{}:{}:{}: end of line within a quoted value"
  *                         .format(fname, cur_line, col))
  *                 elif f_eof:             # <<<<<<<<<<<<<<
@@ -2906,7 +2906,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":135
+        /* "Arithmos/data/_io.pyx":135
  *                         "{}:{}:{}: end of file within a quoted value"
  *                         .format(fname, cur_line, col))
  *                 elif c != b'"':             # <<<<<<<<<<<<<<
@@ -2916,7 +2916,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c != '"') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":136
+          /* "Arithmos/data/_io.pyx":136
  *                         .format(fname, cur_line, col))
  *                 elif c != b'"':
  *                     atomp[0] = c             # <<<<<<<<<<<<<<
@@ -2925,7 +2925,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           (__pyx_v_atomp[0]) = __pyx_v_c;
 
-          /* "Orange/data/_io.pyx":137
+          /* "Arithmos/data/_io.pyx":137
  *                 elif c != b'"':
  *                     atomp[0] = c
  *                     atomp += 1             # <<<<<<<<<<<<<<
@@ -2934,7 +2934,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_atomp = (__pyx_v_atomp + 1);
 
-          /* "Orange/data/_io.pyx":138
+          /* "Arithmos/data/_io.pyx":138
  *                     atomp[0] = c
  *                     atomp += 1
  *                     if atomp == atome:             # <<<<<<<<<<<<<<
@@ -2944,7 +2944,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_7 = ((__pyx_v_atomp == __pyx_v_atome) != 0);
           if (unlikely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":140
+            /* "Arithmos/data/_io.pyx":140
  *                     if atomp == atome:
  *                         raise ValueError("{}:{}:{}: value name too long"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -3010,7 +3010,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "Orange/data/_io.pyx":139
+            /* "Arithmos/data/_io.pyx":139
  *                     atomp += 1
  *                     if atomp == atome:
  *                         raise ValueError("{}:{}:{}: value name too long"             # <<<<<<<<<<<<<<
@@ -3024,7 +3024,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __PYX_ERR(0, 139, __pyx_L5_error)
 
-            /* "Orange/data/_io.pyx":138
+            /* "Arithmos/data/_io.pyx":138
  *                     atomp[0] = c
  *                     atomp += 1
  *                     if atomp == atome:             # <<<<<<<<<<<<<<
@@ -3033,7 +3033,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":135
+          /* "Arithmos/data/_io.pyx":135
  *                         "{}:{}:{}: end of file within a quoted value"
  *                         .format(fname, cur_line, col))
  *                 elif c != b'"':             # <<<<<<<<<<<<<<
@@ -3043,7 +3043,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L27;
         }
 
-        /* "Orange/data/_io.pyx":142
+        /* "Arithmos/data/_io.pyx":142
  *                             .format(fname, cur_line, col))
  *                 else:
  *                     state = END_QUOTED             # <<<<<<<<<<<<<<
@@ -3051,9 +3051,9 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  * 
  */
         /*else*/ {
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_END_QUOTED;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_END_QUOTED;
 
-          /* "Orange/data/_io.pyx":143
+          /* "Arithmos/data/_io.pyx":143
  *                 else:
  *                     state = END_QUOTED
  *                     continue             # <<<<<<<<<<<<<<
@@ -3064,7 +3064,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L27:;
 
-        /* "Orange/data/_io.pyx":126
+        /* "Arithmos/data/_io.pyx":126
  *                     state = END_ATOM
  * 
  *             if state == QUOTED:             # <<<<<<<<<<<<<<
@@ -3073,17 +3073,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":145
+      /* "Arithmos/data/_io.pyx":145
  *                     continue
  * 
  *             if state == END_QUOTED:             # <<<<<<<<<<<<<<
  *                 if c == b" " or c == b"\t":
  *                     continue
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_END_QUOTED) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_END_QUOTED) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":146
+        /* "Arithmos/data/_io.pyx":146
  * 
  *             if state == END_QUOTED:
  *                 if c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -3094,7 +3094,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           case ' ':
           case '\t':
 
-          /* "Orange/data/_io.pyx":147
+          /* "Arithmos/data/_io.pyx":147
  *             if state == END_QUOTED:
  *                 if c == b" " or c == b"\t":
  *                     continue             # <<<<<<<<<<<<<<
@@ -3103,7 +3103,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":146
+          /* "Arithmos/data/_io.pyx":146
  * 
  *             if state == END_QUOTED:
  *                 if c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -3114,7 +3114,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           default: break;
         }
 
-        /* "Orange/data/_io.pyx":148
+        /* "Arithmos/data/_io.pyx":148
  *                 if c == b" " or c == b"\t":
  *                     continue
  *                 endc = strchr(not_in_atom, c)             # <<<<<<<<<<<<<<
@@ -3123,7 +3123,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_endc = strchr(__pyx_v_not_in_atom, __pyx_v_c);
 
-        /* "Orange/data/_io.pyx":149
+        /* "Arithmos/data/_io.pyx":149
  *                     continue
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":             # <<<<<<<<<<<<<<
@@ -3141,7 +3141,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L31_bool_binop_done:;
         if (unlikely(__pyx_t_7)) {
 
-          /* "Orange/data/_io.pyx":152
+          /* "Arithmos/data/_io.pyx":152
  *                     raise ValueError("{}:{}:{}: quoted value should be "
  *                         "followed by value separator or end of line"
  *                         .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -3207,7 +3207,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "Orange/data/_io.pyx":150
+          /* "Arithmos/data/_io.pyx":150
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":
  *                     raise ValueError("{}:{}:{}: quoted value should be "             # <<<<<<<<<<<<<<
@@ -3221,7 +3221,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __PYX_ERR(0, 150, __pyx_L5_error)
 
-          /* "Orange/data/_io.pyx":149
+          /* "Arithmos/data/_io.pyx":149
  *                     continue
  *                 endc = strchr(not_in_atom, c)
  *                 if endc == NULL and c != b"=":             # <<<<<<<<<<<<<<
@@ -3230,16 +3230,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":154
+        /* "Arithmos/data/_io.pyx":154
  *                         .format(fname, cur_line, col))
  *                 # fall through
  *                 state = END_ATOM             # <<<<<<<<<<<<<<
  * 
  *             if state == END_ATOM:
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_END_ATOM;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_END_ATOM;
 
-        /* "Orange/data/_io.pyx":145
+        /* "Arithmos/data/_io.pyx":145
  *                     continue
  * 
  *             if state == END_QUOTED:             # <<<<<<<<<<<<<<
@@ -3248,17 +3248,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":156
+      /* "Arithmos/data/_io.pyx":156
  *                 state = END_ATOM
  * 
  *             if state == END_ATOM:             # <<<<<<<<<<<<<<
  *                 while atomp != atom and (
  *                         atomp[-1] == b" " or atomp[-1] == b"\t"):
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_END_ATOM) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_END_ATOM) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":157
+        /* "Arithmos/data/_io.pyx":157
  * 
  *             if state == END_ATOM:
  *                 while atomp != atom and (             # <<<<<<<<<<<<<<
@@ -3273,7 +3273,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             goto __pyx_L36_bool_binop_done;
           }
 
-          /* "Orange/data/_io.pyx":158
+          /* "Arithmos/data/_io.pyx":158
  *             if state == END_ATOM:
  *                 while atomp != atom and (
  *                         atomp[-1] == b" " or atomp[-1] == b"\t"):             # <<<<<<<<<<<<<<
@@ -3291,7 +3291,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_L36_bool_binop_done:;
           if (!__pyx_t_7) break;
 
-          /* "Orange/data/_io.pyx":159
+          /* "Arithmos/data/_io.pyx":159
  *                 while atomp != atom and (
  *                         atomp[-1] == b" " or atomp[-1] == b"\t"):
  *                     atomp -= 1             # <<<<<<<<<<<<<<
@@ -3301,7 +3301,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_v_atomp = (__pyx_v_atomp - 1);
         }
 
-        /* "Orange/data/_io.pyx":160
+        /* "Arithmos/data/_io.pyx":160
  *                         atomp[-1] == b" " or atomp[-1] == b"\t"):
  *                     atomp -= 1
  *                 if atomp == atom:             # <<<<<<<<<<<<<<
@@ -3311,7 +3311,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_atomp == __pyx_v_atom) != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":161
+          /* "Arithmos/data/_io.pyx":161
  *                     atomp -= 1
  *                 if atomp == atom:
  *                     if c == b"=":             # <<<<<<<<<<<<<<
@@ -3321,7 +3321,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_7 = ((__pyx_v_c == '=') != 0);
           if (unlikely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":163
+            /* "Arithmos/data/_io.pyx":163
  *                     if c == b"=":
  *                         raise ValueError("{}:{}:{}: empty value name"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "Orange/data/_io.pyx":162
+            /* "Arithmos/data/_io.pyx":162
  *                 if atomp == atom:
  *                     if c == b"=":
  *                         raise ValueError("{}:{}:{}: empty value name"             # <<<<<<<<<<<<<<
@@ -3401,7 +3401,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __PYX_ERR(0, 162, __pyx_L5_error)
 
-            /* "Orange/data/_io.pyx":161
+            /* "Arithmos/data/_io.pyx":161
  *                     atomp -= 1
  *                 if atomp == atom:
  *                     if c == b"=":             # <<<<<<<<<<<<<<
@@ -3410,7 +3410,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":165
+          /* "Arithmos/data/_io.pyx":165
  *                             .format(fname, cur_line, col))
  *                     else:
  *                         state = TO_NEXT             # <<<<<<<<<<<<<<
@@ -3418,10 +3418,10 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  *                     atomp[0] = 0
  */
           /*else*/ {
-            __pyx_v_state = __pyx_e_6Orange_4data_3_io_TO_NEXT;
+            __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_TO_NEXT;
           }
 
-          /* "Orange/data/_io.pyx":160
+          /* "Arithmos/data/_io.pyx":160
  *                         atomp[-1] == b" " or atomp[-1] == b"\t"):
  *                     atomp -= 1
  *                 if atomp == atom:             # <<<<<<<<<<<<<<
@@ -3431,7 +3431,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L39;
         }
 
-        /* "Orange/data/_io.pyx":167
+        /* "Arithmos/data/_io.pyx":167
  *                         state = TO_NEXT
  *                 else:
  *                     atomp[0] = 0             # <<<<<<<<<<<<<<
@@ -3441,7 +3441,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         /*else*/ {
           (__pyx_v_atomp[0]) = 0;
 
-          /* "Orange/data/_io.pyx":168
+          /* "Arithmos/data/_io.pyx":168
  *                 else:
  *                     atomp[0] = 0
  *                     b_atom = atom             # <<<<<<<<<<<<<<
@@ -3450,7 +3450,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_b_atom = __pyx_v_atom;
 
-          /* "Orange/data/_io.pyx":174
+          /* "Arithmos/data/_io.pyx":174
  *                         attr_index = t_names[b_atom] = len(t_names)
  *                     """
  *                     attr_index = t_names.setdefault(b_atom,len(t_names))             # <<<<<<<<<<<<<<
@@ -3472,7 +3472,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
           __pyx_v_attr_index = __pyx_t_9;
 
-          /* "Orange/data/_io.pyx":176
+          /* "Arithmos/data/_io.pyx":176
  *                     attr_index = t_names.setdefault(b_atom,len(t_names))
  * 
  *                     atomp = atom             # <<<<<<<<<<<<<<
@@ -3481,7 +3481,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_atomp = __pyx_v_atom;
 
-          /* "Orange/data/_io.pyx":177
+          /* "Arithmos/data/_io.pyx":177
  * 
  *                     atomp = atom
  *                     if c == b"=":             # <<<<<<<<<<<<<<
@@ -3491,7 +3491,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_7 = ((__pyx_v_c == '=') != 0);
           if (__pyx_t_7) {
 
-            /* "Orange/data/_io.pyx":178
+            /* "Arithmos/data/_io.pyx":178
  *                     atomp = atom
  *                     if c == b"=":
  *                         value = 0             # <<<<<<<<<<<<<<
@@ -3500,16 +3500,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
             __pyx_v_value = 0.0;
 
-            /* "Orange/data/_io.pyx":179
+            /* "Arithmos/data/_io.pyx":179
  *                     if c == b"=":
  *                         value = 0
  *                         state = WAIT_VALUE             # <<<<<<<<<<<<<<
  *                         continue
  *                     # fall through
  */
-            __pyx_v_state = __pyx_e_6Orange_4data_3_io_WAIT_VALUE;
+            __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_WAIT_VALUE;
 
-            /* "Orange/data/_io.pyx":180
+            /* "Arithmos/data/_io.pyx":180
  *                         value = 0
  *                         state = WAIT_VALUE
  *                         continue             # <<<<<<<<<<<<<<
@@ -3518,7 +3518,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
             goto __pyx_L7_continue;
 
-            /* "Orange/data/_io.pyx":177
+            /* "Arithmos/data/_io.pyx":177
  * 
  *                     atomp = atom
  *                     if c == b"=":             # <<<<<<<<<<<<<<
@@ -3527,18 +3527,18 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":182
+          /* "Arithmos/data/_io.pyx":182
  *                         continue
  *                     # fall through
  *                     state = SET_VALUE             # <<<<<<<<<<<<<<
  * 
  *             if state == WAIT_VALUE:
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_SET_VALUE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_SET_VALUE;
         }
         __pyx_L39:;
 
-        /* "Orange/data/_io.pyx":156
+        /* "Arithmos/data/_io.pyx":156
  *                 state = END_ATOM
  * 
  *             if state == END_ATOM:             # <<<<<<<<<<<<<<
@@ -3547,17 +3547,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":184
+      /* "Arithmos/data/_io.pyx":184
  *                     state = SET_VALUE
  * 
  *             if state == WAIT_VALUE:             # <<<<<<<<<<<<<<
  *                 if c == b" " or c == b"\t":
  *                     continue
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_WAIT_VALUE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_WAIT_VALUE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":185
+        /* "Arithmos/data/_io.pyx":185
  * 
  *             if state == WAIT_VALUE:
  *                 if c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -3568,7 +3568,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           case ' ':
           case '\t':
 
-          /* "Orange/data/_io.pyx":186
+          /* "Arithmos/data/_io.pyx":186
  *             if state == WAIT_VALUE:
  *                 if c == b" " or c == b"\t":
  *                     continue             # <<<<<<<<<<<<<<
@@ -3577,7 +3577,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           goto __pyx_L7_continue;
 
-          /* "Orange/data/_io.pyx":185
+          /* "Arithmos/data/_io.pyx":185
  * 
  *             if state == WAIT_VALUE:
  *                 if c == b" " or c == b"\t":             # <<<<<<<<<<<<<<
@@ -3587,18 +3587,18 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           break;
           default:
 
-          /* "Orange/data/_io.pyx":189
+          /* "Arithmos/data/_io.pyx":189
  *                 else:
  *                     # fall through
  *                     state = READ_VALUE             # <<<<<<<<<<<<<<
  * 
  *             if state == READ_VALUE:
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_VALUE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_VALUE;
           break;
         }
 
-        /* "Orange/data/_io.pyx":184
+        /* "Arithmos/data/_io.pyx":184
  *                     state = SET_VALUE
  * 
  *             if state == WAIT_VALUE:             # <<<<<<<<<<<<<<
@@ -3607,17 +3607,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":191
+      /* "Arithmos/data/_io.pyx":191
  *                     state = READ_VALUE
  * 
  *             if state == READ_VALUE:             # <<<<<<<<<<<<<<
  *                 if b"0" <= c <= b"9":
  *                     value = value * 10 + (c & 0xf)
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_READ_VALUE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_READ_VALUE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":192
+        /* "Arithmos/data/_io.pyx":192
  * 
  *             if state == READ_VALUE:
  *                 if b"0" <= c <= b"9":             # <<<<<<<<<<<<<<
@@ -3631,7 +3631,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_3 = (__pyx_t_7 != 0);
         if (__pyx_t_3) {
 
-          /* "Orange/data/_io.pyx":193
+          /* "Arithmos/data/_io.pyx":193
  *             if state == READ_VALUE:
  *                 if b"0" <= c <= b"9":
  *                     value = value * 10 + (c & 0xf)             # <<<<<<<<<<<<<<
@@ -3640,7 +3640,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_value = ((__pyx_v_value * 10.0) + (__pyx_v_c & 0xf));
 
-          /* "Orange/data/_io.pyx":192
+          /* "Arithmos/data/_io.pyx":192
  * 
  *             if state == READ_VALUE:
  *                 if b"0" <= c <= b"9":             # <<<<<<<<<<<<<<
@@ -3650,7 +3650,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L44;
         }
 
-        /* "Orange/data/_io.pyx":194
+        /* "Arithmos/data/_io.pyx":194
  *                 if b"0" <= c <= b"9":
  *                     value = value * 10 + (c & 0xf)
  *                 elif c == b".":             # <<<<<<<<<<<<<<
@@ -3660,7 +3660,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_3 = ((__pyx_v_c == '.') != 0);
         if (__pyx_t_3) {
 
-          /* "Orange/data/_io.pyx":195
+          /* "Arithmos/data/_io.pyx":195
  *                     value = value * 10 + (c & 0xf)
  *                 elif c == b".":
  *                     decs = 0.1             # <<<<<<<<<<<<<<
@@ -3669,16 +3669,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_decs = 0.1;
 
-          /* "Orange/data/_io.pyx":196
+          /* "Arithmos/data/_io.pyx":196
  *                 elif c == b".":
  *                     decs = 0.1
  *                     state = READ_DECS             # <<<<<<<<<<<<<<
  *                 else:
  *                     endc = strchr(not_in_atom, c)
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_DECS;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_DECS;
 
-          /* "Orange/data/_io.pyx":194
+          /* "Arithmos/data/_io.pyx":194
  *                 if b"0" <= c <= b"9":
  *                     value = value * 10 + (c & 0xf)
  *                 elif c == b".":             # <<<<<<<<<<<<<<
@@ -3688,7 +3688,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L44;
         }
 
-        /* "Orange/data/_io.pyx":198
+        /* "Arithmos/data/_io.pyx":198
  *                     state = READ_DECS
  *                 else:
  *                     endc = strchr(not_in_atom, c)             # <<<<<<<<<<<<<<
@@ -3698,7 +3698,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         /*else*/ {
           __pyx_v_endc = strchr(__pyx_v_not_in_atom, __pyx_v_c);
 
-          /* "Orange/data/_io.pyx":199
+          /* "Arithmos/data/_io.pyx":199
  *                 else:
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:             # <<<<<<<<<<<<<<
@@ -3708,16 +3708,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_3 = ((__pyx_v_endc != NULL) != 0);
           if (likely(__pyx_t_3)) {
 
-            /* "Orange/data/_io.pyx":200
+            /* "Arithmos/data/_io.pyx":200
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:
  *                         state = SET_VALUE             # <<<<<<<<<<<<<<
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"
  */
-            __pyx_v_state = __pyx_e_6Orange_4data_3_io_SET_VALUE;
+            __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_SET_VALUE;
 
-            /* "Orange/data/_io.pyx":199
+            /* "Arithmos/data/_io.pyx":199
  *                 else:
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:             # <<<<<<<<<<<<<<
@@ -3727,7 +3727,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             goto __pyx_L45;
           }
 
-          /* "Orange/data/_io.pyx":202
+          /* "Arithmos/data/_io.pyx":202
  *                         state = SET_VALUE
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"             # <<<<<<<<<<<<<<
@@ -3736,7 +3736,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           /*else*/ {
 
-            /* "Orange/data/_io.pyx":203
+            /* "Arithmos/data/_io.pyx":203
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -3802,7 +3802,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-            /* "Orange/data/_io.pyx":202
+            /* "Arithmos/data/_io.pyx":202
  *                         state = SET_VALUE
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"             # <<<<<<<<<<<<<<
@@ -3820,7 +3820,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L44:;
 
-        /* "Orange/data/_io.pyx":204
+        /* "Arithmos/data/_io.pyx":204
  *                         raise ValueError("{}:{}:{}: invalid value"
  *                             .format(fname, cur_line, col))
  *                 continue             # <<<<<<<<<<<<<<
@@ -3829,7 +3829,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         goto __pyx_L7_continue;
 
-        /* "Orange/data/_io.pyx":191
+        /* "Arithmos/data/_io.pyx":191
  *                     state = READ_VALUE
  * 
  *             if state == READ_VALUE:             # <<<<<<<<<<<<<<
@@ -3838,17 +3838,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":206
+      /* "Arithmos/data/_io.pyx":206
  *                 continue
  * 
  *             if state == READ_DECS:             # <<<<<<<<<<<<<<
  *                 if b"0" <= c <= b"9":
  *                     value = value * decs + (c & 0xf)
  */
-      __pyx_t_3 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_READ_DECS) != 0);
+      __pyx_t_3 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_READ_DECS) != 0);
       if (__pyx_t_3) {
 
-        /* "Orange/data/_io.pyx":207
+        /* "Arithmos/data/_io.pyx":207
  * 
  *             if state == READ_DECS:
  *                 if b"0" <= c <= b"9":             # <<<<<<<<<<<<<<
@@ -3862,7 +3862,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = (__pyx_t_3 != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":208
+          /* "Arithmos/data/_io.pyx":208
  *             if state == READ_DECS:
  *                 if b"0" <= c <= b"9":
  *                     value = value * decs + (c & 0xf)             # <<<<<<<<<<<<<<
@@ -3871,7 +3871,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_value = ((__pyx_v_value * __pyx_v_decs) + (__pyx_v_c & 0xf));
 
-          /* "Orange/data/_io.pyx":209
+          /* "Arithmos/data/_io.pyx":209
  *                 if b"0" <= c <= b"9":
  *                     value = value * decs + (c & 0xf)
  *                     decs /= 10             # <<<<<<<<<<<<<<
@@ -3880,7 +3880,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           __pyx_v_decs = (__pyx_v_decs / 10.0);
 
-          /* "Orange/data/_io.pyx":207
+          /* "Arithmos/data/_io.pyx":207
  * 
  *             if state == READ_DECS:
  *                 if b"0" <= c <= b"9":             # <<<<<<<<<<<<<<
@@ -3890,7 +3890,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L47;
         }
 
-        /* "Orange/data/_io.pyx":211
+        /* "Arithmos/data/_io.pyx":211
  *                     decs /= 10
  *                 else:
  *                     endc = strchr(not_in_atom, c)             # <<<<<<<<<<<<<<
@@ -3900,7 +3900,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         /*else*/ {
           __pyx_v_endc = strchr(__pyx_v_not_in_atom, __pyx_v_c);
 
-          /* "Orange/data/_io.pyx":212
+          /* "Arithmos/data/_io.pyx":212
  *                 else:
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:             # <<<<<<<<<<<<<<
@@ -3910,16 +3910,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_7 = ((__pyx_v_endc != NULL) != 0);
           if (likely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":213
+            /* "Arithmos/data/_io.pyx":213
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:
  *                         state = SET_VALUE             # <<<<<<<<<<<<<<
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"
  */
-            __pyx_v_state = __pyx_e_6Orange_4data_3_io_SET_VALUE;
+            __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_SET_VALUE;
 
-            /* "Orange/data/_io.pyx":212
+            /* "Arithmos/data/_io.pyx":212
  *                 else:
  *                     endc = strchr(not_in_atom, c)
  *                     if endc != NULL:             # <<<<<<<<<<<<<<
@@ -3929,7 +3929,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             goto __pyx_L48;
           }
 
-          /* "Orange/data/_io.pyx":215
+          /* "Arithmos/data/_io.pyx":215
  *                         state = SET_VALUE
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"             # <<<<<<<<<<<<<<
@@ -3938,7 +3938,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           /*else*/ {
 
-            /* "Orange/data/_io.pyx":216
+            /* "Arithmos/data/_io.pyx":216
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -4004,7 +4004,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-            /* "Orange/data/_io.pyx":215
+            /* "Arithmos/data/_io.pyx":215
  *                         state = SET_VALUE
  *                     else:
  *                         raise ValueError("{}:{}:{}: invalid value"             # <<<<<<<<<<<<<<
@@ -4022,7 +4022,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L47:;
 
-        /* "Orange/data/_io.pyx":217
+        /* "Arithmos/data/_io.pyx":217
  *                         raise ValueError("{}:{}:{}: invalid value"
  *                             .format(fname, cur_line, col))
  *                 continue             # <<<<<<<<<<<<<<
@@ -4031,7 +4031,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         goto __pyx_L7_continue;
 
-        /* "Orange/data/_io.pyx":206
+        /* "Arithmos/data/_io.pyx":206
  *                 continue
  * 
  *             if state == READ_DECS:             # <<<<<<<<<<<<<<
@@ -4040,17 +4040,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":219
+      /* "Arithmos/data/_io.pyx":219
  *                 continue
  * 
  *             if state == SET_VALUE:             # <<<<<<<<<<<<<<
  *                 if col_kind == ATTRIBUTE:
  *                     X_data.append(value)
  */
-      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Orange_4data_3_io_SET_VALUE) != 0);
+      __pyx_t_7 = ((__pyx_v_state == __pyx_e_6Arithmos_4data_3_io_SET_VALUE) != 0);
       if (__pyx_t_7) {
 
-        /* "Orange/data/_io.pyx":220
+        /* "Arithmos/data/_io.pyx":220
  * 
  *             if state == SET_VALUE:
  *                 if col_kind == ATTRIBUTE:             # <<<<<<<<<<<<<<
@@ -4058,9 +4058,9 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  *                     X_rows.append(line - 1)
  */
         switch (__pyx_v_col_kind) {
-          case __pyx_e_6Orange_4data_3_io_ATTRIBUTE:
+          case __pyx_e_6Arithmos_4data_3_io_ATTRIBUTE:
 
-          /* "Orange/data/_io.pyx":221
+          /* "Arithmos/data/_io.pyx":221
  *             if state == SET_VALUE:
  *                 if col_kind == ATTRIBUTE:
  *                     X_data.append(value)             # <<<<<<<<<<<<<<
@@ -4072,7 +4072,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_X_data, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 221, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":222
+          /* "Arithmos/data/_io.pyx":222
  *                 if col_kind == ATTRIBUTE:
  *                     X_data.append(value)
  *                     X_rows.append(line - 1)             # <<<<<<<<<<<<<<
@@ -4084,7 +4084,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_X_rows, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 222, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":223
+          /* "Arithmos/data/_io.pyx":223
  *                     X_data.append(value)
  *                     X_rows.append(line - 1)
  *                     X_cols.append(attr_index)             # <<<<<<<<<<<<<<
@@ -4096,7 +4096,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_X_cols, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 223, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":220
+          /* "Arithmos/data/_io.pyx":220
  * 
  *             if state == SET_VALUE:
  *                 if col_kind == ATTRIBUTE:             # <<<<<<<<<<<<<<
@@ -4105,16 +4105,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           break;
 
-          /* "Orange/data/_io.pyx":224
+          /* "Arithmos/data/_io.pyx":224
  *                     X_rows.append(line - 1)
  *                     X_cols.append(attr_index)
  *                 elif col_kind == CLASS:             # <<<<<<<<<<<<<<
  *                     Y_data.append(value)
  *                     Y_rows.append(line - 1)
  */
-          case __pyx_e_6Orange_4data_3_io_CLASS:
+          case __pyx_e_6Arithmos_4data_3_io_CLASS:
 
-          /* "Orange/data/_io.pyx":225
+          /* "Arithmos/data/_io.pyx":225
  *                     X_cols.append(attr_index)
  *                 elif col_kind == CLASS:
  *                     Y_data.append(value)             # <<<<<<<<<<<<<<
@@ -4126,7 +4126,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_Y_data, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 225, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":226
+          /* "Arithmos/data/_io.pyx":226
  *                 elif col_kind == CLASS:
  *                     Y_data.append(value)
  *                     Y_rows.append(line - 1)             # <<<<<<<<<<<<<<
@@ -4138,7 +4138,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_Y_rows, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 226, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":227
+          /* "Arithmos/data/_io.pyx":227
  *                     Y_data.append(value)
  *                     Y_rows.append(line - 1)
  *                     Y_cols.append(attr_index)             # <<<<<<<<<<<<<<
@@ -4150,7 +4150,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_Y_cols, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 227, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":224
+          /* "Arithmos/data/_io.pyx":224
  *                     X_rows.append(line - 1)
  *                     X_cols.append(attr_index)
  *                 elif col_kind == CLASS:             # <<<<<<<<<<<<<<
@@ -4160,7 +4160,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           break;
           default:
 
-          /* "Orange/data/_io.pyx":229
+          /* "Arithmos/data/_io.pyx":229
  *                     Y_cols.append(attr_index)
  *                 else:
  *                     M_data.append(value)             # <<<<<<<<<<<<<<
@@ -4172,7 +4172,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_M_data, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 229, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":230
+          /* "Arithmos/data/_io.pyx":230
  *                 else:
  *                     M_data.append(value)
  *                     M_rows.append(line - 1)             # <<<<<<<<<<<<<<
@@ -4184,7 +4184,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_M_rows, __pyx_t_10); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 230, __pyx_L5_error)
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-          /* "Orange/data/_io.pyx":231
+          /* "Arithmos/data/_io.pyx":231
  *                     M_data.append(value)
  *                     M_rows.append(line - 1)
  *                     M_cols.append(attr_index)             # <<<<<<<<<<<<<<
@@ -4198,7 +4198,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           break;
         }
 
-        /* "Orange/data/_io.pyx":232
+        /* "Arithmos/data/_io.pyx":232
  *                     M_rows.append(line - 1)
  *                     M_cols.append(attr_index)
  *                 in_line += 1             # <<<<<<<<<<<<<<
@@ -4207,16 +4207,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         __pyx_v_in_line = (__pyx_v_in_line + 1);
 
-        /* "Orange/data/_io.pyx":233
+        /* "Arithmos/data/_io.pyx":233
  *                     M_cols.append(attr_index)
  *                 in_line += 1
  *                 state = TO_NEXT             # <<<<<<<<<<<<<<
  * 
  *             if state == TO_NEXT:
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_TO_NEXT;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_TO_NEXT;
 
-        /* "Orange/data/_io.pyx":219
+        /* "Arithmos/data/_io.pyx":219
  *                 continue
  * 
  *             if state == SET_VALUE:             # <<<<<<<<<<<<<<
@@ -4225,7 +4225,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
       }
 
-      /* "Orange/data/_io.pyx":235
+      /* "Arithmos/data/_io.pyx":235
  *                 state = TO_NEXT
  * 
  *             if state == TO_NEXT:             # <<<<<<<<<<<<<<
@@ -4233,9 +4233,9 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  *                     if col_kind != ATTRIBUTE:
  */
       switch (__pyx_v_state) {
-        case __pyx_e_6Orange_4data_3_io_TO_NEXT:
+        case __pyx_e_6Arithmos_4data_3_io_TO_NEXT:
 
-        /* "Orange/data/_io.pyx":236
+        /* "Arithmos/data/_io.pyx":236
  * 
  *             if state == TO_NEXT:
  *                 if c == b"|":             # <<<<<<<<<<<<<<
@@ -4245,17 +4245,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '|') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":237
+          /* "Arithmos/data/_io.pyx":237
  *             if state == TO_NEXT:
  *                 if c == b"|":
  *                     if col_kind != ATTRIBUTE:             # <<<<<<<<<<<<<<
  *                         raise ValueError(
  *                             "{}:{}:{}: classes should follow attributes"
  */
-          __pyx_t_7 = ((__pyx_v_col_kind != __pyx_e_6Orange_4data_3_io_ATTRIBUTE) != 0);
+          __pyx_t_7 = ((__pyx_v_col_kind != __pyx_e_6Arithmos_4data_3_io_ATTRIBUTE) != 0);
           if (unlikely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":240
+            /* "Arithmos/data/_io.pyx":240
  *                         raise ValueError(
  *                             "{}:{}:{}: classes should follow attributes"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -4321,7 +4321,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-            /* "Orange/data/_io.pyx":238
+            /* "Arithmos/data/_io.pyx":238
  *                 if c == b"|":
  *                     if col_kind != ATTRIBUTE:
  *                         raise ValueError(             # <<<<<<<<<<<<<<
@@ -4335,7 +4335,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __PYX_ERR(0, 238, __pyx_L5_error)
 
-            /* "Orange/data/_io.pyx":237
+            /* "Arithmos/data/_io.pyx":237
  *             if state == TO_NEXT:
  *                 if c == b"|":
  *                     if col_kind != ATTRIBUTE:             # <<<<<<<<<<<<<<
@@ -4344,16 +4344,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":241
+          /* "Arithmos/data/_io.pyx":241
  *                             "{}:{}:{}: classes should follow attributes"
  *                             .format(fname, cur_line, col))
  *                     col_kind = CLASS             # <<<<<<<<<<<<<<
  *                     t_names = class_indices
  *                     state = READ_START_ATOM
  */
-          __pyx_v_col_kind = __pyx_e_6Orange_4data_3_io_CLASS;
+          __pyx_v_col_kind = __pyx_e_6Arithmos_4data_3_io_CLASS;
 
-          /* "Orange/data/_io.pyx":242
+          /* "Arithmos/data/_io.pyx":242
  *                             .format(fname, cur_line, col))
  *                     col_kind = CLASS
  *                     t_names = class_indices             # <<<<<<<<<<<<<<
@@ -4363,16 +4363,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_INCREF(__pyx_v_class_indices);
           __Pyx_XDECREF_SET(__pyx_v_t_names, __pyx_v_class_indices);
 
-          /* "Orange/data/_io.pyx":243
+          /* "Arithmos/data/_io.pyx":243
  *                     col_kind = CLASS
  *                     t_names = class_indices
  *                     state = READ_START_ATOM             # <<<<<<<<<<<<<<
  *                 elif c == b";":
  *                     if col_kind == META:
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_START_ATOM;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM;
 
-          /* "Orange/data/_io.pyx":236
+          /* "Arithmos/data/_io.pyx":236
  * 
  *             if state == TO_NEXT:
  *                 if c == b"|":             # <<<<<<<<<<<<<<
@@ -4382,7 +4382,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":244
+        /* "Arithmos/data/_io.pyx":244
  *                     t_names = class_indices
  *                     state = READ_START_ATOM
  *                 elif c == b";":             # <<<<<<<<<<<<<<
@@ -4392,17 +4392,17 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == ';') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":245
+          /* "Arithmos/data/_io.pyx":245
  *                     state = READ_START_ATOM
  *                 elif c == b";":
  *                     if col_kind == META:             # <<<<<<<<<<<<<<
  *                         raise ValueError("{}:{}:{} duplicated semi-colons"
  *                             .format(fname, cur_line, col))
  */
-          __pyx_t_7 = ((__pyx_v_col_kind == __pyx_e_6Orange_4data_3_io_META) != 0);
+          __pyx_t_7 = ((__pyx_v_col_kind == __pyx_e_6Arithmos_4data_3_io_META) != 0);
           if (unlikely(__pyx_t_7)) {
 
-            /* "Orange/data/_io.pyx":247
+            /* "Arithmos/data/_io.pyx":247
  *                     if col_kind == META:
  *                         raise ValueError("{}:{}:{} duplicated semi-colons"
  *                             .format(fname, cur_line, col))             # <<<<<<<<<<<<<<
@@ -4468,7 +4468,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             }
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-            /* "Orange/data/_io.pyx":246
+            /* "Arithmos/data/_io.pyx":246
  *                 elif c == b";":
  *                     if col_kind == META:
  *                         raise ValueError("{}:{}:{} duplicated semi-colons"             # <<<<<<<<<<<<<<
@@ -4482,7 +4482,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
             __PYX_ERR(0, 246, __pyx_L5_error)
 
-            /* "Orange/data/_io.pyx":245
+            /* "Arithmos/data/_io.pyx":245
  *                     state = READ_START_ATOM
  *                 elif c == b";":
  *                     if col_kind == META:             # <<<<<<<<<<<<<<
@@ -4491,16 +4491,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           }
 
-          /* "Orange/data/_io.pyx":248
+          /* "Arithmos/data/_io.pyx":248
  *                         raise ValueError("{}:{}:{} duplicated semi-colons"
  *                             .format(fname, cur_line, col))
  *                     col_kind = META             # <<<<<<<<<<<<<<
  *                     t_names = meta_indices
  *                     state = READ_START_ATOM
  */
-          __pyx_v_col_kind = __pyx_e_6Orange_4data_3_io_META;
+          __pyx_v_col_kind = __pyx_e_6Arithmos_4data_3_io_META;
 
-          /* "Orange/data/_io.pyx":249
+          /* "Arithmos/data/_io.pyx":249
  *                             .format(fname, cur_line, col))
  *                     col_kind = META
  *                     t_names = meta_indices             # <<<<<<<<<<<<<<
@@ -4510,16 +4510,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           __Pyx_INCREF(__pyx_v_meta_indices);
           __Pyx_XDECREF_SET(__pyx_v_t_names, __pyx_v_meta_indices);
 
-          /* "Orange/data/_io.pyx":250
+          /* "Arithmos/data/_io.pyx":250
  *                     col_kind = META
  *                     t_names = meta_indices
  *                     state = READ_START_ATOM             # <<<<<<<<<<<<<<
  *                 elif c == b",":
  *                     state = READ_START_ATOM
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_START_ATOM;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM;
 
-          /* "Orange/data/_io.pyx":244
+          /* "Arithmos/data/_io.pyx":244
  *                     t_names = class_indices
  *                     state = READ_START_ATOM
  *                 elif c == b";":             # <<<<<<<<<<<<<<
@@ -4529,7 +4529,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":251
+        /* "Arithmos/data/_io.pyx":251
  *                     t_names = meta_indices
  *                     state = READ_START_ATOM
  *                 elif c == b",":             # <<<<<<<<<<<<<<
@@ -4539,16 +4539,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == ',') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":252
+          /* "Arithmos/data/_io.pyx":252
  *                     state = READ_START_ATOM
  *                 elif c == b",":
  *                     state = READ_START_ATOM             # <<<<<<<<<<<<<<
  *                 elif c == b"#":
  *                     state = COMMENT
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_START_ATOM;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM;
 
-          /* "Orange/data/_io.pyx":251
+          /* "Arithmos/data/_io.pyx":251
  *                     t_names = meta_indices
  *                     state = READ_START_ATOM
  *                 elif c == b",":             # <<<<<<<<<<<<<<
@@ -4558,7 +4558,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":253
+        /* "Arithmos/data/_io.pyx":253
  *                 elif c == b",":
  *                     state = READ_START_ATOM
  *                 elif c == b"#":             # <<<<<<<<<<<<<<
@@ -4568,16 +4568,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '#') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":254
+          /* "Arithmos/data/_io.pyx":254
  *                     state = READ_START_ATOM
  *                 elif c == b"#":
  *                     state = COMMENT             # <<<<<<<<<<<<<<
  *                 elif c == b"\\":
  *                     state = ESCAPE
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_COMMENT;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_COMMENT;
 
-          /* "Orange/data/_io.pyx":253
+          /* "Arithmos/data/_io.pyx":253
  *                 elif c == b",":
  *                     state = READ_START_ATOM
  *                 elif c == b"#":             # <<<<<<<<<<<<<<
@@ -4587,7 +4587,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":255
+        /* "Arithmos/data/_io.pyx":255
  *                 elif c == b"#":
  *                     state = COMMENT
  *                 elif c == b"\\":             # <<<<<<<<<<<<<<
@@ -4597,16 +4597,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '\\') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":256
+          /* "Arithmos/data/_io.pyx":256
  *                     state = COMMENT
  *                 elif c == b"\\":
  *                     state = ESCAPE             # <<<<<<<<<<<<<<
  *                 elif c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_ESCAPE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_ESCAPE;
 
-          /* "Orange/data/_io.pyx":255
+          /* "Arithmos/data/_io.pyx":255
  *                 elif c == b"#":
  *                     state = COMMENT
  *                 elif c == b"\\":             # <<<<<<<<<<<<<<
@@ -4616,7 +4616,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":257
+        /* "Arithmos/data/_io.pyx":257
  *                 elif c == b"\\":
  *                     state = ESCAPE
  *                 elif c == b"\n" or f_eof:             # <<<<<<<<<<<<<<
@@ -4634,16 +4634,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L53_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":258
+          /* "Arithmos/data/_io.pyx":258
  *                     state = ESCAPE
  *                 elif c == b"\n" or f_eof:
  *                     state = BEGIN_LINE             # <<<<<<<<<<<<<<
  *                 elif c == b"\r":
  *                     state = CARRIAGE_RETURNED
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_BEGIN_LINE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE;
 
-          /* "Orange/data/_io.pyx":257
+          /* "Arithmos/data/_io.pyx":257
  *                 elif c == b"\\":
  *                     state = ESCAPE
  *                 elif c == b"\n" or f_eof:             # <<<<<<<<<<<<<<
@@ -4653,7 +4653,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":259
+        /* "Arithmos/data/_io.pyx":259
  *                 elif c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":             # <<<<<<<<<<<<<<
@@ -4663,16 +4663,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '\r') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":260
+          /* "Arithmos/data/_io.pyx":260
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":
  *                     state = CARRIAGE_RETURNED             # <<<<<<<<<<<<<<
  *                 else:
  *                     state = READ_START_ATOM
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_CARRIAGE_RETURNED;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_CARRIAGE_RETURNED;
 
-          /* "Orange/data/_io.pyx":259
+          /* "Arithmos/data/_io.pyx":259
  *                 elif c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":             # <<<<<<<<<<<<<<
@@ -4682,7 +4682,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L50;
         }
 
-        /* "Orange/data/_io.pyx":262
+        /* "Arithmos/data/_io.pyx":262
  *                     state = CARRIAGE_RETURNED
  *                 else:
  *                     state = READ_START_ATOM             # <<<<<<<<<<<<<<
@@ -4690,11 +4690,11 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  * 
  */
         /*else*/ {
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_READ_START_ATOM;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_READ_START_ATOM;
         }
         __pyx_L50:;
 
-        /* "Orange/data/_io.pyx":263
+        /* "Arithmos/data/_io.pyx":263
  *                 else:
  *                     state = READ_START_ATOM
  *                 continue             # <<<<<<<<<<<<<<
@@ -4703,7 +4703,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         goto __pyx_L7_continue;
 
-        /* "Orange/data/_io.pyx":235
+        /* "Arithmos/data/_io.pyx":235
  *                 state = TO_NEXT
  * 
  *             if state == TO_NEXT:             # <<<<<<<<<<<<<<
@@ -4712,16 +4712,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         break;
 
-        /* "Orange/data/_io.pyx":265
+        /* "Arithmos/data/_io.pyx":265
  *                 continue
  * 
  *             elif state == COMMENT:             # <<<<<<<<<<<<<<
  *                 if c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  */
-        case __pyx_e_6Orange_4data_3_io_COMMENT:
+        case __pyx_e_6Arithmos_4data_3_io_COMMENT:
 
-        /* "Orange/data/_io.pyx":266
+        /* "Arithmos/data/_io.pyx":266
  * 
  *             elif state == COMMENT:
  *                 if c == b"\n" or f_eof:             # <<<<<<<<<<<<<<
@@ -4739,16 +4739,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L56_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":267
+          /* "Arithmos/data/_io.pyx":267
  *             elif state == COMMENT:
  *                 if c == b"\n" or f_eof:
  *                     state = BEGIN_LINE             # <<<<<<<<<<<<<<
  *                 elif c == b"\r":
  *                     state = CARRIAGE_RETURNED
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_BEGIN_LINE;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE;
 
-          /* "Orange/data/_io.pyx":266
+          /* "Arithmos/data/_io.pyx":266
  * 
  *             elif state == COMMENT:
  *                 if c == b"\n" or f_eof:             # <<<<<<<<<<<<<<
@@ -4758,7 +4758,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
           goto __pyx_L55;
         }
 
-        /* "Orange/data/_io.pyx":268
+        /* "Arithmos/data/_io.pyx":268
  *                 if c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":             # <<<<<<<<<<<<<<
@@ -4768,16 +4768,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_t_7 = ((__pyx_v_c == '\r') != 0);
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":269
+          /* "Arithmos/data/_io.pyx":269
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":
  *                     state = CARRIAGE_RETURNED             # <<<<<<<<<<<<<<
  * 
  *             elif state == CARRIAGE_RETURNED:
  */
-          __pyx_v_state = __pyx_e_6Orange_4data_3_io_CARRIAGE_RETURNED;
+          __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_CARRIAGE_RETURNED;
 
-          /* "Orange/data/_io.pyx":268
+          /* "Arithmos/data/_io.pyx":268
  *                 if c == b"\n" or f_eof:
  *                     state = BEGIN_LINE
  *                 elif c == b"\r":             # <<<<<<<<<<<<<<
@@ -4787,7 +4787,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         }
         __pyx_L55:;
 
-        /* "Orange/data/_io.pyx":265
+        /* "Arithmos/data/_io.pyx":265
  *                 continue
  * 
  *             elif state == COMMENT:             # <<<<<<<<<<<<<<
@@ -4796,16 +4796,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         break;
 
-        /* "Orange/data/_io.pyx":271
+        /* "Arithmos/data/_io.pyx":271
  *                     state = CARRIAGE_RETURNED
  * 
  *             elif state == CARRIAGE_RETURNED:             # <<<<<<<<<<<<<<
  *                 if c != b"\n" and not f_eof:
  *                     ungetc(c, f)
  */
-        case __pyx_e_6Orange_4data_3_io_CARRIAGE_RETURNED:
+        case __pyx_e_6Arithmos_4data_3_io_CARRIAGE_RETURNED:
 
-        /* "Orange/data/_io.pyx":272
+        /* "Arithmos/data/_io.pyx":272
  * 
  *             elif state == CARRIAGE_RETURNED:
  *                 if c != b"\n" and not f_eof:             # <<<<<<<<<<<<<<
@@ -4823,7 +4823,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
         __pyx_L59_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "Orange/data/_io.pyx":273
+          /* "Arithmos/data/_io.pyx":273
  *             elif state == CARRIAGE_RETURNED:
  *                 if c != b"\n" and not f_eof:
  *                     ungetc(c, f)             # <<<<<<<<<<<<<<
@@ -4832,7 +4832,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
           (void)(ungetc(__pyx_v_c, __pyx_v_f));
 
-          /* "Orange/data/_io.pyx":272
+          /* "Arithmos/data/_io.pyx":272
  * 
  *             elif state == CARRIAGE_RETURNED:
  *                 if c != b"\n" and not f_eof:             # <<<<<<<<<<<<<<
@@ -4841,16 +4841,16 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
         }
 
-        /* "Orange/data/_io.pyx":274
+        /* "Arithmos/data/_io.pyx":274
  *                 if c != b"\n" and not f_eof:
  *                     ungetc(c, f)
  *                 state = BEGIN_LINE             # <<<<<<<<<<<<<<
  *     finally:
  *         fclose(f)
  */
-        __pyx_v_state = __pyx_e_6Orange_4data_3_io_BEGIN_LINE;
+        __pyx_v_state = __pyx_e_6Arithmos_4data_3_io_BEGIN_LINE;
 
-        /* "Orange/data/_io.pyx":271
+        /* "Arithmos/data/_io.pyx":271
  *                     state = CARRIAGE_RETURNED
  * 
  *             elif state == CARRIAGE_RETURNED:             # <<<<<<<<<<<<<<
@@ -4864,7 +4864,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     }
   }
 
-  /* "Orange/data/_io.pyx":276
+  /* "Arithmos/data/_io.pyx":276
  *                 state = BEGIN_LINE
  *     finally:
  *         fclose(f)             # <<<<<<<<<<<<<<
@@ -4916,7 +4916,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     __pyx_L6:;
   }
 
-  /* "Orange/data/_io.pyx":278
+  /* "Arithmos/data/_io.pyx":278
  *         fclose(f)
  * 
  *     if in_line == 0:             # <<<<<<<<<<<<<<
@@ -4926,7 +4926,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_t_7 = ((__pyx_v_in_line == 0) != 0);
   if (__pyx_t_7) {
 
-    /* "Orange/data/_io.pyx":279
+    /* "Arithmos/data/_io.pyx":279
  * 
  *     if in_line == 0:
  *         line -= 1             # <<<<<<<<<<<<<<
@@ -4935,7 +4935,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
     __pyx_v_line = (__pyx_v_line - 1);
 
-    /* "Orange/data/_io.pyx":278
+    /* "Arithmos/data/_io.pyx":278
  *         fclose(f)
  * 
  *     if in_line == 0:             # <<<<<<<<<<<<<<
@@ -4944,7 +4944,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
   }
 
-  /* "Orange/data/_io.pyx":281
+  /* "Arithmos/data/_io.pyx":281
  *         line -= 1
  * 
  *     res = []             # <<<<<<<<<<<<<<
@@ -4956,7 +4956,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_v_res = ((PyObject*)__pyx_t_10);
   __pyx_t_10 = 0;
 
-  /* "Orange/data/_io.pyx":283
+  /* "Arithmos/data/_io.pyx":283
  *     res = []
  *     for t_data, t_rows, t_cols, ll in (
  *              (X_data, X_rows, X_cols, attr_indices),             # <<<<<<<<<<<<<<
@@ -4978,7 +4978,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __Pyx_GIVEREF(__pyx_v_attr_indices);
   PyTuple_SET_ITEM(__pyx_t_10, 3, __pyx_v_attr_indices);
 
-  /* "Orange/data/_io.pyx":284
+  /* "Arithmos/data/_io.pyx":284
  *     for t_data, t_rows, t_cols, ll in (
  *              (X_data, X_rows, X_cols, attr_indices),
  *              (Y_data, Y_rows, Y_cols, class_indices),             # <<<<<<<<<<<<<<
@@ -5000,7 +5000,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __Pyx_GIVEREF(__pyx_v_class_indices);
   PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_v_class_indices);
 
-  /* "Orange/data/_io.pyx":285
+  /* "Arithmos/data/_io.pyx":285
  *              (X_data, X_rows, X_cols, attr_indices),
  *              (Y_data, Y_rows, Y_cols, class_indices),
  *              (M_data, M_rows, M_cols, meta_indices)):             # <<<<<<<<<<<<<<
@@ -5022,7 +5022,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __Pyx_GIVEREF(__pyx_v_meta_indices);
   PyTuple_SET_ITEM(__pyx_t_8, 3, __pyx_v_meta_indices);
 
-  /* "Orange/data/_io.pyx":283
+  /* "Arithmos/data/_io.pyx":283
  *     res = []
  *     for t_data, t_rows, t_cols, ll in (
  *              (X_data, X_rows, X_cols, attr_indices),             # <<<<<<<<<<<<<<
@@ -5041,7 +5041,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_t_1 = 0;
   __pyx_t_8 = 0;
 
-  /* "Orange/data/_io.pyx":282
+  /* "Arithmos/data/_io.pyx":282
  * 
  *     res = []
  *     for t_data, t_rows, t_cols, ll in (             # <<<<<<<<<<<<<<
@@ -5099,7 +5099,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     __Pyx_XDECREF_SET(__pyx_v_ll, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "Orange/data/_io.pyx":286
+    /* "Arithmos/data/_io.pyx":286
  *              (Y_data, Y_rows, Y_cols, class_indices),
  *              (M_data, M_rows, M_cols, meta_indices)):
  *         if len(t_data):             # <<<<<<<<<<<<<<
@@ -5110,7 +5110,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     __pyx_t_7 = (__pyx_t_21 != 0);
     if (__pyx_t_7) {
 
-      /* "Orange/data/_io.pyx":287
+      /* "Arithmos/data/_io.pyx":287
  *              (M_data, M_rows, M_cols, meta_indices)):
  *         if len(t_data):
  *             mat = sp.coo_matrix((t_data, (t_rows, t_cols)), (line, len(ll))).tocsr()             # <<<<<<<<<<<<<<
@@ -5224,7 +5224,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
       __Pyx_XDECREF_SET(__pyx_v_mat, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "Orange/data/_io.pyx":288
+      /* "Arithmos/data/_io.pyx":288
  *         if len(t_data):
  *             mat = sp.coo_matrix((t_data, (t_rows, t_cols)), (line, len(ll))).tocsr()
  *             mat.sort_indices()             # <<<<<<<<<<<<<<
@@ -5253,7 +5253,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "Orange/data/_io.pyx":286
+      /* "Arithmos/data/_io.pyx":286
  *              (Y_data, Y_rows, Y_cols, class_indices),
  *              (M_data, M_rows, M_cols, meta_indices)):
  *         if len(t_data):             # <<<<<<<<<<<<<<
@@ -5263,7 +5263,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
       goto __pyx_L66;
     }
 
-    /* "Orange/data/_io.pyx":290
+    /* "Arithmos/data/_io.pyx":290
  *             mat.sort_indices()
  *         else:
  *             mat = None             # <<<<<<<<<<<<<<
@@ -5276,7 +5276,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
     }
     __pyx_L66:;
 
-    /* "Orange/data/_io.pyx":291
+    /* "Arithmos/data/_io.pyx":291
  *         else:
  *             mat = None
  *         res.append(mat)             # <<<<<<<<<<<<<<
@@ -5285,7 +5285,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
  */
     __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_res, __pyx_v_mat); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 291, __pyx_L1_error)
 
-    /* "Orange/data/_io.pyx":282
+    /* "Arithmos/data/_io.pyx":282
  * 
  *     res = []
  *     for t_data, t_rows, t_cols, ll in (             # <<<<<<<<<<<<<<
@@ -5295,7 +5295,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/data/_io.pyx":293
+  /* "Arithmos/data/_io.pyx":293
  *         res.append(mat)
  * 
  *     return tuple(res) + (attr_indices, class_indices, meta_indices)             # <<<<<<<<<<<<<<
@@ -5324,7 +5324,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __pyx_t_10 = 0;
   goto __pyx_L0;
 
-  /* "Orange/data/_io.pyx":16
+  /* "Arithmos/data/_io.pyx":16
  * 
  * 
  * def sparse_read_float(fname):             # <<<<<<<<<<<<<<
@@ -5342,7 +5342,7 @@ static PyObject *__pyx_pf_6Orange_4data_3_io_sparse_read_float(CYTHON_UNUSED PyO
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_22);
   __Pyx_XDECREF(__pyx_t_23);
-  __Pyx_AddTraceback("Orange.data._io.sparse_read_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._io.sparse_read_float", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_X_data);
@@ -5412,8 +5412,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_M_cols, __pyx_k_M_cols, sizeof(__pyx_k_M_cols), 0, 0, 1, 1},
   {&__pyx_n_s_M_data, __pyx_k_M_data, sizeof(__pyx_k_M_data), 0, 0, 1, 1},
   {&__pyx_n_s_M_rows, __pyx_k_M_rows, sizeof(__pyx_k_M_rows), 0, 0, 1, 1},
-  {&__pyx_n_s_Orange_data__io, __pyx_k_Orange_data__io, sizeof(__pyx_k_Orange_data__io), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_data__io_pyx, __pyx_k_Orange_data__io_pyx, sizeof(__pyx_k_Orange_data__io_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_data__io, __pyx_k_Arithmos_data__io, sizeof(__pyx_k_Arithmos_data__io), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_data__io_pyx, __pyx_k_Arithmos_data__io_pyx, sizeof(__pyx_k_Arithmos_data__io_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_X_cols, __pyx_k_X_cols, sizeof(__pyx_k_X_cols), 0, 0, 1, 1},
   {&__pyx_n_s_X_data, __pyx_k_X_data, sizeof(__pyx_k_X_data), 0, 0, 1, 1},
@@ -5489,7 +5489,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/data/_io.pyx":16
+  /* "Arithmos/data/_io.pyx":16
  * 
  * 
  * def sparse_read_float(fname):             # <<<<<<<<<<<<<<
@@ -5499,7 +5499,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__2 = PyTuple_Pack(39, __pyx_n_s_fname, __pyx_n_s_state, __pyx_n_s_c, __pyx_n_s_ci, __pyx_n_s_not_in_atom, __pyx_n_s_col, __pyx_n_s_line, __pyx_n_s_cur_line, __pyx_n_s_in_line, __pyx_n_s_atom, __pyx_n_s_atomp, __pyx_n_s_atome, __pyx_n_s_endc, __pyx_n_s_f_eof, __pyx_n_s_attr_index, __pyx_n_s_value, __pyx_n_s_decs, __pyx_n_s_col_kind, __pyx_n_s_X_data, __pyx_n_s_X_rows, __pyx_n_s_X_cols, __pyx_n_s_Y_data, __pyx_n_s_Y_rows, __pyx_n_s_Y_cols, __pyx_n_s_M_data, __pyx_n_s_M_rows, __pyx_n_s_M_cols, __pyx_n_s_attr_indices, __pyx_n_s_class_indices, __pyx_n_s_meta_indices, __pyx_n_s_f, __pyx_n_s_t_names, __pyx_n_s_b_atom, __pyx_n_s_res, __pyx_n_s_t_data, __pyx_n_s_t_rows, __pyx_n_s_t_cols, __pyx_n_s_ll, __pyx_n_s_mat); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(1, 0, 39, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_data__io_pyx, __pyx_n_s_sparse_read_float, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(1, 0, 39, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_data__io_pyx, __pyx_n_s_sparse_read_float, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5725,14 +5725,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__data___io) {
+  if (__pyx_module_is_main_Arithmos__data___io) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.data._io")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.data._io", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.data._io")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.data._io", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5753,7 +5753,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/data/_io.pyx":1
+  /* "Arithmos/data/_io.pyx":1
  * import scipy.sparse as sp             # <<<<<<<<<<<<<<
  * 
  * from libc.stdio cimport fopen, fclose, fgetc, ungetc, EOF, FILE
@@ -5769,19 +5769,19 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sp, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "Orange/data/_io.pyx":16
+  /* "Arithmos/data/_io.pyx":16
  * 
  * 
  * def sparse_read_float(fname):             # <<<<<<<<<<<<<<
  *     cdef:
  *         State state
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6Orange_4data_3_io_1sparse_read_float, NULL, __pyx_n_s_Orange_data__io); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_4data_3_io_1sparse_read_float, NULL, __pyx_n_s_Arithmos_data__io); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_sparse_read_float, __pyx_t_2) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "Orange/data/_io.pyx":1
+  /* "Arithmos/data/_io.pyx":1
  * import scipy.sparse as sp             # <<<<<<<<<<<<<<
  * 
  * from libc.stdio cimport fopen, fclose, fgetc, ungetc, EOF, FILE
@@ -5799,11 +5799,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.data._io", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.data._io", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.data._io");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.data._io");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

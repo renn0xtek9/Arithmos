@@ -4,9 +4,9 @@
 import unittest
 import numpy as np
 
-from Orange.data import Table, ContinuousVariable, Domain
-from Orange.regression import LinearRegressionLearner, PolynomialLearner
-from Orange.evaluation import TestOnTrainingData, RMSE
+from Arithmos.data import Table, ContinuousVariable, Domain
+from Arithmos.regression import LinearRegressionLearner, PolynomialLearner
+from Arithmos.evaluation import TestOnTrainingData, RMSE
 
 class TestPolynomialLearner(unittest.TestCase):
     def test_PolynomialLearner(self):

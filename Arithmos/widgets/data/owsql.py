@@ -2,16 +2,16 @@ from AnyQt.QtWidgets import QComboBox, QTextEdit, QMessageBox, QApplication
 from AnyQt.QtGui import QCursor
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table
-from Orange.data.sql.backend import Backend
-from Orange.data.sql.backend.base import BackendError
-from Orange.data.sql.table import SqlTable, LARGE_TABLE, AUTO_DL_LIMIT
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.itemmodels import PyListModel
-from Orange.widgets.utils.owbasesql import OWBaseSql
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Output, Msg
+from Arithmos.data import Table
+from Arithmos.data.sql.backend import Backend
+from Arithmos.data.sql.backend.base import BackendError
+from Arithmos.data.sql.table import SqlTable, LARGE_TABLE, AUTO_DL_LIMIT
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.itemmodels import PyListModel
+from Arithmos.widgets.utils.owbasesql import OWBaseSql
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Output, Msg
 
 MAX_DL_LIMIT = 1000000
 
@@ -38,7 +38,7 @@ class BackendModel(PyListModel):
 
 class OWSql(OWBaseSql):
     name = "SQL Table"
-    id = "orange.widgets.data.sql"
+    id = "arithmos.widgets.data.sql"
     description = "Load dataset from SQL."
     icon = "icons/SQLTable.svg"
     priority = 30
@@ -329,7 +329,7 @@ class OWSql(OWBaseSql):
     @classmethod
     def migrate_settings(cls, settings, version):
         if version < 2:
-            # Until Orange version 3.4.4 username and password had been stored
+            # Until Arithmos version 3.4.4 username and password had been stored
             # in Settings.
             cm = cls._credential_manager(settings["host"], settings["port"])
             cm.username = settings["username"]

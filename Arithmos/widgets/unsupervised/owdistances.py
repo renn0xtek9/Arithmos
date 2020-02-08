@@ -2,15 +2,15 @@ from AnyQt.QtCore import Qt
 from scipy.sparse import issparse
 import bottleneck as bn
 
-import Orange.data
-import Orange.misc
-from Orange import distance
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
+import Arithmos.data
+import Arithmos.misc
+from Arithmos import distance
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
 
 
 METRICS = [
@@ -34,8 +34,8 @@ class InterruptException(Exception):
 
 class DistanceRunner:
     @staticmethod
-    def run(data: Orange.data.Table, metric: distance, normalized_dist: bool,
-            axis: int, state: TaskState) -> Orange.misc.DistMatrix:
+    def run(data: Arithmos.data.Table, metric: distance, normalized_dist: bool,
+            axis: int, state: TaskState) -> Arithmos.misc.DistMatrix:
         if data is None:
             return None
 
@@ -58,10 +58,10 @@ class OWDistances(OWWidget, ConcurrentWidgetMixin):
     keywords = []
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        distances = Output("Distances", Orange.misc.DistMatrix, dynamic=False)
+        distances = Output("Distances", Arithmos.misc.DistMatrix, dynamic=False)
 
     settings_version = 3
 
@@ -208,8 +208,8 @@ class OWDistances(OWWidget, ConcurrentWidgetMixin):
     def on_partial_result(self, _):
         pass
 
-    def on_done(self, result: Orange.misc.DistMatrix):
-        assert isinstance(result, Orange.misc.DistMatrix) or result is None
+    def on_done(self, result: Arithmos.misc.DistMatrix):
+        assert isinstance(result, Arithmos.misc.DistMatrix) or result is None
         self.Outputs.distances.send(result)
 
     def on_exception(self, ex):
@@ -257,4 +257,4 @@ class OWDistances(OWWidget, ConcurrentWidgetMixin):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWDistances).run(Orange.data.Table("iris"))
+    WidgetPreview(OWDistances).run(Arithmos.data.Table("iris"))

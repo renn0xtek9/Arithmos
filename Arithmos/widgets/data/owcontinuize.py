@@ -2,18 +2,18 @@ from functools import reduce
 
 from AnyQt.QtCore import Qt
 
-import Orange.data
-from Orange.util import Reprable
-from Orange.statistics import distribution
-from Orange.preprocess import Continuize, Normalize
-from Orange.preprocess.transformation import \
+import Arithmos.data
+from Arithmos.util import Reprable
+from Arithmos.statistics import distribution
+from Arithmos.preprocess import Continuize, Normalize
+from Arithmos.preprocess.transformation import \
     Identity, Indicator, Indicator1, Normalizer
-from Orange.data.table import Table
-from Orange.widgets import gui, widget
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.data.table import Table
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 class OWContinuize(widget.OWWidget):
@@ -25,10 +25,10 @@ class OWContinuize(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     want_main_area = False
     buttons_area_orientation = Qt.Vertical
@@ -187,7 +187,7 @@ def make_indicator_var(source, value_ind, weight=None, zero_based=True):
         indicator = Indicator1(source, value=value_ind)
     else:
         indicator = WeightedIndicator1(source, value=value_ind, weight=weight)
-    return Orange.data.ContinuousVariable(
+    return Arithmos.data.ContinuousVariable(
         "{}={}".format(source.name, source.values[value_ind]),
         compute_value=indicator
     )
@@ -211,7 +211,7 @@ def continuize_domain(data_or_domain,
                       class_treatment=Continuize.Leave,
                       zero_based=True):
 
-    if isinstance(data_or_domain, Orange.data.Domain):
+    if isinstance(data_or_domain, Arithmos.data.Domain):
         data, domain = None, data_or_domain
     else:
         data, domain = data_or_domain, data_or_domain.domain
@@ -257,7 +257,7 @@ def continuize_domain(data_or_domain,
 
     newattrs = reduce(list.__iadd__, newattrs, [])
     newclass = reduce(list.__iadd__, newclass, [])
-    return Orange.data.Domain(newattrs, newclass, domain.metas)
+    return Arithmos.data.Domain(newattrs, newclass, domain.metas)
 
 
 def continuize_var(var,
@@ -316,19 +316,19 @@ def _ensure_dist(var, data_or_dist):
         if not var.is_continuous:
             raise TypeError
         return data_or_dist
-    elif isinstance(data_or_dist, Orange.data.Storage):
+    elif isinstance(data_or_dist, Arithmos.data.Storage):
         return distribution.get_distribution(data_or_dist, var)
     else:
         raise ValueError("Need a distribution or data.")
 
 
 def normalized_var(var, translate, scale):
-    return Orange.data.ContinuousVariable(var.name,
+    return Arithmos.data.ContinuousVariable(var.name,
                                           compute_value=Normalizer(var, translate, scale))
 
 
 def ordinal_to_continuous(var):
-    return Orange.data.ContinuousVariable(var.name,
+    return Arithmos.data.ContinuousVariable(var.name,
                                           compute_value=Identity(var))
 
 
@@ -378,7 +378,7 @@ class DomainContinuizer(Reprable):
 
     def __call__(self, data):
         treat = self.multinomial_treatment
-        if isinstance(data, Orange.data.Domain):
+        if isinstance(data, Arithmos.data.Domain):
             domain, data = data, None
         else:
             domain = data.domain

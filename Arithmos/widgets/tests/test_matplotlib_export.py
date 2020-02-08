@@ -2,11 +2,11 @@ import pyqtgraph as pg
 
 from AnyQt.QtCore import QRectF
 
-import Orange
+import Arithmos
 
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.matplotlib_export import scatterplot_code
-from Orange.widgets.visualize.owscatterplot import OWScatterPlot
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.matplotlib_export import scatterplot_code
+from Arithmos.widgets.visualize.owscatterplot import OWScatterPlot
 
 
 def add_intro(a):
@@ -19,7 +19,7 @@ def add_intro(a):
 class TestScatterPlot(WidgetTest):
 
     def test_owscatterplot_ignore_empty(self):
-        iris = Orange.data.Table("iris")
+        iris = Arithmos.data.Table("iris")
         self.widget = self.create_widget(OWScatterPlot)
         self.send_signal(OWScatterPlot.Inputs.data, iris[::10])
         code = scatterplot_code(self.widget.graph.scatterplot_item)

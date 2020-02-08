@@ -5,23 +5,23 @@ Getting Started
 ###############
 
 
-Orange Widgets are components in Orange Canvas, a visual programming
-environment of Orange. They represent some self contained functionalities and
+Arithmos Widgets are components in Arithmos Canvas, a visual programming
+environment of Arithmos. They represent some self contained functionalities and
 provide a graphical user interface (GUI). Widgets communicate with each other and
 pass objects through communication channels to interact with other
 widgets.
 
 On this page, we will start with some simple essentials, and then
 show you how to build a simple widget that will be ready to run within
-Orange Canvas.
+Arithmos Canvas.
 
 
 Prerequisites
 *************
 
-Each Orange widget belongs to a category and has an associated priority
-within that category. When opening Orange Canvas, a visual
-programming environment that comes with Orange, widgets are listed in
+Each Arithmos widget belongs to a category and has an associated priority
+within that category. When opening Arithmos Canvas, a visual
+programming environment that comes with Arithmos, widgets are listed in
 a toolbox on the left:
 
 .. image:: images/widgettoolbox.png
@@ -30,9 +30,9 @@ Each widget has a name description and a set of input/outputs
 (referred to as the widget's meta description).
 
 
-This meta data is discovered at Orange Canvas application startup
+This meta data is discovered at Arithmos Canvas application startup
 leveraging setuptools/distribute and its `entry points`_ protocol.
-Orange Canvas looks for widgets using an ``orange.widgets`` entry point.
+Arithmos Canvas looks for widgets using an ``arithmos.widgets`` entry point.
 
 .. _`entry points`: https://pythonhosted.org/setuptools/setuptools.html#dynamic-discovery-of-services-and-plugins
 
@@ -40,8 +40,8 @@ Orange Canvas looks for widgets using an ``orange.widgets`` entry point.
 Defining a widget
 *****************
 
-:class:`~Orange.widgets.widget.OWWidget` is the base class of a widget
-in the Orange Canvas workflow.
+:class:`~Arithmos.widgets.widget.OWWidget` is the base class of a widget
+in the Arithmos Canvas workflow.
 
 Every widget in the canvas framework needs to define its meta data.
 This includes the widget's name and text descriptions and more
@@ -53,9 +53,9 @@ a single integer specified by the user.
 
 .. code-block:: python
 
-    from Orange.widgets.widget import OWWidget, Output
-    from Orange.widgets.settings import Setting
-    from Orange.widgets import gui
+    from Arithmos.widgets.widget import OWWidget, Output
+    from Arithmos.widgets.settings import Setting
+    from Arithmos.widgets import gui
 
     class IntNumber(OWWidget):
         # Widget's name as displayed in the canvas
@@ -72,18 +72,18 @@ a single integer specified by the user.
             number = Output("Number", int)
 
 
-By design principle, Orange widgets in an interface are most
+By design principle, Arithmos widgets in an interface are most
 often split to control and main area. Control area appears on the left
 and should include any controls for settings or options that your widget
 will use. Main area would most often include a graph, table or some
 drawing that will be based on the inputs to the widget and current
 options/setting in the control area.
-:class:`~Orange.widgets.widget.OWWidget` makes these two areas available
+:class:`~Arithmos.widgets.widget.OWWidget` makes these two areas available
 through its attributes :obj:`self.controlArea` and :obj:`self.mainArea`.
 Notice that while it would be nice for all widgets to have this common
 visual look, you can use these areas in any way you want, even
 disregarding one and composing your widget completely unlike the
-others in Orange.
+others in Arithmos.
 
 We specify the default layout with class attribute flags.
 Here we will only be using a single column (controlArea) GUI.
@@ -125,15 +125,15 @@ widget functionality:
            self.Outputs.number.send(self.number)
 
 .. seealso::
-   :func:`Orange.widgets.gui.lineEdit`,
+   :func:`Arithmos.widgets.gui.lineEdit`,
 
 By itself this widget is useless because no widget accepts its output.
 So let us define a widget that displays a number.
 
 .. code-block:: python
 
-   from Orange.widgets.widget import OWWidget, Input
-   from Orange.widgets import gui
+   from Arithmos.widgets.widget import OWWidget, Input
+   from Arithmos.widgets import gui
 
    class Print(OWWidget):
        name = "Print"
@@ -176,7 +176,7 @@ One more:
 
 .. code-block:: python
 
-   from Orange.widgets.widget import OWWidget, Input, Output
+   from Arithmos.widgets.widget import OWWidget, Input, Output
 
    class Adder(OWWidget):
        name = "Add two integers"
@@ -215,4 +215,4 @@ One more:
                # Clear the channel by sending `None`
                self.Outputs.sum.send(None)
 
-.. seealso:: :func:`~Orange.widgets.widget.OWWidget.handleNewSignals`
+.. seealso:: :func:`~Arithmos.widgets.widget.OWWidget.handleNewSignals`

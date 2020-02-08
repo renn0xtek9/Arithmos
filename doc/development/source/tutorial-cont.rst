@@ -2,13 +2,13 @@
 Getting Started (Continued)
 ###########################
 
-After learning what an Orange Widget is and how to define them on
+After learning what an Arithmos Widget is and how to define them on
 a toy example, we will build an semi-useful widgets that can
-work together with the existing Orange Widgets.
+work together with the existing Arithmos Widgets.
 
 We will start with a very simple one, that will receive a dataset
 on the input and will output a dataset with 10% of the data instances.
-We will call this widget `OWDataSamplerA` (OW for Orange Widget,
+We will call this widget `OWDataSamplerA` (OW for Arithmos Widget,
 DataSampler since this is what widget will be doing, and A since we
 prototype a number of this widgets in our tutorial).
 
@@ -16,24 +16,24 @@ prototype a number of this widgets in our tutorial).
 A 'Demo' package
 ----------------
 
-First in order to include our new widgets in the Orange Canvas's
+First in order to include our new widgets in the Arithmos Canvas's
 toolbox we will create a dummy `python project
 <https://python-packaging-user-guide.readthedocs.org/>`_
-named *orange-demo*
+named *arithmos-demo*
 
 The layout should be::
 
-   orange-demo/
+   arithmos-demo/
          setup.py
-         orangedemo/
+         arithmosdemo/
                      __init__.py
                      OWDataSamplerA.py
 
-and the :download:`orange-demo/setup.py` should contain
+and the :download:`arithmos-demo/setup.py` should contain
 
-.. literalinclude:: orange-demo/setup.py
+.. literalinclude:: arithmos-demo/setup.py
 
-Note that we declare our *orangedemo* package as containing widgets
+Note that we declare our *arithmosdemo* package as containing widgets
 from an ad hoc defined category *Demo*.
 
 .. seealso::
@@ -45,12 +45,12 @@ from an ad hoc defined category *Demo*.
 Following the previous examples, our module defining the OWDataSamplerA
 widget starts out as:
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerA.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerA.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
 The widget defines an input channel "Data" and an output channel called
-"Sampled Data". Both will carry tokens of the type :class:`Orange.data.Table`.
+"Sampled Data". Both will carry tokens of the type :class:`Arithmos.data.Table`.
 In the code, we will refer to the signals as `Inputs.data` and `Outputs.sample`.
 
 Channels can carry tokens of arbitrary types. However, the purpose of widgets
@@ -75,7 +75,7 @@ but calling the method `set_<the name of the input>` seems like a good practice.
 To designate it as the method that accepts the signal defined in `Inputs.data`,
 we decorate it with `@Inputs.data`.
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerA.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerA.py
    :start-after: start-snippet-2
    :end-before: end-snippet-2
 
@@ -84,7 +84,7 @@ channel which our method needs to handle.
 
 To handle a non-empty token, the widget updates the interface
 reporting on number of data items on the input, then does the data
-sampling using Orange's routines for these, and updates the
+sampling using Arithmos's routines for these, and updates the
 interface reporting on the number of sampled instances. Finally, the
 sampled data is sent as a token to the output channel defined as
 `Output.sample`.
@@ -92,19 +92,19 @@ sampled data is sent as a token to the output channel defined as
 Although our widget is now ready to test, for a final touch, let's
 design an icon for our widget. As specified in the widget header, we
 will call it
-:download:`DataSamplerA.svg <orange-demo/orangedemo/icons/DataSamplerA.svg>`
-and put it in `icons` subdirectory of `orangedemo` directory.
+:download:`DataSamplerA.svg <arithmos-demo/arithmosdemo/icons/DataSamplerA.svg>`
+and put it in `icons` subdirectory of `arithmosdemo` directory.
 
 
-With this we can now go ahead and install the orangedemo package. We
+With this we can now go ahead and install the arithmosdemo package. We
 will do this by running ``pip install -e .`` command from
-within the `orange-demo` directory.
+within the `arithmos-demo` directory.
 
 .. note::
    Depending on your python installation you might need
    administrator/superuser privileges.
 
-For a test, we now open Orange Canvas. There should be a new pane in a
+For a test, we now open Arithmos Canvas. There should be a new pane in a
 widget toolbox called Demo. If we click on this pane, it displays an
 icon of our widget. Try to hover on it to see if the header and channel
 info was processed correctly:
@@ -141,15 +141,15 @@ Data Table?
 
 
 *****************************************
-Testing Your Widget Outside Orange Canvas
+Testing Your Widget Outside Arithmos Canvas
 *****************************************
 
 For debugging purposes, we want to be able to run widgets standalone: if the
 file with the widget code is executed as a main script, it should show the
 widget and feed it some suitable data. The simplest way to do so is to use
-:obj:`Orange.widgets.utils.WidgetPreview` and pass it the data for the
+:obj:`Arithmos.widgets.utils.WidgetPreview` and pass it the data for the
 default signal.
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerA.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerA.py
    :start-after: start-snippet-3
    :end-before: end-snippet-3

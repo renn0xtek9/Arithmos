@@ -8,17 +8,17 @@ import numpy as np
 from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QFormLayout
 
-from Orange.data import Table, Domain
-from Orange.preprocess import preprocess
-from Orange.projection import PCA
-from Orange.projection import manifold
-from Orange.widgets import gui
-from Orange.widgets.settings import SettingProvider, ContextSetting
-from Orange.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
-from Orange.widgets.visualize.utils.widget import OWDataProjectionWidget
-from Orange.widgets.widget import Msg
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess import preprocess
+from Arithmos.projection import PCA
+from Arithmos.projection import manifold
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import SettingProvider, ContextSetting
+from Arithmos.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
+from Arithmos.widgets.visualize.utils.widget import OWDataProjectionWidget
+from Arithmos.widgets.widget import Msg
 
 _STEP_SIZE = 25
 _MAX_PCA_COMPONENTS = 50

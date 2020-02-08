@@ -1,5 +1,5 @@
-from Orange.data import Table
-from Orange.preprocess import Impute, Average
+from Arithmos.data import Table
+from Arithmos.preprocess import Impute, Average
 
 data = Table("heart_disease.tab")
 imputer = Impute(method=Average())

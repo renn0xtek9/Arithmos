@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Orange Visual Programming documentation build configuration file, created by
+# Arithmos Visual Programming documentation build configuration file, created by
 # sphinx-quickstart on Fri Nov 27 12:05:51 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -58,9 +58,9 @@ source_suffix = [".md", ".rst"]
 master_doc = "index"
 
 # General information about the project.
-project = "Orange Visual Programming"
-copyright = "2015, Orange Data Mining"
-author = "Orange Data Mining"
+project = "Arithmos Visual Programming"
+copyright = "2015, Arithmos Data Mining"
+author = "Arithmos Data Mining"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -212,7 +212,7 @@ html_static_path = ["_static"]
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "OrangeVisualProgrammingdoc"
+htmlhelp_basename = "ArithmosVisualProgrammingdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -236,9 +236,9 @@ htmlhelp_basename = "OrangeVisualProgrammingdoc"
 latex_documents = [
     (
         master_doc,
-        "OrangeVisualProgramming.tex",
-        "Orange Visual Programming Documentation",
-        "Orange Data Mining",
+        "ArithmosVisualProgramming.tex",
+        "Arithmos Visual Programming Documentation",
+        "Arithmos Data Mining",
         "manual",
     )
 ]
@@ -271,8 +271,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "orangevisualprogramming",
-        "Orange Visual Programming Documentation",
+        "arithmosvisualprogramming",
+        "Arithmos Visual Programming Documentation",
         [author],
         1,
     )
@@ -290,10 +290,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "OrangeVisualProgramming",
-        "Orange Visual Programming Documentation",
+        "ArithmosVisualProgramming",
+        "Arithmos Visual Programming Documentation",
         author,
-        "OrangeVisualProgramming",
+        "ArithmosVisualProgramming",
         "One line description of project.",
         "Miscellaneous",
     )

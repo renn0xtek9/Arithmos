@@ -1,7 +1,7 @@
 import numpy as np
 
-from Orange.preprocess.preprocess import RemoveNaNRows, Continuize, Normalize
-from Orange.projection import LinearProjector, DomainProjection
+from Arithmos.preprocess.preprocess import RemoveNaNRows, Continuize, Normalize
+from Arithmos.projection import LinearProjector, DomainProjection
 
 __all__ = ["RadViz"]
 

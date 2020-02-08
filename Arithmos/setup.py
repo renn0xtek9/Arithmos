@@ -8,7 +8,7 @@ def configuration(parent_package='', top_path=None):
     if os.name == 'posix':
         libraries.append('m')
 
-    config = Configuration('Orange', parent_package, top_path)
+    config = Configuration('Arithmos', parent_package, top_path)
     config.add_subpackage('classification')
     config.add_subpackage('data')
     config.add_subpackage('distance')

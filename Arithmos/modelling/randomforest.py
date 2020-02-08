@@ -1,9 +1,9 @@
-from Orange.base import RandomForestModel
-from Orange.classification import RandomForestLearner as RFClassification
-from Orange.data import Variable
-from Orange.modelling import SklFitter
-from Orange.preprocess.score import LearnerScorer
-from Orange.regression import RandomForestRegressionLearner as RFRegression
+from Arithmos.base import RandomForestModel
+from Arithmos.classification import RandomForestLearner as RFClassification
+from Arithmos.data import Variable
+from Arithmos.modelling import SklFitter
+from Arithmos.preprocess.score import LearnerScorer
+from Arithmos.regression import RandomForestRegressionLearner as RFRegression
 
 __all__ = ['RandomForestLearner']
 

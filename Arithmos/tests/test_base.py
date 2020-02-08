@@ -3,10 +3,10 @@
 import pickle
 import unittest
 
-from Orange.base import SklLearner, Learner, Model
-from Orange.data import Domain
-from Orange.preprocess import Discretize, Randomize
-from Orange.regression import LinearRegressionLearner
+from Arithmos.base import SklLearner, Learner, Model
+from Arithmos.data import Domain
+from Arithmos.preprocess import Discretize, Randomize
+from Arithmos.regression import LinearRegressionLearner
 
 
 class DummyLearner(Learner):

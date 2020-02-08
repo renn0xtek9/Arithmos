@@ -49,7 +49,7 @@ training. The output widget should then look something like:
 Now back to channels and tokens. Input and output channels for our
 widget are defined by
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveA.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveA.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
@@ -62,7 +62,7 @@ multiple widgets.
 Handlers of multiple-input signals must accept two arguments: the sent object
 and the id of the sending widget.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveA.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveA.py
    :pyobject: OWLearningCurveA.set_learner
 
 OK, this looks like one long and complicated function. But be
@@ -82,7 +82,7 @@ The function above first checks if the channel `id` is already in
 ``learner`` is ``None`` (remember receiving a ``None`` value means the
 link was removed/closed) or invalidates the cross validation results
 and curve point for that channel id, marking for update in
-:func:`~Orange.widgets.widget.OWWidget.handleNewSignals`. A similar case is
+:func:`~Arithmos.widgets.widget.OWWidget.handleNewSignals`. A similar case is
 when we receive a learner for a new channel id.
 
 Note that in this widget the evaluation (k-fold cross
@@ -92,7 +92,7 @@ probability estimates as obtained from the evaluation procedure. Which
 essentially means that switching from one to another scoring function
 (and displaying the result in the table) takes only a split of a
 second. To see the rest of the widget, check out
-:download:`its code <orange-demo/orangedemo/OWLearningCurveA.py>`.
+:download:`its code <arithmos-demo/arithmosdemo/OWLearningCurveA.py>`.
 
 
 *****************************
@@ -107,25 +107,25 @@ send out the sampled data to one channel, and all other data to
 another channel. The corresponding channel definition of this widget
 is
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerC.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
 
 We used this in the third incarnation of :download:`data sampler widget
-<orange-demo/orangedemo/OWDataSamplerC.py>`, with essentially the only
+<arithmos-demo/arithmosdemo/OWDataSamplerC.py>`, with essentially the only
 other change in the code in the :func:`selection` and :func:`commit`
 functions
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerC.py
    :pyobject: OWDataSamplerC.selection
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerC.py
    :pyobject: OWDataSamplerC.commit
 
 
 If a widget that has multiple channels of the same type is
-connected to a widget that accepts such tokens, Orange Canvas opens a
+connected to a widget that accepts such tokens, Arithmos Canvas opens a
 window asking the user to confirm which channels to connect. Hence,
 if we have just connected *Data Sampler (C)* widget to a Data Table
 widget in a schema below:
@@ -149,15 +149,15 @@ learners (always) on the same, external dataset. That is, besides the
 training dataset, we need another channel of the same type but used
 for training dataset. Notice, however, that most often we will only
 provide the training dataset, so we would not like to be bothered (in
-Orange Canvas) with the dialog which channel to connect to, as the
+Arithmos Canvas) with the dialog which channel to connect to, as the
 training dataset channel will be the default one.
 
 When enlisting the input channel of the same type, the default
 channels have a special flag in the channel specification list. So for
-our new :download:`learning curve <orange-demo/orangedemo/OWLearningCurveB.py>`
+our new :download:`learning curve <arithmos-demo/arithmosdemo/OWLearningCurveB.py>`
 widget, the channel specification is
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveB.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveB.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
@@ -179,7 +179,7 @@ Explicit Channels
 
 Sometimes when a widget has multiple outputs of different types, some
 of them should not be subject to this automatic default connection selection.
-An example of this is in Orange's `Logistic Regression` widget that outputs
+An example of this is in Arithmos's `Logistic Regression` widget that outputs
 a supplementary 'Coefficients' data table. Such outputs can be marked with
-and :attr:`~Orange.widgets.widget.Explicit` flag, which ensures they are never
+and :attr:`~Arithmos.widgets.widget.Explicit` flag, which ensures they are never
 selected for a default connection.

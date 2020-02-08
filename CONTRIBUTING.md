@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Thanks for taking the time to contribute to Orange!
+Thanks for taking the time to contribute to Arithmos!
 
 Please submit contributions in accordance with the flow explained in the
 [GitHub Guides].
@@ -11,7 +11,7 @@ Please submit contributions in accordance with the flow explained in the
 
 Installing for development
 --------------------------
-Install Orange as suggested in [README]. Then:
+Install Arithmos as suggested in [README]. Then:
 
     git clone https://github.com/biolab/arithmos.git
     cd arithmos
@@ -55,7 +55,7 @@ In addition, we add the following guidelines:
       view.setAlternatingRowColors(True)
       view.setSelectionMode(QAbstractItemView.ExtendedSelection)
 
-* Each Orange widget module, or better still, each Python module (within
+* Each Arithmos widget module, or better still, each Python module (within
   reason) should have a `__name__ == '__main__'`-fenced code block that
   shows/tests the gist of that module in a user-friendly way.
 * Core library objects should represent (`__repr__`) themselves in accordance
@@ -65,7 +65,7 @@ In addition, we add the following guidelines:
   > a valid Python expression that could be used to recreate an object with
   > the same value (given an appropriate environment).
 
-  To that end, use [`Orange.util.Reprable`] when possible.
+  To that end, use [`Arithmos.util.Reprable`] when possible.
 
 Please ensure your commits pass code quality assurance by executing:
 
@@ -77,7 +77,7 @@ Please ensure your commits pass code quality assurance by executing:
 [Napoleon]: http://www.sphinx-doc.org/en/stable/ext/napoleon.html
 [keyword args to the constructor]: http://pyqt.sourceforge.net/Docs/PyQt5/qt_properties.html
 [Python data model documentation]: https://docs.python.org/3/reference/datamodel.html#object.__repr__
-[`Orange.util.Reprable`]: https://github.com/biolab/arithmos/search?q="class+Reprable"&type=Code
+[`Arithmos.util.Reprable`]: https://github.com/biolab/arithmos/search?q="class+Reprable"&type=Code
 
 
 Human Interface Guidelines
@@ -94,15 +94,15 @@ and sentence case otherwise.
 Testing
 -------
 [tests]: #tests
-If you contribute new code, write [unit tests] for it in _Orange/tests_ or
-_Orange/widgets/*/tests_, as appropriate. Ensure the tests pass by running:
+If you contribute new code, write [unit tests] for it in _Arithmos/tests_ or
+_Arithmos/widgets/*/tests_, as appropriate. Ensure the tests pass by running:
 
     python setup.py test
 
 Additionally, check that the tests for widgets pass:
 
-    python -m unittest -v Orange.widgets.tests \
-                          Orange.canvas.report.tests
+    python -m unittest -v Arithmos.widgets.tests \
+                          Arithmos.canvas.report.tests
 
 If testing on GNU/Linux, perhaps install _xvfb_ package and prefix the above
 command with `xvfb-run `.
@@ -122,7 +122,7 @@ Set these environment variables for value-added behavior:
 * `ORANGE_DEBUG=1` - general developing and debugging. Influences stuff like
   DOM Inspector in QWebView right-click menu, etc.
 * `ORANGE_DEPRECATIONS_ERROR=1` - whether warnings of type
-  `OrangeDeprecationWarning` should be raised as exceptions.
+  `ArithmosDeprecationWarning` should be raised as exceptions.
 
 
 Commit messages

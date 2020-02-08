@@ -6,9 +6,9 @@ import unittest
 
 import numpy as np
 
-from Orange.classification import EllipticEnvelopeLearner, \
+from Arithmos.classification import EllipticEnvelopeLearner, \
     IsolationForestLearner, LocalOutlierFactorLearner, OneClassSVMLearner
-from Orange.data import Table, Domain, ContinuousVariable
+from Arithmos.data import Table, Domain, ContinuousVariable
 
 
 class _TestDetector(unittest.TestCase):

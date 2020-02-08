@@ -1,7 +1,7 @@
-from Orange.data import Table, Domain
-from Orange.widgets.data.owselectbydataindex import OWSelectByDataIndex
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
+from Arithmos.data import Table, Domain
+from Arithmos.widgets.data.owselectbydataindex import OWSelectByDataIndex
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
 
 
 class TestOWSelectSubset(WidgetTest):

@@ -7,10 +7,10 @@ from unittest.mock import patch
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.preprocess import Continuize
-from Orange.widgets.visualize.owheatmap import OWHeatMap, Clustering
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin, datasets
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.preprocess import Continuize
+from Arithmos.widgets.visualize.owheatmap import OWHeatMap, Clustering
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin, datasets
 
 
 def image_row_colors(image):

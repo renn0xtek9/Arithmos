@@ -10,11 +10,11 @@ from sklearn.utils import check_array
 from sklearn.utils.extmath import row_norms, safe_sparse_dot
 from sklearn.metrics import pairwise_distances
 
-from Orange.distance import _distance
-from Orange.statistics import util
+from Arithmos.distance import _distance
+from Arithmos.statistics import util
 
 from .base import (Distance, DistanceModel, FittedDistance, FittedDistanceModel,
-                   SklDistance, _orange_to_numpy)
+                   SklDistance, _arithmos_to_numpy)
 
 
 def _safe_sparse_dot(a: np.ndarray, b: np.ndarray,
@@ -779,7 +779,7 @@ class Mahalanobis(Distance):
 
     def fit(self, data):
         """Return a model with stored inverse covariance matrix"""
-        x = _orange_to_numpy(data)
+        x = _arithmos_to_numpy(data)
         if self.axis == 0:
             x = x.T
         try:

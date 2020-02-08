@@ -11,9 +11,9 @@ Manual selection of data attributes and composition of data domain.
 
 - Data: dataset with columns as set in the widget
 
-The **Select Columns** widget is used to manually compose your [data domain](https://en.wikipedia.org/wiki/Data_domain). The user can decide which attributes will be used and how. Orange distinguishes between ordinary attributes, (optional) class attributes and meta attributes. For instance, for building a classification model, the domain would be composed of a set of attributes and a discrete class attribute. Meta attributes are not used in modeling, but several widgets can use them as instance labels.
+The **Select Columns** widget is used to manually compose your [data domain](https://en.wikipedia.org/wiki/Data_domain). The user can decide which attributes will be used and how. Arithmos distinguishes between ordinary attributes, (optional) class attributes and meta attributes. For instance, for building a classification model, the domain would be composed of a set of attributes and a discrete class attribute. Meta attributes are not used in modeling, but several widgets can use them as instance labels.
 
-Orange attributes have a type and are either discrete, continuous or a character string. The attribute type is marked with a symbol appearing before the name of the attribute (D, C, S, respectively).
+Arithmos attributes have a type and are either discrete, continuous or a character string. The attribute type is marked with a symbol appearing before the name of the attribute (D, C, S, respectively).
 
 ![](images/SelectColumns-stamped.png)
 

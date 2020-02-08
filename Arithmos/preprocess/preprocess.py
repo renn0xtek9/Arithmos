@@ -8,10 +8,10 @@ import bottleneck as bn
 import scipy.sparse as sp
 from sklearn.impute import SimpleImputer
 
-import Orange.data
-from Orange.data.filter import HasClass
-from Orange.statistics import distribution
-from Orange.util import Reprable, Enum, deprecated
+import Arithmos.data
+from Arithmos.data.filter import HasClass
+from Arithmos.statistics import distribution
+from Arithmos.util import Reprable, Enum, deprecated
 from . import impute, discretize, transformation
 
 __all__ = ["Continuize", "Discretize", "Impute", "RemoveNaNRows",
@@ -66,7 +66,7 @@ class Discretize(Preprocess):
 
     Parameters
     ----------
-    method : discretization method (default: Orange.preprocess.discretize.Discretization)
+    method : discretization method (default: Arithmos.preprocess.discretize.Discretization)
 
     remove_const : bool (default=True)
         Determines whether the features with constant values are removed
@@ -87,7 +87,7 @@ class Discretize(Preprocess):
 
         Parameters
         ----------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             A data table to be discretized.
         """
 
@@ -109,7 +109,7 @@ class Discretize(Preprocess):
             return vars_
 
         method = self.method or discretize.EqualFreq()
-        domain = Orange.data.Domain(
+        domain = Arithmos.data.Domain(
             discretized(data.domain.attributes, True),
             discretized(data.domain.class_vars, self.discretize_classes),
             discretized(data.domain.metas, self.discretize_metas))
@@ -123,10 +123,10 @@ class Impute(Preprocess):
 
     Parameters
     ----------
-    method : imputation method (default: Orange.preprocess.impute.Average())
+    method : imputation method (default: Arithmos.preprocess.impute.Average())
     """
 
-    def __init__(self, method=Orange.preprocess.impute.Average()):
+    def __init__(self, method=Arithmos.preprocess.impute.Average()):
         self.method = method
 
     def __call__(self, data):
@@ -136,13 +136,13 @@ class Impute(Preprocess):
 
         Parameters
         ----------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             An input data table.
         """
 
         method = self.method or impute.Average()
         newattrs = [method(data, var) for var in data.domain.attributes]
-        domain = Orange.data.Domain(
+        domain = Arithmos.data.Domain(
             newattrs, data.domain.class_vars, data.domain.metas)
         return data.transform(domain)
 
@@ -154,7 +154,7 @@ class SklImpute(Preprocess):
         self.strategy = strategy
 
     def __call__(self, data):
-        from Orange.data.sql.table import SqlTable
+        from Arithmos.data.sql.table import SqlTable
         if isinstance(data, SqlTable):
             return Impute()(data)
         imputer = SimpleImputer(strategy=self.strategy)
@@ -168,7 +168,7 @@ class SklImpute(Preprocess):
                                           imputer.statistics_)
                     if not np.isnan(value)]
         assert X.shape[1] == len(features)
-        domain = Orange.data.Domain(features, data.domain.class_vars,
+        domain = Arithmos.data.Domain(features, data.domain.class_vars,
                                     data.domain.metas)
         new_data = data.transform(domain)
         new_data.X = X
@@ -194,7 +194,7 @@ class RemoveConstant(Preprocess):
         oks = np.logical_and(~bn.allnan(data.X, axis=0),
                              bn.nanmin(data.X, axis=0) != bn.nanmax(data.X, axis=0))
         atts = [data.domain.attributes[i] for i, ok in enumerate(oks) if ok]
-        domain = Orange.data.Domain(atts, data.domain.class_vars,
+        domain = Arithmos.data.Domain(atts, data.domain.class_vars,
                                     data.domain.metas)
         return data.transform(domain)
 
@@ -232,12 +232,12 @@ class RemoveNaNColumns(Preprocess):
             threshold = threshold * data.X.shape[0]
         nans = np.sum(np.isnan(data.X), axis=0)
         att = [a for a, n in zip(data.domain.attributes, nans) if n < threshold]
-        domain = Orange.data.Domain(att, data.domain.class_vars,
+        domain = Arithmos.data.Domain(att, data.domain.class_vars,
                                     data.domain.metas)
         return data.transform(domain)
 
 
-@deprecated("Orange.data.filter.HasClas")
+@deprecated("Arithmos.data.filter.HasClas")
 class RemoveNaNClasses(Preprocess):
     """
     Construct preprocessor that removes examples with missing class
@@ -298,8 +298,8 @@ class Normalize(Preprocess):
 
     Examples
     --------
-    >>> from Orange.data import Table
-    >>> from Orange.preprocess import Normalize
+    >>> from Arithmos.data import Table
+    >>> from Arithmos.preprocess import Normalize
     >>> data = Table("iris")
     >>> normalizer = Normalize(norm_type=Normalize.NormalizeBySpan)
     >>> normalized_data = normalizer(data)
@@ -327,12 +327,12 @@ class Normalize(Preprocess):
 
         Parameters
         ----------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             A data table to be normalized.
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             Normalized data table.
         """
         from . import normalize
@@ -377,8 +377,8 @@ class Randomize(Preprocess):
 
     Examples
     --------
-    >>> from Orange.data import Table
-    >>> from Orange.preprocess import Randomize
+    >>> from Arithmos.data import Table
+    >>> from Arithmos.preprocess import Randomize
     >>> data = Table("iris")
     >>> randomizer = Randomize(Randomize.RandomizeClasses)
     >>> randomized_data = randomizer(data)
@@ -402,12 +402,12 @@ class Randomize(Preprocess):
 
         Parameters
         ----------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             A data table to be randomized.
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             Randomized data table.
         """
         new_data = data.copy()
@@ -446,7 +446,7 @@ class ProjectPCA(Preprocess):
         self.n_components = n_components
 
     def __call__(self, data):
-        pca = Orange.projection.PCA(n_components=self.n_components)(data)
+        pca = Arithmos.projection.PCA(n_components=self.n_components)(data)
         return pca(data)
 
 
@@ -458,7 +458,7 @@ class ProjectCUR(Preprocess):
 
     def __call__(self, data):
         rank = min(self.rank, min(data.X.shape)-1)
-        cur = Orange.projection.CUR(
+        cur = Arithmos.projection.CUR(
             rank=rank, max_error=self.max_error,
             compute_U=False,
         )(data)
@@ -539,7 +539,7 @@ class Scale(Preprocess):
                 newvars.append(transform(var))
             else:
                 newvars.append(var)
-        domain = Orange.data.Domain(newvars, data.domain.class_vars,
+        domain = Arithmos.data.Domain(newvars, data.domain.class_vars,
                                     data.domain.metas)
         return data.transform(domain)
 
@@ -608,7 +608,7 @@ class RemoveSparse(Preprocess):
                 sparseness = np.sum(np.isnan(data.X), axis=0)
         att = [a for a, s in zip(data.domain.attributes, sparseness)
                if s <= threshold]
-        domain = Orange.data.Domain(att, data.domain.class_vars,
+        domain = Arithmos.data.Domain(att, data.domain.class_vars,
                                     data.domain.metas)
         return data.transform(domain)
 

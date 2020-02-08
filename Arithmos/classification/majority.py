@@ -2,8 +2,8 @@ from hashlib import sha1
 
 import numpy as np
 
-from Orange.classification import Learner, Model
-from Orange.statistics import distribution
+from Arithmos.classification import Learner, Model
+from Arithmos.statistics import distribution
 
 __all__ = ["MajorityLearner"]
 
@@ -47,7 +47,7 @@ class ConstantModel(Model):
     """
     def __init__(self, dist, unif_maj=None):
         """
-        Constructs `Orange.classification.MajorityModel` that always
+        Constructs `Arithmos.classification.MajorityModel` that always
         returns majority value of given distribution.
 
         If no or empty distribution given, constructs a model that returns equal
@@ -56,9 +56,9 @@ class ConstantModel(Model):
         :param dist: domain for the `Table`
         :param unif_maj: majority class for the special case of uniform
             class distribution in the training data
-        :type dist: Orange.statistics.distribution.Discrete
+        :type dist: Arithmos.statistics.distribution.Discrete
         :return: regression model that returns majority value
-        :rtype: Orange.classification.Model
+        :rtype: Arithmos.classification.Model
         """
         self.dist = np.array(dist)
         self.unif_maj = unif_maj
@@ -68,7 +68,7 @@ class ConstantModel(Model):
         Returns majority class for each given instance in X.
 
         :param X: data table for which to make predictions
-        :type X: Orange.data.Table
+        :type X: Arithmos.data.Table
         :return: predicted value
         :rtype: vector of majority values
         """

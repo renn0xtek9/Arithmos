@@ -2,14 +2,14 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Domain, Table, DiscreteVariable, ContinuousVariable
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.data import Domain, Table, DiscreteVariable, ContinuousVariable
+from Arithmos.util import ArithmosDeprecationWarning
 
 
 class DomainTest(unittest.TestCase):
     def test_bool_raises_warning(self):
-        self.assertWarns(OrangeDeprecationWarning, bool, Domain([]))
-        self.assertWarns(OrangeDeprecationWarning, bool,
+        self.assertWarns(ArithmosDeprecationWarning, bool, Domain([]))
+        self.assertWarns(ArithmosDeprecationWarning, bool,
                          Domain([ContinuousVariable("y")]))
 
     def test_empty(self):

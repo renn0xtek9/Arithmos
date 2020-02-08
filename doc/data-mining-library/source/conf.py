@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Orange Data Mining Library documentation build configuration file, created by
+# Arithmos Data Mining Library documentation build configuration file, created by
 # sphinx-quickstart on Fri Nov 27 11:17:01 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -62,9 +62,9 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Orange Data Mining Library"
-copyright = "2015, Orange Data Mining"
-author = "Orange Data Mining"
+project = "Arithmos Data Mining Library"
+copyright = "2015, Arithmos Data Mining"
+author = "Arithmos Data Mining"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -216,7 +216,7 @@ html_theme = "alabaster"
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "OrangeDataMiningLibrarydoc"
+htmlhelp_basename = "ArithmosDataMiningLibrarydoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -237,9 +237,9 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "OrangeDataMiningLibrary.tex",
-        "Orange Data Mining Library Documentation",
-        "Orange Data Mining",
+        "ArithmosDataMiningLibrary.tex",
+        "Arithmos Data Mining Library Documentation",
+        "Arithmos Data Mining",
         "manual",
     )
 ]
@@ -272,8 +272,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "orangedatamininglibrary",
-        "Orange Data Mining Library Documentation",
+        "arithmosdatamininglibrary",
+        "Arithmos Data Mining Library Documentation",
         [author],
         1,
     )
@@ -291,10 +291,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "OrangeDataMiningLibrary",
-        "Orange Data Mining Library Documentation",
+        "ArithmosDataMiningLibrary",
+        "Arithmos Data Mining Library Documentation",
         author,
-        "OrangeDataMiningLibrary",
+        "ArithmosDataMiningLibrary",
         "One line description of project.",
         "Miscellaneous",
     )

@@ -22,16 +22,16 @@ from pyqtgraph.graphicsItems.LegendItem import (
 )
 from pyqtgraph.graphicsItems.TextItem import TextItem
 
-from Orange.util import OrangeDeprecationWarning
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils import classdensity
-from Orange.widgets.utils.colorpalette import ColorPaletteGenerator
-from Orange.widgets.utils.plot import OWPalette
-from Orange.widgets.visualize.owscatterplotgraph_obsolete import (
+from Arithmos.util import ArithmosDeprecationWarning
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils import classdensity
+from Arithmos.widgets.utils.colorpalette import ColorPaletteGenerator
+from Arithmos.widgets.utils.plot import OWPalette
+from Arithmos.widgets.visualize.owscatterplotgraph_obsolete import (
     OWScatterPlotGraph as OWScatterPlotGraphObs
 )
-from Orange.widgets.visualize.utils.plotutils import (
+from Arithmos.widgets.visualize.utils.plotutils import (
     HelpEventDelegate as EventDelegate,
     InteractiveViewBox as ViewBox
 )
@@ -226,8 +226,8 @@ class InteractiveViewBox(ViewBox):
     def __init__(self, graph, enable_menu=False):
         super().__init__(graph, enable_menu)
         warnings.warn("InteractiveViewBox class has been deprecated since "
-                      "3.17. Use Orange.widgets.visualize.utils.plotutils."
-                      "InteractiveViewBox instead.", OrangeDeprecationWarning)
+                      "3.17. Use Arithmos.widgets.visualize.utils.plotutils."
+                      "InteractiveViewBox instead.", ArithmosDeprecationWarning)
 
 
 class OWScatterPlotGraph(OWScatterPlotGraphObs):
@@ -235,12 +235,12 @@ class OWScatterPlotGraph(OWScatterPlotGraphObs):
         super().__init__(scatter_widget, parent=parent, _=_, view_box=view_box)
         warnings.warn("OWScatterPlotGraph class has been deprecated since "
                       "3.17. Use OWScatterPlotBase instead.",
-                      OrangeDeprecationWarning)
+                      ArithmosDeprecationWarning)
 
 
 class ScatterPlotItem(pg.ScatterPlotItem):
     """PyQtGraph's ScatterPlotItem calls updateSpots at any change of sizes/colors/symbols,
-    which then rebuilds the stored pixmaps for each symbol. Because Orange calls
+    which then rebuilds the stored pixmaps for each symbol. Because Arithmos calls
     set* function in succession, we postpone updateSpots() to paint()."""
 
     _update_spots_in_paint = False
@@ -1407,5 +1407,5 @@ class HelpEventDelegate(EventDelegate):
     def __init__(self, delegate, parent=None):
         super().__init__(delegate, parent)
         warnings.warn("HelpEventDelegate class has been deprecated since 3.17."
-                      " Use Orange.widgets.visualize.utils.plotutils."
-                      "HelpEventDelegate instead.", OrangeDeprecationWarning)
+                      " Use Arithmos.widgets.visualize.utils.plotutils."
+                      "HelpEventDelegate instead.", ArithmosDeprecationWarning)

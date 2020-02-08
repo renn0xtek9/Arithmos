@@ -19,23 +19,23 @@ from AnyQt.QtCore import pyqtSignal as Signal
 
 import pyqtgraph as pg
 
-import Orange.data
-import Orange.distance
-import Orange.misc
-from Orange.data import Table, Domain
-from Orange.misc import DistMatrix
+import Arithmos.data
+import Arithmos.distance
+import Arithmos.misc
+from Arithmos.data import Table, Domain
+from Arithmos.misc import DistMatrix
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils.stickygraphicsview import StickyGraphicsView
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils.stickygraphicsview import StickyGraphicsView
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.graphicstextlist import TextListWidget
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.unsupervised.owhierarchicalclustering import \
+from Arithmos.widgets.utils.graphicstextlist import TextListWidget
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.unsupervised.owhierarchicalclustering import \
     WrapperLayoutItem
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input, Output
 
 
 ROW_NAMES_WIDTH = 200
@@ -65,15 +65,15 @@ class OWSilhouettePlot(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        data = Input("Data", (Orange.data.Table, Orange.misc.DistMatrix))
+        data = Input("Data", (Arithmos.data.Table, Arithmos.misc.DistMatrix))
 
     class Outputs:
-        selected_data = Output("Selected Data", Orange.data.Table, default=True)
-        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Orange.data.Table)
+        selected_data = Output("Selected Data", Arithmos.data.Table, default=True)
+        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Arithmos.data.Table)
 
     replaces = [
-        "orangecontrib.prototypes.widgets.owsilhouetteplot.OWSilhouettePlot",
-        "Orange.widgets.unsupervised.owsilhouetteplot.OWSilhouettePlot"
+        "arithmoscontrib.prototypes.widgets.owsilhouetteplot.OWSilhouettePlot",
+        "Arithmos.widgets.unsupervised.owsilhouetteplot.OWSilhouettePlot"
     ]
 
     settingsHandler = settings.PerfectDomainContextHandler()
@@ -94,9 +94,9 @@ class OWSilhouettePlot(widget.OWWidget):
 
     pending_selection = settings.Setting(None, schema_only=True)
 
-    Distances = [("Euclidean", Orange.distance.Euclidean),
-                 ("Manhattan", Orange.distance.Manhattan),
-                 ("Cosine", Orange.distance.Cosine)]
+    Distances = [("Euclidean", Arithmos.distance.Euclidean),
+                 ("Manhattan", Arithmos.distance.Manhattan),
+                 ("Cosine", Arithmos.distance.Cosine)]
 
     graph_name = "scene"
     buttons_area_orientation = Qt.Vertical
@@ -117,12 +117,12 @@ class OWSilhouettePlot(widget.OWWidget):
     def __init__(self):
         super().__init__()
         #: The input data
-        self.data = None         # type: Optional[Orange.data.Table]
+        self.data = None         # type: Optional[Arithmos.data.Table]
         #: The input distance matrix (if present)
-        self.distances = None  # type: Optional[Orange.misc.DistMatrix]
+        self.distances = None  # type: Optional[Arithmos.misc.DistMatrix]
         #: The effective distance matrix (is self.distances or computed from
         #: self.data depending on input)
-        self._matrix = None      # type: Optional[Orange.misc.DistMatrix]
+        self._matrix = None      # type: Optional[Arithmos.misc.DistMatrix]
         #: An bool mask (size == len(data)) indicating missing group/cluster
         #: assignments
         self._mask = None        # type: Optional[np.ndarray]
@@ -212,9 +212,9 @@ class OWSilhouettePlot(widget.OWWidget):
         self.closeContext()
         self.clear()
         try:
-            if isinstance(data, Orange.misc.DistMatrix):
+            if isinstance(data, Arithmos.misc.DistMatrix):
                 self._set_distances(data)
-            elif isinstance(data, Orange.data.Table):
+            elif isinstance(data, Arithmos.data.Table):
                 self._set_table(data)
             else:
                 self.distances = None
@@ -230,7 +230,7 @@ class OWSilhouettePlot(widget.OWWidget):
         self.distances = None
 
     def _set_distances(self, distances: DistMatrix):
-        if isinstance(distances.row_items, Orange.data.Table) and \
+        if isinstance(distances.row_items, Arithmos.data.Table) and \
                 distances.axis == 1:
             data = distances.row_items
         else:
@@ -271,7 +271,7 @@ class OWSilhouettePlot(widget.OWWidget):
         annotvars = [var for var in domain.metas if var.is_string]
         self.annotation_var_model[:] = ["None"] + annotvars
         self.annotation_var_idx = 1 if annotvars else 0
-        self.openContext(Orange.data.Domain(groupvars))
+        self.openContext(Arithmos.data.Domain(groupvars))
 
     def _is_empty(self) -> bool:
         # Is empty (does not have any input).
@@ -329,7 +329,7 @@ class OWSilhouettePlot(widget.OWWidget):
                 if not metric.supports_discrete and any(
                         a.is_discrete for a in data.domain.attributes):
                     self.Warning.ignoring_categorical()
-                    data = Orange.distance.remove_discrete_features(data)
+                    data = Arithmos.distance.remove_discrete_features(data)
                 try:
                     self._matrix = np.asarray(metric(data))
                 except MemoryError:
@@ -502,9 +502,9 @@ class OWSilhouettePlot(widget.OWWidget):
             silhouette_var = None
             if self.add_scores:
                 var = self.cluster_var_model[self.cluster_var_idx]
-                silhouette_var = Orange.data.ContinuousVariable(
+                silhouette_var = Arithmos.data.ContinuousVariable(
                     "Silhouette ({})".format(escape(var.name)))
-                domain = Orange.data.Domain(
+                domain = Arithmos.data.Domain(
                     self.data.domain.attributes,
                     self.data.domain.class_vars,
                     self.data.domain.metas + (silhouette_var, ))
@@ -1208,4 +1208,4 @@ class BarPlotItem(QGraphicsWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWSilhouettePlot).run(Orange.data.Table("iris"))
+    WidgetPreview(OWSilhouettePlot).run(Arithmos.data.Table("iris"))

@@ -7,9 +7,9 @@ import os
 import io
 import warnings
 
-from Orange.data import Table, ContinuousVariable, DiscreteVariable
-from Orange.data.io import CSVReader
-from Orange.tests import test_filename
+from Arithmos.data import Table, ContinuousVariable, DiscreteVariable
+from Arithmos.data.io import CSVReader
+from Arithmos.tests import test_filename
 
 tab_file = """\
 Feature 1\tFeature 2\tFeature 3

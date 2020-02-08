@@ -559,8 +559,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__preprocess___discretize
-#define __PYX_HAVE_API__Orange__preprocess___discretize
+#define __PYX_HAVE__Arithmos__preprocess___discretize
+#define __PYX_HAVE_API__Arithmos__preprocess___discretize
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -792,7 +792,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/preprocess/_discretize.pyx",
+  "Arithmos/preprocess/_discretize.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -1643,13 +1643,13 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'Orange.preprocess._discretize' */
+/* Module declarations from 'Arithmos.preprocess._discretize' */
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "Orange.preprocess._discretize"
-extern int __pyx_module_is_main_Orange__preprocess___discretize;
-int __pyx_module_is_main_Orange__preprocess___discretize = 0;
+#define __Pyx_MODULE_NAME "Arithmos.preprocess._discretize"
+extern int __pyx_module_is_main_Arithmos__preprocess___discretize;
+int __pyx_module_is_main_Arithmos__preprocess___discretize = 0;
 
-/* Implementation of 'Orange.preprocess._discretize' */
+/* Implementation of 'Arithmos.preprocess._discretize' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_ValueError;
@@ -1691,12 +1691,12 @@ static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_entropy_normalized1[] = "entropy_normalized1";
 static const char __pyx_k_entropy_normalized2[] = "entropy_normalized2";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
-static const char __pyx_k_Orange_preprocess__discretize[] = "Orange.preprocess._discretize";
+static const char __pyx_k_Arithmos_preprocess__discretize[] = "Arithmos.preprocess._discretize";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static const char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
 static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte order not supported";
-static const char __pyx_k_Orange_preprocess__discretize_py[] = "Orange/preprocess/_discretize.pyx";
+static const char __pyx_k_Arithmos_preprocess__discretize_py[] = "Arithmos/preprocess/_discretize.pyx";
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static const char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
@@ -1706,8 +1706,8 @@ static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
 static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_N;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
-static PyObject *__pyx_n_s_Orange_preprocess__discretize;
-static PyObject *__pyx_kp_s_Orange_preprocess__discretize_py;
+static PyObject *__pyx_n_s_Arithmos_preprocess__discretize;
+static PyObject *__pyx_kp_s_Arithmos_preprocess__discretize_py;
 static PyObject *__pyx_n_s_R;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_ValueError;
@@ -1745,9 +1745,9 @@ static PyObject *__pyx_n_s_v2;
 static PyObject *__pyx_n_s_vn;
 static PyObject *__pyx_n_s_zeros;
 static PyObject *__pyx_n_s_zip;
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_dist, int __pyx_v_n); /* proto */
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized1(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D); /* proto */
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized2(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_split_eq_freq(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_dist, int __pyx_v_n); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_2entropy_normalized1(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_4entropy_normalized2(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_int_1;
@@ -1770,7 +1770,7 @@ static PyObject *__pyx_codeobj__14;
 static PyObject *__pyx_codeobj__16;
 /* Late includes */
 
-/* "Orange/preprocess/_discretize.pyx":11
+/* "Arithmos/preprocess/_discretize.pyx":11
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def split_eq_freq(np.ndarray[np.float64_t, ndim=2] dist not None, int n):             # <<<<<<<<<<<<<<
@@ -1779,10 +1779,10 @@ static PyObject *__pyx_codeobj__16;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_1split_eq_freq(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_11_discretize_split_eq_freq[] = "split_eq_freq(ndarray dist, int n)";
-static PyMethodDef __pyx_mdef_6Orange_10preprocess_11_discretize_1split_eq_freq = {"split_eq_freq", (PyCFunction)__pyx_pw_6Orange_10preprocess_11_discretize_1split_eq_freq, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10preprocess_11_discretize_split_eq_freq};
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_1split_eq_freq(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_1split_eq_freq(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_11_discretize_split_eq_freq[] = "split_eq_freq(ndarray dist, int n)";
+static PyMethodDef __pyx_mdef_6Arithmos_10preprocess_11_discretize_1split_eq_freq = {"split_eq_freq", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_11_discretize_1split_eq_freq, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10preprocess_11_discretize_split_eq_freq};
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_1split_eq_freq(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_dist = 0;
   int __pyx_v_n;
   PyObject *__pyx_r = 0;
@@ -1830,12 +1830,12 @@ static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_1split_eq_freq(PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("split_eq_freq", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 11, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.preprocess._discretize.split_eq_freq", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._discretize.split_eq_freq", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dist), __pyx_ptype_5numpy_ndarray, 0, "dist", 0))) __PYX_ERR(0, 11, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(__pyx_self, __pyx_v_dist, __pyx_v_n);
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_11_discretize_split_eq_freq(__pyx_self, __pyx_v_dist, __pyx_v_n);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1846,7 +1846,7 @@ static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_1split_eq_freq(PyOb
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_dist, int __pyx_v_n) {
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_split_eq_freq(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_dist, int __pyx_v_n) {
   int __pyx_v_llen;
   __pyx_t_5numpy_float64_t __pyx_v_N;
   int __pyx_v_toGo;
@@ -1896,7 +1896,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   }
   __pyx_pybuffernd_dist.diminfo[0].strides = __pyx_pybuffernd_dist.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist.diminfo[0].shape = __pyx_pybuffernd_dist.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_dist.diminfo[1].strides = __pyx_pybuffernd_dist.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_dist.diminfo[1].shape = __pyx_pybuffernd_dist.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/preprocess/_discretize.pyx":13
+  /* "Arithmos/preprocess/_discretize.pyx":13
  * def split_eq_freq(np.ndarray[np.float64_t, ndim=2] dist not None, int n):
  * 
  *     cdef int llen = dist.shape[1]             # <<<<<<<<<<<<<<
@@ -1905,7 +1905,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
   __pyx_v_llen = (__pyx_v_dist->dimensions[1]);
 
-  /* "Orange/preprocess/_discretize.pyx":15
+  /* "Arithmos/preprocess/_discretize.pyx":15
  *     cdef int llen = dist.shape[1]
  * 
  *     if n >= llen: #n is greater than distributions             # <<<<<<<<<<<<<<
@@ -1915,7 +1915,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   __pyx_t_1 = ((__pyx_v_n >= __pyx_v_llen) != 0);
   if (__pyx_t_1) {
 
-    /* "Orange/preprocess/_discretize.pyx":16
+    /* "Arithmos/preprocess/_discretize.pyx":16
  * 
  *     if n >= llen: #n is greater than distributions
  *         return [(v1+v2)/2 for v1,v2 in zip(dist[0], dist[0][1:])]             # <<<<<<<<<<<<<<
@@ -2056,7 +2056,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "Orange/preprocess/_discretize.pyx":15
+    /* "Arithmos/preprocess/_discretize.pyx":15
  *     cdef int llen = dist.shape[1]
  * 
  *     if n >= llen: #n is greater than distributions             # <<<<<<<<<<<<<<
@@ -2065,7 +2065,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
   }
 
-  /* "Orange/preprocess/_discretize.pyx":18
+  /* "Arithmos/preprocess/_discretize.pyx":18
  *         return [(v1+v2)/2 for v1,v2 in zip(dist[0], dist[0][1:])]
  * 
  *     cdef np.float64_t N = dist[1].sum()             # <<<<<<<<<<<<<<
@@ -2099,7 +2099,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_N = __pyx_t_11;
 
-  /* "Orange/preprocess/_discretize.pyx":19
+  /* "Arithmos/preprocess/_discretize.pyx":19
  * 
  *     cdef np.float64_t N = dist[1].sum()
  *     cdef int toGo = n             # <<<<<<<<<<<<<<
@@ -2108,7 +2108,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
   __pyx_v_toGo = __pyx_v_n;
 
-  /* "Orange/preprocess/_discretize.pyx":20
+  /* "Arithmos/preprocess/_discretize.pyx":20
  *     cdef np.float64_t N = dist[1].sum()
  *     cdef int toGo = n
  *     cdef np.float64_t inthis = 0             # <<<<<<<<<<<<<<
@@ -2117,7 +2117,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
   __pyx_v_inthis = 0.0;
 
-  /* "Orange/preprocess/_discretize.pyx":21
+  /* "Arithmos/preprocess/_discretize.pyx":21
  *     cdef int toGo = n
  *     cdef np.float64_t inthis = 0
  *     cdef np.float64_t prevel = -1             # <<<<<<<<<<<<<<
@@ -2126,7 +2126,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
   __pyx_v_prevel = -1.0;
 
-  /* "Orange/preprocess/_discretize.pyx":22
+  /* "Arithmos/preprocess/_discretize.pyx":22
  *     cdef np.float64_t inthis = 0
  *     cdef np.float64_t prevel = -1
  *     cdef np.float64_t inone = N/toGo             # <<<<<<<<<<<<<<
@@ -2139,7 +2139,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   }
   __pyx_v_inone = (__pyx_v_N / ((__pyx_t_5numpy_float64_t)__pyx_v_toGo));
 
-  /* "Orange/preprocess/_discretize.pyx":23
+  /* "Arithmos/preprocess/_discretize.pyx":23
  *     cdef np.float64_t prevel = -1
  *     cdef np.float64_t inone = N/toGo
  *     points = []             # <<<<<<<<<<<<<<
@@ -2151,7 +2151,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   __pyx_v_points = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":30
+  /* "Arithmos/preprocess/_discretize.pyx":30
  *     cdef np.float64_t vn
  * 
  *     for i in range(llen):             # <<<<<<<<<<<<<<
@@ -2163,7 +2163,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   for (__pyx_t_6 = 0; __pyx_t_6 < __pyx_t_13; __pyx_t_6+=1) {
     __pyx_v_i = __pyx_t_6;
 
-    /* "Orange/preprocess/_discretize.pyx":31
+    /* "Arithmos/preprocess/_discretize.pyx":31
  * 
  *     for i in range(llen):
  *         v = dist[0,i]             # <<<<<<<<<<<<<<
@@ -2174,7 +2174,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __pyx_t_15 = __pyx_v_i;
     __pyx_v_v = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_dist.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_dist.diminfo[1].strides));
 
-    /* "Orange/preprocess/_discretize.pyx":32
+    /* "Arithmos/preprocess/_discretize.pyx":32
  *     for i in range(llen):
  *         v = dist[0,i]
  *         k = dist[1,i]             # <<<<<<<<<<<<<<
@@ -2185,7 +2185,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __pyx_t_17 = __pyx_v_i;
     __pyx_v_k = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_dist.diminfo[0].strides, __pyx_t_17, __pyx_pybuffernd_dist.diminfo[1].strides));
 
-    /* "Orange/preprocess/_discretize.pyx":33
+    /* "Arithmos/preprocess/_discretize.pyx":33
  *         v = dist[0,i]
  *         k = dist[1,i]
  *         if toGo <= 1:             # <<<<<<<<<<<<<<
@@ -2195,7 +2195,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __pyx_t_1 = ((__pyx_v_toGo <= 1) != 0);
     if (__pyx_t_1) {
 
-      /* "Orange/preprocess/_discretize.pyx":34
+      /* "Arithmos/preprocess/_discretize.pyx":34
  *         k = dist[1,i]
  *         if toGo <= 1:
  *             break             # <<<<<<<<<<<<<<
@@ -2204,7 +2204,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
       goto __pyx_L13_break;
 
-      /* "Orange/preprocess/_discretize.pyx":33
+      /* "Arithmos/preprocess/_discretize.pyx":33
  *         v = dist[0,i]
  *         k = dist[1,i]
  *         if toGo <= 1:             # <<<<<<<<<<<<<<
@@ -2213,7 +2213,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
     }
 
-    /* "Orange/preprocess/_discretize.pyx":35
+    /* "Arithmos/preprocess/_discretize.pyx":35
  *         if toGo <= 1:
  *             break
  *         inthis += k             # <<<<<<<<<<<<<<
@@ -2222,7 +2222,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
     __pyx_v_inthis = (__pyx_v_inthis + __pyx_v_k);
 
-    /* "Orange/preprocess/_discretize.pyx":36
+    /* "Arithmos/preprocess/_discretize.pyx":36
  *             break
  *         inthis += k
  *         if inthis < inone or i == 0:             # <<<<<<<<<<<<<<
@@ -2240,7 +2240,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __pyx_L16_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "Orange/preprocess/_discretize.pyx":37
+      /* "Arithmos/preprocess/_discretize.pyx":37
  *         inthis += k
  *         if inthis < inone or i == 0:
  *             prevel = v             # <<<<<<<<<<<<<<
@@ -2249,7 +2249,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
       __pyx_v_prevel = __pyx_v_v;
 
-      /* "Orange/preprocess/_discretize.pyx":36
+      /* "Arithmos/preprocess/_discretize.pyx":36
  *             break
  *         inthis += k
  *         if inthis < inone or i == 0:             # <<<<<<<<<<<<<<
@@ -2259,7 +2259,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
       goto __pyx_L15;
     }
 
-    /* "Orange/preprocess/_discretize.pyx":39
+    /* "Arithmos/preprocess/_discretize.pyx":39
  *             prevel = v
  *         else: #current count exceeded
  *             if i < llen - 1 and inthis - inone < k / 2:             # <<<<<<<<<<<<<<
@@ -2278,7 +2278,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
       __pyx_L19_bool_binop_done:;
       if (__pyx_t_1) {
 
-        /* "Orange/preprocess/_discretize.pyx":42
+        /* "Arithmos/preprocess/_discretize.pyx":42
  *                 #exceeded for less than half the current count:
  *                 #split after current
  *                 vn = dist[0,i+1]             # <<<<<<<<<<<<<<
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
         __pyx_t_20 = (__pyx_v_i + 1);
         __pyx_v_vn = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_dist.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_dist.diminfo[1].strides));
 
-        /* "Orange/preprocess/_discretize.pyx":43
+        /* "Arithmos/preprocess/_discretize.pyx":43
  *                 #split after current
  *                 vn = dist[0,i+1]
  *                 points.append((vn + v)/2)             # <<<<<<<<<<<<<<
@@ -2301,7 +2301,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
         __pyx_t_21 = __Pyx_PyList_Append(__pyx_v_points, __pyx_t_2); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 43, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "Orange/preprocess/_discretize.pyx":44
+        /* "Arithmos/preprocess/_discretize.pyx":44
  *                 vn = dist[0,i+1]
  *                 points.append((vn + v)/2)
  *                 N -= inthis             # <<<<<<<<<<<<<<
@@ -2310,7 +2310,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
         __pyx_v_N = (__pyx_v_N - __pyx_v_inthis);
 
-        /* "Orange/preprocess/_discretize.pyx":45
+        /* "Arithmos/preprocess/_discretize.pyx":45
  *                 points.append((vn + v)/2)
  *                 N -= inthis
  *                 inthis = 0             # <<<<<<<<<<<<<<
@@ -2319,7 +2319,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
         __pyx_v_inthis = 0.0;
 
-        /* "Orange/preprocess/_discretize.pyx":46
+        /* "Arithmos/preprocess/_discretize.pyx":46
  *                 N -= inthis
  *                 inthis = 0
  *                 prevel = vn             # <<<<<<<<<<<<<<
@@ -2328,7 +2328,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
         __pyx_v_prevel = __pyx_v_vn;
 
-        /* "Orange/preprocess/_discretize.pyx":39
+        /* "Arithmos/preprocess/_discretize.pyx":39
  *             prevel = v
  *         else: #current count exceeded
  *             if i < llen - 1 and inthis - inone < k / 2:             # <<<<<<<<<<<<<<
@@ -2338,7 +2338,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
         goto __pyx_L18;
       }
 
-      /* "Orange/preprocess/_discretize.pyx":49
+      /* "Arithmos/preprocess/_discretize.pyx":49
  *             else:
  *                 #split before the current value
  *                 points.append((prevel + v)/2)             # <<<<<<<<<<<<<<
@@ -2351,7 +2351,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
         __pyx_t_21 = __Pyx_PyList_Append(__pyx_v_points, __pyx_t_2); if (unlikely(__pyx_t_21 == ((int)-1))) __PYX_ERR(0, 49, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "Orange/preprocess/_discretize.pyx":50
+        /* "Arithmos/preprocess/_discretize.pyx":50
  *                 #split before the current value
  *                 points.append((prevel + v)/2)
  *                 N -= inthis - k             # <<<<<<<<<<<<<<
@@ -2360,7 +2360,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
         __pyx_v_N = (__pyx_v_N - (__pyx_v_inthis - __pyx_v_k));
 
-        /* "Orange/preprocess/_discretize.pyx":51
+        /* "Arithmos/preprocess/_discretize.pyx":51
  *                 points.append((prevel + v)/2)
  *                 N -= inthis - k
  *                 inthis = k             # <<<<<<<<<<<<<<
@@ -2369,7 +2369,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
         __pyx_v_inthis = __pyx_v_k;
 
-        /* "Orange/preprocess/_discretize.pyx":52
+        /* "Arithmos/preprocess/_discretize.pyx":52
  *                 N -= inthis - k
  *                 inthis = k
  *                 prevel = v             # <<<<<<<<<<<<<<
@@ -2380,7 +2380,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
       }
       __pyx_L18:;
 
-      /* "Orange/preprocess/_discretize.pyx":53
+      /* "Arithmos/preprocess/_discretize.pyx":53
  *                 inthis = k
  *                 prevel = v
  *             toGo -= 1             # <<<<<<<<<<<<<<
@@ -2389,7 +2389,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
       __pyx_v_toGo = (__pyx_v_toGo - 1);
 
-      /* "Orange/preprocess/_discretize.pyx":54
+      /* "Arithmos/preprocess/_discretize.pyx":54
  *                 prevel = v
  *             toGo -= 1
  *             if toGo:             # <<<<<<<<<<<<<<
@@ -2399,7 +2399,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
       __pyx_t_1 = (__pyx_v_toGo != 0);
       if (__pyx_t_1) {
 
-        /* "Orange/preprocess/_discretize.pyx":55
+        /* "Arithmos/preprocess/_discretize.pyx":55
  *             toGo -= 1
  *             if toGo:
  *                 inone = N/toGo             # <<<<<<<<<<<<<<
@@ -2412,7 +2412,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
         }
         __pyx_v_inone = (__pyx_v_N / ((__pyx_t_5numpy_float64_t)__pyx_v_toGo));
 
-        /* "Orange/preprocess/_discretize.pyx":54
+        /* "Arithmos/preprocess/_discretize.pyx":54
  *                 prevel = v
  *             toGo -= 1
  *             if toGo:             # <<<<<<<<<<<<<<
@@ -2425,7 +2425,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   }
   __pyx_L13_break:;
 
-  /* "Orange/preprocess/_discretize.pyx":56
+  /* "Arithmos/preprocess/_discretize.pyx":56
  *             if toGo:
  *                 inone = N/toGo
  *     return points             # <<<<<<<<<<<<<<
@@ -2437,7 +2437,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   __pyx_r = __pyx_v_points;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_discretize.pyx":11
+  /* "Arithmos/preprocess/_discretize.pyx":11
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def split_eq_freq(np.ndarray[np.float64_t, ndim=2] dist not None, int n):             # <<<<<<<<<<<<<<
@@ -2459,7 +2459,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_dist.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.preprocess._discretize.split_eq_freq", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._discretize.split_eq_freq", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2473,7 +2473,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_discretize.pyx":61
+/* "Arithmos/preprocess/_discretize.pyx":61
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized1(np.ndarray[np.float64_t, ndim=1] D):             # <<<<<<<<<<<<<<
@@ -2482,15 +2482,15 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_split_eq_freq(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_3entropy_normalized1(PyObject *__pyx_self, PyObject *__pyx_v_D); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_11_discretize_2entropy_normalized1[] = "entropy_normalized1(ndarray D)\n\n    Compute entropy of distribution in `D` (must be normalized).\n    ";
-static PyMethodDef __pyx_mdef_6Orange_10preprocess_11_discretize_3entropy_normalized1 = {"entropy_normalized1", (PyCFunction)__pyx_pw_6Orange_10preprocess_11_discretize_3entropy_normalized1, METH_O, __pyx_doc_6Orange_10preprocess_11_discretize_2entropy_normalized1};
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_3entropy_normalized1(PyObject *__pyx_self, PyObject *__pyx_v_D) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_3entropy_normalized1(PyObject *__pyx_self, PyObject *__pyx_v_D); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_11_discretize_2entropy_normalized1[] = "entropy_normalized1(ndarray D)\n\n    Compute entropy of distribution in `D` (must be normalized).\n    ";
+static PyMethodDef __pyx_mdef_6Arithmos_10preprocess_11_discretize_3entropy_normalized1 = {"entropy_normalized1", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_11_discretize_3entropy_normalized1, METH_O, __pyx_doc_6Arithmos_10preprocess_11_discretize_2entropy_normalized1};
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_3entropy_normalized1(PyObject *__pyx_self, PyObject *__pyx_v_D) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("entropy_normalized1 (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_D), __pyx_ptype_5numpy_ndarray, 1, "D", 0))) __PYX_ERR(0, 61, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized1(__pyx_self, ((PyArrayObject *)__pyx_v_D));
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_11_discretize_2entropy_normalized1(__pyx_self, ((PyArrayObject *)__pyx_v_D));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2501,7 +2501,7 @@ static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_3entropy_normalized
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized1(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D) {
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_2entropy_normalized1(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D) {
   __pyx_t_5numpy_float64_t __pyx_v_R;
   Py_ssize_t __pyx_v_j;
   __pyx_t_5numpy_float64_t __pyx_v_t;
@@ -2528,7 +2528,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
   }
   __pyx_pybuffernd_D.diminfo[0].strides = __pyx_pybuffernd_D.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_D.diminfo[0].shape = __pyx_pybuffernd_D.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/preprocess/_discretize.pyx":65
+  /* "Arithmos/preprocess/_discretize.pyx":65
  *     Compute entropy of distribution in `D` (must be normalized).
  *     """
  *     cdef np.float64_t R = 0.             # <<<<<<<<<<<<<<
@@ -2537,7 +2537,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
  */
   __pyx_v_R = 0.;
 
-  /* "Orange/preprocess/_discretize.pyx":68
+  /* "Arithmos/preprocess/_discretize.pyx":68
  *     cdef Py_ssize_t j
  *     cdef np.float64_t t
  *     cdef np.float64_t log2 = 1./log(2.)             # <<<<<<<<<<<<<<
@@ -2551,7 +2551,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
   }
   __pyx_v_log2 = (1. / __pyx_t_1);
 
-  /* "Orange/preprocess/_discretize.pyx":69
+  /* "Arithmos/preprocess/_discretize.pyx":69
  *     cdef np.float64_t t
  *     cdef np.float64_t log2 = 1./log(2.)
  *     for j in range(D.shape[0]):             # <<<<<<<<<<<<<<
@@ -2563,7 +2563,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
 
-    /* "Orange/preprocess/_discretize.pyx":70
+    /* "Arithmos/preprocess/_discretize.pyx":70
  *     cdef np.float64_t log2 = 1./log(2.)
  *     for j in range(D.shape[0]):
  *         t = D[j]             # <<<<<<<<<<<<<<
@@ -2573,7 +2573,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
     __pyx_t_5 = __pyx_v_j;
     __pyx_v_t = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_D.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_D.diminfo[0].strides));
 
-    /* "Orange/preprocess/_discretize.pyx":71
+    /* "Arithmos/preprocess/_discretize.pyx":71
  *     for j in range(D.shape[0]):
  *         t = D[j]
  *         if t > 0.:             # <<<<<<<<<<<<<<
@@ -2583,7 +2583,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
     __pyx_t_6 = ((__pyx_v_t > 0.) != 0);
     if (__pyx_t_6) {
 
-      /* "Orange/preprocess/_discretize.pyx":72
+      /* "Arithmos/preprocess/_discretize.pyx":72
  *         t = D[j]
  *         if t > 0.:
  *             if t > 1.0: t = 1.0             # <<<<<<<<<<<<<<
@@ -2595,7 +2595,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
         __pyx_v_t = 1.0;
       }
 
-      /* "Orange/preprocess/_discretize.pyx":73
+      /* "Arithmos/preprocess/_discretize.pyx":73
  *         if t > 0.:
  *             if t > 1.0: t = 1.0
  *             R -= t*log(t)*log2             # <<<<<<<<<<<<<<
@@ -2604,7 +2604,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
  */
       __pyx_v_R = (__pyx_v_R - ((__pyx_v_t * log(__pyx_v_t)) * __pyx_v_log2));
 
-      /* "Orange/preprocess/_discretize.pyx":71
+      /* "Arithmos/preprocess/_discretize.pyx":71
  *     for j in range(D.shape[0]):
  *         t = D[j]
  *         if t > 0.:             # <<<<<<<<<<<<<<
@@ -2614,7 +2614,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
     }
   }
 
-  /* "Orange/preprocess/_discretize.pyx":74
+  /* "Arithmos/preprocess/_discretize.pyx":74
  *             if t > 1.0: t = 1.0
  *             R -= t*log(t)*log2
  *     return R             # <<<<<<<<<<<<<<
@@ -2628,7 +2628,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_discretize.pyx":61
+  /* "Arithmos/preprocess/_discretize.pyx":61
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized1(np.ndarray[np.float64_t, ndim=1] D):             # <<<<<<<<<<<<<<
@@ -2645,7 +2645,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_D.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.preprocess._discretize.entropy_normalized1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._discretize.entropy_normalized1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2656,7 +2656,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_discretize.pyx":79
+/* "Arithmos/preprocess/_discretize.pyx":79
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized2(np.ndarray[np.float64_t, ndim=2] D):             # <<<<<<<<<<<<<<
@@ -2665,15 +2665,15 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_2entropy_normalized
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_5entropy_normalized2(PyObject *__pyx_self, PyObject *__pyx_v_D); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_11_discretize_4entropy_normalized2[] = "entropy_normalized2(ndarray D)\n\n    Compute entropy of distributions in `D`.\n    Rows in `D` must be a distribution (i.e. sum to 1.0 over `axis`).\n    ";
-static PyMethodDef __pyx_mdef_6Orange_10preprocess_11_discretize_5entropy_normalized2 = {"entropy_normalized2", (PyCFunction)__pyx_pw_6Orange_10preprocess_11_discretize_5entropy_normalized2, METH_O, __pyx_doc_6Orange_10preprocess_11_discretize_4entropy_normalized2};
-static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_5entropy_normalized2(PyObject *__pyx_self, PyObject *__pyx_v_D) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_5entropy_normalized2(PyObject *__pyx_self, PyObject *__pyx_v_D); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_11_discretize_4entropy_normalized2[] = "entropy_normalized2(ndarray D)\n\n    Compute entropy of distributions in `D`.\n    Rows in `D` must be a distribution (i.e. sum to 1.0 over `axis`).\n    ";
+static PyMethodDef __pyx_mdef_6Arithmos_10preprocess_11_discretize_5entropy_normalized2 = {"entropy_normalized2", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_11_discretize_5entropy_normalized2, METH_O, __pyx_doc_6Arithmos_10preprocess_11_discretize_4entropy_normalized2};
+static PyObject *__pyx_pw_6Arithmos_10preprocess_11_discretize_5entropy_normalized2(PyObject *__pyx_self, PyObject *__pyx_v_D) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("entropy_normalized2 (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_D), __pyx_ptype_5numpy_ndarray, 1, "D", 0))) __PYX_ERR(0, 79, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized2(__pyx_self, ((PyArrayObject *)__pyx_v_D));
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_11_discretize_4entropy_normalized2(__pyx_self, ((PyArrayObject *)__pyx_v_D));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2684,7 +2684,7 @@ static PyObject *__pyx_pw_6Orange_10preprocess_11_discretize_5entropy_normalized
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized2(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D) {
+static PyObject *__pyx_pf_6Arithmos_10preprocess_11_discretize_4entropy_normalized2(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_D) {
   PyArrayObject *__pyx_v_R = 0;
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_v_j;
@@ -2728,7 +2728,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
   }
   __pyx_pybuffernd_D.diminfo[0].strides = __pyx_pybuffernd_D.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_D.diminfo[0].shape = __pyx_pybuffernd_D.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_D.diminfo[1].strides = __pyx_pybuffernd_D.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_D.diminfo[1].shape = __pyx_pybuffernd_D.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/preprocess/_discretize.pyx":84
+  /* "Arithmos/preprocess/_discretize.pyx":84
  *     Rows in `D` must be a distribution (i.e. sum to 1.0 over `axis`).
  *     """
  *     cdef np.ndarray[np.float64_t, ndim=1] R = numpy.zeros(D.shape[0])             # <<<<<<<<<<<<<<
@@ -2802,7 +2802,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
   __pyx_v_R = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":87
+  /* "Arithmos/preprocess/_discretize.pyx":87
  *     cdef Py_ssize_t i,j
  *     cdef np.float64_t t
  *     cdef np.float64_t log2 = 1./log(2.)             # <<<<<<<<<<<<<<
@@ -2816,7 +2816,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
   }
   __pyx_v_log2 = (1. / __pyx_t_7);
 
-  /* "Orange/preprocess/_discretize.pyx":88
+  /* "Arithmos/preprocess/_discretize.pyx":88
  *     cdef np.float64_t t
  *     cdef np.float64_t log2 = 1./log(2.)
  *     for i in range(D.shape[0]):             # <<<<<<<<<<<<<<
@@ -2828,7 +2828,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
   for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
     __pyx_v_i = __pyx_t_10;
 
-    /* "Orange/preprocess/_discretize.pyx":89
+    /* "Arithmos/preprocess/_discretize.pyx":89
  *     cdef np.float64_t log2 = 1./log(2.)
  *     for i in range(D.shape[0]):
  *         for j in range(D.shape[1]):             # <<<<<<<<<<<<<<
@@ -2840,7 +2840,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
     for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
       __pyx_v_j = __pyx_t_13;
 
-      /* "Orange/preprocess/_discretize.pyx":90
+      /* "Arithmos/preprocess/_discretize.pyx":90
  *     for i in range(D.shape[0]):
  *         for j in range(D.shape[1]):
  *             t = D[i,j]             # <<<<<<<<<<<<<<
@@ -2851,7 +2851,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
       __pyx_t_15 = __pyx_v_j;
       __pyx_v_t = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_D.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_D.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_D.diminfo[1].strides));
 
-      /* "Orange/preprocess/_discretize.pyx":91
+      /* "Arithmos/preprocess/_discretize.pyx":91
  *         for j in range(D.shape[1]):
  *             t = D[i,j]
  *             if t > 0.:             # <<<<<<<<<<<<<<
@@ -2861,7 +2861,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
       __pyx_t_16 = ((__pyx_v_t > 0.) != 0);
       if (__pyx_t_16) {
 
-        /* "Orange/preprocess/_discretize.pyx":92
+        /* "Arithmos/preprocess/_discretize.pyx":92
  *             t = D[i,j]
  *             if t > 0.:
  *                 if t > 1.0: t = 1.0             # <<<<<<<<<<<<<<
@@ -2873,7 +2873,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
           __pyx_v_t = 1.0;
         }
 
-        /* "Orange/preprocess/_discretize.pyx":93
+        /* "Arithmos/preprocess/_discretize.pyx":93
  *             if t > 0.:
  *                 if t > 1.0: t = 1.0
  *                 R[i] -= t*log(t)*log2             # <<<<<<<<<<<<<<
@@ -2882,7 +2882,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
         __pyx_t_17 = __pyx_v_i;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_R.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_R.diminfo[0].strides) -= ((__pyx_v_t * log(__pyx_v_t)) * __pyx_v_log2);
 
-        /* "Orange/preprocess/_discretize.pyx":91
+        /* "Arithmos/preprocess/_discretize.pyx":91
  *         for j in range(D.shape[1]):
  *             t = D[i,j]
  *             if t > 0.:             # <<<<<<<<<<<<<<
@@ -2893,7 +2893,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
     }
   }
 
-  /* "Orange/preprocess/_discretize.pyx":94
+  /* "Arithmos/preprocess/_discretize.pyx":94
  *                 if t > 1.0: t = 1.0
  *                 R[i] -= t*log(t)*log2
  *     return R             # <<<<<<<<<<<<<<
@@ -2903,7 +2903,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
   __pyx_r = ((PyObject *)__pyx_v_R);
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_discretize.pyx":79
+  /* "Arithmos/preprocess/_discretize.pyx":79
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized2(np.ndarray[np.float64_t, ndim=2] D):             # <<<<<<<<<<<<<<
@@ -2925,7 +2925,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_11_discretize_4entropy_normalized
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_D.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_R.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.preprocess._discretize.entropy_normalized2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._discretize.entropy_normalized2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5443,8 +5443,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
   {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
-  {&__pyx_n_s_Orange_preprocess__discretize, __pyx_k_Orange_preprocess__discretize, sizeof(__pyx_k_Orange_preprocess__discretize), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_preprocess__discretize_py, __pyx_k_Orange_preprocess__discretize_py, sizeof(__pyx_k_Orange_preprocess__discretize_py), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_preprocess__discretize, __pyx_k_Arithmos_preprocess__discretize, sizeof(__pyx_k_Arithmos_preprocess__discretize), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_preprocess__discretize_py, __pyx_k_Arithmos_preprocess__discretize_py, sizeof(__pyx_k_Arithmos_preprocess__discretize_py), 0, 0, 1, 0},
   {&__pyx_n_s_R, __pyx_k_R, sizeof(__pyx_k_R), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
@@ -5499,7 +5499,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/preprocess/_discretize.pyx":16
+  /* "Arithmos/preprocess/_discretize.pyx":16
  * 
  *     if n >= llen: #n is greater than distributions
  *         return [(v1+v2)/2 for v1,v2 in zip(dist[0], dist[0][1:])]             # <<<<<<<<<<<<<<
@@ -5607,7 +5607,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "Orange/preprocess/_discretize.pyx":11
+  /* "Arithmos/preprocess/_discretize.pyx":11
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def split_eq_freq(np.ndarray[np.float64_t, ndim=2] dist not None, int n):             # <<<<<<<<<<<<<<
@@ -5617,9 +5617,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__11 = PyTuple_Pack(15, __pyx_n_s_dist, __pyx_n_s_n, __pyx_n_s_llen, __pyx_n_s_N, __pyx_n_s_toGo, __pyx_n_s_inthis, __pyx_n_s_prevel, __pyx_n_s_inone, __pyx_n_s_points, __pyx_n_s_i, __pyx_n_s_v, __pyx_n_s_k, __pyx_n_s_vn, __pyx_n_s_v1, __pyx_n_s_v2); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_preprocess__discretize_py, __pyx_n_s_split_eq_freq, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(2, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_preprocess__discretize_py, __pyx_n_s_split_eq_freq, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 11, __pyx_L1_error)
 
-  /* "Orange/preprocess/_discretize.pyx":61
+  /* "Arithmos/preprocess/_discretize.pyx":61
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized1(np.ndarray[np.float64_t, ndim=1] D):             # <<<<<<<<<<<<<<
@@ -5629,9 +5629,9 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__13 = PyTuple_Pack(5, __pyx_n_s_D, __pyx_n_s_R, __pyx_n_s_j, __pyx_n_s_t, __pyx_n_s_log2); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_preprocess__discretize_py, __pyx_n_s_entropy_normalized1, 61, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_preprocess__discretize_py, __pyx_n_s_entropy_normalized1, 61, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 61, __pyx_L1_error)
 
-  /* "Orange/preprocess/_discretize.pyx":79
+  /* "Arithmos/preprocess/_discretize.pyx":79
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized2(np.ndarray[np.float64_t, ndim=2] D):             # <<<<<<<<<<<<<<
@@ -5641,7 +5641,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(6, __pyx_n_s_D, __pyx_n_s_R, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_t, __pyx_n_s_log2); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_preprocess__discretize_py, __pyx_n_s_entropy_normalized2, 79, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_preprocess__discretize_py, __pyx_n_s_entropy_normalized2, 79, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5882,14 +5882,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__preprocess___discretize) {
+  if (__pyx_module_is_main_Arithmos__preprocess___discretize) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.preprocess._discretize")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.preprocess._discretize", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.preprocess._discretize")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.preprocess._discretize", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5910,7 +5910,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/preprocess/_discretize.pyx":3
+  /* "Arithmos/preprocess/_discretize.pyx":3
  * #cython: embedsignature=True
  * 
  * import numpy             # <<<<<<<<<<<<<<
@@ -5922,43 +5922,43 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":11
+  /* "Arithmos/preprocess/_discretize.pyx":11
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def split_eq_freq(np.ndarray[np.float64_t, ndim=2] dist not None, int n):             # <<<<<<<<<<<<<<
  * 
  *     cdef int llen = dist.shape[1]
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10preprocess_11_discretize_1split_eq_freq, NULL, __pyx_n_s_Orange_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10preprocess_11_discretize_1split_eq_freq, NULL, __pyx_n_s_Arithmos_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_split_eq_freq, __pyx_t_1) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":61
+  /* "Arithmos/preprocess/_discretize.pyx":61
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized1(np.ndarray[np.float64_t, ndim=1] D):             # <<<<<<<<<<<<<<
  *     """
  *     Compute entropy of distribution in `D` (must be normalized).
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10preprocess_11_discretize_3entropy_normalized1, NULL, __pyx_n_s_Orange_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10preprocess_11_discretize_3entropy_normalized1, NULL, __pyx_n_s_Arithmos_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_entropy_normalized1, __pyx_t_1) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":79
+  /* "Arithmos/preprocess/_discretize.pyx":79
  * @cython.wraparound(False)
  * @cython.boundscheck(False)
  * def entropy_normalized2(np.ndarray[np.float64_t, ndim=2] D):             # <<<<<<<<<<<<<<
  *     """
  *     Compute entropy of distributions in `D`.
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10preprocess_11_discretize_5entropy_normalized2, NULL, __pyx_n_s_Orange_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10preprocess_11_discretize_5entropy_normalized2, NULL, __pyx_n_s_Arithmos_preprocess__discretize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_entropy_normalized2, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_discretize.pyx":1
+  /* "Arithmos/preprocess/_discretize.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * 
  * import numpy
@@ -5983,11 +5983,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.preprocess._discretize", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.preprocess._discretize", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.preprocess._discretize");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.preprocess._discretize");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

@@ -1,11 +1,11 @@
-"""Tree model used by Orange inducers, and Tree interface"""
+"""Tree model used by Arithmos inducers, and Tree interface"""
 
 from collections import OrderedDict
 
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.base import TreeModel as TreeModelInterface
+from Arithmos.base import TreeModel as TreeModelInterface
 
 
 class Node:
@@ -191,7 +191,7 @@ class TreeModel(TreeModelInterface):
         return y
 
     def get_values(self, X):
-        from Orange.classification import _tree_scorers
+        from Arithmos.classification import _tree_scorers
         if sp.isspmatrix_csc(X):
             func = _tree_scorers.compute_predictions_csc
         elif sp.issparse(X):
@@ -298,7 +298,7 @@ class TreeModel(TreeModelInterface):
                         _compute_sizes(child)
 
         def _compile_node(node):
-            from Orange.classification._tree_scorers import NULL_BRANCH
+            from Arithmos.classification._tree_scorers import NULL_BRANCH
 
             # The node is compile into the following code (np.int32)
             # [0] node type: index of type in NODE_TYPES)

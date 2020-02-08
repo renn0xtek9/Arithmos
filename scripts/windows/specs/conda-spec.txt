@@ -1,6 +1,6 @@
 # This list was created by
-# conda create -y -n orange python=3.6.* Arithmos=3.4.4 keyring=9.0 scipy=0.18.1 numpy=1.12.1
-# conda list -n orange --export --explicit --md5
+# conda create -y -n arithmos python=3.6.* Arithmos=3.4.4 keyring=9.0 scipy=0.18.1 numpy=1.12.1
+# conda list -n arithmos --export --explicit --md5
 # ==============================================================================
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>

@@ -8,21 +8,21 @@ from AnyQt.QtCore import Qt, QSize, Signal
 from AnyQt.QtGui import QColor, QPen, QBrush
 from AnyQt.QtWidgets import QGraphicsScene, QGraphicsLineItem, QSizePolicy
 
-from Orange.data import Table, filter, Variable
-from Orange.data.sql.table import SqlTable, LARGE_TABLE, DEFAULT_SAMPLE_TIME
-from Orange.preprocess import Discretize
-from Orange.preprocess.discretize import EqualFreq
-from Orange.statistics.contingency import get_contingency
-from Orange.widgets import gui, settings
-from Orange.widgets.settings import DomainContextHandler, ContextSetting
-from Orange.widgets.utils import to_html
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.data import Table, filter, Variable
+from Arithmos.data.sql.table import SqlTable, LARGE_TABLE, DEFAULT_SAMPLE_TIME
+from Arithmos.preprocess import Discretize
+from Arithmos.preprocess.discretize import EqualFreq
+from Arithmos.statistics.contingency import get_contingency
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.settings import DomainContextHandler, ContextSetting
+from Arithmos.widgets.utils import to_html
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils import (
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils import (
     CanvasText, CanvasRectangle, ViewWithPress, VizRankDialogAttrPair)
-from Orange.widgets.widget import OWWidget, AttributeList, Input, Output
+from Arithmos.widgets.widget import OWWidget, AttributeList, Input, Output
 
 
 class ChiSqStats:

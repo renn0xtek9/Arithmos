@@ -2,7 +2,7 @@
 Miscellaneous (``misc``)
 ########################
 
-.. automodule:: Orange.misc
+.. automodule:: Arithmos.misc
 
 .. toctree::
    :maxdepth: 2

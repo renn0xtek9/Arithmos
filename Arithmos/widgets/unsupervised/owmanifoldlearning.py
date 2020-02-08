@@ -5,14 +5,14 @@ import numpy as np
 from AnyQt.QtWidgets import QWidget, QVBoxLayout
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.projection import (MDS, Isomap, LocallyLinearEmbedding,
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.projection import (MDS, Isomap, LocallyLinearEmbedding,
                                SpectralEmbedding, TSNE)
-from Orange.projection.manifold import TSNEModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
-from Orange.widgets.settings import Setting, SettingProvider
-from Orange.widgets import gui
+from Arithmos.projection.manifold import TSNEModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.widgets.settings import Setting, SettingProvider
+from Arithmos.widgets import gui
 
 
 class ManifoldParametersEditor(QWidget, gui.OWComponent):

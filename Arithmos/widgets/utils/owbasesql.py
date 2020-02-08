@@ -3,14 +3,14 @@ from collections import OrderedDict
 
 from AnyQt.QtWidgets import QLineEdit, QSizePolicy
 
-from Orange.data import Table
-from Orange.data.sql.backend import Backend
-from Orange.data.sql.backend.base import BackendError
-from Orange.widgets import gui, report
-from Orange.widgets.credentials import CredentialManager
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.signals import Output
-from Orange.widgets.widget import OWWidget, Msg
+from Arithmos.data import Table
+from Arithmos.data.sql.backend import Backend
+from Arithmos.data.sql.backend.base import BackendError
+from Arithmos.widgets import gui, report
+from Arithmos.widgets.credentials import CredentialManager
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.signals import Output
+from Arithmos.widgets.widget import OWWidget, Msg
 
 
 class OWBaseSql(OWWidget, openclass=True):

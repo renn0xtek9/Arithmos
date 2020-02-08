@@ -1,9 +1,9 @@
 import numpy as np
 import scipy.sparse as sp
 
-import Orange.data
-from Orange.statistics import distribution, basic_stats
-from Orange.util import Reprable
+import Arithmos.data
+from Arithmos.statistics import distribution, basic_stats
+from Arithmos.util import Reprable
 from .transformation import Transformation, Lookup
 
 __all__ = ["ReplaceUnknowns", "Average", "DoNotImpute", "DropInstances",
@@ -16,7 +16,7 @@ class ReplaceUnknowns(Transformation):
 
     Parameters
     ----------
-    variable : Orange.data.Variable
+    variable : Arithmos.data.Variable
         The target variable for imputation.
     value : int or float
         The value with which to replace the unknown values
@@ -138,13 +138,13 @@ class Default(BaseImputeMethod):
 
 class ReplaceUnknownsModel(Reprable):
     """
-    Replace unknown values with predicted values using a `Orange.base.Model`
+    Replace unknown values with predicted values using a `Arithmos.base.Model`
 
     Parameters
     ----------
-    variable : Orange.data.Variable
+    variable : Arithmos.data.Variable
         The target variable for the imputation.
-    model : Orange.base.Model
+    model : Arithmos.base.Model
         A fitted model predicting `variable`.
     """
     def __init__(self, variable, model):
@@ -153,7 +153,7 @@ class ReplaceUnknownsModel(Reprable):
         self.model = model
 
     def __call__(self, data):
-        if isinstance(data, Orange.data.Instance):
+        if isinstance(data, Arithmos.data.Instance):
             column = np.array([float(data[self.variable])])
         else:
             column = np.array(data.get_column_view(self.variable)[0],
@@ -163,7 +163,7 @@ class ReplaceUnknownsModel(Reprable):
         if not np.any(mask):
             return column
 
-        if isinstance(data, Orange.data.Instance):
+        if isinstance(data, Arithmos.data.Instance):
             predicted = self.model(data)
         else:
             predicted = self.model(data[mask])
@@ -201,7 +201,7 @@ class Model(BaseImputeMethod):
         return Model(self.learner)
 
     def supports_variable(self, variable):
-        domain = Orange.data.Domain([], class_vars=variable)
+        domain = Arithmos.data.Domain([], class_vars=variable)
         return self.learner.check_learner_adequacy(domain)
 
 
@@ -219,7 +219,7 @@ def domain_with_class_var(domain, class_var):
                  if var is not class_var]
     else:
         attrs = domain.attributes
-    return Orange.data.Domain(attrs, class_var)
+    return Arithmos.data.Domain(attrs, class_var)
 
 
 class IsDefined(Transformation):
@@ -239,7 +239,7 @@ class AsValue(BaseImputeMethod):
         if variable.is_discrete:
             fmt = "{var.name}"
             value = "N/A"
-            var = Orange.data.DiscreteVariable(
+            var = Arithmos.data.DiscreteVariable(
                 fmt.format(var=variable),
                 values=variable.values + [value],
                 compute_value=Lookup(
@@ -252,7 +252,7 @@ class AsValue(BaseImputeMethod):
 
         elif variable.is_continuous:
             fmt = "{var.name}_def"
-            indicator_var = Orange.data.DiscreteVariable(
+            indicator_var = Arithmos.data.DiscreteVariable(
                 fmt.format(var=variable),
                 values=("undef", "def"),
                 compute_value=IsDefined(variable),
@@ -273,9 +273,9 @@ class ReplaceUnknownsRandom(Transformation):
 
     Parameters
     ----------
-    variable : Orange.data.Variable
+    variable : Arithmos.data.Variable
         The target variable for imputation.
-    distribution : Orange.statistics.distribution.Distribution
+    distribution : Arithmos.statistics.distribution.Distribution
         The corresponding sampling distribution
     """
     def __init__(self, variable, distribution):

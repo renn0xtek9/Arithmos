@@ -1,8 +1,8 @@
 from AnyQt.QtCore import  Qt
 from AnyQt.QtGui import QColor
 
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.colorpalette import ColorPaletteDlg
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.colorpalette import ColorPaletteDlg
 
 
 class TestColorPalette(WidgetTest):

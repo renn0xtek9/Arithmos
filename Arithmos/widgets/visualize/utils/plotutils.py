@@ -10,7 +10,7 @@ from AnyQt.QtWidgets import (
 
 import pyqtgraph as pg
 
-from Orange.widgets.utils.plot import SELECT, PANNING, ZOOMING
+from Arithmos.widgets.utils.plot import SELECT, PANNING, ZOOMING
 
 
 class TextItem(pg.TextItem):
@@ -225,7 +225,7 @@ class InteractiveViewBox(pg.ViewBox):
             ev.ignore()
 
     def updateAutoRange(self):
-        # indirectly called by the autorange button on the graph
+        # indirectly called by the autarithmos button on the graph
         super().updateAutoRange()
         self.tag_history()
 

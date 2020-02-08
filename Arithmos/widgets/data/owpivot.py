@@ -12,24 +12,24 @@ from AnyQt.QtGui import QStandardItem, QColor, QStandardItemModel
 from AnyQt.QtWidgets import (QTableView, QSizePolicy, QHeaderView,
                              QStyledItemDelegate, QCheckBox, QFrame)
 
-from Orange.data import (Table, DiscreteVariable, Variable, Domain,
+from Arithmos.data import (Table, DiscreteVariable, Variable, Domain,
                          ContinuousVariable)
-from Orange.data.domain import filter_visible
-from Orange.data.filter import FilterContinuous, FilterDiscrete, Values
-from Orange.statistics.util import (nanmin, nanmax, nanunique, nansum, nanvar,
+from Arithmos.data.domain import filter_visible
+from Arithmos.data.filter import FilterContinuous, FilterDiscrete, Values
+from Arithmos.statistics.util import (nanmin, nanmax, nanunique, nansum, nanvar,
                                     nanmean, nanmedian, nanmode, bincount)
-from Orange.util import Enum
-from Orange.widgets import gui
-from Orange.widgets.settings import (Setting, ContextSetting,
+from Arithmos.util import Enum
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import (Setting, ContextSetting,
                                      DomainContextHandler)
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input, Output, Msg
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input, Output, Msg
 
 
-BorderRole = next(gui.OrangeUserRole)
-BorderColorRole = next(gui.OrangeUserRole)
+BorderRole = next(gui.ArithmosUserRole)
+BorderColorRole = next(gui.ArithmosUserRole)
 
 
 class AggregationFunctionsEnum(Enum):

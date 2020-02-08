@@ -1,9 +1,9 @@
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting
 
 class OWWidgetName(widget.OWWidget):
     name = "Widget Name"
-    id = "orange.widgets.widget_category.widget_name"
+    id = "arithmos.widgets.widget_category.widget_name"
     description = ""
     icon = "icons/Unknown.svg"
     priority = 10

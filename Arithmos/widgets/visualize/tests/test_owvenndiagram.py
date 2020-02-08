@@ -8,11 +8,11 @@ from collections import defaultdict
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import (Table, Domain, StringVariable,
+from Arithmos.data import (Table, Domain, StringVariable,
                          DiscreteVariable, ContinuousVariable, Variable)
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.utils.annotated_data import (ANNOTATED_DATA_FEATURE_NAME)
-from Orange.widgets.visualize.owvenndiagram import (reshape_wide,
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.utils.annotated_data import (ANNOTATED_DATA_FEATURE_NAME)
+from Arithmos.widgets.visualize.owvenndiagram import (reshape_wide,
                                                     table_concat,
                                                     varying_between,
                                                     drop_columns,
@@ -20,7 +20,7 @@ from Orange.widgets.visualize.owvenndiagram import (reshape_wide,
                                                     group_table_indices,
                                                     copy_descriptor,
                                                     arrays_equal)
-from Orange.tests import test_filename
+from Arithmos.tests import test_filename
 
 
 class TestVennDiagram(unittest.TestCase):

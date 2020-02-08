@@ -4,9 +4,9 @@
 import unittest
 from unittest.mock import patch, Mock
 
-from Orange.data import Table
-from Orange.widgets.data.owoutliers import OWOutliers
-from Orange.widgets.tests.base import WidgetTest, simulate
+from Arithmos.data import Table
+from Arithmos.widgets.data.owoutliers import OWOutliers
+from Arithmos.widgets.tests.base import WidgetTest, simulate
 
 
 class TestOWOutliers(WidgetTest):
@@ -73,7 +73,7 @@ class TestOWOutliers(WidgetTest):
         simulate.combobox_run_through_all(self.widget.method_combo,
                                           callback=callback)
 
-    @patch("Orange.classification.outlier_detection._OutlierModel.predict")
+    @patch("Arithmos.classification.outlier_detection._OutlierModel.predict")
     def test_memory_error(self, mocked_predict: Mock):
         """
         Handling memory error.
@@ -84,7 +84,7 @@ class TestOWOutliers(WidgetTest):
         self.send_signal(self.widget.Inputs.data, self.iris)
         self.assertTrue(self.widget.Error.memory_error.is_shown())
 
-    @patch("Orange.classification.outlier_detection._OutlierModel.predict")
+    @patch("Arithmos.classification.outlier_detection._OutlierModel.predict")
     def test_singular_cov_error(self, mocked_predict: Mock):
         self.assertFalse(self.widget.Error.singular_cov.is_shown())
         mocked_predict.side_effect = ValueError
@@ -113,8 +113,8 @@ class TestOWOutliers(WidgetTest):
         self.assertEqual(info._StateInfo__input_summary.brief, "")
         self.assertEqual(info._StateInfo__output_summary.brief, "")
 
-    @patch("Orange.widgets.data.owoutliers.OWOutliers.MAX_FEATURES", 3)
-    @patch("Orange.widgets.data.owoutliers.OWOutliers.commit", Mock())
+    @patch("Arithmos.widgets.data.owoutliers.OWOutliers.MAX_FEATURES", 3)
+    @patch("Arithmos.widgets.data.owoutliers.OWOutliers.commit", Mock())
     def test_covariance_enabled(self):
         cov_item = self.widget.method_combo.model().item(self.widget.Covariance)
         self.send_signal(self.widget.Inputs.data, self.iris)

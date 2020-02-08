@@ -5,7 +5,7 @@ import platform
 
 import numpy as np
 
-from Orange.data import Table
+from Arithmos.data import Table
 
 # override method prefix for niceness
 BENCH_METHOD_PREFIX = 'bench'

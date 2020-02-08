@@ -4,7 +4,7 @@ import unittest
 from time import struct_time, mktime
 
 import numpy as np
-from Orange.preprocess.discretize import \
+from Arithmos.preprocess.discretize import \
     _time_binnings, time_binnings, BinDefinition
 
 

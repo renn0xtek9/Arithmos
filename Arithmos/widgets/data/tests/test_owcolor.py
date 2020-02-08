@@ -7,9 +7,9 @@ import numpy as np
 from AnyQt.QtCore import Qt
 from AnyQt.QtGui import QColor
 
-from Orange.data import Table, ContinuousVariable, Domain
-from Orange.widgets.data.owcolor import OWColor, ColorRole, DiscColorTableModel
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.data import Table, ContinuousVariable, Domain
+from Arithmos.widgets.data.owcolor import OWColor, ColorRole, DiscColorTableModel
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWColor(WidgetTest):

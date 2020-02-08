@@ -13,8 +13,8 @@ from community import best_partition
 from sklearn.base import BaseEstimator
 from sklearn.neighbors import NearestNeighbors
 
-from Orange.clustering.clustering import Clustering
-from Orange.data import Table
+from Arithmos.clustering.clustering import Clustering
+from Arithmos.data import Table
 
 
 __all__ = ["Louvain", "matrix_to_knn_graph"]
@@ -137,7 +137,7 @@ class Louvain(Clustering):
 
 
 if __name__ == "__main__":
-    # clustering run on iris data - orange table
+    # clustering run on iris data - arithmos table
     d = Table("iris")
     louvain = Louvain(5)
     clusters = louvain(d)

@@ -4,15 +4,15 @@
 import unittest
 import numpy as np
 
-from Orange.data import DiscreteVariable, ContinuousVariable, Domain
-from Orange.data import Table
-from Orange.classification import LogisticRegressionLearner, SklTreeLearner, NaiveBayesLearner,\
+from Arithmos.data import DiscreteVariable, ContinuousVariable, Domain
+from Arithmos.data import Table
+from Arithmos.classification import LogisticRegressionLearner, SklTreeLearner, NaiveBayesLearner,\
                                   MajorityLearner
-from Orange.evaluation import AUC, CA, Results, Recall, \
+from Arithmos.evaluation import AUC, CA, Results, Recall, \
     Precision, TestOnTrainingData, scoring, LogLoss, F1, CrossValidation
-from Orange.evaluation.scoring import Specificity
-from Orange.preprocess import discretize, Discretize
-from Orange.tests import test_filename
+from Arithmos.evaluation.scoring import Specificity
+from Arithmos.preprocess import discretize, Discretize
+from Arithmos.tests import test_filename
 
 
 class TestScoreMetaType(unittest.TestCase):
@@ -364,8 +364,8 @@ class TestLogLoss(unittest.TestCase):
         probab = results.probabilities[0]
 
         ll_calc = self._log_loss(actual, probab)
-        ll_orange = LogLoss(results)
-        self.assertAlmostEqual(ll_calc, ll_orange[0])
+        ll_arithmos = LogLoss(results)
+        self.assertAlmostEqual(ll_calc, ll_arithmos[0])
 
 
 class TestSpecificity(unittest.TestCase):

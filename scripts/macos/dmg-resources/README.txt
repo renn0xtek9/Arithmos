@@ -2,7 +2,7 @@ OSX dmg installer resources
 ===========================
 
 This directory contains the binary resources to create an
-Orange dmg installer.
+Arithmos dmg installer.
 
 
 DS_Store

@@ -5,12 +5,12 @@ import sys
 from AnyQt.QtCore import QMimeData, QUrl, QPoint, Qt
 from AnyQt.QtGui import QDragEnterEvent, QDropEvent
 
-from Orange.data import Table
-from Orange.classification import LogisticRegressionLearner
-from Orange.tests import named_file
-from Orange.widgets.data.owpythonscript import OWPythonScript, read_file_content
-from Orange.widgets.tests.base import WidgetTest, DummySignalManager
-from Orange.widgets.widget import OWWidget
+from Arithmos.data import Table
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.tests import named_file
+from Arithmos.widgets.data.owpythonscript import OWPythonScript, read_file_content
+from Arithmos.widgets.tests.base import WidgetTest, DummySignalManager
+from Arithmos.widgets.widget import OWWidget
 
 
 class TestOWPythonScript(WidgetTest):

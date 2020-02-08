@@ -1,7 +1,7 @@
 import sklearn.neural_network as skl_nn
-from Orange.base import NNBase
-from Orange.regression import SklLearner
-from Orange.classification.neural_network import NIterCallbackMixin
+from Arithmos.base import NNBase
+from Arithmos.regression import SklLearner
+from Arithmos.classification.neural_network import NIterCallbackMixin
 
 __all__ = ["NNRegressionLearner"]
 
@@ -15,5 +15,5 @@ class NNRegressionLearner(NNBase, SklLearner):
 
     def _initialize_wrapped(self):
         clf = SklLearner._initialize_wrapped(self)
-        clf.orange_callback = getattr(self, "callback", None)
+        clf.arithmos_callback = getattr(self, "callback", None)
         return clf

@@ -11,12 +11,12 @@ import scipy.sparse as sp
 
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, DiscreteVariable, StringVariable, \
+from Arithmos.data import Table, Domain, DiscreteVariable, StringVariable, \
     ContinuousVariable
-from Orange.widgets.data.owmergedata import OWMergeData, INSTANCEID, INDEX, \
+from Arithmos.widgets.data.owmergedata import OWMergeData, INSTANCEID, INDEX, \
     MergeDataContextHandler
-from Orange.widgets.tests.base import WidgetTest
-from Orange.tests import test_filename
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.tests import test_filename
 
 
 class TestOWMergeData(WidgetTest):

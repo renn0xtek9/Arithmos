@@ -3,9 +3,9 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table, Domain, StringVariable, DiscreteVariable
-from Orange.data.filter import SameValue
-from Orange.widgets.utils.annotated_data import (
+from Arithmos.data import Table, Domain, StringVariable, DiscreteVariable
+from Arithmos.data.filter import SameValue
+from Arithmos.widgets.utils.annotated_data import (
     create_annotated_table, create_groups_table, ANNOTATED_DATA_FEATURE_NAME
 )
 

@@ -1,10 +1,10 @@
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting
 
 
 class OWMultiplier(widget.OWWidget):
     name = "Multiplier"
-    id = "orange.widgets.data.multiplier"
+    id = "arithmos.widgets.data.multiplier"
     description = ""
     icon = "icons/Unknown.svg"
     priority = 10

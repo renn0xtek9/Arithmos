@@ -10,15 +10,15 @@ from AnyQt.QtCore import Qt, QSize, QItemSelectionModel, QItemSelection
 import numpy as np
 import sklearn.metrics as skl_metrics
 
-import Orange
-import Orange.evaluation
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import \
+import Arithmos
+import Arithmos.evaluation
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import \
     Setting, ContextSetting, ClassValuesContextHandler
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input, Output
 
 
 def confusion_matrix(res, index):
@@ -26,7 +26,7 @@ def confusion_matrix(res, index):
     Compute confusion matrix
 
     Args:
-        res (Orange.evaluation.Results): evaluation results
+        res (Arithmos.evaluation.Results): evaluation results
         index (int): model index
 
     Returns: Confusion matrix
@@ -40,8 +40,8 @@ def confusion_matrix(res, index):
             res.actual, res.predicted[index], labels=labels)
 
 
-BorderRole = next(gui.OrangeUserRole)
-BorderColorRole = next(gui.OrangeUserRole)
+BorderRole = next(gui.ArithmosUserRole)
+BorderColorRole = next(gui.ArithmosUserRole)
 
 
 class BorderedItemDelegate(QStyledItemDelegate):
@@ -89,11 +89,11 @@ class OWConfusionMatrix(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        evaluation_results = Input("Evaluation Results", Orange.evaluation.Results)
+        evaluation_results = Input("Evaluation Results", Arithmos.evaluation.Results)
 
     class Outputs:
-        selected_data = Output("Selected Data", Orange.data.Table, default=True)
-        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Orange.data.Table)
+        selected_data = Output("Selected Data", Arithmos.data.Table, default=True)
+        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Arithmos.data.Table)
 
     quantities = ["Number of instances",
                   "Proportion of predicted",
@@ -257,7 +257,7 @@ class OWConfusionMatrix(widget.OWWidget):
 
         nan_values = False
         if results is not None:
-            assert isinstance(results, Orange.evaluation.Results)
+            assert isinstance(results, Arithmos.evaluation.Results)
             if np.any(np.isnan(results.actual)) or \
                     np.any(np.isnan(results.predicted)):
                 # Error out here (could filter them out with a warning
@@ -371,7 +371,7 @@ class OWConfusionMatrix(widget.OWWidget):
 
         if self.append_predictions:
             extra.append(predicted.reshape(-1, 1))
-            var = Orange.data.DiscreteVariable(
+            var = Arithmos.data.DiscreteVariable(
                 "{}({})".format(class_var.name, learner_name),
                 class_var.values
             )
@@ -381,11 +381,11 @@ class OWConfusionMatrix(widget.OWWidget):
                         self.results.probabilities is not None:
             probs = self.results.probabilities[self.selected_learner[0]]
             extra.append(np.array(probs, dtype=object))
-            pvars = [Orange.data.ContinuousVariable("p({})".format(value))
+            pvars = [Arithmos.data.ContinuousVariable("p({})".format(value))
                      for value in class_var.values]
             metas = metas + tuple(pvars)
 
-        domain = Orange.data.Domain(self.data.domain.attributes,
+        domain = Arithmos.data.Domain(self.data.domain.attributes,
                                     self.data.domain.class_vars,
                                     metas)
         data = self.data.transform(domain)
@@ -525,5 +525,5 @@ class OWConfusionMatrix(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.widgets.evaluate.utils import results_for_preview
+    from Arithmos.widgets.evaluate.utils import results_for_preview
     WidgetPreview(OWConfusionMatrix).run(results_for_preview("iris"))

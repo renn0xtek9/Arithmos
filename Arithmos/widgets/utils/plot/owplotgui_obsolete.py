@@ -21,7 +21,7 @@ This module contains functions and classes for creating GUI elements commonly us
 .. autoclass:: OWButton
     :show-inheritance:
 
-.. autoclass:: OrangeWidgets.plot.OWPlotGUI
+.. autoclass:: ArithmosWidgets.plot.OWPlotGUI
     :members:
 
 '''
@@ -32,11 +32,11 @@ import unicodedata
 from functools import reduce
 from operator import itemgetter
 
-from Orange.data import ContinuousVariable, DiscreteVariable, Variable
-from Orange.widgets import gui
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.utils.listfilter import variables_filter
-from Orange.widgets.utils.itemmodels import DomainModel
+from Arithmos.data import ContinuousVariable, DiscreteVariable, Variable
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.utils.listfilter import variables_filter
+from Arithmos.widgets.utils.itemmodels import DomainModel
 
 from AnyQt.QtWidgets import QWidget, QToolButton, QVBoxLayout, QHBoxLayout, QMenu, QAction,\
     QDialog, QSizePolicy, QPushButton, QListView

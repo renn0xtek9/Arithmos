@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   entry_points:
-    - orange-canvas = Orange.canvas.__main__:main
+    - arithmos-canvas = Arithmos.canvas.__main__:main
 
   osx_is_app: True
 
@@ -54,8 +54,8 @@ requirements:
     - opentsne      >=0.3.11
     - pandas
     - pyyaml
-    - orange-canvas-core  >=0.1.9
-    - orange-widget-base  >=4.2.0
+    - arithmos-canvas-core  >=0.1.9
+    - arithmos-widget-base  >=4.2.0
     - openpyxl
     - python-louvain      >=0.13
     - xlsxwriter
@@ -63,37 +63,37 @@ requirements:
 test:
   # Python imports
   imports:
-    - Orange
-    - Orange.canvas.config
+    - Arithmos
+    - Arithmos.canvas.config
 
-    - Orange.widgets
-    - Orange.widgets.data
-    - Orange.widgets.evaluate
-    - Orange.widgets.model
-    - Orange.widgets.unsupervised
-    - Orange.widgets.visualize
+    - Arithmos.widgets
+    - Arithmos.widgets.data
+    - Arithmos.widgets.evaluate
+    - Arithmos.widgets.model
+    - Arithmos.widgets.unsupervised
+    - Arithmos.widgets.visualize
 
-    - Orange.classification
-    - Orange.clustering
-    - Orange.data
-    - Orange.distance
-    - Orange.evaluation
-    - Orange.modelling
-    - Orange.preprocess
-    - Orange.projection
-    - Orange.regression
-    - Orange.statistics
+    - Arithmos.classification
+    - Arithmos.clustering
+    - Arithmos.data
+    - Arithmos.distance
+    - Arithmos.evaluation
+    - Arithmos.modelling
+    - Arithmos.preprocess
+    - Arithmos.projection
+    - Arithmos.regression
+    - Arithmos.statistics
 
   commands:
-    - python -m unittest -v Orange.tests
-    - orange-canvas --help
+    - python -m unittest -v Arithmos.tests
+    - arithmos-canvas --help
 
 app:
-  entry: orange-canvas
+  entry: arithmos-canvas
   summary: 'data visualization and data analysis tool'
   icon: ../distribute/icon-48.png
 
 about:
-  home: http://orange.biolab.si/
+  home: http://arithmos.biolab.si/
   license: GNU General Public License v3 or later (GPLv3+)
-  summary: 'Orange, a component-based data mining framework.'
+  summary: 'Arithmos, a component-based data mining framework.'

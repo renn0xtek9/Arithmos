@@ -8,14 +8,14 @@ import numpy as np
 
 from AnyQt.QtCore import Qt, QModelIndex
 
-from Orange.data import \
+from Arithmos.data import \
     Domain, \
     ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable
-from Orange.widgets.utils.itemmodels import \
+from Arithmos.widgets.utils.itemmodels import \
     AbstractSortTableModel, PyTableModel,\
     PyListModel, VariableListModel, DomainModel,\
     _as_contiguous_range
-from Orange.widgets.gui import TableVariable
+from Arithmos.widgets.gui import TableVariable
 
 
 class TestUtils(unittest.TestCase):

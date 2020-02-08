@@ -1,7 +1,7 @@
-from Orange.widgets.widget import Input, Msg
-from Orange.misc import DistMatrix
-from Orange.widgets.utils.save.owsavebase import OWSaveBase
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Msg
+from Arithmos.misc import DistMatrix
+from Arithmos.widgets.utils.save.owsavebase import OWSaveBase
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWSaveDistances(OWSaveBase):
@@ -56,6 +56,6 @@ class OWSaveDistances(OWSaveBase):
 
 
 if __name__ == "__main__":
-    from Orange.data import Table
-    from Orange.distance import Euclidean
+    from Arithmos.data import Table
+    from Arithmos.distance import Euclidean
     WidgetPreview(OWSaveDistances).run(Euclidean(Table("iris")))

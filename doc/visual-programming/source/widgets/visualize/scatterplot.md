@@ -39,7 +39,7 @@ Here is an example of the **Scatter Plot** widget if the *Show class density* an
 Intelligent Data Visualization
 ------------------------------
 
-If a dataset has many attributes, it is impossible to manually scan through all the pairs to find interesting or useful scatter plots. Orange implements intelligent data visualization with the **Find Informative Projections** option in the widget.
+If a dataset has many attributes, it is impossible to manually scan through all the pairs to find interesting or useful scatter plots. Arithmos implements intelligent data visualization with the **Find Informative Projections** option in the widget.
 
 If a categorical variable is selected in the Color section, the [score](http://eprints.fri.uni-lj.si/210/) is computed as follows. For each data instance, the method finds 10 nearest neighbors in the projected 2D space, that is, on the combination of attribute pairs. It then checks how many of them have the same color. The total score of the projection is then the average number of same-colored neighbors.
 
@@ -63,7 +63,7 @@ Signal data outputs a data table with an additional column that contains group i
 Explorative Data Analysis
 -------------------------
 
-The **Scatter Plot**, as the rest of Orange widgets, supports zooming-in and out of part of the plot and a manual selection of data instances. These functions are available in the lower left corner of the widget.
+The **Scatter Plot**, as the rest of Arithmos widgets, supports zooming-in and out of part of the plot and a manual selection of data instances. These functions are available in the lower left corner of the widget.
 
 The default tool is *Select*, which selects data instances within the chosen rectangular area. *Pan* enables you to move the scatter plot around the pane. With *Zoom* you can zoom in and out of the pane with a mouse scroll, while *Reset zoom* resets the visualization to its optimal size. An example of a simple schema, where we selected data instances from a rectangular region and sent them to the [Data Table](../data/datatable.md) widget, is shown below. Notice that the scatter plot doesn't show all 52 data instances, because some data instances overlap (they have the same values for both attributes used).
 

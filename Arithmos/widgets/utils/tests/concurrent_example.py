@@ -4,12 +4,12 @@ from types import SimpleNamespace as namespace
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils.widget import OWDataProjectionWidget
+from Arithmos.data import Table
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils.widget import OWDataProjectionWidget
 
 
 class Result(namespace):

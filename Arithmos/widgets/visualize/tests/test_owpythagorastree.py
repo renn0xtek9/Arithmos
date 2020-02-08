@@ -4,21 +4,21 @@ import unittest
 
 from os import path
 
-from Orange.classification.random_forest import RandomForestLearner
-from Orange.data import Table
-from Orange.modelling import TreeLearner
-from Orange.regression.random_forest import RandomForestRegressionLearner
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owpythagorastree import OWPythagorasTree
-from Orange.widgets.visualize.owpythagoreanforest import OWPythagoreanForest
-from Orange.widgets.visualize.pythagorastreeviewer import (
+from Arithmos.classification.random_forest import RandomForestLearner
+from Arithmos.data import Table
+from Arithmos.modelling import TreeLearner
+from Arithmos.regression.random_forest import RandomForestRegressionLearner
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owpythagorastree import OWPythagorasTree
+from Arithmos.widgets.visualize.owpythagoreanforest import OWPythagoreanForest
+from Arithmos.widgets.visualize.pythagorastreeviewer import (
     PythagorasTree,
     Point,
     Square,
     SquareGraphicsItem,
 )
-from Orange.widgets.visualize.utils.owlegend import (
+from Arithmos.widgets.visualize.utils.owlegend import (
     OWDiscreteLegend,
     OWContinuousLegend,
 )

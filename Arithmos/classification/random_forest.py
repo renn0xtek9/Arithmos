@@ -1,10 +1,10 @@
 import sklearn.ensemble as skl_ensemble
 
-from Orange.base import RandomForestModel
-from Orange.classification import SklLearner, SklModel
-from Orange.classification.tree import SklTreeClassifier
-from Orange.data import Variable, DiscreteVariable
-from Orange.preprocess.score import LearnerScorer
+from Arithmos.base import RandomForestModel
+from Arithmos.classification import SklLearner, SklModel
+from Arithmos.classification.tree import SklTreeClassifier
+from Arithmos.data import Variable, DiscreteVariable
+from Arithmos.preprocess.score import LearnerScorer
 
 __all__ = ["RandomForestLearner"]
 

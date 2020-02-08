@@ -1,7 +1,7 @@
 import logging
 from contextlib import contextmanager
 
-from Orange.util import Registry
+from Arithmos.util import Registry
 
 log = logging.getLogger(__name__)
 

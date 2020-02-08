@@ -1,8 +1,8 @@
-.. py:currentmodule:: Orange.evaluation.testing
+.. py:currentmodule:: Arithmos.evaluation.testing
 
 ####################################################
 Sampling procedures for testing models (``testing``)
 ####################################################
 
-.. automodule:: Orange.evaluation.testing
+.. automodule:: Arithmos.evaluation.testing
     :members:

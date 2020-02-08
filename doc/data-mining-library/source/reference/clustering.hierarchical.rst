@@ -1,4 +1,4 @@
-.. py:currentmodule:: Orange.clustering.hierarchical
+.. py:currentmodule:: Arithmos.clustering.hierarchical
 
 ###############################
 Hierarchical (``hierarchical``)
@@ -11,11 +11,11 @@ Example
 =======
 
 The following example shows clustering of the Iris data with distance
-matrix computed with the :obj:`Orange.distance.Euclidean` distance
+matrix computed with the :obj:`Arithmos.distance.Euclidean` distance
 and clustering using average linkage.
 
-    >>> from Orange import data, distance
-    >>> from Orange.clustering import hierarchical
+    >>> from Arithmos import data, distance
+    >>> from Arithmos.clustering import hierarchical
     >>> data = data.Table('iris')
     >>> dist_matrix = distance.Euclidean(data)
     >>> hierar = hierarchical.HierarchicalClustering(n_clusters=3)

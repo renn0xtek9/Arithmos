@@ -1,10 +1,10 @@
 import numpy as np
 
-from Orange.classification.sgd import SGDClassificationLearner
-from Orange.data import Variable
-from Orange.modelling import SklFitter
-from Orange.preprocess.score import LearnerScorer
-from Orange.regression import SGDRegressionLearner
+from Arithmos.classification.sgd import SGDClassificationLearner
+from Arithmos.data import Variable
+from Arithmos.modelling import SklFitter
+from Arithmos.preprocess.score import LearnerScorer
+from Arithmos.regression import SGDRegressionLearner
 
 __all__ = ['SGDLearner']
 

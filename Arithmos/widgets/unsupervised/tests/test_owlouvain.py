@@ -2,11 +2,11 @@ from unittest.mock import patch
 
 import numpy as np
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.preprocess import Normalize
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import table_dense_sparse, simulate
-from Orange.widgets.unsupervised.owlouvainclustering import OWLouvainClustering
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.preprocess import Normalize
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import table_dense_sparse, simulate
+from Arithmos.widgets.unsupervised.owlouvainclustering import OWLouvainClustering
 from sklearn.utils import check_random_state
 
 # Deterministic tests
@@ -190,7 +190,7 @@ class TestOWLouvain(WidgetTest):
         # Enable checkbox
         self.widget.controls.normalize.setChecked(True)
         self.assertTrue(self.widget.controls.normalize.isChecked())
-        with patch("Orange.preprocess.Normalize", wraps=Normalize) as normalize:
+        with patch("Arithmos.preprocess.Normalize", wraps=Normalize) as normalize:
             self.send_signal(self.widget.Inputs.data, data)
             self.wait_until_stop_blocking()
             self.assertTrue(self.widget.controls.normalize.isEnabled())
@@ -199,7 +199,7 @@ class TestOWLouvain(WidgetTest):
         # Disable checkbox
         self.widget.controls.normalize.setChecked(False)
         self.assertFalse(self.widget.controls.normalize.isChecked())
-        with patch("Orange.preprocess.Normalize", wraps=Normalize) as normalize:
+        with patch("Arithmos.preprocess.Normalize", wraps=Normalize) as normalize:
             self.send_signal(self.widget.Inputs.data, data)
             self.wait_until_stop_blocking()
             self.assertTrue(self.widget.controls.normalize.isEnabled())

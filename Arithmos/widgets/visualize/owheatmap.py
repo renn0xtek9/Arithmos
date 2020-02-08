@@ -27,26 +27,26 @@ from AnyQt.QtCore import (
 )
 import pyqtgraph as pg
 
-from orangewidget.utils.combobox import ComboBox
+from arithmoswidget.utils.combobox import ComboBox
 
-from Orange.data import Domain, Table
-from Orange.data.sql.table import SqlTable
-import Orange.distance
+from Arithmos.data import Domain, Table
+from Arithmos.data.sql.table import SqlTable
+import Arithmos.distance
 
-from Orange.clustering import hierarchical, kmeans
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.stickygraphicsview import StickyGraphicsView
-from Orange.widgets.utils import colorbrewer
+from Arithmos.clustering import hierarchical, kmeans
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.stickygraphicsview import StickyGraphicsView
+from Arithmos.widgets.utils import colorbrewer
 
-from Orange.widgets.utils.graphicstextlist import scaled, TextListWidget
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets.utils.graphicstextlist import scaled, TextListWidget
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.unsupervised.owhierarchicalclustering import \
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.unsupervised.owhierarchicalclustering import \
     DendrogramWidget
-from Orange.widgets.unsupervised.owdistancemap import TextList as TextListWidget
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input, Output
+from Arithmos.widgets.unsupervised.owdistancemap import TextList as TextListWidget
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input, Output
 
 
 def kmeans_compress(X, k=50):
@@ -244,7 +244,7 @@ class ColumnPart(NamedTuple):
     """
     title: Optional[str]
     indices: Sequence[int]
-    domain: Sequence[Orange.data.Variable]
+    domain: Sequence[Arithmos.data.Variable]
     cluster: Optional[hierarchical.Tree] = None
     cluster_ordered: Optional[hierarchical.Tree] = None
 
@@ -547,7 +547,7 @@ class OWHeatMap(widget.OWWidget):
 
         self.row_split_model = DomainModel(
             placeholder="(None)",
-            valid_types=(Orange.data.DiscreteVariable,),
+            valid_types=(Arithmos.data.DiscreteVariable,),
             parent=self,
         )
         self.row_split_cb = cb = ComboBox(
@@ -846,7 +846,7 @@ class OWHeatMap(widget.OWWidget):
                 need_dist = cluster is None or (ordered and cluster_ord is None)
                 if need_dist:
                     subset = data[row.indices]
-                    matrix = Orange.distance.Euclidean(subset)
+                    matrix = Arithmos.distance.Euclidean(subset)
 
                 if cluster is None:
                     assert len(matrix) < self.MaxClustering
@@ -879,8 +879,8 @@ class OWHeatMap(widget.OWWidget):
 
         matrix = None
         if need_dist:
-            data = Orange.distance._preprocess(data)
-            matrix = Orange.distance.PearsonR(data, axis=0)
+            data = Arithmos.distance._preprocess(data)
+            matrix = Arithmos.distance.PearsonR(data, axis=0)
             # nan values break clustering below
             matrix = np.nan_to_num(matrix)
 
@@ -902,7 +902,7 @@ class OWHeatMap(widget.OWWidget):
         if self.merge_kmeans:
             if self.kmeans_model is None:
                 effective_data = self.input_data.transform(
-                    Orange.data.Domain(
+                    Arithmos.data.Domain(
                         [var for var in self.input_data.domain.attributes
                          if var.is_continuous],
                         self.input_data.domain.class_vars,
@@ -918,8 +918,8 @@ class OWHeatMap(widget.OWWidget):
                     [merge_indices[i] for i in not_empty_indices]
                 if len(merge_indices) != len(self.merge_indices):
                     self.Warning.empty_clusters()
-                effective_data = Orange.data.Table(
-                    Orange.data.Domain(effective_data.domain.attributes),
+                effective_data = Arithmos.data.Table(
+                    Arithmos.data.Domain(effective_data.domain.attributes),
                     self.kmeans_model.centroids[not_empty_indices]
                 )
             else:

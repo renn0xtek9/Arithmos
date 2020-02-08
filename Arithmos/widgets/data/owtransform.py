@@ -1,11 +1,11 @@
 from typing import Optional
 
-from Orange.data import Table, Domain
-from Orange.widgets import gui
-from Orange.widgets.report.report import describe_data
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input, Output, Msg
+from Arithmos.data import Table, Domain
+from Arithmos.widgets import gui
+from Arithmos.widgets.report.report import describe_data
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input, Output, Msg
 
 
 class OWTransform(OWWidget):
@@ -104,7 +104,7 @@ class OWTransform(OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.preprocess import Discretize
+    from Arithmos.preprocess import Discretize
 
     table = Table("iris")
     WidgetPreview(OWTransform).run(

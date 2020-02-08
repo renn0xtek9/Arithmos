@@ -354,7 +354,7 @@ class LegendGradient(QGraphicsWidget):
     Notes
     -----
     .. note:: While the gradient does support any number of colors, any more
-        than 3 is not very readable. This should not be a problem, since Orange
+        than 3 is not very readable. This should not be a problem, since Arithmos
         only implements 2 or 3 colors.
 
     """
@@ -462,7 +462,7 @@ class Legend(Anchorable):
     parent : QGraphicsItem, optional
     orientation : Qt.Orientation, optional
         The default orientation is vertical
-    domain : Orange.data.domain.Domain, optional
+    domain : Arithmos.data.domain.Domain, optional
         This field is left optional as in some cases, we may want to simply
         pass in a list that represents the legend.
     items : Iterable[QColor, str]
@@ -533,7 +533,7 @@ class Legend(Anchorable):
 
         Parameters
         ----------
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
 
         Returns
         -------

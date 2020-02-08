@@ -5,8 +5,8 @@ import unittest
 
 import numpy as np
 import scipy.sparse as sp
-from Orange.data import Table
-from Orange.preprocess import Randomize
+from Arithmos.data import Table
+from Arithmos.preprocess import Randomize
 
 
 class TestRandomizer(unittest.TestCase):

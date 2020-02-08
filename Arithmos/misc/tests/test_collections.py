@@ -1,6 +1,6 @@
 import unittest
 
-from Orange.misc.collections import frozendict
+from Arithmos.misc.collections import frozendict
 
 
 class TestFrozenDict(unittest.TestCase):

@@ -1,6 +1,6 @@
 # List packages that are/would be required for installation
 
---find-links=https://orange.biolab.si/download/files/wheelhouse
+--find-links=https://arithmos.biolab.si/download/files/wheelhouse
 --only-binary numpy,scipy,Bottleneck,scikit-learn,PyQt5
 
 AnyQt==0.0.8

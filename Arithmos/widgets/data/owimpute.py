@@ -16,16 +16,16 @@ from AnyQt.QtWidgets import (
 from AnyQt.QtCore import Qt, QThread, QModelIndex
 from AnyQt.QtCore import pyqtSlot as Slot
 
-import Orange.data
-from Orange.preprocess import impute
-from Orange.base import Learner
-from Orange.widgets import gui, settings
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.utils import concurrent as qconcurrent
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
-from Orange.classification import SimpleTreeLearner
+import Arithmos.data
+from Arithmos.preprocess import impute
+from Arithmos.base import Learner
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.utils import concurrent as qconcurrent
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.classification import SimpleTreeLearner
 
 
 DisplayMethodRole = Qt.UserRole
@@ -119,7 +119,7 @@ VariableState = Dict[VarKey, State]
 
 
 def var_key(var):
-    # type: (Orange.data.Variable) -> Tuple[str, str]
+    # type: (Arithmos.data.Variable) -> Tuple[str, str]
     qname = "{}.{}".format(type(var).__module__, type(var).__name__)
     return qname, var.name
 
@@ -132,11 +132,11 @@ class OWImpute(OWWidget):
     keywords = ["substitute", "missing"]
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
         learner = Input("Learner", Learner)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     class Error(OWWidget.Error):
         imputation_failed = Msg("Imputation failed for '{}'")
@@ -159,7 +159,7 @@ class OWImpute(OWWidget):
 
     def __init__(self):
         super().__init__()
-        self.data = None  # type: Optional[Orange.data.Table]
+        self.data = None  # type: Optional[Arithmos.data.Table]
         self.learner = None  # type: Optional[Learner]
         self.default_learner = SimpleTreeLearner()
         self.modified = False
@@ -394,7 +394,7 @@ class OWImpute(OWWidget):
         assert self.data is not None
 
         def get_variable(variable, future, drop_mask) \
-                -> Optional[List[Orange.data.Variable]]:
+                -> Optional[List[Arithmos.data.Variable]]:
             # Returns a (potentially empty) list of variables,
             # or None on failure that should interrupt the imputation
             assert future.done()
@@ -416,12 +416,12 @@ class OWImpute(OWWidget):
                 newvar = variable
             else:
                 newvar = res
-            if isinstance(newvar, Orange.data.Variable):
+            if isinstance(newvar, Arithmos.data.Variable):
                 newvar = [newvar]
             return newvar
 
         def create_data(attributes, class_vars):
-            domain = Orange.data.Domain(
+            domain = Arithmos.data.Domain(
                 attributes, class_vars, self.data.domain.metas)
             try:
                 return self.data.from_table(domain, self.data[~drop_mask])
@@ -646,4 +646,4 @@ class OWImpute(OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWImpute).run(Orange.data.Table("brown-selected"))
+    WidgetPreview(OWImpute).run(Arithmos.data.Table("brown-selected"))

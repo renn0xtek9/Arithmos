@@ -1,8 +1,8 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.unsupervised.owcorrespondence \
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.unsupervised.owcorrespondence \
     import OWCorrespondenceAnalysis, select_rows
 
 

@@ -1,7 +1,7 @@
 import sklearn.svm as skl_svm
 
-from Orange.regression import SklLearner
-from Orange.preprocess import Normalize
+from Arithmos.regression import SklLearner
+from Arithmos.preprocess import Normalize
 
 __all__ = ["SVRLearner", "LinearSVRLearner", "NuSVRLearner"]
 
@@ -42,10 +42,10 @@ class NuSVRLearner(SklLearner):
 
 
 if __name__ == '__main__':
-    import Orange
+    import Arithmos
 
-    data = Orange.data.Table('housing')
+    data = Arithmos.data.Table('housing')
     learners = [SVRLearner(), LinearSVRLearner(), NuSVRLearner()]
-    res = Orange.evaluation.CrossValidation(data, learners)
-    for l, ca in zip(learners, Orange.evaluation.RMSE(res)):
+    res = Arithmos.evaluation.CrossValidation(data, learners)
+    for l, ca in zip(learners, Arithmos.evaluation.RMSE(res)):
         print("learner: {}\nRMSE: {}\n".format(l, ca))

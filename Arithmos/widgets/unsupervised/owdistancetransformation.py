@@ -1,11 +1,11 @@
 import numpy as np
 from AnyQt.QtCore import Qt
 
-from Orange.util import scale
-from Orange.misc import DistMatrix
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.util import scale
+from Arithmos.misc import DistMatrix
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 class OWDistanceTransformation(widget.OWWidget):
@@ -94,7 +94,7 @@ class OWDistanceTransformation(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    import Orange.distance
-    data = Orange.data.Table("iris")
-    dist = Orange.distance.Euclidean(data)
+    import Arithmos.distance
+    data = Arithmos.data.Table("iris")
+    dist = Arithmos.distance.Euclidean(data)
     WidgetPreview(OWDistanceTransformation).run(dist)

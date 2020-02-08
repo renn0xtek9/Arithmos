@@ -18,8 +18,8 @@ from AnyQt.QtWidgets import (
 )
 from AnyQt.QtCore import Qt, QSize, QRectF, pyqtSignal, PYQT_VERSION
 
-from Orange.widgets import gui
-from Orange.widgets.utils import colorbrewer
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils import colorbrewer
 
 DefaultRGBColors = [
     (70, 190, 250), (237, 70, 47), (170, 242, 43), (245, 174, 50), (255, 255, 0),
@@ -415,7 +415,7 @@ class ColorPalleteListing(QDialog):
             box,
             '<p align="center">This dialog shows a list of predefined '
             'color palettes <br>from colorbrewer.org that can be used '
-            'in Orange.<br/>You can select a palette by clicking on it.</p>'
+            'in Arithmos.<br/>You can select a palette by clicking on it.</p>'
         )
 
         box = gui.vBox(space, "Default Palette", addSpace=True)
@@ -659,7 +659,7 @@ class ColorPaletteGenerator:
 
     @classmethod
     def palette(cls, n):
-        from Orange.data import DiscreteVariable
+        from Arithmos.data import DiscreteVariable
         if isinstance(n, DiscreteVariable):
             n = len(n.values)
         return cls(n).getRGB(np.arange(n))

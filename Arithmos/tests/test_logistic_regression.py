@@ -6,9 +6,9 @@ import unittest
 import numpy as np
 import sklearn
 
-from Orange.data import Table, ContinuousVariable, Domain
-from Orange.classification import LogisticRegressionLearner, Model
-from Orange.evaluation import CrossValidation, CA
+from Arithmos.data import Table, ContinuousVariable, Domain
+from Arithmos.classification import LogisticRegressionLearner, Model
+from Arithmos.evaluation import CrossValidation, CA
 
 
 class TestLogisticRegressionLearner(unittest.TestCase):
@@ -79,7 +79,7 @@ class TestLogisticRegressionLearner(unittest.TestCase):
 
     def test_learner_scorer_previous_transformation(self):
         learner = LogisticRegressionLearner()
-        from Orange.preprocess import Discretize
+        from Arithmos.preprocess import Discretize
         data = Discretize()(self.iris)
         scores = learner.score_data(data)
         # scores should be defined and positive

@@ -5,16 +5,16 @@ Extends functionalities through Python scripting.
 
 **Inputs**
 
-- Data (Orange.data.Table): input dataset bound to ``in_data`` variable
-- Learner (Orange.classification.Learner): input learner bound to ``in_learner`` variable
-- Classifier (Orange.classification.Learner): input classifier bound to ``in_classifier`` variable
+- Data (Arithmos.data.Table): input dataset bound to ``in_data`` variable
+- Learner (Arithmos.classification.Learner): input learner bound to ``in_learner`` variable
+- Classifier (Arithmos.classification.Learner): input classifier bound to ``in_classifier`` variable
 - Object: input Python object bound to ``in_object`` variable
 
 **Outputs**
 
-- Data (Orange.data.Table): dataset retrieved from ``out_data`` variable
-- Learner (Orange.classification.Learner): learner retrieved from ``out_learner`` variable
-- Classifier (Orange.classification.Learner): classifier retrieved from ``out_classifier`` variable
+- Data (Arithmos.data.Table): dataset retrieved from ``out_data`` variable
+- Learner (Arithmos.classification.Learner): learner retrieved from ``out_learner`` variable
+- Classifier (Arithmos.classification.Learner): classifier retrieved from ``out_classifier`` variable
 - Object: Python object retrieved from ``out_object`` variable
 
 **Python Script** widget can be used to run a python script in the input, when a suitable functionality is not implemented in an existing widget. The script has ``in_data``, ``in_distance``, ``in_learner``, ``in_classifier`` and ``in_object`` variables (from input signals) in its local namespace. If a signal is not connected or it did not yet receive any data, those variables contain ``None``.
@@ -33,7 +33,7 @@ Note: You should not modify the input objects in place.
 
 ![](images/PythonScript-stamped.png)
 
-1. Info box contains names of basic operators for Orange Python script.
+1. Info box contains names of basic operators for Arithmos Python script.
 2. The *Library* control can be used to manage multiple scripts. Pressing "+" will add a new entry and open it in the *Python script* editor. When the script is modified, its entry in the *Library* will change to indicate it has unsaved changes. Pressing *Update* will save the script (keyboard shortcut "Ctrl+S"). A script can be removed by selecting it and pressing the "-" button.
 3. Pressing *Execute* in the *Run* box executes the script (keyboard shortcut "Ctrl+R"). Any script output (from ``print``) is captured and displayed in the *Console* below the script.
 4. The *Python script* editor on the left can be used to edit a script (it supports some rudimentary syntax highlighting).
@@ -42,11 +42,11 @@ Note: You should not modify the input objects in place.
 Examples
 --------
 
-Python Script widget is intended to extend functionalities for advanced users. Classes from Orange library are described in the [documentation](https://docs.biolab.si//3/data-mining-library/#reference). To find further information about orange Table class see [Table](https://docs.biolab.si//3/data-mining-library/reference/data.table.html), [Domain](https://docs.biolab.si//3/data-mining-library/reference/data.domain.html), and [Variable](https://docs.biolab.si//3/data-mining-library/reference/data.variable.html) documentation.
+Python Script widget is intended to extend functionalities for advanced users. Classes from Arithmos library are described in the [documentation](https://docs.biolab.si//3/data-mining-library/#reference). To find further information about arithmos Table class see [Table](https://docs.biolab.si//3/data-mining-library/reference/data.table.html), [Domain](https://docs.biolab.si//3/data-mining-library/reference/data.domain.html), and [Variable](https://docs.biolab.si//3/data-mining-library/reference/data.variable.html) documentation.
 
 One can, for example, do batch filtering by attributes. We used zoo.tab for the example and we filtered out all the attributes that have more than 5 discrete values. This in our case removed only 'leg' attribute, but imagine an example where one would have many such attributes.
 
-    from Orange.data import Domain, Table
+    from Arithmos.data import Domain, Table
     domain = Domain([attr for attr in in_data.domain.attributes
                      if attr.is_continuous or len(attr.values) <= 5],
                     in_data.domain.class_vars)
@@ -66,7 +66,7 @@ The second example shows how to round all the values in a few lines of code. Thi
 The third example introduces some Gaussian noise to the data. Again we make a copy of the input data, then walk through all the values with a double for loop and add random noise.
 
     import random
-    from Orange.data import Domain, Table
+    from Arithmos.data import Domain, Table
     new_data = in_data.copy()
     for inst in new_data:
       for f in inst.domain.attributes:

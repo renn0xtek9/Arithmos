@@ -3,10 +3,10 @@ class _LazyModule:
         self.__name = name
 
     def _do_import(self):
-        import Orange
+        import Arithmos
         from importlib import import_module
-        mod = import_module('Orange.' + self.__name, package='Orange')
-        setattr(Orange, self.__name, mod)
+        mod = import_module('Arithmos.' + self.__name, package='Arithmos')
+        setattr(Arithmos, self.__name, mod)
         return mod
 
     def __getattr__(self, key):

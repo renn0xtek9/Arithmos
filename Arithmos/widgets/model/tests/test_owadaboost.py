@@ -1,9 +1,9 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
-from Orange.classification import RandomForestLearner
-from Orange.modelling import KNNLearner
-from Orange.widgets.model.owadaboost import OWAdaBoost
-from Orange.widgets.tests.base import (
+from Arithmos.classification import RandomForestLearner
+from Arithmos.modelling import KNNLearner
+from Arithmos.widgets.model.owadaboost import OWAdaBoost
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetLearnerTestMixin, ParameterMapping
 )
 

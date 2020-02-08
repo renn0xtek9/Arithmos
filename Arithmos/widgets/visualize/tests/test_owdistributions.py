@@ -7,11 +7,11 @@ from unittest.mock import Mock
 import numpy as np
 from AnyQt.QtCore import QItemSelection, Qt
 
-from Orange.data import Table, Domain, DiscreteVariable
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.visualize.owdistributions import OWDistributions
+from Arithmos.data import Table, Domain, DiscreteVariable
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.visualize.owdistributions import OWDistributions
 
 
 class TestOWDistributions(WidgetTest):

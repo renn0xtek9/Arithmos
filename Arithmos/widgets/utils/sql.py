@@ -1,8 +1,8 @@
 from functools import wraps
 
-from Orange.widgets.utils.messages import UnboundMsg
-from Orange.data import Table
-from Orange.data.sql.table import SqlTable, AUTO_DL_LIMIT
+from Arithmos.widgets.utils.messages import UnboundMsg
+from Arithmos.data import Table
+from Arithmos.data.sql.table import SqlTable, AUTO_DL_LIMIT
 
 _download_sql_data = UnboundMsg(
     "Download (and sample if necessary) the SQL data first")

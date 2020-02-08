@@ -4,21 +4,21 @@ import textwrap
 
 from AnyQt.QtWidgets import QLayout
 
-from Orange.widgets import widget, gui
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input
-from Orange.data.table import Table
-from Orange.data import StringVariable, DiscreteVariable, ContinuousVariable
-from Orange.widgets import report
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input
+from Arithmos.data.table import Table
+from Arithmos.data import StringVariable, DiscreteVariable, ContinuousVariable
+from Arithmos.widgets import report
 try:
-    from Orange.data.sql.table import SqlTable
+    from Arithmos.data.sql.table import SqlTable
 except ImportError:
     SqlTable = None
 
 
 class OWDataInfo(widget.OWWidget):
     name = "Data Info"
-    id = "orange.widgets.data.info"
+    id = "arithmos.widgets.data.info"
     description = """Display basic information about the dataset, such
     as the number and type of variables in the columns and the number of rows."""
     icon = "icons/DataInfo.svg"

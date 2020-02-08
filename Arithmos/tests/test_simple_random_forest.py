@@ -3,14 +3,14 @@
 
 import unittest
 import numpy as np
-import Orange
-from Orange.classification import SimpleRandomForestLearner as SimpRandForestCls
-from Orange.regression import SimpleRandomForestLearner as SimpRandForestReg
+import Arithmos
+from Arithmos.classification import SimpleRandomForestLearner as SimpRandForestCls
+from Arithmos.regression import SimpleRandomForestLearner as SimpRandForestReg
 
 
 class TestSimpleRandomForestLearner(unittest.TestCase):
     def test_SimpleRandomForest_classification(self):
-        data = Orange.data.Table('iris')
+        data = Arithmos.data.Table('iris')
         lrn = SimpRandForestCls()
         clf = lrn(data)
         p = clf(data, clf.Probs)
@@ -20,7 +20,7 @@ class TestSimpleRandomForestLearner(unittest.TestCase):
         np.testing.assert_almost_equal(p.sum(axis=1), np.ones(150))
 
     def test_SimpleRandomForest_regression(self):
-        data = Orange.data.Table('housing')
+        data = Arithmos.data.Table('housing')
         lrn = SimpRandForestReg()
         clf = lrn(data)
         p = clf(data)

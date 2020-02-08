@@ -13,28 +13,28 @@ from AnyQt.QtWidgets import (
     QComboBox, QSpinBox, QDoubleSpinBox, QSlider
 )
 
-from orangewidget.tests.base import (
+from arithmoswidget.tests.base import (
     GuiTest, WidgetTest as WidgetTestBase, DummySignalManager, DEFAULT_TIMEOUT
 )
-from Orange.base import SklModel, Model
-from Orange.classification.base_classification import (
+from Arithmos.base import SklModel, Model
+from Arithmos.classification.base_classification import (
     LearnerClassification, ModelClassification
 )
-from Orange.data import (
+from Arithmos.data import (
     Table, Domain, DiscreteVariable, ContinuousVariable, Variable
 )
-from Orange.modelling import Fitter
-from Orange.preprocess import RemoveNaNColumns, Randomize, Continuize
-from Orange.preprocess.preprocess import PreprocessorList
-from Orange.regression.base_regression import (
+from Arithmos.modelling import Fitter
+from Arithmos.preprocess import RemoveNaNColumns, Randomize, Continuize
+from Arithmos.preprocess.preprocess import PreprocessorList
+from Arithmos.regression.base_regression import (
     LearnerRegression, ModelRegression
 )
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.utils.annotated_data import (
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.utils.annotated_data import (
     ANNOTATED_DATA_FEATURE_NAME, ANNOTATED_DATA_SIGNAL_NAME
 )
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.widget import OWWidget
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.widget import OWWidget
 
 
 class WidgetTest(WidgetTestBase):
@@ -825,7 +825,7 @@ class datasets:
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
         """
         return Table(cls.path("missing_data_1.tab"))
 
@@ -840,7 +840,7 @@ class datasets:
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
         """
         return Table(cls.path("missing_data_2.tab"))
 
@@ -855,7 +855,7 @@ class datasets:
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
         """
         return Table(cls.path("missing_data_3.tab"))
 
@@ -867,7 +867,7 @@ class datasets:
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
         """
         table = Table.from_list(
             Domain(
@@ -891,7 +891,7 @@ class datasets:
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
         """
         return cls.data_one_column_vals(value=np.nan)
 
@@ -906,7 +906,7 @@ class datasets:
 
         Returns
         -------
-        data : Generator of Orange.data.Table
+        data : Generator of Arithmos.data.Table
         """
         ds_cls = Table(cls.path("testing_dataset_cls"))
         ds_reg = Table(cls.path("testing_dataset_reg"))

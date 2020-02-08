@@ -5,13 +5,13 @@ from unittest.mock import patch, Mock
 
 import numpy as np
 
-from Orange.data import Table, Domain, ContinuousVariable, TimeVariable
-from Orange.preprocess import preprocess
-from Orange.preprocess.preprocess import Normalize
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import table_dense_sparse
-from Orange.widgets.unsupervised.owpca import OWPCA
-from Orange.tests import test_filename
+from Arithmos.data import Table, Domain, ContinuousVariable, TimeVariable
+from Arithmos.preprocess import preprocess
+from Arithmos.preprocess.preprocess import Normalize
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import table_dense_sparse
+from Arithmos.widgets.unsupervised.owpca import OWPCA
+from Arithmos.tests import test_filename
 from sklearn.utils import check_random_state
 from sklearn.utils.extmath import svd_flip
 

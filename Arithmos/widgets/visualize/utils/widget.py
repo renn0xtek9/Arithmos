@@ -5,28 +5,28 @@ import numpy as np
 from AnyQt.QtCore import QSize, Signal
 from AnyQt.QtWidgets import QApplication
 
-from Orange.data import (
+from Arithmos.data import (
     Table, ContinuousVariable, Domain, Variable, StringVariable
 )
-from Orange.data.util import get_unique_names, array_equal
-from Orange.data.sql.table import SqlTable
-from Orange.statistics.util import bincount
+from Arithmos.data.util import get_unique_names, array_equal
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.statistics.util import bincount
 
-from Orange.widgets import gui, report
-from Orange.widgets.settings import (
+from Arithmos.widgets import gui, report
+from Arithmos.widgets.settings import (
     Setting, ContextSetting, DomainContextHandler, SettingProvider
 )
-from Orange.widgets.utils.annotated_data import (
+from Arithmos.widgets.utils.annotated_data import (
     create_annotated_table, ANNOTATED_DATA_SIGNAL_NAME, create_groups_table
 )
-from Orange.widgets.utils.colorpalette import (
+from Arithmos.widgets.utils.colorpalette import (
     ColorPaletteGenerator, ContinuousPaletteGenerator, DefaultRGBColors
 )
-from Orange.widgets.utils.plot import OWPlotGUI
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
-from Orange.widgets.visualize.utils.component import OWGraphWithAnchors
-from Orange.widgets.widget import OWWidget, Input, Output, Msg
+from Arithmos.widgets.utils.plot import OWPlotGUI
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
+from Arithmos.widgets.visualize.utils.component import OWGraphWithAnchors
+from Arithmos.widgets.widget import OWWidget, Input, Output, Msg
 
 # maximum number of colors (including Other)
 MAX_COLORS = 11
@@ -123,7 +123,7 @@ class OWProjectionWidgetBase(OWWidget, openclass=True):
         of retained values, followed by `['Other']`.
 
         Args:
-            attr (:obj:~Orange.data.Variable): the column to extract
+            attr (:obj:~Arithmos.data.Variable): the column to extract
             filter_valid (bool): filter out invalid data (default: `True`)
             max_categories (int): merge infrequent values (default: `None`);
                 ignored for non-discrete attributes
@@ -354,8 +354,8 @@ class OWProjectionWidgetBase(OWWidget, openclass=True):
 class OWDataProjectionWidget(OWProjectionWidgetBase, openclass=True):
     """
     Base widget for widgets that get Data and Data Subset (both
-    Orange.data.Table) on the input, and output Selected Data and Data
-    (both Orange.data.Table).
+    Arithmos.data.Table) on the input, and output Selected Data and Data
+    (both Arithmos.data.Table).
 
     Beside that the widget displays data as two-dimensional projection
     of points.

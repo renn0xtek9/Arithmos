@@ -5,10 +5,10 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.classification.tree import \
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.classification.tree import \
     TreeModel, Node, DiscreteNode, MappedDiscreteNode, NumericNode
-from Orange.widgets.visualize.utils.tree.treeadapter import TreeAdapter
+from Arithmos.widgets.visualize.utils.tree.treeadapter import TreeAdapter
 
 
 class TestTreeAdapter(unittest.TestCase):

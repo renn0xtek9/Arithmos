@@ -8,17 +8,17 @@ from AnyQt.QtWidgets import QLineEdit, QComboBox
 
 import numpy as np
 
-from Orange.data import (
+from Arithmos.data import (
     Table, ContinuousVariable, StringVariable, DiscreteVariable, Domain)
-from Orange.widgets.data.owselectrows import (
+from Arithmos.widgets.data.owselectrows import (
     OWSelectRows, FilterDiscreteType, SelectRowsContextHandler)
-from Orange.widgets.tests.base import WidgetTest, datasets
+from Arithmos.widgets.tests.base import WidgetTest, datasets
 
-from Orange.data.filter import FilterContinuous, FilterString
-from Orange.widgets.tests.utils import simulate, override_locale
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
-from Orange.tests import test_filename
-from orangewidget.settings import VERSION_KEY
+from Arithmos.data.filter import FilterContinuous, FilterString
+from Arithmos.widgets.tests.utils import simulate, override_locale
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
+from Arithmos.tests import test_filename
+from arithmoswidget.settings import VERSION_KEY
 
 CFValues = {
     FilterContinuous.Equal: ["5.4"],

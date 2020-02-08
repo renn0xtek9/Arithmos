@@ -12,21 +12,21 @@ from threading import Lock
 
 import bottleneck as bn
 import numpy as np
-from Orange.misc.collections import frozendict
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.misc.collections import frozendict
+from Arithmos.util import ArithmosDeprecationWarning
 from scipy import sparse as sp
 from scipy.sparse import issparse
 
-import Orange.data  # import for io.py
-from Orange.data import (
+import Arithmos.data  # import for io.py
+from Arithmos.data import (
     _contingency, _valuecount,
     Domain, Variable, Storage, StringVariable, Unknown, Value, Instance,
     ContinuousVariable, DiscreteVariable, MISSING_VALUES
 )
-from Orange.data.util import SharedComputeValue, \
+from Arithmos.data.util import SharedComputeValue, \
     assure_array_dense, assure_array_sparse, \
     assure_column_dense, assure_column_sparse, get_unique_names_duplicates
-from Orange.statistics.util import bincount, countnans, contingency, \
+from Arithmos.statistics.util import bincount, countnans, contingency, \
     stats as fast_stats, sparse_has_implicit_zeros, sparse_count_implicit_zeros, \
     sparse_implicit_zero_weights
 
@@ -34,8 +34,8 @@ __all__ = ["dataset_dirs", "get_sample_datasets_dir", "RowInstance", "Table"]
 
 
 def get_sample_datasets_dir():
-    orange_data_table = os.path.dirname(__file__)
-    dataset_dir = os.path.join(orange_data_table, '..', 'datasets')
+    arithmos_data_table = os.path.dirname(__file__)
+    dataset_dir = os.path.join(arithmos_data_table, '..', 'datasets')
     return os.path.realpath(dataset_dir)
 
 
@@ -223,7 +223,7 @@ class Table(Sequence, Storage):
         def warn_deprecated(method):
             warnings.warn("Direct calls to Table's constructor are deprecated "
                           "and will be removed. Replace this call with "
-                          f"Table.{method}", OrangeDeprecationWarning,
+                          f"Table.{method}", ArithmosDeprecationWarning,
                           stacklevel=3)
 
         if not args:
@@ -259,7 +259,7 @@ class Table(Sequence, Storage):
             warnings.warn("Omitting domain in a call to Table(X, Y, metas), is "
                           "deprecated and will be removed. "
                           "Call Table.from_numpy(None, X, Y, metas) instead.",
-                          OrangeDeprecationWarning, stacklevel=2)
+                          ArithmosDeprecationWarning, stacklevel=2)
             domain = None
 
         return cls.from_numpy(domain, *args, **kwargs)
@@ -275,13 +275,13 @@ class Table(Sequence, Storage):
         domain. The optional vector of weights is initialized to 1's.
 
         :param domain: domain for the `Table`
-        :type domain: Orange.data.Domain
+        :type domain: Arithmos.data.Domain
         :param n_rows: number of rows in the new table
         :type n_rows: int
         :param weights: indicates whether to construct a vector of weights
         :type weights: bool
         :return: a new table
-        :rtype: Orange.data.Table
+        :rtype: Arithmos.data.Table
         """
         self = cls()
         self.domain = domain
@@ -308,13 +308,13 @@ class Table(Sequence, Storage):
         The resulting data may be a view or a copy of the existing data.
 
         :param domain: the domain for the new table
-        :type domain: Orange.data.Domain
+        :type domain: Arithmos.data.Domain
         :param source: the source table
-        :type source: Orange.data.Table
+        :type source: Arithmos.data.Table
         :param row_indices: indices of the rows to include
         :type row_indices: a slice or a sequence
         :return: a new table
-        :rtype: Orange.data.Table
+        :rtype: Arithmos.data.Table
         """
 
         def valid_refs(weakrefs):
@@ -492,11 +492,11 @@ class Table(Sequence, Storage):
         Construct a new table by selecting rows from the source table.
 
         :param source: an existing table
-        :type source: Orange.data.Table
+        :type source: Arithmos.data.Table
         :param row_indices: indices of the rows to include
         :type row_indices: a slice or a sequence
         :return: a new table
-        :rtype: Orange.data.Table
+        :rtype: Arithmos.data.Table
         """
         self = cls()
         self.domain = source.domain
@@ -523,7 +523,7 @@ class Table(Sequence, Storage):
         Arrays may be of different numpy types, and may be dense or sparse.
 
         :param domain: the domain for the new table
-        :type domain: Orange.data.Domain
+        :type domain: Arithmos.data.Domain
         :param X: array with attribute values
         :type X: np.array
         :param Y: array with class values
@@ -632,7 +632,7 @@ class Table(Sequence, Storage):
         :type filename: str
         """
         ext = os.path.splitext(filename)[1]
-        from Orange.data.io import FileFormat
+        from Arithmos.data.io import FileFormat
         writer = FileFormat.writers.get(ext)
         if not writer:
             desc = FileFormat.names.get(ext)
@@ -653,9 +653,9 @@ class Table(Sequence, Storage):
         :param sheet: Sheet in a file (optional)
         :type sheet: str
         :return: a new data table
-        :rtype: Orange.data.Table
+        :rtype: Arithmos.data.Table
         """
-        from Orange.data.io import FileFormat
+        from Arithmos.data.io import FileFormat
 
         absolute_filename = FileFormat.locate(filename, dataset_dirs)
         reader = FileFormat.get_reader(absolute_filename)
@@ -675,7 +675,7 @@ class Table(Sequence, Storage):
 
     @classmethod
     def from_url(cls, url):
-        from Orange.data.io import UrlReader
+        from Arithmos.data.io import UrlReader
         reader = UrlReader(url)
         data = reader.read()
         if cls != data.__class__:
@@ -1060,7 +1060,7 @@ class Table(Sequence, Storage):
         vertical slicing of sparse matrices is inefficient.
 
         :param index: the index of the column
-        :type index: int, str or Orange.data.Variable
+        :type index: int, str or Arithmos.data.Variable
         :return: (one-dimensional numpy array, sparse)
         """
 
@@ -1163,7 +1163,7 @@ class Table(Sequence, Storage):
         -------
         A 1d bool array. len(result) == len(self)
         """
-        from Orange.data.filter import Values
+        from Arithmos.data.filter import Values
 
         if isinstance(filter, Values):
             conditions = filter.conditions
@@ -1199,7 +1199,7 @@ class Table(Sequence, Storage):
         -------
         A 1d bool array. len(result) == len(self)
         """
-        from Orange.data.filter import (
+        from Arithmos.data.filter import (
             FilterContinuous, FilterDiscrete, FilterRegex, FilterString,
             FilterStringList, IsDefined, Values
         )
@@ -1631,8 +1631,8 @@ class Table(Sequence, Storage):
 
         def guessed_var(i, var_name):
             orig_vals = M[:, i]
-            val_map, vals, var_type = Orange.data.io.guess_data_type(orig_vals)
-            values, variable = Orange.data.io.sanitize_variable(
+            val_map, vals, var_type = Arithmos.data.io.guess_data_type(orig_vals)
+            values, variable = Arithmos.data.io.sanitize_variable(
                 val_map, vals, orig_vals, var_type, {}, name=var_name)
             M[:, i] = values
             return variable

@@ -9,15 +9,15 @@ import string
 import numpy as np
 from numpy.testing import assert_almost_equal
 
-from Orange.data.sql.backend.base import BackendError
-from Orange.data import filter, ContinuousVariable, DiscreteVariable, \
+from Arithmos.data.sql.backend.base import BackendError
+from Arithmos.data import filter, ContinuousVariable, DiscreteVariable, \
     StringVariable, TimeVariable, Table, Domain
-from Orange.data.sql.table import SqlTable
-from Orange.preprocess.discretize import EqualWidth
-from Orange.statistics.basic_stats import BasicStats, DomainBasicStats
-from Orange.statistics.contingency import Continuous, Discrete, get_contingencies
-from Orange.statistics.distribution import get_distributions
-from Orange.tests.sql.base import DataBaseTest as dbt
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.preprocess.discretize import EqualWidth
+from Arithmos.statistics.basic_stats import BasicStats, DomainBasicStats
+from Arithmos.statistics.contingency import Continuous, Discrete, get_contingencies
+from Arithmos.statistics.distribution import get_distributions
+from Arithmos.tests.sql.base import DataBaseTest as dbt
 
 
 class TestSqlTable(unittest.TestCase, dbt):
@@ -114,9 +114,9 @@ class TestSqlTable(unittest.TestCase, dbt):
         assert_almost_equal(sql_table.Y.flatten(), mat[:, 2])
 
     @dbt.run_on(["postgres", "mssql"])
-    @unittest.mock.patch("Orange.data.sql.table.AUTO_DL_LIMIT", 100)
+    @unittest.mock.patch("Arithmos.data.sql.table.AUTO_DL_LIMIT", 100)
     def test_XY_large(self):
-        from Orange.data.sql.table import AUTO_DL_LIMIT as DLL
+        from Arithmos.data.sql.table import AUTO_DL_LIMIT as DLL
         mat = np.random.randint(0, 2, (DLL + 100, 3))
         conn, table_name = self.create_sql_table(mat)
         sql_table = SqlTable(conn, table_name,
@@ -636,7 +636,7 @@ class TestSqlTable(unittest.TestCase, dbt):
         self.assertEqual(stats.non_nans, 150)
 
     @dbt.run_on(["postgres"])
-    @unittest.mock.patch("Orange.data.sql.table.LARGE_TABLE", 100)
+    @unittest.mock.patch("Arithmos.data.sql.table.LARGE_TABLE", 100)
     def test_basic_stats_on_large_data(self):
         # By setting LARGE_TABLE to 100, iris will be treated as
         # a large table and sampling will be used. As the table
@@ -692,18 +692,18 @@ class TestSqlTable(unittest.TestCase, dbt):
 
     @dbt.run_on(["postgres"])
     def test_list_tables_with_schema(self):
-        with self.backend.execute_sql_query("DROP SCHEMA IF EXISTS orange_tests CASCADE") as cur:
-            cur.execute("CREATE SCHEMA orange_tests")
-            cur.execute("CREATE TABLE orange_tests.efgh (id int)")
-            cur.execute("INSERT INTO orange_tests.efgh (id) VALUES (1)")
-            cur.execute("INSERT INTO orange_tests.efgh (id) VALUES (2)")
+        with self.backend.execute_sql_query("DROP SCHEMA IF EXISTS arithmos_tests CASCADE") as cur:
+            cur.execute("CREATE SCHEMA arithmos_tests")
+            cur.execute("CREATE TABLE arithmos_tests.efgh (id int)")
+            cur.execute("INSERT INTO arithmos_tests.efgh (id) VALUES (1)")
+            cur.execute("INSERT INTO arithmos_tests.efgh (id) VALUES (2)")
 
         try:
-            tables = self.backend.list_tables("orange_tests")
+            tables = self.backend.list_tables("arithmos_tests")
             self.assertTrue(any([t.name == "efgh" for t in tables]))
             SqlTable(self.conn, tables[0], inspect_values=True)
         finally:
-            with self.backend.execute_sql_query("DROP SCHEMA IF EXISTS orange_tests CASCADE"):
+            with self.backend.execute_sql_query("DROP SCHEMA IF EXISTS arithmos_tests CASCADE"):
                 pass
 
     def assertFirstAttrIsInstance(self, table, variable_type):

@@ -5,7 +5,7 @@ import pickle
 import unittest
 import numpy as np
 
-from Orange.data import Table, Domain, Value,\
+from Arithmos.data import Table, Domain, Value,\
     DiscreteVariable, ContinuousVariable, StringVariable, TimeVariable
 
 

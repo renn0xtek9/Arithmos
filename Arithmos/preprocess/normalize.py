@@ -1,8 +1,8 @@
 import numpy as np
 
-from Orange.data import Domain
-from Orange.statistics import distribution
-from Orange.util import Reprable
+from Arithmos.data import Domain
+from Arithmos.statistics import distribution
+from Arithmos.util import Reprable
 from .preprocess import Normalize
 from .transformation import Normalizer as Norm
 __all__ = ["Normalizer"]

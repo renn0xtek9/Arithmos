@@ -33,7 +33,7 @@ Right click on the column name to set the column type. Right click on the row in
       - Grouping: delimiters for thousands, e.g. 1,000
       - Decimal: delimiters for decimals, e.g. 1.234
 3. Column type: select the column in the preview and set its type. Column type can be set also by right-clicking on the selected column.
-   - *Auto*: Orange will automatically try to determine column type. (default)
+   - *Auto*: Arithmos will automatically try to determine column type. (default)
    - *Numeric*: for continuous data types, e.g. (1.23, 1.32, 1.42, 1.32)
    - *Categorical*: for discrete data types, e.g. (brown, green, blue)
    - *Text*: for string data types, e.g. (John, Olivia, Mike, Jane)
@@ -53,7 +53,7 @@ The widget once the data is successfully imported.
 
 ### Encoding
 
-The dialogue for settings custom encodings list in the Import Options - Encoding dropdown. Select *Customize Encodings List...* to change which encodings appear in the list. To save the changes, simply close the dialogue. Closing and reopening Orange (even with Reset widget settings) will not re-set the list. To do this, press *Restore Defaults*. To have all the available encodings in the list, press *Select all*.
+The dialogue for settings custom encodings list in the Import Options - Encoding dropdown. Select *Customize Encodings List...* to change which encodings appear in the list. To save the changes, simply close the dialogue. Closing and reopening Arithmos (even with Reset widget settings) will not re-set the list. To do this, press *Restore Defaults*. To have all the available encodings in the list, press *Select all*.
 
 ![](images/CSVFileImport-encodings.png)
 

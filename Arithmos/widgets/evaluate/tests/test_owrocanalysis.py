@@ -7,27 +7,27 @@ import numpy as np
 
 from AnyQt.QtWidgets import QToolTip
 
-from Orange.data import Table
-import Orange.evaluation
-import Orange.classification
+from Arithmos.data import Table
+import Arithmos.evaluation
+import Arithmos.classification
 
-from Orange.widgets.evaluate import owrocanalysis
-from Orange.widgets.evaluate.owrocanalysis import OWROCAnalysis
-from Orange.widgets.evaluate.tests.base import EvaluateTest
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import mouseMove, simulate
-from Orange.tests import test_filename
+from Arithmos.widgets.evaluate import owrocanalysis
+from Arithmos.widgets.evaluate.owrocanalysis import OWROCAnalysis
+from Arithmos.widgets.evaluate.tests.base import EvaluateTest
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import mouseMove, simulate
+from Arithmos.tests import test_filename
 
 
 class TestROC(unittest.TestCase):
     def test_ROCData_from_results(self):
-        data = Orange.data.Table("iris")
+        data = Arithmos.data.Table("iris")
         learners = [
-            Orange.classification.MajorityLearner(),
-            Orange.classification.LogisticRegressionLearner(),
-            Orange.classification.TreeLearner()
+            Arithmos.classification.MajorityLearner(),
+            Arithmos.classification.LogisticRegressionLearner(),
+            Arithmos.classification.TreeLearner()
         ]
-        res = Orange.evaluation.CrossValidation(data, learners, k=10)
+        res = Arithmos.evaluation.CrossValidation(data, learners, k=10)
 
         for i, _ in enumerate(learners):
             for c in range(len(data.domain.class_var.values)):
@@ -42,7 +42,7 @@ class TestROC(unittest.TestCase):
         # contained only instances of two classes (and the test then fails)
         # Pylint complains about RandomState; pylint: disable=no-member
         data = data[np.random.RandomState(0).choice(len(data), size=20)]
-        res = Orange.evaluation.LeaveOneOut(data, learners)
+        res = Arithmos.evaluation.LeaveOneOut(data, learners)
 
         for i, _ in enumerate(learners):
             for c in range(len(data.domain.class_var.values)):
@@ -56,8 +56,8 @@ class TestROC(unittest.TestCase):
                 self.assertFalse(rocdata.avg_threshold.is_valid)
 
         # equivalent test to the LeaveOneOut but from a slightly different
-        # constructed Orange.evaluation.Results
-        res = Orange.evaluation.CrossValidation(data, learners, k=20)
+        # constructed Arithmos.evaluation.Results
+        res = Arithmos.evaluation.CrossValidation(data, learners, k=20)
 
         for i, _ in enumerate(learners):
             for c in range(len(data.domain.class_var.values)):
@@ -77,10 +77,10 @@ class TestOWROCAnalysis(WidgetTest, EvaluateTest):
     def setUpClass(cls):
         super().setUpClass()
         cls.lenses = data = Table(test_filename("datasets/lenses.tab"))
-        cls.res = Orange.evaluation.TestOnTestData(
+        cls.res = Arithmos.evaluation.TestOnTestData(
             train_data=data[::2], test_data=data[1::2],
-            learners=[Orange.classification.MajorityLearner(),
-                      Orange.classification.KNNLearner()],
+            learners=[Arithmos.classification.MajorityLearner(),
+                      Arithmos.classification.KNNLearner()],
             store_data=True,
         )
 
@@ -116,7 +116,7 @@ class TestOWROCAnalysis(WidgetTest, EvaluateTest):
         self.send_signal(self.widget.Inputs.evaluation_results, None)
 
     def test_empty_input(self):
-        res = Orange.evaluation.Results(
+        res = Arithmos.evaluation.Results(
             data=self.lenses[:0], nmethods=2, store_data=True)
         res.row_indices = np.array([], dtype=int)
         res.actual = np.array([])
@@ -164,11 +164,11 @@ class TestOWROCAnalysis(WidgetTest, EvaluateTest):
         self.assertFalse(self.widget.Error.invalid_results.is_shown())
 
     def test_tooltips(self):
-        data_in = Orange.data.Table("titanic")
-        res = Orange.evaluation.TestOnTrainingData(
+        data_in = Arithmos.data.Table("titanic")
+        res = Arithmos.evaluation.TestOnTrainingData(
             data=data_in,
-            learners=[Orange.classification.KNNLearner(),
-                      Orange.classification.LogisticRegressionLearner()],
+            learners=[Arithmos.classification.KNNLearner(),
+                      Arithmos.classification.LogisticRegressionLearner()],
             store_data=True
         )
 

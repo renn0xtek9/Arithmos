@@ -2,9 +2,9 @@ from PyQt5.QtCore import Qt, QRectF, QPoint, QPointF
 from PyQt5.QtGui import QBrush, QWheelEvent
 from PyQt5.QtWidgets import QGraphicsScene, QWidget, QApplication
 
-from Orange.widgets.tests.base import GuiTest
+from Arithmos.widgets.tests.base import GuiTest
 
-from Orange.widgets.utils.stickygraphicsview import StickyGraphicsView
+from Arithmos.widgets.utils.stickygraphicsview import StickyGraphicsView
 
 
 class TestStickyGraphicsView(GuiTest):

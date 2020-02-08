@@ -24,13 +24,13 @@ Examples
         Build the application using the latest published version on pypi
 
     build-macos-app.sh --pip-arg={Arithmos==3.3.12,PyQt5} ~/Applications/Arithmos.app
-        Build the application using the specified Orange version
+        Build the application using the specified Arithmos version
 
     build-macos-app.sh --pip-arg=path-tolocal-checkout ~/Applications/Arithmos-Dev.app
         Build the application using a local source checkout
 
     build-macos-app.sh --pip-arg={-e,path-tolocal-checkout}  ~/Applications/Arithmos-Dev.app
-        Build the application and install orange in editable mode
+        Build the application and install arithmos in editable mode
 
     buils-macos-app.sh --pip-arg={-r,requirements.txt} /Applications/Arithmos.app
         Build the application using a fixed set of locked requirements.
@@ -98,7 +98,7 @@ ln -fs ../Frameworks/Python.framework/Versions/${PYVER}/bin/python${PYVER} \
 "${APPDIR}"/Contents/MacOS/python -m ensurepip
 "${APPDIR}"/Contents/MacOS/python -m pip install pip~=19.0 wheel
 
-cat <<'EOF' > "${APPDIR}"/Contents/MacOS/Orange
+cat <<'EOF' > "${APPDIR}"/Contents/MacOS/Arithmos
 #!/bin/bash
 
 DIR=$(dirname "$0")
@@ -112,9 +112,9 @@ fi
 # Disable user site packages
 export PYTHONNOUSERSITE=1
 
-exec "${DIR}"/PythonApp -m Orange.canvas "$@"
+exec "${DIR}"/PythonApp -m Arithmos.canvas "$@"
 EOF
-chmod +x "${APPDIR}"/Contents/MacOS/Orange
+chmod +x "${APPDIR}"/Contents/MacOS/Arithmos
 
 cat <<'EOF' > "${APPDIR}"/Contents/MacOS/pip
 #!/bin/bash
@@ -147,5 +147,5 @@ rm "${APPDIR}"/Contents/Info.plist.in
     trap cleanup EXIT
     cd "${tempdir}"
     "${PYTHON}" -m pip install --no-cache-dir --no-index arithmos PyQt5
-    "${PYTHON}" -m Orange.canvas --help > /dev/null
+    "${PYTHON}" -m Arithmos.canvas --help > /dev/null
 )

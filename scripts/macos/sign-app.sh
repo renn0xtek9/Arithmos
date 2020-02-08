@@ -5,7 +5,7 @@ set -e
 usage() {
     echo 'usage: sign-app.sh -s IDENTITY PATH
 
-Sign an Orange.app application at PATH and create a signed .dmg installer.
+Sign an Arithmos.app application at PATH and create a signed .dmg installer.
 
 OPTIONS
     --sign -s IDENTITY

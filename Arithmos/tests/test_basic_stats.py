@@ -6,8 +6,8 @@ import time
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.statistics.basic_stats import DomainBasicStats, BasicStats
+from Arithmos.data import Table
+from Arithmos.statistics.basic_stats import DomainBasicStats, BasicStats
 
 
 class TestDomainBasicStats(TestCase):

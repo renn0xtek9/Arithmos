@@ -48,8 +48,8 @@ master_doc = "index"
 
 # General information about the project.
 project = "scripting-tutorial"
-copyright = "2015, orange data mining"
-author = "orange data mining"
+copyright = "2015, arithmos data mining"
+author = "arithmos data mining"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -224,7 +224,7 @@ latex_documents = [
         master_doc,
         "scripting-tutorial.tex",
         "scripting-tutorial Documentation",
-        "orange data mining",
+        "arithmos data mining",
         "manual",
     )
 ]

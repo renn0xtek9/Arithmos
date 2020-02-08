@@ -2,7 +2,7 @@
 Classification (``classification``)
 ###################################
 
-.. automodule:: Orange.classification
+.. automodule:: Arithmos.classification
 
 .. index:: logistic regression
    pair: classification; logistic regression
@@ -67,9 +67,9 @@ class), constructs naive Bayesian learner, uses it on the entire dataset
 to construct a classifier, and then applies classifier to the first three
 data instances:
 
-    >>> import Orange
-    >>> lenses = Orange.data.Table('lenses')
-    >>> nb = Orange.classification.NaiveBayesLearner()
+    >>> import Arithmos
+    >>> lenses = Arithmos.data.Table('lenses')
+    >>> nb = Arithmos.classification.NaiveBayesLearner()
     >>> classifier = nb(lenses)
     >>> classifier(lenses[0:3], True)
     array([[ 0.04358755,  0.82671726,  0.12969519],
@@ -127,7 +127,7 @@ One Class Support Vector Machines
 Classification Tree
 -------------------
 
-Orange includes three implemenations of classification trees. `TreeLearner`
+Arithmos includes three implemenations of classification trees. `TreeLearner`
 is home-grown and properly handles multinominal and missing values.
 The one from scikit-learn, `SklTreeLearner`, is faster. Another home-grown,
 `SimpleTreeLearner`, is simpler and stil faster.
@@ -183,7 +183,7 @@ Neural Network
 CN2 Rule Induction
 ------------------
 
-.. automodule:: Orange.classification.rules
+.. automodule:: Arithmos.classification.rules
 
 .. autoclass:: CN2Learner
    :members:
@@ -201,7 +201,7 @@ CN2 Rule Induction
 Calibration and threshold optimization
 --------------------------------------
 
-.. automodule:: Orange.classification.calibration
+.. automodule:: Arithmos.classification.calibration
 
 .. autoclass:: ThresholdClassifier
    :members:

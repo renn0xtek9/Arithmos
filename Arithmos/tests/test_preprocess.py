@@ -8,8 +8,8 @@ from unittest.mock import Mock
 import numpy as np
 from scipy.sparse import csr_matrix
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.preprocess import EntropyMDL, DoNotImpute, Default, Average, \
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.preprocess import EntropyMDL, DoNotImpute, Default, Average, \
     SelectRandomFeatures, EqualFreq, RemoveNaNColumns, DropInstances, \
     EqualWidth, SelectBestFeatures, RemoveNaNRows, Preprocess, Scale, \
     Randomize, Continuize, Discretize, Impute, SklImpute, Normalize, \

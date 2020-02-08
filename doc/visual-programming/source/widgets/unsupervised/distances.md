@@ -17,7 +17,7 @@ Sparse data can only be used with Euclidean, Manhattan and Cosine metric.
 
 The resulting distance matrix can be fed further to [Hierarchical Clustering](hierarchicalclustering.md) for uncovering groups in the data, to [Distance Map](distancemap.md) or [Distance Matrix](distancematrix.md) for visualizing the distances (Distance Matrix can be quite slow for larger data sets), to [MDS](mds.md) for mapping the data instances using the distance matrix and finally, saved with [Save Distance Matrix](savedistancematrix.md). Distance file can be loaded with [Distance File](distancefile.md).
 
-Distances work well with Orange add-ons, too. The distance matrix can be fed to Network from Distances (Network add-on) to convert the matrix into a graph and to Duplicate Detection (Text add-on) to find duplicate documents in the corpus.
+Distances work well with Arithmos add-ons, too. The distance matrix can be fed to Network from Distances (Network add-on) to convert the matrix into a graph and to Duplicate Detection (Text add-on) to find duplicate documents in the corpus.
 
 ![](images/Distances-stamped.png)
 

@@ -48,12 +48,12 @@ import pandas as pd
 
 from pandas.api import types as pdtypes
 
-import Orange.data
+import Arithmos.data
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import textimport, concurrent as qconcurrent
-from Orange.widgets.utils.overlay import OverlayWidget
-from Orange.widgets.utils.settings import (
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import textimport, concurrent as qconcurrent
+from Arithmos.widgets.utils.overlay import OverlayWidget
+from Arithmos.widgets.utils.settings import (
     QSettings_readArray, QSettings_writeArray
 )
 
@@ -457,7 +457,7 @@ class OWCSVFileImport(widget.OWWidget):
     outputs = [
         widget.OutputSignal(
             name="Data",
-            type=Orange.data.Table,
+            type=Arithmos.data.Table,
             doc="Loaded data set."),
         widget.OutputSignal(
             name="Data Frame",
@@ -1437,21 +1437,21 @@ def prettyfypath(path):
 
 
 def pandas_to_table(df):
-    # type: (pd.DataFrame) -> Orange.data.Table
+    # type: (pd.DataFrame) -> Arithmos.data.Table
     """
-    Convert a pandas.DataFrame to a Orange.data.Table instance.
+    Convert a pandas.DataFrame to a Arithmos.data.Table instance.
     """
     index = df.index
     if not isinstance(index, pd.RangeIndex):
         df = df.reset_index()
 
-    columns = []  # type: List[Tuple[Orange.data.Variable, np.ndarray]]
+    columns = []  # type: List[Tuple[Arithmos.data.Variable, np.ndarray]]
 
     for header, series in df.items():  # type: (Any, pd.Series)
         if pdtypes.is_categorical(series):
             coldata = series.values  # type: pd.Categorical
             categories = [str(c) for c in coldata.categories]
-            var = Orange.data.DiscreteVariable.make(
+            var = Arithmos.data.DiscreteVariable.make(
                 str(header), values=categories, ordered=coldata.ordered
             )
             # Remap the coldata into the var.values order/set
@@ -1460,31 +1460,31 @@ def pandas_to_table(df):
             )
             codes = coldata.codes
             assert np.issubdtype(codes.dtype, np.integer)
-            orangecol = np.array(codes, dtype=np.float)
-            orangecol[codes < 0] = np.nan
+            arithmoscol = np.array(codes, dtype=np.float)
+            arithmoscol[codes < 0] = np.nan
         elif pdtypes.is_datetime64_any_dtype(series):
             # Check that this converts tz local to UTC
             series = series.astype(np.dtype("M8[ns]"))
             coldata = series.values  # type: np.ndarray
             assert coldata.dtype == "M8[ns]"
             mask = np.isnat(coldata)
-            orangecol = coldata.astype(np.int64) / 10 ** 9
-            orangecol[mask] = np.nan
-            var = Orange.data.TimeVariable.make(str(header))
+            arithmoscol = coldata.astype(np.int64) / 10 ** 9
+            arithmoscol[mask] = np.nan
+            var = Arithmos.data.TimeVariable.make(str(header))
             var.have_date = var.have_time = 1
         elif pdtypes.is_object_dtype(series):
             coldata = series.fillna('').values
             assert isinstance(coldata, np.ndarray)
-            orangecol = coldata
-            var = Orange.data.StringVariable.make(str(header))
+            arithmoscol = coldata
+            var = Arithmos.data.StringVariable.make(str(header))
         elif pdtypes.is_integer_dtype(series):
             coldata = series.values
-            var = Orange.data.ContinuousVariable.make(str(header))
+            var = Arithmos.data.ContinuousVariable.make(str(header))
             var.number_of_decimals = 0
-            orangecol = coldata.astype(np.float64)
+            arithmoscol = coldata.astype(np.float64)
         elif pdtypes.is_numeric_dtype(series):
-            orangecol = series.values.astype(np.float64)
-            var = Orange.data.ContinuousVariable.make(str(header))
+            arithmoscol = series.values.astype(np.float64)
+            var = Arithmos.data.ContinuousVariable.make(str(header))
         else:
             warnings.warn(
                 "Column '{}' with dtype: {} skipped."
@@ -1492,7 +1492,7 @@ def pandas_to_table(df):
                 UserWarning
             )
             continue
-        columns.append((var, orangecol))
+        columns.append((var, arithmoscol))
 
     cols_x = [(var, col) for var, col in columns if var.is_primitive()]
     cols_m = [(var, col) for var, col in columns if not var.is_primitive()]
@@ -1508,8 +1508,8 @@ def pandas_to_table(df):
     else:
         M = None
 
-    domain = Orange.data.Domain(variables, metas=metas)
-    return Orange.data.Table.from_numpy(domain, X, None, M)
+    domain = Arithmos.data.Domain(variables, metas=metas)
+    return Arithmos.data.Table.from_numpy(domain, X, None, M)
 
 
 def main(argv=None):  # pragma: no cover

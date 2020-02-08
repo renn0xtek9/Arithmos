@@ -1,6 +1,6 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("imports-85.tab")
+data = Arithmos.data.Table("imports-85.tab")
 
 print("First attribute:", data.domain[0].name)
 name = "fuel-type"

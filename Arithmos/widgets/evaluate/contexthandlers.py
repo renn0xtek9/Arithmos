@@ -1,5 +1,5 @@
-from Orange.data import Variable
-from Orange.widgets import settings
+from Arithmos.data import Variable
+from Arithmos.widgets import settings
 
 
 class EvaluationResultsContextHandler(settings.ContextHandler):

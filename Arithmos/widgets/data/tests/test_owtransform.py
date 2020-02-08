@@ -4,11 +4,11 @@ from unittest.mock import Mock
 
 from numpy import testing as npt
 
-from Orange.data import Table
-from Orange.preprocess import Discretize
-from Orange.widgets.data.owtransform import OWTransform
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.unsupervised.owpca import OWPCA
+from Arithmos.data import Table
+from Arithmos.preprocess import Discretize
+from Arithmos.widgets.data.owtransform import OWTransform
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.unsupervised.owpca import OWPCA
 
 
 class TestOWTransform(WidgetTest):

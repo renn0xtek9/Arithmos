@@ -1,10 +1,10 @@
 """Naive Bayes Learner
 """
 
-from Orange.data import Table
-from Orange.classification.naive_bayes import NaiveBayesLearner
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.classification.naive_bayes import NaiveBayesLearner
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWNaiveBayes(OWBaseLearner):
@@ -13,7 +13,7 @@ class OWNaiveBayes(OWBaseLearner):
                   "Bayes' theorem with the assumption of feature independence."
     icon = "icons/NaiveBayes.svg"
     replaces = [
-        "Orange.widgets.classify.ownaivebayes.OWNaiveBayes",
+        "Arithmos.widgets.classify.ownaivebayes.OWNaiveBayes",
     ]
     priority = 70
     keywords = []

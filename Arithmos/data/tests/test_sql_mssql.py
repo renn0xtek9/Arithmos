@@ -1,8 +1,8 @@
 import unittest
 
-from Orange.data.sql.backend.base import BackendError
+from Arithmos.data.sql.backend.base import BackendError
 try:
-    from Orange.data.sql.backend.mssql import PymssqlBackend, parse_ex
+    from Arithmos.data.sql.backend.mssql import PymssqlBackend, parse_ex
     err = ""
 except ModuleNotFoundError as ex:
     PymssqlBackend = None

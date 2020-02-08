@@ -323,7 +323,7 @@ def mouseMove(widget, pos=QPoint(), delay=-1):  # pragma: no-cover
 
 def table_dense_sparse(test_case):
     # type: (Callable) -> Callable
-    """Run a single test case on both dense and sparse Orange tables.
+    """Run a single test case on both dense and sparse Arithmos tables.
 
     Examples
     --------

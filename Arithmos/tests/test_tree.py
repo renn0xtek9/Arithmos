@@ -8,9 +8,9 @@ import numpy as np
 import sklearn.tree as skl_tree
 from sklearn.tree._tree import TREE_LEAF
 
-from Orange.data import Table
-from Orange.classification import SklTreeLearner, TreeLearner
-from Orange.regression import SklTreeRegressionLearner
+from Arithmos.data import Table
+from Arithmos.classification import SklTreeLearner, TreeLearner
+from Arithmos.regression import SklTreeRegressionLearner
 
 
 class TestSklTreeLearner(unittest.TestCase):

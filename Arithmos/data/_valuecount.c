@@ -559,8 +559,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__data___valuecount
-#define __PYX_HAVE_API__Orange__data___valuecount
+#define __PYX_HAVE__Arithmos__data___valuecount
+#define __PYX_HAVE_API__Arithmos__data___valuecount
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -792,7 +792,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/data/_valuecount.pyx",
+  "Arithmos/data/_valuecount.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -1568,13 +1568,13 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'Orange.data._valuecount' */
+/* Module declarations from 'Arithmos.data._valuecount' */
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "Orange.data._valuecount"
-extern int __pyx_module_is_main_Orange__data___valuecount;
-int __pyx_module_is_main_Orange__data___valuecount = 0;
+#define __Pyx_MODULE_NAME "Arithmos.data._valuecount"
+extern int __pyx_module_is_main_Arithmos__data___valuecount;
+int __pyx_module_is_main_Arithmos__data___valuecount = 0;
 
-/* Implementation of 'Orange.data._valuecount' */
+/* Implementation of 'Arithmos.data._valuecount' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -1595,12 +1595,12 @@ static const char __pyx_k_ImportError[] = "ImportError";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_valuecount_line_14[] = "valuecount (line 14)";
-static const char __pyx_k_Orange_data__valuecount[] = "Orange.data._valuecount";
-static const char __pyx_k_Orange_data__valuecount_pyx[] = "Orange/data/_valuecount.pyx";
+static const char __pyx_k_Arithmos_data__valuecount[] = "Arithmos.data._valuecount";
+static const char __pyx_k_Arithmos_data__valuecount_pyx[] = "Arithmos/data/_valuecount.pyx";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
-static const char __pyx_k_Count_the_occurrences_of_each_va[] = "Count the occurrences of each value.\n\n    It does so in-place, on a 2-d array of shape (2, N); the first row\n    contains values and the second contains weights (1's, if unweighted).\n    The array should be sorted by the elements in the first row (e.g.\n    a.sort(axis=0)). The function 'compresses' the array by merging\n    consecutive columns with the same value in the first row, and adding\n    the corresponding weights in the second row.\n\n    Examples\n    --------\n    >>> a = np.array([[1, 1, 2, 3, 3], [0.1, 0.2, 0.3, 0.4, 0.5]])\n    >>> _orange.valuecount(a)\n    [[ 1.   2.   3. ]\n     [ 0.3  0.3  0.9]]\n\n    ";
+static const char __pyx_k_Count_the_occurrences_of_each_va[] = "Count the occurrences of each value.\n\n    It does so in-place, on a 2-d array of shape (2, N); the first row\n    contains values and the second contains weights (1's, if unweighted).\n    The array should be sorted by the elements in the first row (e.g.\n    a.sort(axis=0)). The function 'compresses' the array by merging\n    consecutive columns with the same value in the first row, and adding\n    the corresponding weights in the second row.\n\n    Examples\n    --------\n    >>> a = np.array([[1, 1, 2, 3, 3], [0.1, 0.2, 0.3, 0.4, 0.5]])\n    >>> _arithmos.valuecount(a)\n    [[ 1.   2.   3. ]\n     [ 0.3  0.3  0.9]]\n\n    ";
 static const char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
 static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte order not supported";
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
@@ -1613,8 +1613,8 @@ static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
 static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_N;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
-static PyObject *__pyx_n_s_Orange_data__valuecount;
-static PyObject *__pyx_kp_s_Orange_data__valuecount_pyx;
+static PyObject *__pyx_n_s_Arithmos_data__valuecount;
+static PyObject *__pyx_kp_s_Arithmos_data__valuecount_pyx;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_a;
@@ -1635,7 +1635,7 @@ static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_valuecount;
 static PyObject *__pyx_kp_u_valuecount_expects_an_array_with;
 static PyObject *__pyx_kp_u_valuecount_line_14;
-static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_a); /* proto */
+static PyObject *__pyx_pf_6Arithmos_4data_11_valuecount_valuecount(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_a); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_int_0;
@@ -1657,7 +1657,7 @@ static PyObject *__pyx_tuple__15;
 static PyObject *__pyx_codeobj__16;
 /* Late includes */
 
-/* "Orange/data/_valuecount.pyx":14
+/* "Arithmos/data/_valuecount.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def valuecount(np.ndarray[np.float64_t, ndim=2] a not None):             # <<<<<<<<<<<<<<
@@ -1666,15 +1666,15 @@ static PyObject *__pyx_codeobj__16;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_4data_11_valuecount_1valuecount(PyObject *__pyx_self, PyObject *__pyx_v_a); /*proto*/
-static char __pyx_doc_6Orange_4data_11_valuecount_valuecount[] = "valuecount(ndarray a)\nCount the occurrences of each value.\n\n    It does so in-place, on a 2-d array of shape (2, N); the first row\n    contains values and the second contains weights (1's, if unweighted).\n    The array should be sorted by the elements in the first row (e.g.\n    a.sort(axis=0)). The function 'compresses' the array by merging\n    consecutive columns with the same value in the first row, and adding\n    the corresponding weights in the second row.\n\n    Examples\n    --------\n    >>> a = np.array([[1, 1, 2, 3, 3], [0.1, 0.2, 0.3, 0.4, 0.5]])\n    >>> _orange.valuecount(a)\n    [[ 1.   2.   3. ]\n     [ 0.3  0.3  0.9]]\n\n    ";
-static PyMethodDef __pyx_mdef_6Orange_4data_11_valuecount_1valuecount = {"valuecount", (PyCFunction)__pyx_pw_6Orange_4data_11_valuecount_1valuecount, METH_O, __pyx_doc_6Orange_4data_11_valuecount_valuecount};
-static PyObject *__pyx_pw_6Orange_4data_11_valuecount_1valuecount(PyObject *__pyx_self, PyObject *__pyx_v_a) {
+static PyObject *__pyx_pw_6Arithmos_4data_11_valuecount_1valuecount(PyObject *__pyx_self, PyObject *__pyx_v_a); /*proto*/
+static char __pyx_doc_6Arithmos_4data_11_valuecount_valuecount[] = "valuecount(ndarray a)\nCount the occurrences of each value.\n\n    It does so in-place, on a 2-d array of shape (2, N); the first row\n    contains values and the second contains weights (1's, if unweighted).\n    The array should be sorted by the elements in the first row (e.g.\n    a.sort(axis=0)). The function 'compresses' the array by merging\n    consecutive columns with the same value in the first row, and adding\n    the corresponding weights in the second row.\n\n    Examples\n    --------\n    >>> a = np.array([[1, 1, 2, 3, 3], [0.1, 0.2, 0.3, 0.4, 0.5]])\n    >>> _arithmos.valuecount(a)\n    [[ 1.   2.   3. ]\n     [ 0.3  0.3  0.9]]\n\n    ";
+static PyMethodDef __pyx_mdef_6Arithmos_4data_11_valuecount_1valuecount = {"valuecount", (PyCFunction)__pyx_pw_6Arithmos_4data_11_valuecount_1valuecount, METH_O, __pyx_doc_6Arithmos_4data_11_valuecount_valuecount};
+static PyObject *__pyx_pw_6Arithmos_4data_11_valuecount_1valuecount(PyObject *__pyx_self, PyObject *__pyx_v_a) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("valuecount (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_a), __pyx_ptype_5numpy_ndarray, 0, "a", 0))) __PYX_ERR(0, 14, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_4data_11_valuecount_valuecount(__pyx_self, ((PyArrayObject *)__pyx_v_a));
+  __pyx_r = __pyx_pf_6Arithmos_4data_11_valuecount_valuecount(__pyx_self, ((PyArrayObject *)__pyx_v_a));
 
   /* function exit code */
   goto __pyx_L0;
@@ -1685,7 +1685,7 @@ static PyObject *__pyx_pw_6Orange_4data_11_valuecount_1valuecount(PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_a) {
+static PyObject *__pyx_pf_6Arithmos_4data_11_valuecount_valuecount(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_a) {
   npy_intp *__pyx_v_dim;
   Py_ssize_t __pyx_v_N;
   Py_ssize_t __pyx_v_src;
@@ -1740,7 +1740,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   }
   __pyx_pybuffernd_a.diminfo[0].strides = __pyx_pybuffernd_a.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_a.diminfo[0].shape = __pyx_pybuffernd_a.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_a.diminfo[1].strides = __pyx_pybuffernd_a.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_a.diminfo[1].shape = __pyx_pybuffernd_a.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/data/_valuecount.pyx":33
+  /* "Arithmos/data/_valuecount.pyx":33
  *     """
  *     cdef np.npy_intp *dim
  *     dim = np.PyArray_DIMS(a)             # <<<<<<<<<<<<<<
@@ -1749,7 +1749,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
   __pyx_v_dim = PyArray_DIMS(((PyArrayObject *)__pyx_v_a));
 
-  /* "Orange/data/_valuecount.pyx":34
+  /* "Arithmos/data/_valuecount.pyx":34
  *     cdef np.npy_intp *dim
  *     dim = np.PyArray_DIMS(a)
  *     if dim[0] != 2:             # <<<<<<<<<<<<<<
@@ -1759,7 +1759,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   __pyx_t_1 = (((__pyx_v_dim[0]) != 2) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "Orange/data/_valuecount.pyx":35
+    /* "Arithmos/data/_valuecount.pyx":35
  *     dim = np.PyArray_DIMS(a)
  *     if dim[0] != 2:
  *         raise ValueError("valuecount expects an array with shape (2, N)")             # <<<<<<<<<<<<<<
@@ -1772,7 +1772,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 35, __pyx_L1_error)
 
-    /* "Orange/data/_valuecount.pyx":34
+    /* "Arithmos/data/_valuecount.pyx":34
  *     cdef np.npy_intp *dim
  *     dim = np.PyArray_DIMS(a)
  *     if dim[0] != 2:             # <<<<<<<<<<<<<<
@@ -1781,7 +1781,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
   }
 
-  /* "Orange/data/_valuecount.pyx":36
+  /* "Arithmos/data/_valuecount.pyx":36
  *     if dim[0] != 2:
  *         raise ValueError("valuecount expects an array with shape (2, N)")
  *     cdef Py_ssize_t N = dim[1]             # <<<<<<<<<<<<<<
@@ -1790,7 +1790,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
   __pyx_v_N = (__pyx_v_dim[1]);
 
-  /* "Orange/data/_valuecount.pyx":40
+  /* "Arithmos/data/_valuecount.pyx":40
  *     cdef Py_ssize_t src
  * 
  *     if N == 0 or npy_isnan(a[0, 0]):             # <<<<<<<<<<<<<<
@@ -1810,7 +1810,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "Orange/data/_valuecount.pyx":41
+    /* "Arithmos/data/_valuecount.pyx":41
  * 
  *     if N == 0 or npy_isnan(a[0, 0]):
  *         return a[:, :0]             # <<<<<<<<<<<<<<
@@ -1824,7 +1824,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "Orange/data/_valuecount.pyx":40
+    /* "Arithmos/data/_valuecount.pyx":40
  *     cdef Py_ssize_t src
  * 
  *     if N == 0 or npy_isnan(a[0, 0]):             # <<<<<<<<<<<<<<
@@ -1833,7 +1833,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
   }
 
-  /* "Orange/data/_valuecount.pyx":43
+  /* "Arithmos/data/_valuecount.pyx":43
  *         return a[:, :0]
  * 
  *     for src in range(1, N):             # <<<<<<<<<<<<<<
@@ -1845,7 +1845,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_src = __pyx_t_8;
 
-    /* "Orange/data/_valuecount.pyx":44
+    /* "Arithmos/data/_valuecount.pyx":44
  * 
  *     for src in range(1, N):
  *         if a[0, src] == a[0, src - 1] or npy_isnan(a[0, src]):             # <<<<<<<<<<<<<<
@@ -1869,7 +1869,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __pyx_L10_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "Orange/data/_valuecount.pyx":45
+      /* "Arithmos/data/_valuecount.pyx":45
  *     for src in range(1, N):
  *         if a[0, src] == a[0, src - 1] or npy_isnan(a[0, src]):
  *             break             # <<<<<<<<<<<<<<
@@ -1878,7 +1878,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
       goto __pyx_L8_break;
 
-      /* "Orange/data/_valuecount.pyx":44
+      /* "Arithmos/data/_valuecount.pyx":44
  * 
  *     for src in range(1, N):
  *         if a[0, src] == a[0, src - 1] or npy_isnan(a[0, src]):             # <<<<<<<<<<<<<<
@@ -1889,7 +1889,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   }
   /*else*/ {
 
-    /* "Orange/data/_valuecount.pyx":47
+    /* "Arithmos/data/_valuecount.pyx":47
  *             break
  *     else:
  *         return a             # <<<<<<<<<<<<<<
@@ -1903,7 +1903,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   }
   __pyx_L8_break:;
 
-  /* "Orange/data/_valuecount.pyx":48
+  /* "Arithmos/data/_valuecount.pyx":48
  *     else:
  *         return a
  *     cdef int dst = src - 1             # <<<<<<<<<<<<<<
@@ -1912,7 +1912,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
   __pyx_v_dst = (__pyx_v_src - 1);
 
-  /* "Orange/data/_valuecount.pyx":49
+  /* "Arithmos/data/_valuecount.pyx":49
  *         return a
  *     cdef int dst = src - 1
  *     for src in range(src, N):             # <<<<<<<<<<<<<<
@@ -1924,7 +1924,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   for (__pyx_t_8 = __pyx_v_src; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_src = __pyx_t_8;
 
-    /* "Orange/data/_valuecount.pyx":50
+    /* "Arithmos/data/_valuecount.pyx":50
  *     cdef int dst = src - 1
  *     for src in range(src, N):
  *         if a[0, src] != a[0, src]:             # <<<<<<<<<<<<<<
@@ -1938,7 +1938,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __pyx_t_1 = (((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_a.diminfo[1].strides)) != (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_a.diminfo[1].strides))) != 0);
     if (__pyx_t_1) {
 
-      /* "Orange/data/_valuecount.pyx":51
+      /* "Arithmos/data/_valuecount.pyx":51
  *     for src in range(src, N):
  *         if a[0, src] != a[0, src]:
  *             break             # <<<<<<<<<<<<<<
@@ -1947,7 +1947,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
       goto __pyx_L13_break;
 
-      /* "Orange/data/_valuecount.pyx":50
+      /* "Arithmos/data/_valuecount.pyx":50
  *     cdef int dst = src - 1
  *     for src in range(src, N):
  *         if a[0, src] != a[0, src]:             # <<<<<<<<<<<<<<
@@ -1956,7 +1956,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
  */
     }
 
-    /* "Orange/data/_valuecount.pyx":52
+    /* "Arithmos/data/_valuecount.pyx":52
  *         if a[0, src] != a[0, src]:
  *             break
  *         if a[0, src] == a[0, dst]:             # <<<<<<<<<<<<<<
@@ -1970,7 +1970,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __pyx_t_1 = (((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_a.diminfo[1].strides)) == (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_a.diminfo[1].strides))) != 0);
     if (__pyx_t_1) {
 
-      /* "Orange/data/_valuecount.pyx":53
+      /* "Arithmos/data/_valuecount.pyx":53
  *             break
  *         if a[0, src] == a[0, dst]:
  *             a[1, dst] += a[1, src]             # <<<<<<<<<<<<<<
@@ -1983,7 +1983,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
       __pyx_t_26 = __pyx_v_dst;
       *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_a.diminfo[1].strides) += (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_24, __pyx_pybuffernd_a.diminfo[1].strides));
 
-      /* "Orange/data/_valuecount.pyx":52
+      /* "Arithmos/data/_valuecount.pyx":52
  *         if a[0, src] != a[0, src]:
  *             break
  *         if a[0, src] == a[0, dst]:             # <<<<<<<<<<<<<<
@@ -1993,7 +1993,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
       goto __pyx_L15;
     }
 
-    /* "Orange/data/_valuecount.pyx":55
+    /* "Arithmos/data/_valuecount.pyx":55
  *             a[1, dst] += a[1, src]
  *         else:
  *             dst += 1             # <<<<<<<<<<<<<<
@@ -2003,7 +2003,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     /*else*/ {
       __pyx_v_dst = (__pyx_v_dst + 1);
 
-      /* "Orange/data/_valuecount.pyx":56
+      /* "Arithmos/data/_valuecount.pyx":56
  *         else:
  *             dst += 1
  *             a[0, dst] = a[0, src]             # <<<<<<<<<<<<<<
@@ -2016,7 +2016,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
       __pyx_t_30 = __pyx_v_dst;
       *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_30, __pyx_pybuffernd_a.diminfo[1].strides) = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_a.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_a.diminfo[1].strides));
 
-      /* "Orange/data/_valuecount.pyx":57
+      /* "Arithmos/data/_valuecount.pyx":57
  *             dst += 1
  *             a[0, dst] = a[0, src]
  *             a[1, dst] = a[1, src]             # <<<<<<<<<<<<<<
@@ -2032,7 +2032,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   }
   __pyx_L13_break:;
 
-  /* "Orange/data/_valuecount.pyx":58
+  /* "Arithmos/data/_valuecount.pyx":58
  *             a[0, dst] = a[0, src]
  *             a[1, dst] = a[1, src]
  *     return a[:, :dst + 1]             # <<<<<<<<<<<<<<
@@ -2058,7 +2058,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
   __pyx_t_35 = 0;
   goto __pyx_L0;
 
-  /* "Orange/data/_valuecount.pyx":14
+  /* "Arithmos/data/_valuecount.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def valuecount(np.ndarray[np.float64_t, ndim=2] a not None):             # <<<<<<<<<<<<<<
@@ -2076,7 +2076,7 @@ static PyObject *__pyx_pf_6Orange_4data_11_valuecount_valuecount(CYTHON_UNUSED P
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_a.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.data._valuecount.valuecount", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._valuecount.valuecount", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4592,8 +4592,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
   {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
-  {&__pyx_n_s_Orange_data__valuecount, __pyx_k_Orange_data__valuecount, sizeof(__pyx_k_Orange_data__valuecount), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_data__valuecount_pyx, __pyx_k_Orange_data__valuecount_pyx, sizeof(__pyx_k_Orange_data__valuecount_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_data__valuecount, __pyx_k_Arithmos_data__valuecount, sizeof(__pyx_k_Arithmos_data__valuecount), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_data__valuecount_pyx, __pyx_k_Arithmos_data__valuecount_pyx, sizeof(__pyx_k_Arithmos_data__valuecount_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_a, __pyx_k_a, sizeof(__pyx_k_a), 0, 0, 1, 1},
@@ -4630,7 +4630,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/data/_valuecount.pyx":35
+  /* "Arithmos/data/_valuecount.pyx":35
  *     dim = np.PyArray_DIMS(a)
  *     if dim[0] != 2:
  *         raise ValueError("valuecount expects an array with shape (2, N)")             # <<<<<<<<<<<<<<
@@ -4641,7 +4641,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "Orange/data/_valuecount.pyx":41
+  /* "Arithmos/data/_valuecount.pyx":41
  * 
  *     if N == 0 or npy_isnan(a[0, 0]):
  *         return a[:, :0]             # <<<<<<<<<<<<<<
@@ -4658,7 +4658,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "Orange/data/_valuecount.pyx":58
+  /* "Arithmos/data/_valuecount.pyx":58
  *             a[0, dst] = a[0, src]
  *             a[1, dst] = a[1, src]
  *     return a[:, :dst + 1]             # <<<<<<<<<<<<<<
@@ -4764,7 +4764,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "Orange/data/_valuecount.pyx":14
+  /* "Arithmos/data/_valuecount.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def valuecount(np.ndarray[np.float64_t, ndim=2] a not None):             # <<<<<<<<<<<<<<
@@ -4774,7 +4774,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__15 = PyTuple_Pack(5, __pyx_n_s_a, __pyx_n_s_dim, __pyx_n_s_N, __pyx_n_s_src, __pyx_n_s_dst); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_data__valuecount_pyx, __pyx_n_s_valuecount, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_data__valuecount_pyx, __pyx_n_s_valuecount, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5014,14 +5014,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__data___valuecount) {
+  if (__pyx_module_is_main_Arithmos__data___valuecount) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.data._valuecount")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.data._valuecount", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.data._valuecount")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.data._valuecount", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5042,7 +5042,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/data/_valuecount.pyx":3
+  /* "Arithmos/data/_valuecount.pyx":3
  * #cython: embedsignature=True
  * 
  * import numpy             # <<<<<<<<<<<<<<
@@ -5054,19 +5054,19 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_1) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/data/_valuecount.pyx":14
+  /* "Arithmos/data/_valuecount.pyx":14
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def valuecount(np.ndarray[np.float64_t, ndim=2] a not None):             # <<<<<<<<<<<<<<
  *     """Count the occurrences of each value.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_4data_11_valuecount_1valuecount, NULL, __pyx_n_s_Orange_data__valuecount); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_4data_11_valuecount_1valuecount, NULL, __pyx_n_s_Arithmos_data__valuecount); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_valuecount, __pyx_t_1) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/data/_valuecount.pyx":1
+  /* "Arithmos/data/_valuecount.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * 
  * import numpy
@@ -5092,11 +5092,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.data._valuecount", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.data._valuecount", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.data._valuecount");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.data._valuecount");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

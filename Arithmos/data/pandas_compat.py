@@ -6,7 +6,7 @@ from pandas.api.types import (
     is_datetime64_any_dtype, is_numeric_dtype,
 )
 
-from Orange.data import (
+from Arithmos.data import (
     Table, Domain, DiscreteVariable, StringVariable, TimeVariable,
     ContinuousVariable,
 )
@@ -16,7 +16,7 @@ __all__ = ['table_from_frame', 'table_to_frame']
 
 def table_from_frame(df, *, force_nominal=False):
     """
-    Convert pandas.DataFrame to Orange.data.Table
+    Convert pandas.DataFrame to Arithmos.data.Table
 
     Parameters
     ----------
@@ -80,7 +80,7 @@ def table_from_frame(df, *, force_nominal=False):
 
 def table_to_frame(tab, include_metas=False):
     """
-    Convert Orange.data.Table to pandas.DataFrame
+    Convert Arithmos.data.Table to pandas.DataFrame
 
     Parameters
     ----------

@@ -20,7 +20,7 @@ This module contains functions and classes for creating GUI elements commonly us
 .. autoclass:: OWButton
     :show-inheritance:
 
-.. autoclass:: OrangeWidgets.plot.OWPlotGUI
+.. autoclass:: ArithmosWidgets.plot.OWPlotGUI
     :members:
 
 '''
@@ -34,11 +34,11 @@ from AnyQt.QtWidgets import (
 from AnyQt.QtGui import QIcon, QColor, QFont
 from AnyQt.QtCore import Qt, pyqtSignal, QSize, QRect, QPoint, QMimeData
 
-from Orange.data import ContinuousVariable, DiscreteVariable
-from Orange.widgets import gui
-from Orange.widgets.gui import OrangeUserRole
-from Orange.widgets.utils.listfilter import variables_filter
-from Orange.widgets.utils.itemmodels import DomainModel, VariableListModel
+from Arithmos.data import ContinuousVariable, DiscreteVariable
+from Arithmos.widgets import gui
+from Arithmos.widgets.gui import ArithmosUserRole
+from Arithmos.widgets.utils.listfilter import variables_filter
+from Arithmos.widgets.utils.itemmodels import DomainModel, VariableListModel
 
 from .owconstants import (
     NOTHING, ZOOMING, SELECT, SELECT_POLYGON, PANNING, SELECTION_ADD,\
@@ -54,8 +54,8 @@ SIZE_POLICY_FIXED = (QSizePolicy.Minimum, QSizePolicy.Maximum)
 
 
 class VariableSelectionModel(VariableListModel):
-    IsSelected = next(OrangeUserRole)
-    SortRole = next(OrangeUserRole)
+    IsSelected = next(ArithmosUserRole)
+    SortRole = next(ArithmosUserRole)
     selection_changed = pyqtSignal()
 
     def __init__(self, selected_vars, max_vars=None):

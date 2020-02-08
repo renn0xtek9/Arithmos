@@ -8,10 +8,10 @@ import numpy
 
 SKIP_DIRS = (
     # Skip modules which import and initialize stuff that require QApplication
-    'Orange/widgets',
-    'Orange/canvas',
-    # Skip because we don't want Orange.datasets as a module (yet)
-    'Orange/datasets/'
+    'Arithmos/widgets',
+    'Arithmos/canvas',
+    # Skip because we don't want Arithmos.datasets as a module (yet)
+    'Arithmos/datasets/'
 )
 
 if sys.platform == "win32":
@@ -83,6 +83,6 @@ def suite(package):
 def load_tests(loader, tests, ignore):
     # This follows the load_tests protocol
     # https://docs.python.org/3/library/unittest.html#load-tests-protocol
-    import Orange
-    tests.addTests(suite(Orange))
+    import Arithmos
+    tests.addTests(suite(Arithmos))
     return tests

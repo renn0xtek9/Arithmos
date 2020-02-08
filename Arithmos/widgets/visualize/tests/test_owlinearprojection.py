@@ -5,17 +5,17 @@ import numpy as np
 
 from AnyQt.QtCore import QItemSelectionModel
 
-from Orange.data import Table, Domain, DiscreteVariable
-from Orange.widgets.settings import Context
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table, Domain, DiscreteVariable
+from Arithmos.widgets.settings import Context
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, datasets,
     AnchorProjectionWidgetTestMixin
 )
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owlinearprojection import (
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owlinearprojection import (
     OWLinearProjection, LinearProjectionVizRank, Placement
 )
-from Orange.widgets.visualize.utils import run_vizrank
+from Arithmos.widgets.visualize.utils import run_vizrank
 
 
 class TestOWLinearProjection(WidgetTest, AnchorProjectionWidgetTestMixin,
@@ -113,7 +113,7 @@ class TestOWLinearProjection(WidgetTest, AnchorProjectionWidgetTestMixin,
             assertErrorShown(data, is_shown)
 
     def test_migrate_settings_from_version_1(self):
-        # Settings from Orange 3.4.0
+        # Settings from Arithmos 3.4.0
         settings = {
             '__version__': 1,
             'alpha_value': 255,

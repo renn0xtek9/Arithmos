@@ -8,13 +8,13 @@ from AnyQt.QtCore import QPoint, Qt
 from AnyQt.QtWidgets import QGraphicsScene, QGraphicsView
 from AnyQt.QtTest import QTest
 
-from orangewidget.tests.base import GuiTest
-import Orange.misc
-from Orange.clustering import hierarchical
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.distance import Euclidean
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.unsupervised.owhierarchicalclustering import \
+from arithmoswidget.tests.base import GuiTest
+import Arithmos.misc
+from Arithmos.clustering import hierarchical
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.distance import Euclidean
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.unsupervised.owhierarchicalclustering import \
     OWHierarchicalClustering, DendrogramWidget
 
 
@@ -63,16 +63,16 @@ class TestOWHierarchicalClustering(WidgetTest, WidgetOutputsTestMixin):
         self.assertIsNotNone(self.get_output(self.widget.Outputs.annotated_data))
 
     def test_all_zero_inputs(self):
-        d = Orange.misc.DistMatrix(np.zeros((10, 10)))
+        d = Arithmos.misc.DistMatrix(np.zeros((10, 10)))
         self.widget.set_distances(d)
 
     def test_annotation_settings_retrieval(self):
         """Check whether widget retrieves correct settings for annotation"""
         widget = self.widget
 
-        dist_names = Orange.misc.DistMatrix(
+        dist_names = Arithmos.misc.DistMatrix(
             np.zeros((4, 4)), self.data, axis=0)
-        dist_no_names = Orange.misc.DistMatrix(np.zeros((10, 10)), axis=1)
+        dist_no_names = Arithmos.misc.DistMatrix(np.zeros((10, 10)), axis=1)
 
         self.send_signal(self.widget.Inputs.distances, self.distances)
         # Check that default is set (class variable)

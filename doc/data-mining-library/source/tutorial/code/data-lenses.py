@@ -1,6 +1,6 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("lenses")
+data = Arithmos.data.Table("lenses")
 print("Attributes:", ", ".join(x.name for x in data.domain.attributes))
 print("Class:", data.domain.class_var.name)
 print("Data instances", len(data))

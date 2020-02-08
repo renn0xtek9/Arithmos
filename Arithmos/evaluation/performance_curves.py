@@ -51,7 +51,7 @@ class Curves:
         Construct an instance of `Curves` from test results.
 
         Args:
-            results (:obj:`Orange.evaluation.testing.Results`): test results
+            results (:obj:`Arithmos.evaluation.testing.Results`): test results
             target_class (int): target class index; if the class is binary,
                 this defaults to `1`, otherwise it must be given
             model_index (int): model index; if there is only one model, this

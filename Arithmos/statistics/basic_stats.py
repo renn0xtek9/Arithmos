@@ -1,4 +1,4 @@
-from Orange.data import Variable, Storage
+from Arithmos.data import Variable, Storage
 
 def _get_variable(variable, dat):
     if isinstance(variable, Variable):

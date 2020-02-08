@@ -1,5 +1,5 @@
-from Orange import classification, evaluation
-from Orange.data import Table
+from Arithmos import classification, evaluation
+from Arithmos.data import Table
 
 
 class EvaluateTest:

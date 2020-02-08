@@ -6,10 +6,10 @@ from unittest.mock import patch, Mock
 import numpy as np
 from scipy import sparse
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.unsupervised.owmanifoldlearning import OWManifoldLearning
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.unsupervised.owmanifoldlearning import OWManifoldLearning
 
 
 class TestOWManifoldLearning(WidgetTest):
@@ -137,7 +137,7 @@ class TestOWManifoldLearning(WidgetTest):
         GH-2441
         """
         table = Table("iris")
-        with patch("Orange.projection.manifold.MDS.__call__", Mock()) as mock:
+        with patch("Arithmos.projection.manifold.MDS.__call__", Mock()) as mock:
             mock.side_effect = MemoryError
             self.send_signal("Data", table)
             self.widget.manifold_methods_combo.activated.emit(1)

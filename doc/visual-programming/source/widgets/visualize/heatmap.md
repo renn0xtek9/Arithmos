@@ -36,7 +36,7 @@ Example
 
 The **Heat Map** below displays attribute values for the *Housing* dataset. The aforementioned dataset concerns the housing values in the suburbs of Boston.
 
-The first thing we see in the map are the 'B' and 'Tax' attributes, which are the only two colored in dark orange. The 'B' attribute provides information on the proportion of blacks by town and the 'Tax' attribute informs us about the full-value property-tax rate per $10,000. In order to get a clearer heat map, we then use the [Select Columns](../data/selectcolumns.md) widget and remove the two attributes from the dataset. Then we again feed the data to the **Heat map**. The new projection offers additional information.
+The first thing we see in the map are the 'B' and 'Tax' attributes, which are the only two colored in dark arithmos. The 'B' attribute provides information on the proportion of blacks by town and the 'Tax' attribute informs us about the full-value property-tax rate per $10,000. In order to get a clearer heat map, we then use the [Select Columns](../data/selectcolumns.md) widget and remove the two attributes from the dataset. Then we again feed the data to the **Heat map**. The new projection offers additional information.
 
 By removing 'B' and 'Tax', we can see other deciding factors, namely 'Age' and 'ZN'. The ‘Age’ attribute provides information on the proportion of owner-occupied units built prior to 1940 and the 'ZN' attribute informs us about the proportion of non-retail business acres per town.
 

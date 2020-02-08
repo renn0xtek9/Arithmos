@@ -15,13 +15,13 @@ from AnyQt.QtWidgets import (
     QTableView, QGraphicsTextItem, QGraphicsRectItem, QGraphicsView, QDialog,
     QVBoxLayout, QLineEdit
 )
-from Orange.data import Variable
-from Orange.widgets import gui
-from Orange.widgets.gui import HorizontalGridDelegate, TableBarItem
-from Orange.widgets.utils.concurrent import ConcurrentMixin, TaskState
-from Orange.widgets.utils.messages import WidgetMessagesMixin
-from Orange.widgets.utils.progressbar import ProgressBarMixin
-from Orange.widgets.widget import Msg
+from Arithmos.data import Variable
+from Arithmos.widgets import gui
+from Arithmos.widgets.gui import HorizontalGridDelegate, TableBarItem
+from Arithmos.widgets.utils.concurrent import ConcurrentMixin, TaskState
+from Arithmos.widgets.utils.messages import WidgetMessagesMixin
+from Arithmos.widgets.utils.progressbar import ProgressBarMixin
+from Arithmos.widgets.widget import Msg
 
 
 class Result(namespace):
@@ -79,10 +79,10 @@ class VizRankDialog(QDialog, ProgressBarMixin, WidgetMessagesMixin,
     the appropriate place in the table.
 
     Args:
-        master (Orange.widget.OWWidget): widget to which the dialog belongs
+        master (Arithmos.widget.OWWidget): widget to which the dialog belongs
 
     Attributes:
-        master (Orange.widget.OWWidget): widget to which the dialog belongs
+        master (Arithmos.widget.OWWidget): widget to which the dialog belongs
         captionTitle (str): the caption for the dialog. This can be a class
           attribute. `captionTitle` is used by the `ProgressBarMixin`.
     """
@@ -161,7 +161,7 @@ class VizRankDialog(QDialog, ProgressBarMixin, WidgetMessagesMixin,
 
         Args:
             widget (QWidget): the widget into whose layout to insert the button
-            master (Orange.widgets.widget.OWWidget): the master widget
+            master (Arithmos.widgets.widget.OWWidget): the master widget
             button_label: the label for the button
             set_attr_callback: the callback for setting the projection chosen
                 in the vizrank
@@ -452,7 +452,7 @@ class VizRankDialogAttr(VizRankDialog):
     """
 
     attrSelected = Signal(Variable, Variable)
-    _AttrRole = next(gui.OrangeUserRole)
+    _AttrRole = next(gui.ArithmosUserRole)
 
     def __init__(self, master):
         super().__init__(master)
@@ -503,7 +503,7 @@ class VizRankDialogAttrPair(VizRankDialog):
     """
 
     pairSelected = Signal(Variable, Variable)
-    _AttrRole = next(gui.OrangeUserRole)
+    _AttrRole = next(gui.ArithmosUserRole)
 
     def __init__(self, master):
         VizRankDialog.__init__(self, master)

@@ -33,13 +33,13 @@ from AnyQt.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
 import numpy as np
 import pandas as pd
 
-import Orange.data
+import Arithmos.data
 
-from Orange.preprocess.transformation import Transformation, Identity, Lookup
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.preprocess.transformation import Transformation, Identity, Lookup
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 ndarray = np.ndarray  # pylint: disable=invalid-name
 MArray = np.ma.MaskedArray
@@ -47,7 +47,7 @@ DType = Union[np.dtype, type]
 
 A = TypeVar("A")  # pylint: disable=invalid-name
 B = TypeVar("B")  # pylint: disable=invalid-name
-V = TypeVar("V", bound=Orange.data.Variable)  # pylint: disable=invalid-name
+V = TypeVar("V", bound=Arithmos.data.Variable)  # pylint: disable=invalid-name
 H = TypeVar("H", bound=Hashable)  # pylint: disable=invalid-name
 
 
@@ -1295,7 +1295,7 @@ class VariableEditDelegate(QStyledItemDelegate):
         if isinstance(item, VariableTypes):
             var = item
             option.icon = variable_icon(item)
-        elif isinstance(item, Orange.data.Variable):
+        elif isinstance(item, Arithmos.data.Variable):
             var = item
             option.icon = gui.attributeIconDict[var]
 
@@ -1521,10 +1521,10 @@ class OWEditDomain(widget.OWWidget):
     keywords = ["rename", "drop", "reorder", "order"]
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     class Error(widget.OWWidget.Error):
         duplicate_var_name = widget.Msg("A variable name is duplicated.")
@@ -1539,7 +1539,7 @@ class OWEditDomain(widget.OWWidget):
 
     def __init__(self):
         super().__init__()
-        self.data = None  # type: Optional[Orange.data.Table]
+        self.data = None  # type: Optional[Arithmos.data.Table]
         #: The current selected variable index
         self.selected_index = -1
         self._invalidated = False
@@ -1666,7 +1666,7 @@ class OWEditDomain(widget.OWWidget):
         assert len(rows) <= 1
         return rows[0].row() if rows else -1
 
-    def setup_model(self, data: Orange.data.Table):
+    def setup_model(self, data: Arithmos.data.Table):
         model = self.variables_model
         vars_ = []
         columns = []
@@ -1837,7 +1837,7 @@ class OWEditDomain(widget.OWWidget):
         Ms += [v for v in Xs + Ys if not v.is_primitive()]
         Xs = [v for v in Xs if v.is_primitive()]
         Ys = [v for v in Ys if v.is_primitive()]
-        domain = Orange.data.Domain(Xs, Ys, Ms)
+        domain = Arithmos.data.Domain(Xs, Ys, Ms)
         new_data = data.transform(domain)
         self.Outputs.data.send(new_data)
 
@@ -1873,7 +1873,7 @@ class OWEditDomain(widget.OWWidget):
         if version is None or version <= 1:
             hints_ = context.values.get("domain_change_hints", ({}, -2))[0]
             store = []
-            ns = "Orange.data.variable"
+            ns = "Arithmos.data.variable"
             mapping = {
                 "DiscreteVariable":
                     lambda name, args, attrs:
@@ -1913,8 +1913,8 @@ class OWEditDomain(widget.OWWidget):
 
 
 def enumerate_columns(
-        table: Orange.data.Table
-) -> Iterable[Tuple[int, str, Orange.data.Variable, Callable[[], ndarray]]]:
+        table: Arithmos.data.Table
+) -> Iterable[Tuple[int, str, Arithmos.data.Variable, Callable[[], ndarray]]]:
     domain = table.domain
     for i, (var, role) in enumerate(
             chain(zip(domain.attributes, repeat("x")),
@@ -1928,33 +1928,33 @@ def enumerate_columns(
 
 
 def table_column_data(
-        table: Orange.data.Table,
-        var: Union[Orange.data.Variable, int],
+        table: Arithmos.data.Table,
+        var: Union[Arithmos.data.Variable, int],
         dtype=None
 ) -> MArray:
     col, copy = table.get_column_view(var)
-    var = table.domain[var]  # type: Orange.data.Variable
+    var = table.domain[var]  # type: Arithmos.data.Variable
     if var.is_primitive() and not np.issubdtype(col.dtype, np.inexact):
         col = col.astype(float)
         copy = True
 
     if dtype is None:
-        if isinstance(var, Orange.data.TimeVariable):
+        if isinstance(var, Arithmos.data.TimeVariable):
             dtype = np.dtype("M8[us]")
             col = col * 1e6
-        elif isinstance(var, Orange.data.ContinuousVariable):
+        elif isinstance(var, Arithmos.data.ContinuousVariable):
             dtype = np.dtype(float)
-        elif isinstance(var, Orange.data.DiscreteVariable):
+        elif isinstance(var, Arithmos.data.DiscreteVariable):
             _values = tuple(var.values)
             _n_values = len(_values)
             dtype = np.dtype(int, metadata={
                 "__formatter": lambda i: _values[i] if 0 <= i < _n_values else "?"
             })
-        elif isinstance(var, Orange.data.StringVariable):
+        elif isinstance(var, Arithmos.data.StringVariable):
             dtype = np.dtype(object)
         else:
             assert False
-    mask = orange_isna(var, col)
+    mask = arithmos_isna(var, col)
 
     if dtype != col.dtype:
         col = col.astype(dtype)
@@ -2073,13 +2073,13 @@ def report_transform(var, trs):
 
 
 def abstract(var):
-    # type: (Orange.data.Variable) -> Variable
+    # type: (Arithmos.data.Variable) -> Variable
     """
-    Return `Varaible` descriptor for an `Orange.data.Variable` instance.
+    Return `Varaible` descriptor for an `Arithmos.data.Variable` instance.
 
     Parameters
     ----------
-    var : Orange.data.Variable
+    var : Arithmos.data.Variable
 
     Returns
     -------
@@ -2089,16 +2089,16 @@ def abstract(var):
         (key, str(value))
         for key, value in var.attributes.items()
     ))
-    if isinstance(var, Orange.data.DiscreteVariable):
+    if isinstance(var, Arithmos.data.DiscreteVariable):
         if var.ordered:
             return Ordered(var.name, tuple(var.values), annotations)
         else:
             return Categorical(var.name, tuple(var.values), annotations)
-    elif isinstance(var, Orange.data.TimeVariable):
+    elif isinstance(var, Arithmos.data.TimeVariable):
         return Time(var.name, annotations)
-    elif isinstance(var, Orange.data.ContinuousVariable):
+    elif isinstance(var, Arithmos.data.ContinuousVariable):
         return Real(var.name, (var.number_of_decimals, 'f'), annotations)
-    elif isinstance(var, Orange.data.StringVariable):
+    elif isinstance(var, Arithmos.data.StringVariable):
         return String(var.name, annotations)
     else:
         raise TypeError
@@ -2108,15 +2108,15 @@ def _parse_attributes(mapping):
     # type: (Iterable[Tuple[str, str]]) -> Dict[str, Any]
     # Use the same functionality that parses attributes
     # when reading text files
-    return Orange.data.Flags([
+    return Arithmos.data.Flags([
         "{}={}".format(*item) for item in mapping
     ]).attributes
 
 
 def apply_transform(var, table, trs):
-    # type: (Orange.data.Variable, Orange.data.Table, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.Variable, Arithmos.data.Table, List[Transform]) -> Arithmos.data.Variable
     """
-    Apply a list of `Transform` instances on an `Orange.data.Variable`.
+    Apply a list of `Transform` instances on an `Arithmos.data.Variable`.
     """
     if trs and isinstance(trs[0], ReinterpretTransformTypes):
         reinterpret, trs = trs[0], trs[1:]
@@ -2130,13 +2130,13 @@ def apply_transform(var, table, trs):
 
 @singledispatch
 def apply_transform_var(var, trs):
-    # type: (Orange.data.Variable, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.Variable, List[Transform]) -> Arithmos.data.Variable
     raise NotImplementedError
 
 
-@apply_transform_var.register(Orange.data.DiscreteVariable)
+@apply_transform_var.register(Arithmos.data.DiscreteVariable)
 def apply_transform_discete(var, trs):
-    # type: (Orange.data.DiscreteVariable, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.DiscreteVariable, List[Transform]) -> Arithmos.data.Variable
     # pylint: disable=too-many-branches
     name, annotations = var.name, var.attributes
     mapping = None
@@ -2173,38 +2173,38 @@ def apply_transform_discete(var, trs):
         lookup = Lookup(var, lookup)
     else:
         lookup = Identity(var)
-    variable = Orange.data.DiscreteVariable(
+    variable = Arithmos.data.DiscreteVariable(
         name, values=dest_values, compute_value=lookup, ordered=ordered)
     variable.attributes.update(annotations)
     return variable
 
 
-@apply_transform_var.register(Orange.data.ContinuousVariable)
+@apply_transform_var.register(Arithmos.data.ContinuousVariable)
 def apply_transform_continuous(var, trs):
-    # type: (Orange.data.ContinuousVariable, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.ContinuousVariable, List[Transform]) -> Arithmos.data.Variable
     name, annotations = var.name, var.attributes
     for tr in trs:
         if isinstance(tr, Rename):
             name = tr.name
         elif isinstance(tr, Annotate):
             annotations = _parse_attributes(tr.annotations)
-    variable = Orange.data.ContinuousVariable(
+    variable = Arithmos.data.ContinuousVariable(
         name=name, compute_value=Identity(var)
     )
     variable.attributes.update(annotations)
     return variable
 
 
-@apply_transform_var.register(Orange.data.TimeVariable)
+@apply_transform_var.register(Arithmos.data.TimeVariable)
 def apply_transform_time(var, trs):
-    # type: (Orange.data.TimeVariable, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.TimeVariable, List[Transform]) -> Arithmos.data.Variable
     name, annotations = var.name, var.attributes
     for tr in trs:
         if isinstance(tr, Rename):
             name = tr.name
         elif isinstance(tr, Annotate):
             annotations = _parse_attributes(tr.annotations)
-    variable = Orange.data.TimeVariable(
+    variable = Arithmos.data.TimeVariable(
         name=name, have_date=var.have_date, have_time=var.have_time,
         compute_value=Identity(var)
     )
@@ -2212,16 +2212,16 @@ def apply_transform_time(var, trs):
     return variable
 
 
-@apply_transform_var.register(Orange.data.StringVariable)
+@apply_transform_var.register(Arithmos.data.StringVariable)
 def apply_transform_string(var, trs):
-    # type: (Orange.data.StringVariable, List[Transform]) -> Orange.data.Variable
+    # type: (Arithmos.data.StringVariable, List[Transform]) -> Arithmos.data.Variable
     name, annotations = var.name, var.attributes
     for tr in trs:
         if isinstance(tr, Rename):
             name = tr.name
         elif isinstance(tr, Annotate):
             annotations = _parse_attributes(tr.annotations)
-    variable = Orange.data.StringVariable(
+    variable = Arithmos.data.StringVariable(
         name=name, compute_value=Identity(var)
     )
     variable.attributes.update(annotations)
@@ -2277,7 +2277,7 @@ def make_dict_mapper(
 
 
 def time_parse(values: Sequence[str], name="__"):
-    tvar = Orange.data.TimeVariable(name)
+    tvar = Arithmos.data.TimeVariable(name)
     parse_time = ftry(tvar.parse, ValueError, np.nan)
     values = [parse_time(v) for v in values]
     return tvar, values
@@ -2306,7 +2306,7 @@ def as_float_or_nan(
     return _parse_float(arr, out, where=where, **kwargs)
 
 
-def copy_attributes(dst: V, src: Orange.data.Variable) -> V:
+def copy_attributes(dst: V, src: Arithmos.data.Variable) -> V:
     # copy `attributes` and `sparse` members from src to dst
     dst.attributes = dict(src.attributes)
     dst.sparse = src.sparse
@@ -2317,33 +2317,33 @@ def copy_attributes(dst: V, src: Orange.data.Variable) -> V:
 
 @singledispatch
 def apply_reinterpret(var, tr, data):
-    # type: (Orange.data.Variable, ReinterpretTransform, MArray) -> Orange.data.Variable
+    # type: (Arithmos.data.Variable, ReinterpretTransform, MArray) -> Arithmos.data.Variable
     """
-    Apply a re-interpret transform to an `Orange.data.Table`'s column
+    Apply a re-interpret transform to an `Arithmos.data.Table`'s column
     """
     raise NotImplementedError
 
 
-@apply_reinterpret.register(Orange.data.DiscreteVariable)
+@apply_reinterpret.register(Arithmos.data.DiscreteVariable)
 def apply_reinterpret_d(var, tr, data):
-    # type: (Orange.data.DiscreteVariable, ReinterpretTransform, ndarray) -> Orange.data.Variable
+    # type: (Arithmos.data.DiscreteVariable, ReinterpretTransform, ndarray) -> Arithmos.data.Variable
     if isinstance(tr, AsCategorical):
         return var
     elif isinstance(tr, AsString):
         f = Lookup(var, np.array(var.values, dtype=object), unknown="")
-        rvar = Orange.data.StringVariable(
+        rvar = Arithmos.data.StringVariable(
             name=var.name, compute_value=f
         )
     elif isinstance(tr, AsContinuous):
         f = Lookup(var, np.array(list(map(parse_float, var.values))),
                    unknown=np.nan)
-        rvar = Orange.data.ContinuousVariable(
+        rvar = Arithmos.data.ContinuousVariable(
             name=var.name, compute_value=f, sparse=var.sparse
         )
     elif isinstance(tr, AsTime):
         _tvar, values = time_parse(var.values)
         f = Lookup(var, np.array(values), unknown=np.nan)
-        rvar = Orange.data.TimeVariable(
+        rvar = Arithmos.data.TimeVariable(
             name=var.name, have_date=_tvar.have_date,
             have_time=_tvar.have_time, compute_value=f,
         )
@@ -2352,7 +2352,7 @@ def apply_reinterpret_d(var, tr, data):
     return copy_attributes(rvar, var)
 
 
-@apply_reinterpret.register(Orange.data.ContinuousVariable)
+@apply_reinterpret.register(Arithmos.data.ContinuousVariable)
 def apply_reinterpret_c(var, tr, data: MArray):
     if isinstance(tr, AsCategorical):
         # This is ill defined and should not result in a 'compute_value'
@@ -2366,18 +2366,18 @@ def apply_reinterpret_c(var, tr, data: MArray):
             )
         )
         values = tuple(as_string(values))
-        rvar = Orange.data.DiscreteVariable(
+        rvar = Arithmos.data.DiscreteVariable(
             name=var.name, values=values, compute_value=tr
         )
     elif isinstance(tr, AsContinuous):
         return var
     elif isinstance(tr, AsString):
         tstr = ToStringTransform(var)
-        rvar = Orange.data.StringVariable(
+        rvar = Arithmos.data.StringVariable(
             name=var.name, compute_value=tstr
         )
     elif isinstance(tr, AsTime):
-        rvar = Orange.data.TimeVariable(
+        rvar = Arithmos.data.TimeVariable(
             name=var.name, compute_value=Identity(var)
         )
     else:
@@ -2385,8 +2385,8 @@ def apply_reinterpret_c(var, tr, data: MArray):
     return copy_attributes(rvar, var)
 
 
-@apply_reinterpret.register(Orange.data.StringVariable)
-def apply_reinterpret_s(var: Orange.data.StringVariable, tr, data: MArray):
+@apply_reinterpret.register(Arithmos.data.StringVariable)
+def apply_reinterpret_s(var: Arithmos.data.StringVariable, tr, data: MArray):
     if isinstance(tr, AsCategorical):
         # This is ill defined and should not result in a 'compute_value'
         # (post-hoc expunge from the domain once translated?)
@@ -2395,18 +2395,18 @@ def apply_reinterpret_s(var: Orange.data.StringVariable, tr, data: MArray):
             np.nan, {v: float(i) for i, v in enumerate(values)}
         )
         tr = LookupMappingTransform(var, mapping)
-        rvar = Orange.data.DiscreteVariable(
+        rvar = Arithmos.data.DiscreteVariable(
             name=var.name, values=values, compute_value=tr
         )
     elif isinstance(tr, AsContinuous):
-        rvar = Orange.data.ContinuousVariable(
+        rvar = Arithmos.data.ContinuousVariable(
             var.name, compute_value=ToContinuousTransform(var)
         )
     elif isinstance(tr, AsString):
         return var
     elif isinstance(tr, AsTime):
         tvar, _ = time_parse(np.unique(data.data[~data.mask]))
-        rvar = Orange.data.TimeVariable(
+        rvar = Arithmos.data.TimeVariable(
             name=var.name, have_date=tvar.have_date, have_time=tvar.have_time,
             compute_value=ReparseTimeTransform(var)
         )
@@ -2415,8 +2415,8 @@ def apply_reinterpret_s(var: Orange.data.StringVariable, tr, data: MArray):
     return copy_attributes(rvar, var)
 
 
-@apply_reinterpret.register(Orange.data.TimeVariable)
-def apply_reinterpret_t(var: Orange.data.TimeVariable, tr, data):
+@apply_reinterpret.register(Arithmos.data.TimeVariable)
+def apply_reinterpret_t(var: Arithmos.data.TimeVariable, tr, data):
     if isinstance(tr, AsCategorical):
         values, _ = categorize_unique(data)
         or_values = values.astype(float) / 1e6
@@ -2425,15 +2425,15 @@ def apply_reinterpret_t(var: Orange.data.TimeVariable, tr, data):
         )
         tr = LookupMappingTransform(var, mapping)
         values = tuple(as_string(values))
-        rvar = Orange.data.DiscreteVariable(
+        rvar = Arithmos.data.DiscreteVariable(
             name=var.name, values=values, compute_value=tr
         )
     elif isinstance(tr, AsContinuous):
-        rvar = Orange.data.TimeVariable(
+        rvar = Arithmos.data.TimeVariable(
             name=var.name, compute_value=Identity(var)
         )
     elif isinstance(tr, AsString):
-        rvar = Orange.data.StringVariable(
+        rvar = Arithmos.data.StringVariable(
             name=var.name, compute_value=ToStringTransform(var)
         )
     elif isinstance(tr, AsTime):
@@ -2443,7 +2443,7 @@ def apply_reinterpret_t(var: Orange.data.TimeVariable, tr, data):
     return copy_attributes(rvar, var)
 
 
-def orange_isna(variable: Orange.data.Variable, data: ndarray) -> ndarray:
+def arithmos_isna(variable: Arithmos.data.Variable, data: ndarray) -> ndarray:
     """
     Return a bool mask masking N/A elements in `data` for the `variable`.
     """
@@ -2464,7 +2464,7 @@ class ToStringTransform(Transformation):
             r = column_str_repr(self.variable, c)
         elif self.variable.is_continuous:
             r = as_string(c)
-        mask = orange_isna(self.variable, c)
+        mask = arithmos_isna(self.variable, c)
         return np.where(mask, "", r)
 
 
@@ -2494,9 +2494,9 @@ class ReparseTimeTransform(Transformation):
         c = column_str_repr(self.variable, c)
         c = pd.to_datetime(c, errors="coerce").values.astype("M8[us]")
         mask = np.isnat(c)
-        orangecol = c.astype(float) / 1e6
-        orangecol[mask] = np.nan
-        return orangecol
+        arithmoscol = c.astype(float) / 1e6
+        arithmoscol[mask] = np.nan
+        return arithmoscol
 
 
 class LookupMappingTransform(Transformation):
@@ -2505,7 +2505,7 @@ class LookupMappingTransform(Transformation):
     """
     def __init__(
             self,
-            variable: Orange.data.Variable,
+            variable: Arithmos.data.Variable,
             mapping: Mapping,
             dtype: Optional[np.dtype] = None
     ) -> None:
@@ -2522,27 +2522,27 @@ class LookupMappingTransform(Transformation):
 
 
 @singledispatch
-def column_str_repr(var: Orange.data.Variable, coldata: ndarray) -> ndarray:
+def column_str_repr(var: Arithmos.data.Variable, coldata: ndarray) -> ndarray:
     """Return a array of str representations of coldata for the `variable."""
     _f = np.frompyfunc(var.repr_val, 1, 1)
     return _f(coldata)
 
 
-@column_str_repr.register(Orange.data.DiscreteVariable)
+@column_str_repr.register(Arithmos.data.DiscreteVariable)
 def column_str_repr_discrete(
-        var: Orange.data.DiscreteVariable, coldata: ndarray
+        var: Arithmos.data.DiscreteVariable, coldata: ndarray
 ) -> ndarray:
     values = np.array(var.values, dtype=object)
     lookup = Lookup(var, values, "?")
     return lookup.transform(coldata)
 
 
-@column_str_repr.register(Orange.data.StringVariable)
+@column_str_repr.register(Arithmos.data.StringVariable)
 def column_str_repr_string(
-        var: Orange.data.StringVariable, coldata: ndarray
+        var: Arithmos.data.StringVariable, coldata: ndarray
 ) -> ndarray:
     return np.where(coldata == var.Unknown, "?", coldata)
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWEditDomain).run(Orange.data.Table("iris"))
+    WidgetPreview(OWEditDomain).run(Arithmos.data.Table("iris"))

@@ -5,15 +5,15 @@ from AnyQt.QtWidgets import QApplication
 from AnyQt.QtGui import QColor
 from sklearn.metrics import pairwise_distances
 
-from Orange.preprocess import Normalize, Continuize, SklImpute
-from Orange.widgets import widget, gui
-from Orange.widgets.utils.slidergraph import SliderGraph
-from Orange.widgets.settings import Setting
-from Orange.data import Table, Domain, DiscreteVariable
-from Orange.clustering import DBSCAN
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_SIGNAL_NAME
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.widget import Msg
+from Arithmos.preprocess import Normalize, Continuize, SklImpute
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.utils.slidergraph import SliderGraph
+from Arithmos.widgets.settings import Setting
+from Arithmos.data import Table, Domain, DiscreteVariable
+from Arithmos.clustering import DBSCAN
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_SIGNAL_NAME
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.widget import Msg
 
 
 DEFAULT_CUT_POINT = 0.1
@@ -27,7 +27,7 @@ def get_kth_distances(data, metric, k=5):
     proposed in the paper.
     Parameters
     ----------
-    data : Orange.data.Table
+    data : Arithmos.data.Table
         Visualisation coordinates - embeddings
     metric : callable or str
         The metric to compute the distance.

@@ -227,9 +227,9 @@ Change Log
 * MDS: Handle subset data ([#3620](../../pull/3620))
 * migrate_context: widgets crash when migrating context without version ([#3603](../../pull/3603))
 * Louvain clustering fails when Table or ndarray on input. ([#3618](../../pull/3618))
-* Orange: add more informatino on missing compiled libraries ([#3614](../../pull/3614))
+* Arithmos: add more informatino on missing compiled libraries ([#3614](../../pull/3614))
 * LinearProjection: Disable LDA for less than three classes ([#3615](../../pull/3615))
-* Orange restart dialogs: Improve wording ([#3605](../../pull/3605))
+* Arithmos restart dialogs: Improve wording ([#3605](../../pull/3605))
 * OWDistances: Use only binary features for Jaccard distance ([#3569](../../pull/3569))
 * ScatterplotGraph: Use mapToView instead of mapRectFromParent ([#3571](../../pull/3571))
 * MDS: Fix crashes when feeding column distances ([#3583](../../pull/3583))
@@ -380,7 +380,7 @@ Change Log
 * Silhouette Plot: Add cosine distance ([#3176](../../pull/3176))
 * Add pandas_compat.table_to_frame(tab) ([#3180](../../pull/3180))
 * OWSelectByDataIndex: New widget (move from Prototypes) ([#3181](../../pull/3181))
-* Make filters available in Orange.data namespace. ([#3170](../../pull/3170))
+* Make filters available in Arithmos.data namespace. ([#3170](../../pull/3170))
 * Move Louvain clustering from prototypes to core ([#3111](../../pull/3111))
 * OWWidget: Collapse/expand the widget on control area toggle ([#3146](../../pull/3146))
 * Rank: SklScorer should use the faster SklImputer. ([#3164](../../pull/3164))
@@ -1262,7 +1262,7 @@ Change Log
 
 [3.2] - 2016-02-12
 ------------------
-* Finalized Orange 3.2, switched to stable(r) release cycles
+* Finalized Arithmos 3.2, switched to stable(r) release cycles
 
 [0.1] - 1996-10-10
 ----------------
@@ -1315,4 +1315,4 @@ Change Log
 [3.3.1]: https://github.com/biolab/arithmos/compare/3.3...3.3.1
 [3.3]: https://github.com/biolab/arithmos/compare/3.2...3.3
 [3.2]: https://github.com/biolab/arithmos/compare/3.1...3.2
-[0.1]: https://web.archive.org/web/20040904090723/http://www.ailab.si/orange/
+[0.1]: https://web.archive.org/web/20040904090723/http://www.ailab.si/arithmos/

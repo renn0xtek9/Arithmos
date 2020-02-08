@@ -2,25 +2,25 @@ import copy
 
 import numpy as np
 
-from Orange.data import Table
-import Orange.evaluation
-import Orange.classification
+from Arithmos.data import Table
+import Arithmos.evaluation
+import Arithmos.classification
 
-from Orange.widgets.evaluate.tests.base import EvaluateTest
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.evaluate.owliftcurve import OWLiftCurve
-from Orange.tests import test_filename
+from Arithmos.widgets.evaluate.tests.base import EvaluateTest
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.evaluate.owliftcurve import OWLiftCurve
+from Arithmos.tests import test_filename
 
 class TestOWLiftCurve(WidgetTest, EvaluateTest):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         cls.lenses = data = Table(test_filename("datasets/lenses.tab"))
-        cls.res = Orange.evaluation.TestOnTestData(
+        cls.res = Arithmos.evaluation.TestOnTestData(
             train_data=data[::2], test_data=data[1::2],
-            learners=[Orange.classification.MajorityLearner(),
-                      Orange.classification.KNNLearner()],
+            learners=[Arithmos.classification.MajorityLearner(),
+                      Arithmos.classification.KNNLearner()],
             store_data=True,
         )
 

@@ -1,18 +1,18 @@
-Orange Data Mining Library
+Arithmos Data Mining Library
 ==========================
 
 Tutorial
 --------
 
-This is a gentle introduction on scripting in `Orange <http://orange.biolab.si>`_ , a Python 3 data mining library. We here assume you have already downloaded and installed Orange from its `github repository <https://github.com/biolab/arithmos>`_ and have a working version of Python. In the command line or any Python environment, try to import Orange. Below, we used a Python shell::
+This is a gentle introduction on scripting in `Arithmos <http://arithmos.biolab.si>`_ , a Python 3 data mining library. We here assume you have already downloaded and installed Arithmos from its `github repository <https://github.com/biolab/arithmos>`_ and have a working version of Python. In the command line or any Python environment, try to import Arithmos. Below, we used a Python shell::
 
    % python
-   >>> import Orange
-   >>> Orange.version.version
+   >>> import Arithmos
+   >>> Arithmos.version.version
    '3.2.dev0+8907f35'
    >>>
 
-If this leaves no error and warning, Orange and Python are properly installed and you are ready to continue with the Tutorial.
+If this leaves no error and warning, Arithmos and Python are properly installed and you are ready to continue with the Tutorial.
 
 .. toctree::
    :maxdepth: 3

@@ -1,9 +1,9 @@
 from unittest import TestCase
 from unittest.mock import Mock
-from Orange.data import DiscreteVariable, Domain
-from Orange.data import ContinuousVariable
-from Orange.widgets.settings import ContextSetting, ClassValuesContextHandler
-from Orange.widgets.utils import vartype
+from Arithmos.data import DiscreteVariable, Domain
+from Arithmos.data import ContinuousVariable
+from Arithmos.widgets.settings import ContextSetting, ClassValuesContextHandler
+from Arithmos.widgets.utils import vartype
 
 Continuous = vartype(ContinuousVariable("x"))
 Discrete = vartype(DiscreteVariable("x"))

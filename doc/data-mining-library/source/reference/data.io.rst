@@ -1,10 +1,10 @@
-.. py:currentmodule:: Orange.data.io
+.. py:currentmodule:: Arithmos.data.io
 
 ################################
 Loading and saving data (``io``)
 ################################
 
-:obj:`Orange.data.Table` supports loading from several file formats:
+:obj:`Arithmos.data.Table` supports loading from several file formats:
 
 * Comma-separated values (\*.csv) file,
 * Tab-separated values (\*.tab, \*.tsv) file,
@@ -34,14 +34,14 @@ A three-line header consists of:
 2. **Feature types** on the second line. The type is determined automatically,
    or, if set, can be any of the following:
 
-   * ``discrete`` (or ``d``) — imported as :obj:`Orange.data.DiscreteVariable`,
+   * ``discrete`` (or ``d``) — imported as :obj:`Arithmos.data.DiscreteVariable`,
    * a space-separated **list of discrete values**, like "``male female``",
-     which will result in :obj:`Orange.data.DiscreteVariable` with those values
+     which will result in :obj:`Arithmos.data.DiscreteVariable` with those values
      and in that order. If the individual values contain a space character, it
      needs to be escaped (prefixed) with, as common, a backslash ('\\') character.
-   * ``continuous`` (or ``c``) — imported as :obj:`Orange.data.ContinuousVariable`,
-   * ``string`` (or ``s``, or ``text``) — imported as :obj:`Orange.data.StringVariable`,
-   * ``time`` (or ``t``) — imported as :obj:`Orange.data.TimeVariable`, if the
+   * ``continuous`` (or ``c``) — imported as :obj:`Arithmos.data.ContinuousVariable`,
+   * ``string`` (or ``s``, or ``text``) — imported as :obj:`Arithmos.data.StringVariable`,
+   * ``time`` (or ``t``) — imported as :obj:`Arithmos.data.TimeVariable`, if the
      values parse as `ISO 8601 <https://en.wikipedia.org/wiki/ISO_8601>`_ date/time formats,
    * ``basket`` — used for storing sparse data. More on basket formats in a
      dedicated section.
@@ -58,10 +58,10 @@ A three-line header consists of:
    * ``ignore`` (or ``i``) — feature will not be imported,
    * ``<key>=<value>`` custom attributes.
 
-Example of iris dataset in Orange's three-line format
-(:download:`iris.tab <../../../../Orange/datasets/iris.tab>`).
+Example of iris dataset in Arithmos's three-line format
+(:download:`iris.tab <../../../../Arithmos/datasets/iris.tab>`).
 
-.. literalinclude:: ../../../../Orange/datasets/iris.tab
+.. literalinclude:: ../../../../Arithmos/datasets/iris.tab
    :lines: 1-7
 
 
@@ -153,7 +153,7 @@ defined, "nobody", "expects", "the", "Spanish" and "Inquisition"; the first
 four have (the default) value of 1.0 and the last has a value of 5.0.
 
 The attributes that appear in the domain aren't defined in any headers or even
-separate files, as with other formats supported by Orange.
+separate files, as with other formats supported by Arithmos.
 
 If attribute appears more than once, its values are added. For instance, the
 value of attribute "surprise" in the second examples is 6.0 and the value of

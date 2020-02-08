@@ -2,16 +2,16 @@ from copy import deepcopy
 
 from AnyQt.QtCore import QTimer, Qt
 
-from Orange.data import Table
-from Orange.modelling import Fitter, Learner, Model
-from Orange.preprocess.preprocess import Preprocess
-from Orange.statistics import util as ut
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils import getmembers
-from Orange.widgets.utils.signals import Output, Input
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.widget import OWWidget, WidgetMetaClass, Msg
+from Arithmos.data import Table
+from Arithmos.modelling import Fitter, Learner, Model
+from Arithmos.preprocess.preprocess import Preprocess
+from Arithmos.statistics import util as ut
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils import getmembers
+from Arithmos.widgets.utils.signals import Output, Input
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.widget import OWWidget, WidgetMetaClass, Msg
 
 
 class OWBaseLearnerMeta(WidgetMetaClass):
@@ -106,7 +106,7 @@ class OWBaseLearner(OWWidget, metaclass=OWBaseLearnerMeta, openclass=True):
         """Creates a learner with current configuration.
 
         Returns:
-            Learner: an instance of Orange.base.learner subclass.
+            Learner: an instance of Arithmos.base.learner subclass.
         """
         return self.LEARNER(preprocessors=self.preprocessors)
 

@@ -5,8 +5,8 @@ import io
 from PyQt5.QtWidgets import QComboBox, QWidget
 from PyQt5.QtTest import QSignalSpy
 
-from Orange.widgets.utils import textimport
-from Orange.widgets.tests.base import GuiTest
+from Arithmos.widgets.utils import textimport
+from Arithmos.widgets.tests.base import GuiTest
 
 ColumnTypes = textimport.ColumnType
 

@@ -12,22 +12,22 @@ from AnyQt.QtWidgets import \
     QGraphicsItem, QGraphicsRectItem, QGraphicsItemGroup, QSizePolicy, \
     QGraphicsPathItem
 
-from Orange.data import Table, Domain
-from Orange.preprocess import decimal_binnings, time_binnings
-from Orange.projection.som import SOM
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess import decimal_binnings, time_binnings
+from Arithmos.projection.som import SOM
 
-from Orange.widgets import gui
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
-from Orange.widgets.settings import \
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.widgets.settings import \
     DomainContextHandler, ContextSetting, Setting
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.utils.annotated_data import \
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.utils.annotated_data import \
     create_annotated_table, create_groups_table, ANNOTATED_DATA_SIGNAL_NAME
-from Orange.widgets.utils.colorpalette import \
+from Arithmos.widgets.utils.colorpalette import \
     ContinuousPaletteGenerator, ColorPaletteGenerator
-from Orange.widgets.visualize.utils import CanvasRectangle, CanvasText
-from Orange.widgets.visualize.utils.plotutils import wrap_legend_items
+from Arithmos.widgets.visualize.utils import CanvasRectangle, CanvasText
+from Arithmos.widgets.visualize.utils.plotutils import wrap_legend_items
 
 
 sqrt3_2 = np.sqrt(3) / 2

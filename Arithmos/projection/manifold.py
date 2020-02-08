@@ -12,11 +12,11 @@ import openTSNE
 import openTSNE.affinity
 import openTSNE.initialization
 
-import Orange
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.distance import Distance, DistanceModel, Euclidean
-from Orange.projection import SklProjector, Projector, Projection
-from Orange.projection.base import TransformDomain, ComputeValueProjector
+import Arithmos
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.distance import Distance, DistanceModel, Euclidean
+from Arithmos.projection import SklProjector, Projector, Projection
+from Arithmos.projection.base import TransformDomain, ComputeValueProjector
 
 __all__ = ["MDS", "Isomap", "LocallyLinearEmbedding", "SpectralEmbedding",
            "TSNE"]
@@ -200,7 +200,7 @@ class TSNEModel(Projection):
         The embedding object which takes care of subsequent optimizations of
         transforms.
     embedding : Table
-        The embedding in an Orange table, easily accessible.
+        The embedding in an Arithmos table, easily accessible.
     pre_domain : Domain
         Original data domain
     """
@@ -370,8 +370,8 @@ class TSNE(Projector):
     """
     name = "t-SNE"
     preprocessors = [
-        Orange.preprocess.Continuize(),
-        Orange.preprocess.SklImpute(),
+        Arithmos.preprocess.Continuize(),
+        Arithmos.preprocess.SklImpute(),
     ]
 
     def __init__(self, n_components=2, perplexity=30, learning_rate=200,
@@ -500,7 +500,7 @@ class TSNE(Projector):
         return embedding
 
     def convert_embedding_to_model(self, data, embedding):
-        # The results should be accessible in an Orange table, which doesn't
+        # The results should be accessible in an Arithmos table, which doesn't
         # need the full embedding attributes and is cast into a regular array
         n = self.n_components
         postfixes = ["x", "y"] if n == 2 else list(range(1, n + 1))

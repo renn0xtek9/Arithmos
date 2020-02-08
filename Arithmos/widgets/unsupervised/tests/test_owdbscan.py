@@ -1,11 +1,11 @@
 import numpy as np
 from scipy.sparse import csr_matrix, csc_matrix
 
-from Orange.data import Table
-from Orange.distance import Euclidean
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.unsupervised.owdbscan import OWDBSCAN, get_kth_distances
+from Arithmos.data import Table
+from Arithmos.distance import Euclidean
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.unsupervised.owdbscan import OWDBSCAN, get_kth_distances
 
 
 class TestOWDBSCAN(WidgetTest):
@@ -159,7 +159,7 @@ class TestOWDBSCAN(WidgetTest):
         # dists must be sorted
         np.testing.assert_array_equal(dists, np.sort(dists)[::-1])
 
-        # test with different distance - e.g. Orange distance
+        # test with different distance - e.g. Arithmos distance
         dists = get_kth_distances(self.iris, Euclidean, k=5)
         self.assertEqual(len(self.iris), len(dists))
         # dists must be sorted

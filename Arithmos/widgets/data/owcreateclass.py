@@ -7,15 +7,15 @@ import numpy as np
 from AnyQt.QtWidgets import QGridLayout, QLabel, QLineEdit, QSizePolicy
 from AnyQt.QtCore import QSize, Qt
 
-from Orange.data import StringVariable, DiscreteVariable, Domain
-from Orange.data.table import Table
-from Orange.statistics.util import bincount
-from Orange.preprocess.transformation import Transformation, Lookup
-from Orange.widgets import gui, widget
-from Orange.widgets.settings import DomainContextHandler, ContextSetting
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input, Output
+from Arithmos.data import StringVariable, DiscreteVariable, Domain
+from Arithmos.data.table import Table
+from Arithmos.statistics.util import bincount
+from Arithmos.preprocess.transformation import Transformation, Lookup
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.settings import DomainContextHandler, ContextSetting
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input, Output
 
 
 def map_by_substring(a, patterns, case_sensitive, match_beginning):
@@ -53,7 +53,7 @@ class ValueFromStringSubstring(Transformation):
     attribute with indices`[0, 1, 2, 0, 3]`.
 
     Args:
-        variable (:obj:`~Orange.data.StringVariable`): the original variable
+        variable (:obj:`~Arithmos.data.StringVariable`): the original variable
         patterns (list of str): list of string patterns
         case_sensitive (bool, optional): if set to `True`, the match is case
             sensitive
@@ -97,7 +97,7 @@ class ValueFromDiscreteSubstring(Lookup):
     attribute with indices`[0, 1, 2, 0, 3]`.
 
     Args:
-        variable (:obj:`~Orange.data.DiscreteVariable`): the original variable
+        variable (:obj:`~Arithmos.data.DiscreteVariable`): the original variable
         patterns (list of str): list of string patterns
         case_sensitive (bool, optional): if set to `True`, the match is case
             sensitive

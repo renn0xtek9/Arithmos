@@ -6,14 +6,14 @@ from functools import reduce
 import numpy as np
 import scipy.sparse as sp
 
-from Orange import preprocess
-from Orange.preprocess import impute
-from Orange import data
-from Orange.data import Unknown, Table
+from Arithmos import preprocess
+from Arithmos.preprocess import impute
+from Arithmos import data
+from Arithmos.data import Unknown, Table
 
-from Orange.classification import MajorityLearner, SimpleTreeLearner
-from Orange.regression import MeanLearner
-from Orange.tests import test_filename
+from Arithmos.classification import MajorityLearner, SimpleTreeLearner
+from Arithmos.regression import MeanLearner
+from Arithmos.tests import test_filename
 
 
 class TestReplaceUnknowns(unittest.TestCase):

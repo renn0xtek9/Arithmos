@@ -8,16 +8,16 @@ from AnyQt.QtCore import QRectF, Qt
 from AnyQt.QtWidgets import QToolTip
 from AnyQt.QtGui import QColor
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, datasets, ProjectionWidgetTestMixin
 )
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.utils.colorpalette import DefaultRGBColors
-from Orange.widgets.visualize.owscatterplot import (
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.utils.colorpalette import DefaultRGBColors
+from Arithmos.widgets.visualize.owscatterplot import (
     OWScatterPlot, ScatterPlotVizRank, OWScatterPlotGraph)
-from Orange.widgets.visualize.utils.widget import MAX_COLORS
-from Orange.widgets.widget import AttributeList
+from Arithmos.widgets.visualize.utils.widget import MAX_COLORS
+from Arithmos.widgets.widget import AttributeList
 
 
 class TestOWScatterPlot(WidgetTest, ProjectionWidgetTestMixin,
@@ -406,7 +406,7 @@ class TestOWScatterPlot(WidgetTest, ProjectionWidgetTestMixin,
         """VizRank does not try to include non primitive attributes"""
         data = Table("brown-selected")
         self.send_signal(self.widget.Inputs.data, data)
-        with patch("Orange.widgets.visualize.owscatterplot.ReliefF",
+        with patch("Arithmos.widgets.visualize.owscatterplot.ReliefF",
                    new=lambda *_1, **_2: lambda data: np.arange(len(data))):
             self.widget.vizrank.score_heuristic()
 
@@ -773,7 +773,7 @@ class TestOWScatterPlot(WidgetTest, ProjectionWidgetTestMixin,
         self.widget.setup_plot.assert_called_once()
         self.assertListEqual(self.widget.effective_variables, list(features))
 
-    @patch('Orange.widgets.visualize.owscatterplot.ScatterPlotVizRank.'
+    @patch('Arithmos.widgets.visualize.owscatterplot.ScatterPlotVizRank.'
            'on_manual_change')
     def test_vizrank_receives_manual_change(self, on_manual_change):
         # Recreate the widget so the patch kicks in

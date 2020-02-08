@@ -15,11 +15,11 @@ import numpy as np
 from scipy.stats import chi2
 import bottleneck as bn
 
-from Orange.classification import Learner, Model
-from Orange.data import Table, _contingency
-from Orange.data.filter import HasClass
-from Orange.preprocess.discretize import EntropyMDL
-from Orange.preprocess import RemoveNaNColumns, Impute
+from Arithmos.classification import Learner, Model
+from Arithmos.data import Table, _contingency
+from Arithmos.data.filter import HasClass
+from Arithmos.preprocess.discretize import EntropyMDL
+from Arithmos.preprocess import RemoveNaNColumns, Impute
 
 __all__ = ["CN2Learner", "CN2UnorderedLearner", "CN2SDLearner",
            "CN2SDUnorderedLearner"]
@@ -124,7 +124,7 @@ def get_dist(Y, W, domain):
         Array of classifications.
     W : ndarray, float
         Weights.
-    domain : Orange.data.domain.Domain
+    domain : Arithmos.data.domain.Domain
         Data domain.
 
     Returns
@@ -387,7 +387,7 @@ class SearchStrategy:
             Index of the class to model.
         base_rules : list of Rule
             An optional list of initial rules to constrain the search.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
         initial_class_dist : ndarray
             Data class distribution in regard to the whole learning set.
@@ -638,7 +638,7 @@ class Rule:
             Rule conditions.
         parent_rule : Rule
             Reference to the parent rule.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
         initial_class_dist : ndarray
             Data class distribution in regard to the whole learning set.
@@ -836,7 +836,7 @@ class RuleHunter:
             Index of the class to model.
         base_rules : list of Rule
             An optional list of initial rules to constrain the search.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
         initial_class_dist : ndarray
             Data class distribution in regard to the whole learning set.
@@ -965,7 +965,7 @@ class _RuleLearner(Learner):
             Index of the class to model.
         base_rules : list of Rule
             An optional list of initial rules to constrain the search.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
 
         Returns
@@ -1127,7 +1127,7 @@ class _RuleLearner(Learner):
         ----------
         X, Y, W : ndarray
             Learning data.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
 
         Returns

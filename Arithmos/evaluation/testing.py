@@ -8,7 +8,7 @@ import numpy as np
 
 import sklearn.model_selection as skl
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
 
 __all__ = ["Results", "CrossValidation", "LeaveOneOut", "TestOnTrainingData",
            "ShuffleSplit", "TestOnTestData", "sample", "CrossValidationFeature"]
@@ -112,7 +112,7 @@ class Results:
           the corresponding arrays are `None`.
 
         Args:
-            data (Orange.data.Table): stored data from which test was sampled
+            data (Arithmos.data.Table): stored data from which test was sampled
             nmethods (int): number of methods; can be inferred (or must match)
                 the size of `learners`, `models`, `failed`, `predicted` and
                 `probabilities`
@@ -122,7 +122,7 @@ class Results:
             nclasses (int): number of class values (`None` if continuous); can
                 be inferred (or must match) from `domain.class_var` or
                 `probabilities`
-            domain (Orange.data.Domain): data domain; can be inferred (or must)
+            domain (Arithmos.data.Domain): data domain; can be inferred (or must)
                 match `data.domain`
             row_indices (np.ndarray): see class documentation
             folds (np.ndarray): see class documentation
@@ -252,7 +252,7 @@ class Results:
                 if set to `False`, probabilities are not added
 
         Returns:
-            augmented_data (Orange.data.Table):
+            augmented_data (Arithmos.data.Table):
                 data augmented with predictions, probabilities and fold indices
 
         """
@@ -412,10 +412,10 @@ class Validation:
     def __call__(self, data, learners, preprocessor=None, *, callback=None):
         """
         Args:
-            data (Orange.data.Table): data to be used (usually split) into
+            data (Arithmos.data.Table): data to be used (usually split) into
                 training and testing
-            learners (list of Orange.Learner): a list of learning algorithms
-            preprocessor (Orange.preprocess.Preprocess): preprocessor applied
+            learners (list of Arithmos.Learner): a list of learning algorithms
+            preprocessor (Arithmos.preprocess.Preprocess): preprocessor applied
                 on training data
             callback (Callable): a function called to notify about the progress
 
@@ -466,7 +466,7 @@ class Validation:
         overriden in subclasses for speed-ups.
 
         Args:
-            data (Orange.data.Table): data use for testing
+            data (Arithmos.data.Table): data use for testing
             indices (list of vectors):
                 indices of data instances in each test sample
 
@@ -502,7 +502,7 @@ class Validation:
         method.
 
         Args:
-            data (Orange.data.Table): test data
+            data (Arithmos.data.Table): test data
 
         Returns:
             indices (list of np.ndarray):
@@ -583,7 +583,7 @@ class CrossValidationFeature(Validation):
     Cross validation with folds according to values of a feature.
 
     Attributes:
-        feature (Orange.data.Variable): the feature defining the folds
+        feature (Arithmos.data.Variable): the feature defining the folds
     """
     def __init__(self, feature=None,
                  store_data=False, store_models=False, warnings=None):
@@ -705,10 +705,10 @@ class TestOnTestData(Validation):
                  *, callback=None):
         """
         Args:
-            data (Orange.data.Table): training data
-            test_data (Orange.data.Table): test_data
-            learners (list of Orange.Learner): a list of learning algorithms
-            preprocessor (Orange.preprocess.Preprocess): preprocessor applied
+            data (Arithmos.data.Table): training data
+            test_data (Arithmos.data.Table): test_data
+            learners (list of Arithmos.Learner): a list of learning algorithms
+            preprocessor (Arithmos.preprocess.Preprocess): preprocessor applied
                 on training data
             callback (Callable): a function called to notify about the progress
 

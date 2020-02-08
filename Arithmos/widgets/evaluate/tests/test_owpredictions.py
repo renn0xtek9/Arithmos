@@ -4,21 +4,21 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.base import Model
-from Orange.classification import LogisticRegressionLearner
-from Orange.data.io import TabReader
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.evaluate.owpredictions import OWPredictions
-from Orange.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
-from Orange.widgets.evaluate.owconfusionmatrix import OWConfusionMatrix
-from Orange.widgets.evaluate.owliftcurve import OWLiftCurve
-from Orange.widgets.evaluate.owrocanalysis import OWROCAnalysis
+from Arithmos.base import Model
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.data.io import TabReader
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.evaluate.owpredictions import OWPredictions
+from Arithmos.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
+from Arithmos.widgets.evaluate.owconfusionmatrix import OWConfusionMatrix
+from Arithmos.widgets.evaluate.owliftcurve import OWLiftCurve
+from Arithmos.widgets.evaluate.owrocanalysis import OWROCAnalysis
 
-from Orange.data import Table, Domain, DiscreteVariable
-from Orange.modelling import ConstantLearner, TreeLearner
-from Orange.evaluation import Results
-from Orange.widgets.tests.utils import excepthook_catch
-from Orange.widgets.utils.colorpalette import ColorPaletteGenerator
+from Arithmos.data import Table, Domain, DiscreteVariable
+from Arithmos.modelling import ConstantLearner, TreeLearner
+from Arithmos.evaluation import Results
+from Arithmos.widgets.tests.utils import excepthook_catch
+from Arithmos.widgets.utils.colorpalette import ColorPaletteGenerator
 
 
 class TestOWPredictions(WidgetTest):

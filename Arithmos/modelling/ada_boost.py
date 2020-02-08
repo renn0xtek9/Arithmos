@@ -1,8 +1,8 @@
-from Orange.base import SklModel
-from Orange.ensembles import (
+from Arithmos.base import SklModel
+from Arithmos.ensembles import (
     SklAdaBoostClassificationLearner, SklAdaBoostRegressionLearner
 )
-from Orange.modelling import SklFitter
+from Arithmos.modelling import SklFitter
 
 __all__ = ['SklAdaBoostLearner']
 

@@ -3,9 +3,9 @@ import warnings
 import numpy as np
 from sklearn.metrics import silhouette_score, adjusted_mutual_info_score, silhouette_samples
 
-from Orange.data import Table
-from Orange.evaluation.testing import Results, Validation
-from Orange.evaluation.scoring import Score
+from Arithmos.data import Table
+from Arithmos.evaluation.testing import Results, Validation
+from Arithmos.evaluation.scoring import Score
 
 
 __all__ = ['ClusteringEvaluation']
@@ -103,9 +103,9 @@ def graph_silhouette(X, y, xlim=None, colors=None, figsize=None, filename=None):
     Silhouette plot.
     :param filename:
         Output file name.
-    :param X Orange.data.Table or numpy.ndarray
+    :param X Arithmos.data.Table or numpy.ndarray
         Data table.
-    :param y Orange.data.Table or numpy.ndarray:
+    :param y Arithmos.data.Table or numpy.ndarray:
         Cluster labels (integers).
     :param colors list, optional (default = None):
             List of colors. If provided, it must equal the number of clusters.

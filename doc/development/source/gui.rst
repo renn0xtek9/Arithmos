@@ -1,4 +1,4 @@
-.. currentmodule:: Orange.widgets.gui
+.. currentmodule:: Arithmos.widgets.gui
 
 ###################################
 Library of Common GUI Controls
@@ -180,7 +180,7 @@ Wrappers for Qt classes
 .. autoclass:: SpinBoxWFocusOut
 .. autoclass:: DoubleSpinBoxWFocusOut
 .. autoclass:: LineEditWFocusOut
-.. autoclass:: OrangeListBox
+.. autoclass:: ArithmosListBox
 
 Wrappers for Python classes
 ===========================

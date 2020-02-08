@@ -1,9 +1,9 @@
 import numpy as np
 from AnyQt.QtCore import Qt
 
-from Orange.widgets import widget
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.slidergraph import SliderGraph
+from Arithmos.widgets import widget
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.slidergraph import SliderGraph
 
 
 class SimpleWidget(widget.OWWidget):

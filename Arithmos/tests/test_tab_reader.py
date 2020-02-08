@@ -11,8 +11,8 @@ from collections import OrderedDict
 
 import numpy as np
 
-from Orange.data import Table, DiscreteVariable
-from Orange.data.io import TabReader
+from Arithmos.data import Table, DiscreteVariable
+from Arithmos.data.io import TabReader
 
 
 def read_tab_file(filename):

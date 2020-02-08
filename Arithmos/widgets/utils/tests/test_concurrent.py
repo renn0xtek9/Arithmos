@@ -5,7 +5,7 @@ from concurrent.futures import Future
 
 from AnyQt.QtCore import Qt, QCoreApplication, QThread
 
-from Orange.widgets.utils.concurrent import ThreadExecutor,  Task
+from Arithmos.widgets.utils.concurrent import ThreadExecutor,  Task
 
 
 class CoreAppTestCase(unittest.TestCase):

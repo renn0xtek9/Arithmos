@@ -2,7 +2,7 @@
 [ "$RUN_PYLINT" ] && return 0   # Nothing to do
 
 for script in \
-    install_orange.sh    \
+    install_arithmos.sh    \
     install_postgres.sh  \
     install_mssql.sh    \
     install_pyqt.sh

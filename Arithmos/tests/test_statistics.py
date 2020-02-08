@@ -8,8 +8,8 @@ import numpy as np
 from scipy.sparse import csr_matrix, issparse, lil_matrix, csc_matrix, \
     SparseEfficiencyWarning
 
-from Orange.data.util import assure_array_dense
-from Orange.statistics.util import bincount, countnans, contingency, digitize, \
+from Arithmos.data.util import assure_array_dense
+from Arithmos.statistics.util import bincount, countnans, contingency, digitize, \
     mean, nanmax, nanmean, nanmedian, nanmin, nansum, nanunique, stats, std, \
     unique, var, nanstd, nanvar, nanmode, nan_to_num, FDR, isnan, any_nan, \
     all_nan
@@ -794,5 +794,5 @@ class TestNanModeFixedInScipy(unittest.TestCase):
         mode, count = scipy.stats.mode(X, 1)
         np.testing.assert_array_equal(mode, [[1], [1]])
         np.testing.assert_array_equal(count, [[2], [2]])
-        # When Scipy's scipy.stats.mode works correcly, remove Orange.statistics.util.nanmode
+        # When Scipy's scipy.stats.mode works correcly, remove Arithmos.statistics.util.nanmode
         # and this test. Also update requirements.

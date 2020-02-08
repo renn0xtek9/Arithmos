@@ -590,8 +590,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__data___contingency
-#define __PYX_HAVE_API__Orange__data___contingency
+#define __PYX_HAVE__Arithmos__data___contingency
+#define __PYX_HAVE_API__Arithmos__data___contingency
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1712,14 +1712,14 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'Orange.data._contingency' */
+/* Module declarations from 'Arithmos.data._contingency' */
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_intp_t = { "intp_t", NULL, sizeof(__pyx_t_5numpy_intp_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_intp_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_intp_t), 0 };
-#define __Pyx_MODULE_NAME "Orange.data._contingency"
-extern int __pyx_module_is_main_Orange__data___contingency;
-int __pyx_module_is_main_Orange__data___contingency = 0;
+#define __Pyx_MODULE_NAME "Arithmos.data._contingency"
+extern int __pyx_module_is_main_Arithmos__data___contingency;
+int __pyx_module_is_main_Arithmos__data___contingency = 0;
 
-/* Implementation of 'Orange.data._contingency' */
+/* Implementation of 'Arithmos.data._contingency' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -1758,7 +1758,7 @@ static const char __pyx_k_row_unknowns[] = "row_unknowns";
 static const char __pyx_k_contingency_pyx[] = "_contingency.pyx";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_contingency_floatarray[] = "contingency_floatarray";
-static const char __pyx_k_Orange_data__contingency[] = "Orange.data._contingency";
+static const char __pyx_k_Arithmos_data__contingency[] = "Arithmos.data._contingency";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
@@ -1774,7 +1774,7 @@ static PyObject *__pyx_n_s_ImportError;
 static PyObject *__pyx_n_s_N;
 static PyObject *__pyx_n_u_NaN;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
-static PyObject *__pyx_n_s_Orange_data__contingency;
+static PyObject *__pyx_n_s_Arithmos_data__contingency;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_V;
 static PyObject *__pyx_n_s_ValueError;
@@ -1810,7 +1810,7 @@ static PyObject *__pyx_n_s_unknowns;
 static PyObject *__pyx_n_s_v;
 static PyObject *__pyx_n_s_weights;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_col_data, PyArrayObject *__pyx_v_classes, __pyx_t_5numpy_intp_t __pyx_v_n_rows, PyArrayObject *__pyx_v_W); /* proto */
+static PyObject *__pyx_pf_6Arithmos_4data_12_contingency_contingency_floatarray(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_col_data, PyArrayObject *__pyx_v_classes, __pyx_t_5numpy_intp_t __pyx_v_n_rows, PyArrayObject *__pyx_v_W); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_float_1_;
@@ -1825,7 +1825,7 @@ static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_codeobj__9;
 /* Late includes */
 
-/* "Orange/data/_contingency.pyx":12
+/* "Arithmos/data/_contingency.pyx":12
  * 
  * @cython.wraparound(False)
  * def contingency_floatarray(np.ndarray[np.float64_t, ndim=1] col_data, np.ndarray[np.float64_t, ndim=1] classes, np.intp_t n_rows, np.ndarray[np.float64_t, ndim=1] W = None):             # <<<<<<<<<<<<<<
@@ -1834,10 +1834,10 @@ static PyObject *__pyx_codeobj__9;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_4data_12_contingency_1contingency_floatarray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_4data_12_contingency_contingency_floatarray[] = "contingency_floatarray(ndarray col_data, ndarray classes, intp_t n_rows, ndarray W=None)\n\n    Given column values and class values, return\n    - an array with the sorted list of values,\n    - a 2D array with counts for the value (indexed by columns)\n      and class value (indexed by rows),\n    - array with the number of missing values for each class.\n    - array with the number of missing class values for each column value.\n    - and the number of missing in class and column values at same time.\n    ";
-static PyMethodDef __pyx_mdef_6Orange_4data_12_contingency_1contingency_floatarray = {"contingency_floatarray", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_4data_12_contingency_1contingency_floatarray, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_4data_12_contingency_contingency_floatarray};
-static PyObject *__pyx_pw_6Orange_4data_12_contingency_1contingency_floatarray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_4data_12_contingency_1contingency_floatarray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_4data_12_contingency_contingency_floatarray[] = "contingency_floatarray(ndarray col_data, ndarray classes, intp_t n_rows, ndarray W=None)\n\n    Given column values and class values, return\n    - an array with the sorted list of values,\n    - a 2D array with counts for the value (indexed by columns)\n      and class value (indexed by rows),\n    - array with the number of missing values for each class.\n    - array with the number of missing class values for each column value.\n    - and the number of missing in class and column values at same time.\n    ";
+static PyMethodDef __pyx_mdef_6Arithmos_4data_12_contingency_1contingency_floatarray = {"contingency_floatarray", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_4data_12_contingency_1contingency_floatarray, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_4data_12_contingency_contingency_floatarray};
+static PyObject *__pyx_pw_6Arithmos_4data_12_contingency_1contingency_floatarray(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_col_data = 0;
   PyArrayObject *__pyx_v_classes = 0;
   __pyx_t_5numpy_intp_t __pyx_v_n_rows;
@@ -1911,14 +1911,14 @@ static PyObject *__pyx_pw_6Orange_4data_12_contingency_1contingency_floatarray(P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("contingency_floatarray", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 12, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.data._contingency.contingency_floatarray", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._contingency.contingency_floatarray", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_col_data), __pyx_ptype_5numpy_ndarray, 1, "col_data", 0))) __PYX_ERR(0, 12, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_classes), __pyx_ptype_5numpy_ndarray, 1, "classes", 0))) __PYX_ERR(0, 12, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_W), __pyx_ptype_5numpy_ndarray, 1, "W", 0))) __PYX_ERR(0, 12, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(__pyx_self, __pyx_v_col_data, __pyx_v_classes, __pyx_v_n_rows, __pyx_v_W);
+  __pyx_r = __pyx_pf_6Arithmos_4data_12_contingency_contingency_floatarray(__pyx_self, __pyx_v_col_data, __pyx_v_classes, __pyx_v_n_rows, __pyx_v_W);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1929,7 +1929,7 @@ static PyObject *__pyx_pw_6Orange_4data_12_contingency_1contingency_floatarray(P
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_col_data, PyArrayObject *__pyx_v_classes, __pyx_t_5numpy_intp_t __pyx_v_n_rows, PyArrayObject *__pyx_v_W) {
+static PyObject *__pyx_pf_6Arithmos_4data_12_contingency_contingency_floatarray(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_col_data, PyArrayObject *__pyx_v_classes, __pyx_t_5numpy_intp_t __pyx_v_n_rows, PyArrayObject *__pyx_v_W) {
   PyArrayObject *__pyx_v_ranks = 0;
   int __pyx_v_N;
   __pyx_t_5numpy_float64_t __pyx_v_v;
@@ -2039,7 +2039,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   }
   __pyx_pybuffernd_W.diminfo[0].strides = __pyx_pybuffernd_W.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_W.diminfo[0].shape = __pyx_pybuffernd_W.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/data/_contingency.pyx":22
+  /* "Arithmos/data/_contingency.pyx":22
  *     - and the number of missing in class and column values at same time.
  *     """
  *     cdef np.ndarray[np.intp_t, ndim=1] ranks = col_data.argsort()             # <<<<<<<<<<<<<<
@@ -2077,7 +2077,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_v_ranks = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_contingency.pyx":23
+  /* "Arithmos/data/_contingency.pyx":23
  *     """
  *     cdef np.ndarray[np.intp_t, ndim=1] ranks = col_data.argsort()
  *     cdef int N = 0             # <<<<<<<<<<<<<<
@@ -2086,7 +2086,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
   __pyx_v_N = 0;
 
-  /* "Orange/data/_contingency.pyx":25
+  /* "Arithmos/data/_contingency.pyx":25
  *     cdef int N = 0
  *     cdef np.float64_t v
  *     cdef np.float64_t last = float("NaN")             # <<<<<<<<<<<<<<
@@ -2096,7 +2096,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_t_5 = __Pyx_PyObject_AsDouble(__pyx_n_u_NaN); if (unlikely(__pyx_t_5 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 25, __pyx_L1_error)
   __pyx_v_last = __pyx_t_5;
 
-  /* "Orange/data/_contingency.pyx":27
+  /* "Arithmos/data/_contingency.pyx":27
  *     cdef np.float64_t last = float("NaN")
  *     cdef Py_ssize_t i,j
  *     cdef int weights = not W is None             # <<<<<<<<<<<<<<
@@ -2106,7 +2106,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_t_6 = (((PyObject *)__pyx_v_W) != Py_None);
   __pyx_v_weights = __pyx_t_6;
 
-  /* "Orange/data/_contingency.pyx":28
+  /* "Arithmos/data/_contingency.pyx":28
  *     cdef Py_ssize_t i,j
  *     cdef int weights = not W is None
  *     for i in range(ranks.shape[0]):             # <<<<<<<<<<<<<<
@@ -2118,7 +2118,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
     __pyx_v_i = __pyx_t_9;
 
-    /* "Orange/data/_contingency.pyx":29
+    /* "Arithmos/data/_contingency.pyx":29
  *     cdef int weights = not W is None
  *     for i in range(ranks.shape[0]):
  *         i = ranks[i]             # <<<<<<<<<<<<<<
@@ -2136,7 +2136,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
     __pyx_v_i = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_intp_t *, __pyx_pybuffernd_ranks.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_ranks.diminfo[0].strides));
 
-    /* "Orange/data/_contingency.pyx":30
+    /* "Arithmos/data/_contingency.pyx":30
  *     for i in range(ranks.shape[0]):
  *         i = ranks[i]
  *         v = col_data[i]             # <<<<<<<<<<<<<<
@@ -2154,7 +2154,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
     __pyx_v_v = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_col_data.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_col_data.diminfo[0].strides));
 
-    /* "Orange/data/_contingency.pyx":31
+    /* "Arithmos/data/_contingency.pyx":31
  *         i = ranks[i]
  *         v = col_data[i]
  *         if v != last and not npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2172,7 +2172,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_6) {
 
-      /* "Orange/data/_contingency.pyx":32
+      /* "Arithmos/data/_contingency.pyx":32
  *         v = col_data[i]
  *         if v != last and not npy_isnan(v):
  *             N += 1             # <<<<<<<<<<<<<<
@@ -2181,7 +2181,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
       __pyx_v_N = (__pyx_v_N + 1);
 
-      /* "Orange/data/_contingency.pyx":33
+      /* "Arithmos/data/_contingency.pyx":33
  *         if v != last and not npy_isnan(v):
  *             N += 1
  *             last = v             # <<<<<<<<<<<<<<
@@ -2190,7 +2190,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
       __pyx_v_last = __pyx_v_v;
 
-      /* "Orange/data/_contingency.pyx":31
+      /* "Arithmos/data/_contingency.pyx":31
  *         i = ranks[i]
  *         v = col_data[i]
  *         if v != last and not npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2200,7 +2200,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
   }
 
-  /* "Orange/data/_contingency.pyx":34
+  /* "Arithmos/data/_contingency.pyx":34
  *             N += 1
  *             last = v
  *     cdef np.ndarray[np.float64_t, ndim=1] V = numpy.zeros(N, dtype=numpy.float64)             # <<<<<<<<<<<<<<
@@ -2247,7 +2247,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_v_V = ((PyArrayObject *)__pyx_t_15);
   __pyx_t_15 = 0;
 
-  /* "Orange/data/_contingency.pyx":35
+  /* "Arithmos/data/_contingency.pyx":35
  *             last = v
  *     cdef np.ndarray[np.float64_t, ndim=1] V = numpy.zeros(N, dtype=numpy.float64)
  *     cdef np.ndarray[np.float64_t, ndim=2] C = numpy.zeros((n_rows, N), dtype=numpy.float64)             # <<<<<<<<<<<<<<
@@ -2304,7 +2304,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_v_C = ((PyArrayObject *)__pyx_t_14);
   __pyx_t_14 = 0;
 
-  /* "Orange/data/_contingency.pyx":36
+  /* "Arithmos/data/_contingency.pyx":36
  *     cdef np.ndarray[np.float64_t, ndim=1] V = numpy.zeros(N, dtype=numpy.float64)
  *     cdef np.ndarray[np.float64_t, ndim=2] C = numpy.zeros((n_rows, N), dtype=numpy.float64)
  *     last = float("NaN")             # <<<<<<<<<<<<<<
@@ -2314,7 +2314,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_t_5 = __Pyx_PyObject_AsDouble(__pyx_n_u_NaN); if (unlikely(__pyx_t_5 == ((double)((double)-1)) && PyErr_Occurred())) __PYX_ERR(0, 36, __pyx_L1_error)
   __pyx_v_last = __pyx_t_5;
 
-  /* "Orange/data/_contingency.pyx":37
+  /* "Arithmos/data/_contingency.pyx":37
  *     cdef np.ndarray[np.float64_t, ndim=2] C = numpy.zeros((n_rows, N), dtype=numpy.float64)
  *     last = float("NaN")
  *     j = -1             # <<<<<<<<<<<<<<
@@ -2323,7 +2323,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
   __pyx_v_j = -1L;
 
-  /* "Orange/data/_contingency.pyx":39
+  /* "Arithmos/data/_contingency.pyx":39
  *     j = -1
  *     cdef np.float64_t tc
  *     cdef np.ndarray[np.float64_t, ndim=1] col_unknowns = numpy.zeros(n_rows, dtype=numpy.float64)             # <<<<<<<<<<<<<<
@@ -2370,7 +2370,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_v_col_unknowns = ((PyArrayObject *)__pyx_t_15);
   __pyx_t_15 = 0;
 
-  /* "Orange/data/_contingency.pyx":40
+  /* "Arithmos/data/_contingency.pyx":40
  *     cdef np.float64_t tc
  *     cdef np.ndarray[np.float64_t, ndim=1] col_unknowns = numpy.zeros(n_rows, dtype=numpy.float64)
  *     cdef np.ndarray[np.float64_t, ndim=1] row_unknowns = numpy.zeros(N, dtype=numpy.float64)             # <<<<<<<<<<<<<<
@@ -2417,7 +2417,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_v_row_unknowns = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/data/_contingency.pyx":41
+  /* "Arithmos/data/_contingency.pyx":41
  *     cdef np.ndarray[np.float64_t, ndim=1] col_unknowns = numpy.zeros(n_rows, dtype=numpy.float64)
  *     cdef np.ndarray[np.float64_t, ndim=1] row_unknowns = numpy.zeros(N, dtype=numpy.float64)
  *     cdef np.float64_t unknowns = 0             # <<<<<<<<<<<<<<
@@ -2426,7 +2426,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
   __pyx_v_unknowns = 0.0;
 
-  /* "Orange/data/_contingency.pyx":42
+  /* "Arithmos/data/_contingency.pyx":42
  *     cdef np.ndarray[np.float64_t, ndim=1] row_unknowns = numpy.zeros(N, dtype=numpy.float64)
  *     cdef np.float64_t unknowns = 0
  *     for i in range(ranks.shape[0]):             # <<<<<<<<<<<<<<
@@ -2438,7 +2438,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
     __pyx_v_i = __pyx_t_9;
 
-    /* "Orange/data/_contingency.pyx":43
+    /* "Arithmos/data/_contingency.pyx":43
  *     cdef np.float64_t unknowns = 0
  *     for i in range(ranks.shape[0]):
  *         i = ranks[i]             # <<<<<<<<<<<<<<
@@ -2456,7 +2456,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
     __pyx_v_i = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_intp_t *, __pyx_pybuffernd_ranks.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_ranks.diminfo[0].strides));
 
-    /* "Orange/data/_contingency.pyx":44
+    /* "Arithmos/data/_contingency.pyx":44
  *     for i in range(ranks.shape[0]):
  *         i = ranks[i]
  *         v = col_data[i]             # <<<<<<<<<<<<<<
@@ -2474,7 +2474,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
     __pyx_v_v = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_col_data.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_col_data.diminfo[0].strides));
 
-    /* "Orange/data/_contingency.pyx":45
+    /* "Arithmos/data/_contingency.pyx":45
  *         i = ranks[i]
  *         v = col_data[i]
  *         tc = classes[i]             # <<<<<<<<<<<<<<
@@ -2492,7 +2492,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     }
     __pyx_v_tc = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_classes.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_classes.diminfo[0].strides));
 
-    /* "Orange/data/_contingency.pyx":46
+    /* "Arithmos/data/_contingency.pyx":46
  *         v = col_data[i]
  *         tc = classes[i]
  *         if v != last and not npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2510,7 +2510,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_6) {
 
-      /* "Orange/data/_contingency.pyx":47
+      /* "Arithmos/data/_contingency.pyx":47
  *         tc = classes[i]
  *         if v != last and not npy_isnan(v):
  *             j += 1             # <<<<<<<<<<<<<<
@@ -2519,7 +2519,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
       __pyx_v_j = (__pyx_v_j + 1);
 
-      /* "Orange/data/_contingency.pyx":48
+      /* "Arithmos/data/_contingency.pyx":48
  *         if v != last and not npy_isnan(v):
  *             j += 1
  *             V[j] = v             # <<<<<<<<<<<<<<
@@ -2537,7 +2537,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       }
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_V.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_V.diminfo[0].strides) = __pyx_v_v;
 
-      /* "Orange/data/_contingency.pyx":49
+      /* "Arithmos/data/_contingency.pyx":49
  *             j += 1
  *             V[j] = v
  *             last = v             # <<<<<<<<<<<<<<
@@ -2546,7 +2546,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
       __pyx_v_last = __pyx_v_v;
 
-      /* "Orange/data/_contingency.pyx":46
+      /* "Arithmos/data/_contingency.pyx":46
  *         v = col_data[i]
  *         tc = classes[i]
  *         if v != last and not npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2555,7 +2555,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
  */
     }
 
-    /* "Orange/data/_contingency.pyx":50
+    /* "Arithmos/data/_contingency.pyx":50
  *             V[j] = v
  *             last = v
  *         if npy_isnan(v) and npy_isnan(tc):             # <<<<<<<<<<<<<<
@@ -2573,7 +2573,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_L14_bool_binop_done:;
     if (__pyx_t_6) {
 
-      /* "Orange/data/_contingency.pyx":51
+      /* "Arithmos/data/_contingency.pyx":51
  *             last = v
  *         if npy_isnan(v) and npy_isnan(tc):
  *             unknowns += W[i] if weights else 1.             # <<<<<<<<<<<<<<
@@ -2596,7 +2596,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       }
       __pyx_v_unknowns = (__pyx_v_unknowns + __pyx_t_24);
 
-      /* "Orange/data/_contingency.pyx":50
+      /* "Arithmos/data/_contingency.pyx":50
  *             V[j] = v
  *             last = v
  *         if npy_isnan(v) and npy_isnan(tc):             # <<<<<<<<<<<<<<
@@ -2606,7 +2606,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       goto __pyx_L13;
     }
 
-    /* "Orange/data/_contingency.pyx":52
+    /* "Arithmos/data/_contingency.pyx":52
  *         if npy_isnan(v) and npy_isnan(tc):
  *             unknowns += W[i] if weights else 1.
  *         elif npy_isnan(tc):             # <<<<<<<<<<<<<<
@@ -2616,7 +2616,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_t_6 = (npy_isnan(__pyx_v_tc) != 0);
     if (__pyx_t_6) {
 
-      /* "Orange/data/_contingency.pyx":53
+      /* "Arithmos/data/_contingency.pyx":53
  *             unknowns += W[i] if weights else 1.
  *         elif npy_isnan(tc):
  *             row_unknowns[j] += W[i] if weights else 1.             # <<<<<<<<<<<<<<
@@ -2648,7 +2648,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       }
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_row_unknowns.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_row_unknowns.diminfo[0].strides) += __pyx_t_24;
 
-      /* "Orange/data/_contingency.pyx":52
+      /* "Arithmos/data/_contingency.pyx":52
  *         if npy_isnan(v) and npy_isnan(tc):
  *             unknowns += W[i] if weights else 1.
  *         elif npy_isnan(tc):             # <<<<<<<<<<<<<<
@@ -2658,7 +2658,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       goto __pyx_L13;
     }
 
-    /* "Orange/data/_contingency.pyx":54
+    /* "Arithmos/data/_contingency.pyx":54
  *         elif npy_isnan(tc):
  *             row_unknowns[j] += W[i] if weights else 1.
  *         elif npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2668,7 +2668,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_t_6 = (npy_isnan(__pyx_v_v) != 0);
     if (__pyx_t_6) {
 
-      /* "Orange/data/_contingency.pyx":55
+      /* "Arithmos/data/_contingency.pyx":55
  *             row_unknowns[j] += W[i] if weights else 1.
  *         elif npy_isnan(v):
  *             col_unknowns[int(tc)] += W[i] if weights else 1.             # <<<<<<<<<<<<<<
@@ -2705,7 +2705,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "Orange/data/_contingency.pyx":54
+      /* "Arithmos/data/_contingency.pyx":54
  *         elif npy_isnan(tc):
  *             row_unknowns[j] += W[i] if weights else 1.
  *         elif npy_isnan(v):             # <<<<<<<<<<<<<<
@@ -2715,7 +2715,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
       goto __pyx_L13;
     }
 
-    /* "Orange/data/_contingency.pyx":57
+    /* "Arithmos/data/_contingency.pyx":57
  *             col_unknowns[int(tc)] += W[i] if weights else 1.
  *         else:
  *             C[int(tc),j] += W[i] if weights else 1.             # <<<<<<<<<<<<<<
@@ -2766,7 +2766,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __pyx_L13:;
   }
 
-  /* "Orange/data/_contingency.pyx":59
+  /* "Arithmos/data/_contingency.pyx":59
  *             C[int(tc),j] += W[i] if weights else 1.
  * 
  *     assert j == N-1             # <<<<<<<<<<<<<<
@@ -2782,7 +2782,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   }
   #endif
 
-  /* "Orange/data/_contingency.pyx":61
+  /* "Arithmos/data/_contingency.pyx":61
  *     assert j == N-1
  * 
  *     return (V,C),col_unknowns,row_unknowns,unknowns             # <<<<<<<<<<<<<<
@@ -2816,7 +2816,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "Orange/data/_contingency.pyx":12
+  /* "Arithmos/data/_contingency.pyx":12
  * 
  * @cython.wraparound(False)
  * def contingency_floatarray(np.ndarray[np.float64_t, ndim=1] col_data, np.ndarray[np.float64_t, ndim=1] classes, np.intp_t n_rows, np.ndarray[np.float64_t, ndim=1] W = None):             # <<<<<<<<<<<<<<
@@ -2844,7 +2844,7 @@ static PyObject *__pyx_pf_6Orange_4data_12_contingency_contingency_floatarray(CY
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ranks.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_row_unknowns.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.data._contingency.contingency_floatarray", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.data._contingency.contingency_floatarray", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5338,7 +5338,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_N, __pyx_k_N, sizeof(__pyx_k_N), 0, 0, 1, 1},
   {&__pyx_n_u_NaN, __pyx_k_NaN, sizeof(__pyx_k_NaN), 0, 1, 0, 1},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
-  {&__pyx_n_s_Orange_data__contingency, __pyx_k_Orange_data__contingency, sizeof(__pyx_k_Orange_data__contingency), 0, 0, 1, 1},
+  {&__pyx_n_s_Arithmos_data__contingency, __pyx_k_Arithmos_data__contingency, sizeof(__pyx_k_Arithmos_data__contingency), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_V, __pyx_k_V, sizeof(__pyx_k_V), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
@@ -5467,7 +5467,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "Orange/data/_contingency.pyx":12
+  /* "Arithmos/data/_contingency.pyx":12
  * 
  * @cython.wraparound(False)
  * def contingency_floatarray(np.ndarray[np.float64_t, ndim=1] col_data, np.ndarray[np.float64_t, ndim=1] classes, np.intp_t n_rows, np.ndarray[np.float64_t, ndim=1] W = None):             # <<<<<<<<<<<<<<
@@ -5755,14 +5755,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__data___contingency) {
+  if (__pyx_module_is_main_Arithmos__data___contingency) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.data._contingency")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.data._contingency", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.data._contingency")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.data._contingency", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5783,7 +5783,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/data/_contingency.pyx":4
+  /* "Arithmos/data/_contingency.pyx":4
  * #cython: language_level=3
  * 
  * import numpy             # <<<<<<<<<<<<<<
@@ -5795,19 +5795,19 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_numpy, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/data/_contingency.pyx":12
+  /* "Arithmos/data/_contingency.pyx":12
  * 
  * @cython.wraparound(False)
  * def contingency_floatarray(np.ndarray[np.float64_t, ndim=1] col_data, np.ndarray[np.float64_t, ndim=1] classes, np.intp_t n_rows, np.ndarray[np.float64_t, ndim=1] W = None):             # <<<<<<<<<<<<<<
  *     """
  *     Given column values and class values, return
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_4data_12_contingency_1contingency_floatarray, NULL, __pyx_n_s_Orange_data__contingency); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_4data_12_contingency_1contingency_floatarray, NULL, __pyx_n_s_Arithmos_data__contingency); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_contingency_floatarray, __pyx_t_1) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/data/_contingency.pyx":1
+  /* "Arithmos/data/_contingency.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * #cython: language_level=3
  * 
@@ -5832,11 +5832,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.data._contingency", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.data._contingency", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.data._contingency");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.data._contingency");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

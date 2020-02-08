@@ -4,9 +4,9 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import ContinuousVariable, TimeVariable, \
+from Arithmos.data import ContinuousVariable, TimeVariable, \
     DiscreteVariable, StringVariable, Table
-from Orange.data.io_base import _TableHeader, _TableBuilder, DataTableMixin
+from Arithmos.data.io_base import _TableHeader, _TableBuilder, DataTableMixin
 
 
 class InitTestData(unittest.TestCase):

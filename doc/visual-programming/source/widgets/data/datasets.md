@@ -19,6 +19,6 @@ Load a dataset from an online repository.
 Example
 -------
 
-Orange workflows can start with **Datasets** widget instead of **File** widget. In the example below, the widget retrieves a dataset from an online repository (Kickstarter data), which is subsequently sent to both the [Data Table](../data/datatable) and the [Distributions](../visualize/distributions).
+Arithmos workflows can start with **Datasets** widget instead of **File** widget. In the example below, the widget retrieves a dataset from an online repository (Kickstarter data), which is subsequently sent to both the [Data Table](../data/datatable) and the [Distributions](../visualize/distributions).
 
 ![](images/Datasets-Workflow.png)

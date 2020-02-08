@@ -7,16 +7,16 @@ from AnyQt.QtCore import Qt, QModelIndex, pyqtSignal as Signal
 from AnyQt.QtWidgets import QWidget, QLabel, QComboBox, QPushButton, \
     QVBoxLayout, QHBoxLayout
 
-import Orange
-from Orange.data import StringVariable, ContinuousVariable, Variable
-from Orange.data.util import hstack, get_unique_names_duplicates
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting, ContextHandler, ContextSetting
-from Orange.widgets.utils import vartype
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, Msg
+import Arithmos
+from Arithmos.data import StringVariable, ContinuousVariable, Variable
+from Arithmos.data.util import hstack, get_unique_names_duplicates
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting, ContextHandler, ContextSetting
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, Msg
 
 INSTANCEID = "Instance id"
 INDEX = "Row index"
@@ -243,12 +243,12 @@ class OWMergeData(widget.OWWidget):
     keywords = ["join"]
 
     class Inputs:
-        data = Input("Data", Orange.data.Table, default=True, replaces=["Data A"])
-        extra_data = Input("Extra Data", Orange.data.Table, replaces=["Data B"])
+        data = Input("Data", Arithmos.data.Table, default=True, replaces=["Data A"])
+        extra_data = Input("Extra Data", Arithmos.data.Table, replaces=["Data B"])
 
     class Outputs:
         data = Output("Data",
-                      Orange.data.Table,
+                      Arithmos.data.Table,
                       replaces=["Merged Data A+B", "Merged Data B+A", "Merged Data"])
 
     LeftJoin, InnerJoin, OuterJoin = range(3)
@@ -588,7 +588,7 @@ class OWMergeData(widget.OWWidget):
             # It must use the original - not renamed - variables from right, so
             # values are copied,
             # but new domain for the left, so renamed values are *not* copied
-            right_domain = Orange.data.Domain(
+            right_domain = Arithmos.data.Domain(
                 domain.attributes[:len(lt_dom.attributes)] + xt_dom.attributes,
                 domain.class_vars[:len(lt_dom.class_vars)] + xt_dom.class_vars,
                 domain.metas[:len(lt_dom.metas)] + xt_dom.metas)
@@ -599,7 +599,7 @@ class OWMergeData(widget.OWWidget):
                 extras_Y = extras_Y.reshape(-1, 1)
             Y = np.vstack((Y, extras_Y))
             metas = np.vstack((metas, extras.metas))
-        table = Orange.data.Table.from_numpy(domain, X, Y, metas)
+        table = Arithmos.data.Table.from_numpy(domain, X, Y, metas)
         table.name = getattr(self.data, 'name', '')
         table.attributes = getattr(self.data, 'attributes', {})
         if rightu is not None:
@@ -630,7 +630,7 @@ class OWMergeData(widget.OWWidget):
             c.append(var)
         if duplicates:
             self.Warning.renamed_vars(", ".join(duplicates))
-        return Orange.data.Domain(attrs, cvars, mets)
+        return Arithmos.data.Domain(attrs, cvars, mets)
 
     @staticmethod
     def _join_array_by_indices(left, right, lefti, righti, string_cols=None):
@@ -695,5 +695,5 @@ class OWMergeData(widget.OWWidget):
 
 if __name__ == "__main__":  # pragma: no cover
     WidgetPreview(OWMergeData).run(
-        set_data=Orange.data.Table("tests/data-gender-region"),
-        set_extra_data=Orange.data.Table("tests/data-regions"))
+        set_data=Arithmos.data.Table("tests/data-gender-region"),
+        set_extra_data=Arithmos.data.Table("tests/data-regions"))

@@ -1,7 +1,7 @@
-from Orange.data import Table
-from Orange.modelling.constant import ConstantLearner
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.modelling.constant import ConstantLearner
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWConstant(OWBaseLearner):
@@ -10,8 +10,8 @@ class OWConstant(OWBaseLearner):
                   "from the training set."
     icon = "icons/Constant.svg"
     replaces = [
-        "Orange.widgets.classify.owmajority.OWMajority",
-        "Orange.widgets.regression.owmean.OWMean",
+        "Arithmos.widgets.classify.owmajority.OWMajority",
+        "Arithmos.widgets.regression.owmean.OWMean",
     ]
     priority = 10
     keywords = ["majority", "mean"]

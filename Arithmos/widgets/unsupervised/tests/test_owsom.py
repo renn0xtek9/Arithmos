@@ -6,10 +6,10 @@ from unittest.mock import Mock, patch
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Table, Domain
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
-from Orange.widgets.unsupervised.owsom import OWSOM, SomView, SOM
+from Arithmos.data import Table, Domain
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_FEATURE_NAME
+from Arithmos.widgets.unsupervised.owsom import OWSOM, SomView, SOM
 
 
 def _patch_recompute_som(meth):

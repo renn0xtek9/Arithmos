@@ -5,10 +5,10 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.classification import KNNLearner
-from Orange.regression import KNNRegressionLearner
-from Orange.evaluation import CA, CrossValidation, MSE
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.classification import KNNLearner
+from Arithmos.regression import KNNRegressionLearner
+from Arithmos.evaluation import CA, CrossValidation, MSE
 
 
 class TestKNNLearner(unittest.TestCase):

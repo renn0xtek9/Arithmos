@@ -5,8 +5,8 @@ import unittest
 
 import os
 
-from Orange.data import Table, Variable
-from Orange import datasets
+from Arithmos.data import Table, Variable
+from Arithmos import datasets
 
 
 class TestDatasets(unittest.TestCase):

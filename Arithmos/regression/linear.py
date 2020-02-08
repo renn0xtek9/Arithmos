@@ -3,10 +3,10 @@ import numpy as np
 import sklearn.linear_model as skl_linear_model
 import sklearn.preprocessing as skl_preprocessing
 
-from Orange.data import Variable, ContinuousVariable
-from Orange.preprocess import Normalize
-from Orange.preprocess.score import LearnerScorer
-from Orange.regression import Learner, Model, SklLearner, SklModel
+from Arithmos.data import Variable, ContinuousVariable
+from Arithmos.preprocess import Normalize
+from Arithmos.preprocess.score import LearnerScorer
+from Arithmos.regression import Learner, Model, SklLearner, SklModel
 
 
 __all__ = ["LinearRegressionLearner", "RidgeRegressionLearner",

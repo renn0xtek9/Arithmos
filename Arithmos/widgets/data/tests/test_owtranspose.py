@@ -6,11 +6,11 @@ from unittest.mock import patch, Mock
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.widgets.data.owtranspose import OWTranspose
-from Orange.widgets.tests.base import WidgetTest
-from Orange.tests import test_filename
-from orangewidget.widget import StateInfo
+from Arithmos.data import Table
+from Arithmos.widgets.data.owtranspose import OWTranspose
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.tests import test_filename
+from arithmoswidget.widget import StateInfo
 
 
 class TestOWTranspose(WidgetTest):
@@ -145,7 +145,7 @@ class TestOWTranspose(WidgetTest):
 
     def test_error(self):
         widget = self.widget
-        with unittest.mock.patch("Orange.data.Table.transpose",
+        with unittest.mock.patch("Arithmos.data.Table.transpose",
                                  side_effect=ValueError("foo")):
             self.send_signal(widget.Inputs.data, self.zoo)
             self.assertTrue(widget.Error.value_error.is_shown())

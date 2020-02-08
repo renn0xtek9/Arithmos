@@ -4,13 +4,13 @@ from typing import Optional
 from AnyQt.QtWidgets import QListView, QHBoxLayout, QStyledItemDelegate
 from AnyQt.QtCore import Qt
 
-import Orange.data
-import Orange.preprocess.discretize as disc
+import Arithmos.data
+import Arithmos.preprocess.discretize as disc
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import itemmodels, vartype
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import itemmodels, vartype
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 __all__ = ["OWDiscretize"]
 
@@ -132,10 +132,10 @@ class OWDiscretize(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        data = Input("Data", Orange.data.Table, doc="Input data table")
+        data = Input("Data", Arithmos.data.Table, doc="Input data table")
 
     class Outputs:
-        data = Output("Data", Orange.data.Table, doc="Table with discretized features")
+        data = Output("Data", Arithmos.data.Table, doc="Table with discretized features")
 
     settingsHandler = settings.DomainContextHandler()
     saved_var_states = settings.ContextSetting({})
@@ -444,7 +444,7 @@ class OWDiscretize(widget.OWWidget):
         return [index.row() for index in rows]
 
     def discretized_var(self, index):
-        # type: (int) -> Optional[Orange.data.DiscreteVariable]
+        # type: (int) -> Optional[Arithmos.data.DiscreteVariable]
         state = self.var_state[index]
         if state.disc_var is not None and state.points == []:
             # Removed by MDL Entropy
@@ -473,7 +473,7 @@ class OWDiscretize(widget.OWWidget):
         class_vars = [disc_var(v) for v in self.data.domain.class_vars]
         class_vars = [v for v in class_vars if v is not None]
 
-        domain = Orange.data.Domain(
+        domain = Arithmos.data.Domain(
             attributes, class_vars, metas=self.data.domain.metas
         )
         return domain
@@ -507,4 +507,4 @@ class OWDiscretize(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWDiscretize).run(Orange.data.Table("brown-selected"))
+    WidgetPreview(OWDiscretize).run(Arithmos.data.Table("brown-selected"))

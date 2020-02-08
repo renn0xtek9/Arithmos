@@ -1,12 +1,12 @@
 import pickle
 from unittest import TestCase
 
-from Orange.data import Variable, Domain
+from Arithmos.data import Variable, Domain
 
 
 class PickleTest(TestCase):
     def setUp(self):
-        """ Override __eq__ for Orange objects that do not implement it"""
+        """ Override __eq__ for Arithmos objects that do not implement it"""
         self.add_comparator(Domain,
                             compare_members=("attributes", "class_vars",
                                              "class_var", "variables",

@@ -1,6 +1,6 @@
-from Orange.classification import MajorityLearner
-from Orange.modelling import Fitter
-from Orange.regression import MeanLearner
+from Arithmos.classification import MajorityLearner
+from Arithmos.modelling import Fitter
+from Arithmos.regression import MeanLearner
 
 __all__ = ['ConstantLearner']
 

@@ -4,9 +4,9 @@ import os
 import pickle
 from tempfile import mkstemp
 
-from Orange.classification.majority import ConstantModel
-from Orange.widgets.model.owloadmodel import OWLoadModel
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.classification.majority import ConstantModel
+from Arithmos.widgets.model.owloadmodel import OWLoadModel
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWLoadModel(WidgetTest):

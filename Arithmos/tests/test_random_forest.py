@@ -3,11 +3,11 @@
 
 import unittest
 import numpy as np
-from Orange.data import Table
-from Orange.evaluation import CrossValidation, CA, RMSE
-from Orange.classification import RandomForestLearner
-from Orange.regression import RandomForestRegressionLearner
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.evaluation import CrossValidation, CA, RMSE
+from Arithmos.classification import RandomForestLearner
+from Arithmos.regression import RandomForestRegressionLearner
+from Arithmos.tests import test_filename
 
 
 class RandomForestTest(unittest.TestCase):

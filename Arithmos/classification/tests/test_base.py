@@ -4,8 +4,8 @@ import unittest
 
 import numpy as np
 
-from Orange.data import Table, DiscreteVariable, Domain
-from Orange.classification import LogisticRegressionLearner, TreeLearner
+from Arithmos.data import Table, DiscreteVariable, Domain
+from Arithmos.classification import LogisticRegressionLearner, TreeLearner
 
 
 class TestModelMapping(unittest.TestCase):

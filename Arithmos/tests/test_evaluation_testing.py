@@ -6,14 +6,14 @@ from unittest.mock import Mock, patch
 
 import numpy as np
 
-from Orange.classification import NaiveBayesLearner, MajorityLearner
-from Orange.evaluation.testing import Validation
-from Orange.regression import LinearRegressionLearner, MeanLearner
-from Orange.data import Table, Domain, DiscreteVariable
-from Orange.evaluation import (Results, CrossValidation, LeaveOneOut, TestOnTrainingData,
+from Arithmos.classification import NaiveBayesLearner, MajorityLearner
+from Arithmos.evaluation.testing import Validation
+from Arithmos.regression import LinearRegressionLearner, MeanLearner
+from Arithmos.data import Table, Domain, DiscreteVariable
+from Arithmos.evaluation import (Results, CrossValidation, LeaveOneOut, TestOnTrainingData,
                                TestOnTestData, ShuffleSplit, sample, RMSE,
                                CrossValidationFeature)
-from Orange.preprocess import discretize, preprocess
+from Arithmos.preprocess import discretize, preprocess
 
 
 def random_data(nrows, ncols):
@@ -116,7 +116,7 @@ class TestValidation(unittest.TestCase):
         self.assertRaises(ValueError, Validation, preprocessor=lambda x: x)
         self.assertRaises(ValueError, Validation, callback=lambda x: x)
 
-    @patch("Orange.evaluation.testing.Validation.__call__")
+    @patch("Arithmos.evaluation.testing.Validation.__call__")
     def test_warn_deprecations(self, _):
         self.assertWarns(
             DeprecationWarning,
@@ -124,7 +124,7 @@ class TestValidation(unittest.TestCase):
 
         self.assertWarns(DeprecationWarning, Validation().fit)
 
-    @patch("Orange.evaluation.testing.Validation.__call__")
+    @patch("Arithmos.evaluation.testing.Validation.__call__")
     def test_obsolete_call_constructor(self, validation_call):
 
         class MockValidation(Validation):
@@ -659,7 +659,7 @@ class TestTestOnTestData(TestSampling):
                          preprocessor=preprocessor)
         self.assertEqual(data_sizes, [30])
 
-    @patch("Orange.evaluation.testing.Validation.__new__")
+    @patch("Arithmos.evaluation.testing.Validation.__new__")
     def test_train_data_argument(self, validation_new):
         data = Mock()
         test_data = Mock()

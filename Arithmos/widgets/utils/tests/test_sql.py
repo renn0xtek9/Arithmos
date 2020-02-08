@@ -1,12 +1,12 @@
 import unittest
 from unittest.mock import patch, MagicMock
 
-from Orange.data import Table
-from Orange.data.sql.table import AUTO_DL_LIMIT, SqlTable
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.signals import Input
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.widget import OWWidget
+from Arithmos.data import Table
+from Arithmos.data.sql.table import AUTO_DL_LIMIT, SqlTable
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.signals import Input
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.widget import OWWidget
 
 
 class TestSQLDecorator(WidgetTest):
@@ -42,7 +42,7 @@ class TestSQLDecorator(WidgetTest):
         self.assertIs(self.widget.pop_called_with(), d)
 
         a_table = object()
-        with patch("Orange.widgets.utils.sql.Table",
+        with patch("Arithmos.widgets.utils.sql.Table",
                    MagicMock(return_value=a_table)) as table_mock:
             d = SqlTable(None, None, MagicMock())
 

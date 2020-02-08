@@ -5,13 +5,13 @@ from unittest.mock import Mock, patch
 
 import numpy as np
 
-from Orange.data import (
+from Arithmos.data import (
     Table, ContinuousVariable, DiscreteVariable, StringVariable, Domain
 )
-from Orange.widgets.tests.base import (
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, ProjectionWidgetTestMixin
 )
-from Orange.widgets.visualize.utils.widget import (
+from Arithmos.widgets.visualize.utils.widget import (
     OWDataProjectionWidget, OWProjectionWidgetBase
 )
 

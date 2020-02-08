@@ -3,9 +3,9 @@
 
 import unittest
 
-from Orange.data import Table
-from Orange.preprocess import ProjectPCA
-from Orange.tests import test_filename
+from Arithmos.data import Table
+from Arithmos.preprocess import ProjectPCA
+from Arithmos.tests import test_filename
 
 
 class TestPCAProjector(unittest.TestCase):

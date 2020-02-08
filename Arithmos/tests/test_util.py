@@ -5,12 +5,12 @@ import warnings
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.util import export_globals, flatten, deprecated, try_, deepgetattr, \
-    OrangeDeprecationWarning
-from Orange.data import Table
-from Orange.data.util import vstack, hstack, array_equal
-from Orange.statistics.util import stats
-from Orange.tests.test_statistics import dense_sparse
+from Arithmos.util import export_globals, flatten, deprecated, try_, deepgetattr, \
+    ArithmosDeprecationWarning
+from Arithmos.data import Table
+from Arithmos.data.util import vstack, hstack, array_equal
+from Arithmos.statistics.util import stats
+from Arithmos.tests.test_statistics import dense_sparse
 
 SOMETHING = 0xf00babe
 
@@ -40,10 +40,10 @@ class TestUtil(unittest.TestCase):
         self.assertEqual(try_(len, default=SOMETHING), SOMETHING)
 
     def test_reprable(self):
-        from Orange.data import ContinuousVariable
-        from Orange.preprocess.impute import ReplaceUnknownsRandom
-        from Orange.statistics.distribution import Continuous
-        from Orange.classification import LogisticRegressionLearner
+        from Arithmos.data import ContinuousVariable
+        from Arithmos.preprocess.impute import ReplaceUnknownsRandom
+        from Arithmos.statistics.distribution import Continuous
+        from Arithmos.classification import LogisticRegressionLearner
 
         var = ContinuousVariable('x')
         transform = ReplaceUnknownsRandom(var, Continuous(1, var))
@@ -108,8 +108,8 @@ class TestUtil(unittest.TestCase):
     @unittest.skipUnless(os.environ.get('ORANGE_DEPRECATIONS_ERROR'),
                          'ORANGE_DEPRECATIONS_ERROR not set')
     def test_raise_deprecations(self):
-        with self.assertRaises(OrangeDeprecationWarning):
-            warnings.warn('foo', OrangeDeprecationWarning)
+        with self.assertRaises(ArithmosDeprecationWarning):
+            warnings.warn('foo', ArithmosDeprecationWarning)
 
     def test_stats_sparse(self):
         """

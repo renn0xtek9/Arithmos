@@ -5,11 +5,11 @@ from unittest.mock import patch
 
 import numpy as np
 
-from Orange.data import Table, StringVariable, DiscreteVariable
-from Orange.widgets.data.owcreateclass import (
+from Arithmos.data import Table, StringVariable, DiscreteVariable
+from Arithmos.widgets.data.owcreateclass import (
     OWCreateClass,
     map_by_substring, ValueFromStringSubstring, ValueFromDiscreteSubstring)
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestHelpers(unittest.TestCase):
@@ -49,7 +49,7 @@ class TestHelpers(unittest.TestCase):
         trans = ValueFromStringSubstring(StringVariable("x"), self.patterns)
         arr2 = np.hstack((self.arr.astype(object), [None]))
 
-        with patch('Orange.widgets.data.owcreateclass.map_by_substring') as mbs:
+        with patch('Arithmos.widgets.data.owcreateclass.map_by_substring') as mbs:
             trans.transform(self.arr)
             a, patterns, case_sensitive, match_beginning = mbs.call_args[0]
             np.testing.assert_equal(a, self.arr)
@@ -67,7 +67,7 @@ class TestHelpers(unittest.TestCase):
 
     def test_value_string_substring_flags(self):
         trans = ValueFromStringSubstring(StringVariable("x"), self.patterns)
-        with patch('Orange.widgets.data.owcreateclass.map_by_substring') as mbs:
+        with patch('Arithmos.widgets.data.owcreateclass.map_by_substring') as mbs:
             trans.case_sensitive = True
             trans.transform(self.arr)
             case_sensitive, match_beginning = mbs.call_args[0][-2:]
@@ -89,7 +89,7 @@ class TestHelpers(unittest.TestCase):
     def test_value_from_discrete_substring_flags(self):
         trans = ValueFromDiscreteSubstring(
             DiscreteVariable("x", values=self.arr), self.patterns)
-        with patch('Orange.widgets.data.owcreateclass.map_by_substring') as mbs:
+        with patch('Arithmos.widgets.data.owcreateclass.map_by_substring') as mbs:
             trans.case_sensitive = True
             a, patterns, case_sensitive, match_beginning = mbs.call_args[0]
             np.testing.assert_equal(a, self.arr)

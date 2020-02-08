@@ -8,15 +8,15 @@ from AnyQt.QtCore import Qt, QSize, QAbstractTableModel, QModelIndex
 from AnyQt.QtGui import QColor, QFont, QImage, QBrush, qRgb
 from AnyQt.QtWidgets import QHeaderView, QColorDialog, QTableView
 
-import Orange
-from Orange.widgets import widget, settings, gui
-from Orange.widgets.gui import HorizontalGridDelegate
-from Orange.widgets.utils.colorpalette import \
+import Arithmos
+from Arithmos.widgets import widget, settings, gui
+from Arithmos.widgets.gui import HorizontalGridDelegate
+from Arithmos.widgets.utils.colorpalette import \
     ContinuousPaletteGenerator, ColorPaletteDlg
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
-ColorRole = next(gui.OrangeUserRole)
+ColorRole = next(gui.ArithmosUserRole)
 
 
 class AttrDesc:
@@ -312,10 +312,10 @@ class OWColor(widget.OWWidget):
     icon = "icons/Colors.svg"
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     settingsHandler = settings.PerfectDomainContextHandler(
         match_values=settings.PerfectDomainContextHandler.MATCH_VALUES_ALL)
@@ -406,7 +406,7 @@ class OWColor(widget.OWWidget):
             return
 
         dom = self.data.domain
-        new_domain = Orange.data.Domain(
+        new_domain = Arithmos.data.Domain(
             make(dom.attributes), make(dom.class_vars), make(dom.metas))
         new_data = self.data.transform(new_domain)
         self.Outputs.data.send(new_data)
@@ -414,7 +414,7 @@ class OWColor(widget.OWWidget):
     def send_report(self):
         """Send report"""
         def _report_variables(variables):
-            from Orange.widgets.report import colored_square as square
+            from Arithmos.widgets.report import colored_square as square
 
             def was(n, o):
                 return n if n == o else f"{n} (was: {o})"
@@ -472,4 +472,4 @@ class OWColor(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWColor).run(Orange.data.Table("heart_disease.tab"))
+    WidgetPreview(OWColor).run(Arithmos.data.Table("heart_disease.tab"))

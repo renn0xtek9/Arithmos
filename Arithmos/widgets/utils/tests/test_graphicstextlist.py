@@ -2,8 +2,8 @@ import unittest
 
 from AnyQt.QtCore import Qt, QSizeF
 
-from orangewidget.tests.base import GuiTest
-from Orange.widgets.utils.graphicstextlist import TextListWidget, scaled
+from arithmoswidget.tests.base import GuiTest
+from Arithmos.widgets.utils.graphicstextlist import TextListWidget, scaled
 
 
 class TestTextListWidget(GuiTest):

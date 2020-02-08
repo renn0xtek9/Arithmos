@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (
     QScrollBar, QGraphicsDropShadowEffect
 )
 
-from orangewidget.utils.overlay import OverlayWidget
+from arithmoswidget.utils.overlay import OverlayWidget
 
 __all__ = [
     "StickyGraphicsView"

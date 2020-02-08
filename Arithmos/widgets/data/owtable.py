@@ -25,20 +25,20 @@ from AnyQt.QtCore import (
 )
 from AnyQt.QtCore import pyqtSlot as Slot
 
-import Orange.data
-from Orange.data.storage import Storage
-from Orange.data.table import Table
-from Orange.data.sql.table import SqlTable
-from Orange.statistics import basic_stats
+import Arithmos.data
+from Arithmos.data.storage import Storage
+from Arithmos.data.table import Table
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.statistics import basic_stats
 
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting, DomainContextHandler
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input, Output
-from Orange.widgets.utils import datacaching
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting, DomainContextHandler
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input, Output
+from Arithmos.widgets.utils import datacaching
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.itemmodels import TableModel
+from Arithmos.widgets.utils.itemmodels import TableModel
 
 
 class RichTableModel(TableModel):
@@ -57,7 +57,7 @@ class RichTableModel(TableModel):
         self._continuous = [var.is_continuous for var in self.vars]
         labels = []
         for var in self.vars:
-            if isinstance(var, Orange.data.Variable):
+            if isinstance(var, Arithmos.data.Variable):
                 labels.extend(var.attributes.keys())
         self._labels = list(sorted(
             {label for label in labels if not label.startswith("_")}))
@@ -539,7 +539,7 @@ class OWDataTable(OWWidget):
         self.unconditional_commit()
 
     def _setup_table_view(self, view, data):
-        """Setup the `view` (QTableView) with `data` (Orange.data.Table)
+        """Setup the `view` (QTableView) with `data` (Arithmos.data.Table)
         """
         if data is None:
             view.setModel(None)
@@ -889,7 +889,7 @@ class OWDataTable(OWWidget):
                     attrs = table.domain.attributes
                 class_vars = select_vars(TableModel.ClassVar)
                 metas = select_vars(TableModel.Meta)
-                domain = Orange.data.Domain(attrs, class_vars, metas)
+                domain = Arithmos.data.Domain(attrs, class_vars, metas)
 
             # Avoid a copy if all/none rows are selected.
             if not rowsel:
@@ -933,12 +933,12 @@ SparseBoolArray = namedtuple(
     "SparseBoolArray", ["nans", "non_nans", "stats"])
 NotAvailable = namedtuple("NotAvailable", [])
 
-#: Orange.data.Table summary
+#: Arithmos.data.Table summary
 Summary = namedtuple(
     "Summary",
     ["len", "domain", "X", "Y", "M"])
 
-#: Orange.data.sql.table.SqlTable summary
+#: Arithmos.data.sql.table.SqlTable summary
 ApproxSummary = namedtuple(
     "ApproxSummary",
     ["approx_len", "len", "domain", "X", "Y", "M"])
@@ -1058,7 +1058,7 @@ def format_summary(summary):
 def is_sortable(table):
     if isinstance(table, SqlTable):
         return False
-    elif isinstance(table, Orange.data.Table):
+    elif isinstance(table, Arithmos.data.Table):
         return True
     else:
         return False
@@ -1069,7 +1069,7 @@ def test_model():
     view = QTableView(
         sortingEnabled=True
     )
-    data = Orange.data.Table("lenses")
+    data = Arithmos.data.Table("lenses")
     model = TableModel(data)
 
     view.setModel(model)

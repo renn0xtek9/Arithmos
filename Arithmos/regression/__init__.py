@@ -1,4 +1,4 @@
-# Pull members from modules to Orange.regression namespace
+# Pull members from modules to Arithmos.regression namespace
 # pylint: disable=wildcard-import
 
 from .base_regression import (ModelRegression as Model,

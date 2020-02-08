@@ -1,4 +1,4 @@
-.. py:currentmodule:: Orange.preprocess
+.. py:currentmodule:: Arithmos.preprocess
 
 ###################################
 Data Preprocessing (``preprocess``)
@@ -24,7 +24,7 @@ There are several imputation methods one can use.
 .. literalinclude:: code/imputation-average.py
 
 
-.. autoclass::Orange.preprocess.Impute
+.. autoclass::Arithmos.preprocess.Impute
 
 .. index:: discretize data
    single: feature; discretize
@@ -56,7 +56,7 @@ data instances) can be replaced with other methods.
 .. literalinclude:: code/discretization-table-method.py
     :lines: 3-5
 
-.. autoclass::Orange.preprocess.Discretize
+.. autoclass::Arithmos.preprocess.Discretize
 
 ..
     Transformation procedure
@@ -69,22 +69,22 @@ data instances) can be replaced with other methods.
 
     To obtain discretized features, call a discretization algorithm with
     with the data and the feature to discretize. The feature can be given
-    either as an index name or :obj:`Orange.data.Variable`. The following
+    either as an index name or :obj:`Arithmos.data.Variable`. The following
     example creates a discretized feature::
 
-        import Orange
-        data = Orange.data.Table("iris.tab")
-        disc = Orange.feature.discretization.EqualFreq(n=4)
+        import Arithmos
+        data = Arithmos.data.Table("iris.tab")
+        disc = Arithmos.feature.discretization.EqualFreq(n=4)
         disc_var = disc(data, 0)
 
     The values of the first attribute will be discretized the data is
-    transformed to the  :obj:`Orange.data.Domain` domain that includes
+    transformed to the  :obj:`Arithmos.data.Domain` domain that includes
     ``disc_var``.  In the example below we add the discretized first attribute
     to the original domain::
 
-      ndomain = Orange.data.Domain([disc_var] + list(data.domain.attributes),
+      ndomain = Arithmos.data.Domain([disc_var] + list(data.domain.attributes),
           data.domain.class_vars)
-      ndata = Orange.data.Table(ndomain, data)
+      ndata = Arithmos.data.Table(ndomain, data)
       print(ndata)
 
     The printout::
@@ -100,20 +100,20 @@ data instances) can be replaced with other methods.
 _`Discretization Algorithms`
 ----------------------------
 
-.. autoclass:: Orange.preprocess.discretize.EqualWidth
+.. autoclass:: Arithmos.preprocess.discretize.EqualWidth
 
-.. autoclass:: Orange.preprocess.discretize.EqualFreq
+.. autoclass:: Arithmos.preprocess.discretize.EqualFreq
 
-.. autoclass:: Orange.preprocess.discretize.EntropyMDL
+.. autoclass:: Arithmos.preprocess.discretize.EntropyMDL
 
 To add a new discretization, derive it from ``Discretization``.
 
-.. autoclass:: Orange.preprocess.discretize.Discretization
+.. autoclass:: Arithmos.preprocess.discretize.Discretization
 
 Continuization
 ==============
 
-.. class:: Orange.preprocess.Continuize
+.. class:: Arithmos.preprocess.Continuize
 
     Given a data table, return a new table in which the discretize attributes
     are replaced with continuous or removed.
@@ -128,9 +128,9 @@ Continuization
 
     ::
 
-        import Orange
-        titanic = Orange.data.Table("titanic")
-        continuizer = Orange.preprocess.Continuize()
+        import Arithmos
+        titanic = Arithmos.data.Table("titanic")
+        continuizer = Arithmos.preprocess.Continuize()
         titanic1 = continuizer(titanic)
 
     The class has a number of attributes that can be set either in constructor
@@ -165,7 +165,7 @@ Continuization
            variable with variables "status=crew", "status=first",
            "status=second" and "status=third". After ::
 
-               continuizer = Orange.preprocess.Continuize()
+               continuizer = Arithmos.preprocess.Continuize()
                titanic1 = continuizer(titanic)
 
            we have ::
@@ -188,7 +188,7 @@ Continuization
        ``Continuize.FirstAsBase``
            Similar to the above, except that it creates indicators for all
            values except the first one, according to the order in the variable's
-           :obj:`~Orange.data.DiscreteVariable.values` attribute. If all
+           :obj:`~Arithmos.data.DiscreteVariable.values` attribute. If all
            indicators in the transformed data instance are 0, the original
            instance had the first value of the corresponding variable.
 
@@ -204,7 +204,7 @@ Continuization
            Like above, except that the most frequent value is used as the
            base. If there are multiple most frequent values, the
            one with the lowest index in
-           :obj:`~Orange.data.DiscreteVariable.values` is used. The frequency
+           :obj:`~Arithmos.data.DiscreteVariable.values` is used. The frequency
            of values is extracted from data, so this option does not work if
            only the domain is given.
 
@@ -237,7 +237,7 @@ Continuization
        ``Continuize.AsOrdinal``
            Multinomial variables are treated as ordinal and replaced by
            continuous variables with indices within
-           :obj:`~Orange.data.DiscreteVariable.values`, e.g. 0, 1, 2, 3...
+           :obj:`~Arithmos.data.DiscreteVariable.values`, e.g. 0, 1, 2, 3...
 
                 >>> continuizer.multinomial_treatment = continuizer.AsOrdinal
                 >>> titanic1 = continuizer(titanic)
@@ -265,15 +265,15 @@ Continuization
 
 
 
-.. class:: Orange.preprocess.DomainContinuizer
+.. class:: Arithmos.preprocess.DomainContinuizer
 
     Construct a domain in which discrete attributes are replaced by
     continuous. ::
 
-        domain_continuizer = Orange.preprocess.DomainContinuizer()
+        domain_continuizer = Arithmos.preprocess.DomainContinuizer()
         domain1 = domain_continuizer(titanic)
 
-    :obj:`Orange.preprocess.Continuize` calls `DomainContinuizer` to construct
+    :obj:`Arithmos.preprocess.Continuize` calls `DomainContinuizer` to construct
     the domain.
 
     Domain continuizers can be given either a dataset or a domain, and return
@@ -287,19 +287,19 @@ Continuization
 Normalization
 =============
 
-.. autoclass:: Orange.preprocess.Normalize
+.. autoclass:: Arithmos.preprocess.Normalize
 
 
 Randomization
 =============
 
-.. autoclass:: Orange.preprocess.Randomize
+.. autoclass:: Arithmos.preprocess.Randomize
 
 
 Remove
 ======
 
-.. autoclass:: Orange.preprocess.Remove
+.. autoclass:: Arithmos.preprocess.Remove
 
 Feature selection
 =================
@@ -308,21 +308,21 @@ Feature selection
 -----------------
 
 Feature scoring is an assessment of the usefulness of features for
-prediction of the dependant (class) variable. Orange provides classes
+prediction of the dependant (class) variable. Arithmos provides classes
 that compute the common feature scores for classification and regression.
 
 The code below computes the information gain of feature "tear_rate"
 in the Lenses dataset:
 
-    >>> data = Orange.data.Table("lenses")
-    >>> Orange.preprocess.score.InfoGain(data, "tear_rate")
+    >>> data = Arithmos.data.Table("lenses")
+    >>> Arithmos.preprocess.score.InfoGain(data, "tear_rate")
     0.54879494069539858
 
 An alternative way of invoking the scorers is to construct the scoring
 object and calculate the scores for all the features at once, like in the
 following example:
 
-    >>> gain = Orange.preprocess.score.InfoGain()
+    >>> gain = Arithmos.preprocess.score.InfoGain()
     >>> scores = gain(data)
     >>> for attr, score in zip(data.domain.attributes, scores):
     ...     print('%.3f' % score, attr.name)
@@ -338,41 +338,41 @@ Refer to method's `feature_type` and `class_type` attributes for intended type
 or employ preprocessing methods (e.g. discretization) for conversion between
 data types.
 
-.. autoclass:: Orange.preprocess.score.ANOVA
+.. autoclass:: Arithmos.preprocess.score.ANOVA
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.Chi2
+.. autoclass:: Arithmos.preprocess.score.Chi2
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.GainRatio
+.. autoclass:: Arithmos.preprocess.score.GainRatio
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.Gini
+.. autoclass:: Arithmos.preprocess.score.Gini
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.InfoGain
+.. autoclass:: Arithmos.preprocess.score.InfoGain
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.UnivariateLinearRegression
+.. autoclass:: Arithmos.preprocess.score.UnivariateLinearRegression
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.FCBF
+.. autoclass:: Arithmos.preprocess.score.FCBF
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.ReliefF
+.. autoclass:: Arithmos.preprocess.score.ReliefF
    :members: feature_type, class_type
 
-.. autoclass:: Orange.preprocess.score.RReliefF
+.. autoclass:: Arithmos.preprocess.score.RReliefF
    :members: feature_type, class_type
 
 Additionally, you can use the ``score_data()`` method of some learners (\
-:obj:`Orange.classification.LinearRegressionLearner`,
-:obj:`Orange.regression.LogisticRegressionLearner`,
-:obj:`Orange.classification.RandomForestLearner`, and
-:obj:`Orange.regression.RandomForestRegressionLearner`)
+:obj:`Arithmos.classification.LinearRegressionLearner`,
+:obj:`Arithmos.regression.LogisticRegressionLearner`,
+:obj:`Arithmos.classification.RandomForestLearner`, and
+:obj:`Arithmos.regression.RandomForestRegressionLearner`)
 to obtain the feature scores as calculated by these learners. For example:
 
-    >>> learner = Orange.classification.LogisticRegressionLearner()
+    >>> learner = Arithmos.classification.LogisticRegressionLearner()
     >>> learner.score_data(data)
     [0.31571299907366146,
      0.28286199971877485,
@@ -392,14 +392,14 @@ retain all discrete features and vice versa.
 The code below constructs a new dataset consisting of two best features
 according to the ANOVA method:
 
-    >>> data = Orange.data.Table("wine")
-    >>> anova = Orange.preprocess.score.ANOVA()
-    >>> selector = Orange.preprocess.SelectBestFeatures(method=anova, k=2)
+    >>> data = Arithmos.data.Table("wine")
+    >>> anova = Arithmos.preprocess.score.ANOVA()
+    >>> selector = Arithmos.preprocess.SelectBestFeatures(method=anova, k=2)
     >>> data2 = selector(data)
     >>> data2.domain
     [Flavanoids, Proline | Wine]
 
-.. autoclass:: Orange.preprocess.SelectBestFeatures
+.. autoclass:: Arithmos.preprocess.SelectBestFeatures
 
 Preprocessors
 =============

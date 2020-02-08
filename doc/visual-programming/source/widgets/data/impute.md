@@ -12,7 +12,7 @@ Replaces unknown values in the data.
 
 - Data: dataset with imputed values
 
-Some Orange's algorithms and visualizations cannot handle unknown values in the data. This widget does what statisticians call imputation: it substitutes missing values by values either computed from the data or set by the user. The default imputation is (1-NN).
+Some Arithmos's algorithms and visualizations cannot handle unknown values in the data. This widget does what statisticians call imputation: it substitutes missing values by values either computed from the data or set by the user. The default imputation is (1-NN).
 
 ![](images/impute-stamped.png)
 
@@ -20,7 +20,7 @@ Some Orange's algorithms and visualizations cannot handle unknown values in the 
    - **Don't Impute** does nothing with the missing values.
    - **Average/Most-frequent** uses the average value (for continuous attributes) or the most common value (for discrete attributes).
    - **As a distinct value** creates new values to substitute the missing ones.
-   - **Model-based imputer** constructs a model for predicting the missing value, based on values of other attributes; a separate model is constructed for each attribute. The default model is 1-NN learner, which takes the value from the most similar example (this is sometimes referred to as hot deck imputation). This algorithm can be substituted by one that the user connects to the input signal Learner for Imputation. Note, however, that if there are discrete and continuous attributes in the data, the algorithm needs to be capable of handling them both; at the moment only 1-NN learner can do that. (In the future, when Orange has more regressors, the Impute widget may have separate input signals for discrete and continuous models.)
+   - **Model-based imputer** constructs a model for predicting the missing value, based on values of other attributes; a separate model is constructed for each attribute. The default model is 1-NN learner, which takes the value from the most similar example (this is sometimes referred to as hot deck imputation). This algorithm can be substituted by one that the user connects to the input signal Learner for Imputation. Note, however, that if there are discrete and continuous attributes in the data, the algorithm needs to be capable of handling them both; at the moment only 1-NN learner can do that. (In the future, when Arithmos has more regressors, the Impute widget may have separate input signals for discrete and continuous models.)
    - **Random values** computes the distributions of values for each attribute and then imputes by picking random values from them.
    - **Remove examples with missing values** removes the example containing missing values. This check also applies to the class attribute if *Impute class values* is checked.
 

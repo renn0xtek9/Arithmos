@@ -16,12 +16,12 @@ from glob import glob
 
 import numpy as np
 
-from Orange.data import Table, Domain, Variable, DiscreteVariable, \
+from Arithmos.data import Table, Domain, Variable, DiscreteVariable, \
     StringVariable, ContinuousVariable, TimeVariable
-from Orange.data.io_util import Compression, open_compressed, \
+from Arithmos.data.io_util import Compression, open_compressed, \
     isnastr, guess_data_type, sanitize_variable
-from Orange.data.variable import VariableMeta
-from Orange.util import Registry, flatten, namegen
+from Arithmos.data.variable import VariableMeta
+from Arithmos.util import Registry, flatten, namegen
 
 __all__ = ["FileFormatBase", "Flags", "DataTableMixin", "PICKLE_PROTOCOL"]
 
@@ -399,7 +399,7 @@ class DataTableMixin:
     def data_table(cls, data: Iterable[List[str]],
                    headers: Optional[List] = None) -> Table:
         """
-        Return Orange.data.Table given rows of `headers` (iterable of iterable)
+        Return Arithmos.data.Table given rows of `headers` (iterable of iterable)
         and rows of `data` (iterable of iterable).
 
         Basically, the idea of subclasses is to produce those two iterables,
@@ -418,7 +418,7 @@ class DataTableMixin:
         Returns
         -------
         table: Table
-            Data as Orange.data.Table.
+            Data as Arithmos.data.Table.
         """
         if not headers:
             headers, data = cls.parse_headers(data)
@@ -753,7 +753,7 @@ class _FileFormatMeta(Registry):
         warnings.warn(
             f"'{__name__}.FileFormat.img_writers' is no longer used and "
             "will be removed. Please use "
-            "'Orange.widgets.io.FileFormat.img_writers' instead.",
+            "'Arithmos.widgets.io.FileFormat.img_writers' instead.",
             DeprecationWarning, stacklevel=2
         )
         return cls._ext_to_attr_if_attr2('', 'write_image')

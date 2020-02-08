@@ -5,9 +5,9 @@ import warnings
 import numpy as np
 from scipy.sparse import csr_matrix, SparseEfficiencyWarning
 
-from Orange import data
-from Orange.data import Table
-from Orange.tests import test_table as tabletests
+from Arithmos import data
+from Arithmos.data import Table
+from Arithmos.tests import test_table as tabletests
 
 
 class InterfaceTest(tabletests.InterfaceTest):

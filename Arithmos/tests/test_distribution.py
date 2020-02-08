@@ -9,9 +9,9 @@ import warnings
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.statistics import distribution
-from Orange import data
-from Orange.tests import test_filename
+from Arithmos.statistics import distribution
+from Arithmos import data
+from Arithmos.tests import test_filename
 
 
 def assert_dist_equal(dist, expected):

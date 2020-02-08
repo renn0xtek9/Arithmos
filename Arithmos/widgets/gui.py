@@ -15,9 +15,9 @@ from AnyQt.QtGui import QColor
 from AnyQt.QtWidgets import QWidget, QItemDelegate, QListView
 
 # re-export relevant objects
-from orangewidget.utils.combobox import ComboBox as OrangeComboBox
-from orangewidget.gui import (
-    OWComponent, OrangeUserRole, TableView, resource_filename,
+from arithmoswidget.utils.combobox import ComboBox as ArithmosComboBox
+from arithmoswidget.gui import (
+    OWComponent, ArithmosUserRole, TableView, resource_filename,
     miscellanea, setLayout, separator, rubber, widgetBox, hBox, vBox,
     indentedBox, widgetLabel, label, spin, doubleSpin, checkBox, lineEdit,
     button, toolButton, radioButtons, radioButtonsInBox, appendRadioButton,
@@ -36,32 +36,32 @@ from orangewidget.gui import (
 )
 # exposed for backcompat. Should not be imported from here, or not
 # imported at all
-from orangewidget.gui import (
+from arithmoswidget.gui import (
     SpinBoxWFocusOut, DoubleSpinBoxWFocusOut, LineEditWFocusOut,
     LAMBDA_NAME, disable_opposite,
     _addSpace  # was included in docs
 )  # pylint: disable=unused-import
-from Orange.widgets.utils.buttons import (
+from Arithmos.widgets.utils.buttons import (
     VariableTextPushButton
 )  # pylint: disable=unused-import
 
 
 try:
-    # Some Orange widgets might expect this here
+    # Some Arithmos widgets might expect this here
     # pylint: disable=unused-import
-    from Orange.widgets.utils.webview import WebviewWidget
+    from Arithmos.widgets.utils.webview import WebviewWidget
 except ImportError:
     pass  # Neither WebKit nor WebEngine are available
 
-import Orange.data
-from Orange.widgets.utils import getdeepattr
-from Orange.data import \
+import Arithmos.data
+from Arithmos.widgets.utils import getdeepattr
+from Arithmos.data import \
     ContinuousVariable, StringVariable, TimeVariable, DiscreteVariable, Variable
-from Orange.widgets.utils import vartype
+from Arithmos.widgets.utils import vartype
 
 __all__ = [
     # Re-exported
-    "OWComponent", "OrangeUserRole", "TableView", "resource_filename",
+    "OWComponent", "ArithmosUserRole", "TableView", "resource_filename",
     "miscellanea", "setLayout", "separator", "rubber",
     "widgetBox", "hBox", "vBox", "indentedBox",
     "widgetLabel", "label", "spin", "doubleSpin",
@@ -77,7 +77,7 @@ __all__ = [
     "ColoredBarItemDelegate", "HorizontalGridDelegate", "VerticalItemDelegate",
     # Defined here
     "createAttributePixmap", "attributeIconDict", "attributeItem",
-    "listView", "ListViewWithSizeHint", "listBox", "OrangeListBox",
+    "listView", "ListViewWithSizeHint", "listBox", "ArithmosListBox",
     "TableValueRole", "TableClassValueRole", "TableDistribution",
     "TableVariable", "TableBarItem"
 ]
@@ -146,7 +146,7 @@ class __AttributeIconDict(dict):
 #: the application.
 #:
 #: Accepted keys are variable type codes and instances
-#: of :obj:`Orange.data.Variable`: `attributeIconDict[var]` will give the
+#: of :obj:`Arithmos.data.Variable`: `attributeIconDict[var]` will give the
 #: appropriate icon for variable `var` or a question mark if the type is not
 #: recognized
 attributeIconDict = __AttributeIconDict()
@@ -158,7 +158,7 @@ def attributeItem(var):
     list box
 
     :param var: variable
-    :type var: Orange.data.Variable
+    :type var: Arithmos.data.Variable
     :rtype: tuple with QIcon and str
     """
     return attributeIconDict[var], var.name
@@ -231,13 +231,13 @@ def listBox(widget, master, value=None, labels=None, box=None, callback=None,
     :type dataValidityCallback: function
     :param sizeHint: size hint
     :type sizeHint: QSize
-    :rtype: OrangeListBox
+    :rtype: ArithmosListBox
     """
     if box:
         bg = hBox(widget, box, addToLayout=False)
     else:
         bg = widget
-    lb = OrangeListBox(master, enableDragDrop, dragDropCallback,
+    lb = ArithmosListBox(master, enableDragDrop, dragDropCallback,
                        dataValidityCallback, sizeHint, bg)
     lb.setSelectionMode(selectionMode)
     lb.ogValue = value
@@ -261,7 +261,7 @@ def listBox(widget, master, value=None, labels=None, box=None, callback=None,
     return lb
 
 
-class OrangeListBox(QtWidgets.QListWidget):
+class ArithmosListBox(QtWidgets.QListWidget):
     """
     List box with drag and drop functionality. Function :obj:`listBox`
     constructs instances of this class; do not use the class directly.
@@ -336,7 +336,7 @@ class OrangeListBox(QtWidgets.QListWidget):
         super().dragEnterEvent(event)
         if self.valid_data_callback:
             self.valid_data_callback(event)
-        elif isinstance(event.source(), OrangeListBox):
+        elif isinstance(event.source(), ArithmosListBox):
             event.setDropAction(Qt.MoveAction)
             event.accept()
         else:
@@ -519,7 +519,7 @@ def comboBox(widget, master, value, box=None, label=None, labelWidth=None,
     """
 
     # Local import to avoid circular imports
-    from Orange.widgets.utils.itemmodels import VariableListModel
+    from Arithmos.widgets.utils.itemmodels import VariableListModel
 
     if box or label:
         hb = widgetBox(widget, box, orientation, addToLayout=False)
@@ -528,7 +528,7 @@ def comboBox(widget, master, value, box=None, label=None, labelWidth=None,
     else:
         hb = widget
 
-    combo = OrangeComboBox(
+    combo = ArithmosComboBox(
         hb, maximumContentsLength=maximumContentsLength,
         editable=editable)
 
@@ -637,7 +637,7 @@ class CallBackListView(ControlledCallback):
     # triggered by selectionModel().selectionChanged()
     def __call__(self, *_):
         # This must be imported locally to avoid circular imports
-        from Orange.widgets.utils.itemmodels import PyListModel
+        from Arithmos.widgets.utils.itemmodels import PyListModel
         values = [i.row()
                   for i in self.view.selectionModel().selection().indexes()]
         if values:
@@ -786,19 +786,19 @@ class CallFrontListBoxLabels(ControlledCallFront):
                 self.control.addItem(item)
 
 
-#: Role to retrieve Orange.data.Value
-TableValueRole = next(OrangeUserRole)
+#: Role to retrieve Arithmos.data.Value
+TableValueRole = next(ArithmosUserRole)
 #: Role to retrieve class value for a row
-TableClassValueRole = next(OrangeUserRole)
+TableClassValueRole = next(ArithmosUserRole)
 # Role to retrieve distribution of a column
-TableDistribution = next(OrangeUserRole)
+TableDistribution = next(ArithmosUserRole)
 #: Role to retrieve the column's variable
-TableVariable = next(OrangeUserRole)
+TableVariable = next(ArithmosUserRole)
 
 
 class TableBarItem(QItemDelegate):
-    BarRole = next(OrangeUserRole)
-    BarColorRole = next(OrangeUserRole)
+    BarRole = next(ArithmosUserRole)
+    BarColorRole = next(ArithmosUserRole)
 
     def __init__(self, parent=None, color=QtGui.QColor(255, 170, 127),
                  color_schema=None):
@@ -827,7 +827,7 @@ class TableBarItem(QItemDelegate):
         if ratio is not None:
             if self.color_schema is not None:
                 class_ = index.data(TableClassValueRole)
-                if isinstance(class_, Orange.data.Value) and \
+                if isinstance(class_, Arithmos.data.Value) and \
                         class_.variable.is_discrete and \
                         not math.isnan(class_):
                     color = self.color_schema[int(class_)]

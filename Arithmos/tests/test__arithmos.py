@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from Orange.data import _valuecount
+from Arithmos.data import _valuecount
 
 
 class test_valuecount(unittest.TestCase):

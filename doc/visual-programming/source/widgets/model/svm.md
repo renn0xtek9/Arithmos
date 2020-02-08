@@ -14,7 +14,7 @@ Support Vector Machines map inputs to higher-dimensional feature spaces.
 - Model: trained model
 - Support Vectors: instances used as support vectors
 
-[Support vector machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) is a machine learning technique that separates the attribute space with a hyperplane, thus maximizing the margin between the instances of different classes or class values. The technique often yields supreme predictive performance results. Orange embeds a popular implementation of SVM from the [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) package. This widget is its graphical user interface.
+[Support vector machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) is a machine learning technique that separates the attribute space with a hyperplane, thus maximizing the margin between the instances of different classes or class values. The technique often yields supreme predictive performance results. Arithmos embeds a popular implementation of SVM from the [LIBSVM](https://www.csie.ntu.edu.tw/~cjlin/libsvm/) package. This widget is its graphical user interface.
 
 For regression tasks, **SVM** performs linear regression in a high dimension feature space using an ε-insensitive loss. Its estimation accuracy depends on a good setting of C, ε and kernel parameters. The widget outputs class predictions based on a [SVM Regression](https://en.wikipedia.org/wiki/Support_vector_machine#Regression).
 

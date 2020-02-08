@@ -596,7 +596,7 @@ def digitize(x, bins, right=False):
         if row.nnz > 0:
             r[idx, row.indices] = np.digitize(row.data, bins, right)
 
-    # Orange mainly deals with `csr_matrix`, but `lil_matrix` is more efficient
+    # Arithmos mainly deals with `csr_matrix`, but `lil_matrix` is more efficient
     # for incremental building
     if sp.issparse(r):
         r = r.tocsr()

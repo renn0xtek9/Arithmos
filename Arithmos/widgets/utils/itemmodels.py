@@ -21,16 +21,16 @@ from AnyQt.QtWidgets import (
 
 import numpy
 
-from orangewidget.utils.itemmodels import (
+from arithmoswidget.utils.itemmodels import (
     PyListModel, AbstractSortTableModel as _AbstractSortTableModel
 )
 
-from Orange.data import Variable, Storage, DiscreteVariable, ContinuousVariable
-from Orange.data.domain import filter_visible
-from Orange.widgets import gui
-from Orange.widgets.utils import datacaching
-from Orange.statistics import basic_stats
-from Orange.util import deprecated
+from Arithmos.data import Variable, Storage, DiscreteVariable, ContinuousVariable
+from Arithmos.data.domain import filter_visible
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils import datacaching
+from Arithmos.statistics import basic_stats
+from Arithmos.util import deprecated
 
 __all__ = [
     "PyListModel", "VariableListModel", "PyListModelTooltip", "DomainModel",
@@ -62,11 +62,11 @@ class AbstractSortTableModel(_AbstractSortTableModel):
     # these were defined on TableModel below. When the AbstractSortTableModel
     # was extracted and made a base of TableModel these deprecations were
     # misplaced, they belong in TableModel.
-    @deprecated('Orange.widgets.utils.itemmodels.AbstractSortTableModel.mapFromSourceRows')
+    @deprecated('Arithmos.widgets.utils.itemmodels.AbstractSortTableModel.mapFromSourceRows')
     def mapFromTableRows(self, rows):
         return self.mapFromSourceRows(rows)
 
-    @deprecated('Orange.widgets.utils.itemmodels.AbstractSortTableModel.mapToSourceRows')
+    @deprecated('Arithmos.widgets.utils.itemmodels.AbstractSortTableModel.mapToSourceRows')
     def mapToTableRows(self, rows):
         return self.mapToSourceRows(rows)
 
@@ -334,7 +334,7 @@ class PyListModelTooltip(PyListModel):
 
 
 class VariableListModel(PyListModel):
-    MIME_TYPE = "application/x-Orange-VariableList"
+    MIME_TYPE = "application/x-Arithmos-VariableList"
 
     def __init__(self, *args, placeholder=None, **kwargs):
         super().__init__(*args, **kwargs)
@@ -653,22 +653,22 @@ class ModelActionsWidget(QWidget):
 
 class TableModel(AbstractSortTableModel):
     """
-    An adapter for using Orange.data.Table within Qt's Item View Framework.
+    An adapter for using Arithmos.data.Table within Qt's Item View Framework.
 
-    :param Orange.data.Table sourcedata: Source data table.
+    :param Arithmos.data.Table sourcedata: Source data table.
     :param QObject parent:
     """
-    #: Orange.data.Value for the index.
-    ValueRole = gui.TableValueRole  # next(gui.OrangeUserRole)
-    #: Orange.data.Value of the row's class.
-    ClassValueRole = gui.TableClassValueRole  # next(gui.OrangeUserRole)
-    #: Orange.data.Variable of the column.
-    VariableRole = gui.TableVariable  # next(gui.OrangeUserRole)
+    #: Arithmos.data.Value for the index.
+    ValueRole = gui.TableValueRole  # next(gui.ArithmosUserRole)
+    #: Arithmos.data.Value of the row's class.
+    ClassValueRole = gui.TableClassValueRole  # next(gui.ArithmosUserRole)
+    #: Arithmos.data.Variable of the column.
+    VariableRole = gui.TableVariable  # next(gui.ArithmosUserRole)
     #: Basic statistics of the column
-    VariableStatsRole = next(gui.OrangeUserRole)
+    VariableStatsRole = next(gui.ArithmosUserRole)
     #: The column's role (position) in the domain.
     #: One of Attribute, ClassVar or Meta
-    DomainRole = next(gui.OrangeUserRole)
+    DomainRole = next(gui.ArithmosUserRole)
 
     #: Column domain roles
     ClassVar, Meta, Attribute = range(3)
@@ -787,7 +787,7 @@ class TableModel(AbstractSortTableModel):
     def sortColumnData(self, column):
         return self._columnSortKeyData(column, TableModel.ValueRole)
 
-    @deprecated('Orange.widgets.utils.itemmodels.TableModel.sortColumnData')
+    @deprecated('Arithmos.widgets.utils.itemmodels.TableModel.sortColumnData')
     def columnSortKeyData(self, column, role):
         return self._columnSortKeyData(column, role)
 

@@ -1,9 +1,9 @@
-from Orange.classification import SklTreeLearner
-from Orange.classification import TreeLearner as ClassificationTreeLearner
-from Orange.modelling import Fitter, SklFitter
-from Orange.regression import TreeLearner as RegressionTreeLearner
-from Orange.regression.tree import SklTreeRegressionLearner
-from Orange.tree import TreeModel
+from Arithmos.classification import SklTreeLearner
+from Arithmos.classification import TreeLearner as ClassificationTreeLearner
+from Arithmos.modelling import Fitter, SklFitter
+from Arithmos.regression import TreeLearner as RegressionTreeLearner
+from Arithmos.regression.tree import SklTreeRegressionLearner
+from Arithmos.tree import TreeModel
 
 __all__ = ['SklTreeLearner', 'TreeLearner']
 

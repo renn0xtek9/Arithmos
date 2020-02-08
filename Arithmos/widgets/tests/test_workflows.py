@@ -3,13 +3,13 @@ from os import listdir, environ
 from os.path import isfile, join, dirname
 import unittest
 
-from orangecanvas.registry import WidgetRegistry
-from orangewidget.workflow import widgetsscheme
+from arithmoscanvas.registry import WidgetRegistry
+from arithmoswidget.workflow import widgetsscheme
 
-from Orange.canvas.config import Config
-from Orange.canvas import workflows
+from Arithmos.canvas.config import Config
+from Arithmos.canvas import workflows
 
-from Orange.widgets.tests.base import GuiTest
+from Arithmos.widgets.tests.base import GuiTest
 
 
 def discover_workflows(dir):
@@ -30,7 +30,7 @@ def registry():
 class TestWorkflows(GuiTest):
     def test_scheme_examples(self):
         """
-        Test if Orange workflow examples can be opened. Examples in canvas
+        Test if Arithmos workflow examples can be opened. Examples in canvas
         and also those placed "workflows" subfolder.
         GH-2240
         """

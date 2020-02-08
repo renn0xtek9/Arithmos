@@ -8,17 +8,17 @@ from AnyQt.QtCore import (
     QMimeData, QAbstractItemModel
 )
 
-from Orange.widgets import gui, widget
-from Orange.widgets.data.contexthandlers import \
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.data.contexthandlers import \
     SelectAttributesDomainContextHandler
-from Orange.widgets.settings import ContextSetting, Setting
-from Orange.widgets.utils.listfilter import VariablesListItemView, slices, variables_filter
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, AttributeList, Msg
-from Orange.data.table import Table
-from Orange.widgets.utils import vartype
-from Orange.widgets.utils.itemmodels import VariableListModel
-import Orange
+from Arithmos.widgets.settings import ContextSetting, Setting
+from Arithmos.widgets.utils.listfilter import VariablesListItemView, slices, variables_filter
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, AttributeList, Msg
+from Arithmos.data.table import Table
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets.utils.itemmodels import VariableListModel
+import Arithmos
 
 
 def source_model(view):
@@ -45,7 +45,7 @@ class VariablesListItemModel(VariableListModel):
     """
     An Variable list item model specialized for Drag and Drop.
     """
-    MIME_TYPE = "application/x-Orange-VariableListModelData"
+    MIME_TYPE = "application/x-Arithmos-VariableListModelData"
 
     def flags(self, index):
         flags = super().flags(index)
@@ -173,8 +173,8 @@ class OWSelectAttributes(widget.OWWidget):
         self.used_attrs = VariablesListItemModel()
         filter_edit, self.used_attrs_view = variables_filter(
             parent=self, model=self.used_attrs,
-            accepted_type=(Orange.data.DiscreteVariable,
-                           Orange.data.ContinuousVariable))
+            accepted_type=(Arithmos.data.DiscreteVariable,
+                           Arithmos.data.ContinuousVariable))
         self.used_attrs.rowsInserted.connect(self.__used_attrs_changed)
         self.used_attrs.rowsRemoved.connect(self.__used_attrs_changed)
         self.used_attrs_view.selectionModel().selectionChanged.connect(
@@ -195,8 +195,8 @@ class OWSelectAttributes(widget.OWWidget):
         box = gui.vBox(self.controlArea, "Target Variable", addToLayout=False)
         self.class_attrs = VariablesListItemModel()
         self.class_attrs_view = VariablesListItemView(
-            acceptedType=(Orange.data.DiscreteVariable,
-                          Orange.data.ContinuousVariable))
+            acceptedType=(Arithmos.data.DiscreteVariable,
+                          Arithmos.data.ContinuousVariable))
         self.class_attrs_view.setModel(self.class_attrs)
         self.class_attrs_view.selectionModel().selectionChanged.connect(
             partial(update_on_change, self.class_attrs_view))
@@ -208,7 +208,7 @@ class OWSelectAttributes(widget.OWWidget):
         box = gui.vBox(self.controlArea, "Meta Attributes", addToLayout=False)
         self.meta_attrs = VariablesListItemModel()
         self.meta_attrs_view = VariablesListItemView(
-            acceptedType=Orange.data.Variable)
+            acceptedType=Arithmos.data.Variable)
         self.meta_attrs_view.setModel(self.meta_attrs)
         self.meta_attrs_view.selectionModel().selectionChanged.connect(
             partial(update_on_change, self.meta_attrs_view))
@@ -517,7 +517,7 @@ class OWSelectAttributes(widget.OWWidget):
             class_var = list(self.class_attrs)
             metas = list(self.meta_attrs)
 
-            domain = Orange.data.Domain(attributes, class_var, metas)
+            domain = Arithmos.data.Domain(attributes, class_var, metas)
             newdata = self.data.transform(domain)
             self.output_data = newdata
             self.Outputs.data.send(newdata)
@@ -556,6 +556,6 @@ class OWSelectAttributes(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    brown = Orange.data.Table("brown-selected")
+    brown = Arithmos.data.Table("brown-selected")
     feats = AttributeList(brown.domain.attributes[:2])
     WidgetPreview(OWSelectAttributes).run(set_data=brown, set_features=feats)

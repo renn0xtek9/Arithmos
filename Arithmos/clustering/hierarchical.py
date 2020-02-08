@@ -10,7 +10,7 @@ import numpy
 import scipy.cluster.hierarchy
 import scipy.spatial.distance
 
-from Orange.distance import Euclidean, PearsonR
+from Arithmos.distance import Euclidean, PearsonR
 
 __all__ = ['HierarchicalClustering']
 
@@ -63,8 +63,8 @@ def data_clustering(data, distance=Euclidean,
     """
     Return the hierarchical clustering of the dataset's rows.
 
-    :param Orange.data.Table data: Dataset to cluster.
-    :param Orange.distance.Distance distance: A distance measure.
+    :param Arithmos.data.Table data: Dataset to cluster.
+    :param Arithmos.distance.Distance distance: A distance measure.
     :param str linkage:
     """
     matrix = distance(data)
@@ -76,8 +76,8 @@ def feature_clustering(data, distance=PearsonR,
     """
     Return the hierarchical clustering of the dataset's columns.
 
-    :param Orange.data.Table data: Dataset to cluster.
-    :param Orange.distance.Distance distance: A distance measure.
+    :param Arithmos.data.Table data: Dataset to cluster.
+    :param Arithmos.distance.Distance distance: A distance measure.
     :param str linkage:
     """
     matrix = distance(data, axis=0)
@@ -88,7 +88,7 @@ def dist_matrix_linkage(matrix, linkage=AVERAGE):
     """
     Return linkage using a precomputed distance matrix.
 
-    :param Orange.misc.DistMatrix matrix:
+    :param Arithmos.misc.DistMatrix matrix:
     :param str linkage:
     """
     # Extract compressed upper triangular distance matrix.
@@ -100,7 +100,7 @@ def dist_matrix_clustering(matrix, linkage=AVERAGE):
     """
     Return the hierarchical clustering using a precomputed distance matrix.
 
-    :param Orange.misc.DistMatrix matrix:
+    :param Arithmos.misc.DistMatrix matrix:
     :param str linkage:
     """
     Z = dist_matrix_linkage(matrix, linkage=linkage)

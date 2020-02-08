@@ -1,12 +1,12 @@
-from Orange.classification import CalibratedLearner, ThresholdLearner, \
+from Arithmos.classification import CalibratedLearner, ThresholdLearner, \
     NaiveBayesLearner
-from Orange.data import Table
-from Orange.modelling import Learner
-from Orange.widgets import gui
-from Orange.widgets.widget import Input
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.modelling import Learner
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import Input
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWCalibratedLearner(OWBaseLearner):

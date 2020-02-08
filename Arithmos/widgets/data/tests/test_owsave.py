@@ -7,13 +7,13 @@ import sys
 import scipy.sparse as sp
 from AnyQt.QtWidgets import QFileDialog
 
-from Orange.data import Table
-from Orange.data.io import TabReader, PickleReader, ExcelReader, FileFormat
-from Orange.tests import named_file
-from Orange.widgets.data.owsave import OWSave, OWSaveBase
-from Orange.widgets.utils.save.tests.test_owsavebase import \
+from Arithmos.data import Table
+from Arithmos.data.io import TabReader, PickleReader, ExcelReader, FileFormat
+from Arithmos.tests import named_file
+from Arithmos.widgets.data.owsave import OWSave, OWSaveBase
+from Arithmos.widgets.utils.save.tests.test_owsavebase import \
     SaveWidgetsTestBaseMixin
-from Orange.widgets.tests.base import WidgetTest, open_widget_classes
+from Arithmos.widgets.tests.base import WidgetTest, open_widget_classes
 
 
 # Yay, MS Windows!
@@ -97,7 +97,7 @@ class TestOWSave(OWSaveTestBase):
             self.assertEqual(widget.initial_start_dir(),
                              os.path.expanduser(_w("~/iris.csv")))
 
-    @patch("Orange.widgets.utils.save.owsavebase.QFileDialog.getSaveFileName")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QFileDialog.getSaveFileName")
     def test_save_file_sets_name(self, _filedialog):
         widget = self.widget
         filters = iter(widget.get_filters())
@@ -481,7 +481,7 @@ class TestOWSaveDarwinDialog(OWSaveTestBase):  # pragma: no cover
         def remove_star(filt):
             return filt
 
-    @patch("Orange.widgets.utils.save.owsavebase.QFileDialog")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QFileDialog")
     def test_get_save_filename_darwin(self, dlg):
         widget = self.widget
         widget.initial_start_dir = lambda: "baz"
@@ -503,7 +503,7 @@ class TestOWSaveDarwinDialog(OWSaveTestBase):  # pragma: no cover
         instance.exec.return_value = dlg.Rejected = QFileDialog.Rejected
         self.assertEqual(widget.get_save_filename(), ("", ""))
 
-    @patch("Orange.widgets.utils.save.owsavebase.QFileDialog")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QFileDialog")
     def test_save_file_dialog_enforces_extension_darwin(self, dlg):
         widget = self.widget
         filter1 = ""  # prevent pylint warning 'undefined-loop-variable'
@@ -542,9 +542,9 @@ class TestOWSaveDarwinDialog(OWSaveTestBase):  # pragma: no cover
         instance.selectedFiles.return_value = ["foo.bar"]
         self.assertEqual(widget.get_save_filename()[0], "foo.bar.csv.gz")
 
-    @patch("Orange.widgets.utils.save.owsavebase.QFileDialog")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QFileDialog")
     @patch("os.path.exists", new=lambda x: x == "old.tab")
-    @patch("Orange.widgets.utils.save.owsavebase.QMessageBox")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QMessageBox")
     def test_save_file_dialog_asks_for_overwrite_darwin(self, msgbox, dlg):
         def selected_files():
             nonlocal attempts
@@ -572,7 +572,7 @@ class TestOWSaveDarwinDialog(OWSaveTestBase):  # pragma: no cover
         msgbox.question.return_value = msgbox.No = 0
         self.assertEqual(widget.get_save_filename()[0], "new.tab")
 
-    @patch("Orange.widgets.utils.save.owsavebase.QFileDialog")
+    @patch("Arithmos.widgets.utils.save.owsavebase.QFileDialog")
     def test_save_file_dialog_uses_valid_filters_darwin(self, dlg):
         widget = self.widget
         widget.valid_filters = lambda: ["aa (*.a)", "bb (*.b)"]

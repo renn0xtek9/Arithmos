@@ -1,9 +1,9 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
-from Orange.data import Table
-from Orange.widgets.model.owstack import OWStackedLearner
-from Orange.classification import LogisticRegressionLearner
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.data import Table
+from Arithmos.widgets.model.owstack import OWStackedLearner
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWStackedLearner(WidgetTest):

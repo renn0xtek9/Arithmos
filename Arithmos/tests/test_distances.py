@@ -11,16 +11,16 @@ import scipy.spatial
 import scipy.stats
 from scipy.sparse import csr_matrix
 
-from Orange.data import (Table, Domain, ContinuousVariable,
+from Arithmos.data import (Table, Domain, ContinuousVariable,
                          DiscreteVariable, StringVariable, Instance)
-from Orange.distance import (Euclidean, SpearmanR, SpearmanRAbsolute,
+from Arithmos.distance import (Euclidean, SpearmanR, SpearmanRAbsolute,
                              PearsonR, PearsonRAbsolute, Manhattan, Cosine,
                              Jaccard, _preprocess, MahalanobisDistance,
                              Bhattacharyya)
-from Orange.distance.distance import _spearmanr2, _corrcoef2
-from Orange.misc import DistMatrix
-from Orange.tests import named_file, test_filename
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.distance.distance import _spearmanr2, _corrcoef2
+from Arithmos.misc import DistMatrix
+from Arithmos.tests import named_file, test_filename
+from Arithmos.util import ArithmosDeprecationWarning
 
 
 def tables_equal(tab1, tab2):
@@ -53,9 +53,9 @@ class TestDistMatrix(TestCase):
     def test_deprecated(self):
         a9 = np.arange(9).reshape(3, 3)
         m = DistMatrix(a9)
-        with self.assertWarns(OrangeDeprecationWarning):
+        with self.assertWarns(ArithmosDeprecationWarning):
             self.assertEqual(m.dim, 3)
-        with self.assertWarns(OrangeDeprecationWarning):
+        with self.assertWarns(ArithmosDeprecationWarning):
             np.testing.assert_almost_equal(m.X, a9)
 
     def test_from_file(self):

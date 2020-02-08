@@ -7,11 +7,11 @@ import warnings
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.classification import SVMLearner, LinearSVMLearner, NuSVMLearner
-from Orange.data import Table
-from Orange.evaluation import CrossValidation, CA, RMSE
-from Orange.regression import SVRLearner, NuSVRLearner
-from Orange.tests import test_filename
+from Arithmos.classification import SVMLearner, LinearSVMLearner, NuSVMLearner
+from Arithmos.data import Table
+from Arithmos.evaluation import CrossValidation, CA, RMSE
+from Arithmos.regression import SVRLearner, NuSVRLearner
+from Arithmos.tests import test_filename
 
 
 class TestSVMLearner(unittest.TestCase):

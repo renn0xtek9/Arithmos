@@ -8,20 +8,20 @@ from AnyQt.QtGui import QIntValidator
 from AnyQt.QtWidgets import QGridLayout, QTableView
 from sklearn.metrics import silhouette_samples, silhouette_score
 
-from Orange.clustering import KMeans
-from Orange.clustering.kmeans import KMeansModel
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.data.util import get_unique_names, array_equal
-from Orange.preprocess import Normalize
-from Orange.preprocess.impute import ReplaceUnknowns
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.annotated_data import \
+from Arithmos.clustering import KMeans
+from Arithmos.clustering.kmeans import KMeansModel
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.data.util import get_unique_names, array_equal
+from Arithmos.preprocess import Normalize
+from Arithmos.preprocess.impute import ReplaceUnknowns
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.annotated_data import \
     ANNOTATED_DATA_SIGNAL_NAME, add_columns
-from Orange.widgets.utils.concurrent import ThreadExecutor, FutureSetWatcher
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets.utils.concurrent import ThreadExecutor, FutureSetWatcher
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 RANDOM_STATE = 0

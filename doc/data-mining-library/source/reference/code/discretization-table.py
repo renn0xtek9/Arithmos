@@ -1,8 +1,8 @@
-import Orange
+import Arithmos
 
-iris = Orange.data.Table("iris.tab")
-disc = Orange.preprocess.Discretize()
-disc.method = Orange.preprocess.discretize.EqualFreq(n=3)
+iris = Arithmos.data.Table("iris.tab")
+disc = Arithmos.preprocess.Discretize()
+disc.method = Arithmos.preprocess.discretize.EqualFreq(n=3)
 d_iris = disc(iris)
 
 print("Original dataset:")

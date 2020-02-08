@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.projection import _som
+from Arithmos.projection import _som
 
 
 class SOM:

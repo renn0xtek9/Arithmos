@@ -3,8 +3,8 @@ import warnings
 
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.widgets.model.owsgd import OWSGD
-from Orange.widgets.tests.base import (
+from Arithmos.widgets.model.owsgd import OWSGD
+from Arithmos.widgets.tests.base import (
     WidgetTest,
     WidgetLearnerTestMixin,
     ParameterMapping

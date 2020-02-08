@@ -1,5 +1,5 @@
 """
-Plot classes and tools that were once used in Orange widgets
+Plot classes and tools that were once used in Arithmos widgets
 
 Due to lack of maintenance (non-functioning), the majority of it has been
 stripped in this commit

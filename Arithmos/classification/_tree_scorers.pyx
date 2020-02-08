@@ -376,7 +376,7 @@ def compute_predictions(double[:, :] X, int[:] code,
     Return the values (distributions, means and variances) stored in the nodes
     to which the tree classify the rows in X.
 
-    The tree is encoded by :obj:`Orange.tree.OrangeTreeMode._compile`.
+    The tree is encoded by :obj:`Arithmos.tree.ArithmosTreeMode._compile`.
 
     The result is a matrix of shape (X.shape[0], values.shape[1])
 

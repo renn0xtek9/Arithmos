@@ -14,24 +14,24 @@ from AnyQt.QtGui import (
 )
 from AnyQt.QtCore import Qt, QPoint, QRegExp, QPersistentModelIndex, QLocale
 
-from Orange.data import (
+from Arithmos.data import (
     Variable, ContinuousVariable, DiscreteVariable, StringVariable,
     TimeVariable,
     Table
 )
-import Orange.data.filter as data_filter
-from Orange.data.filter import FilterContinuous, FilterString
-from Orange.data.domain import filter_visible
-from Orange.data.sql.table import SqlTable
-from Orange.preprocess import Remove
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting, ContextSetting, DomainContextHandler
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
-from Orange.widgets.utils import vartype
-from Orange.widgets import report
-from Orange.widgets.widget import Msg
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+import Arithmos.data.filter as data_filter
+from Arithmos.data.filter import FilterContinuous, FilterString
+from Arithmos.data.domain import filter_visible
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.preprocess import Remove
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting, ContextSetting, DomainContextHandler
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets import report
+from Arithmos.widgets.widget import Msg
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
 
 
@@ -102,7 +102,7 @@ def _plural(s):
 
 class OWSelectRows(widget.OWWidget):
     name = "Select Rows"
-    id = "Orange.widgets.data.file"
+    id = "Arithmos.widgets.data.file"
     description = "Select rows from the data based on values of variables."
     icon = "icons/SelectRows.svg"
     priority = 100
@@ -249,7 +249,7 @@ class OWSelectRows(widget.OWWidget):
         row = model.rowCount()
         model.insertRow(row)
 
-        attr_combo = gui.OrangeComboBox(
+        attr_combo = gui.ArithmosComboBox(
             minimumContentsLength=12,
             sizeAdjustPolicy=QComboBox.AdjustToMinimumContentsLengthWithIcon)
         attr_combo.row = row

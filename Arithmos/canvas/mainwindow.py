@@ -2,11 +2,11 @@ from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import (
     QFormLayout, QCheckBox, QLineEdit, QWidget, QVBoxLayout, QLabel
 )
-from orangecanvas.application.settings import UserSettingsDialog
-from orangecanvas.document.usagestatistics import UsageStatistics
-from orangecanvas.utils.overlay import NotificationOverlay
+from arithmoscanvas.application.settings import UserSettingsDialog
+from arithmoscanvas.document.usagestatistics import UsageStatistics
+from arithmoscanvas.utils.overlay import NotificationOverlay
 
-from orangewidget.workflow.mainwindow import OWCanvasMainWindow
+from arithmoswidget.workflow.mainwindow import OWCanvasMainWindow
 
 
 class OUserSettingsDialog(UserSettingsDialog):
@@ -37,7 +37,7 @@ class OUserSettingsDialog(UserSettingsDialog):
         cb1 = QCheckBox(
             self.tr("Share"),
             toolTip=self.tr(
-                "Share anonymous usage statistics to improve Orange")
+                "Share anonymous usage statistics to improve Arithmos")
         )
         self.bind(cb1, "checked", "reporting/send-statistics")
         cb1.clicked.connect(UsageStatistics.set_enabled)
@@ -45,7 +45,7 @@ class OUserSettingsDialog(UserSettingsDialog):
         box.setLayout(layout)
         form.addRow(self.tr("Anonymous Statistics"), box)
         label = QLabel("<a "
-                       "href=\"https://orange.biolab.si/statistics-more-info\">"
+                       "href=\"https://arithmos.biolab.si/statistics-more-info\">"
                        "More info..."
                        "</a>")
         label.setOpenExternalLinks(True)
@@ -80,13 +80,13 @@ class OUserSettingsDialog(UserSettingsDialog):
         cb1 = QCheckBox(self.tr("Announcements"), self,
                         toolTip="Show notifications about Biolab announcements.\n"
                                 "This entails events and courses hosted by the developers of "
-                                "Orange.")
+                                "Arithmos.")
 
         cb2 = QCheckBox(self.tr("Blog posts"), self,
                         toolTip="Show notifications about blog posts.\n"
                                 "We'll only send you the highlights.")
         cb3 = QCheckBox(self.tr("New features"), self,
-                        toolTip="Show notifications about new features in Orange when a new "
+                        toolTip="Show notifications about new features in Arithmos when a new "
                                 "version is downloaded and installed,\n"
                                 "should the new version entail notable updates.")
 

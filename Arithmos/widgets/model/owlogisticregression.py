@@ -2,12 +2,12 @@ from itertools import chain
 import numpy as np
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, ContinuousVariable, StringVariable
-from Orange.classification.logistic_regression import LogisticRegressionLearner
-from Orange.widgets import settings, gui
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.signals import Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table, Domain, ContinuousVariable, StringVariable
+from Arithmos.classification.logistic_regression import LogisticRegressionLearner
+from Arithmos.widgets import settings, gui
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.signals import Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWLogisticRegression(OWBaseLearner):
@@ -16,7 +16,7 @@ class OWLogisticRegression(OWBaseLearner):
                   "LASSO (L1) or ridge (L2) regularization."
     icon = "icons/LogisticRegression.svg"
     replaces = [
-        "Orange.widgets.classify.owlogisticregression.OWLogisticRegression",
+        "Arithmos.widgets.classify.owlogisticregression.OWLogisticRegression",
     ]
     priority = 60
     keywords = []

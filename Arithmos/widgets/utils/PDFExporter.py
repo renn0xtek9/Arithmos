@@ -1,3 +1,3 @@
-from orangewidget.utils.PDFExporter import PDFExporter
+from arithmoswidget.utils.PDFExporter import PDFExporter
 
 __all__ = ["PDFExporter"]

@@ -1,16 +1,16 @@
-from orangewidget.gui import OWComponent
-from orangewidget.utils.signals import (
+from arithmoswidget.gui import OWComponent
+from arithmoswidget.utils.signals import (
     WidgetSignalsMixin,
     InputSignal, OutputSignal,
     Default, NonDefault, Single, Multiple, Dynamic, Explicit
 )
-from orangewidget.widget import (
+from arithmoswidget.widget import (
     OWBaseWidget, Message, Msg, StateInfo, Input, Output,
 )
 
-from Orange.widgets.utils.progressbar import ProgressBarMixin
-from Orange.widgets.report import DataReport as Report
-from Orange.widgets.utils.signals import AttributeList
+from Arithmos.widgets.utils.progressbar import ProgressBarMixin
+from Arithmos.widgets.report import DataReport as Report
+from Arithmos.widgets.utils.signals import AttributeList
 
 
 __all__ = [
@@ -31,7 +31,7 @@ WidgetMetaClass = type(OWBaseWidget)
 
 class OWWidget(OWBaseWidget, ProgressBarMixin, Report, openclass=True):
     """
-    :class:`~orangewidget.widget.OWBaseWidget` extended with `Orange.data.Table`
+    :class:`~arithmoswidget.widget.OWBaseWidget` extended with `Arithmos.data.Table`
     related report methods (:class:`.Report`)
     """
 

@@ -20,7 +20,7 @@ from AnyQt.QtCore import (
     pyqtSignal as Signal, pyqtSlot as Slot
 )
 
-from orangewidget.utils.concurrent import (
+from arithmoswidget.utils.concurrent import (
     FutureWatcher, FutureSetWatcher, methodinvoke
 )
 

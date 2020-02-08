@@ -20,18 +20,18 @@ from AnyQt.QtCore import (
 
 from AnyQt.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
 
-import Orange.data
-from Orange import preprocess
-from Orange.preprocess import Continuize, ProjectPCA, RemoveNaNRows, \
+import Arithmos.data
+from Arithmos import preprocess
+from Arithmos.preprocess import Continuize, ProjectPCA, RemoveNaNRows, \
     ProjectCUR, Scale as _Scale, Randomize as _Randomize, RemoveSparse
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.overlay import OverlayWidget
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
-from Orange.preprocess import Normalize
-from Orange.widgets.data.utils.preprocess import (
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.overlay import OverlayWidget
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
+from Arithmos.preprocess import Normalize
+from Arithmos.widgets.data.utils.preprocess import (
     BaseEditor, blocked, StandardItemModel, DescriptionRole,
     ParametersRole, Controller, SequenceFlow
 )
@@ -944,7 +944,7 @@ class CUR(BaseEditor):
 # I.e. it should be possible to add/register preprocessor actions
 # through entry points (for use by add-ons). Maybe it should be a
 # general framework (this is not the only place where such
-# functionality is desired (for instance in Orange v2.* Rank widget
+# functionality is desired (for instance in Arithmos v2.* Rank widget
 # already defines its own entry point).
 class Description:
     """
@@ -980,62 +980,62 @@ def icon_path(basename):
 
 PREPROCESS_ACTIONS = [
     PreprocessAction(
-        "Discretize", "orange.preprocess.discretize", "Discretization",
+        "Discretize", "arithmos.preprocess.discretize", "Discretization",
         Description("Discretize Continuous Variables",
                     icon_path("Discretize.svg")),
         DiscretizeEditor
     ),
     PreprocessAction(
-        "Continuize", "orange.preprocess.continuize", "Continuization",
+        "Continuize", "arithmos.preprocess.continuize", "Continuization",
         Description("Continuize Discrete Variables",
                     icon_path("Continuize.svg")),
         ContinuizeEditor
     ),
     PreprocessAction(
-        "Impute", "orange.preprocess.impute", "Impute",
+        "Impute", "arithmos.preprocess.impute", "Impute",
         Description("Impute Missing Values",
                     icon_path("Impute.svg")),
         ImputeEditor
     ),
     PreprocessAction(
-        "Feature Selection", "orange.preprocess.fss", "Feature Selection",
+        "Feature Selection", "arithmos.preprocess.fss", "Feature Selection",
         Description("Select Relevant Features",
                     icon_path("SelectColumns.svg")),
         FeatureSelectEditor
     ),
     PreprocessAction(
-        "Random Feature Selection", "orange.preprocess.randomfss",
+        "Random Feature Selection", "arithmos.preprocess.randomfss",
         "Random Feature Selection",
         Description("Select Random Features",
                     icon_path("SelectColumnsRandom.svg")),
         RandomFeatureSelectEditor
     ),
     PreprocessAction(
-        "Normalize", "orange.preprocess.scale", "Scale",
+        "Normalize", "arithmos.preprocess.scale", "Scale",
         Description("Normalize Features",
                     icon_path("Normalize.svg")),
         Scale
     ),
     PreprocessAction(
-        "Randomize", "orange.preprocess.randomize", "Randomization",
+        "Randomize", "arithmos.preprocess.randomize", "Randomization",
         Description("Randomize",
                     icon_path("Random.svg")),
         Randomize
     ),
     PreprocessAction(
-        "Remove Sparse", "orange.preprocess.remove_sparse", "Feature Selection",
+        "Remove Sparse", "arithmos.preprocess.remove_sparse", "Feature Selection",
         Description("Remove Sparse Features",
                     icon_path("PurgeDomain.svg")),
         RemoveSparseEditor
     ),
     PreprocessAction(
-        "PCA", "orange.preprocess.pca", "PCA",
+        "PCA", "arithmos.preprocess.pca", "PCA",
         Description("Principal Component Analysis",
                     icon_path("PCA.svg")),
         PCA
     ),
     PreprocessAction(
-        "CUR", "orange.preprocess.cur", "CUR",
+        "CUR", "arithmos.preprocess.cur", "CUR",
         Description("CUR Matrix Decomposition",
                     icon_path("SelectColumns.svg")),
         CUR
@@ -1044,7 +1044,7 @@ PREPROCESS_ACTIONS = [
 
 
 # TODO: Extend with entry points here
-# PREPROCESS_ACTIONS += iter_entry_points("Orange.widgets.data.owpreprocess")
+# PREPROCESS_ACTIONS += iter_entry_points("Arithmos.widgets.data.owpreprocess")
 
 # ####
 # The actual owwidget
@@ -1072,11 +1072,11 @@ class OWPreprocess(widget.OWWidget):
     settings_version = 2
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
         preprocessor = Output("Preprocessor", preprocess.preprocess.Preprocess, dynamic=False)
-        preprocessed_data = Output("Preprocessed Data", Orange.data.Table)
+        preprocessed_data = Output("Preprocessed Data", Arithmos.data.Table)
 
     storedsettings = Setting({})
     autocommit = Setting(True)
@@ -1349,7 +1349,7 @@ class OWPreprocess(widget.OWWidget):
     def migrate_settings(cls, settings, version):
         if version < 2:
             for action, params in settings["storedsettings"]["preprocessors"]:
-                if action == "orange.preprocess.scale":
+                if action == "arithmos.preprocess.scale":
                     scale = center = None
                     if "center" in params:
                         center = params.pop("center").name
@@ -1391,4 +1391,4 @@ class OWPreprocess(widget.OWWidget):
             self.report_items("Settings", pp)
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWPreprocess).run(Orange.data.Table("brown-selected"))
+    WidgetPreview(OWPreprocess).run(Arithmos.data.Table("brown-selected"))

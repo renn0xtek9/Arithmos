@@ -6,13 +6,13 @@ import unittest
 
 import numpy as np
 
-import Orange.distance
-from Orange.data import (
+import Arithmos.distance
+from Arithmos.data import (
     Table, Domain, ContinuousVariable, DiscreteVariable, StringVariable)
-from Orange.misc import DistMatrix
-from Orange.widgets.utils.annotated_data import ANNOTATED_DATA_SIGNAL_NAME
-from Orange.widgets.visualize.owsilhouetteplot import OWSilhouettePlot
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.misc import DistMatrix
+from Arithmos.widgets.utils.annotated_data import ANNOTATED_DATA_SIGNAL_NAME
+from Arithmos.widgets.visualize.owsilhouetteplot import OWSilhouettePlot
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
 
 
 class TestOWSilhouettePlot(WidgetTest, WidgetOutputsTestMixin):
@@ -179,7 +179,7 @@ class TestOWSilhouettePlot(WidgetTest, WidgetOutputsTestMixin):
     def test_distance_input(self):
         widget = self.widget
         data = Table("heart_disease")[::4]
-        matrix = Orange.distance.Euclidean(data)
+        matrix = Arithmos.distance.Euclidean(data)
         self.send_signal(widget.Inputs.data, matrix, widget=widget)
         self.assertIsNotNone(widget.distances)
         self.assertIsNotNone(widget.data)
@@ -207,7 +207,7 @@ class TestOWSilhouettePlot(WidgetTest, WidgetOutputsTestMixin):
         widget = self.widget
         data = Table("iris")[::4]
         data = data[:, data.domain.attributes]
-        matrix = Orange.distance.Euclidean(data)
+        matrix = Arithmos.distance.Euclidean(data)
         self.send_signal(widget.Inputs.data, matrix, widget=widget)
 
         self.assertTrue(widget.Error.input_validation_error.is_shown())

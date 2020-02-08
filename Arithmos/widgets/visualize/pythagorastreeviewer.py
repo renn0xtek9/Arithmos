@@ -26,10 +26,10 @@ from AnyQt.QtWidgets import (
     QSizePolicy, QGraphicsItem, QGraphicsRectItem, QGraphicsWidget, QStyle
 )
 
-from Orange.widgets.utils import to_html
-from Orange.widgets.utils.colorpalette import ContinuousPaletteGenerator
-from Orange.widgets.visualize.utils.tree.rules import Rule
-from Orange.widgets.visualize.utils.tree.treeadapter import TreeAdapter
+from Arithmos.widgets.utils import to_html
+from Arithmos.widgets.utils.colorpalette import ContinuousPaletteGenerator
+from Arithmos.widgets.visualize.utils.tree.rules import Rule
+from Arithmos.widgets.visualize.utils.tree.treeadapter import TreeAdapter
 
 # z index range, increase if needed
 Z_STEP = 5000000
@@ -43,7 +43,7 @@ class PythagorasTreeViewer(QGraphicsWidget):
 
     Examples
     --------
-    >>> from Orange.widgets.visualize.utils.tree.treeadapter import (
+    >>> from Arithmos.widgets.visualize.utils.tree.treeadapter import (
     >>>     TreeAdapter
     >>> )
     Pass tree through constructor.

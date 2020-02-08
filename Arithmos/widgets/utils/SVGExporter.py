@@ -11,6 +11,6 @@ Fixes:
 Remove this file when pyqtgraph updates.
 """
 
-from orangewidget.utils.SVGExporter import SVGExporter
+from arithmoswidget.utils.SVGExporter import SVGExporter
 
 __all__ = ["SVGExporter"]

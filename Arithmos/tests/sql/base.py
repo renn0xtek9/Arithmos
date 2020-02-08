@@ -7,7 +7,7 @@ import inspect
 
 import numpy as np
 
-from Orange.data import Table
+from Arithmos.data import Table
 
 
 def parse_uri(uri):
@@ -157,7 +157,7 @@ class DBTestConnection:
         raise NotImplementedError
 
     def get_backend(self):
-        """This returns the db specific Orange Backend."""
+        """This returns the db specific Arithmos Backend."""
         raise NotImplementedError
 
 
@@ -231,7 +231,7 @@ class PostgresTestConnection(DBTestConnection):
                 curs.execute("DROP TABLE {}".format(table_name))
 
     def get_backend(self):
-        from Orange.data.sql.backend import Psycopg2Backend
+        from Arithmos.data.sql.backend import Psycopg2Backend
         return Psycopg2Backend(self.params)
 
 
@@ -304,7 +304,7 @@ class MicrosoftTestConnection(DBTestConnection):
             conn.commit()
 
     def get_backend(self):
-        from Orange.data.sql.backend import PymssqlBackend
+        from Arithmos.data.sql.backend import PymssqlBackend
         return PymssqlBackend(self.params)
 
 

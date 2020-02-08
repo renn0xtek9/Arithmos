@@ -1,4 +1,4 @@
-# Pull members from modules to Orange.data namespace
+# Pull members from modules to Arithmos.data namespace
 # pylint: disable=wildcard-import
 
 from .variable import *

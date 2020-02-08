@@ -1,6 +1,6 @@
-# Computation of distances in Orange 3
+# Computation of distances in Arithmos 3
 
-This document describes and justifies how Orange 3 computes distances between data rows or columns from the data that can include discrete (nominal) and numeric features with missing values.
+This document describes and justifies how Arithmos 3 computes distances between data rows or columns from the data that can include discrete (nominal) and numeric features with missing values.
 
 The aim of normalization is to bring all numeric features onto the same scale and on the same scale as discrete features. The meaning of *the same scale* is rather arbitrary. We gauge the normalization so that missing values have the same effect for all features and their types.
 
@@ -8,15 +8,15 @@ For missing values, we compute the expected difference given the probability dis
 
 Two nominal values are treated as same or different, that is, the difference between them is 0 and 1.
 
-Difference between values of two distinct nominal features does not make sense, so Orange reports an error when the user tries to compute column-wise distance in data with some non-numeric features.
+Difference between values of two distinct nominal features does not make sense, so Arithmos reports an error when the user tries to compute column-wise distance in data with some non-numeric features.
 
 ## Euclidean distance
 
 #### Normalization of numeric features
 
-Orange 2 used to normalize by subtracting the minimum and dividing by the span (the difference between the maximum and the minimum) to bring the range of differences into interval $[0, 1]$. This however did not work since the data on which the distances were computed could include more extreme values than the training data.
+Arithmos 2 used to normalize by subtracting the minimum and dividing by the span (the difference between the maximum and the minimum) to bring the range of differences into interval $[0, 1]$. This however did not work since the data on which the distances were computed could include more extreme values than the training data.
 
-Normalization in Orange 3 is based on mean and variance due to other desired effects described below. A value $x$ is normalized as
+Normalization in Arithmos 3 is based on mean and variance due to other desired effects described below. A value $x$ is normalized as
 
 $$ x' = \frac{x - \mu}{\sqrt{2\sigma^2}},$$
 
@@ -66,7 +66,7 @@ $$\sum_x\sum_y \mbox{I}_{y\ne x}^2p(x)p(y) = 1 - \sum_x p(x)^2.$$
 
 This is the Gini index. Also, if the number of values goes to infinity and the distribution towards the uniform, the difference goes towards 1, which brings it, in some sense, to the same scale as continuous features.
 
-This case assumes that $x$ and $y$ come from the same distribution. The case when these are missing values of two distinct discrete features is not covered since Orange does not support such distances (see the introduction).
+This case assumes that $x$ and $y$ come from the same distribution. The case when these are missing values of two distinct discrete features is not covered since Arithmos does not support such distances (see the introduction).
 
 ## Manhattan distance
 

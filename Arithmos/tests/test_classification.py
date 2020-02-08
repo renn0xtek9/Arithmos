@@ -13,22 +13,22 @@ import numpy as np
 from scipy import sparse as sp
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.base import SklLearner
+from Arithmos.base import SklLearner
 
-import Orange.classification
-from Orange.classification import (
+import Arithmos.classification
+from Arithmos.classification import (
     Learner, Model,
     NaiveBayesLearner, LogisticRegressionLearner, NuSVMLearner, MajorityLearner,
     RandomForestLearner, SimpleTreeLearner, SoftmaxRegressionLearner,
     SVMLearner, LinearSVMLearner, OneClassSVMLearner, TreeLearner, KNNLearner,
     SimpleRandomForestLearner, EllipticEnvelopeLearner)
-from Orange.classification.rules import _RuleLearner
-from Orange.data import (ContinuousVariable, DiscreteVariable,
+from Arithmos.classification.rules import _RuleLearner
+from Arithmos.data import (ContinuousVariable, DiscreteVariable,
                          Domain, Table, Variable)
-from Orange.data.table import DomainTransformationError
-from Orange.evaluation import CrossValidation
-from Orange.tests.dummy_learners import DummyLearner, DummyMulticlassLearner
-from Orange.tests import test_filename
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.evaluation import CrossValidation
+from Arithmos.tests.dummy_learners import DummyLearner, DummyMulticlassLearner
+from Arithmos.tests import test_filename
 
 
 class MultiClassTest(unittest.TestCase):
@@ -237,20 +237,20 @@ class SklTest(unittest.TestCase):
     def test_multinomial(self):
         table = Table("titanic")
         lr = LogisticRegressionLearner()
-        assert isinstance(lr, Orange.classification.SklLearner)
+        assert isinstance(lr, Arithmos.classification.SklLearner)
         cv = CrossValidation(k=2)
         res = cv(table, [lr])
-        self.assertGreater(Orange.evaluation.AUC(res)[0], 0.7)
-        self.assertLess(Orange.evaluation.AUC(res)[0], 0.9)
+        self.assertGreater(Arithmos.evaluation.AUC(res)[0], 0.7)
+        self.assertLess(Arithmos.evaluation.AUC(res)[0], 0.9)
 
     def test_nan_columns(self):
-        data = Orange.data.Table("iris")
+        data = Arithmos.data.Table("iris")
         data.X[:, (1, 3)] = np.NaN
         lr = LogisticRegressionLearner()
         cv = CrossValidation(k=2, store_models=True)
         res = cv(data, [lr])
         self.assertEqual(len(res.models[0][0].domain.attributes), 2)
-        self.assertGreater(Orange.evaluation.CA(res)[0], 0.8)
+        self.assertGreater(Arithmos.evaluation.CA(res)[0], 0.8)
 
     def test_params(self):
         learner = SklLearner()
@@ -260,25 +260,25 @@ class SklTest(unittest.TestCase):
 class ClassfierListInputTest(unittest.TestCase):
     def test_discrete(self):
         table = Table("titanic")
-        tree = Orange.classification.SklTreeLearner()(table)
+        tree = Arithmos.classification.SklTreeLearner()(table)
         strlist = [["crew", "adult", "male"],
                    ["crew", "adult", None]]
         for se in strlist: #individual examples
             assert(all(tree(se) ==
-                       tree(Orange.data.Table.from_list(table.domain, [se]))))
+                       tree(Arithmos.data.Table.from_list(table.domain, [se]))))
         assert(all(tree(strlist) ==
-                   tree(Orange.data.Table.from_list(table.domain, strlist))))
+                   tree(Arithmos.data.Table.from_list(table.domain, strlist))))
 
     def test_continuous(self):
         table = Table("iris")
-        tree = Orange.classification.SklTreeLearner()(table)
+        tree = Arithmos.classification.SklTreeLearner()(table)
         strlist = [[2, 3, 4, 5],
                    [1, 2, 3, 5]]
         for se in strlist: #individual examples
             assert(all(tree(se) ==
-                       tree(Orange.data.Table.from_list(table.domain, [se]))))
+                       tree(Arithmos.data.Table.from_list(table.domain, [se]))))
         assert(all(tree(strlist) ==
-                   tree(Orange.data.Table.from_list(table.domain, strlist))))
+                   tree(Arithmos.data.Table.from_list(table.domain, strlist))))
 
 
 class UnknownValuesInPrediction(unittest.TestCase):
@@ -313,8 +313,8 @@ class LearnerAccessibility(unittest.TestCase):
 
     def all_learners(self):
         classification_modules = pkgutil.walk_packages(
-            path=Orange.classification.__path__,
-            prefix="Orange.classification.",
+            path=Arithmos.classification.__path__,
+            prefix="Arithmos.classification.",
             onerror=lambda x: None)
         for importer, modname, ispkg in classification_modules:
             try:
@@ -328,10 +328,10 @@ class LearnerAccessibility(unittest.TestCase):
                         'base' not in class_.__module__):
                     yield class_
 
-    def test_all_learners_accessible_in_Orange_classification_namespace(self):
+    def test_all_learners_accessible_in_Arithmos_classification_namespace(self):
         for learner in self.all_learners():
-            if not hasattr(Orange.classification, learner.__name__):
-                self.fail("%s is not visible in Orange.classification"
+            if not hasattr(Arithmos.classification, learner.__name__):
+                self.fail("%s is not visible in Arithmos.classification"
                           " namespace" % learner.__name__)
 
     def test_all_models_work_after_unpickling(self):

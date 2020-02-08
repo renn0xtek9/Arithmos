@@ -2,12 +2,12 @@ import unittest
 
 from numpy import array
 
-import Orange.classification.naive_bayes as nb
-from Orange import preprocess
-from Orange.data.sql.table import SqlTable
-from Orange.data import Domain
-from Orange.data.variable import DiscreteVariable
-from Orange.tests.sql.base import DataBaseTest as dbt
+import Arithmos.classification.naive_bayes as nb
+from Arithmos import preprocess
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.data import Domain
+from Arithmos.data.variable import DiscreteVariable
+from Arithmos.tests.sql.base import DataBaseTest as dbt
 
 
 class NaiveBayesTest(unittest.TestCase, dbt):

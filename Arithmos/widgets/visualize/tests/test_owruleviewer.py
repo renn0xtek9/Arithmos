@@ -2,10 +2,10 @@
 from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QApplication
 
-from Orange.data import Table
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.classification import CN2Learner
-from Orange.widgets.visualize.owruleviewer import OWRuleViewer
+from Arithmos.data import Table
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.classification import CN2Learner
+from Arithmos.widgets.visualize.owruleviewer import OWRuleViewer
 
 
 class TestOWRuleViewer(WidgetTest, WidgetOutputsTestMixin):

@@ -1,10 +1,10 @@
 # pylint: disable=protected-access
 import numpy as np
 
-from Orange.base import Model
-from Orange.data import Table
-from Orange.widgets.model.owtree import OWTreeLearner
-from Orange.widgets.tests.base import (
+from Arithmos.base import Model
+from Arithmos.data import Table
+from Arithmos.widgets.model.owtree import OWTreeLearner
+from Arithmos.widgets.tests.base import (
     DefaultParameterMapping,
     ParameterMapping,
     WidgetLearnerTestMixin,

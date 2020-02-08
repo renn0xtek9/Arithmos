@@ -7,8 +7,8 @@ from itertools import chain, tee
 
 import numpy
 
-from Orange.clustering import hierarchical
-import Orange.misc
+from Arithmos.clustering import hierarchical
+import Arithmos.misc
 
 
 def flatten(seq):
@@ -34,7 +34,7 @@ class TestHierarchical(unittest.TestCase):
         dist = numpy.array(list(flatten(m)), dtype=float)
         matrix = hierarchical.squareform(dist, mode="lower")
         cls.m = m
-        cls.matrix = Orange.misc.DistMatrix(matrix)
+        cls.matrix = Arithmos.misc.DistMatrix(matrix)
         cls.matrix.items = cls.items
 
         cls.cluster = hierarchical.dist_matrix_clustering(cls.matrix)
@@ -129,7 +129,7 @@ class TestHierarchical(unittest.TestCase):
         self.assertEqual(score_ordered, 21.0)
 
     def test_table_clustering(self):
-        table = Orange.data.Table.from_numpy(None, numpy.eye(3))
+        table = Arithmos.data.Table.from_numpy(None, numpy.eye(3))
         tree = hierarchical.data_clustering(table, linkage="single")
         numpy.testing.assert_almost_equal(tree.value.height, numpy.sqrt(2))
 

@@ -22,31 +22,31 @@ from AnyQt.QtCore import pyqtSlot as Slot
 from AnyQt.QtGui import QStandardItem, QDoubleValidator
 from AnyQt.QtWidgets import QHeaderView, QTableWidget, QLabel
 
-from Orange.base import Learner
-import Orange.classification
-from Orange.data import Table, DiscreteVariable
-from Orange.data.table import DomainTransformationError
-from Orange.data.filter import HasClass
-from Orange.data.sql.table import SqlTable, AUTO_DL_LIMIT
-import Orange.evaluation
-from Orange.evaluation import Results
-from Orange.preprocess.preprocess import Preprocess
-import Orange.regression
-from Orange.widgets import gui, settings, widget
-from Orange.widgets.evaluate.utils import \
+from Arithmos.base import Learner
+import Arithmos.classification
+from Arithmos.data import Table, DiscreteVariable
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.data.filter import HasClass
+from Arithmos.data.sql.table import SqlTable, AUTO_DL_LIMIT
+import Arithmos.evaluation
+from Arithmos.evaluation import Results
+from Arithmos.preprocess.preprocess import Preprocess
+import Arithmos.regression
+from Arithmos.widgets import gui, settings, widget
+from Arithmos.widgets.evaluate.utils import \
     usable_scorers, ScoreTable, learner_name, scorer_caller
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.utils.concurrent import ThreadExecutor, TaskState
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
-from orangewidget.utils.itemmodels import PyListModel
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.utils.concurrent import ThreadExecutor, TaskState
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
+from arithmoswidget.utils.itemmodels import PyListModel
 
 log = logging.getLogger(__name__)
 
 InputLearner = namedtuple(
     "InputLearner",
-    ["learner",  # :: Orange.base.Learner
-     "results",  # :: Option[Try[Orange.evaluation.Results]]
+    ["learner",  # :: Arithmos.base.Learner
+     "results",  # :: Option[Try[Arithmos.evaluation.Results]]
      "stats"]    # :: Option[Sequence[Try[float]]]
 )
 
@@ -358,7 +358,7 @@ class OWTestLearners(OWWidget):
 
         Parameters
         ----------
-        learner : Optional[Orange.base.Learner]
+        learner : Optional[Arithmos.base.Learner]
         key : Any
         """
         if key in self.learners and learner is None:
@@ -376,7 +376,7 @@ class OWTestLearners(OWWidget):
 
         Parameters
         ----------
-        data : Optional[Orange.data.Table]
+        data : Optional[Arithmos.data.Table]
         """
         self.cancel()
         self.Information.data_sampled.clear()
@@ -434,13 +434,13 @@ class OWTestLearners(OWWidget):
 
     @Inputs.test_data
     def set_test_data(self, data):
-        # type: (Orange.data.Table) -> None
+        # type: (Arithmos.data.Table) -> None
         """
         Set the input separate testing dataset.
 
         Parameters
         ----------
-        data : Optional[Orange.data.Table]
+        data : Optional[Arithmos.data.Table]
         """
         self.Information.test_data_sampled.clear()
         self.Error.test_data_empty.clear()
@@ -948,29 +948,29 @@ class OWTestLearners(OWWidget):
 
         if self.resampling == OWTestLearners.TestOnTest:
             test_f = partial(
-                Orange.evaluation.TestOnTestData(
+                Arithmos.evaluation.TestOnTestData(
                     store_data=True, store_models=True),
                 self.data, self.test_data, learners_c, self.preprocessor
             )
         else:
             if self.resampling == OWTestLearners.KFold:
-                sampler = Orange.evaluation.CrossValidation(
+                sampler = Arithmos.evaluation.CrossValidation(
                     k=self.NFolds[self.n_folds],
                     random_state=rstate)
             elif self.resampling == OWTestLearners.FeatureFold:
-                sampler = Orange.evaluation.CrossValidationFeature(
+                sampler = Arithmos.evaluation.CrossValidationFeature(
                     feature=self.fold_feature)
             elif self.resampling == OWTestLearners.LeaveOneOut:
-                sampler = Orange.evaluation.LeaveOneOut()
+                sampler = Arithmos.evaluation.LeaveOneOut()
             elif self.resampling == OWTestLearners.ShuffleSplit:
-                sampler = Orange.evaluation.ShuffleSplit(
+                sampler = Arithmos.evaluation.ShuffleSplit(
                     n_resamples=self.NRepeats[self.n_repeats],
                     train_size=self.SampleSizes[self.sample_size] / 100,
                     test_size=None,
                     stratified=self.shuffle_stratified,
                     random_state=rstate)
             elif self.resampling == OWTestLearners.TestOnTrain:
-                sampler = Orange.evaluation.TestOnTrainingData(
+                sampler = Arithmos.evaluation.TestOnTrainingData(
                     store_models=True)
             else:
                 assert False, "self.resampling %s" % self.resampling
@@ -1110,7 +1110,7 @@ def results_add_by_model(x, y):
     assert (x.row_indices == y.row_indices).all()
     assert (x.actual == y.actual).all()
 
-    res = Orange.evaluation.Results()
+    res = Arithmos.evaluation.Results()
     res.data = x.data
     res.domain = x.domain
     res.row_indices = x.row_indices
@@ -1127,11 +1127,11 @@ def results_add_by_model(x, y):
 
 
 def results_merge(results):
-    return reduce(results_add_by_model, results, Orange.evaluation.Results())
+    return reduce(results_add_by_model, results, Arithmos.evaluation.Results())
 
 
 def results_one_vs_rest(results, pos_index):
-    from Orange.preprocess.transformation import Indicator
+    from Arithmos.preprocess.transformation import Indicator
     actual = results.actual == pos_index
     predicted = results.predicted == pos_index
     if results.probabilities is not None:
@@ -1145,7 +1145,7 @@ def results_one_vs_rest(results, pos_index):
     else:
         probabilities = None
 
-    res = Orange.evaluation.Results()
+    res = Arithmos.evaluation.Results()
     res.actual = actual
     res.predicted = predicted
     res.folds = results.folds
@@ -1153,12 +1153,12 @@ def results_one_vs_rest(results, pos_index):
     res.probabilities = probabilities
 
     value = results.domain.class_var.values[pos_index]
-    class_var = Orange.data.DiscreteVariable(
+    class_var = Arithmos.data.DiscreteVariable(
         "I({}=={})".format(results.domain.class_var.name, value),
         values=["False", "True"],
         compute_value=Indicator(results.domain.class_var, pos_index)
     )
-    domain = Orange.data.Domain(
+    domain = Arithmos.data.Domain(
         results.domain.attributes,
         [class_var],
         results.domain.metas
@@ -1173,14 +1173,14 @@ if __name__ == "__main__":  # pragma: no cover
     preview_data = Table(filename)
     if preview_data.domain.class_var.is_discrete:
         prev_learners = [lambda data: 1 / 0,
-                         Orange.classification.LogisticRegressionLearner(),
-                         Orange.classification.MajorityLearner(),
-                         Orange.classification.NaiveBayesLearner()]
+                         Arithmos.classification.LogisticRegressionLearner(),
+                         Arithmos.classification.MajorityLearner(),
+                         Arithmos.classification.NaiveBayesLearner()]
     else:
         prev_learners = [lambda data: 1 / 0,
-                         Orange.regression.MeanLearner(),
-                         Orange.regression.KNNRegressionLearner(),
-                         Orange.regression.RidgeRegressionLearner()]
+                         Arithmos.regression.MeanLearner(),
+                         Arithmos.regression.KNNRegressionLearner(),
+                         Arithmos.regression.RidgeRegressionLearner()]
 
     WidgetPreview(OWTestLearners).run(
         set_train_data=preview_data,

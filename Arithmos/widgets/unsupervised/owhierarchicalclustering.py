@@ -24,24 +24,24 @@ from AnyQt.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
 
 import pyqtgraph as pg
 
-import Orange.data
-from Orange.data.domain import filter_visible
-from Orange.data import Domain
-import Orange.misc
-from Orange.clustering.hierarchical import \
+import Arithmos.data
+from Arithmos.data.domain import filter_visible
+from Arithmos.data import Domain
+import Arithmos.misc
+from Arithmos.clustering.hierarchical import \
     postorder, preorder, Tree, tree_from_linkage, dist_matrix_linkage, \
     leaves, prune, top_clusters
-from Orange.data.util import get_unique_names
+from Arithmos.data.util import get_unique_names
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import colorpalette, itemmodels, combobox
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import colorpalette, itemmodels, combobox
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, Msg
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, Msg
 
-from Orange.widgets.utils.stickygraphicsview import StickyGraphicsView
-from Orange.widgets.utils.graphicstextlist import TextListWidget
+from Arithmos.widgets.utils.stickygraphicsview import StickyGraphicsView
+from Arithmos.widgets.utils.graphicstextlist import TextListWidget
 
 __all__ = ["OWHierarchicalClustering"]
 
@@ -867,11 +867,11 @@ class OWHierarchicalClustering(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        distances = Input("Distances", Orange.misc.DistMatrix)
+        distances = Input("Distances", Arithmos.misc.DistMatrix)
 
     class Outputs:
-        selected_data = Output("Selected Data", Orange.data.Table, default=True)
-        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Orange.data.Table)
+        selected_data = Output("Selected Data", Arithmos.data.Table, default=True)
+        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Arithmos.data.Table)
 
     settingsHandler = _DomainContextHandler()
 
@@ -1125,7 +1125,7 @@ class OWHierarchicalClustering(widget.OWWidget):
             self.annotation_if_names = self.annotation
         elif len(model) == 2:
             self.annotation_if_enumerate = self.annotation
-        if isinstance(items, Orange.data.Table) and axis:
+        if isinstance(items, Arithmos.data.Table) and axis:
             model[:] = chain(
                 self.basic_annotations,
                 [model.Separator],
@@ -1145,7 +1145,7 @@ class OWHierarchicalClustering(widget.OWWidget):
                 items is not None and (
                     not axis or
                     isinstance(items, list) and
-                    all(isinstance(var, Orange.data.Variable) for var in items)))
+                    all(isinstance(var, Arithmos.data.Variable) for var in items)))
             model[:] = self.basic_annotations + ["Name"] * name_option
             self.annotation = self.annotation_if_names if name_option \
                 else self.annotation_if_enumerate
@@ -1206,7 +1206,7 @@ class OWHierarchicalClustering(widget.OWWidget):
             elif self.annotation == "Name":
                 attr = self.matrix.row_items.domain.attributes
                 labels = [str(attr[i]) for i in indices]
-            elif isinstance(self.annotation, Orange.data.Variable):
+            elif isinstance(self.annotation, Arithmos.data.Variable):
                 col_data, _ = self.items.get_column_view(self.annotation)
                 labels = [self.annotation.str_val(val) for val in col_data]
                 labels = [labels[idx] for idx in indices]
@@ -1334,7 +1334,7 @@ class OWHierarchicalClustering(widget.OWWidget):
 
         selected_data = None
 
-        if isinstance(items, Orange.data.Table) and self.matrix.axis == 1:
+        if isinstance(items, Arithmos.data.Table) and self.matrix.axis == 1:
             # Select rows
             c = np.zeros(self.matrix.shape[0])
 
@@ -1352,22 +1352,22 @@ class OWHierarchicalClustering(widget.OWWidget):
             var_name = get_unique_names(domain, "Cluster")
             values = [f"C{i + 1}" for i in range(len(maps))]
 
-            clust_var = Orange.data.DiscreteVariable(
+            clust_var = Arithmos.data.DiscreteVariable(
                 var_name, values=values + ["Other"])
-            domain = Orange.data.Domain(attrs, classes, metas + (clust_var,))
+            domain = Arithmos.data.Domain(attrs, classes, metas + (clust_var,))
             data = items.transform(domain)
             data.get_column_view(clust_var)[0][:] = c
 
             if selected_indices:
                 selected_data = data[mask]
-                clust_var = Orange.data.DiscreteVariable(
+                clust_var = Arithmos.data.DiscreteVariable(
                     var_name, values=values)
                 selected_data.domain = Domain(
                     attrs, classes, metas + (clust_var, ))
 
-        elif isinstance(items, Orange.data.Table) and self.matrix.axis == 0:
+        elif isinstance(items, Arithmos.data.Table) and self.matrix.axis == 0:
             # Select columns
-            domain = Orange.data.Domain(
+            domain = Arithmos.data.Domain(
                 [items.domain[i] for i in selected_indices],
                 items.domain.class_vars, items.domain.metas)
             selected_data = items.from_table(domain, items)
@@ -1812,7 +1812,7 @@ def clusters_at_height(root, height):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange import distance
-    data = Orange.data.Table("iris")
+    from Arithmos import distance
+    data = Arithmos.data.Table("iris")
     matrix = distance.Euclidean(distance._preprocess(data))
     WidgetPreview(OWHierarchicalClustering).run(matrix)

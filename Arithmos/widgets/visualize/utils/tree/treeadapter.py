@@ -226,7 +226,7 @@ class BaseTreeAdapter(metaclass=ABCMeta):
         Parameters
         ----------
         dataset : Table
-            A Orange Table dataset.
+            A Arithmos Table dataset.
         nodes : iterable[node]
             A list of tree nodes for which we want the instances.
 
@@ -327,7 +327,7 @@ class TreeAdapter(BaseTreeAdapter):
         return _leaves(node)
 
     def get_instances_in_nodes(self, nodes):
-        from Orange import tree
+        from Arithmos import tree
         if isinstance(nodes, tree.Node):
             nodes = [nodes]
         return self.model.get_instances(nodes)

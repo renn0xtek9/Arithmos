@@ -1,8 +1,8 @@
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Instance, Table, Domain
-from Orange.util import Reprable
+from Arithmos.data import Instance, Table, Domain
+from Arithmos.util import Reprable
 
 
 class Transformation(Reprable):
@@ -13,7 +13,7 @@ class Transformation(Reprable):
     def __init__(self, variable):
         """
         :param variable: The variable whose transformed value is returned.
-        :type variable: int or str or :obj:`~Orange.data.Variable`
+        :type variable: int or str or :obj:`~Arithmos.data.Variable`
         """
         self.variable = variable
 
@@ -64,7 +64,7 @@ class Indicator(Transformation):
     def __init__(self, variable, value):
         """
         :param variable: The variable whose transformed value is returned.
-        :type variable: int or str or :obj:`~Orange.data.Variable`
+        :type variable: int or str or :obj:`~Arithmos.data.Variable`
 
         :param value: The value to which the indicator refers
         :type value: int or float
@@ -84,7 +84,7 @@ class Indicator1(Transformation):
     def __init__(self, variable, value):
         """
         :param variable: The variable whose transformed value is returned.
-        :type variable: int or str or :obj:`~Orange.data.Variable`
+        :type variable: int or str or :obj:`~Arithmos.data.Variable`
 
         :param value: The value to which the indicator refers
         :type value: int or float
@@ -105,7 +105,7 @@ class Normalizer(Transformation):
     def __init__(self, variable, offset, factor):
         """
         :param variable: The variable whose transformed value is returned.
-        :type variable: int or str or :obj:`~Orange.data.Variable`
+        :type variable: int or str or :obj:`~Arithmos.data.Variable`
         :param offset:
         :type offset: float
         :param factor:
@@ -131,7 +131,7 @@ class Lookup(Transformation):
     def __init__(self, variable, lookup_table, unknown=np.nan):
         """
         :param variable: The variable whose transformed value is returned.
-        :type variable: int or str or :obj:`~Orange.data.DiscreteVariable`
+        :type variable: int or str or :obj:`~Arithmos.data.DiscreteVariable`
         :param lookup_table: transformations for each value of `self.variable`
         :type lookup_table: np.array or list or tuple
         :param unknown: The value to be used as unknown value.

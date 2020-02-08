@@ -1,14 +1,14 @@
-.. currentmodule:: Orange.data
+.. currentmodule:: Arithmos.data
 
 ############################
 Data Instance (``instance``)
 ############################
 
 Class :obj:`Instance` represents a data instance, typically retrieved from a
-:obj:`Orange.data.Table` or :obj:`Orange.data.sql.SqlTable`. The base class
+:obj:`Arithmos.data.Table` or :obj:`Arithmos.data.sql.SqlTable`. The base class
 contains a copy of the data; modifying does not change the data in the storage
 from which the instance was retrieved. Derived classes
-(e.g. :obj:`Orange.data.table.RowInstance`) can represent views into various
+(e.g. :obj:`Arithmos.data.table.RowInstance`) can represent views into various
 data storages, therefore changing them actually changes the data.
 
 Like data tables, every data instance is associated with a domain and its
@@ -16,7 +16,7 @@ data is split into attributes, classes, meta attributes and the weight. Its
 constructor thus requires a domain and, optionally, data. For the following
 example, we borrow the domain from the Iris dataset. ::
 
-    >>> from Orange.data import Table, Instance
+    >>> from Arithmos.data import Table, Instance
     >>> iris = Table("iris")
     >>> inst = Instance(iris.domain, [5.2, 3.8, 1.4, 0.5, "Iris-virginica"])
     >>> inst
@@ -55,9 +55,9 @@ Other utility functions provide for easier access to the instances data. ::
 
     Domain can be omitted it the data is given as an existing data instances.
 
-    When the instance is not from the given domain, Orange converts it.
+    When the instance is not from the given domain, Arithmos converts it.
 
-        >>> from Orange.preprocess import DomainDiscretizer
+        >>> from Arithmos.preprocess import DomainDiscretizer
         >>> discretizer = DomainDiscretizer()
         >>> d_iris = discretizer(iris)
         >>> d_inst = Instance(d_iris, inst)
@@ -70,8 +70,8 @@ Rows of Data Tables
 .. autoclass:: RowInstance
     :members:
 
-    `RowInstance` is a specialization of :obj:`~Orange.data.Instance` that
-    represents a row of :obj:`Orange.data.Table`. `RowInstance` is returned
+    `RowInstance` is a specialization of :obj:`~Arithmos.data.Instance` that
+    represents a row of :obj:`Arithmos.data.Table`. `RowInstance` is returned
     by indexing a `Table`.
 
     The difference between `Instance` and `RowInstance` is that the latter

@@ -1,11 +1,11 @@
 from .base import Benchmark, benchmark, pandas_only, non_pandas_only
-from Orange.data import Table
-from Orange.preprocess import Discretize
-from Orange.preprocess.discretize import EqualFreq
+from Arithmos.data import Table
+from Arithmos.preprocess import Discretize
+from Arithmos.preprocess.discretize import EqualFreq
 
 # noinspection PyBroadException
 try:
-    from Orange.data.filter import FilterContinuous, FilterDiscrete, Values
+    from Arithmos.data.filter import FilterContinuous, FilterDiscrete, Values
 except:
     # legacy only
     pass

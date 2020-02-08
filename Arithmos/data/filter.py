@@ -6,9 +6,9 @@ from numbers import Real
 import numpy as np
 import bottleneck as bn
 
-from Orange.util import Reprable
-from Orange.data import Instance, Storage, Variable
-from Orange.util import Enum
+from Arithmos.util import Reprable
+from Arithmos.data import Instance, Storage, Variable
+from Arithmos.util import Enum
 
 
 __all__ = ["IsDefined", "HasClass", "Random", "SameValue", "Values",
@@ -39,7 +39,7 @@ class IsDefined(Filter):
 
     The filter's behaviour may depend upon the storage implementation.
 
-    In particular, :obj:`~Orange.data.Table` with sparse matrix representation
+    In particular, :obj:`~Arithmos.data.Table` with sparse matrix representation
     will select all data instances whose values are defined, even if they are
     zero. However, if individual columns are checked, it will select all
     rows with non-zero entries for this columns, disregarding whether they
@@ -48,7 +48,7 @@ class IsDefined(Filter):
     .. attribute:: columns
 
         The columns to be checked, given as a sequence of indices, names or
-        :obj:`Orange.data.Variable`.
+        :obj:`Arithmos.data.Variable`.
     """
 
     def __init__(self, columns=None, negate=False):
@@ -75,7 +75,7 @@ class HasClass(Filter):
     """
     Return all rows for which the class value is known.
 
-    :obj:`Orange.data.Table` implements the filter on the sparse data so that it
+    :obj:`Arithmos.data.Table` implements the filter on the sparse data so that it
     returns all rows for which all class values are defined, even if they
     equal zero.
     """
@@ -135,7 +135,7 @@ class SameValue(Filter):
     .. attribute:: column
 
         The column, described by an index, a string or
-        :obj:`Orange.data.Variable`.
+        :obj:`Arithmos.data.Variable`.
 
     .. attribute:: value
 
@@ -237,19 +237,19 @@ class ValueFilter(Filter):
     The base class for subfilters that check individual values of data
     instances. Derived classes handle discrete, continuous and string
     attributes. These filters are used to compose conditions in
-    :obj:`Orange.data.filter.Values`.
+    :obj:`Arithmos.data.filter.Values`.
 
     The internal implementation of `filter.Values` in data storages, like
-    :obj:`Orange.data.Table`, recognize these filters and retrieve their,
+    :obj:`Arithmos.data.Table`, recognize these filters and retrieve their,
     attributes, like operators and reference values, but do not call them.
 
-    The fallback implementation of :obj:`Orange.data.filter.Values` calls
+    The fallback implementation of :obj:`Arithmos.data.filter.Values` calls
     the subfilters with individual data instances, which is very inefficient.
 
     .. attribute:: column
 
         The column to which the filter applies (int, str or
-        :obj:`Orange.data.Variable`).
+        :obj:`Arithmos.data.Variable`).
     """
 
     def __init__(self, column):
@@ -265,7 +265,7 @@ class FilterDiscrete(ValueFilter):
     .. attribute:: column
 
         The column to which the filter applies (int, str or
-        :obj:`Orange.data.Variable`).
+        :obj:`Arithmos.data.Variable`).
 
     .. attribute:: values
 
@@ -296,7 +296,7 @@ class FilterContinuous(ValueFilter):
     .. attribute:: column
 
         The column to which the filter applies (int, str or
-        :obj:`Orange.data.Variable`).
+        :obj:`Arithmos.data.Variable`).
 
     .. attribute:: ref
 
@@ -392,7 +392,7 @@ class FilterString(ValueFilter):
     .. attribute:: column
 
         The column to which the filter applies (int, str or
-        :obj:`Orange.data.Variable`).
+        :obj:`Arithmos.data.Variable`).
 
     .. attribute:: ref
 
@@ -488,7 +488,7 @@ class FilterStringList(ValueFilter):
     .. attribute:: column
 
         The column to which the filter applies (int, str or
-        :obj:`Orange.data.Variable`).
+        :obj:`Arithmos.data.Variable`).
 
     .. attribute:: values
 

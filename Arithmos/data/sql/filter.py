@@ -1,4 +1,4 @@
-from Orange.data import filter
+from Arithmos.data import filter
 
 
 class IsDefinedSql(filter.IsDefined):

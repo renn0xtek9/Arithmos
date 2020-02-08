@@ -7,13 +7,13 @@ from unittest import TestCase
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.preprocess import discretize, Discretize
-from Orange import data
-from Orange.data import Table, Instance, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.preprocess import discretize, Discretize
+from Arithmos import data
+from Arithmos.data import Table, Instance, Domain, ContinuousVariable, DiscreteVariable
 
 
 # noinspection PyPep8Naming
-from Orange.widgets.tests.utils import table_dense_sparse
+from Arithmos.widgets.tests.utils import table_dense_sparse
 
 
 class TestEqualFreq(TestCase):

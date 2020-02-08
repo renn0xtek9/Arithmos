@@ -1,6 +1,6 @@
 import numpy as np
-from Orange.data import Domain, DiscreteVariable
-from Orange.data.util import get_unique_names
+from Arithmos.data import Domain, DiscreteVariable
+from Arithmos.data.util import get_unique_names
 
 ANNOTATED_DATA_SIGNAL_NAME = "Data"
 ANNOTATED_DATA_FEATURE_NAME = "Selected"

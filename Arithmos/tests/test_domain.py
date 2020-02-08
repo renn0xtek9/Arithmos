@@ -10,13 +10,13 @@ import pickle
 import numpy as np
 from numpy.testing import assert_array_equal
 
-from Orange.data import (
+from Arithmos.data import (
     ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable,
     Variable, Domain, Table, DomainConversion)
-from Orange.data.domain import filter_visible
-from Orange.preprocess import Continuize, Impute
-from Orange.tests.base import create_pickling_tests
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.data.domain import filter_visible
+from Arithmos.preprocess import Continuize, Impute
+from Arithmos.tests.base import create_pickling_tests
+from Arithmos.util import ArithmosDeprecationWarning
 
 
 def create_domain(*ss):
@@ -273,7 +273,7 @@ class TestDomainInit(unittest.TestCase):
             warnings.simplefilter("error")
 
             d = Domain((age, gender, income), metas=(ssn,))
-            with self.assertRaises(OrangeDeprecationWarning):
+            with self.assertRaises(ArithmosDeprecationWarning):
                 list(d)
 
             warnings.simplefilter("ignore")

@@ -9,13 +9,13 @@ import numpy as np
 from AnyQt.QtCore import QEvent, QPoint, Qt
 from AnyQt.QtGui import QMouseEvent
 
-from Orange.data import ContinuousVariable, DiscreteVariable, Domain, Table
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owsieve import OWSieveDiagram
-from Orange.widgets.visualize.owsieve import ChiSqStats
-from Orange.widgets.visualize.owsieve import Discretize
-from Orange.widgets.widget import AttributeList
+from Arithmos.data import ContinuousVariable, DiscreteVariable, Domain, Table
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owsieve import OWSieveDiagram
+from Arithmos.widgets.visualize.owsieve import ChiSqStats
+from Arithmos.widgets.visualize.owsieve import Discretize
+from Arithmos.widgets.widget import AttributeList
 
 
 class TestOWSieveDiagram(WidgetTest, WidgetOutputsTestMixin):
@@ -127,7 +127,7 @@ class TestOWSieveDiagram(WidgetTest, WidgetOutputsTestMixin):
                 [42.48, 16.84, 15.23, 23.8],
                 "yynn"))
         )
-        with patch("Orange.widgets.visualize.owsieve.Discretize",
+        with patch("Arithmos.widgets.visualize.owsieve.Discretize",
                    wraps=Discretize) as disc:
             self.send_signal(self.widget.Inputs.data, table)
             self.assertTrue(disc.called)
@@ -151,7 +151,7 @@ class TestOWSieveDiagram(WidgetTest, WidgetOutputsTestMixin):
         output = self.get_output("Data")
         self.assertTrue(output.is_sparse())
 
-    @patch('Orange.widgets.visualize.owsieve.SieveRank.on_manual_change')
+    @patch('Arithmos.widgets.visualize.owsieve.SieveRank.on_manual_change')
     def test_vizrank_receives_manual_change(self, on_manual_change):
         # Recreate the widget so the patch kicks in
         self.widget = self.create_widget(OWSieveDiagram)

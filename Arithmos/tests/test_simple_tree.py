@@ -6,11 +6,11 @@ import pickle
 
 import numpy as np
 
-import Orange
-from Orange.classification import SimpleTreeLearner as SimpleTreeCls
-from Orange.regression import SimpleTreeLearner as SimpleTreeReg
-from Orange.data import ContinuousVariable, Domain, DiscreteVariable, Table
-from Orange.tests import test_filename
+import Arithmos
+from Arithmos.classification import SimpleTreeLearner as SimpleTreeCls
+from Arithmos.regression import SimpleTreeLearner as SimpleTreeReg
+from Arithmos.data import ContinuousVariable, Domain, DiscreteVariable, Table
+from Arithmos.tests import test_filename
 
 
 class TestSimpleTreeLearner(unittest.TestCase):
@@ -30,17 +30,17 @@ class TestSimpleTreeLearner(unittest.TestCase):
         y_cls[np.random.random(self.N) < 0.1] = np.nan
         y_reg[np.random.random(self.N) < 0.1] = np.nan
 
-        di = [Orange.data.domain.DiscreteVariable(
+        di = [Arithmos.data.domain.DiscreteVariable(
             'd{}'.format(i), ["0", "1"]) for i in range(self.Mi)]
-        df = [Orange.data.domain.ContinuousVariable(
+        df = [Arithmos.data.domain.ContinuousVariable(
             'c{}'.format(i)) for i in range(self.Mf)]
-        dcls = Orange.data.domain.DiscreteVariable('yc', ["0", "1", "2"])
-        dreg = Orange.data.domain.ContinuousVariable('yr')
-        domain_cls = Orange.data.domain.Domain(di + df, dcls)
-        domain_reg = Orange.data.domain.Domain(di + df, dreg)
+        dcls = Arithmos.data.domain.DiscreteVariable('yc', ["0", "1", "2"])
+        dreg = Arithmos.data.domain.ContinuousVariable('yr')
+        domain_cls = Arithmos.data.domain.Domain(di + df, dcls)
+        domain_reg = Arithmos.data.domain.Domain(di + df, dreg)
 
-        self.data_cls = Orange.data.Table.from_numpy(domain_cls, X, y_cls)
-        self.data_reg = Orange.data.Table.from_numpy(domain_reg, X, y_reg)
+        self.data_cls = Arithmos.data.Table.from_numpy(domain_cls, X, y_cls)
+        self.data_reg = Arithmos.data.Table.from_numpy(domain_reg, X, y_reg)
 
     def test_SimpleTree_classification(self):
         lrn = SimpleTreeCls()
@@ -93,7 +93,7 @@ class TestSimpleTreeLearner(unittest.TestCase):
             '} } } }')
 
     def test_SimpleTree_single_instance(self):
-        data = Orange.data.Table('iris')
+        data = Arithmos.data.Table('iris')
         lrn = SimpleTreeCls()
         clf = lrn(data)
         for ins in data[::20]:

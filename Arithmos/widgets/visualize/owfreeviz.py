@@ -9,15 +9,15 @@ from AnyQt.QtGui import QColor
 
 import pyqtgraph as pg
 
-from Orange.data import Table
-from Orange.projection import FreeViz
-from Orange.projection.freeviz import FreeVizModel
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils.concurrent import ConcurrentWidgetMixin, TaskState
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils.component import OWGraphWithAnchors
-from Orange.widgets.visualize.utils.plotutils import AnchorItem
-from Orange.widgets.visualize.utils.widget import OWAnchorProjectionWidget
+from Arithmos.data import Table
+from Arithmos.projection import FreeViz
+from Arithmos.projection.freeviz import FreeVizModel
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils.concurrent import ConcurrentWidgetMixin, TaskState
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils.component import OWGraphWithAnchors
+from Arithmos.widgets.visualize.utils.plotutils import AnchorItem
+from Arithmos.widgets.visualize.utils.widget import OWAnchorProjectionWidget
 
 
 class Result(namespace):

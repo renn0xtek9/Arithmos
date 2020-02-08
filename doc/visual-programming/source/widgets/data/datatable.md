@@ -32,7 +32,7 @@ The **Data Table** widget receives one or more datasets in its input and present
 Example
 -------
 
-We used two [File](../data/file.md) widgets to read the *Iris* and *Glass* dataset (provided in Orange distribution), and send them to the **Data Table** widget.
+We used two [File](../data/file.md) widgets to read the *Iris* and *Glass* dataset (provided in Arithmos distribution), and send them to the **Data Table** widget.
 
 ![](images/DataTable-Schema.png)
 

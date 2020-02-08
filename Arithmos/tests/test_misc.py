@@ -1,6 +1,6 @@
 import unittest
 
-from Orange.misc.cache import memoize_method, single_cache
+from Arithmos.misc.cache import memoize_method, single_cache
 
 
 class Calculator:

@@ -1,6 +1,6 @@
 # pylint: disable=missing-docstring
-from Orange.widgets.model.owknn import OWKNNLearner
-from Orange.widgets.tests.base import (
+from Arithmos.widgets.model.owknn import OWKNNLearner
+from Arithmos.widgets.tests.base import (
     WidgetTest,
     WidgetLearnerTestMixin,
     ParameterMapping

@@ -2,7 +2,7 @@
 Projection (``projection``)
 ###########################
 
-.. automodule:: Orange.projection
+.. automodule:: Arithmos.projection
 
 
 
@@ -18,8 +18,8 @@ called principal components.
 Example
 =======
 
-    >>> from Orange.projection import PCA
-    >>> from Orange.data import Table
+    >>> from Arithmos.projection import PCA
+    >>> from Arithmos.data import Table
     >>> iris = Table('iris')
     >>> pca = PCA()
     >>> model = pca(iris)
@@ -40,9 +40,9 @@ Example
 
 
 
-.. autoclass:: Orange.projection.pca.PCA
-.. autoclass:: Orange.projection.pca.SparsePCA
-.. autoclass:: Orange.projection.pca.IncrementalPCA
+.. autoclass:: Arithmos.projection.pca.PCA
+.. autoclass:: Arithmos.projection.pca.SparsePCA
+.. autoclass:: Arithmos.projection.pca.IncrementalPCA
 
 
 
@@ -60,8 +60,8 @@ that forces are in equilibrium.
 Example
 =======
 
-    >>> from Orange.projection import FreeViz
-    >>> from Orange.data import Table
+    >>> from Arithmos.projection import FreeViz
+    >>> from Arithmos.data import Table
     >>> iris = Table('iris')
     >>> freeviz = FreeViz()
     >>> model = freeviz(iris)
@@ -82,7 +82,7 @@ Example
 
 
 
-.. autoclass:: Orange.projection.freeviz.FreeViz
+.. autoclass:: Arithmos.projection.freeviz.FreeViz
 
 
 
@@ -99,8 +99,8 @@ classification technique itself ([1]_).
 Example
 =======
 
-    >>> from Orange.projection import LDA
-    >>> from Orange.data import Table
+    >>> from Arithmos.projection import LDA
+    >>> from Arithmos.data import Table
     >>> iris = Table('iris')
     >>> lda = LDA()
     >>> model = LDA(iris)
@@ -121,7 +121,7 @@ Example
 
 
 
-.. autoclass:: Orange.projection.lda.LDA
+.. autoclass:: Arithmos.projection.lda.LDA
 
 
 

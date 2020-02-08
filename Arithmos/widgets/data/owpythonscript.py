@@ -19,14 +19,14 @@ from AnyQt.QtGui import (
 )
 from AnyQt.QtCore import Qt, QRegExp, QByteArray, QItemSelectionModel
 
-from Orange.data import Table
-from Orange.base import Learner, Model
-from Orange.util import interleave
-from Orange.widgets import gui
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input, Output
+from Arithmos.data import Table
+from Arithmos.base import Learner, Model
+from Arithmos.util import interleave
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input, Output
 
 __all__ = ["OWPythonScript"]
 

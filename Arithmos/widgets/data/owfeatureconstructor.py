@@ -29,14 +29,14 @@ from AnyQt.QtWidgets import (
 from AnyQt.QtGui import QKeySequence
 from AnyQt.QtCore import Qt, pyqtSignal as Signal, pyqtProperty as Property
 
-import Orange
-from Orange.widgets import gui
-from Orange.widgets.settings import ContextSetting, DomainContextHandler
-from Orange.widgets.utils import itemmodels, vartype
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets import report
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
+import Arithmos
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import ContextSetting, DomainContextHandler
+from Arithmos.widgets.utils import itemmodels, vartype
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets import report
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
 
 FeatureDescriptor = \
     namedtuple("FeatureDescriptor", ["name", "expression"])
@@ -56,22 +56,22 @@ StringDescriptor = namedtuple("StringDescriptor", ["name", "expression"])
 
 def make_variable(descriptor, compute_value):
     if isinstance(descriptor, ContinuousDescriptor):
-        return Orange.data.ContinuousVariable(
+        return Arithmos.data.ContinuousVariable(
             descriptor.name,
             descriptor.number_of_decimals,
             compute_value)
     if isinstance(descriptor, DateTimeDescriptor):
-        return Orange.data.TimeVariable(
+        return Arithmos.data.TimeVariable(
             descriptor.name,
             compute_value=compute_value, have_date=True, have_time=True)
     elif isinstance(descriptor, DiscreteDescriptor):
-        return Orange.data.DiscreteVariable(
+        return Arithmos.data.DiscreteVariable(
             descriptor.name,
             values=descriptor.values,
             ordered=descriptor.ordered,
             compute_value=compute_value)
     elif isinstance(descriptor, StringDescriptor):
-        return Orange.data.StringVariable(
+        return Arithmos.data.StringVariable(
             descriptor.name,
             compute_value=compute_value)
     else:
@@ -126,7 +126,7 @@ class FeatureEditor(QFrame):
 
         self.attrs_model = itemmodels.VariableListModel(
             ["Select Feature"], parent=self)
-        self.attributescb = gui.OrangeComboBox(
+        self.attributescb = gui.ArithmosComboBox(
             minimumContentsLength=16,
             sizeAdjustPolicy=QComboBox.AdjustToMinimumContentsLengthWithIcon,
             sizePolicy=QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
@@ -142,7 +142,7 @@ class FeatureEditor(QFrame):
             [''],
             [self.FUNCTIONS[func].__doc__ for func in sorted_funcs])
 
-        self.functionscb = gui.OrangeComboBox(
+        self.functionscb = gui.ArithmosComboBox(
             minimumContentsLength=16,
             sizeAdjustPolicy=QComboBox.AdjustToMinimumContentsLengthWithIcon,
             sizePolicy=QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum))
@@ -299,10 +299,10 @@ class StringFeatureEditor(FeatureEditor):
 
 
 _VarMap = {
-    DiscreteDescriptor: vartype(Orange.data.DiscreteVariable("d")),
-    ContinuousDescriptor: vartype(Orange.data.ContinuousVariable("c")),
-    DateTimeDescriptor: vartype(Orange.data.TimeVariable("t")),
-    StringDescriptor: vartype(Orange.data.StringVariable("s"))
+    DiscreteDescriptor: vartype(Arithmos.data.DiscreteVariable("d")),
+    ContinuousDescriptor: vartype(Arithmos.data.ContinuousVariable("c")),
+    DateTimeDescriptor: vartype(Arithmos.data.TimeVariable("t")),
+    StringDescriptor: vartype(Arithmos.data.StringVariable("s"))
 }
 
 
@@ -366,10 +366,10 @@ class OWFeatureConstructor(OWWidget):
     keywords = []
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     want_main_area = False
 
@@ -652,7 +652,7 @@ class OWFeatureConstructor(OWWidget):
 
         attrs = [var for var in new_variables if var.is_primitive()]
         metas = [var for var in new_variables if not var.is_primitive()]
-        new_domain = Orange.data.Domain(
+        new_domain = Arithmos.data.Domain(
             self.data.domain.attributes + tuple(attrs),
             self.data.domain.class_vars,
             metas=self.data.domain.metas + tuple(metas)
@@ -913,7 +913,7 @@ def bind_variable(descriptor, env, data):
             values = {name: i for i, name in enumerate(values)}
 
     if isinstance(descriptor, DateTimeDescriptor):
-        parse = Orange.data.TimeVariable("_").parse
+        parse = Arithmos.data.TimeVariable("_").parse
 
         def cast(e):  # pylint: disable=function-redefined
             if isinstance(e, (int, float)):
@@ -1045,7 +1045,7 @@ class FeatureFunc:
     ----------
     expression : str
         An expression string
-    args : List[Tuple[str, Orange.data.Variable]]
+    args : List[Tuple[str, Arithmos.data.Variable]]
         A list of (`name`, `variable`) tuples where `name` is the name of
         a variable as used in `expression`, and `variable` is the variable
         instance used to extract the corresponding column/value from a
@@ -1066,7 +1066,7 @@ class FeatureFunc:
         self.cast = cast
 
     def __call__(self, instance, *_):
-        if isinstance(instance, Orange.data.Table):
+        if isinstance(instance, Arithmos.data.Table):
             return [self(inst) for inst in instance]
         else:
             args = [str(instance[var])
@@ -1096,4 +1096,4 @@ def unique(seq):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWFeatureConstructor).run(Orange.data.Table("iris"))
+    WidgetPreview(OWFeatureConstructor).run(Arithmos.data.Table("iris"))

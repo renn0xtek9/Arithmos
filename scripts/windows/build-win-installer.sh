@@ -261,7 +261,7 @@ package-requirements() {
     ) >> "${BASEDIR:?}/requirements.txt"
 
     mkdir -p "${BASEDIR:?}/icons"
-    cp scripts/windows/{orange.ico,OrangeOWS.ico} "${BASEDIR:?}/icons"
+    cp scripts/windows/{arithmos.ico,ArithmosOWS.ico} "${BASEDIR:?}/icons"
 }
 
 
@@ -304,7 +304,7 @@ PYINSTALL_TYPE=Normal
 
 make-installer() {
     local scriptdir="$(dirname "$0")"
-    local nsis_script="${scriptdir:?}/orange-install.nsi"
+    local nsis_script="${scriptdir:?}/arithmos-install.nsi"
     local outpath=${DISTDIR}
     local filename=${NAME}-${VERSION}-Python${PYTAG:?}-${PLATTAG:?}.exe
     local pyinstaller=$(python-installer-filename ${PYTHON_VERSION} ${PLATTAG})
@@ -330,7 +330,7 @@ EOF
     mkdir -p "${DISTDIR}"
 
     makensis -DOUTFILENAME="${outpath}/${filename}" \
-             -DAPPNAME=Orange \
+             -DAPPNAME=Arithmos \
              -DVERSION=${VERSION} \
              -DVERMAJOR=${major} -DVERMINOR=${minor} -DVERMICRO=${micro} \
              -DPYMAJOR=${pymajor} -DPYMINOR=${pyminor} -DPYMICRO=${pymicro} \
@@ -338,8 +338,8 @@ EOF
              -DPYINSTALL_TYPE=${PYINSTALL_TYPE} \
              -DBASEDIR="${basedir}" \
              -DPYINSTALLER=${pyinstaller} \
-             -DINSTALL_REGISTRY_KEY=OrangeCanvas \
-             -DINSTALLERICON=scripts/windows/Orange.ico \
+             -DINSTALL_REGISTRY_KEY=ArithmosCanvas \
+             -DINSTALLERICON=scripts/windows/Arithmos.ico \
              -DLICENSE_FILE="${BASEDIR}"/license.txt \
              -NOCD \
              -V4 -WX \

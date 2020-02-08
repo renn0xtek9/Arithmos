@@ -1,10 +1,10 @@
 """
 """
-from orangewidget.utils.webview import (
+from arithmoswidget.utils.webview import (
     HAVE_WEBENGINE, HAVE_WEBKIT  # pylint: disable=unused-import
 )
 try:
-    from orangewidget.utils.webview import WebviewWidget
+    from arithmoswidget.utils.webview import WebviewWidget
 except ImportError:
     pass
 

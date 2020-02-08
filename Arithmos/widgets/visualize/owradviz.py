@@ -14,19 +14,19 @@ from AnyQt.QtWidgets import qApp
 import pyqtgraph as pg
 from pyqtgraph.graphicsItems.ScatterPlotItem import ScatterPlotItem
 
-from Orange.data import Table, Domain
-from Orange.preprocess.score import ReliefF, RReliefF
-from Orange.projection import RadViz
-from Orange.widgets import widget, gui
-from Orange.widgets.gui import OWComponent
-from Orange.widgets.settings import Setting, ContextSetting, SettingProvider
-from Orange.widgets.utils.plot.owplotgui import VariableSelectionModel, \
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess.score import ReliefF, RReliefF
+from Arithmos.projection import RadViz
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.gui import OWComponent
+from Arithmos.widgets.settings import Setting, ContextSetting, SettingProvider
+from Arithmos.widgets.utils.plot.owplotgui import VariableSelectionModel, \
     variables_selection
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils import VizRankDialog
-from Orange.widgets.visualize.utils.component import OWGraphWithAnchors
-from Orange.widgets.visualize.utils.plotutils import TextItem
-from Orange.widgets.visualize.utils.widget import OWAnchorProjectionWidget
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils import VizRankDialog
+from Arithmos.widgets.visualize.utils.component import OWGraphWithAnchors
+from Arithmos.widgets.visualize.utils.plotutils import TextItem
+from Arithmos.widgets.visualize.utils.widget import OWAnchorProjectionWidget
 
 
 MAX_DISPLAYED_VARS = 20
@@ -39,7 +39,7 @@ class RadvizVizRank(VizRankDialog, OWComponent):
     minK = 10
 
     attrsSelected = Signal([])
-    _AttrRole = next(gui.OrangeUserRole)
+    _AttrRole = next(gui.ArithmosUserRole)
 
     percent_data_used = Setting(100)
 

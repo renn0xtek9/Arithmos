@@ -7,8 +7,8 @@ from time import time
 from psycopg2 import Error, ProgrammingError  # pylint: disable=import-error
 from psycopg2.pool import ThreadedConnectionPool  # pylint: disable=import-error
 
-from Orange.data import ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable
-from Orange.data.sql.backend.base import Backend, ToSql, BackendError
+from Arithmos.data import ContinuousVariable, DiscreteVariable, StringVariable, TimeVariable
+from Arithmos.data.sql.backend.base import Backend, ToSql, BackendError
 
 log = logging.getLogger(__name__)
 

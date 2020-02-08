@@ -3,14 +3,14 @@
 
 import unittest
 import numpy as np
-from Orange.data import Table
-from Orange.classification import SklTreeLearner
-from Orange.regression import SklTreeRegressionLearner
-from Orange.ensembles import (
+from Arithmos.data import Table
+from Arithmos.classification import SklTreeLearner
+from Arithmos.regression import SklTreeRegressionLearner
+from Arithmos.ensembles import (
     SklAdaBoostClassificationLearner,
     SklAdaBoostRegressionLearner,
 )
-from Orange.evaluation import CrossValidation, CA, RMSE
+from Arithmos.evaluation import CrossValidation, CA, RMSE
 
 
 class TestSklAdaBoostLearner(unittest.TestCase):

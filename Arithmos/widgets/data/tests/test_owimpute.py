@@ -5,12 +5,12 @@ import numpy as np
 from AnyQt.QtCore import Qt, QItemSelection
 from AnyQt.QtTest import QTest
 
-from Orange.data import Table, Domain
-from Orange.preprocess import impute
-from Orange.widgets.data.owimpute import OWImpute, AsDefault, Learner, Method
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.utils.itemmodels import select_row
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess import impute
+from Arithmos.widgets.data.owimpute import OWImpute, AsDefault, Learner, Method
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.utils.itemmodels import select_row
 
 
 class Foo(Learner):

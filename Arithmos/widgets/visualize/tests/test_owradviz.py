@@ -3,12 +3,12 @@
 from unittest.mock import Mock
 import numpy as np
 
-from Orange.data import Table
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin,
     AnchorProjectionWidgetTestMixin, datasets
 )
-from Orange.widgets.visualize.owradviz import OWRadviz, RadvizVizRank
+from Arithmos.widgets.visualize.owradviz import OWRadviz, RadvizVizRank
 
 
 class TestOWRadviz(WidgetTest, AnchorProjectionWidgetTestMixin,

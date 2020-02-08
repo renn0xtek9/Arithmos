@@ -3,9 +3,9 @@
 
 import unittest
 
-from Orange.data.sql.table import SqlTable, SqlRowInstance
-from Orange.data import filter, domain
-from Orange.tests.sql.base import DataBaseTest as dbt
+from Arithmos.data.sql.table import SqlTable, SqlRowInstance
+from Arithmos.data import filter, domain
+from Arithmos.tests.sql.base import DataBaseTest as dbt
 
 
 class TestIsDefinedSql(unittest.TestCase, dbt):

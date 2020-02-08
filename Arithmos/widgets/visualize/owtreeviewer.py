@@ -8,22 +8,22 @@ from AnyQt.QtWidgets import (
 from AnyQt.QtGui import QColor, QBrush, QPen, QFontMetrics
 from AnyQt.QtCore import Qt, QPointF, QSizeF, QRectF
 
-from Orange.base import TreeModel, SklModel
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.owtreeviewer2d import \
+from Arithmos.base import TreeModel, SklModel
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.owtreeviewer2d import \
     GraphicsNode, GraphicsEdge, OWTreeViewer2D
-from Orange.widgets.utils import to_html
-from Orange.data import Table
+from Arithmos.widgets.utils import to_html
+from Arithmos.data import Table
 
-from Orange.widgets.settings import ContextSetting, ClassValuesContextHandler, \
+from Arithmos.widgets.settings import ContextSetting, ClassValuesContextHandler, \
     Setting
-from Orange.widgets import gui
-from Orange.widgets.utils.colorpalette import ContinuousPaletteGenerator
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets import gui
+from Arithmos.widgets.utils.colorpalette import ContinuousPaletteGenerator
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.visualize.utils.tree.skltreeadapter import SklTreeAdapter
-from Orange.widgets.visualize.utils.tree.treeadapter import TreeAdapter
+from Arithmos.widgets.visualize.utils.tree.skltreeadapter import SklTreeAdapter
+from Arithmos.widgets.visualize.utils.tree.treeadapter import TreeAdapter
 
 
 class PieChart(QGraphicsRectItem):
@@ -176,8 +176,8 @@ class OWTreeGraph(OWTreeViewer2D):
     regression_colors = Setting(0)
 
     replaces = [
-        "Orange.widgets.classify.owclassificationtreegraph.OWClassificationTreeGraph",
-        "Orange.widgets.classify.owregressiontreegraph.OWRegressionTreeGraph"
+        "Arithmos.widgets.classify.owclassificationtreegraph.OWClassificationTreeGraph",
+        "Arithmos.widgets.classify.owregressiontreegraph.OWRegressionTreeGraph"
     ]
 
     COL_OPTIONS = ["Default", "Number of instances", "Mean value", "Variance"]
@@ -191,7 +191,7 @@ class OWTreeGraph(OWTreeViewer2D):
         self.tree_adapter = None
 
         self.color_label = QLabel("Target class: ")
-        combo = self.color_combo = gui.OrangeComboBox()
+        combo = self.color_combo = gui.ArithmosComboBox()
         combo.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
         combo.setSizeAdjustPolicy(
             QComboBox.AdjustToMinimumContentsLengthWithIcon)
@@ -436,7 +436,7 @@ class OWTreeGraph(OWTreeViewer2D):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.modelling.tree import TreeLearner
+    from Arithmos.modelling.tree import TreeLearner
     data = Table("titanic")
     clf = TreeLearner()(data)
     clf.instances = data

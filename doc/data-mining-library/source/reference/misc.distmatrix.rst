@@ -2,5 +2,5 @@
 Distance Matrix (``distmatrix``)
 ################################
 
-.. automodule:: Orange.misc.distmatrix
+.. automodule:: Arithmos.misc.distmatrix
     :members:

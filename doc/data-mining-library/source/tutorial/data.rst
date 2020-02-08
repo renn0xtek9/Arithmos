@@ -3,7 +3,7 @@ The Data
 
 .. index: data
 
-This section describes how to load the data in Orange. We also show how to explore the data, perform some basic statistics, and how to sample the data.
+This section describes how to load the data in Arithmos. We also show how to explore the data, perform some basic statistics, and how to sample the data.
 
 Data Input
 ----------
@@ -11,7 +11,7 @@ Data Input
 ..  index:: 
     single: data; input
 
-Orange can read files in native tab-delimited format, or can load data from any of the major standard spreadsheet file types, like CSV and Excel. Native format starts with a header row with feature (column) names. The second header row gives the attribute type, which can be continuous, discrete, time, or string. The third header line contains meta information to identify dependent features (class), irrelevant features (ignore) or meta features (meta).
+Arithmos can read files in native tab-delimited format, or can load data from any of the major standard spreadsheet file types, like CSV and Excel. Native format starts with a header row with feature (column) names. The second header row gives the attribute type, which can be continuous, discrete, time, or string. The third header line contains meta information to identify dependent features (class), irrelevant features (ignore) or meta features (meta).
 More detailed specification is available in :doc:`../reference/data.io`.
 Here are the first few lines from a dataset :download:`lenses.tab <code/lenses.tab>`::
 
@@ -31,13 +31,13 @@ Values are tab-limited. This dataset has four attributes (age of the patient, sp
     d         d             d             d             d 
                                                         c
 
-The rest of the table gives the data. Note that there are 5 instances in our table above. For the full dataset, check out or download :download:`lenses.tab <code/lenses.tab>`) to a target directory. You can also skip this step as Orange comes preloaded with several demo datasets, lenses being one of them. Now, open a python shell, import Orange and load the data:
+The rest of the table gives the data. Note that there are 5 instances in our table above. For the full dataset, check out or download :download:`lenses.tab <code/lenses.tab>`) to a target directory. You can also skip this step as Arithmos comes preloaded with several demo datasets, lenses being one of them. Now, open a python shell, import Arithmos and load the data:
 
-    >>> import Orange
-    >>> data = Orange.data.Table("lenses")
+    >>> import Arithmos
+    >>> data = Arithmos.data.Table("lenses")
     >>>
 
-Note that for the file name no suffix is needed, as Orange checks if any files in the current directory are of a readable type. The call to ``Orange.data.Table`` creates an object called ``data`` that holds your dataset and information about the lenses domain:
+Note that for the file name no suffix is needed, as Arithmos checks if any files in the current directory are of a readable type. The call to ``Arithmos.data.Table`` creates an object called ``data`` that holds your dataset and information about the lenses domain:
 
     >>> data.domain.attributes
     (DiscreteVariable('age', values=['pre-presbyopic', 'presbyopic', 'young']),
@@ -68,7 +68,7 @@ Data objects can be saved to a file:
     >>> data.save("new_data.tab")
     >>>
 
-This time, we have to provide the file extension to specify the output format. An extension for native Orange's data format is ".tab". The following code saves only the data items with myope perscription:
+This time, we have to provide the file extension to specify the output format. An extension for native Arithmos's data format is ".tab". The following code saves only the data items with myope perscription:
 
 .. literalinclude:: code/data-save.py
 
@@ -94,7 +94,7 @@ outputs::
     First three attributes: symboling, normalized-losses, make
     Class: price
 
-Orange's objects often behave like Python lists and dictionaries, and can be indexed or accessed through feature names:
+Arithmos's objects often behave like Python lists and dictionaries, and can be indexed or accessed through feature names:
 
 ..  literalinclude:: code/data-domain2.py
     :lines: 5-
@@ -132,7 +132,7 @@ The Iris dataset we have used above has four continuous attributes. Here's a scr
 ..  literalinclude:: code/data-instances2.py
     :lines: 3-
 
-The above script also illustrates indexing of data instances with objects that store features; in ``d[x]`` variable ``x`` is an Orange object. Here's the output::
+The above script also illustrates indexing of data instances with objects that store features; in ``d[x]`` variable ``x`` is an Arithmos object. Here's the output::
 
     Feature         Mean
     sepal length    5.84
@@ -158,11 +158,11 @@ Finally, here is a quick code that computes the class distribution for another d
 
 ..  literalinclude:: code/data-instances4.py
 
-Orange Datasets and NumPy
+Arithmos Datasets and NumPy
 -------------------------
-Orange datasets are actually wrapped `NumPy <http://www.numpy.org>`_ arrays. Wrapping is performed to retain the information about the feature names and values, and NumPy arrays are used for speed and compatibility with different machine learning toolboxes, like `scikit-learn <http://scikit-learn.org>`_, on which Orange relies. Let us display the values of these arrays for the first three data instances of the iris dataset::
+Arithmos datasets are actually wrapped `NumPy <http://www.numpy.org>`_ arrays. Wrapping is performed to retain the information about the feature names and values, and NumPy arrays are used for speed and compatibility with different machine learning toolboxes, like `scikit-learn <http://scikit-learn.org>`_, on which Arithmos relies. Let us display the values of these arrays for the first three data instances of the iris dataset::
 
-    >>> data = Orange.data.Table("iris")
+    >>> data = Arithmos.data.Table("iris")
     >>> data.X[:3]
     array([[ 5.1,  3.5,  1.4,  0.2],
            [ 4.9,  3. ,  1.4,  0.2],
@@ -179,15 +179,15 @@ Notice that we access the arrays for attributes and class separately, using ``da
 We can also construct a (classless) dataset from a numpy array::
 
     >>> X = np.array([[1,2], [4,5]])
-    >>> data = Orange.data.Table(X)
+    >>> data = Arithmos.data.Table(X)
     >>> data.domain
     [Feature 1, Feature 2]
 
 If we want to provide meaninful names to attributes, we need to construct an appropriate data domain::
 
-    >>> domain = Orange.data.Domain([Orange.data.ContinuousVariable("lenght"), 
-                                     Orange.data.ContinuousVariable("width")])
-    >>> data = Orange.data.Table(domain, X)
+    >>> domain = Arithmos.data.Domain([Arithmos.data.ContinuousVariable("lenght"), 
+                                     Arithmos.data.ContinuousVariable("width")])
+    >>> data = Arithmos.data.Table(domain, X)
     >>> data.domain
     [lenght, width]
 
@@ -209,9 +209,9 @@ Often, we wish to include descriptive fields in the data that will not be used i
 
 ..  literalinclude:: code/zoo.tab
 
-Values of meta attributes and all other (non-meta) attributes are treated similarly in Orange, but stored in separate numpy arrays:
+Values of meta attributes and all other (non-meta) attributes are treated similarly in Arithmos, but stored in separate numpy arrays:
 
-    >>> data = Orange.data.Table("zoo")
+    >>> data = Arithmos.data.Table("zoo")
     >>> data[0]["name"]
     >>> data[0]["type"]
     >>> for d in data:
@@ -232,7 +232,7 @@ Values of meta attributes and all other (non-meta) attributes are treated simila
            ['bass'],
            ['bear']], dtype=object))
 
-Meta attributes may be passed to ``Orange.data.Table`` after providing arrays for attribute and class values:
+Meta attributes may be passed to ``Arithmos.data.Table`` after providing arrays for attribute and class values:
 
 ..   literalinclude:: code/data-metas.py
 
@@ -252,7 +252,7 @@ Missing Values
 Consider the following exploration of the dataset on votes of the US senate::
 
     >>> import numpy as np
-    >>> data = Orange.data.Table("voting.tab")
+    >>> data = Arithmos.data.Table("voting.tab")
     >>> data[2]
     [?, y, y, ?, y, ... | democrat]
     >>> np.isnan(data[2][0])
@@ -284,7 +284,7 @@ Data Selection and Sampling
 ..  index::
     single: data; sampling
 
-Besides the name of the data file, ``Orange.data.Table`` can accept the data domain and a list of data items and returns a new dataset. This is useful for any data subsetting:
+Besides the name of the data file, ``Arithmos.data.Table`` can accept the data domain and a list of data items and returns a new dataset. This is useful for any data subsetting:
 
 ..  literalinclude:: code/data-subsetting.py
     :lines: 3-
@@ -304,7 +304,7 @@ and inherits the data description (domain) from the original dataset. Changing t
 
 We could also construct a random sample of the dataset::
 
-    >>> sample = Orange.data.Table(data.domain, random.sample(data, 3))
+    >>> sample = Arithmos.data.Table(data.domain, random.sample(data, 3))
     >>> sample
     [[6.000, 2.200, 4.000, 1.000 | Iris-versicolor],
      [4.800, 3.100, 1.600, 0.200 | Iris-setosa],
@@ -314,7 +314,7 @@ We could also construct a random sample of the dataset::
 or randomly sample the attributes:
 
     >>> atts = random.sample(data.domain.attributes, 2)
-    >>> domain = Orange.data.Domain(atts, data.domain.class_var)
-    >>> new_data = Orange.data.Table(domain, data)
+    >>> domain = Arithmos.data.Domain(atts, data.domain.class_var)
+    >>> new_data = Arithmos.data.Table(domain, data)
     >>> new_data[0]
     [5.100, 1.400 | Iris-setosa]

@@ -3,8 +3,8 @@ import re
 import unittest
 import importlib.util
 
-from orangecanvas.registry import WidgetRegistry
-from Orange.canvas.config import Config
+from arithmoscanvas.registry import WidgetRegistry
+from Arithmos.canvas.config import Config
 
 
 class TestWidgetOutputs(unittest.TestCase):

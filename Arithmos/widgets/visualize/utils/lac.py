@@ -1,8 +1,8 @@
 from collections import defaultdict
 
 import numpy as np
-from Orange.preprocess import Discretize
-from Orange.preprocess.discretize import EqualFreq
+from Arithmos.preprocess import Discretize
+from Arithmos.preprocess.discretize import EqualFreq
 
 
 def create_sql_contingency(X, columns, m):
@@ -159,7 +159,7 @@ def create_contingencies(X, callback=None):
     X_ = Discretize(method=EqualFreq(n=10))(X)
     m = get_bin_centers(X_)
 
-    from Orange.data.sql.table import SqlTable
+    from Arithmos.data.sql.table import SqlTable
     if isinstance(X, SqlTable):
         conts = []
         al = len(X.domain)

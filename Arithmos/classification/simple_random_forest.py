@@ -1,7 +1,7 @@
 import numpy as np
 
-from Orange.classification import Learner, Model
-from Orange.classification.simple_tree import SimpleTreeLearner
+from Arithmos.classification import Learner, Model
+from Arithmos.classification.simple_tree import SimpleTreeLearner
 
 __all__ = ['SimpleRandomForestLearner']
 

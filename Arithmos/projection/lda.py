@@ -1,6 +1,6 @@
 import sklearn.discriminant_analysis as skl_da
 
-from Orange.projection import SklProjector, DomainProjection
+from Arithmos.projection import SklProjector, DomainProjection
 
 __all__ = ["LDA"]
 

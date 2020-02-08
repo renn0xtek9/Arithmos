@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import Mock
 
-from Orange.classification.base_classification import LearnerClassification
-from Orange.data import Table, ContinuousVariable
-from Orange.modelling import Fitter
-from Orange.preprocess import Randomize, Discretize
-from Orange.regression.base_regression import LearnerRegression
+from Arithmos.classification.base_classification import LearnerClassification
+from Arithmos.data import Table, ContinuousVariable
+from Arithmos.modelling import Fitter
+from Arithmos.preprocess import Randomize, Discretize
+from Arithmos.regression.base_regression import LearnerRegression
 
 
 class DummyClassificationLearner(LearnerClassification):

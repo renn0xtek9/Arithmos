@@ -6,11 +6,11 @@ import warnings
 
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.data import Table
-from Orange.classification import NNClassificationLearner
-from Orange.modelling import NNLearner, ConstantLearner
-from Orange.regression import NNRegressionLearner
-from Orange.evaluation import CA, CrossValidation, MSE
+from Arithmos.data import Table
+from Arithmos.classification import NNClassificationLearner
+from Arithmos.modelling import NNLearner, ConstantLearner
+from Arithmos.regression import NNRegressionLearner
+from Arithmos.evaluation import CA, CrossValidation, MSE
 
 
 class TestNNLearner(unittest.TestCase):

@@ -1,7 +1,7 @@
 import numpy
 
-from Orange.regression import Learner, Model
-from Orange.statistics import distribution
+from Arithmos.regression import Learner, Model
+from Arithmos.statistics import distribution
 
 __all__ = ["MeanLearner"]
 
@@ -16,7 +16,7 @@ class MeanLearner(Learner):
         data.
 
         :param data: data table
-        :type data: Orange.data.Table
+        :type data: Arithmos.data.Table
         :return: regression model, which always returns mean value
         :rtype: :obj:`MeanModel`
         """
@@ -39,13 +39,13 @@ class MeanModel(Model):
     """
     def __init__(self, dist, domain=None):
         """
-        Construct :obj:`Orange.regression.MeanModel` that always returns the
+        Construct :obj:`Arithmos.regression.MeanModel` that always returns the
         mean value computed from the given distribution.
 
         If the distribution is empty, it constructs a model that returns zero.
 
         :param dist: domain for the `Table`
-        :type dist: Orange.statistics.distribution.Continuous
+        :type dist: Arithmos.statistics.distribution.Continuous
         :return: regression model that returns mean value
         :rtype: :obj:`MeanModel`
         """

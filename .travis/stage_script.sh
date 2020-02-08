@@ -11,7 +11,7 @@ if [ "$RUN_PYLINT" ]; then
 fi
 
 cd "$ORANGE_DIR"
-python -c "from Orange.tests import *"
+python -c "from Arithmos.tests import *"
 cp "$TRAVIS_BUILD_DIR"/.coveragerc ./  # for covereage and codecov
 export PYTHONPATH="$ORANGE_DIR" PYTHONUNBUFFERED=x
 
@@ -21,17 +21,17 @@ XVFBARGS="-screen 0 1280x1024x24"
 # Raise deprecations as errors in our tests
 export ORANGE_DEPRECATIONS_ERROR=y
 # Need this otherwise unittest installs a warning filter that overrides
-# our desire to have OrangeDeprecationWarnings raised
+# our desire to have ArithmosDeprecationWarnings raised
 export PYTHONWARNINGS=module
 
 # Compatibility with old workflows is tested separately
 catchsegv xvfb-run -a -s "$XVFBARGS" \
-    python -m unittest Orange.widgets.tests.test_workflows -v
+    python -m unittest Arithmos.widgets.tests.test_workflows -v
 
 # Skip loading of example workflows as that inflates coverage
 export SKIP_EXAMPLE_WORKFLOWS=True
 catchsegv xvfb-run -a -s "$XVFBARGS" \
     coverage run -m unittest -v \
-        Orange.tests \
-        Orange.widgets.tests
+        Arithmos.tests \
+        Arithmos.widgets.tests
 coverage combine

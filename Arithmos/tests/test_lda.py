@@ -5,9 +5,9 @@ import unittest
 
 import numpy as np
 
-from Orange.preprocess import Continuize, Randomize
-from Orange.projection import LDA
-from Orange.data import Table
+from Arithmos.preprocess import Continuize, Randomize
+from Arithmos.projection import LDA
+from Arithmos.data import Table
 
 
 class TestLDA(unittest.TestCase):

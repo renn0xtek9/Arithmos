@@ -13,14 +13,14 @@ import numpy as np
 from AnyQt.QtWidgets import QFormLayout
 from AnyQt.QtCore import Qt
 
-import Orange.data
-from Orange.util import flatten
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.annotated_data import add_columns
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, Msg
+import Arithmos.data
+from Arithmos.util import flatten
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.annotated_data import add_columns
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, Msg
 
 
 class OWConcatenate(widget.OWWidget):
@@ -31,14 +31,14 @@ class OWConcatenate(widget.OWWidget):
     keywords = ["append", "join", "extend"]
 
     class Inputs:
-        primary_data = Input("Primary Data", Orange.data.Table)
+        primary_data = Input("Primary Data", Arithmos.data.Table)
         additional_data = Input("Additional Data",
-                                Orange.data.Table,
+                                Arithmos.data.Table,
                                 multiple=True,
                                 default=True)
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     class Error(widget.OWWidget.Error):
         bow_concatenation = Msg("Inputs must be of the same type.")
@@ -191,7 +191,7 @@ class OWConcatenate(widget.OWWidget):
             if len(names) != len(set(names)):
                 names = ['{} ({})'.format(name, i)
                          for i, name in enumerate(names)]
-            source_var = Orange.data.DiscreteVariable(
+            source_var = Arithmos.data.DiscreteVariable(
                 self.source_attr_name,
                 values=names
             )
@@ -246,7 +246,7 @@ def unique(seq):
 
 
 def domain_union(a, b):
-    union = Orange.data.Domain(
+    union = Arithmos.data.Domain(
         tuple(unique(a.attributes + b.attributes)),
         tuple(unique(a.class_vars + b.class_vars)),
         tuple(unique(a.metas + b.metas))
@@ -259,7 +259,7 @@ def domain_intersection(a, b):
         inters = set(t1) & set(t2)
         return tuple(unique(el for el in t1 + t2 if el in inters))
 
-    intersection = Orange.data.Domain(
+    intersection = Arithmos.data.Domain(
         tuple_intersection(a.attributes, b.attributes),
         tuple_intersection(a.class_vars, b.class_vars),
         tuple_intersection(a.metas, b.metas),
@@ -270,5 +270,5 @@ def domain_intersection(a, b):
 
 if __name__ == "__main__":  # pragma: no cover
     WidgetPreview(OWConcatenate).run(
-        set_more_data=[(Orange.data.Table("iris"), 0),
-                       (Orange.data.Table("zoo"), 1)])
+        set_more_data=[(Arithmos.data.Table("iris"), 0),
+                       (Arithmos.data.Table("zoo"), 1)])

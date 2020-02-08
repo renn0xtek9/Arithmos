@@ -12,25 +12,25 @@ from AnyQt.QtGui import QColor, QPainter, QPen, QStandardItem
 from AnyQt.QtWidgets import (
     QGraphicsScene, QGraphicsLineItem, QGraphicsItemGroup)
 
-from Orange.data import Table, filter, Variable, Domain
-from Orange.data.sql.table import SqlTable, LARGE_TABLE, DEFAULT_SAMPLE_TIME
-from Orange.preprocess import Discretize
-from Orange.preprocess.discretize import EqualFreq
-from Orange.preprocess.score import ReliefF
-from Orange.statistics.distribution import get_distribution, get_distributions
-from Orange.widgets import gui, settings
-from Orange.widgets.gui import OWComponent
-from Orange.widgets.settings import (
+from Arithmos.data import Table, filter, Variable, Domain
+from Arithmos.data.sql.table import SqlTable, LARGE_TABLE, DEFAULT_SAMPLE_TIME
+from Arithmos.preprocess import Discretize
+from Arithmos.preprocess.discretize import EqualFreq
+from Arithmos.preprocess.score import ReliefF
+from Arithmos.statistics.distribution import get_distribution, get_distributions
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.gui import OWComponent
+from Arithmos.widgets.settings import (
     Setting, DomainContextHandler, ContextSetting, SettingProvider)
-from Orange.widgets.utils import to_html, get_variable_values_sorted
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets.utils import to_html, get_variable_values_sorted
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils import (
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils import (
     CanvasText, CanvasRectangle, ViewWithPress, VizRankDialog)
-from Orange.widgets.visualize.utils.plotutils import wrap_legend_items
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.widgets.visualize.utils.plotutils import wrap_legend_items
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
 
 
 class MosaicVizRank(VizRankDialog, OWComponent):
@@ -39,7 +39,7 @@ class MosaicVizRank(VizRankDialog, OWComponent):
     max_attrs = Setting(3)
 
     pairSelected = Signal(Variable, Variable, Variable, Variable)
-    _AttrRole = next(gui.OrangeUserRole)
+    _AttrRole = next(gui.ArithmosUserRole)
 
     def __init__(self, master):
         """Add the spin box for maximal number of attributes"""

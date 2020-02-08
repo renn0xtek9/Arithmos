@@ -2,9 +2,9 @@ import numpy as np
 from sklearn.isotonic import IsotonicRegression
 from sklearn.calibration import _SigmoidCalibration
 
-from Orange.classification import Model, Learner
-from Orange.evaluation import TestOnTrainingData
-from Orange.evaluation.performance_curves import Curves
+from Arithmos.classification import Model, Learner
+from Arithmos.evaluation import TestOnTrainingData
+from Arithmos.evaluation.performance_curves import Curves
 
 __all__ = ["ThresholdClassifier", "ThresholdLearner",
            "CalibratedLearner", "CalibratedClassifier"]
@@ -18,7 +18,7 @@ class ThresholdClassifier(Model):
     to class 1 it the probability of this class equals or exceeds the threshold
 
     Attributes:
-        base_model (Orange.classification.Model): base mode
+        base_model (Arithmos.classification.Model): base mode
         threshold (float): decision threshold
     """
     def __init__(self, base_model, threshold):

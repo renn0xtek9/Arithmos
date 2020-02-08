@@ -1,10 +1,10 @@
-from Orange.classification import (
+from Arithmos.classification import (
     SVMLearner as SVCLearner,
     LinearSVMLearner as LinearSVCLearner,
     NuSVMLearner as NuSVCLearner,
 )
-from Orange.modelling import SklFitter
-from Orange.regression import SVRLearner, LinearSVRLearner, NuSVRLearner
+from Arithmos.modelling import SklFitter
+from Arithmos.regression import SVRLearner, LinearSVRLearner, NuSVRLearner
 
 __all__ = ['SVMLearner', 'LinearSVMLearner', 'NuSVMLearner']
 

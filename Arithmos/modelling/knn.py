@@ -1,6 +1,6 @@
-from Orange.classification import KNNLearner as KNNClassification
-from Orange.modelling import SklFitter
-from Orange.regression import KNNRegressionLearner
+from Arithmos.classification import KNNLearner as KNNClassification
+from Arithmos.modelling import SklFitter
+from Arithmos.regression import KNNRegressionLearner
 
 __all__ = ['KNNLearner']
 

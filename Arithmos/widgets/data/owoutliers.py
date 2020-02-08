@@ -5,16 +5,16 @@ import numpy as np
 from AnyQt.QtCore import Signal, Qt
 from AnyQt.QtWidgets import QWidget, QVBoxLayout
 
-from orangewidget.settings import SettingProvider
+from arithmoswidget.settings import SettingProvider
 
-from Orange.classification import OneClassSVMLearner, EllipticEnvelopeLearner,\
+from Arithmos.classification import OneClassSVMLearner, EllipticEnvelopeLearner,\
     LocalOutlierFactorLearner, IsolationForestLearner
-from Orange.data import Table
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input, Output, OWWidget
+from Arithmos.data import Table
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input, Output, OWWidget
 
 
 class ParametersEditor(QWidget, gui.OWComponent):

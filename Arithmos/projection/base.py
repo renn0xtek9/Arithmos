@@ -4,12 +4,12 @@ import threading
 
 import numpy as np
 
-import Orange.data
-from Orange.base import ReprableWithPreprocessors
-from Orange.data.util import SharedComputeValue, get_unique_names
-from Orange.misc.wrapper_meta import WrapperMeta
-from Orange.preprocess import RemoveNaNRows
-import Orange.preprocess
+import Arithmos.data
+from Arithmos.base import ReprableWithPreprocessors
+from Arithmos.data.util import SharedComputeValue, get_unique_names
+from Arithmos.misc.wrapper_meta import WrapperMeta
+from Arithmos.preprocess import RemoveNaNRows
+import Arithmos.preprocess
 
 __all__ = ["LinearCombinationSql", "Projector", "Projection", "SklProjector",
            "LinearProjector", "DomainProjection"]
@@ -126,7 +126,7 @@ class DomainProjection(Projection):
         transformer = TransformDomain(self)
 
         def proj_variable(i, name):
-            v = Orange.data.ContinuousVariable(
+            v = Arithmos.data.ContinuousVariable(
                 name, compute_value=ComputeValueProjector(self, i, transformer)
             )
             v.to_sql = LinearCombinationSql(
@@ -138,7 +138,7 @@ class DomainProjection(Projection):
         self.orig_domain = domain
         self.n_components = n_components
         var_names = self._get_var_names(n_components)
-        self.domain = Orange.data.Domain(
+        self.domain = Arithmos.data.Domain(
             [proj_variable(i, var_names[i]) for i in range(n_components)],
             domain.class_vars, domain.metas)
 
@@ -182,8 +182,8 @@ class SklProjector(Projector, metaclass=WrapperMeta):
     name = 'skl projection'
     supports_sparse = False
 
-    preprocessors = [Orange.preprocess.Continuize(),
-                     Orange.preprocess.SklImpute()]
+    preprocessors = [Arithmos.preprocess.Continuize(),
+                     Arithmos.preprocess.SklImpute()]
 
     @property
     def params(self):

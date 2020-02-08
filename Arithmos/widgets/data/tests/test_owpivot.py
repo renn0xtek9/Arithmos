@@ -10,12 +10,12 @@ from AnyQt.QtCore import Qt, QPoint
 from AnyQt.QtTest import QTest
 from AnyQt.QtWidgets import QCheckBox
 
-from Orange.data import (Table, Domain, ContinuousVariable as Cv,
+from Arithmos.data import (Table, Domain, ContinuousVariable as Cv,
                          StringVariable as sv, DiscreteVariable as Dv)
-from Orange.widgets.data.owpivot import (OWPivot, Pivot,
+from Arithmos.widgets.data.owpivot import (OWPivot, Pivot,
                                          AggregationFunctionsEnum)
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
 
 
 class TestOWPivot(WidgetTest):
@@ -162,7 +162,7 @@ class TestOWPivot(WidgetTest):
         self.send_signal(self.widget.Inputs.data, None)
         self.assertFalse(self.widget.Warning.cannot_aggregate.is_shown())
 
-    @patch("Orange.widgets.data.owpivot.Pivot._initialize",
+    @patch("Arithmos.widgets.data.owpivot.Pivot._initialize",
            return_value=(None, None))
     def test_group_table_created_once(self, initialize):
         self.send_signal(self.widget.Inputs.data, self.iris)
@@ -306,9 +306,9 @@ class TestPivot(unittest.TestCase):
                        np.nan, np.nan, np.nan, np.nan, np.nan]], dtype=float)
         self.assert_table_equal(group_tab, Table(Domain(atts), X))
 
-    @patch("Orange.widgets.data.owpivot.Pivot.Count.func",
+    @patch("Arithmos.widgets.data.owpivot.Pivot.Count.func",
            side_effect=Pivot.Count.func)
-    @patch("Orange.widgets.data.owpivot.Pivot.Sum.func",
+    @patch("Arithmos.widgets.data.owpivot.Pivot.Sum.func",
            side_effect=Pivot.Sum.func)
     def test_group_table_use_cached(self, count_func, sum_func):
         domain = self.table.domain

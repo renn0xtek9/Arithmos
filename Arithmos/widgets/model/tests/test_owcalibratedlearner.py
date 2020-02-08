@@ -1,13 +1,13 @@
 from unittest.mock import Mock
 
-from Orange.classification import ThresholdLearner, CalibratedLearner, \
+from Arithmos.classification import ThresholdLearner, CalibratedLearner, \
     NaiveBayesLearner, ThresholdClassifier, CalibratedClassifier
-from Orange.classification.base_classification import ModelClassification, \
+from Arithmos.classification.base_classification import ModelClassification, \
     LearnerClassification
-from Orange.classification.naive_bayes import NaiveBayesModel
-from Orange.data import Table
-from Orange.widgets.model.owcalibratedlearner import OWCalibratedLearner
-from Orange.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin, \
+from Arithmos.classification.naive_bayes import NaiveBayesModel
+from Arithmos.data import Table
+from Arithmos.widgets.model.owcalibratedlearner import OWCalibratedLearner
+from Arithmos.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin, \
     datasets
 
 

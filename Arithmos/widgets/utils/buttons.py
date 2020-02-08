@@ -1,4 +1,4 @@
-from orangewidget.utils.buttons import (
+from arithmoswidget.utils.buttons import (
     VariableTextPushButton, SimpleButton,
 )
 __all__ = [

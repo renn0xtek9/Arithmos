@@ -1,11 +1,11 @@
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table
-from Orange.modelling import KNNLearner
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.modelling import KNNLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWKNNLearner(OWBaseLearner):
@@ -13,8 +13,8 @@ class OWKNNLearner(OWBaseLearner):
     description = "Predict according to the nearest training instances."
     icon = "icons/KNN.svg"
     replaces = [
-        "Orange.widgets.classify.owknn.OWKNNLearner",
-        "Orange.widgets.regression.owknnregression.OWKNNRegression",
+        "Arithmos.widgets.classify.owknn.OWKNNLearner",
+        "Arithmos.widgets.regression.owknnregression.OWKNNRegression",
     ]
     priority = 20
     keywords = ["k nearest", "knearest", "neighbor", "neighbour"]

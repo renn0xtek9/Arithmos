@@ -3,15 +3,15 @@ from collections import OrderedDict
 import numpy as np
 from AnyQt.QtCore import Qt
 
-from Orange.classification.rules import (
+from Arithmos.classification.rules import (
     WeightedRelativeAccuracyEvaluator, LaplaceAccuracyEvaluator,
     EntropyEvaluator, _RuleClassifier, _RuleLearner, get_dist
 )
-from Orange.data import Table
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class CustomRuleClassifier(_RuleClassifier):
@@ -133,7 +133,7 @@ class CustomRuleLearner(_RuleLearner):
             Index of the class to model.
         base_rules : list of Rule
             An optional list of initial rules to constrain the search.
-        domain : Orange.data.domain.Domain
+        domain : Arithmos.data.domain.Domain
             Data domain, used to calculate class distributions.
         progress_amount: int, percentage
             Part of the learning algorithm covered by this function
@@ -212,7 +212,7 @@ class OWRuleLearner(OWBaseLearner):
     description = "Induce rules from data using CN2 algorithm."
     icon = "icons/CN2RuleInduction.svg"
     replaces = [
-        "Orange.widgets.classify.owrules.OWRuleLearner",
+        "Arithmos.widgets.classify.owrules.OWRuleLearner",
     ]
     priority = 19
     keywords = []

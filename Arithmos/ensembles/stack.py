@@ -1,13 +1,13 @@
 import numpy as np
 
-from Orange.base import Learner, Model
-from Orange.modelling import Fitter
-from Orange.classification import LogisticRegressionLearner
-from Orange.classification.base_classification import LearnerClassification
-from Orange.data import Domain, ContinuousVariable, Table
-from Orange.evaluation import CrossValidation
-from Orange.regression import RidgeRegressionLearner
-from Orange.regression.base_regression import LearnerRegression
+from Arithmos.base import Learner, Model
+from Arithmos.modelling import Fitter
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.classification.base_classification import LearnerClassification
+from Arithmos.data import Domain, ContinuousVariable, Table
+from Arithmos.evaluation import CrossValidation
+from Arithmos.regression import RidgeRegressionLearner
+from Arithmos.regression.base_regression import LearnerRegression
 
 
 __all__ = ['StackedLearner', 'StackedClassificationLearner',
@@ -124,10 +124,10 @@ class StackedFitter(Fitter):
 
 
 if __name__ == '__main__':
-    import Orange
+    import Arithmos
     iris = Table('iris')
-    knn = Orange.modelling.KNNLearner()
-    tree = Orange.modelling.TreeLearner()
+    knn = Arithmos.modelling.KNNLearner()
+    tree = Arithmos.modelling.TreeLearner()
     sl = StackedFitter([tree, knn])
     m = sl(iris[::2])
     print(m(iris[1::2], Model.Value))

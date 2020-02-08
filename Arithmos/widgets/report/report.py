@@ -1,9 +1,9 @@
 from collections import OrderedDict
 
-from orangewidget.report.report import *
-from orangewidget.report import report as __report
+from arithmoswidget.report.report import *
+from arithmoswidget.report import report as __report
 
-from Orange.data.sql.table import SqlTable
+from Arithmos.data.sql.table import SqlTable
 
 __all__ = __report.__all__ + [
     "DataReport", "describe_data", "describe_data_brief",
@@ -29,7 +29,7 @@ class DataReport(Report):
         :param name: report section name (can be omitted)
         :type name: str or tuple or OrderedDict
         :param data: data whose description is added to the report
-        :type data: Orange.data.Table
+        :type data: Arithmos.data.Table
         """
 
         name, data = self._fix_args(name, data)
@@ -46,7 +46,7 @@ class DataReport(Report):
         :param name: report section name (can be omitted)
         :type name: str or tuple or OrderedDict
         :param domain: domain whose description is added to the report
-        :type domain: Orange.data.Domain
+        :type domain: Arithmos.data.Domain
         """
         name, domain = self._fix_args(name, domain)
         self.report_items(name, describe_domain(domain))
@@ -62,7 +62,7 @@ class DataReport(Report):
         :param name: report section name (can be omitted)
         :type name: str or tuple or OrderedDict
         :param data: data whose description is added to the report
-        :type data: Orange.data.Table
+        :type data: Arithmos.data.Table
         """
         name, data = self._fix_args(name, data)
         self.report_items(name, describe_data_brief(data))
@@ -79,10 +79,10 @@ def describe_domain(domain):
     Description contains keys "Features", "Meta attributes" and "Targets"
     with the corresponding clipped lists of names. If the domain contains no
     meta attributes or targets, the value is `False`, which prevents it from
-    being rendered by :obj:`~Orange.widgets.report.render_items`.
+    being rendered by :obj:`~Arithmos.widgets.report.render_items`.
 
     :param domain: domain
-    :type domain: Orange.data.Domain
+    :type domain: Arithmos.data.Domain
     :rtype: OrderedDict
     """
 
@@ -108,7 +108,7 @@ def describe_data(data):
     targets, the value is `False`, which prevents it from being rendered.
 
     :param data: data
-    :type data: Orange.data.Table
+    :type data: Arithmos.data.Table
     :rtype: OrderedDict
     """
     items = OrderedDict()
@@ -131,7 +131,7 @@ def describe_domain_brief(domain):
     target, or the number of targets if there are multiple.
 
     :param domain: data
-    :type domain: Orange.data.Domain
+    :type domain: Arithmos.data.Domain
     :rtype: OrderedDict
     """
     items = OrderedDict()
@@ -161,7 +161,7 @@ def describe_data_brief(data):
     number of targets if there are multiple.
 
     :param data: data
-    :type data: Orange.data.Table
+    :type data: Arithmos.data.Table
     :rtype: OrderedDict
     """
     items = OrderedDict()

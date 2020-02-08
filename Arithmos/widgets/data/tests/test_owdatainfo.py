@@ -1,8 +1,8 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
-from Orange.data import Table
-from Orange.widgets.data.owdatainfo import OWDataInfo
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.data import Table
+from Arithmos.widgets.data.owdatainfo import OWDataInfo
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWDataInfo(WidgetTest):

@@ -11,22 +11,22 @@ from AnyQt.QtWidgets import \
     QLineEdit, QSizePolicy as Policy, QCompleter
 from AnyQt.QtCore import Qt, QTimer, QSize
 
-from Orange.data.table import Table, get_sample_datasets_dir
-from Orange.data.io import FileFormat, UrlReader, class_from_qualified_name
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import Setting, ContextSetting, \
+from Arithmos.data.table import Table, get_sample_datasets_dir
+from Arithmos.data.io import FileFormat, UrlReader, class_from_qualified_name
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import Setting, ContextSetting, \
     PerfectDomainContextHandler, SettingProvider
-from Orange.widgets.utils.domaineditor import DomainEditor
-from Orange.widgets.utils.itemmodels import PyListModel
-from Orange.widgets.utils.filedialogs import RecentPathsWComboMixin, \
+from Arithmos.widgets.utils.domaineditor import DomainEditor
+from Arithmos.widgets.utils.itemmodels import PyListModel
+from Arithmos.widgets.utils.filedialogs import RecentPathsWComboMixin, \
     open_filename_dialog
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Output
 
 # Backward compatibility: class RecentPath used to be defined in this module,
 # and it is used in saved (pickled) settings. It must be imported into the
 # module's namespace so that old saved settings still work
-from Orange.widgets.utils.filedialogs import RecentPath
+from Arithmos.widgets.utils.filedialogs import RecentPath
 
 
 log = logging.getLogger(__name__)
@@ -74,7 +74,7 @@ class LineEditSelectOnFocus(QLineEdit):
 
 class OWFile(widget.OWWidget, RecentPathsWComboMixin):
     name = "File"
-    id = "orange.widgets.data.file"
+    id = "arithmos.widgets.data.file"
     description = "Read data from an input file or network " \
                   "and send a data table to the output."
     icon = "icons/File.svg"

@@ -6,9 +6,9 @@ import unittest
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.preprocess import Normalize
-from Orange.tests import test_filename
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.preprocess import Normalize
+from Arithmos.tests import test_filename
 
 
 class TestNormalizer(unittest.TestCase):

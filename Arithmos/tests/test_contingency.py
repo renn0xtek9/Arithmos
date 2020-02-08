@@ -8,10 +8,10 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.sparse import csr_matrix, csc_matrix
 
-from Orange.data import DiscreteVariable, Table, Domain
-from Orange.statistics import contingency
-from Orange import data
-from Orange.tests import test_filename
+from Arithmos.data import DiscreteVariable, Table, Domain
+from Arithmos.statistics import contingency
+from Arithmos import data
+from Arithmos.tests import test_filename
 
 
 def assert_dist_equal(dist, expected):
@@ -192,9 +192,9 @@ class TestDiscrete(unittest.TestCase):
             np.testing.assert_almost_equal(v1, v2)
 
     def test_mixedtype_metas(self):
-        import Orange
-        zoo = Orange.data.Table("zoo")
-        dom = Orange.data.Domain(zoo.domain.attributes, zoo.domain.class_var,
+        import Arithmos
+        zoo = Arithmos.data.Table("zoo")
+        dom = Arithmos.data.Domain(zoo.domain.attributes, zoo.domain.class_var,
                                  zoo.domain.metas + zoo.domain.attributes[:2])
         t = zoo.transform(dom)
         cont = contingency.get_contingency(zoo, 2, t.domain.metas[1])

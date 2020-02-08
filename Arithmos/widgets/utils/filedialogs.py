@@ -1,15 +1,15 @@
 
-from orangewidget.utils.filedialogs import (
+from arithmoswidget.utils.filedialogs import (
     open_filename_dialog_save, open_filename_dialog,
     RecentPath, RecentPathsWidgetMixin, RecentPathsWComboMixin,
 )
 # imported for backcompatibility
-from orangewidget.utils.filedialogs import (  # pylint: disable=unused-import
+from arithmoswidget.utils.filedialogs import (  # pylint: disable=unused-import
     fix_extension, format_filter, get_file_name, Compression
 )
 
-from Orange.data.io import FileFormat
-from Orange.util import deprecated
+from Arithmos.data.io import FileFormat
+from Arithmos.util import deprecated
 
 __all__ = [
     "open_filename_dialog_save", "open_filename_dialog",

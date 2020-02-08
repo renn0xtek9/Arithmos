@@ -10,19 +10,19 @@ from AnyQt.QtGui import QColor, QPen, QBrush, QPainter, QPalette, QPolygonF
 from AnyQt.QtCore import Qt, QRectF, QPointF, pyqtSignal as Signal
 import pyqtgraph as pg
 
-from Orange.data import Table, DiscreteVariable, ContinuousVariable
-from Orange.preprocess.discretize import decimal_binnings, time_binnings, \
+from Arithmos.data import Table, DiscreteVariable, ContinuousVariable
+from Arithmos.preprocess.discretize import decimal_binnings, time_binnings, \
     short_time_units
-from Orange.statistics import distribution, contingency
-from Orange.widgets import gui, settings
-from Orange.widgets.utils.annotated_data import \
+from Arithmos.statistics import distribution, contingency
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.utils.annotated_data import \
     create_groups_table, create_annotated_table, ANNOTATED_DATA_SIGNAL_NAME
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils.plotutils import ElidedLabelsAxis
-from Orange.widgets.widget import Input, Output, OWWidget, Msg
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils.plotutils import ElidedLabelsAxis
+from Arithmos.widgets.widget import Input, Output, OWWidget, Msg
 
-from Orange.widgets.visualize.owscatterplotgraph import \
+from Arithmos.widgets.visualize.owscatterplotgraph import \
     LegendItem as SPGLegendItem
 
 

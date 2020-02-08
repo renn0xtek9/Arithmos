@@ -5,12 +5,12 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange import distance
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.misc import DistMatrix
-from Orange.widgets.unsupervised.owdistances import OWDistances, METRICS, \
+from Arithmos import distance
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.misc import DistMatrix
+from Arithmos.widgets.unsupervised.owdistances import OWDistances, METRICS, \
     DistanceRunner
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestDistanceRunner(unittest.TestCase):
@@ -148,7 +148,7 @@ class TestOWDistances(WidgetTest):
 
     def test_too_big_array(self):
         """
-        Users sees an error message when calculating too large arrays and Orange
+        Users sees an error message when calculating too large arrays and Arithmos
         does not crash.
         GH-2315
         """

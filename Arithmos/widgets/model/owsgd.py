@@ -2,15 +2,15 @@ from collections import OrderedDict
 
 from AnyQt.QtCore import Qt
 
-from Orange.widgets.report import bool_str
-from Orange.data import ContinuousVariable, StringVariable, Domain, Table
-from Orange.modelling.linear import SGDLearner
-from Orange.widgets import gui
-from Orange.widgets.model.owlogisticregression import create_coef_table
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.signals import Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.report import bool_str
+from Arithmos.data import ContinuousVariable, StringVariable, Domain, Table
+from Arithmos.modelling.linear import SGDLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.model.owlogisticregression import create_coef_table
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.signals import Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 MAXINT = 2 ** 31 - 1
 
@@ -21,7 +21,7 @@ class OWSGD(OWBaseLearner):
                   'approximation of gradient descent.'
     icon = "icons/SGD.svg"
     replaces = [
-        "Orange.widgets.regression.owsgdregression.OWSGDRegression",
+        "Arithmos.widgets.regression.owsgdregression.OWSGDRegression",
     ]
     priority = 90
     keywords = ["sgd"]

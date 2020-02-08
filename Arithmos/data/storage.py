@@ -80,9 +80,9 @@ class Storage:
         :param col_vars: variables whose values will correspond to columns of
             contingency matrices
         :type col_vars: list of ints, variable names or descriptors of type
-            :obj:`Orange.data.Variable`
+            :obj:`Arithmos.data.Variable`
         :param row_var: a discrete variable whose values will correspond to the
             rows of contingency matrices
-        :type row_var: int, variable name or :obj:`Orange.data.DiscreteVariable`
+        :type row_var: int, variable name or :obj:`Arithmos.data.DiscreteVariable`
         """
         raise NotImplementedError

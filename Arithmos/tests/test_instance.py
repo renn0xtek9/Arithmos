@@ -8,10 +8,10 @@ from unittest.mock import MagicMock
 import numpy as np
 from numpy.testing import assert_array_equal
 
-from Orange.data import \
+from Arithmos.data import \
     Instance, Domain, Unknown, Value, \
     DiscreteVariable, ContinuousVariable, StringVariable
-from Orange.tests import assert_array_nanequal
+from Arithmos.tests import assert_array_nanequal
 
 
 class TestInstance(unittest.TestCase):

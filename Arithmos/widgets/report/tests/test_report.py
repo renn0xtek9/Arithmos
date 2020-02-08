@@ -5,26 +5,26 @@ import warnings
 
 import AnyQt
 
-from Orange.data.table import Table
-from Orange.classification import LogisticRegressionLearner
-from Orange.classification.tree import TreeLearner
-from Orange.evaluation import CrossValidation
-from Orange.distance import Euclidean
-from Orange.widgets.report.owreport import OWReport
-from Orange.widgets.widget import OWWidget
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.visualize.owtreeviewer import OWTreeGraph
-from Orange.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
-from Orange.widgets.evaluate.owliftcurve import OWLiftCurve
-from Orange.widgets.evaluate.owrocanalysis import OWROCAnalysis
-from Orange.widgets.evaluate.owtestlearners import OWTestLearners
-from Orange.widgets.unsupervised.owcorrespondence import OWCorrespondenceAnalysis
-from Orange.widgets.unsupervised.owdistancemap import OWDistanceMap
-from Orange.widgets.unsupervised.owdistances import OWDistances
-from Orange.widgets.unsupervised.owhierarchicalclustering import OWHierarchicalClustering
-from Orange.widgets.unsupervised.owkmeans import OWKMeans
-from Orange.widgets.unsupervised.owmds import OWMDS
-from Orange.widgets.unsupervised.owpca import OWPCA
+from Arithmos.data.table import Table
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.classification.tree import TreeLearner
+from Arithmos.evaluation import CrossValidation
+from Arithmos.distance import Euclidean
+from Arithmos.widgets.report.owreport import OWReport
+from Arithmos.widgets.widget import OWWidget
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.visualize.owtreeviewer import OWTreeGraph
+from Arithmos.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
+from Arithmos.widgets.evaluate.owliftcurve import OWLiftCurve
+from Arithmos.widgets.evaluate.owrocanalysis import OWROCAnalysis
+from Arithmos.widgets.evaluate.owtestlearners import OWTestLearners
+from Arithmos.widgets.unsupervised.owcorrespondence import OWCorrespondenceAnalysis
+from Arithmos.widgets.unsupervised.owdistancemap import OWDistanceMap
+from Arithmos.widgets.unsupervised.owdistances import OWDistances
+from Arithmos.widgets.unsupervised.owhierarchicalclustering import OWHierarchicalClustering
+from Arithmos.widgets.unsupervised.owkmeans import OWKMeans
+from Arithmos.widgets.unsupervised.owmds import OWMDS
+from Arithmos.widgets.unsupervised.owpca import OWPCA
 
 
 def get_owwidgets(top_module_name):
@@ -53,9 +53,9 @@ def get_owwidgets(top_module_name):
     return list(set(widgets))
 
 
-DATA_WIDGETS = get_owwidgets('Orange.widgets.data')
-VISUALIZATION_WIDGETS = get_owwidgets('Orange.widgets.visualize')
-MODEL_WIDGETS = get_owwidgets('Orange.widgets.model')
+DATA_WIDGETS = get_owwidgets('Arithmos.widgets.data')
+VISUALIZATION_WIDGETS = get_owwidgets('Arithmos.widgets.visualize')
+MODEL_WIDGETS = get_owwidgets('Arithmos.widgets.model')
 
 
 class TestReportWidgets(WidgetTest):

@@ -8,19 +8,19 @@ from AnyQt.QtGui import QPainter, QPen, QColor, QBrush, QMouseEvent
 from AnyQt.QtWidgets import QSizePolicy, QGraphicsScene, QLabel, QSlider, \
     QListView, QStyledItemDelegate, QStyleOptionViewItem, QStyle
 
-from Orange.base import RandomForestModel, TreeModel
-from Orange.data import Table
-from Orange.widgets import gui, settings
-from Orange.widgets.utils.itemmodels import PyListModel
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.pythagorastreeviewer import (
+from Arithmos.base import RandomForestModel, TreeModel
+from Arithmos.data import Table
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.utils.itemmodels import PyListModel
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.pythagorastreeviewer import (
     PythagorasTreeViewer,
     ContinuousTreeNode,
 )
-from Orange.widgets.visualize.utils.tree.skltreeadapter import \
+from Arithmos.widgets.visualize.utils.tree.skltreeadapter import \
     SklTreeAdapter
-from Orange.widgets.widget import OWWidget
+from Arithmos.widgets.widget import OWWidget
 
 
 class PythagoreanForestModel(PyListModel):
@@ -219,12 +219,12 @@ class OWPythagoreanForest(OWWidget):
         self.ui_target_class_combo = gui.comboBox(
             box_display, self, 'target_class_index', label='Target class',
             orientation=Qt.Horizontal, items=[], contentsLength=8,
-        )  # type: gui.OrangeComboBox
+        )  # type: gui.ArithmosComboBox
         self.ui_size_calc_combo = gui.comboBox(
             box_display, self, 'size_calc_idx', label='Size',
             orientation=Qt.Horizontal,
             items=list(zip(*self.SIZE_CALCULATION))[0], contentsLength=8,
-        )  # type: gui.OrangeComboBox
+        )  # type: gui.ArithmosComboBox
         self.ui_zoom_slider = gui.hSlider(
             box_display, self, 'zoom', label='Zoom', ticks=False, minValue=100,
             maxValue=400, createLabel=False, intOnly=False,
@@ -395,7 +395,7 @@ class SklRandomForestAdapter:
 
 
 if __name__ == '__main__':  # pragma: no cover
-    from Orange.modelling import RandomForestLearner
+    from Arithmos.modelling import RandomForestLearner
     data = Table('iris')
     rf = RandomForestLearner(n_estimators=10)(data)
     rf.instances = data

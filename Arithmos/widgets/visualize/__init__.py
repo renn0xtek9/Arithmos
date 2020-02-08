@@ -11,7 +11,7 @@ Widgets for data visualization.
 
 NAME = "Visualize"
 
-ID = "orange.widgets.visualize"
+ID = "arithmos.widgets.visualize"
 
 DESCRIPTION = "Widgets for data visualization."
 

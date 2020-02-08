@@ -1,16 +1,16 @@
 
-recursive-include Orange *.pyx *.py *.c *.cpp README* LICENSE
-recursive-include Orange/datasets *.tab *.basket *.info *.dst *.metadata
+recursive-include Arithmos *.pyx *.py *.c *.cpp README* LICENSE
+recursive-include Arithmos/datasets *.tab *.basket *.info *.dst *.metadata
 
-recursive-include Orange/tests *.tab *.basket *.xlsx *.xls *.pkl *.pkl.gz
+recursive-include Arithmos/tests *.tab *.basket *.xlsx *.xls *.pkl *.pkl.gz
 
-recursive-include Orange/canvas *ico *.png *.svg *.ico
-recursive-include Orange/canvas/workflows *.ows
+recursive-include Arithmos/canvas *ico *.png *.svg *.ico
+recursive-include Arithmos/canvas/workflows *.ows
 
-recursive-include Orange/widgets *.png *.svg *.js *.css *.html
-recursive-include Orange/widgets/tests *.tab
-recursive-include Orange/widgets/data/tests *.tab *.txt
-recursive-include Orange/widgets/tests/workflows *.ows
+recursive-include Arithmos/widgets *.png *.svg *.js *.css *.html
+recursive-include Arithmos/widgets/tests *.tab
+recursive-include Arithmos/widgets/data/tests *.tab *.txt
+recursive-include Arithmos/widgets/tests/workflows *.ows
 
 recursive-include distribute *.svg *.desktop
 

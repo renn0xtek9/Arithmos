@@ -9,8 +9,8 @@ from AnyQt.QtWidgets import QMenu
 from AnyQt.QtGui import QStandardItem
 from AnyQt.QtCore import QPoint, Qt
 
-from Orange.widgets.evaluate.utils import ScoreTable
-from Orange.widgets.tests.base import GuiTest
+from Arithmos.widgets.evaluate.utils import ScoreTable
+from Arithmos.widgets.tests.base import GuiTest
 
 
 class TestScoreTable(GuiTest):

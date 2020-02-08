@@ -8,15 +8,15 @@ from sklearn.exceptions import ConvergenceWarning
 from AnyQt.QtCore import Qt, QItemSelection
 from AnyQt.QtWidgets import QCheckBox
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.modelling import RandomForestLearner, SGDLearner
-from Orange.preprocess.score import Scorer
-from Orange.classification import LogisticRegressionLearner
-from Orange.regression import LinearRegressionLearner
-from Orange.projection import PCA
-from Orange.widgets.data.owrank import OWRank, ProblemType, CLS_SCORES, REG_SCORES
-from Orange.widgets.tests.base import WidgetTest, datasets
-from Orange.widgets.widget import AttributeList
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.modelling import RandomForestLearner, SGDLearner
+from Arithmos.preprocess.score import Scorer
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.regression import LinearRegressionLearner
+from Arithmos.projection import PCA
+from Arithmos.widgets.data.owrank import OWRank, ProblemType, CLS_SCORES, REG_SCORES
+from Arithmos.widgets.tests.base import WidgetTest, datasets
+from Arithmos.widgets.widget import AttributeList
 
 
 class TestOWRank(WidgetTest):
@@ -158,7 +158,7 @@ class TestOWRank(WidgetTest):
         """Check scores on the output with inadequate scorer"""
         self.send_signal(self.widget.Inputs.data, self.housing)
         self.send_signal(self.widget.Inputs.scorer, self.pca, 1)
-        with patch("Orange.widgets.data.owrank.log.error") as log:
+        with patch("Arithmos.widgets.data.owrank.log.error") as log:
             self.send_signal(self.widget.Inputs.scorer, self.log_reg, 2)
             log.assert_called()
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
@@ -168,7 +168,7 @@ class TestOWRank(WidgetTest):
         """Check scores on the output with inadequate scorer"""
         self.send_signal(self.widget.Inputs.data, self.iris)
         self.send_signal(self.widget.Inputs.scorer, self.pca, 1)
-        with patch("Orange.widgets.data.owrank.log.error") as log:
+        with patch("Arithmos.widgets.data.owrank.log.error") as log:
             self.send_signal(self.widget.Inputs.scorer, self.lin_reg, 2)
             log.assert_called()
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
@@ -195,7 +195,7 @@ class TestOWRank(WidgetTest):
         self.send_signal(self.widget.Inputs.scorer, self.log_reg, 1)
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
                          (len(self.iris.domain.attributes), 8))
-        with patch("Orange.widgets.data.owrank.log.error") as log:
+        with patch("Arithmos.widgets.data.owrank.log.error") as log:
             self.send_signal(self.widget.Inputs.scorer, self.lin_reg, 3)
             log.assert_called()
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
@@ -231,7 +231,7 @@ class TestOWRank(WidgetTest):
         self.send_signal(self.widget.Inputs.data, data)
         self.assertIsNone(self.get_output(self.widget.Outputs.scores))
 
-        with patch("Orange.widgets.data.owrank.log.error") as log:
+        with patch("Arithmos.widgets.data.owrank.log.error") as log:
             self.send_signal(self.widget.Inputs.scorer, self.lin_reg, 1)
             log.assert_called()
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
@@ -241,7 +241,7 @@ class TestOWRank(WidgetTest):
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
                          (len(self.iris.domain.variables), 7))
 
-        with patch("Orange.widgets.data.owrank.log.error") as log:
+        with patch("Arithmos.widgets.data.owrank.log.error") as log:
             self.send_signal(self.widget.Inputs.scorer, self.lin_reg, 2)
             log.assert_called()
         self.assertEqual(self.get_output(self.widget.Outputs.scores).X.shape,
@@ -369,8 +369,8 @@ class TestOWRank(WidgetTest):
     def test_dataset(self):
         for method in CLS_SCORES + REG_SCORES:
             self._get_checkbox(method.shortname).setChecked(True)
-        with patch("Orange.widgets.data.owrank.log.warning"), \
-                patch("Orange.widgets.data.owrank.log.error"),\
+        with patch("Arithmos.widgets.data.owrank.log.warning"), \
+                patch("Arithmos.widgets.data.owrank.log.error"),\
                 warnings.catch_warnings():
             warnings.filterwarnings("ignore", "Features .* are constant",
                                     UserWarning)

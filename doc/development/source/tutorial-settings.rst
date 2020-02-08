@@ -36,7 +36,7 @@ it
 Widgets Settings
 ****************
 
-Luckily, since we use the base class :class:`~Orange.widgets.widget.OWWidget`,
+Luckily, since we use the base class :class:`~Arithmos.widgets.widget.OWWidget`,
 the settings will be handled just fine. We only need to tell which variables
 we want to use for persistent settings.
 
@@ -48,7 +48,7 @@ we want to use for persistent settings.
 In our widget, we will use two settings variables, and we declare this
 in the widget class definition (after the `inputs`, `outputs` definitions).
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerB.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerB.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
@@ -65,11 +65,11 @@ but will instead use them in conjunction with GUI controls.
 Controls and module `gui`
 *************************
 
-We will use the :mod:`Orange.widgets.gui` to create/define the gui.
+We will use the :mod:`Arithmos.widgets.gui` to create/define the gui.
 With this library, the GUI definition part of the options box is a bit
 dense but rather very short
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerB.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerB.py
    :start-after: start-snippet-3
    :end-before: end-snippet-3
 
@@ -77,7 +77,7 @@ dense but rather very short
 We are already familiar with the first part - the Info group
 box. To make widget nicer, we put a separator between this and Options
 box. After defining the option box, here is our first serious
-:mod:`~Orange.widgets.gui` control: a :func:`Orange.widgets.gui.spin`.
+:mod:`~Arithmos.widgets.gui` control: a :func:`Arithmos.widgets.gui.spin`.
 The first parameter specifies its parent widget/layout, in this case
 :obj:`self.optionsBox` (the resulting widget object will automatically
 append itself to the parent's layout). The second (:obj:`self`) and
@@ -93,12 +93,12 @@ label which will be placed on the top, and tells it which functions to
 call when the value in the spin box is changed. We need the first
 callback to make a data sample and report in the Info box what is the
 size of the sample, and a second callback to check if we can send this
-data out. In :mod:`Orange.widgets.gui`, callbacks are either references
+data out. In :mod:`Arithmos.widgets.gui`, callbacks are either references
 to functions, or a list with references, just like in our case.
 
 With all of the above, the parameters for the call of
-:func:`Orange.widgets.gui.checkBox` should be clear as well. Notice that
-this and a call to :func:`Orange.widgets.gui.spin` do not need a parameter
+:func:`Arithmos.widgets.gui.checkBox` should be clear as well. Notice that
+this and a call to :func:`Arithmos.widgets.gui.spin` do not need a parameter
 which would tell the control the value for initialization: upon
 construction, both controls will be set to the value that is
 pertained in the associated setting variable.
@@ -111,17 +111,17 @@ disabling. The data processing and token sending part of our widget
 now is
 
 
-.. literalinclude:: orange-demo/orangedemo/OWDataSamplerB.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWDataSamplerB.py
    :start-after: start-snippet-4
    :end-before: end-snippet-4
 
 
-You can now also inspect the :download:`complete code <orange-demo/orangedemo/OWDataSamplerB.py>`
+You can now also inspect the :download:`complete code <arithmos-demo/arithmosdemo/OWDataSamplerB.py>`
 of this widget. To distinguish it with a widget we have developed in the
 previous section, we have designed a special
-:download:`icon <orange-demo/orangedemo/icons/DataSamplerB.svg>` for it.
-If you wish to test this widget in the Orange Canvas, put its code in
-the `orangedemo` directory we have created for the previous widget and try
+:download:`icon <arithmos-demo/arithmosdemo/icons/DataSamplerB.svg>` for it.
+If you wish to test this widget in the Arithmos Canvas, put its code in
+the `arithmosdemo` directory we have created for the previous widget and try
 it out using a schema with a File and Data Table widget.
 
 .. image:: images/schemawithdatasamplerB.png
@@ -137,11 +137,11 @@ for future instances of this widget.
 
 Updated defaults are stored in user's profile. It's location depends
 on the operating system:
-(%APPDATA%\Orange\<version>\widgets on windows,
-~/Library/Application\ Support/orange/<version>/widgets on macOS,
-~/.local/share/Orange/<version>/widgets on linux)
+(%APPDATA%\Arithmos\<version>\widgets on windows,
+~/Library/Application\ Support/arithmos/<version>/widgets on macOS,
+~/.local/share/Arithmos/<version>/widgets on linux)
 Original default values can be restored by deleting files from this folder,
-by running Orange from command line with `--clear-widget-settings` option,
+by running Arithmos from command line with `--clear-widget-settings` option,
 or through Options/Reset Widget Settings menu action.
 
 Schema-only settings
@@ -226,11 +226,11 @@ In general, the function should go like this:
 
 When opening the context, we provide the arguments on which the context
 depends. In case of :class:`DomainContextHandler`, which scatter plot uses, we
-can give it a :class:`Orange.data.Domain`. Whether a saved context can be
+can give it a :class:`Arithmos.data.Domain`. Whether a saved context can be
 reused is judged upon the presence of attributes in the domain.
 
 If the widget is constructed appropriately (that is, if it strictly uses
-:mod:`Orange.widgets.gui` controls instead of the Qt's), no other
+:mod:`Arithmos.widgets.gui` controls instead of the Qt's), no other
 administration is needed to switch the context.
 
 Except for declaring the context settings, that is. Scatter plot has this in
@@ -250,7 +250,7 @@ its class definition
 
 ``settingsHandler = DomainContextHandler()`` declares that Scatter plot uses
 :class:`DomainContextHandler`. The :obj:`attr_x` and :obj:`attr_y` are
-declared as :class:`~Orange.widgets.settings.ContextSetting`.
+declared as :class:`~Arithmos.widgets.settings.ContextSetting`.
 
 
 Migrations
@@ -293,18 +293,18 @@ change, our migrate_settings method would look like this:
 Your migration rules can be simple or complex, but try to avoid simply
 forgetting the values, as settings are also used in saved workflows.
 Imagine opening a complex workflow you have designed a year ago with the
-new version of Orange and finding out that all the settings are back to
+new version of Arithmos and finding out that all the settings are back to
 default. Not fun!
 
 .. warning::
 
    If you change the format of an existing setting in a backwards-incompatible
    way, you will also want to *change the name* of that setting. Otherwise,
-   older versions of Orange won't be able to load workflows with the new
+   older versions of Arithmos won't be able to load workflows with the new
    setting format.
 
 There are two helper functions you can use.
-:obj:`Orange.widget.settings.rename_settings(settings, old_name, new_name)`
+:obj:`Arithmos.widget.settings.rename_settings(settings, old_name, new_name)`
 does the obvious operation on `settings`, which can be either a dictionary
 or a context, thus it can be called from `migrate_settings` or
 `migrate_context`.
@@ -313,7 +313,7 @@ Another common operation may be upgrading your widget from storing variable
 names (as `str`) to storing variables (instances of classes derived from
 `Variable`). In a typical scenario, this happens when combo boxes are upgraded to
 using models. Function
-:obj:`Orange.widget.settings.migrate_str_to_variable(settings, names=None)`
+:obj:`Arithmos.widget.settings.migrate_str_to_variable(settings, names=None)`
 makes the necessary changes to the settings listed in `names`. `names` can be
 a list of setting names, a single string or `None`. In the latter case, all
 settings that may refer to variables (that is two-elements tuples consisting
@@ -324,7 +324,7 @@ to some changes in the widget? For instance, a widget that used to accept any
 kind of variables is modified so that it requires a numeric variable?
 Context with categorical variables will match and be reused ... and crash the
 widget. In these (rare) cases, `migrate_context` must raise exception
-:obj:`Orange.widget.settings.IncompatibleContext` and the context will be
+:obj:`Arithmos.widget.settings.IncompatibleContext` and the context will be
 removed.
 
 So take some time, write the migrations and do not forget to bump the

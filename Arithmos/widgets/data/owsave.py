@@ -1,13 +1,13 @@
 import os.path
 
-from Orange.data.table import Table
-from Orange.data.io import \
+from Arithmos.data.table import Table
+from Arithmos.data.io import \
     TabReader, CSVReader, PickleReader, ExcelReader, XlsReader, FileFormat
-from Orange.widgets import gui, widget
-from Orange.widgets.widget import Input
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.save.owsavebase import OWSaveBase
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.widget import Input
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.save.owsavebase import OWSaveBase
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 _userhome = os.path.expanduser(f"~{os.sep}")

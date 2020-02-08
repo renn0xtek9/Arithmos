@@ -1,9 +1,9 @@
 import unittest
 
-from Orange.data import Table
-from Orange.ensembles.stack import StackedFitter
-from Orange.evaluation import CA, CrossValidation, MSE
-from Orange.modelling import KNNLearner, TreeLearner
+from Arithmos.data import Table
+from Arithmos.ensembles.stack import StackedFitter
+from Arithmos.evaluation import CA, CrossValidation, MSE
+from Arithmos.modelling import KNNLearner, TreeLearner
 
 
 class TestStackedFitter(unittest.TestCase):

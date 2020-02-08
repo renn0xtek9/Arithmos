@@ -6,36 +6,36 @@ from AnyQt.QtCore import Qt
 from AnyQt.QtGui import QColor, QPainter
 from AnyQt.QtWidgets import QLabel, QSizePolicy
 
-from Orange.base import TreeModel, SklModel
-from Orange.data.table import Table
-from Orange.widgets import gui, settings
-from Orange.widgets.utils.annotated_data import (
+from Arithmos.base import TreeModel, SklModel
+from Arithmos.data.table import Table
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.utils.annotated_data import (
     create_annotated_table,
     ANNOTATED_DATA_SIGNAL_NAME
 )
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.pythagorastreeviewer import (
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.pythagorastreeviewer import (
     PythagorasTreeViewer,
     SquareGraphicsItem,
     ContinuousTreeNode,
 )
-from Orange.widgets.visualize.utils.owlegend import (
+from Arithmos.widgets.visualize.utils.owlegend import (
     AnchorableGraphicsView,
     Anchorable,
     OWDiscreteLegend,
     OWContinuousLegend,
 )
-from Orange.widgets.visualize.utils.scene import \
+from Arithmos.widgets.visualize.utils.scene import \
     UpdateItemsOnSelectGraphicsScene
-from Orange.widgets.visualize.utils.tree.skltreeadapter import SklTreeAdapter
-from Orange.widgets.visualize.utils.tree.treeadapter import TreeAdapter
-from Orange.widgets.visualize.utils.view import (
+from Arithmos.widgets.visualize.utils.tree.skltreeadapter import SklTreeAdapter
+from Arithmos.widgets.visualize.utils.tree.treeadapter import TreeAdapter
+from Arithmos.widgets.visualize.utils.view import (
     PannableGraphicsView,
     ZoomableGraphicsView,
     PreventDefaultWheelEvent,
 )
-from Orange.widgets.widget import OWWidget
+from Arithmos.widgets.widget import OWWidget
 
 
 class OWPythagorasTree(OWWidget):
@@ -412,7 +412,7 @@ class TreeGraphicsScene(UpdateItemsOnSelectGraphicsScene):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.modelling import TreeLearner
+    from Arithmos.modelling import TreeLearner
     data = Table('iris')
     model = TreeLearner(max_depth=1000)(data)
     model.instances = data

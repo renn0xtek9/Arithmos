@@ -3,11 +3,11 @@ from unittest.mock import Mock, patch
 
 import numpy as np
 
-from Orange.base import Model
-from Orange.classification.calibration import \
+from Arithmos.base import Model
+from Arithmos.classification.calibration import \
     ThresholdLearner, ThresholdClassifier, \
     CalibratedLearner, CalibratedClassifier
-from Orange.data import Table
+from Arithmos.data import Table
 
 
 class TestThresholdClassifier(unittest.TestCase):
@@ -67,8 +67,8 @@ class TestThresholdClassifier(unittest.TestCase):
 
 
 class TestThresholdLearner(unittest.TestCase):
-    @patch("Orange.evaluation.performance_curves.Curves.from_results")
-    @patch("Orange.classification.calibration.TestOnTrainingData")
+    @patch("Arithmos.evaluation.performance_curves.Curves.from_results")
+    @patch("Arithmos.classification.calibration.TestOnTrainingData")
     def test_fit_storage(self, test_on_training, curves_from_results):
         curves_from_results.return_value = curves = Mock()
         curves.probs = np.array([0.1, 0.15, 0.3, 0.45, 0.6, 0.8])
@@ -168,8 +168,8 @@ class TestCalibratedClassifier(unittest.TestCase):
 
 
 class TestCalibratedLearner(unittest.TestCase):
-    @patch("Orange.classification.calibration._SigmoidCalibration.fit")
-    @patch("Orange.classification.calibration.TestOnTrainingData")
+    @patch("Arithmos.classification.calibration._SigmoidCalibration.fit")
+    @patch("Arithmos.classification.calibration.TestOnTrainingData")
     def test_fit_storage(self, test_on_training, sigmoid_fit):
         data = Table("heart_disease")
         learner = Mock()

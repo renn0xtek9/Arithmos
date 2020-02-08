@@ -1,12 +1,12 @@
 import numpy as np
 
-from Orange.data import Table
-from Orange.widgets import widget, gui
-from Orange.widgets.utils import itemmodels
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
-from Orange.widgets.utils.annotated_data import (create_annotated_table)
+from Arithmos.data import Table
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.utils import itemmodels
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table)
 
 
 class OWSelectByDataIndex(widget.OWWidget):

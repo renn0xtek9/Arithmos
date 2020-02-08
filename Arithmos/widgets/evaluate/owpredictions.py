@@ -11,19 +11,19 @@ from AnyQt.QtCore import (
     Qt, QSize, QRect, QRectF, QPoint, QLocale,
     QModelIndex, QAbstractTableModel, QSortFilterProxyModel, pyqtSignal)
 
-import Orange
-from Orange.evaluation import Results
-from Orange.base import Model
-from Orange.data import ContinuousVariable, DiscreteVariable, Value, Domain
-from Orange.data.table import DomainTransformationError
-from Orange.widgets import gui, settings
-from Orange.widgets.evaluate.utils import (
+import Arithmos
+from Arithmos.evaluation import Results
+from Arithmos.base import Model
+from Arithmos.data import ContinuousVariable, DiscreteVariable, Value, Domain
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.evaluate.utils import (
     ScoreTable, usable_scorers, learner_name, scorer_caller)
-from Orange.widgets.utils.colorpalette import ColorPaletteGenerator
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output
-from Orange.widgets.utils.itemmodels import TableModel
-from Orange.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.colorpalette import ColorPaletteGenerator
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output
+from Arithmos.widgets.utils.itemmodels import TableModel
+from Arithmos.widgets.utils.sql import check_sql_input
 
 
 # Input slot for the Predictors channel
@@ -43,11 +43,11 @@ class OWPredictions(OWWidget):
     keywords = []
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
         predictors = Input("Predictors", Model, multiple=True)
 
     class Outputs:
-        predictions = Output("Predictions", Orange.data.Table)
+        predictions = Output("Predictions", Arithmos.data.Table)
         evaluation_results = Output("Evaluation Results", Results)
 
     class Warning(OWWidget.Warning):
@@ -68,7 +68,7 @@ class OWPredictions(OWWidget):
     def __init__(self):
         super().__init__()
 
-        self.data = None  # type: Optional[Orange.data.Table]
+        self.data = None  # type: Optional[Arithmos.data.Table]
         self.predictors = {}  # type: Dict[object, PredictorSlot]
         self.class_values = []  # type: List[str]
         self._delegates = []
@@ -527,7 +527,7 @@ class OWPredictions(OWWidget):
 
         attrs = list(self.data.domain.attributes)
         metas = list(self.data.domain.metas) + newmetas
-        domain = Orange.data.Domain(attrs, self.class_var, metas=metas)
+        domain = Arithmos.data.Domain(attrs, self.class_var, metas=metas)
         predictions = self.data.transform(domain)
         if newcolumns:
             newcolumns = numpy.hstack(
@@ -931,7 +931,7 @@ def tool_tip(value):
 
 if __name__ == "__main__":  # pragma: no cover
     filename = "iris.tab"
-    iris = Orange.data.Table(filename)
+    iris = Arithmos.data.Table(filename)
     idom = iris.domain
     dom = Domain(
         idom.attributes,
@@ -947,14 +947,14 @@ if __name__ == "__main__":  # pragma: no cover
 
     if iris.domain.has_discrete_class:
         predictors_ = [
-            Orange.classification.SVMLearner(probability=True)(iris2),
-            Orange.classification.LogisticRegressionLearner()(iris),
+            Arithmos.classification.SVMLearner(probability=True)(iris2),
+            Arithmos.classification.LogisticRegressionLearner()(iris),
             pred_error
         ]
     elif iris.domain.has_continuous_class:
         predictors_ = [
-            Orange.regression.RidgeRegressionLearner(alpha=1.0)(iris),
-            Orange.regression.LinearRegressionLearner()(iris),
+            Arithmos.regression.RidgeRegressionLearner(alpha=1.0)(iris),
+            Arithmos.regression.LinearRegressionLearner()(iris),
             pred_error
         ]
     else:

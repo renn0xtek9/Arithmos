@@ -7,5 +7,5 @@ source arithmosvenv/bin/activate
 pip install PyQt5 PyQtWebEngine
 # pip install arithmos
 pip install Arithmos
-orange-canvas
+arithmos-canvas
 

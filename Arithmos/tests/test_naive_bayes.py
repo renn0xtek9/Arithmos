@@ -7,14 +7,14 @@ from unittest.mock import Mock
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.classification import NaiveBayesLearner
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.evaluation import CrossValidation, CA
+from Arithmos.classification import NaiveBayesLearner
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.evaluation import CrossValidation, CA
 
 
 # This class is used to force predict_storage to fall back to the slower
 # procedure instead of calling `predict`
-from Orange.tests import test_filename
+from Arithmos.tests import test_filename
 
 
 class NotATable(Table):  # pylint: disable=too-many-ancestors,abstract-method

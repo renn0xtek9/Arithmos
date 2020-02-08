@@ -8,16 +8,16 @@ from pyqtgraph import InfiniteLine
 
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.data import Table, DiscreteVariable, Domain, ContinuousVariable
-import Orange.evaluation
-import Orange.classification
-from Orange.evaluation import Results
-from Orange.evaluation.performance_curves import Curves
+from Arithmos.data import Table, DiscreteVariable, Domain, ContinuousVariable
+import Arithmos.evaluation
+import Arithmos.classification
+from Arithmos.evaluation import Results
+from Arithmos.evaluation.performance_curves import Curves
 
-from Orange.widgets.evaluate.tests.base import EvaluateTest
-from Orange.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
-from Orange.widgets.tests.base import WidgetTest
-from Orange.tests import test_filename
+from Arithmos.widgets.evaluate.tests.base import EvaluateTest
+from Arithmos.widgets.evaluate.owcalibrationplot import OWCalibrationPlot
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.tests import test_filename
 
 
 class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
@@ -47,13 +47,13 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
             probabilities=np.array([probs, probs2]))
 
         self.lenses = data = Table(test_filename("datasets/lenses.tab"))
-        majority = Orange.classification.MajorityLearner()
+        majority = Arithmos.classification.MajorityLearner()
         majority.name = "majority"
-        knn3 = Orange.classification.KNNLearner(n_neighbors=3)
+        knn3 = Arithmos.classification.KNNLearner(n_neighbors=3)
         knn3.name = "knn-3"
-        knn1 = Orange.classification.KNNLearner(n_neighbors=1)
+        knn1 = Arithmos.classification.KNNLearner(n_neighbors=1)
         knn1.name = "knn-1"
-        self.lenses_results = Orange.evaluation.TestOnTestData(
+        self.lenses_results = Arithmos.evaluation.TestOnTestData(
             store_data=True, store_models=True)(
                 data=data[::2], test_data=data[1::2],
                 learners=[majority, knn3, knn1])
@@ -174,8 +174,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
                 return plot_items, item
         return plot_items, None
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_plotting_curves(self, *_):
         """Curve coordinates match those computed by `Curves`"""
         widget = self.widget
@@ -206,8 +206,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
                 else:
                     self.fail(f"invalid curve for {combo.currentText()}")
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_multiple_fold_curves(self, *_):
         widget = self.widget
         widget.display_rug = False
@@ -229,8 +229,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         curves, _ = self._get_curves()
         self.assertEqual(len(curves), 1)
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_change_target_class(self, *_):
         """Changing target combo changes the curves"""
         widget = self.widget
@@ -379,8 +379,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         self.assertEqual(widget.threshold, 0.25)
 
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_apply_no_output(self, *_):
         """Test no output warnings"""
         widget = self.widget
@@ -446,7 +446,7 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         self._set_list_selection(model_list, [0])
         test_shown(())
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
     def test_output_threshold_classifier(self, threshold_classifier):
         """Test threshold classifier on output"""
         widget = self.widget
@@ -493,7 +493,7 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         self.assertIs(model, threshold_classifier.return_value)
         threshold_classifier.reset_mock()
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_output_calibrated_classifier(self, calibrated_learner):
         """Test calibrated classifier on output"""
         calibrated_instance = calibrated_learner.return_value
@@ -563,8 +563,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         self.send_signal(widget.Inputs.evaluation_results, self.lenses_results)
         widget.send_report()
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_single_class(self, *_):
         """Curves are not plotted if all data belongs to (non)-target"""
         def check_error(shown):
@@ -605,8 +605,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
             self.send_signal(widget.Inputs.evaluation_results, self.results)
             check_error(None)
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_single_class_folds(self, *_):
         """Curves for single-class folds are not plotted"""
         widget = self.widget
@@ -625,8 +625,8 @@ class TestOWCalibrationPlot(WidgetTest, EvaluateTest):
         widget.controls.fold_curves.click()
         self.assertTrue(widget.Warning.omitted_folds.is_shown())
 
-    @patch("Orange.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
-    @patch("Orange.widgets.evaluate.owcalibrationplot.CalibratedLearner")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.ThresholdClassifier")
+    @patch("Arithmos.widgets.evaluate.owcalibrationplot.CalibratedLearner")
     def test_warn_nan_probabilities(self, *_):
         """Warn about omitted points with nan probabiities"""
         widget = self.widget

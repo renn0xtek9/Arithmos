@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Orange Development documentation build configuration file, created by
+# Arithmos Development documentation build configuration file, created by
 # sphinx-quickstart on Fri Nov 27 14:32:45 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -61,9 +61,9 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Orange Development"
-copyright = "2015, Orange Data Mining"
-author = "Orange Data Mining"
+project = "Arithmos Development"
+copyright = "2015, Arithmos Data Mining"
+author = "Arithmos Data Mining"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -215,7 +215,7 @@ html_theme = "alabaster"
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "OrangeDevelopmentdoc"
+htmlhelp_basename = "ArithmosDevelopmentdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -236,9 +236,9 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "OrangeDevelopment.tex",
-        "Orange Development Documentation",
-        "Orange Data Mining",
+        "ArithmosDevelopment.tex",
+        "Arithmos Development Documentation",
+        "Arithmos Data Mining",
         "manual",
     )
 ]
@@ -269,7 +269,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, "orangedevelopment", "Orange Development Documentation", [author], 1)
+    (master_doc, "arithmosdevelopment", "Arithmos Development Documentation", [author], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -284,10 +284,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "OrangeDevelopment",
-        "Orange Development Documentation",
+        "ArithmosDevelopment",
+        "Arithmos Development Documentation",
         author,
-        "OrangeDevelopment",
+        "ArithmosDevelopment",
         "One line description of project.",
         "Miscellaneous",
     )
@@ -379,5 +379,5 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
     "https://docs.python.org/3/": None,
-    "https://orange-widget-base.readthedocs.io/en/latest/": None,
+    "https://arithmos-widget-base.readthedocs.io/en/latest/": None,
 }

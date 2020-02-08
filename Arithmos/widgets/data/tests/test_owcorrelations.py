@@ -9,16 +9,16 @@ import numpy.testing as npt
 
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.tests import test_filename
-from Orange.widgets.data.owcorrelations import (
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.tests import test_filename
+from Arithmos.widgets.data.owcorrelations import (
     OWCorrelations, KMeansCorrelationHeuristic, CorrelationRank,
     CorrelationType
 )
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owscatterplot import OWScatterPlot
-from Orange.widgets.widget import AttributeList
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owscatterplot import OWScatterPlot
+from Arithmos.widgets.widget import AttributeList
 
 
 class TestOWCorrelations(WidgetTest):
@@ -275,7 +275,7 @@ class TestOWCorrelations(WidgetTest):
                              [a.name for a in self.get_output(
                                  self.widget.Outputs.features)])
 
-    @patch("Orange.widgets.data.owcorrelations.SIZE_LIMIT", 2000)
+    @patch("Arithmos.widgets.data.owcorrelations.SIZE_LIMIT", 2000)
     def test_vizrank_use_heuristic(self):
         self.send_signal(self.widget.Inputs.data, self.data_cont)
         time.sleep(0.1)
@@ -283,7 +283,7 @@ class TestOWCorrelations(WidgetTest):
         self.assertTrue(self.widget.vizrank.use_heuristic)
         self.assertEqual(self.widget.vizrank.rank_model.rowCount(), 6)
 
-    @patch("Orange.widgets.data.owcorrelations.SIZE_LIMIT", 2000)
+    @patch("Arithmos.widgets.data.owcorrelations.SIZE_LIMIT", 2000)
     def test_select_feature_against_heuristic(self):
         """Never use heuristic if feature is selected"""
         feature_combo = self.widget.controls.feature

@@ -6,8 +6,8 @@ from AnyQt.QtCore import (
 )
 from AnyQt.QtCore import pyqtSignal as Signal
 
-from Orange.widgets.utils.itemmodels import VariableListModel, PyListModel
-import Orange
+from Arithmos.widgets.utils.itemmodels import VariableListModel, PyListModel
+import Arithmos
 
 
 def slices(indices):
@@ -44,7 +44,7 @@ class VariablesListItemView(QListView):
     #: view) completed successfully
     dragDropActionDidComplete = Signal(int)
 
-    def __init__(self, parent=None, acceptedType=Orange.data.Variable):
+    def __init__(self, parent=None, acceptedType=Arithmos.data.Variable):
         super().__init__(parent)
         self.setSelectionMode(self.ExtendedSelection)
         self.setAcceptDrops(True)
@@ -169,7 +169,7 @@ class CompleterNavigator(QObject):
             return False
 
 
-def variables_filter(model, parent=None, accepted_type=Orange.data.Variable,
+def variables_filter(model, parent=None, accepted_type=Arithmos.data.Variable,
                      view_type=VariablesListItemView):
     """
     GUI components: ListView with a lineedit which works as a filter. One can write

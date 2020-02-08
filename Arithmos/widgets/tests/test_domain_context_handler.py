@@ -3,12 +3,12 @@ from distutils.version import LooseVersion
 from unittest import TestCase
 from unittest.mock import Mock
 
-import Orange
-from Orange.data import Domain, DiscreteVariable
-from Orange.data import ContinuousVariable
-from Orange.util import OrangeDeprecationWarning
-from Orange.widgets.settings import DomainContextHandler, ContextSetting
-from Orange.widgets.utils import vartype
+import Arithmos
+from Arithmos.data import Domain, DiscreteVariable
+from Arithmos.data import ContinuousVariable
+from Arithmos.util import ArithmosDeprecationWarning
+from Arithmos.widgets.settings import DomainContextHandler, ContextSetting
+from Arithmos.widgets.utils import vartype
 
 Continuous = 100 + vartype(ContinuousVariable("x"))
 Discrete = 100 + vartype(DiscreteVariable("x"))
@@ -217,7 +217,7 @@ class TestDomainContextHandler(TestCase):
         self.assertEqual(val, (var.name, 100 + vartype(var)))
 
         # Should not crash on anonymous variables
-        with self.assertWarns(OrangeDeprecationWarning):
+        with self.assertWarns(ArithmosDeprecationWarning):
             var = ContinuousVariable()
         val = self.handler.encode_setting(None, setting, var)
         self.assertEqual(val, (var.name, 100 + vartype(var)))
@@ -280,11 +280,11 @@ class TestDomainContextHandler(TestCase):
         with warnings.catch_warnings(record=True) as w:
             warnings.simplefilter("always")
             DomainContextHandler(metas_in_res=True)
-            self.assertIn(OrangeDeprecationWarning,
+            self.assertIn(ArithmosDeprecationWarning,
                           [x.category for x in w])
 
     def test_deprecated_str_as_var(self):
-        if LooseVersion(Orange.__version__) >= LooseVersion("3.26"):
+        if LooseVersion(Arithmos.__version__) >= LooseVersion("3.26"):
             # pragma: no cover
             self.fail("Remove support for variables stored as string settings "
                       "and this test.")

@@ -1,17 +1,17 @@
-Orange development
+Arithmos development
 ==================
 
-The source code of [Orange] is versioned in [Git] and hosted on [GitHub]. 
+The source code of [Arithmos] is versioned in [Git] and hosted on [GitHub]. 
 If you want to contribute to this open-source project you will have to use git. However, for minor experimentation with the source code you can also get by without. 
 
-[Orange]: https://orange.biolab.si/
+[Arithmos]: https://arithmos.biolab.si/
 [Git]: https://git-scm.com/
-[GitHub]: https://github.com/biolab/orange
+[GitHub]: https://github.com/biolab/arithmos
 
 Prerequisites
 -------------
 
-[Orange] is written mostly in Python, therefore you'll need [Python 3] version 3.6 or newer.
+[Arithmos] is written mostly in Python, therefore you'll need [Python 3] version 3.6 or newer.
 
 You will also need a C/C++ compiler. On Windows, you can get one by installing [Visual Studio].
 A slightly more "minimalistic" option is to install only its [Build Tools].
@@ -44,10 +44,10 @@ and run the setup script with a development option, which will link to the sourc
 
     python setup.py develop
     
-Verify the installation by importing the Orange package from Python and loading an example Iris dataset.
+Verify the installation by importing the Arithmos package from Python and loading an example Iris dataset.
 
-    >>> import Orange
-    >>> print(Orange.data.Table("iris")[0])
+    >>> import Arithmos
+    >>> print(Arithmos.data.Table("iris")[0])
     [5.1, 3.5, 1.4, 0.2 | Iris-setosa]
 
 Using the graphic user interface requires some additional packages
@@ -58,9 +58,9 @@ and Qt dependencies.
 
     pip install PyQt5 PyQtWebEngine
 
-To start Orange GUI from the command line, run:
+To start Arithmos GUI from the command line, run:
 
-    python3 -m Orange.canvas
+    python3 -m Arithmos.canvas
 
 Contributing
 ------------

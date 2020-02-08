@@ -1,5 +1,5 @@
 import unittest
-from Orange.widgets.settings import Context, migrate_str_to_variable
+from Arithmos.widgets.settings import Context, migrate_str_to_variable
 
 
 class MigrationsTestCase(unittest.TestCase):

@@ -1,7 +1,7 @@
 """Test rules for classification and regression trees."""
 import unittest
 
-from Orange.widgets.visualize.utils.tree.rules import (
+from Arithmos.widgets.visualize.utils.tree.rules import (
     ContinuousRule,
     IntervalRule,
 )
@@ -12,7 +12,7 @@ class TestRules(unittest.TestCase):
 
     See Also
     --------
-    Orange.widgets.visualize.widgetutils.tree.rules
+    Arithmos.widgets.visualize.widgetutils.tree.rules
 
     """
     # CONTINUOUS RULES

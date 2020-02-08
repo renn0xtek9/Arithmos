@@ -23,18 +23,18 @@ from AnyQt.QtCore import (
     Qt, QItemSelection, QItemSelectionRange, QItemSelectionModel,
 )
 
-from Orange.data import (Table, Domain, ContinuousVariable, DiscreteVariable,
+from Arithmos.data import (Table, Domain, ContinuousVariable, DiscreteVariable,
                          StringVariable)
-from Orange.misc.cache import memoize_method
-from Orange.preprocess import score
-from Orange.widgets import report
-from Orange.widgets import gui
-from Orange.widgets.settings import (DomainContextHandler, Setting,
+from Arithmos.misc.cache import memoize_method
+from Arithmos.preprocess import score
+from Arithmos.widgets import report
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import (DomainContextHandler, Setting,
                                      ContextSetting)
-from Orange.widgets.utils.itemmodels import PyTableModel
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import (
+from Arithmos.widgets.utils.itemmodels import PyTableModel
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import (
     OWWidget, Msg, Input, Output, AttributeList
 )
 
@@ -592,7 +592,7 @@ class OWRank(OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.classification import RandomForestLearner
+    from Arithmos.classification import RandomForestLearner
     previewer = WidgetPreview(OWRank)
     previewer.run(Table("heart_disease.tab"), no_exit=True)
     previewer.send_signals(

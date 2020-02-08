@@ -8,10 +8,10 @@ from numbers import Integral
 
 import numpy as np
 
-from Orange.data import (
+from Arithmos.data import (
     Unknown, Variable, ContinuousVariable, DiscreteVariable, StringVariable
 )
-from Orange.util import deprecated, OrangeDeprecationWarning
+from Arithmos.util import deprecated, ArithmosDeprecationWarning
 
 __all__ = ["DomainConversion", "Domain"]
 
@@ -121,7 +121,7 @@ class Domain:
         :param metas: a list of meta attributes
         :type metas: list of :class:`Variable`
         :param source: the source domain for attributes
-        :type source: Orange.data.Domain
+        :type source: Arithmos.data.Domain
         :return: a new domain
         :rtype: :class:`Domain`
         """
@@ -178,7 +178,7 @@ class Domain:
     def from_numpy(cls, X, Y=None, metas=None):
         """
         Create a domain corresponding to the given numpy arrays. This method
-        is usually invoked from :meth:`Orange.data.Table.from_numpy`.
+        is usually invoked from :meth:`Arithmos.data.Table.from_numpy`.
 
         All attributes are assumed to be continuous and are named
         "Feature <n>". Target variables are discrete if the only two values
@@ -251,7 +251,7 @@ class Domain:
     def __bool__(self):
         warnings.warn(
             "Domain.__bool__ is ambiguous; use 'is None' or 'empty' instead",
-            OrangeDeprecationWarning, stacklevel=2)
+            ArithmosDeprecationWarning, stacklevel=2)
         return len(self) > 0  # Keep the obsolete behaviour
 
     def empty(self):
@@ -406,7 +406,7 @@ class Domain:
         discretized variables from another domain.
 
         :param source: the source domain
-        :type source: Orange.data.Domain
+        :type source: Arithmos.data.Domain
         """
         # the method is thread-safe
         c = self._last_conversion

@@ -1,14 +1,14 @@
-import Orange
+import Arithmos
 import random
 
 random.seed(42)
-data = Orange.data.Table("voting")
-test = Orange.data.Table(data.domain, random.sample(data, 5))
-train = Orange.data.Table(data.domain, [d for d in data if d not in test])
+data = Arithmos.data.Table("voting")
+test = Arithmos.data.Table(data.domain, random.sample(data, 5))
+train = Arithmos.data.Table(data.domain, [d for d in data if d not in test])
 
-tree = Orange.classification.tree.TreeLearner(max_depth=3)
-knn = Orange.classification.knn.KNNLearner(n_neighbors=3)
-lr = Orange.classification.LogisticRegressionLearner(C=0.1)
+tree = Arithmos.classification.tree.TreeLearner(max_depth=3)
+knn = Arithmos.classification.knn.KNNLearner(n_neighbors=3)
+lr = Arithmos.classification.LogisticRegressionLearner(C=0.1)
 
 learners = [tree, knn, lr]
 classifiers = [learner(train) for learner in learners]

@@ -3,8 +3,8 @@
 import unittest
 import numpy as np
 
-from Orange.data import Table, Domain
-from Orange.projection import RadViz
+from Arithmos.data import Table, Domain
+from Arithmos.projection import RadViz
 
 
 class TestRadViz(unittest.TestCase):

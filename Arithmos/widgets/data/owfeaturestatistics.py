@@ -20,16 +20,16 @@ from AnyQt.QtGui import QPainter, QColor
 from AnyQt.QtWidgets import QStyledItemDelegate, QGraphicsScene, QTableView, \
     QHeaderView, QStyle, QStyleOptionViewItem
 
-import Orange.statistics.util as ut
-from Orange.data import Table, StringVariable, DiscreteVariable, \
+import Arithmos.statistics.util as ut
+from Arithmos.data import Table, StringVariable, DiscreteVariable, \
     ContinuousVariable, TimeVariable, Domain, Variable
-from Orange.widgets import widget, gui
-from Orange.widgets.data.utils.histogram import Histogram
-from Orange.widgets.report import plural
-from Orange.widgets.settings import ContextSetting, DomainContextHandler
-from Orange.widgets.utils.itemmodels import DomainModel, AbstractSortTableModel
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.data.utils.histogram import Histogram
+from Arithmos.widgets.report import plural
+from Arithmos.widgets.settings import ContextSetting, DomainContextHandler
+from Arithmos.widgets.utils.itemmodels import DomainModel, AbstractSortTableModel
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 def _categorical_entropy(x):

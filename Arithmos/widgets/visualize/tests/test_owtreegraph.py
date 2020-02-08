@@ -2,10 +2,10 @@
 # pylint: disable=missing-docstring
 from os import path
 
-from Orange.classification import TreeLearner
-from Orange.data import Table
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.visualize.owtreeviewer import OWTreeGraph
+from Arithmos.classification import TreeLearner
+from Arithmos.data import Table
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.visualize.owtreeviewer import OWTreeGraph
 
 
 class TestOWTreeGraph(WidgetTest, WidgetOutputsTestMixin):

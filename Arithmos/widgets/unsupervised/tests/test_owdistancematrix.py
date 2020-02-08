@@ -1,9 +1,9 @@
 from unittest.mock import patch
 
-from Orange.data import Table
-from Orange.distance import Euclidean
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.unsupervised.owdistancematrix import OWDistanceMatrix
+from Arithmos.data import Table
+from Arithmos.distance import Euclidean
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.unsupervised.owdistancematrix import OWDistanceMatrix
 
 
 class TestOWDistanceMatrix(WidgetTest):

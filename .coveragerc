@@ -4,10 +4,10 @@ concurrency =
     multiprocessing
     thread
 source =
-    Orange
+    Arithmos
 omit =
-    Orange/canvas/*
-    Orange/tests/*
+    Arithmos/canvas/*
+    Arithmos/tests/*
     */setup.py
     */*/setup.py
 

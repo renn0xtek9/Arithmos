@@ -1,4 +1,4 @@
-from orangewidget.io import (
+from arithmoswidget.io import (
     ImgFormat,
     PngFormat,
     SvgFormat,

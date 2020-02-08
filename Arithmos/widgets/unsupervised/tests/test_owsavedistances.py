@@ -3,14 +3,14 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import Table, Domain, StringVariable
-from Orange.distance import Euclidean
-from Orange.misc import DistMatrix
-from Orange.tests import named_file
-from Orange.widgets.unsupervised.owsavedistances import OWSaveDistances
-from Orange.widgets.utils.save.tests.test_owsavebase import \
+from Arithmos.data import Table, Domain, StringVariable
+from Arithmos.distance import Euclidean
+from Arithmos.misc import DistMatrix
+from Arithmos.tests import named_file
+from Arithmos.widgets.unsupervised.owsavedistances import OWSaveDistances
+from Arithmos.widgets.utils.save.tests.test_owsavebase import \
     SaveWidgetsTestBaseMixin
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class OWSaveTestBase(WidgetTest, SaveWidgetsTestBaseMixin):

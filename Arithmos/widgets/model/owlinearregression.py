@@ -3,15 +3,15 @@ from itertools import chain
 from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QLayout, QSizePolicy
 
-from Orange.data import Table, Domain, ContinuousVariable, StringVariable
-from Orange.regression.linear import (
+from Arithmos.data import Table, Domain, ContinuousVariable, StringVariable
+from Arithmos.regression.linear import (
     LassoRegressionLearner, LinearRegressionLearner,
     RidgeRegressionLearner, ElasticNetLearner
 )
-from Orange.widgets import settings, gui
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Output
+from Arithmos.widgets import settings, gui
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Output
 
 
 class OWLinearRegression(OWBaseLearner):
@@ -20,7 +20,7 @@ class OWLinearRegression(OWBaseLearner):
                   "L2 (ridge) or L1L2 (elastic net) regularization."
     icon = "icons/LinearRegression.svg"
     replaces = [
-        "Orange.widgets.regression.owlinearregression.OWLinearRegression",
+        "Arithmos.widgets.regression.owlinearregression.OWLinearRegression",
     ]
     priority = 60
     keywords = ["ridge", "lasso", "elastic net"]

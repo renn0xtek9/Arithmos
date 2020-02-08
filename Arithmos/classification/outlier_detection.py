@@ -1,18 +1,18 @@
 # pylint: disable=unused-argument
 import numpy as np
 
-from Orange.data.table import DomainTransformationError
-from Orange.data.util import get_unique_names
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.data.util import get_unique_names
 from sklearn.covariance import EllipticEnvelope
 from sklearn.ensemble import IsolationForest
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.svm import OneClassSVM
 
-from Orange.base import SklLearner, SklModel
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable, \
+from Arithmos.base import SklLearner, SklModel
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable, \
     Variable
-from Orange.preprocess import AdaptiveNormalize
-from Orange.statistics.util import all_nan
+from Arithmos.preprocess import AdaptiveNormalize
+from Arithmos.statistics.util import all_nan
 
 __all__ = ["LocalOutlierFactorLearner", "IsolationForestLearner",
            "EllipticEnvelopeLearner", "OneClassSVMLearner"]

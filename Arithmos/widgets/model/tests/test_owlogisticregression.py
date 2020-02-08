@@ -4,12 +4,12 @@ import unittest
 
 import numpy as np
 
-from Orange.classification import LogisticRegressionLearner
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.statistics.util import stats
-from Orange.widgets.model.owlogisticregression import (create_coef_table,
+from Arithmos.classification import LogisticRegressionLearner
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.statistics.util import stats
+from Arithmos.widgets.model.owlogisticregression import (create_coef_table,
                                                        OWLogisticRegression)
-from Orange.widgets.tests.base import (WidgetTest, WidgetLearnerTestMixin,
+from Arithmos.widgets.tests.base import (WidgetTest, WidgetLearnerTestMixin,
                                        ParameterMapping)
 
 

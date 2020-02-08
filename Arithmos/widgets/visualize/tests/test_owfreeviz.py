@@ -5,14 +5,14 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.projection import FreeViz
-from Orange.projection.freeviz import FreeVizModel
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table
+from Arithmos.projection import FreeViz
+from Arithmos.projection.freeviz import FreeVizModel
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, AnchorProjectionWidgetTestMixin
 )
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.visualize.owfreeviz import OWFreeViz, Result, run_freeviz
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.visualize.owfreeviz import OWFreeViz, Result, run_freeviz
 
 
 class TestOWFreeViz(WidgetTest, AnchorProjectionWidgetTestMixin,

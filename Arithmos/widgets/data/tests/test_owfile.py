@@ -14,20 +14,20 @@ from AnyQt.QtCore import QMimeData, QPoint, Qt, QUrl
 from AnyQt.QtGui import QDragEnterEvent, QDropEvent
 from AnyQt.QtWidgets import QComboBox
 
-import Orange
+import Arithmos
 
-from Orange.data import FileFormat, dataset_dirs, StringVariable, Table, \
+from Arithmos.data import FileFormat, dataset_dirs, StringVariable, Table, \
     Domain, DiscreteVariable, ContinuousVariable
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.util import ArithmosDeprecationWarning
 
-from Orange.data.io import TabReader
-from Orange.tests import named_file
-from Orange.widgets.data.owfile import OWFile
-from Orange.widgets.utils.filedialogs import dialog_formats, format_filter, RecentPath
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils.domaineditor import ComboDelegate, VarTypeDelegate, VarTableModel
+from Arithmos.data.io import TabReader
+from Arithmos.tests import named_file
+from Arithmos.widgets.data.owfile import OWFile
+from Arithmos.widgets.utils.filedialogs import dialog_formats, format_filter, RecentPath
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils.domaineditor import ComboDelegate, VarTypeDelegate, VarTableModel
 
-TITANIC_PATH = path.join(path.dirname(Orange.__file__), 'datasets', 'titanic.tab')
+TITANIC_PATH = path.join(path.dirname(Arithmos.__file__), 'datasets', 'titanic.tab')
 orig_path_exists = path.exists
 
 
@@ -49,7 +49,7 @@ class WithWarnings(FileFormat):
     @staticmethod
     def read():
         warnings.warn("Some warning")
-        return Orange.data.Table("iris")
+        return Arithmos.data.Table("iris")
 
 
 class MyCustomTabReader(FileFormat):
@@ -59,7 +59,7 @@ class MyCustomTabReader(FileFormat):
 
     @staticmethod
     def read():
-        return Orange.data.Table("iris")
+        return Arithmos.data.Table("iris")
 
 
 class TestOWFile(WidgetTest):
@@ -333,7 +333,7 @@ a
 
     def test_fail(self):
         with named_file("name\nc\n\nstring", suffix=".tab") as fn, \
-                patch("Orange.widgets.data.owfile.log.exception") as log:
+                patch("Arithmos.widgets.data.owfile.log.exception") as log:
             self.open_dataset(fn)
             log.assert_called()
         self.assertTrue(self.widget.Error.unknown.is_shown())
@@ -357,7 +357,7 @@ a
                    open_iris_with_tab):
             self.widget.browse_file()
 
-        self.assertEqual(self.widget.recent_paths[0].file_format, "Orange.data.io.TabReader")
+        self.assertEqual(self.widget.recent_paths[0].file_format, "Arithmos.data.io.TabReader")
 
     def test_no_specified_reader(self):
         with named_file("", suffix=".tab") as fn:
@@ -406,7 +406,7 @@ a
         self.assertIsNone(data)
 
     def test_call_deprecated_dialog_formats(self):
-        with self.assertWarns(OrangeDeprecationWarning):
+        with self.assertWarns(ArithmosDeprecationWarning):
             self.assertIn("Tab", dialog_formats())
 
     def test_add_new_format(self):
@@ -418,7 +418,7 @@ a
                 called = True
                 self.assertIn(FailedSheetsFormat, ff)
                 return filename, TabReader, ""
-            with patch("Orange.widgets.data.owfile.open_filename_dialog", test_format):
+            with patch("Arithmos.widgets.data.owfile.open_filename_dialog", test_format):
                 self.widget.browse_file()
         self.assertTrue(called)
 
@@ -490,7 +490,7 @@ a
         mock_urlreader = Mock(side_effect=ValueError())
         url = 'foo.bar/xxx.csv'
 
-        with patch('Orange.widgets.data.owfile.UrlReader', mock_urlreader):
+        with patch('Arithmos.widgets.data.owfile.UrlReader', mock_urlreader):
             self.widget.url_combo.insertItem(0, url)
             self.widget.url_combo.activated.emit(0)
 
@@ -514,7 +514,7 @@ a
         self.assertIn("origin", attrs)
         self.assertIn("origin1", attrs["origin"])
 
-    @patch("Orange.widgets.widget.OWWidget.workflowEnv",
+    @patch("Arithmos.widgets.widget.OWWidget.workflowEnv",
            Mock(return_value={"basedir": getcwd()}))
     def test_open_moved_workflow(self):
         """Test opening workflow that has been moved to another location
@@ -538,7 +538,7 @@ a
         finally:
             remove(file_name)
 
-    @patch("Orange.widgets.widget.OWWidget.workflowEnv",
+    @patch("Arithmos.widgets.widget.OWWidget.workflowEnv",
            Mock(return_value={"basedir": getcwd()}))
     def test_files_relocated(self):
         """

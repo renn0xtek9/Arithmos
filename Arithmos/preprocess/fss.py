@@ -5,9 +5,9 @@ from operator import itemgetter
 import numpy as np
 
 
-import Orange
-from Orange.util import Reprable
-from Orange.preprocess.score import ANOVA, GainRatio, \
+import Arithmos
+from Arithmos.util import Reprable
+from Arithmos.preprocess.score import ANOVA, GainRatio, \
     UnivariateLinearRegression
 
 __all__ = ["SelectBestFeatures", "SelectRandomFeatures"]
@@ -30,7 +30,7 @@ class SelectBestFeatures(Reprable):
 
     Parameters
     ----------
-    method : Orange.preprocess.score.ClassificationScorer, Orange.preprocess.score.SklScorer
+    method : Arithmos.preprocess.score.ClassificationScorer, Arithmos.preprocess.score.SklScorer
         Univariate feature scoring method.
 
     k : int or float
@@ -86,7 +86,7 @@ class SelectBestFeatures(Reprable):
                     (lambda x: x[0] <= self.threshold))
             best = takewhile(pred, best)
 
-        domain = Orange.data.Domain([f for s, f in best],
+        domain = Arithmos.data.Domain([f for s, f in best],
                                     data.domain.class_vars, data.domain.metas)
         return data.transform(domain)
 
@@ -126,7 +126,7 @@ class SelectRandomFeatures(Reprable):
         else:
             effective_k = self.k
 
-        domain = Orange.data.Domain(
+        domain = Arithmos.data.Domain(
             random.sample(data.domain.attributes,
                           min(effective_k, len(data.domain.attributes))),
             data.domain.class_vars, data.domain.metas)

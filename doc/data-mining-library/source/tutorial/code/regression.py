@@ -1,7 +1,7 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("housing")
-learner = Orange.regression.LinearRegressionLearner()
+data = Arithmos.data.Table("housing")
+learner = Arithmos.regression.LinearRegressionLearner()
 model = learner(data)
 
 print("predicted, observed:")

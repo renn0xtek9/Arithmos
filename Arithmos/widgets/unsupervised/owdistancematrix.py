@@ -8,16 +8,16 @@ from AnyQt.QtGui import QColor, QPen, QBrush
 from AnyQt.QtCore import Qt, QAbstractTableModel, QModelIndex, \
     QItemSelectionModel, QItemSelection, QSize
 
-from Orange.data import Table, Variable, ContinuousVariable, DiscreteVariable
-from Orange.misc import DistMatrix
-from Orange.widgets import widget, gui
-from Orange.widgets.data.owtable import ranges
-from Orange.widgets.gui import OrangeUserRole
-from Orange.widgets.settings import Setting, ContextSetting, ContextHandler
-from Orange.widgets.utils.colorpalette import ContinuousPaletteGenerator
-from Orange.widgets.utils.itemmodels import VariableListModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.data import Table, Variable, ContinuousVariable, DiscreteVariable
+from Arithmos.misc import DistMatrix
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.data.owtable import ranges
+from Arithmos.widgets.gui import ArithmosUserRole
+from Arithmos.widgets.settings import Setting, ContextSetting, ContextHandler
+from Arithmos.widgets.utils.colorpalette import ContinuousPaletteGenerator
+from Arithmos.widgets.utils.itemmodels import VariableListModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 class DistanceMatrixModel(QAbstractTableModel):
@@ -107,7 +107,7 @@ class DistanceMatrixModel(QAbstractTableModel):
 
 
 class TableBorderItem(QItemDelegate):
-    BorderColorRole = next(OrangeUserRole)
+    BorderColorRole = next(ArithmosUserRole)
 
     def paint(self, painter, option, index):
         super().paint(painter, option, index)
@@ -378,7 +378,7 @@ class OWDistanceMatrix(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    import Orange.distance
-    data = Orange.data.Table("iris")
-    dist = Orange.distance.Euclidean(data[:50])
+    import Arithmos.distance
+    data = Arithmos.data.Table("iris")
+    dist = Arithmos.distance.Euclidean(data[:50])
     WidgetPreview(OWDistanceMatrix).run(dist)

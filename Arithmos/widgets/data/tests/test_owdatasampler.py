@@ -2,9 +2,9 @@
 # pylint: disable=missing-docstring,unsubscriptable-object
 from unittest.mock import Mock
 
-from Orange.data import Table
-from Orange.widgets.data.owdatasampler import OWDataSampler
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.data import Table
+from Arithmos.widgets.data.owdatasampler import OWDataSampler
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWDataSampler(WidgetTest):

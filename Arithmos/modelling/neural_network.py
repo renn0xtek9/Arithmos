@@ -1,6 +1,6 @@
-from Orange.classification import NNClassificationLearner
-from Orange.modelling import SklFitter
-from Orange.regression import NNRegressionLearner
+from Arithmos.classification import NNClassificationLearner
+from Arithmos.modelling import SklFitter
+from Arithmos.regression import NNRegressionLearner
 
 __all__ = ['NNLearner']
 

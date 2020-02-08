@@ -1,9 +1,9 @@
 import numpy as np
 from scipy.optimize import fmin_l_bfgs_b
 
-from Orange.data.filter import HasClass
-from Orange.preprocess import Normalize, Continuize, Impute, RemoveNaNColumns
-from Orange.regression import Learner, Model
+from Arithmos.data.filter import HasClass
+from Arithmos.preprocess import Normalize, Continuize, Impute, RemoveNaNColumns
+from Arithmos.regression import Learner, Model
 
 __all__ = ["LinearRegressionLearner"]
 
@@ -42,8 +42,8 @@ class LinearRegressionLearner(Learner):
     --------
 
         import numpy as np
-        from Orange.data import Table
-        from Orange.regression.linear_bfgs import LinearRegressionLearner
+        from Arithmos.data import Table
+        from Arithmos.regression.linear_bfgs import LinearRegressionLearner
 
         data = Table('housing')
         data.X = np.hstack((data.X, np.ones((data.X.shape[0], 1)))) # append ones
@@ -102,8 +102,8 @@ class LinearRegressionModel(Model):
 
 
 if __name__ == '__main__':
-    import Orange.data
-    from Orange.evaluation import CrossValidation
+    import Arithmos.data
+    from Arithmos.evaluation import CrossValidation
 
     np.random.seed(42)
 
@@ -118,7 +118,7 @@ if __name__ == '__main__':
             perturb[i] = 0
         return grad
 
-    d = Orange.data.Table('housing')
+    d = Arithmos.data.Table('housing')
     d.X = np.hstack((d.X, np.ones((d.X.shape[0], 1))))
     d.shuffle()
 

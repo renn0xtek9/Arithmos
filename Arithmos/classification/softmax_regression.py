@@ -1,9 +1,9 @@
 import numpy as np
 from scipy.optimize import fmin_l_bfgs_b
 
-from Orange.classification import Learner, Model
-from Orange.data.filter import HasClass
-from Orange.preprocess import Continuize, RemoveNaNColumns, Impute, Normalize
+from Arithmos.classification import Learner, Model
+from Arithmos.data.filter import HasClass
+from Arithmos.preprocess import Continuize, RemoveNaNColumns, Impute, Normalize
 
 __all__ = ["SoftmaxRegressionLearner"]
 
@@ -105,7 +105,7 @@ class SoftmaxRegressionModel(Model):
 
 
 if __name__ == '__main__':
-    import Orange.data
+    import Arithmos.data
 
     def numerical_grad(f, params, e=1e-4):
         grad = np.zeros_like(params)
@@ -118,7 +118,7 @@ if __name__ == '__main__':
             perturb[i] = 0
         return grad
 
-    d = Orange.data.Table('iris')
+    d = Arithmos.data.Table('iris')
     m = SoftmaxRegressionLearner(lambda_=1.0)
 
     # gradient check

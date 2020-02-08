@@ -6,13 +6,13 @@ from AnyQt.QtCore import Qt
 import numpy as np
 import sklearn.model_selection as skl
 
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.data import Table
-from Orange.data.sql.table import SqlTable
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, OWWidget, Input, Output
-from Orange.util import Reprable
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.data import Table
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, OWWidget, Input, Output
+from Arithmos.util import Reprable
 
 
 class OWDataSampler(OWWidget):

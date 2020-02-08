@@ -1,10 +1,10 @@
-.. currentmodule:: Orange.data.sql.table
+.. currentmodule:: Arithmos.data.sql.table
 
 ########################
 SQL table (``data.sql``)
 ########################
 
-.. autoclass:: Orange.data.sql.table.SqlTable
+.. autoclass:: Arithmos.data.sql.table.SqlTable
     :members:
     :special-members:
 
@@ -51,10 +51,10 @@ SQL table (``data.sql``)
 
         A list of filters that are applied when constructing the query. The
         filters in the should have a method `to_sql`. Module
-        :obj:`Orange.data.sql.filter` contains classes derived from filters in
-        :obj:`Orange.data.filter` with the appropriate implementation of the
+        :obj:`Arithmos.data.sql.filter` contains classes derived from filters in
+        :obj:`Arithmos.data.filter` with the appropriate implementation of the
         method.
 
 
-.. autoclass:: Orange.data.sql.table.SqlRowInstance
+.. autoclass:: Arithmos.data.sql.table.SqlRowInstance
     :members:

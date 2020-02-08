@@ -1,13 +1,13 @@
 # Loading your Data
 
-Orange comes with its [own data format](https://docs.biolab.si//3/data-mining-library/tutorial/data.html#data-input), but can also handle native Excel, comma- or tab-delimited data files. The input data set is usually a table, with data instances (samples) in rows and data attributes in columns. Attributes can be of different *types* (numeric, categorical, datetime, and text) and have assigned *roles* (input features, meta attributes, and class). Data attribute type and role can be provided in the data table header. They can also be changed in the [File](../widgets/data/file.md) widget, while data role can also be modified with [Select Columns](../widgets/data/selectcolumns.md) widget.
+Arithmos comes with its [own data format](https://docs.biolab.si//3/data-mining-library/tutorial/data.html#data-input), but can also handle native Excel, comma- or tab-delimited data files. The input data set is usually a table, with data instances (samples) in rows and data attributes in columns. Attributes can be of different *types* (numeric, categorical, datetime, and text) and have assigned *roles* (input features, meta attributes, and class). Data attribute type and role can be provided in the data table header. They can also be changed in the [File](../widgets/data/file.md) widget, while data role can also be modified with [Select Columns](../widgets/data/selectcolumns.md) widget.
 
 ### In a Nutshell
 
-- Orange can import any comma- or tab-delimited data file, or Excel's native files or Google Sheets document. Use [File](../widgets/data/file.md) widget to load the data and, if needed, define the class and meta attributes.
+- Arithmos can import any comma- or tab-delimited data file, or Excel's native files or Google Sheets document. Use [File](../widgets/data/file.md) widget to load the data and, if needed, define the class and meta attributes.
 - Types and roles can be set in the File widget.
 - Attribute names in the column header can be preceded with a label followed by a hash. Use c for class and m for meta attribute, i to ignore a column, w for weights column, and C, D, T, S for continuous, discrete, time, and string attribute types. Examples: C\#mph, mS\#name, i\#dummy.
-- An alternative to the hash notation is Orange's native format with three header rows: the first with attribute names, the second specifying the type (**continuous**, **discrete**, **time**, or **string**), and the third proving information on the attribute role (**class**, **meta**, **weight** or **ignore**).
+- An alternative to the hash notation is Arithmos's native format with three header rows: the first with attribute names, the second specifying the type (**continuous**, **discrete**, **time**, or **string**), and the third proving information on the attribute role (**class**, **meta**, **weight** or **ignore**).
 
 ## Data from Excel
 
@@ -31,11 +31,11 @@ The **File** widget sends the data to the **Data Table**. Double click the **Dat
 
 ![](table-widget.png)
 
-Orange correctly assumed that a column with gene names is meta information, which is displayed in the **Data Table** in columns shaded with light-brown. It has not guessed that *function*, the first non-meta column in our data file, is a class column. To correct this in Orange, we can adjust attribute role in the column display of File widget (below). Double-click the *feature* label in the *function* row and select *target* instead. This will set *function* attribute as our target (class) variable.
+Arithmos correctly assumed that a column with gene names is meta information, which is displayed in the **Data Table** in columns shaded with light-brown. It has not guessed that *function*, the first non-meta column in our data file, is a class column. To correct this in Arithmos, we can adjust attribute role in the column display of File widget (below). Double-click the *feature* label in the *function* row and select *target* instead. This will set *function* attribute as our target (class) variable.
 
 ![](File-set-feature-kind.png)
 
-You can also change attribute type from nominal to numeric, from string to datetime, and so on. Naturally, data values have to suit the specified attribute type. Datetime accepts only values in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, e.g. 2016-01-01 16:16:01. Orange would also assume the attribute is numeric if it has several different values, else it would be considered nominal. All other types are considered strings and are as such automatically categorized as meta attributes.
+You can also change attribute type from nominal to numeric, from string to datetime, and so on. Naturally, data values have to suit the specified attribute type. Datetime accepts only values in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, e.g. 2016-01-01 16:16:01. Arithmos would also assume the attribute is numeric if it has several different values, else it would be considered nominal. All other types are considered strings and are as such automatically categorized as meta attributes.
 
 Change of attribute roles and types should be confirmed by clicking the **Apply** button.
 
@@ -45,7 +45,7 @@ Another way to set the data role is to feed the data to the [Select Columns](../
 
 ![](select-columns-schema.png)
 
-Opening [Select Columns](../widgets/data/selectcolumns.md) reveals Orange's classification of attributes. We would like all of our continuous attributes to be data features, gene function to be our target variable and gene names considered as meta attributes. We can obtain this by dragging the attribute names around the boxes in **Select Columns**:
+Opening [Select Columns](../widgets/data/selectcolumns.md) reveals Arithmos's classification of attributes. We would like all of our continuous attributes to be data features, gene function to be our target variable and gene names considered as meta attributes. We can obtain this by dragging the attribute names around the boxes in **Select Columns**:
 
 ![](select-columns-start.png)
 
@@ -94,14 +94,14 @@ Notice that the attributes we have ignored (label "i" in the attribute name) are
 
 ## Three-Row Header Format
 
-Orange's legacy native data format is a tab-delimited text file with three header rows. The first row lists the attribute names, the second row defines their type (continuous, discrete, time and string, or abbreviated c, d, t, and s), and the third row an optional role (class, meta, weight, or ignore). Here is an example:
+Arithmos's legacy native data format is a tab-delimited text file with three header rows. The first row lists the attribute names, the second row defines their type (continuous, discrete, time and string, or abbreviated c, d, t, and s), and the third row an optional role (class, meta, weight, or ignore). Here is an example:
 
 ![](excel-with-tab1.png)
 
 Data from Google Sheets
 -----------------------
 
-Orange can read data from Google Sheets, as long as it conforms to the data presentation rules we have presented above. In Google Sheets, copy the shareable link (Share button, then Get shareable link) and paste it in the *Data File / URL* box of the File widget. For a taste, here's one such link you can use: [http://bit.ly/1J12Tdp](http://bit.ly/1J12Tdp), and the way we have entered it in the **File** widget:
+Arithmos can read data from Google Sheets, as long as it conforms to the data presentation rules we have presented above. In Google Sheets, copy the shareable link (Share button, then Get shareable link) and paste it in the *Data File / URL* box of the File widget. For a taste, here's one such link you can use: [http://bit.ly/1J12Tdp](http://bit.ly/1J12Tdp), and the way we have entered it in the **File** widget:
 
 ![](File-Google-Sheet.png)
 
@@ -113,7 +113,7 @@ If you are using LibreOffice, simply save your files in Excel (.xlsx) format (av
 
 ## Datetime Format
 
-To avoid ambiguity, Orange supports date and/or time formatted in one of the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formats. For example, the following values are all valid:
+To avoid ambiguity, Arithmos supports date and/or time formatted in one of the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formats. For example, the following values are all valid:
 
     2016
     2016-12-27

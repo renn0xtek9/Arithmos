@@ -3,8 +3,8 @@ from unittest.mock import patch
 
 import numpy as np
 
-from Orange.evaluation.testing import Results
-from Orange.evaluation.performance_curves import Curves
+from Arithmos.evaluation.testing import Results
+from Arithmos.evaluation.performance_curves import Curves
 
 
 # Test data and sensitivity/specificity are taken from
@@ -59,7 +59,7 @@ class TestCurves(unittest.TestCase):
         np.testing.assert_almost_equal(curves.tpr(), tp / 9)
         np.testing.assert_almost_equal(curves.fpr(), (10 - tn) / 10)
 
-    @patch("Orange.evaluation.performance_curves.Curves.__init__",
+    @patch("Arithmos.evaluation.performance_curves.Curves.__init__",
            return_value=None)
     def test_curves_from_results(self, init):
         res = Results()
@@ -110,7 +110,7 @@ class TestCurves(unittest.TestCase):
 
         self.assertRaises(ValueError, Curves.from_results, res, model_index=1)
 
-    @patch("Orange.evaluation.performance_curves.Curves.__init__",
+    @patch("Arithmos.evaluation.performance_curves.Curves.__init__",
            return_value=None)
     def test_curves_from_results_nans(self, init):
         res = Results()

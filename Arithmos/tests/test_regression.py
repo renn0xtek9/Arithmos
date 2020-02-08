@@ -6,17 +6,17 @@ import inspect
 import pkgutil
 import traceback
 
-import Orange
-from Orange.data import Table, Variable
-from Orange.regression import Learner
-from Orange.tests import test_filename
+import Arithmos
+from Arithmos.data import Table, Variable
+from Arithmos.regression import Learner
+from Arithmos.tests import test_filename
 
 
 class TestRegression(unittest.TestCase):
     def all_learners(self):
         regression_modules = pkgutil.walk_packages(
-            path=Orange.regression.__path__,
-            prefix="Orange.regression.",
+            path=Arithmos.regression.__path__,
+            prefix="Arithmos.regression.",
             onerror=lambda x: None)
         for importer, modname, ispkg in regression_modules:
             try:

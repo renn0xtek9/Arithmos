@@ -1,18 +1,18 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("housing.tab")
+data = Arithmos.data.Table("housing.tab")
 
-lin = Orange.regression.linear.LinearRegressionLearner()
-rf = Orange.regression.random_forest.RandomForestRegressionLearner()
+lin = Arithmos.regression.linear.LinearRegressionLearner()
+rf = Arithmos.regression.random_forest.RandomForestRegressionLearner()
 rf.name = "rf"
-ridge = Orange.regression.RidgeRegressionLearner()
-mean = Orange.regression.MeanLearner()
+ridge = Arithmos.regression.RidgeRegressionLearner()
+mean = Arithmos.regression.MeanLearner()
 
 learners = [lin, rf, ridge, mean]
 
-res = Orange.evaluation.CrossValidation(data, learners, k=5)
-rmse = Orange.evaluation.RMSE(res)
-r2 = Orange.evaluation.R2(res)
+res = Arithmos.evaluation.CrossValidation(data, learners, k=5)
+rmse = Arithmos.evaluation.RMSE(res)
+r2 = Arithmos.evaluation.R2(res)
 
 print("Learner  RMSE  R2")
 for i in range(len(learners)):

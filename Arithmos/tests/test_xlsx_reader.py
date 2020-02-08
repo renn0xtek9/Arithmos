@@ -8,7 +8,7 @@ from typing import Callable
 
 import numpy as np
 
-from Orange.data import io, ContinuousVariable, DiscreteVariable, Table
+from Arithmos.data import io, ContinuousVariable, DiscreteVariable, Table
 
 
 def get_dataset(name):

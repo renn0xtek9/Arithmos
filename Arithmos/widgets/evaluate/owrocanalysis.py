@@ -15,16 +15,16 @@ from AnyQt.QtGui import QColor, QPen, QBrush, QPainter, QPalette, QFont, QCursor
 from AnyQt.QtCore import Qt
 import pyqtgraph as pg
 
-import Orange
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.evaluate.contexthandlers import \
+import Arithmos
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.evaluate.contexthandlers import \
     EvaluationResultsContextHandler
-from Orange.widgets.evaluate.utils import \
+from Arithmos.widgets.evaluate.utils import \
     check_results_adequacy, results_for_preview
-from Orange.widgets.utils import colorpalette, colorbrewer
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input
-from Orange.widgets import report
+from Arithmos.widgets.utils import colorpalette, colorbrewer
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input
+from Arithmos.widgets import report
 
 
 #: Points on a ROC curve
@@ -82,7 +82,7 @@ def roc_data_from_results(results, clf_index, target):
     """
     Compute ROC Curve(s) from evaluation results.
 
-    :param Orange.evaluation.Results results:
+    :param Arithmos.evaluation.Results results:
         Evaluation results.
     :param int clf_index:
         Learner index in the `results`.
@@ -303,7 +303,7 @@ class OWROCAnalysis(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        evaluation_results = Input("Evaluation Results", Orange.evaluation.Results)
+        evaluation_results = Input("Evaluation Results", Arithmos.evaluation.Results)
 
     settingsHandler = EvaluationResultsContextHandler()
     target_index = settings.ContextSetting(0)

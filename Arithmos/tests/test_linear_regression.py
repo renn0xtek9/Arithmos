@@ -6,14 +6,14 @@ import unittest
 import numpy as np
 from sklearn import linear_model
 
-from Orange.data import Table
-from Orange.regression import (LinearRegressionLearner,
+from Arithmos.data import Table
+from Arithmos.regression import (LinearRegressionLearner,
                                RidgeRegressionLearner,
                                LassoRegressionLearner,
                                ElasticNetLearner,
                                ElasticNetCVLearner,
                                MeanLearner)
-from Orange.evaluation import CrossValidation, RMSE
+from Arithmos.evaluation import CrossValidation, RMSE
 
 
 class TestLinearRegressionLearner(unittest.TestCase):

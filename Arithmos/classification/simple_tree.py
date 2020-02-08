@@ -1,7 +1,7 @@
 import ctypes as ct
 
 import numpy as np
-from Orange.base import Learner, Model
+from Arithmos.base import Learner, Model
 
 __all__ = ['SimpleTreeLearner']
 

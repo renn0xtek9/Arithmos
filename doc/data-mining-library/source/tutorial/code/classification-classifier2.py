@@ -1,7 +1,7 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("voting")
-learner = Orange.classification.LogisticRegressionLearner()
+data = Arithmos.data.Table("voting")
+learner = Arithmos.classification.LogisticRegressionLearner()
 classifier = learner(data)
 target_class = 1
 print("Probabilities for %s:" % data.domain.class_var.values[target_class])

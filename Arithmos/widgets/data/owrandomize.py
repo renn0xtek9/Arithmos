@@ -3,12 +3,12 @@ import random
 from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QSizePolicy
 
-from Orange.data import Table
-from Orange.preprocess import Randomize
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Input, Output
-from Orange.widgets import gui
+from Arithmos.data import Table
+from Arithmos.preprocess import Randomize
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Input, Output
+from Arithmos.widgets import gui
 
 
 class OWRandomize(OWWidget):

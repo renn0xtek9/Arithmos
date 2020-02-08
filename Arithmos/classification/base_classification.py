@@ -1,6 +1,6 @@
 import numpy as np
 
-from Orange.base import Learner, Model, SklLearner, SklModel
+from Arithmos.base import Learner, Model, SklLearner, SklModel
 
 __all__ = ["LearnerClassification", "ModelClassification",
            "SklModelClassification", "SklLearnerClassification"]

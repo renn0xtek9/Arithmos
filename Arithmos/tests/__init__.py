@@ -10,7 +10,7 @@ except ImportError:
     from numpy.testing.utils import assert_array_compare
 
 import numpy as np
-import Orange
+import Arithmos
 
 
 @contextmanager
@@ -53,7 +53,7 @@ def assert_array_nanequal(a, b, *args, **kwargs):
 
 def test_dirname():
     """
-    Return the absolute path to the Orange.tests package.
+    Return the absolute path to the Arithmos.tests package.
 
     Returns
     -------
@@ -64,7 +64,7 @@ def test_dirname():
 
 def test_filename(path):
     """
-    Return an absolute path to a resource within Orange.tests package.
+    Return an absolute path to a resource within Arithmos.tests package.
 
     Parameters
     ----------
@@ -84,14 +84,14 @@ def suite(loader=None, pattern='test*.py'):
         loader = unittest.TestLoader()
     if pattern is None:
         pattern = 'test*.py'
-    orange_dir = os.path.dirname(Orange.__file__)
-    top_level_dir = os.path.dirname(orange_dir)
+    arithmos_dir = os.path.dirname(Arithmos.__file__)
+    top_level_dir = os.path.dirname(arithmos_dir)
     all_tests = [loader.discover(test_dir, pattern, top_level_dir)]
     if not suite.in_tests:  # prevent recursion
         suite.in_tests = True
         all_tests += (loader.discover(dir, pattern, dir)
-                      for dir in (os.path.join(orange_dir, fn, "tests")
-                                  for fn in os.listdir(orange_dir)
+                      for dir in (os.path.join(arithmos_dir, fn, "tests")
+                                  for fn in os.listdir(arithmos_dir)
                                   if fn != "widgets")
                       if os.path.exists(dir))
     return unittest.TestSuite(all_tests)

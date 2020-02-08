@@ -1,13 +1,13 @@
 from AnyQt.QtCore import Qt
 
-from Orange.base import Learner
-from Orange.data import Table
-from Orange.modelling import SklAdaBoostLearner, SklTreeLearner
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg, Input
+from Arithmos.base import Learner
+from Arithmos.data import Table
+from Arithmos.modelling import SklAdaBoostLearner, SklTreeLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg, Input
 
 
 class OWAdaBoost(OWBaseLearner):
@@ -16,8 +16,8 @@ class OWAdaBoost(OWBaseLearner):
                   "and adapts to the 'hardness' of each training sample. "
     icon = "icons/AdaBoost.svg"
     replaces = [
-        "Orange.widgets.classify.owadaboost.OWAdaBoostClassification",
-        "Orange.widgets.regression.owadaboostregression.OWAdaBoostRegression",
+        "Arithmos.widgets.classify.owadaboost.OWAdaBoostClassification",
+        "Arithmos.widgets.regression.owadaboostregression.OWAdaBoostRegression",
     ]
     priority = 80
     keywords = ["boost"]

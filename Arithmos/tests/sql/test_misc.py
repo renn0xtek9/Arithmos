@@ -4,13 +4,13 @@ Please note that such use is deprecated.
 """
 import unittest
 
-from Orange.data.sql.table import SqlTable
-from Orange.preprocess import Discretize
-from Orange.preprocess.discretize import EqualFreq
-from Orange.tests.sql.base import DataBaseTest as dbt
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.preprocess import Discretize
+from Arithmos.preprocess.discretize import EqualFreq
+from Arithmos.tests.sql.base import DataBaseTest as dbt
 try:
-    from Orange.widgets.visualize.owmosaic import get_conditional_distribution
-    from Orange.widgets.visualize.utils.lac import \
+    from Arithmos.widgets.visualize.owmosaic import get_conditional_distribution
+    from Arithmos.widgets.visualize.utils.lac import \
         create_sql_contingency, get_bin_centers
 except ImportError:
     no_widgets = True

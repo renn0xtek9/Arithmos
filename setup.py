@@ -6,7 +6,7 @@ import subprocess
 from setuptools import find_packages, Command
 
 if sys.version_info < (3, 4):
-    sys.exit('Orange requires Python >= 3.4')
+    sys.exit('Arithmos requires Python >= 3.4')
 
 try:
     from numpy.distutils.core import setup
@@ -42,7 +42,7 @@ ISRELEASED = False
 # build/releases (this is filled/updated in `write_version_py`)
 FULLVERSION = VERSION
 
-DESCRIPTION = 'Orange, a component-based data mining framework.'
+DESCRIPTION = 'Arithmos, a component-based data mining framework.'
 README_FILE = os.path.join(os.path.dirname(__file__), 'README.pypi')
 LONG_DESCRIPTION = open(README_FILE).read()
 LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown'
@@ -90,14 +90,14 @@ EXTRAS_REQUIRE = {
 }
 
 ENTRY_POINTS = {
-    "orange.widgets": (
-        "Orange Widgets = Orange.widgets",
+    "arithmos.widgets": (
+        "Arithmos Widgets = Arithmos.widgets",
     ),
-    "orange.canvas.help": (
-        "html-index = Orange.widgets:WIDGET_HELP_PATH",
+    "arithmos.canvas.help": (
+        "html-index = Arithmos.widgets:WIDGET_HELP_PATH",
     ),
     "gui_scripts": (
-        "orange-canvas = Orange.canvas.__main__:main",
+        "arithmos-canvas = Arithmos.canvas.__main__:main",
     ),
 }
 
@@ -132,7 +132,7 @@ def git_version():
     return GIT_REVISION
 
 
-def write_version_py(filename='Orange/version.py'):
+def write_version_py(filename='Arithmos/version.py'):
     # Copied from numpy setup.py
     cnt = """
 # THIS FILE IS GENERATED FROM ORANGE SETUP.PY
@@ -150,10 +150,10 @@ if not release:
     FULLVERSION = VERSION
     if os.path.exists('.git'):
         GIT_REVISION = git_version()
-    elif os.path.exists('Orange/version.py'):
+    elif os.path.exists('Arithmos/version.py'):
         # must be a source distribution, use existing version file
         import imp
-        version = imp.load_source("Orange.version", "Orange/version.py")
+        version = imp.load_source("Arithmos.version", "Arithmos/version.py")
         GIT_REVISION = version.git_revision
     else:
         GIT_REVISION = "Unknown"
@@ -187,7 +187,7 @@ def configuration(parent_package='', top_path=None):
                        delegate_options_to_subpackages=True,
                        quiet=True)
 
-    config.add_subpackage('Orange')
+    config.add_subpackage('Arithmos')
     return config
 
 
@@ -196,27 +196,27 @@ PACKAGES = find_packages()
 # Extra non .py, .{so,pyd} files that are installed within the package dir
 # hierarchy
 PACKAGE_DATA = {
-    "Orange": ["datasets/*.{}".format(ext)
+    "Arithmos": ["datasets/*.{}".format(ext)
                for ext in ["tab", "csv", "basket", "info", "dst", "metadata"]],
-    "Orange.canvas": ["icons/*.png", "icons/*.svg"],
-    "Orange.canvas.workflows": ["*.ows"],
-    "Orange.widgets": ["icons/*.png",
+    "Arithmos.canvas": ["icons/*.png", "icons/*.svg"],
+    "Arithmos.canvas.workflows": ["*.ows"],
+    "Arithmos.widgets": ["icons/*.png",
                        "icons/*.svg"],
-    "Orange.widgets.report": ["icons/*.svg", "*.html"],
-    "Orange.widgets.tests": ["datasets/*.tab",
+    "Arithmos.widgets.report": ["icons/*.svg", "*.html"],
+    "Arithmos.widgets.tests": ["datasets/*.tab",
                              "workflows/*.ows"],
-    "Orange.widgets.data": ["icons/*.svg",
+    "Arithmos.widgets.data": ["icons/*.svg",
                             "icons/paintdata/*.png",
                             "icons/paintdata/*.svg"],
-    "Orange.widgets.data.tests": ["origin1/*.tab",
+    "Arithmos.widgets.data.tests": ["origin1/*.tab",
                                   "origin2/*.tab",
                                   "*.txt", "*.tab"],
-    "Orange.widgets.evaluate": ["icons/*.svg"],
-    "Orange.widgets.model": ["icons/*.svg"],
-    "Orange.widgets.visualize": ["icons/*.svg"],
-    "Orange.widgets.unsupervised": ["icons/*.svg"],
-    "Orange.widgets.utils": ["_webview/*.js"],
-    "Orange.tests": ["xlsx_files/*.xlsx", "datasets/*.tab",
+    "Arithmos.widgets.evaluate": ["icons/*.svg"],
+    "Arithmos.widgets.model": ["icons/*.svg"],
+    "Arithmos.widgets.visualize": ["icons/*.svg"],
+    "Arithmos.widgets.unsupervised": ["icons/*.svg"],
+    "Arithmos.widgets.utils": ["_webview/*.js"],
+    "Arithmos.tests": ["xlsx_files/*.xlsx", "datasets/*.tab",
                      "xlsx_files/*.xls",
                      "datasets/*.basket", "datasets/*.csv",
                      "datasets/*.pkl", "datasets/*.pkl.gz"]
@@ -249,7 +249,7 @@ class CoverageCommand(Command):
     def run(self):
         """Check coverage on current workdir"""
         sys.exit(subprocess.call(r'''
-        coverage run --source=Orange -m unittest -v Orange.tests
+        coverage run --source=Arithmos -m unittest -v Arithmos.tests
         echo; echo
         coverage combine
         coverage report
@@ -261,7 +261,7 @@ class CoverageCommand(Command):
 class build_ext_error(build_ext):
     def initialize_options(self):
         raise SystemExit(
-            "Cannot compile extensions. numpy is required to build Orange."
+            "Cannot compile extensions. numpy is required to build Arithmos."
         )
 
 
@@ -477,7 +477,7 @@ def setup_package():
         extras_require=EXTRAS_REQUIRE,
         entry_points=ENTRY_POINTS,
         zip_safe=False,
-        test_suite='Orange.tests.suite',
+        test_suite='Arithmos.tests.suite',
         cmdclass=cmdclass,
         **extra_args
     )

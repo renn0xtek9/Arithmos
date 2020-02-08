@@ -7,16 +7,16 @@ from AnyQt.QtGui import QBrush, QColor, QPainter
 from AnyQt.QtCore import QEvent, QItemSelectionModel, QItemSelection
 
 import pyqtgraph as pg
-from Orange.data import Table, Domain, ContinuousVariable, StringVariable
-from Orange.statistics import contingency
+from Arithmos.data import Table, Domain, ContinuousVariable, StringVariable
+from Arithmos.statistics import contingency
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import itemmodels, colorpalette
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import itemmodels, colorpalette
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
-from Orange.widgets.visualize.owscatterplotgraph import ScatterPlotItem
-from Orange.widgets.widget import Input, Output
-from Orange.widgets.settings import Setting
+from Arithmos.widgets.visualize.owscatterplotgraph import ScatterPlotItem
+from Arithmos.widgets.widget import Input, Output
+from Arithmos.widgets.settings import Setting
 
 
 class ScatterPlotItem(pg.ScatterPlotItem):
@@ -345,9 +345,9 @@ def burt_table(data, variables):
     Return and ordered list of (variable, value) pairs and a
     numpy.ndarray contingency
 
-    :param Orange.data.Table data: Data table.
+    :param Arithmos.data.Table data: Data table.
     :param variables: List of variables (discrete).
-    :type variables: list of Orange.data.DiscreteVariable
+    :type variables: list of Arithmos.data.DiscreteVariable
 
     """
     values = [(var, value) for var in variables for value in var.values]

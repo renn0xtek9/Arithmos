@@ -5,7 +5,7 @@ import unittest
 
 import numpy as np
 
-from Orange.widgets.utils.colorpalette import GradientPaletteGenerator, NAN_GREY
+from Arithmos.widgets.utils.colorpalette import GradientPaletteGenerator, NAN_GREY
 
 
 class GradientPaletteGeneratorTest(unittest.TestCase):

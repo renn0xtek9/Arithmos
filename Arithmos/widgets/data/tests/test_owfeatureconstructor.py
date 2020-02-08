@@ -7,18 +7,18 @@ import copy
 
 import numpy as np
 
-from Orange.data import (Table, Domain, StringVariable,
+from Arithmos.data import (Table, Domain, StringVariable,
                          ContinuousVariable, DiscreteVariable, TimeVariable)
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.utils import vartype
-from Orange.widgets.utils.itemmodels import PyListModel
-from Orange.widgets.data.owfeatureconstructor import (
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets.utils.itemmodels import PyListModel
+from Arithmos.widgets.data.owfeatureconstructor import (
     DiscreteDescriptor, ContinuousDescriptor, StringDescriptor,
     construct_variables, OWFeatureConstructor,
     FeatureEditor, DiscreteFeatureEditor, FeatureConstructorHandler,
     DateTimeDescriptor)
 
-from Orange.widgets.data.owfeatureconstructor import (
+from Arithmos.widgets.data.owfeatureconstructor import (
     freevars, validate_exp, FeatureFunc
 )
 

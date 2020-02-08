@@ -1,6 +1,6 @@
 import os
 import unittest
-import Orange.widgets
+import Arithmos.widgets
 
 
 def load_tests(loader, tests, pattern):
@@ -9,9 +9,9 @@ def load_tests(loader, tests, pattern):
     if getattr(load_tests, "_in_load_tests", False):
         return unittest.TestSuite([])
 
-    widgets_dir = os.path.dirname(Orange.widgets.__file__)
+    widgets_dir = os.path.dirname(Arithmos.widgets.__file__)
     widget_tests_dir = os.path.dirname(__file__)
-    top_level_dir = os.path.dirname(os.path.dirname(Orange.__file__))
+    top_level_dir = os.path.dirname(os.path.dirname(Arithmos.__file__))
 
     if loader is None:
         loader = unittest.TestLoader()

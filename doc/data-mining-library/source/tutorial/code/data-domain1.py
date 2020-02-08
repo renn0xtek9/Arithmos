@@ -1,6 +1,6 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("imports-85.tab")
+data = Arithmos.data.Table("imports-85.tab")
 n = len(data.domain.attributes)
 n_cont = sum(1 for a in data.domain.attributes if a.is_continuous)
 n_disc = sum(1 for a in data.domain.attributes if a.is_discrete)

@@ -1,9 +1,9 @@
 import unittest
 from unittest.mock import Mock, patch
 
-from Orange.widgets.data.owtable import OWDataTable
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.data import Table, Domain
+from Arithmos.widgets.data.owtable import OWDataTable
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.data import Table, Domain
 
 
 class TestOWDataTable(WidgetTest, WidgetOutputsTestMixin):

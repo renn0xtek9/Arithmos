@@ -23,12 +23,12 @@ from AnyQt.QtCore import (
 
 from serverfiles import LocalFiles, ServerFiles, sizeformat
 
-import Orange.data
-from Orange.misc.environ import data_dir
-from Orange.widgets import settings, gui
-from Orange.widgets.utils.signals import Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg
+import Arithmos.data
+from Arithmos.misc.environ import data_dir
+from Arithmos.widgets import settings, gui
+from Arithmos.widgets.utils.signals import Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg
 
 
 log = logging.getLogger(__name__)
@@ -133,7 +133,7 @@ class OWDataSets(OWWidget):
     description = "Load a dataset from an online repository"
     icon = "icons/DataSets.svg"
     priority = 20
-    replaces = ["orangecontrib.prototypes.widgets.owdatasets.OWDataSets"]
+    replaces = ["arithmoscontrib.prototypes.widgets.owdatasets.OWDataSets"]
     keywords = ["online"]
 
     want_control_area = False
@@ -167,7 +167,7 @@ class OWDataSets(OWWidget):
                                   "cached datasets are shown")
 
     class Outputs:
-        data = Output("Data", Orange.data.Table)
+        data = Output("Data", Arithmos.data.Table)
 
     #: Selected dataset id
     selected_id = settings.Setting(None)   # type: Optional[str]
@@ -544,7 +544,7 @@ class OWDataSets(OWWidget):
 
     @staticmethod
     def load_data(path):
-        return Orange.data.Table(path)
+        return Arithmos.data.Table(path)
 
     def list_remote(self):
         # type: () -> Dict[Tuple[str, ...], dict]
@@ -585,9 +585,9 @@ class _FetchState:
 
 def variable_icon(name):
     if name == "categorical":
-        return gui.attributeIconDict[Orange.data.DiscreteVariable("x")]
+        return gui.attributeIconDict[Arithmos.data.DiscreteVariable("x")]
     elif name == "numeric":  # ??
-        return gui.attributeIconDict[Orange.data.ContinuousVariable("x")]
+        return gui.attributeIconDict[Arithmos.data.ContinuousVariable("x")]
     else:
         return gui.attributeIconDict[-1]
 

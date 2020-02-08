@@ -1,12 +1,12 @@
 import unittest
 
 
-class TestOrange(unittest.TestCase):
-    def test_orange_has_modules(self):
+class TestArithmos(unittest.TestCase):
+    def test_arithmos_has_modules(self):
         import pkgutil
-        import Orange
+        import Arithmos
         unimported = ['canvas', 'datasets', 'testing', 'tests', 'setup',
                       'util', 'widgets']
-        for _, name, __ in pkgutil.iter_modules(Orange.__path__):
+        for _, name, __ in pkgutil.iter_modules(Arithmos.__path__):
             if name not in unimported:
-                self.assertIn(name, Orange.__dict__)
+                self.assertIn(name, Arithmos.__dict__)

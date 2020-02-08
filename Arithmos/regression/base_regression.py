@@ -1,4 +1,4 @@
-from Orange.base import Learner, Model, SklLearner, SklModel
+from Arithmos.base import Learner, Model, SklLearner, SklModel
 
 __all__ = ["LearnerRegression", "ModelRegression",
            "SklModelRegression", "SklLearnerRegression"]

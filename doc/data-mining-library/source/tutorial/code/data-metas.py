@@ -1,5 +1,5 @@
-from Orange.data import Table, Domain
-from Orange.data import ContinuousVariable, DiscreteVariable, StringVariable
+from Arithmos.data import Table, Domain
+from Arithmos.data import ContinuousVariable, DiscreteVariable, StringVariable
 import numpy as np
 
 X = np.array([[2.2, 1625], [0.3, 163]])

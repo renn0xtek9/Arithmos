@@ -3,9 +3,9 @@ import numbers
 import numpy as np
 import scipy.sparse.linalg as sla
 
-import Orange.data
-import Orange.projection
-from Orange.projection import Projector, Projection
+import Arithmos.data
+import Arithmos.projection
+from Arithmos.projection import Projector, Projection
 
 __all__ = ["CUR"]
 
@@ -138,14 +138,14 @@ class CURModel(Projection):
                 var = data.domain[i]
                 return var.copy(compute_value=Projector(self, i))
 
-            domain = Orange.data.Domain(
+            domain = Arithmos.data.Domain(
                 [cur_variable(org_idx) for org_idx in self.features_],
                 class_vars=data.domain.class_vars)
-            transformed_data = Orange.data.Table(domain, Xt, data.Y)
+            transformed_data = Arithmos.data.Table(domain, Xt, data.Y)
         elif axis == 1:
             Y = data.Y[self.proj.samples_]
             metas = data.metas[self.proj.samples_]
-            transformed_data = Orange.data.Table(data.domain, Xt, Y, metas=metas)
+            transformed_data = Arithmos.data.Table(data.domain, Xt, Y, metas=metas)
         else:
             raise TypeError('CUR can select either columns '
                             '(axis = 0) or rows (axis = 1).')
@@ -179,8 +179,8 @@ if __name__ == '__main__':
     rank = 5
     max_error = 1
 
-    data = Orange.data.Table(X)
-    cur = Orange.projection.CUR(rank=rank, max_error=max_error, compute_U=True)
+    data = Arithmos.data.Table(X)
+    cur = Arithmos.projection.CUR(rank=rank, max_error=max_error, compute_U=True)
     cur_model = cur(data)
 
     transformed_data = cur_model(data, axis=0)

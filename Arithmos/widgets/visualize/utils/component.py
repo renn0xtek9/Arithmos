@@ -4,8 +4,8 @@ from AnyQt.QtGui import QColor
 from AnyQt.QtWidgets import QGraphicsEllipseItem
 
 import pyqtgraph as pg
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
-from Orange.widgets.visualize.utils.plotutils import (
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
+from Arithmos.widgets.visualize.utils.plotutils import (
     MouseEventDelegate, DraggableItemsViewBox
 )
 

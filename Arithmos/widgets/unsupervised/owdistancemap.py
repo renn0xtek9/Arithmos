@@ -17,19 +17,19 @@ from AnyQt.QtCore import pyqtSignal as Signal
 
 import pyqtgraph as pg
 
-import Orange.data
-import Orange.misc
-from Orange.clustering import hierarchical
-from Orange.data.domain import filter_visible
+import Arithmos.data
+import Arithmos.misc
+from Arithmos.clustering import hierarchical
+from Arithmos.data.domain import filter_visible
 
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import itemmodels, colorbrewer
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import itemmodels, colorbrewer
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.graphicstextlist import TextListWidget
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
-from Orange.widgets.unsupervised.owhierarchicalclustering import (
+from Arithmos.widgets.utils.graphicstextlist import TextListWidget
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
+from Arithmos.widgets.unsupervised.owhierarchicalclustering import (
     DendrogramWidget
 )
 
@@ -261,11 +261,11 @@ class OWDistanceMap(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        distances = Input("Distances", Orange.misc.DistMatrix)
+        distances = Input("Distances", Arithmos.misc.DistMatrix)
 
     class Outputs:
-        selected_data = Output("Selected Data", Orange.data.Table, default=True)
-        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Orange.data.Table)
+        selected_data = Output("Selected Data", Arithmos.data.Table, default=True)
+        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Arithmos.data.Table)
         features = Output("Features", widget.AttributeList, dynamic=False)
 
     settingsHandler = settings.PerfectDomainContextHandler()
@@ -468,13 +468,13 @@ class OWDistanceMap(widget.OWWidget):
             model[:] = ["None", "Enumeration"]
         elif not axis:
             model[:] = ["None", "Enumeration", "Attribute names"]
-        elif isinstance(items, Orange.data.Table):
+        elif isinstance(items, Arithmos.data.Table):
             annot_vars = list(filter_visible(items.domain.variables)) + list(items.domain.metas)
             model[:] = ["None", "Enumeration"] + annot_vars
             self.annotation_idx = 0
             self.openContext(items.domain)
         elif isinstance(items, list) and \
-                all(isinstance(item, Orange.data.Variable) for item in items):
+                all(isinstance(item, Arithmos.data.Variable) for item in items):
             model[:] = ["None", "Enumeration", "Name"]
         else:
             model[:] = ["None", "Enumeration"]
@@ -598,7 +598,7 @@ class OWDistanceMap(widget.OWWidget):
         elif self.annotation_idx == 2 and \
                 isinstance(self.items, widget.AttributeList):
             labels = [v.name for v in self.items]
-        elif isinstance(self.items, Orange.data.Table):
+        elif isinstance(self.items, Arithmos.data.Table):
             var = self.annot_combo.model()[self.annotation_idx]
             column, _ = self.items.get_column_view(var)
             labels = [var.str_val(value) for value in column]
@@ -651,12 +651,12 @@ class OWDistanceMap(widget.OWWidget):
 
         if not self._selection:
             pass
-        elif isinstance(self.items, Orange.data.Table):
+        elif isinstance(self.items, Arithmos.data.Table):
             indices = self._selection
             if self.matrix.axis == 1:
                 datasubset = self.items.from_table_rows(self.items, indices)
             elif self.matrix.axis == 0:
-                domain = Orange.data.Domain(
+                domain = Arithmos.data.Domain(
                     [self.items.domain[i] for i in indices],
                     self.items.domain.class_vars,
                     self.items.domain.metas)
@@ -760,9 +760,9 @@ def init_color_combo(cb, palettes, iconsize):
                    palette)
 
 
-# run widget with `python -m Orange.widgets.unsupervised.owdistancemap`
+# run widget with `python -m Arithmos.widgets.unsupervised.owdistancemap`
 if __name__ == "__main__":  # pragma: no cover
-    import Orange.distance
-    data = Orange.data.Table("iris")
-    dist = Orange.distance.Euclidean(data)
+    import Arithmos.distance
+    data = Arithmos.data.Table("iris")
+    dist = Arithmos.distance.Euclidean(data)
     WidgetPreview(OWDistanceMap).run(dist)

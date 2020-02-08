@@ -8,10 +8,10 @@ import numpy as np
 from sklearn import __version__ as sklearn_version
 from sklearn.utils import check_random_state
 
-from Orange.data import Table, Domain
-from Orange.preprocess import Continuize, Normalize
-from Orange.projection import pca, PCA, SparsePCA, IncrementalPCA, TruncatedSVD
-from Orange.tests import test_filename
+from Arithmos.data import Table, Domain
+from Arithmos.preprocess import Continuize, Normalize
+from Arithmos.projection import pca, PCA, SparsePCA, IncrementalPCA, TruncatedSVD
+from Arithmos.tests import test_filename
 
 
 class TestPCA(unittest.TestCase):

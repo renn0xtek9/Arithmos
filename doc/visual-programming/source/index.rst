@@ -1,5 +1,5 @@
 =========================
-Orange Visual Programming
+Arithmos Visual Programming
 =========================
 
 Getting Started

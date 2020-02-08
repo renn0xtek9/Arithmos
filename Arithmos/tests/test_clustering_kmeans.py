@@ -7,16 +7,16 @@ import warnings
 import numpy as np
 from scipy.sparse import csc_matrix, csr_matrix
 
-import Orange
-from Orange.clustering.kmeans import KMeans, KMeansModel
-from Orange.data import Table, Domain, ContinuousVariable
-from Orange.data.table import DomainTransformationError
+import Arithmos
+from Arithmos.clustering.kmeans import KMeans, KMeansModel
+from Arithmos.data import Table, Domain, ContinuousVariable
+from Arithmos.data.table import DomainTransformationError
 
 
 class TestKMeans(unittest.TestCase):
     def setUp(self):
         self.kmeans = KMeans(n_clusters=2)
-        self.iris = Orange.data.Table('iris')
+        self.iris = Arithmos.data.Table('iris')
 
     def test_kmeans(self):
         c = self.kmeans(self.iris)

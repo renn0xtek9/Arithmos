@@ -4,12 +4,12 @@ from collections import OrderedDict
 
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table
-from Orange.modelling.tree import TreeLearner
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.modelling.tree import TreeLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWTreeLearner(OWBaseLearner):
@@ -18,10 +18,10 @@ class OWTreeLearner(OWBaseLearner):
     description = "A tree algorithm with forward pruning."
     icon = "icons/Tree.svg"
     replaces = [
-        "Orange.widgets.classify.owclassificationtree.OWClassificationTree",
-        "Orange.widgets.regression.owregressiontree.OWRegressionTree",
-        "Orange.widgets.classify.owclassificationtree.OWTreeLearner",
-        "Orange.widgets.regression.owregressiontree.OWTreeLearner",
+        "Arithmos.widgets.classify.owclassificationtree.OWClassificationTree",
+        "Arithmos.widgets.regression.owregressiontree.OWRegressionTree",
+        "Arithmos.widgets.classify.owclassificationtree.OWTreeLearner",
+        "Arithmos.widgets.regression.owregressiontree.OWTreeLearner",
     ]
     priority = 30
     keywords = ["Classification Tree"]
@@ -87,7 +87,7 @@ class OWTreeLearner(OWBaseLearner):
         return self.LEARNER(**self.learner_kwargs())
 
     def get_learner_parameters(self):
-        from Orange.widgets.report import plural_w
+        from Arithmos.widgets.report import plural_w
         items = OrderedDict()
         items["Pruning"] = ", ".join(s for s, c in (
             (plural_w("at least {number} instance{s} in leaves",

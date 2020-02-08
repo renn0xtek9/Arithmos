@@ -9,13 +9,13 @@ from sklearn.utils import check_array, check_random_state
 from sklearn.utils.extmath import svd_flip, safe_sparse_dot
 from sklearn.utils.validation import check_is_fitted
 
-import Orange.data
-from Orange.statistics import util as ut
-from Orange.data import Variable
-from Orange.data.util import get_unique_names
-from Orange.misc.wrapper_meta import WrapperMeta
-from Orange.preprocess.score import LearnerScorer
-from Orange.projection import SklProjector, DomainProjection
+import Arithmos.data
+from Arithmos.statistics import util as ut
+from Arithmos.data import Variable
+from Arithmos.data.util import get_unique_names
+from Arithmos.misc.wrapper_meta import WrapperMeta
+from Arithmos.preprocess.score import LearnerScorer
+from Arithmos.projection import SklProjector, DomainProjection
 
 __all__ = ["PCA", "SparsePCA", "IncrementalPCA", "TruncatedSVD"]
 
@@ -315,7 +315,7 @@ class IncrementalPCA(SklProjector):
 
 class IncrementalPCAModel(PCAModel):
     def partial_fit(self, data):
-        if isinstance(data, Orange.data.Storage):
+        if isinstance(data, Arithmos.data.Storage):
             if data.domain != self.pre_domain:
                 data = data.from_table(self.pre_domain, data)
             self.proj.partial_fit(data.X)

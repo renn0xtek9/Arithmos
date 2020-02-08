@@ -7,11 +7,11 @@ from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QRadioButton
 from sklearn.metrics import silhouette_score
 
-import Orange.clustering
-from Orange.data import Table, Domain
-from Orange.widgets import gui
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.unsupervised.owkmeans import OWKMeans, ClusterTableModel
+import Arithmos.clustering
+from Arithmos.data import Table, Domain
+from Arithmos.widgets import gui
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.unsupervised.owkmeans import OWKMeans, ClusterTableModel
 
 
 class TestClusterTableModel(unittest.TestCase):
@@ -239,7 +239,7 @@ class TestOWKMeans(WidgetTest):
             sum(attr.is_continuous or len(attr.values) for attr in in_attrs))
         self.assertEqual(out.name, "centroids")
 
-    class KMeansFail(Orange.clustering.KMeans):
+    class KMeansFail(Arithmos.clustering.KMeans):
         fail_on = set()
 
         def fit(self, X, Y=None):
@@ -249,7 +249,7 @@ class TestOWKMeans(WidgetTest):
                 raise ValueError("k={} fails".format(k))
             return super().fit(X, Y)
 
-    @patch("Orange.widgets.unsupervised.owkmeans.KMeans", new=KMeansFail)
+    @patch("Arithmos.widgets.unsupervised.owkmeans.KMeans", new=KMeansFail)
     def test_optimization_fails(self):
         widget = self.widget
         widget.auto_commit = True
@@ -295,7 +295,7 @@ class TestOWKMeans(WidgetTest):
         self.assertEqual(widget.selected_row(), 0)
         self.assertIsNotNone(self.get_output(self.widget.Outputs.annotated_data))
 
-    @patch("Orange.widgets.unsupervised.owkmeans.KMeans", new=KMeansFail)
+    @patch("Arithmos.widgets.unsupervised.owkmeans.KMeans", new=KMeansFail)
     def test_run_fails(self):
         self.widget.k = 3
         self.widget.auto_commit = True
@@ -404,7 +404,7 @@ class TestOWKMeans(WidgetTest):
         random = np.random.RandomState(0)  # pylint: disable=no-member
         table = Table.from_numpy(None, random.rand(110, 2))
         with patch(
-                "Orange.widgets.unsupervised.owkmeans.SILHOUETTE_MAX_SAMPLES",
+                "Arithmos.widgets.unsupervised.owkmeans.SILHOUETTE_MAX_SAMPLES",
                 100):
             self.send_signal(self.widget.Inputs.data, table)
             outtable = self.get_output(widget.Outputs.annotated_data)

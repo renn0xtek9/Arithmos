@@ -1,7 +1,7 @@
 # Test methods with long descriptive names can omit docstrings
 # pylint: disable=missing-docstring
-from Orange.widgets.model.owrandomforest import OWRandomForest
-from Orange.widgets.tests.base import (
+from Arithmos.widgets.model.owrandomforest import OWRandomForest
+from Arithmos.widgets.tests.base import (
     WidgetTest,
     DefaultParameterMapping,
     ParameterMapping,

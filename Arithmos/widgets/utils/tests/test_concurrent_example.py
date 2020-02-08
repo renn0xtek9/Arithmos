@@ -3,11 +3,11 @@
 import unittest
 from unittest.mock import Mock
 
-from Orange.data import Table
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, ProjectionWidgetTestMixin
 )
-from Orange.widgets.utils.tests.concurrent_example import (
+from Arithmos.widgets.utils.tests.concurrent_example import (
     OWConcurrentWidget
 )
 

@@ -3,9 +3,9 @@
 
 import unittest
 
-from Orange.data import Table
-from Orange.classification import Model, SoftmaxRegressionLearner
-from Orange.evaluation import CrossValidation, CA
+from Arithmos.data import Table
+from Arithmos.classification import Model, SoftmaxRegressionLearner
+from Arithmos.evaluation import CrossValidation, CA
 
 
 class TestSoftmaxRegressionLearner(unittest.TestCase):

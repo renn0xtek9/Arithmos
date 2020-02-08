@@ -1,8 +1,8 @@
 from sklearn.linear_model import SGDClassifier
 
-from Orange.base import SklLearner
-from Orange.preprocess import Normalize
-from Orange.regression.linear import LinearModel
+from Arithmos.base import SklLearner
+from Arithmos.preprocess import Normalize
+from Arithmos.regression.linear import LinearModel
 
 __all__ = ["SGDClassificationLearner"]
 

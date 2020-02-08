@@ -1,6 +1,6 @@
 import numpy as np
 
-from Orange.util import deprecated
+from Arithmos.util import deprecated
 
 
 class DistMatrix(np.ndarray):
@@ -26,9 +26,9 @@ class DistMatrix(np.ndarray):
         :param data: Distance matrix
         :type data: numpy array
         :param row_items: Items in matrix rows
-        :type row_items: `Orange.data.Table` or `Orange.data.Instance`
+        :type row_items: `Arithmos.data.Table` or `Arithmos.data.Instance`
         :param col_items: Items in matrix columns
-        :type col_items: `Orange.data.Table` or `Orange.data.Instance`
+        :type col_items: `Arithmos.data.Table` or `Arithmos.data.Instance`
         :param axis: The axis along which the distances are calculated
         :type axis: int
 
@@ -139,8 +139,8 @@ class DistMatrix(np.ndarray):
             filename: file name
         """
         # prevent circular imports
-        from Orange.data import Table, StringVariable, Domain
-        from Orange.data.io import detect_encoding
+        from Arithmos.data import Table, StringVariable, Domain
+        from Arithmos.data.io import detect_encoding
 
         with open(filename, encoding=detect_encoding(filename)) as fle:
             line = fle.readline()
@@ -215,7 +215,7 @@ class DistMatrix(np.ndarray):
     @staticmethod
     def _trivial_labels(items):
         # prevent circular imports
-        from Orange.data import Table, StringVariable
+        from Arithmos.data import Table, StringVariable
 
         return items and \
                isinstance(items, Table) and \
@@ -226,7 +226,7 @@ class DistMatrix(np.ndarray):
         """
         Returns `True` if row labels can be automatically determined from data
 
-        For this, the `row_items` must be an instance of `Orange.data.Table`
+        For this, the `row_items` must be an instance of `Arithmos.data.Table`
         whose domain contains a single meta attribute, which has to be a string.
         The domain may contain other variables, but not meta attributes.
         """
@@ -237,7 +237,7 @@ class DistMatrix(np.ndarray):
         Returns `True` if column labels can be automatically determined from
         data
 
-        For this, the `col_items` must be an instance of `Orange.data.Table`
+        For this, the `col_items` must be an instance of `Arithmos.data.Table`
         whose domain contains a single meta attribute, which has to be a string.
         The domain may contain other variables, but not meta attributes.
         """
@@ -246,7 +246,7 @@ class DistMatrix(np.ndarray):
     def save(self, filename):
         """
         Save the distance matrix to a file in the file format described at
-        :obj:`~Orange.misc.distmatrix.DistMatrix.from_file`.
+        :obj:`~Arithmos.misc.distmatrix.DistMatrix.from_file`.
 
         Args:
             filename: file name

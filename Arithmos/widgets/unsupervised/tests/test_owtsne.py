@@ -3,14 +3,14 @@ from unittest.mock import patch, Mock, call
 
 import numpy as np
 
-from Orange.data import DiscreteVariable, ContinuousVariable, Domain, Table
-from Orange.preprocess import Normalize
-from Orange.projection import manifold, TSNE
-from Orange.projection.manifold import TSNEModel
-from Orange.widgets.tests.base import (
+from Arithmos.data import DiscreteVariable, ContinuousVariable, Domain, Table
+from Arithmos.preprocess import Normalize
+from Arithmos.projection import manifold, TSNE
+from Arithmos.projection.manifold import TSNEModel
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, ProjectionWidgetTestMixin
 )
-from Orange.widgets.unsupervised.owtsne import OWtSNE, TSNERunner, Task, prepare_tsne_obj
+from Arithmos.widgets.unsupervised.owtsne import OWtSNE, TSNERunner, Task, prepare_tsne_obj
 
 
 class DummyTSNE(manifold.TSNE):
@@ -39,8 +39,8 @@ class TestOWtSNE(WidgetTest, ProjectionWidgetTestMixin, WidgetOutputsTestMixin):
     def setUp(self):
         # For almost all the tests, we won't need to verify t-SNE validity and
         # the tests will run much faster if we dummy them out
-        self.tsne = patch("Orange.projection.manifold.TSNE", new=DummyTSNE)
-        self.tsne_model = patch("Orange.projection.manifold.TSNEModel", new=DummyTSNEModel)
+        self.tsne = patch("Arithmos.projection.manifold.TSNE", new=DummyTSNE)
+        self.tsne_model = patch("Arithmos.projection.manifold.TSNEModel", new=DummyTSNEModel)
         self.tsne.start()
         self.tsne_model.start()
 
@@ -154,7 +154,7 @@ class TestOWtSNE(WidgetTest, ProjectionWidgetTestMixin, WidgetOutputsTestMixin):
     def test_normalize_data(self):
         # Normalization should be checked by default
         self.assertTrue(self.widget.controls.normalize.isChecked())
-        with patch("Orange.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
+        with patch("Arithmos.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
             self.send_signal(self.widget.Inputs.data, self.data)
             self.assertTrue(self.widget.controls.normalize.isEnabled())
             self.wait_until_finished()
@@ -163,7 +163,7 @@ class TestOWtSNE(WidgetTest, ProjectionWidgetTestMixin, WidgetOutputsTestMixin):
         # Disable checkbox
         self.widget.controls.normalize.setChecked(False)
         self.assertFalse(self.widget.controls.normalize.isChecked())
-        with patch("Orange.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
+        with patch("Arithmos.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
             self.send_signal(self.widget.Inputs.data, self.data)
             self.assertTrue(self.widget.controls.normalize.isEnabled())
             self.wait_until_finished()
@@ -174,13 +174,13 @@ class TestOWtSNE(WidgetTest, ProjectionWidgetTestMixin, WidgetOutputsTestMixin):
         self.assertTrue(self.widget.controls.normalize.isChecked())
 
         sparse_data = self.data.to_sparse()
-        with patch("Orange.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
+        with patch("Arithmos.preprocess.preprocess.Normalize", wraps=Normalize) as normalize:
             self.send_signal(self.widget.Inputs.data, sparse_data)
             self.assertFalse(self.widget.controls.normalize.isEnabled())
             self.wait_until_finished()
             normalize.assert_not_called()
 
-    @patch("Orange.projection.manifold.TSNEModel.optimize")
+    @patch("Arithmos.projection.manifold.TSNEModel.optimize")
     def test_exaggeration_is_passed_through_properly(self, optimize):
         def _check_exaggeration(call, exaggeration):
             # Check the last call to `optimize`, so we catch one during the

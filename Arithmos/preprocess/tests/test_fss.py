@@ -3,8 +3,8 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import Domain, Table, DiscreteVariable, ContinuousVariable
-from Orange.preprocess import fss
+from Arithmos.data import Domain, Table, DiscreteVariable, ContinuousVariable
+from Arithmos.preprocess import fss
 
 
 class SelectBestFeaturesTest(unittest.TestCase):

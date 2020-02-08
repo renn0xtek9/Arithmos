@@ -34,21 +34,21 @@ import itertools
 import logging
 import warnings
 
-from orangewidget.settings import (
+from arithmoswidget.settings import (
     Setting, SettingProvider, SettingsHandler, ContextSetting,
     ContextHandler, Context, IncompatibleContext, SettingsPrinter,
     rename_setting, widget_settings_dir
 )
-from orangewidget.settings import _apply_setting
+from arithmoswidget.settings import _apply_setting
 
-from Orange.data import Domain, Variable
-from Orange.util import OrangeDeprecationWarning
-from Orange.widgets.utils import vartype
+from Arithmos.data import Domain, Variable
+from Arithmos.util import ArithmosDeprecationWarning
+from Arithmos.widgets.utils import vartype
 
 log = logging.getLogger(__name__)
 
 __all__ = [
-    # re-exported from orangewidget.settings
+    # re-exported from arithmoswidget.settings
     "Setting", "SettingsHandler", "SettingProvider",
     "ContextSetting", "Context", "ContextHandler", "IncompatibleContext",
     "rename_setting", "widget_settings_dir",
@@ -73,19 +73,19 @@ class DomainContextHandler(ContextHandler):
         for name in kwargs:
             warnings.warn(
                 "{} is not a valid parameter for DomainContextHandler"
-                .format(name), OrangeDeprecationWarning
+                .format(name), ArithmosDeprecationWarning
             )
 
     @staticmethod
     def _warn_about_str_var_settings(setting):
         warnings.warn(
             "Storing variables as strings in settings is deprecated.\n"
-            "Support for this will be dropped in Orange 3.26.\n"
+            "Support for this will be dropped in Arithmos 3.26.\n"
             f"Change {setting.name} to store an instance of `Variable`.")
 
     def encode_domain(self, domain):
         """
-        domain: Orange.data.domain to encode
+        domain: Arithmos.data.domain to encode
         return: dict mapping attribute name to type or list of values
                 (based on the value of self.match_values attribute)
         """

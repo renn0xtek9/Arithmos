@@ -7,13 +7,13 @@ import numpy as np
 
 from AnyQt.QtCore import QPoint
 
-from Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable
-from Orange.classification import (
+from Arithmos.data import Table, Domain, ContinuousVariable, DiscreteVariable
+from Arithmos.classification import (
     NaiveBayesLearner, LogisticRegressionLearner, MajorityLearner
 )
-from Orange.tests import test_filename
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.visualize.ownomogram import (
+from Arithmos.tests import test_filename
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.visualize.ownomogram import (
     OWNomogram, DiscreteFeatureItem, ContinuousFeatureItem, ProbabilitiesDotItem,
     MovableToolTip
 )
@@ -251,7 +251,7 @@ class TestOWNomogram(WidgetTest):
         self.widget.reset_settings()
         self.assertEqual(10, self.widget.n_attributes)
 
-    @patch("Orange.widgets.visualize.ownomogram.QGraphicsTextItem")
+    @patch("Arithmos.widgets.visualize.ownomogram.QGraphicsTextItem")
     def test_adjust_scale(self, mocked_item: Mock):
         def mocked_width():
             nonlocal ind

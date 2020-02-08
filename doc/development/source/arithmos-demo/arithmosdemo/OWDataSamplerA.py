@@ -2,9 +2,9 @@
 import sys
 import numpy
 
-import Orange.data
-from Orange.widgets import widget, gui
-from Orange.widgets.utils.signals import Input, Output
+import Arithmos.data
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.utils.signals import Input, Output
 
 
 class OWDataSamplerA(widget.OWWidget):
@@ -14,10 +14,10 @@ class OWDataSamplerA(widget.OWWidget):
     priority = 10
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        sample = Output("Sampled Data", Orange.data.Table)
+        sample = Output("Sampled Data", Arithmos.data.Table)
 
     want_main_area = False
 
@@ -64,7 +64,7 @@ def main(argv=sys.argv):
     ow.show()
     ow.raise_()
 
-    dataset = Orange.data.Table(filename)
+    dataset = Arithmos.data.Table(filename)
     ow.set_data(dataset)
     ow.handleNewSignals()
     app.exec_()

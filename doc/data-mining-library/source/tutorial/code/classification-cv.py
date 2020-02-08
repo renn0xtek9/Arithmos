@@ -1,7 +1,7 @@
-import Orange
+import Arithmos
 
-data = Orange.data.Table("titanic")
-lr = Orange.classification.LogisticRegressionLearner()
-res = Orange.evaluation.CrossValidation(data, [lr], k=5)
-print("Accuracy: %.3f" % Orange.evaluation.scoring.CA(res)[0])
-print("AUC:      %.3f" % Orange.evaluation.scoring.AUC(res)[0])
+data = Arithmos.data.Table("titanic")
+lr = Arithmos.classification.LogisticRegressionLearner()
+res = Arithmos.evaluation.CrossValidation(data, [lr], k=5)
+print("Accuracy: %.3f" % Arithmos.evaluation.scoring.CA(res)[0])
+print("AUC:      %.3f" % Arithmos.evaluation.scoring.AUC(res)[0])

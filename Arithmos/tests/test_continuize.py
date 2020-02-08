@@ -3,11 +3,11 @@
 
 import unittest
 
-from Orange.data import Table, Variable
-from Orange.preprocess.continuize import DomainContinuizer
-from Orange.preprocess import Continuize
-from Orange.preprocess import transformation
-from Orange.tests import test_filename
+from Arithmos.data import Table, Variable
+from Arithmos.preprocess.continuize import DomainContinuizer
+from Arithmos.preprocess import Continuize
+from Arithmos.preprocess import transformation
+from Arithmos.tests import test_filename
 
 
 class TestDomainContinuizer(unittest.TestCase):

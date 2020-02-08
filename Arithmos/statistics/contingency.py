@@ -1,6 +1,6 @@
 import numpy as np
 
-from Orange import data
+from Arithmos import data
 
 
 def _get_variable(variable, dat, attr_name, expected_type=None, expected_name=""):

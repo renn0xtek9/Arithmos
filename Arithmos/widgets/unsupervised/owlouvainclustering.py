@@ -15,23 +15,23 @@ from AnyQt.QtCore import (
 )
 from AnyQt.QtWidgets import QSlider, QCheckBox, QWidget, QLabel
 
-from Orange.clustering.louvain import matrix_to_knn_graph, Louvain
-from Orange.data import Table, DiscreteVariable
-from Orange.data.util import get_unique_names, array_equal
-from Orange import preprocess
-from Orange.projection import PCA
-from Orange.widgets import widget, gui, report
-from Orange.widgets.settings import DomainContextHandler, ContextSetting, \
+from Arithmos.clustering.louvain import matrix_to_knn_graph, Louvain
+from Arithmos.data import Table, DiscreteVariable
+from Arithmos.data.util import get_unique_names, array_equal
+from Arithmos import preprocess
+from Arithmos.projection import PCA
+from Arithmos.widgets import widget, gui, report
+from Arithmos.widgets.settings import DomainContextHandler, ContextSetting, \
     Setting
-from Orange.widgets.utils.annotated_data import add_columns, \
+from Arithmos.widgets.utils.annotated_data import add_columns, \
     ANNOTATED_DATA_SIGNAL_NAME
-from Orange.widgets.utils.concurrent import FutureWatcher
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg
+from Arithmos.widgets.utils.concurrent import FutureWatcher
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg
 
 try:
-    from orangecontrib.network.network import Network
+    from arithmoscontrib.network.network import Network
 except ImportError:
     Network = None
 
@@ -121,7 +121,7 @@ class OWLouvainClustering(widget.OWWidget):
             graph_box, self, "metric_idx", label="Distance metric",
             items=[m[0] for m in METRICS], callback=self._invalidate_graph,
             orientation=Qt.Horizontal,
-        )  # type: gui.OrangeComboBox
+        )  # type: gui.ArithmosComboBox
         self.k_neighbors_spin = gui.spin(
             graph_box, self, "k_neighbors", minv=1, maxv=_MAX_K_NEIGBOURS,
             label="k neighbors", controlWidth=80, alignment=Qt.AlignRight,

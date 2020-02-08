@@ -11,14 +11,14 @@ from AnyQt.QtWidgets import QFormLayout, QLabel
 from AnyQt.QtCore import Qt, QThread, QObject
 from AnyQt.QtCore import pyqtSlot as Slot, pyqtSignal as Signal
 
-from Orange.data import Table
-from Orange.modelling import NNLearner
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.data import Table
+from Arithmos.modelling import NNLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
 
-from Orange.widgets.utils.concurrent import ThreadExecutor, FutureWatcher
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.utils.concurrent import ThreadExecutor, FutureWatcher
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class Task(QObject):
@@ -276,7 +276,7 @@ class OWNNLearner(OWBaseLearner):
         else:
             self.model.name = self.learner_name
             self.model.instances = self.data
-            self.model.skl_model.orange_callback = None  # remove unpicklable callback
+            self.model.skl_model.arithmos_callback = None  # remove unpicklable callback
             self.Outputs.model.send(self.model)
 
     def cancel(self):

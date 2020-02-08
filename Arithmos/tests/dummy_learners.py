@@ -1,7 +1,7 @@
 import numpy as np
 
-from Orange.classification import SklLearner, SklModel
-from Orange.classification.base_classification import SklModelClassification
+from Arithmos.classification import SklLearner, SklModel
+from Arithmos.classification.base_classification import SklModelClassification
 
 
 class DummyLearner(SklLearner):

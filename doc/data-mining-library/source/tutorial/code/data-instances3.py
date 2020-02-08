@@ -1,8 +1,8 @@
-import Orange
+import Arithmos
 
 average = lambda xs: sum(xs) / float(len(xs))
 
-data = Orange.data.Table("iris")
+data = Arithmos.data.Table("iris")
 targets = data.domain.class_var.values
 print("%-15s %s" % ("Feature", " ".join("%15s" % c for c in targets)))
 for a in data.domain.attributes:

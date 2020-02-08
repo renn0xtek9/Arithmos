@@ -4,9 +4,9 @@
 import unittest
 import numpy as np
 
-from Orange.data import Table
-from Orange.preprocess import Continuize
-from Orange.projection import FreeViz
+from Arithmos.data import Table
+from Arithmos.preprocess import Continuize
+from Arithmos.projection import FreeViz
 
 
 class TestFreeviz(unittest.TestCase):

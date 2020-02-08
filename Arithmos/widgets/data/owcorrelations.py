@@ -15,18 +15,18 @@ from AnyQt.QtCore import Qt, QItemSelectionModel, QItemSelection, \
 from AnyQt.QtGui import QStandardItem
 from AnyQt.QtWidgets import QHeaderView
 
-from Orange.data import Table, Domain, ContinuousVariable, StringVariable
-from Orange.preprocess import SklImpute, Normalize, Remove
-from Orange.statistics.util import FDR
-from Orange.widgets import gui
-from Orange.widgets.settings import Setting, ContextSetting, \
+from Arithmos.data import Table, Domain, ContinuousVariable, StringVariable
+from Arithmos.preprocess import SklImpute, Normalize, Remove
+from Arithmos.statistics.util import FDR
+from Arithmos.widgets import gui
+from Arithmos.widgets.settings import Setting, ContextSetting, \
     DomainContextHandler
-from Orange.widgets.utils import vartype
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.signals import Input, Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.utils import VizRankDialogAttrPair
-from Orange.widgets.widget import OWWidget, AttributeList, Msg
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.signals import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.utils import VizRankDialogAttrPair
+from Arithmos.widgets.widget import OWWidget, AttributeList, Msg
 
 NAN = 2
 SIZE_LIMIT = 1000000
@@ -117,7 +117,7 @@ class CorrelationRank(VizRankDialogAttrPair):
     Correlations rank widget.
     """
     threadStopped = Signal()
-    PValRole = next(gui.OrangeUserRole)
+    PValRole = next(gui.ArithmosUserRole)
 
     def __init__(self, *args):
         super().__init__(*args)

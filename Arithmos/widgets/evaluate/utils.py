@@ -10,11 +10,11 @@ from AnyQt.QtCore import Qt, QSize, QObject, pyqtSignal as Signal, \
     QSortFilterProxyModel
 from sklearn.exceptions import UndefinedMetricWarning
 
-from Orange.data import Variable, DiscreteVariable, ContinuousVariable
-from Orange.evaluation import scoring
-from Orange.widgets import gui
-from Orange.widgets.gui import OWComponent
-from Orange.widgets.settings import Setting
+from Arithmos.data import Variable, DiscreteVariable, ContinuousVariable
+from Arithmos.evaluation import scoring
+from Arithmos.widgets import gui
+from Arithmos.widgets.gui import OWComponent
+from Arithmos.widgets.settings import Setting
 
 
 def check_results_adequacy(results, error_group, check_nan=True):
@@ -46,9 +46,9 @@ def check_results_adequacy(results, error_group, check_nan=True):
 
 
 def results_for_preview(data_name=""):
-    from Orange.data import Table
-    from Orange.evaluation import CrossValidation
-    from Orange.classification import \
+    from Arithmos.data import Table
+    from Arithmos.evaluation import CrossValidation
+    from Arithmos.classification import \
         LogisticRegressionLearner, SVMLearner, NuSVMLearner
 
     data = Table(data_name or "heart_disease")

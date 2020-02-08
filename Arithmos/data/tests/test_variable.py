@@ -13,11 +13,11 @@ from io import StringIO
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import Variable, ContinuousVariable, DiscreteVariable, \
+from Arithmos.data import Variable, ContinuousVariable, DiscreteVariable, \
     StringVariable, TimeVariable, Unknown, Value
-from Orange.data.io import CSVReader
-from Orange.tests.base import create_pickling_tests
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.data.io import CSVReader
+from Arithmos.tests.base import create_pickling_tests
+from Arithmos.util import ArithmosDeprecationWarning
 
 
 def is_on_path(name):
@@ -43,11 +43,11 @@ def is_on_path(name):
 # noinspection PyPep8Naming,PyUnresolvedReferences
 class VariableTest:
     def test_dont_pickle_anonymous_variables(self):
-        with self.assertWarns(OrangeDeprecationWarning):
+        with self.assertWarns(ArithmosDeprecationWarning):
             self.assertRaises(pickle.PickleError, pickle.dumps, self.varcls())
 
     def test_dont_make_anonymous_variables(self):
-        self.assertWarns(OrangeDeprecationWarning, self.varcls.make, "")
+        self.assertWarns(ArithmosDeprecationWarning, self.varcls.make, "")
 
     def test_copy_copies_attributes(self):
         var = self.varcls("x")

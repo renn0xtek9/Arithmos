@@ -1,10 +1,10 @@
 import numpy as np
 import scipy.sparse
 
-from Orange.data import Table, Instance
-from Orange.data.table import DomainTransformationError
-from Orange.misc.wrapper_meta import WrapperMeta
-from Orange.preprocess import Continuize, SklImpute
+from Arithmos.data import Table, Instance
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.misc.wrapper_meta import WrapperMeta
+from Arithmos.preprocess import Continuize, SklImpute
 
 
 class ClusteringModel:
@@ -61,7 +61,7 @@ class ClusteringModel:
 class Clustering(metaclass=WrapperMeta):
     """
     ${skldoc}
-    Additional Orange parameters
+    Additional Arithmos parameters
 
     preprocessors : list, optional (default = [Continuize(), SklImpute()])
         An ordered list of preprocessors applied to data before

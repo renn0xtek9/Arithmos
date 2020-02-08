@@ -4,7 +4,7 @@ from numbers import Real, Integral
 
 import numpy as np
 
-from Orange.data import Value, Unknown, DiscreteVariable
+from Arithmos.data import Value, Unknown, DiscreteVariable
 
 __all__ = ["Instance"]
 
@@ -15,9 +15,9 @@ class Instance:
         Construct a new data instance.
 
         :param domain: domain that describes the instance's variables
-        :type domain: Orange.data.Domain
+        :type domain: Arithmos.data.Domain
         :param data: instance's values
-        :type data: Orange.data.Instance or a sequence of values
+        :type data: Arithmos.data.Instance or a sequence of values
         :param id: instance id
         :type id: hashable value
         """
@@ -44,7 +44,7 @@ class Instance:
         if id is not None:
             self.id = id
         else:
-            from Orange.data import Table
+            from Arithmos.data import Table
             self.id = Table.new_id()
 
     @property
@@ -204,7 +204,7 @@ class Instance:
 
     def get_class(self):
         """
-        Return the class value as an instance of :obj:`Orange.data.Value`.
+        Return the class value as an instance of :obj:`Arithmos.data.Value`.
         Throws an exception if there are multiple classes.
         """
         self._check_single_class()
@@ -213,7 +213,7 @@ class Instance:
     def get_classes(self):
         """
         Return the class value as a list of instances of
-        :obj:`Orange.data.Value`.
+        :obj:`Arithmos.data.Value`.
         """
         return (Value(var, value)
                 for var, value in zip(self._domain.class_vars, self._y))

@@ -6,14 +6,14 @@ import re
 import numpy as np
 import scipy
 
-from Orange.data import Table, Storage, Instance, Value
-from Orange.data.filter import HasClass
-from Orange.data.table import DomainTransformationError
-from Orange.data.util import one_hot
-from Orange.misc.wrapper_meta import WrapperMeta
-from Orange.preprocess import Continuize, RemoveNaNColumns, SklImpute, Normalize
-from Orange.statistics.util import all_nan
-from Orange.util import Reprable
+from Arithmos.data import Table, Storage, Instance, Value
+from Arithmos.data.filter import HasClass
+from Arithmos.data.table import DomainTransformationError
+from Arithmos.data.util import one_hot
+from Arithmos.misc.wrapper_meta import WrapperMeta
+from Arithmos.preprocess import Continuize, RemoveNaNColumns, SklImpute, Normalize
+from Arithmos.statistics.util import all_nan
+from Arithmos.util import Reprable
 
 __all__ = ["Learner", "Model", "SklLearner", "SklModel",
            "ReprableWithPreprocessors"]
@@ -430,7 +430,7 @@ class SklModel(Model, metaclass=WrapperMeta):
 class SklLearner(Learner, metaclass=WrapperMeta):
     """
     ${skldoc}
-    Additional Orange parameters
+    Additional Arithmos parameters
 
     preprocessors : list, optional
         An ordered list of preprocessors applied to data before

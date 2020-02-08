@@ -33,7 +33,7 @@ install:
   # Configure pip: Add extra links url, force binary numpy, scipy, ...
   - echo [install]> pip.ini
   - echo find-links =>> pip.ini
-  - echo     https://orange.biolab.si/download/files/wheelhouse/>> pip.ini
+  - echo     https://arithmos.biolab.si/download/files/wheelhouse/>> pip.ini
   - echo only-binary = numpy,scipy,scikit-learn>> pip.ini
   - set "PIP_CONFIG_FILE=%CD%\pip.ini"
   - type %PIP_CONFIG_FILE%
@@ -61,10 +61,10 @@ test_script:
   - python -m pip install -f ..\..\dist arithmos==%VERSION%
   - python -m pip list --format=freeze
 
-  # Raise OrangeDeprecationWarnings as errors
+  # Raise ArithmosDeprecationWarnings as errors
   - set ORANGE_DEPRECATIONS_ERROR=1
   - set PYTHONWARNINGS=module
-  - python -m unittest -b -v Orange.tests Orange.widgets.tests
+  - python -m unittest -b -v Arithmos.tests Arithmos.widgets.tests
   - cd ..\..
 
 artifacts:

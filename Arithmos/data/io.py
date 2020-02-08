@@ -22,12 +22,12 @@ import xlrd
 import xlsxwriter
 import openpyxl
 
-from Orange.data import _io, Table, Domain, ContinuousVariable
-from Orange.data import Compression, open_compressed, detect_encoding, \
+from Arithmos.data import _io, Table, Domain, ContinuousVariable
+from Arithmos.data import Compression, open_compressed, detect_encoding, \
     isnastr, guess_data_type, sanitize_variable
-from Orange.data.io_base import FileFormatBase, Flags, DataTableMixin, PICKLE_PROTOCOL
+from Arithmos.data.io_base import FileFormatBase, Flags, DataTableMixin, PICKLE_PROTOCOL
 
-from Orange.util import flatten
+from Arithmos.util import flatten
 
 
 # Support values longer than 128K (i.e. text contents features)
@@ -65,7 +65,7 @@ class FileFormat(FileFormatBase):
             self.write_headers(writer.write, data)
             writer.writerows(data)
 
-    Wrapper FileFormat.data_table() returns Orange.data.Table from `data`
+    Wrapper FileFormat.data_table() returns Arithmos.data.Table from `data`
     iterable (list (rows) of lists of values (cols)).
     """
 
@@ -203,7 +203,7 @@ class TabReader(CSVReader):
 class PickleReader(FileFormat):
     """Reader for pickled Table objects"""
     EXTENSIONS = ('.pkl', '.pickle')
-    DESCRIPTION = 'Pickled Orange data'
+    DESCRIPTION = 'Pickled Arithmos data'
     SUPPORT_COMPRESSED = True
     SUPPORT_SPARSE_DATA = True
 

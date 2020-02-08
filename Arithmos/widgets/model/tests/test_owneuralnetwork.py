@@ -2,8 +2,8 @@ import warnings
 
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.widgets.model.owneuralnetwork import OWNNLearner
-from Orange.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
+from Arithmos.widgets.model.owneuralnetwork import OWNNLearner
+from Arithmos.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
 
 
 class TestOWNeuralNetwork(WidgetTest, WidgetLearnerTestMixin):

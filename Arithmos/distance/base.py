@@ -4,10 +4,10 @@
 import numpy as np
 import sklearn.metrics as skl_metrics
 
-from Orange.data import Table, Domain, Instance, RowInstance
-from Orange.misc import DistMatrix
-from Orange.preprocess import SklImpute
-from Orange.statistics import util
+from Arithmos.data import Table, Domain, Instance, RowInstance
+from Arithmos.misc import DistMatrix
+from Arithmos.preprocess import SklImpute
+from Arithmos.statistics import util
 
 
 # TODO: When we upgrade to numpy 1.13, change use argument copy=False in
@@ -57,11 +57,11 @@ def impute(data):
     return SklImpute()(data)
 
 
-def _orange_to_numpy(x):
+def _arithmos_to_numpy(x):
     """
     Return :class:`numpy.ndarray` (dense or sparse) with attribute data
-    from the given instance of :class:`Orange.data.Table`,
-    :class:`Orange.data.RowInstance` or :class:`Orange.data.Instance`.
+    from the given instance of :class:`Arithmos.data.Table`,
+    :class:`Arithmos.data.RowInstance` or :class:`Arithmos.data.Instance`.
     """
     if isinstance(x, Table):
         return x.X
@@ -99,14 +99,14 @@ class Distance:
 
     The second, shorter way to use this class is to call the constructor with
     one or two data tables and any additional keyword arguments. Constructor
-    will execute the above steps and return :obj:`~Orange.misc.DistMatrix`.
+    will execute the above steps and return :obj:`~Arithmos.misc.DistMatrix`.
     Such usage is here for backward compatibility, practicality and efficiency.
 
     Args:
-        e1 (:obj:`~Orange.data.Table` or :obj:`~Orange.data.Instance` or \
+        e1 (:obj:`~Arithmos.data.Table` or :obj:`~Arithmos.data.Instance` or \
                 :obj:`np.ndarray` or `None`):
             data on which to train the model and compute the distances
-        e2 (:obj:`~Orange.data.Table` or :obj:`~Orange.data.Instance` or \
+        e2 (:obj:`~Arithmos.data.Table` or :obj:`~Arithmos.data.Instance` or \
                 :obj:`np.ndarray` or `None`):
             if present, the class computes distances with pairs coming from
             the two tables
@@ -196,7 +196,7 @@ class Distance:
         Abstract method returning :obj:`DistanceModel` fit to the data
 
         Args:
-            e1 (Orange.data.Table, Orange.data.Instance, np.ndarray):
+            e1 (Arithmos.data.Table, Arithmos.data.Instance, np.ndarray):
                 data for fitting the distance model
 
         Returns:
@@ -253,13 +253,13 @@ class DistanceModel:
         expected to define the `compute_data` and not the `__call__` method.
 
         Args:
-            e1 (Orange.data.Table or Orange.data.Instance or numpy.ndarray):
+            e1 (Arithmos.data.Table or Arithmos.data.Instance or numpy.ndarray):
                 input data
-            e2 (Orange.data.Table or Orange.data.Instance or numpy.ndarray):
+            e2 (Arithmos.data.Table or Arithmos.data.Instance or numpy.ndarray):
                 secondary data
 
         Returns:
-            A distance matrix (Orange.misc.distmatrix.DistMatrix)
+            A distance matrix (Arithmos.misc.distmatrix.DistMatrix)
         """
         if self.axis == 0 and e2 is not None:
             # Backward compatibility fix
@@ -268,8 +268,8 @@ class DistanceModel:
             else:
                 raise ValueError("Two tables cannot be compared by columns")
 
-        x1 = _orange_to_numpy(e1)
-        x2 = _orange_to_numpy(e2)
+        x1 = _arithmos_to_numpy(e1)
+        x2 = _arithmos_to_numpy(e2)
         with np.errstate(invalid="ignore"):  # nans are handled below
             dist = self.compute_distances(x1, x2)
             if self.impute and np.isnan(dist).any():
@@ -384,7 +384,7 @@ class FittedDistance(Distance):
         Prepare the data on attributes, call `fit_cols` or `fit_rows` and
         return the resulting model.
         """
-        x = _orange_to_numpy(data)
+        x = _arithmos_to_numpy(data)
         if hasattr(data, "domain"):
             attributes = data.domain.attributes
             n_vals = np.fromiter(
@@ -403,7 +403,7 @@ class FittedDistance(Distance):
         Derived classes must define this method.
 
         Args:
-            attributes (list of Orange.data.Variable): list of attributes
+            attributes (list of Arithmos.data.Variable): list of attributes
             x (np.ndarray): data
             n_vals (np.ndarray): number of attribute values, 0 for continuous
         """
@@ -527,8 +527,8 @@ class SklDistance:
         self.metric = metric
 
     def __call__(self, e1, e2=None, axis=1, impute=False):
-        x1 = _orange_to_numpy(e1)
-        x2 = _orange_to_numpy(e2)
+        x1 = _arithmos_to_numpy(e1)
+        x2 = _arithmos_to_numpy(e2)
         if axis == 0:
             x1 = x1.T
             if x2 is not None:

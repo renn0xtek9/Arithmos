@@ -573,8 +573,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__preprocess___relieff
-#define __PYX_HAVE_API__Orange__preprocess___relieff
+#define __PYX_HAVE__Arithmos__preprocess___relieff
+#define __PYX_HAVE_API__Arithmos__preprocess___relieff
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -818,7 +818,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/preprocess/_relieff.pyx",
+  "Arithmos/preprocess/_relieff.pyx",
   "__init__.pxd",
   "stringsource",
   "type.pxd",
@@ -1121,14 +1121,14 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "Orange/preprocess/_relieff.pyx":31
+/* "Arithmos/preprocess/_relieff.pyx":31
  * from numpy.math cimport INFINITY, NAN
  * 
  * ctypedef np.float64_t   double             # <<<<<<<<<<<<<<
  * ctypedef np.int8_t[:]   arr_i1_t
  * ctypedef np.intp_t[:]   arr_intp_t
  */
-typedef __pyx_t_5numpy_float64_t __pyx_t_6Orange_10preprocess_8_relieff_double;
+typedef __pyx_t_5numpy_float64_t __pyx_t_6Arithmos_10preprocess_8_relieff_double;
 /* Declarations.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -1196,59 +1196,59 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "Orange/preprocess/_relieff.pyx":32
+/* "Arithmos/preprocess/_relieff.pyx":32
  * 
  * ctypedef np.float64_t   double
  * ctypedef np.int8_t[:]   arr_i1_t             # <<<<<<<<<<<<<<
  * ctypedef np.intp_t[:]   arr_intp_t
  * ctypedef double[:, :]   arr_f2_t
  */
-typedef __Pyx_memviewslice __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t;
+typedef __Pyx_memviewslice __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t;
 
-/* "Orange/preprocess/_relieff.pyx":33
+/* "Arithmos/preprocess/_relieff.pyx":33
  * ctypedef np.float64_t   double
  * ctypedef np.int8_t[:]   arr_i1_t
  * ctypedef np.intp_t[:]   arr_intp_t             # <<<<<<<<<<<<<<
  * ctypedef double[:, :]   arr_f2_t
  * ctypedef double[:]      arr_f1_t
  */
-typedef __Pyx_memviewslice __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t;
+typedef __Pyx_memviewslice __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t;
 
-/* "Orange/preprocess/_relieff.pyx":34
+/* "Arithmos/preprocess/_relieff.pyx":34
  * ctypedef np.int8_t[:]   arr_i1_t
  * ctypedef np.intp_t[:]   arr_intp_t
  * ctypedef double[:, :]   arr_f2_t             # <<<<<<<<<<<<<<
  * ctypedef double[:]      arr_f1_t
  * ctypedef pair[double, Py_ssize_t] HeapPair
  */
-typedef __Pyx_memviewslice __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t;
+typedef __Pyx_memviewslice __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t;
 
-/* "Orange/preprocess/_relieff.pyx":35
+/* "Arithmos/preprocess/_relieff.pyx":35
  * ctypedef np.intp_t[:]   arr_intp_t
  * ctypedef double[:, :]   arr_f2_t
  * ctypedef double[:]      arr_f1_t             # <<<<<<<<<<<<<<
  * ctypedef pair[double, Py_ssize_t] HeapPair
  * ctypedef cpp_map[Py_ssize_t, arr_f2_t] Contingencies
  */
-typedef __Pyx_memviewslice __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t;
+typedef __Pyx_memviewslice __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t;
 
-/* "Orange/preprocess/_relieff.pyx":36
+/* "Arithmos/preprocess/_relieff.pyx":36
  * ctypedef double[:, :]   arr_f2_t
  * ctypedef double[:]      arr_f1_t
  * ctypedef pair[double, Py_ssize_t] HeapPair             # <<<<<<<<<<<<<<
  * ctypedef cpp_map[Py_ssize_t, arr_f2_t] Contingencies
  * 
  */
-typedef std::pair<double,Py_ssize_t>  __pyx_t_6Orange_10preprocess_8_relieff_HeapPair;
+typedef std::pair<double,Py_ssize_t>  __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair;
 
-/* "Orange/preprocess/_relieff.pyx":37
+/* "Arithmos/preprocess/_relieff.pyx":37
  * ctypedef double[:]      arr_f1_t
  * ctypedef pair[double, Py_ssize_t] HeapPair
  * ctypedef cpp_map[Py_ssize_t, arr_f2_t] Contingencies             # <<<<<<<<<<<<<<
  * 
  * 
  */
-typedef std::map<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies;
+typedef std::map<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t>  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies;
 
 /* "View.MemoryView":104
  * 
@@ -2189,7 +2189,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'numpy.math' */
 
-/* Module declarations from 'Orange.preprocess._relieff' */
+/* Module declarations from 'Arithmos.preprocess._relieff' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -2201,20 +2201,20 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static CYTHON_INLINE int __pyx_f_6Orange_10preprocess_8_relieff_isnan(double); /*proto*/
-static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t); /*proto*/
-static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(double, double, double); /*proto*/
-static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, double *); /*proto*/
-static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, double *, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t); /*proto*/
-static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff__relieff_reg_(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t, int, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff__relieff_cls_(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t, int, int, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &); /*proto*/
-static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_table(PyArrayObject *, int, PyArrayObject *, int, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &, Py_ssize_t); /*proto*/
-static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObject *, PyArrayObject *, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &); /*proto*/
-static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *, PyObject *, PyObject *, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff_relieff(PyArrayObject *, PyArrayObject *, Py_ssize_t, Py_ssize_t, PyArrayObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff_rrelieff(PyArrayObject *, PyArrayObject *, Py_ssize_t, Py_ssize_t, PyArrayObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
-static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(PyObject *); /*proto*/
+static CYTHON_INLINE int __pyx_f_6Arithmos_10preprocess_8_relieff_isnan(double); /*proto*/
+static CYTHON_INLINE double __pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t); /*proto*/
+static CYTHON_INLINE double __pyx_f_6Arithmos_10preprocess_8_relieff_norm_pdf(double, double, double); /*proto*/
+static CYTHON_INLINE void __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, double *); /*proto*/
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, double *, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t); /*proto*/
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, Py_ssize_t, Py_ssize_t, Py_ssize_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_reg_(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t, int, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_cls_(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t, int, int, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &); /*proto*/
+static CYTHON_INLINE void __pyx_f_6Arithmos_10preprocess_8_relieff__contingency_table(PyArrayObject *, int, PyArrayObject *, int, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &, Py_ssize_t); /*proto*/
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_contingency_tables(PyArrayObject *, PyArrayObject *, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &); /*proto*/
+static PyObject *__pyx_f_6Arithmos_10preprocess_8_relieff_prepare(PyObject *, PyObject *, PyObject *, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff_relieff(PyArrayObject *, PyArrayObject *, Py_ssize_t, Py_ssize_t, PyArrayObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff_rrelieff(PyArrayObject *, PyArrayObject *, Py_ssize_t, Py_ssize_t, PyArrayObject *, PyObject *, int __pyx_skip_dispatch); /*proto*/
+static std::pair<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t>  __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(PyObject *); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -2251,11 +2251,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int8_t = { "int8_t", NULL, sizeof(__pyx_t_5numpy_int8_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int8_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int8_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_intp_t = { "intp_t", NULL, sizeof(__pyx_t_5numpy_intp_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_intp_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_intp_t), 0 };
-#define __Pyx_MODULE_NAME "Orange.preprocess._relieff"
-extern int __pyx_module_is_main_Orange__preprocess___relieff;
-int __pyx_module_is_main_Orange__preprocess___relieff = 0;
+#define __Pyx_MODULE_NAME "Arithmos.preprocess._relieff"
+extern int __pyx_module_is_main_Arithmos__preprocess___relieff;
+int __pyx_module_is_main_Arithmos__preprocess___relieff = 0;
 
-/* Implementation of 'Orange.preprocess._relieff' */
+/* Implementation of 'Arithmos.preprocess._relieff' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_ValueError;
@@ -2379,11 +2379,11 @@ static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
 static const char __pyx_k_Cannot_index_with_type_s[] = "Cannot index with type '%s'";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
-static const char __pyx_k_Orange_preprocess__relieff[] = "Orange.preprocess._relieff";
+static const char __pyx_k_Arithmos_preprocess__relieff[] = "Arithmos.preprocess._relieff";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
-static const char __pyx_k_Orange_preprocess__relieff_pyx[] = "Orange/preprocess/_relieff.pyx";
+static const char __pyx_k_Arithmos_preprocess__relieff_pyx[] = "Arithmos/preprocess/_relieff.pyx";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
 static const char __pyx_k_ReliefF_and_RReliefF_feature_sc[] = "\nReliefF and RReliefF feature scoring algorithms from:\n\n    Robnik-\305\240ikonja, M., Kononenko, I.,\n    Theoretical and Empirical Analysis of ReliefF and RReliefF. MLJ. 2003.\n    http://lkm.fri.uni-lj.si/rmarko/papers/robnik03-mlj.pdf\n";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
@@ -2428,8 +2428,8 @@ static PyObject *__pyx_kp_s_MemoryView_of_r_at_0x_x;
 static PyObject *__pyx_kp_s_MemoryView_of_r_object;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_b_O;
-static PyObject *__pyx_n_s_Orange_preprocess__relieff;
-static PyObject *__pyx_kp_s_Orange_preprocess__relieff_pyx;
+static PyObject *__pyx_n_s_Arithmos_preprocess__relieff;
+static PyObject *__pyx_kp_s_Arithmos_preprocess__relieff_pyx;
 static PyObject *__pyx_kp_s_Out_of_bounds_on_buffer_access_a;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_RandomState;
@@ -2548,9 +2548,9 @@ static PyObject *__pyx_n_s_x1;
 static PyObject *__pyx_n_s_x2;
 static PyObject *__pyx_n_s_y;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x1, PyObject *__pyx_v_x2); /* proto */
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_2relieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate); /* proto */
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_4rrelieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_contingency_table(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x1, PyObject *__pyx_v_x2); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_2relieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate); /* proto */
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_4rrelieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
@@ -2654,7 +2654,7 @@ static PyObject *__pyx_codeobj__42;
 static PyObject *__pyx_codeobj__49;
 /* Late includes */
 
-/* "Orange/preprocess/_relieff.pyx":40
+/* "Arithmos/preprocess/_relieff.pyx":40
  * 
  * 
  * cdef inline bint isnan(double x) nogil:             # <<<<<<<<<<<<<<
@@ -2662,10 +2662,10 @@ static PyObject *__pyx_codeobj__49;
  * 
  */
 
-static CYTHON_INLINE int __pyx_f_6Orange_10preprocess_8_relieff_isnan(double __pyx_v_x) {
+static CYTHON_INLINE int __pyx_f_6Arithmos_10preprocess_8_relieff_isnan(double __pyx_v_x) {
   int __pyx_r;
 
-  /* "Orange/preprocess/_relieff.pyx":41
+  /* "Arithmos/preprocess/_relieff.pyx":41
  * 
  * cdef inline bint isnan(double x) nogil:
  *     return x != x             # <<<<<<<<<<<<<<
@@ -2675,7 +2675,7 @@ static CYTHON_INLINE int __pyx_f_6Orange_10preprocess_8_relieff_isnan(double __p
   __pyx_r = (__pyx_v_x != __pyx_v_x);
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":40
+  /* "Arithmos/preprocess/_relieff.pyx":40
  * 
  * 
  * cdef inline bint isnan(double x) nogil:             # <<<<<<<<<<<<<<
@@ -2688,7 +2688,7 @@ static CYTHON_INLINE int __pyx_f_6Orange_10preprocess_8_relieff_isnan(double __p
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":44
+/* "Arithmos/preprocess/_relieff.pyx":44
  * 
  * 
  * cdef inline double nanmax(arr_f1_t A) nogil:             # <<<<<<<<<<<<<<
@@ -2696,7 +2696,7 @@ static CYTHON_INLINE int __pyx_f_6Orange_10preprocess_8_relieff_isnan(double __p
  *     cdef:
  */
 
-static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_A) {
+static CYTHON_INLINE double __pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_A) {
   double __pyx_v_ai;
   double __pyx_v_max;
   Py_ssize_t __pyx_v_i;
@@ -2708,7 +2708,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
   int __pyx_t_5;
   int __pyx_t_6;
 
-  /* "Orange/preprocess/_relieff.pyx":47
+  /* "Arithmos/preprocess/_relieff.pyx":47
  *     """NaN-skipping max() for 1D-arrays"""
  *     cdef:
  *         double ai, max = -INFINITY             # <<<<<<<<<<<<<<
@@ -2717,7 +2717,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
  */
   __pyx_v_max = (-NPY_INFINITY);
 
-  /* "Orange/preprocess/_relieff.pyx":49
+  /* "Arithmos/preprocess/_relieff.pyx":49
  *         double ai, max = -INFINITY
  *         Py_ssize_t i
  *     for i in range(A.shape[0]):             # <<<<<<<<<<<<<<
@@ -2729,7 +2729,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "Orange/preprocess/_relieff.pyx":50
+    /* "Arithmos/preprocess/_relieff.pyx":50
  *         Py_ssize_t i
  *     for i in range(A.shape[0]):
  *         ai = A[i]             # <<<<<<<<<<<<<<
@@ -2739,14 +2739,14 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
     __pyx_t_4 = __pyx_v_i;
     __pyx_v_ai = (*((double *) ( /* dim=0 */ (__pyx_v_A.data + __pyx_t_4 * __pyx_v_A.strides[0]) )));
 
-    /* "Orange/preprocess/_relieff.pyx":51
+    /* "Arithmos/preprocess/_relieff.pyx":51
  *     for i in range(A.shape[0]):
  *         ai = A[i]
  *         if not isnan(ai) and ai > max:             # <<<<<<<<<<<<<<
  *             max = ai
  *     if max == -INFINITY:
  */
-    __pyx_t_6 = ((!(__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_ai) != 0)) != 0);
+    __pyx_t_6 = ((!(__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_ai) != 0)) != 0);
     if (__pyx_t_6) {
     } else {
       __pyx_t_5 = __pyx_t_6;
@@ -2757,7 +2757,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "Orange/preprocess/_relieff.pyx":52
+      /* "Arithmos/preprocess/_relieff.pyx":52
  *         ai = A[i]
  *         if not isnan(ai) and ai > max:
  *             max = ai             # <<<<<<<<<<<<<<
@@ -2766,7 +2766,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
  */
       __pyx_v_max = __pyx_v_ai;
 
-      /* "Orange/preprocess/_relieff.pyx":51
+      /* "Arithmos/preprocess/_relieff.pyx":51
  *     for i in range(A.shape[0]):
  *         ai = A[i]
  *         if not isnan(ai) and ai > max:             # <<<<<<<<<<<<<<
@@ -2776,7 +2776,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":53
+  /* "Arithmos/preprocess/_relieff.pyx":53
  *         if not isnan(ai) and ai > max:
  *             max = ai
  *     if max == -INFINITY:             # <<<<<<<<<<<<<<
@@ -2786,7 +2786,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
   __pyx_t_5 = ((__pyx_v_max == (-NPY_INFINITY)) != 0);
   if (__pyx_t_5) {
 
-    /* "Orange/preprocess/_relieff.pyx":54
+    /* "Arithmos/preprocess/_relieff.pyx":54
  *             max = ai
  *     if max == -INFINITY:
  *         return NAN             # <<<<<<<<<<<<<<
@@ -2796,7 +2796,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
     __pyx_r = NPY_NAN;
     goto __pyx_L0;
 
-    /* "Orange/preprocess/_relieff.pyx":53
+    /* "Arithmos/preprocess/_relieff.pyx":53
  *         if not isnan(ai) and ai > max:
  *             max = ai
  *     if max == -INFINITY:             # <<<<<<<<<<<<<<
@@ -2805,7 +2805,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
  */
   }
 
-  /* "Orange/preprocess/_relieff.pyx":55
+  /* "Arithmos/preprocess/_relieff.pyx":55
  *     if max == -INFINITY:
  *         return NAN
  *     return max             # <<<<<<<<<<<<<<
@@ -2815,7 +2815,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
   __pyx_r = __pyx_v_max;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":44
+  /* "Arithmos/preprocess/_relieff.pyx":44
  * 
  * 
  * cdef inline double nanmax(arr_f1_t A) nogil:             # <<<<<<<<<<<<<<
@@ -2828,7 +2828,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":58
+/* "Arithmos/preprocess/_relieff.pyx":58
  * 
  * 
  * cdef inline double norm_pdf(double x, double mean, double std) nogil:             # <<<<<<<<<<<<<<
@@ -2836,10 +2836,10 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_
  *     x = (x - mean) / std
  */
 
-static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(double __pyx_v_x, double __pyx_v_mean, double __pyx_v_std) {
+static CYTHON_INLINE double __pyx_f_6Arithmos_10preprocess_8_relieff_norm_pdf(double __pyx_v_x, double __pyx_v_mean, double __pyx_v_std) {
   double __pyx_r;
 
-  /* "Orange/preprocess/_relieff.pyx":60
+  /* "Arithmos/preprocess/_relieff.pyx":60
  * cdef inline double norm_pdf(double x, double mean, double std) nogil:
  *     """Normal PDF, based on scipy.stats.norm.pdf() """
  *     x = (x - mean) / std             # <<<<<<<<<<<<<<
@@ -2848,7 +2848,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(doub
  */
   __pyx_v_x = ((__pyx_v_x - __pyx_v_mean) / __pyx_v_std);
 
-  /* "Orange/preprocess/_relieff.pyx":61
+  /* "Arithmos/preprocess/_relieff.pyx":61
  *     """Normal PDF, based on scipy.stats.norm.pdf() """
  *     x = (x - mean) / std
  *     return exp(-x**2/2.) / 2.5066282746310002 / std             # <<<<<<<<<<<<<<
@@ -2858,7 +2858,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(doub
   __pyx_r = ((exp(((-pow(__pyx_v_x, 2.0)) / 2.)) / 2.5066282746310002) / __pyx_v_std);
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":58
+  /* "Arithmos/preprocess/_relieff.pyx":58
  * 
  * 
  * cdef inline double norm_pdf(double x, double mean, double std) nogil:             # <<<<<<<<<<<<<<
@@ -2871,7 +2871,7 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(doub
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":64
+/* "Arithmos/preprocess/_relieff.pyx":64
  * 
  * 
  * cdef inline void calc_difference(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -2879,13 +2879,13 @@ static CYTHON_INLINE double __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(doub
  *                                  Py_ssize_t i,
  */
 
-static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_j, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_difference, double *__pyx_v_difference_sum) {
+static CYTHON_INLINE void __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_j, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_difference, double *__pyx_v_difference_sum) {
   double __pyx_v_val;
   double __pyx_v_xi;
   double __pyx_v_xj;
   Py_ssize_t __pyx_v_a;
   Py_ssize_t __pyx_v_xv;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_cont = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_cont = { 0, 0, { 0 }, { 0 }, { 0 } };
   Py_ssize_t __pyx_t_1;
   Py_ssize_t __pyx_t_2;
   Py_ssize_t __pyx_t_3;
@@ -2903,7 +2903,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
   Py_ssize_t __pyx_t_15;
   double __pyx_t_16;
   Py_ssize_t __pyx_t_17;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_18 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_18 = { 0, 0, { 0 }, { 0 }, { 0 } };
   Py_ssize_t __pyx_t_19;
   Py_ssize_t __pyx_t_20;
   Py_ssize_t __pyx_t_21;
@@ -2932,7 +2932,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
   Py_ssize_t __pyx_t_44;
   long __pyx_t_45;
 
-  /* "Orange/preprocess/_relieff.pyx":78
+  /* "Arithmos/preprocess/_relieff.pyx":78
  *         Py_ssize_t a, xv
  *         arr_f2_t cont
  *     difference_sum[0] = 0             # <<<<<<<<<<<<<<
@@ -2941,7 +2941,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  */
   (__pyx_v_difference_sum[0]) = 0.0;
 
-  /* "Orange/preprocess/_relieff.pyx":79
+  /* "Arithmos/preprocess/_relieff.pyx":79
  *         arr_f2_t cont
  *     difference_sum[0] = 0
  *     for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -2953,7 +2953,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_a = __pyx_t_3;
 
-    /* "Orange/preprocess/_relieff.pyx":80
+    /* "Arithmos/preprocess/_relieff.pyx":80
  *     difference_sum[0] = 0
  *     for a in range(X.shape[1]):
  *         val = fabs(X[i, a] - X[j, a])             # <<<<<<<<<<<<<<
@@ -2966,7 +2966,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
     __pyx_t_7 = __pyx_v_a;
     __pyx_v_val = fabs(((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_X.data + __pyx_t_4 * __pyx_v_X.strides[0]) ) + __pyx_t_5 * __pyx_v_X.strides[1]) ))) - (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_X.data + __pyx_t_6 * __pyx_v_X.strides[0]) ) + __pyx_t_7 * __pyx_v_X.strides[1]) )))));
 
-    /* "Orange/preprocess/_relieff.pyx":82
+    /* "Arithmos/preprocess/_relieff.pyx":82
  *         val = fabs(X[i, a] - X[j, a])
  *         # Differences in discrete attributes can be either 0 or 1
  *         if is_discrete[a] and val > 0:             # <<<<<<<<<<<<<<
@@ -2985,7 +2985,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_8) {
 
-      /* "Orange/preprocess/_relieff.pyx":83
+      /* "Arithmos/preprocess/_relieff.pyx":83
  *         # Differences in discrete attributes can be either 0 or 1
  *         if is_discrete[a] and val > 0:
  *             val = 1             # <<<<<<<<<<<<<<
@@ -2994,7 +2994,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  */
       __pyx_v_val = 1.0;
 
-      /* "Orange/preprocess/_relieff.pyx":82
+      /* "Arithmos/preprocess/_relieff.pyx":82
  *         val = fabs(X[i, a] - X[j, a])
  *         # Differences in discrete attributes can be either 0 or 1
  *         if is_discrete[a] and val > 0:             # <<<<<<<<<<<<<<
@@ -3003,17 +3003,17 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  */
     }
 
-    /* "Orange/preprocess/_relieff.pyx":84
+    /* "Arithmos/preprocess/_relieff.pyx":84
  *         if is_discrete[a] and val > 0:
  *             val = 1
  *         if isnan(val):             # <<<<<<<<<<<<<<
  *             # Replace missing values with their conditional probabilities
  *             xi, xj = X[i, a], X[j, a]
  */
-    __pyx_t_8 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_val) != 0);
+    __pyx_t_8 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_val) != 0);
     if (__pyx_t_8) {
 
-      /* "Orange/preprocess/_relieff.pyx":86
+      /* "Arithmos/preprocess/_relieff.pyx":86
  *         if isnan(val):
  *             # Replace missing values with their conditional probabilities
  *             xi, xj = X[i, a], X[j, a]             # <<<<<<<<<<<<<<
@@ -3029,7 +3029,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
       __pyx_v_xi = __pyx_t_13;
       __pyx_v_xj = __pyx_t_16;
 
-      /* "Orange/preprocess/_relieff.pyx":87
+      /* "Arithmos/preprocess/_relieff.pyx":87
  *             # Replace missing values with their conditional probabilities
  *             xi, xj = X[i, a], X[j, a]
  *             if is_discrete[a]:             # <<<<<<<<<<<<<<
@@ -3040,7 +3040,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
       __pyx_t_8 = ((*((__pyx_t_5numpy_int8_t *) ( /* dim=0 */ (__pyx_v_is_discrete.data + __pyx_t_17 * __pyx_v_is_discrete.strides[0]) ))) != 0);
       if (__pyx_t_8) {
 
-        /* "Orange/preprocess/_relieff.pyx":88
+        /* "Arithmos/preprocess/_relieff.pyx":88
  *             xi, xj = X[i, a], X[j, a]
  *             if is_discrete[a]:
  *                 cont = contingencies[a]             # <<<<<<<<<<<<<<
@@ -3052,25 +3052,25 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
         __PYX_INC_MEMVIEW(&(__pyx_v_contingencies[__pyx_v_a]), 1);
         __pyx_v_cont = __pyx_t_18;
 
-        /* "Orange/preprocess/_relieff.pyx":90
+        /* "Arithmos/preprocess/_relieff.pyx":90
  *                 cont = contingencies[a]
  *                 # TODO: what if the attribute only has a single non-nan value?
  *                 if isnan(xi) and isnan(xj):             # <<<<<<<<<<<<<<
  *                     # ibid. 2.2, eq. 4
  *                     val = 0
  */
-        __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
+        __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
         if (__pyx_t_10) {
         } else {
           __pyx_t_8 = __pyx_t_10;
           goto __pyx_L11_bool_binop_done;
         }
-        __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xj) != 0);
+        __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xj) != 0);
         __pyx_t_8 = __pyx_t_10;
         __pyx_L11_bool_binop_done:;
         if (__pyx_t_8) {
 
-          /* "Orange/preprocess/_relieff.pyx":92
+          /* "Arithmos/preprocess/_relieff.pyx":92
  *                 if isnan(xi) and isnan(xj):
  *                     # ibid. 2.2, eq. 4
  *                     val = 0             # <<<<<<<<<<<<<<
@@ -3079,7 +3079,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  */
           __pyx_v_val = 0.0;
 
-          /* "Orange/preprocess/_relieff.pyx":93
+          /* "Arithmos/preprocess/_relieff.pyx":93
  *                     # ibid. 2.2, eq. 4
  *                     val = 0
  *                     for xv in range(cont.shape[0]):             # <<<<<<<<<<<<<<
@@ -3091,7 +3091,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           for (__pyx_t_21 = 0; __pyx_t_21 < __pyx_t_20; __pyx_t_21+=1) {
             __pyx_v_xv = __pyx_t_21;
 
-            /* "Orange/preprocess/_relieff.pyx":94
+            /* "Arithmos/preprocess/_relieff.pyx":94
  *                     val = 0
  *                     for xv in range(cont.shape[0]):
  *                         val += cont[xv, <Py_ssize_t>y[i]] * cont[xv, <Py_ssize_t>y[j]]             # <<<<<<<<<<<<<<
@@ -3107,7 +3107,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
             __pyx_v_val = (__pyx_v_val + ((*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_cont.data + __pyx_t_23 * __pyx_v_cont.strides[0]) ) + __pyx_t_24 * __pyx_v_cont.strides[1]) ))) * (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_cont.data + __pyx_t_26 * __pyx_v_cont.strides[0]) ) + __pyx_t_27 * __pyx_v_cont.strides[1]) )))));
           }
 
-          /* "Orange/preprocess/_relieff.pyx":90
+          /* "Arithmos/preprocess/_relieff.pyx":90
  *                 cont = contingencies[a]
  *                 # TODO: what if the attribute only has a single non-nan value?
  *                 if isnan(xi) and isnan(xj):             # <<<<<<<<<<<<<<
@@ -3117,17 +3117,17 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           goto __pyx_L10;
         }
 
-        /* "Orange/preprocess/_relieff.pyx":96
+        /* "Arithmos/preprocess/_relieff.pyx":96
  *                         val += cont[xv, <Py_ssize_t>y[i]] * cont[xv, <Py_ssize_t>y[j]]
  *                 # ibid. 2.2, eq. 3
  *                 elif isnan(xi):             # <<<<<<<<<<<<<<
  *                     val = cont[<Py_ssize_t>xj, <Py_ssize_t>y[j]]
  *                 else:
  */
-        __pyx_t_8 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
+        __pyx_t_8 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
         if (__pyx_t_8) {
 
-          /* "Orange/preprocess/_relieff.pyx":97
+          /* "Arithmos/preprocess/_relieff.pyx":97
  *                 # ibid. 2.2, eq. 3
  *                 elif isnan(xi):
  *                     val = cont[<Py_ssize_t>xj, <Py_ssize_t>y[j]]             # <<<<<<<<<<<<<<
@@ -3139,7 +3139,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           __pyx_t_30 = ((Py_ssize_t)(*((double *) ( /* dim=0 */ (__pyx_v_y.data + __pyx_t_28 * __pyx_v_y.strides[0]) ))));
           __pyx_v_val = (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_cont.data + __pyx_t_29 * __pyx_v_cont.strides[0]) ) + __pyx_t_30 * __pyx_v_cont.strides[1]) )));
 
-          /* "Orange/preprocess/_relieff.pyx":96
+          /* "Arithmos/preprocess/_relieff.pyx":96
  *                         val += cont[xv, <Py_ssize_t>y[i]] * cont[xv, <Py_ssize_t>y[j]]
  *                 # ibid. 2.2, eq. 3
  *                 elif isnan(xi):             # <<<<<<<<<<<<<<
@@ -3149,7 +3149,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           goto __pyx_L10;
         }
 
-        /* "Orange/preprocess/_relieff.pyx":99
+        /* "Arithmos/preprocess/_relieff.pyx":99
  *                     val = cont[<Py_ssize_t>xj, <Py_ssize_t>y[j]]
  *                 else:
  *                     val = cont[<Py_ssize_t>xi, <Py_ssize_t>y[i]]             # <<<<<<<<<<<<<<
@@ -3164,7 +3164,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
         }
         __pyx_L10:;
 
-        /* "Orange/preprocess/_relieff.pyx":87
+        /* "Arithmos/preprocess/_relieff.pyx":87
  *             # Replace missing values with their conditional probabilities
  *             xi, xj = X[i, a], X[j, a]
  *             if is_discrete[a]:             # <<<<<<<<<<<<<<
@@ -3174,7 +3174,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
         goto __pyx_L9;
       }
 
-      /* "Orange/preprocess/_relieff.pyx":108
+      /* "Arithmos/preprocess/_relieff.pyx":108
  *                 # All this, devised by Janez Demar, is omitted from the
  *                 # original ReliefF algorithm.
  *                 if isnan(xi) and isnan(xj):             # <<<<<<<<<<<<<<
@@ -3182,18 +3182,18 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  *                 elif isnan(xi):
  */
       /*else*/ {
-        __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
+        __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
         if (__pyx_t_10) {
         } else {
           __pyx_t_8 = __pyx_t_10;
           goto __pyx_L16_bool_binop_done;
         }
-        __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xj) != 0);
+        __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xj) != 0);
         __pyx_t_8 = __pyx_t_10;
         __pyx_L16_bool_binop_done:;
         if (__pyx_t_8) {
 
-          /* "Orange/preprocess/_relieff.pyx":109
+          /* "Arithmos/preprocess/_relieff.pyx":109
  *                 # original ReliefF algorithm.
  *                 if isnan(xi) and isnan(xj):
  *                     val = 2*attr_stats[1, a]             # <<<<<<<<<<<<<<
@@ -3204,7 +3204,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           __pyx_t_35 = __pyx_v_a;
           __pyx_v_val = (2.0 * (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_34 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_35 * __pyx_v_attr_stats.strides[1]) ))));
 
-          /* "Orange/preprocess/_relieff.pyx":108
+          /* "Arithmos/preprocess/_relieff.pyx":108
  *                 # All this, devised by Janez Demar, is omitted from the
  *                 # original ReliefF algorithm.
  *                 if isnan(xi) and isnan(xj):             # <<<<<<<<<<<<<<
@@ -3214,17 +3214,17 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           goto __pyx_L15;
         }
 
-        /* "Orange/preprocess/_relieff.pyx":110
+        /* "Arithmos/preprocess/_relieff.pyx":110
  *                 if isnan(xi) and isnan(xj):
  *                     val = 2*attr_stats[1, a]
  *                 elif isnan(xi):             # <<<<<<<<<<<<<<
  *                     val = norm_pdf(xj, attr_stats[0, a], attr_stats[1, a])
  *                 else:
  */
-        __pyx_t_8 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
+        __pyx_t_8 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_xi) != 0);
         if (__pyx_t_8) {
 
-          /* "Orange/preprocess/_relieff.pyx":111
+          /* "Arithmos/preprocess/_relieff.pyx":111
  *                     val = 2*attr_stats[1, a]
  *                 elif isnan(xi):
  *                     val = norm_pdf(xj, attr_stats[0, a], attr_stats[1, a])             # <<<<<<<<<<<<<<
@@ -3235,9 +3235,9 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           __pyx_t_37 = __pyx_v_a;
           __pyx_t_38 = 1;
           __pyx_t_39 = __pyx_v_a;
-          __pyx_v_val = __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(__pyx_v_xj, (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_36 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_37 * __pyx_v_attr_stats.strides[1]) ))), (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_38 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_39 * __pyx_v_attr_stats.strides[1]) ))));
+          __pyx_v_val = __pyx_f_6Arithmos_10preprocess_8_relieff_norm_pdf(__pyx_v_xj, (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_36 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_37 * __pyx_v_attr_stats.strides[1]) ))), (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_38 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_39 * __pyx_v_attr_stats.strides[1]) ))));
 
-          /* "Orange/preprocess/_relieff.pyx":110
+          /* "Arithmos/preprocess/_relieff.pyx":110
  *                 if isnan(xi) and isnan(xj):
  *                     val = 2*attr_stats[1, a]
  *                 elif isnan(xi):             # <<<<<<<<<<<<<<
@@ -3247,7 +3247,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           goto __pyx_L15;
         }
 
-        /* "Orange/preprocess/_relieff.pyx":113
+        /* "Arithmos/preprocess/_relieff.pyx":113
  *                     val = norm_pdf(xj, attr_stats[0, a], attr_stats[1, a])
  *                 else:
  *                     val = norm_pdf(xi, attr_stats[0, a], attr_stats[1, a])             # <<<<<<<<<<<<<<
@@ -3259,13 +3259,13 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
           __pyx_t_41 = __pyx_v_a;
           __pyx_t_42 = 1;
           __pyx_t_43 = __pyx_v_a;
-          __pyx_v_val = __pyx_f_6Orange_10preprocess_8_relieff_norm_pdf(__pyx_v_xi, (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_40 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_41 * __pyx_v_attr_stats.strides[1]) ))), (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_42 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_43 * __pyx_v_attr_stats.strides[1]) ))));
+          __pyx_v_val = __pyx_f_6Arithmos_10preprocess_8_relieff_norm_pdf(__pyx_v_xi, (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_40 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_41 * __pyx_v_attr_stats.strides[1]) ))), (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_attr_stats.data + __pyx_t_42 * __pyx_v_attr_stats.strides[0]) ) + __pyx_t_43 * __pyx_v_attr_stats.strides[1]) ))));
         }
         __pyx_L15:;
       }
       __pyx_L9:;
 
-      /* "Orange/preprocess/_relieff.pyx":84
+      /* "Arithmos/preprocess/_relieff.pyx":84
  *         if is_discrete[a] and val > 0:
  *             val = 1
  *         if isnan(val):             # <<<<<<<<<<<<<<
@@ -3274,7 +3274,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  */
     }
 
-    /* "Orange/preprocess/_relieff.pyx":114
+    /* "Arithmos/preprocess/_relieff.pyx":114
  *                 else:
  *                     val = norm_pdf(xi, attr_stats[0, a], attr_stats[1, a])
  *         difference[a] = val             # <<<<<<<<<<<<<<
@@ -3284,7 +3284,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
     __pyx_t_44 = __pyx_v_a;
     *((double *) ( /* dim=0 */ (__pyx_v_difference.data + __pyx_t_44 * __pyx_v_difference.strides[0]) )) = __pyx_v_val;
 
-    /* "Orange/preprocess/_relieff.pyx":115
+    /* "Arithmos/preprocess/_relieff.pyx":115
  *                     val = norm_pdf(xi, attr_stats[0, a], attr_stats[1, a])
  *         difference[a] = val
  *         difference_sum[0] += val             # <<<<<<<<<<<<<<
@@ -3295,7 +3295,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
     (__pyx_v_difference_sum[__pyx_t_45]) = ((__pyx_v_difference_sum[__pyx_t_45]) + __pyx_v_val);
   }
 
-  /* "Orange/preprocess/_relieff.pyx":64
+  /* "Arithmos/preprocess/_relieff.pyx":64
  * 
  * 
  * cdef inline void calc_difference(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3307,7 +3307,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
   __PYX_XDEC_MEMVIEW(&__pyx_v_cont, 0);
 }
 
-/* "Orange/preprocess/_relieff.pyx":118
+/* "Arithmos/preprocess/_relieff.pyx":118
  * 
  * 
  * cdef void k_nearest_reg(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3315,19 +3315,19 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff_calc_difference
  *                         Py_ssize_t i,
  */
 
-static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_k_nearest, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_difference, double *__pyx_v_Nc, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_Na, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_Nca) {
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_k_nearest, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_difference, double *__pyx_v_Nc, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_Na, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_Nca) {
   Py_ssize_t __pyx_v_j;
   Py_ssize_t __pyx_v_a;
   CYTHON_UNUSED Py_ssize_t __pyx_v__;
-  std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair>  __pyx_v_nearest;
+  std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair>  __pyx_v_nearest;
   double __pyx_v_cls_diff;
   double __pyx_v_difference_sum;
   double __pyx_v_influence;
-  std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair>  __pyx_t_1;
+  std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair>  __pyx_t_1;
   Py_ssize_t __pyx_t_2;
   Py_ssize_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
-  __pyx_t_6Orange_10preprocess_8_relieff_HeapPair __pyx_t_5;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair __pyx_t_5;
   Py_ssize_t __pyx_t_6;
   Py_ssize_t __pyx_t_7;
   Py_ssize_t __pyx_t_8;
@@ -3339,7 +3339,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
   Py_ssize_t __pyx_t_14;
   Py_ssize_t __pyx_t_15;
 
-  /* "Orange/preprocess/_relieff.pyx":133
+  /* "Arithmos/preprocess/_relieff.pyx":133
  *         Py_ssize_t j, a, _
  *         # The heap that gets "sorted"
  *         vector[HeapPair] nearest = vector[HeapPair]()             # <<<<<<<<<<<<<<
@@ -3347,7 +3347,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  * 
  */
   try {
-    __pyx_t_1 = std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ();
+    __pyx_t_1 = std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ();
   } catch(...) {
     #ifdef WITH_THREAD
     PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
@@ -3360,7 +3360,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
   }
   __pyx_v_nearest = __pyx_t_1;
 
-  /* "Orange/preprocess/_relieff.pyx":134
+  /* "Arithmos/preprocess/_relieff.pyx":134
  *         # The heap that gets "sorted"
  *         vector[HeapPair] nearest = vector[HeapPair]()
  *         double cls_diff, difference_sum = 0             # <<<<<<<<<<<<<<
@@ -3369,7 +3369,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  */
   __pyx_v_difference_sum = 0.0;
 
-  /* "Orange/preprocess/_relieff.pyx":153
+  /* "Arithmos/preprocess/_relieff.pyx":153
  * 
  *         # Influence of each nearest neighbor
  *         double influence = 1. / k_nearest / 5             # <<<<<<<<<<<<<<
@@ -3378,7 +3378,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  */
   __pyx_v_influence = ((1. / ((double)__pyx_v_k_nearest)) / 5.0);
 
-  /* "Orange/preprocess/_relieff.pyx":157
+  /* "Arithmos/preprocess/_relieff.pyx":157
  *         # even random, insignificant features get a positive score (as opposed
  *         # to ~0). The order of feature importances is preserved, though.
  *     nearest.reserve(X.shape[0])             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  */
   __pyx_v_nearest.reserve((__pyx_v_X.shape[0]));
 
-  /* "Orange/preprocess/_relieff.pyx":158
+  /* "Arithmos/preprocess/_relieff.pyx":158
  *         # to ~0). The order of feature importances is preserved, though.
  *     nearest.reserve(X.shape[0])
  *     for j in range(X.shape[0]):             # <<<<<<<<<<<<<<
@@ -3399,16 +3399,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
 
-    /* "Orange/preprocess/_relieff.pyx":160
+    /* "Arithmos/preprocess/_relieff.pyx":160
  *     for j in range(X.shape[0]):
  *         # Calculate difference between i-th and j-th instance
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)             # <<<<<<<<<<<<<<
  *         # Map the manhattan distance to the instance
  *         nearest.push_back(HeapPair(-difference_sum, j))
  */
-    __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
+    __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
 
-    /* "Orange/preprocess/_relieff.pyx":162
+    /* "Arithmos/preprocess/_relieff.pyx":162
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)
  *         # Map the manhattan distance to the instance
  *         nearest.push_back(HeapPair(-difference_sum, j))             # <<<<<<<<<<<<<<
@@ -3416,7 +3416,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  *     make_heap(nearest.begin(), nearest.end())
  */
     try {
-      __pyx_t_5 = __pyx_t_6Orange_10preprocess_8_relieff_HeapPair((-__pyx_v_difference_sum), __pyx_v_j);
+      __pyx_t_5 = __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair((-__pyx_v_difference_sum), __pyx_v_j);
     } catch(...) {
       #ifdef WITH_THREAD
       PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
@@ -3441,16 +3441,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":164
+  /* "Arithmos/preprocess/_relieff.pyx":164
  *         nearest.push_back(HeapPair(-difference_sum, j))
  *     # Heapify the nearest vectors and extract the k nearest neighbors
  *     make_heap(nearest.begin(), nearest.end())             # <<<<<<<<<<<<<<
  *     # Update the counts
  *     for _ in range(k_nearest):
  */
-  std::make_heap<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ::iterator>(__pyx_v_nearest.begin(), __pyx_v_nearest.end());
+  std::make_heap<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ::iterator>(__pyx_v_nearest.begin(), __pyx_v_nearest.end());
 
-  /* "Orange/preprocess/_relieff.pyx":166
+  /* "Arithmos/preprocess/_relieff.pyx":166
  *     make_heap(nearest.begin(), nearest.end())
  *     # Update the counts
  *     for _ in range(k_nearest):             # <<<<<<<<<<<<<<
@@ -3462,16 +3462,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v__ = __pyx_t_4;
 
-    /* "Orange/preprocess/_relieff.pyx":169
+    /* "Arithmos/preprocess/_relieff.pyx":169
  *         # Pop the i-th instance, "distance to self", in first iteration,
  *         # then follow up with as many nearest instances as needed (k), in order
  *         pop_heap(nearest.begin(), nearest.end())             # <<<<<<<<<<<<<<
  *         nearest.pop_back()
  * 
  */
-    std::pop_heap<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ::iterator>(__pyx_v_nearest.begin(), __pyx_v_nearest.end());
+    std::pop_heap<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ::iterator>(__pyx_v_nearest.begin(), __pyx_v_nearest.end());
 
-    /* "Orange/preprocess/_relieff.pyx":170
+    /* "Arithmos/preprocess/_relieff.pyx":170
  *         # then follow up with as many nearest instances as needed (k), in order
  *         pop_heap(nearest.begin(), nearest.end())
  *         nearest.pop_back()             # <<<<<<<<<<<<<<
@@ -3480,7 +3480,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  */
     __pyx_v_nearest.pop_back();
 
-    /* "Orange/preprocess/_relieff.pyx":172
+    /* "Arithmos/preprocess/_relieff.pyx":172
  *         nearest.pop_back()
  * 
  *         j = nearest.front().second             # <<<<<<<<<<<<<<
@@ -3490,7 +3490,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     __pyx_t_6 = __pyx_v_nearest.front().second;
     __pyx_v_j = __pyx_t_6;
 
-    /* "Orange/preprocess/_relieff.pyx":173
+    /* "Arithmos/preprocess/_relieff.pyx":173
  * 
  *         j = nearest.front().second
  *         cls_diff = fabs(y[i] - y[j])             # <<<<<<<<<<<<<<
@@ -3501,7 +3501,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     __pyx_t_8 = __pyx_v_j;
     __pyx_v_cls_diff = fabs(((*((double *) ( /* dim=0 */ (__pyx_v_y.data + __pyx_t_7 * __pyx_v_y.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_y.data + __pyx_t_8 * __pyx_v_y.strides[0]) )))));
 
-    /* "Orange/preprocess/_relieff.pyx":174
+    /* "Arithmos/preprocess/_relieff.pyx":174
  *         j = nearest.front().second
  *         cls_diff = fabs(y[i] - y[j])
  *         Nc[0] += cls_diff * influence             # <<<<<<<<<<<<<<
@@ -3511,16 +3511,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     __pyx_t_9 = 0;
     (__pyx_v_Nc[__pyx_t_9]) = ((__pyx_v_Nc[__pyx_t_9]) + (__pyx_v_cls_diff * __pyx_v_influence));
 
-    /* "Orange/preprocess/_relieff.pyx":176
+    /* "Arithmos/preprocess/_relieff.pyx":176
  *         Nc[0] += cls_diff * influence
  *         # Recalculate the distance that was thrown away before
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)             # <<<<<<<<<<<<<<
  *         for a in range(X.shape[1]):
  *             Na[a] += difference[a] * influence
  */
-    __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
+    __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
 
-    /* "Orange/preprocess/_relieff.pyx":177
+    /* "Arithmos/preprocess/_relieff.pyx":177
  *         # Recalculate the distance that was thrown away before
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)
  *         for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -3532,7 +3532,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_a = __pyx_t_11;
 
-      /* "Orange/preprocess/_relieff.pyx":178
+      /* "Arithmos/preprocess/_relieff.pyx":178
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)
  *         for a in range(X.shape[1]):
  *             Na[a] += difference[a] * influence             # <<<<<<<<<<<<<<
@@ -3543,7 +3543,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
       __pyx_t_13 = __pyx_v_a;
       *((double *) ( /* dim=0 */ (__pyx_v_Na.data + __pyx_t_13 * __pyx_v_Na.strides[0]) )) += ((*((double *) ( /* dim=0 */ (__pyx_v_difference.data + __pyx_t_12 * __pyx_v_difference.strides[0]) ))) * __pyx_v_influence);
 
-      /* "Orange/preprocess/_relieff.pyx":179
+      /* "Arithmos/preprocess/_relieff.pyx":179
  *         for a in range(X.shape[1]):
  *             Na[a] += difference[a] * influence
  *             Nca[a] += cls_diff * difference[a] * influence             # <<<<<<<<<<<<<<
@@ -3556,7 +3556,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":118
+  /* "Arithmos/preprocess/_relieff.pyx":118
  * 
  * 
  * cdef void k_nearest_reg(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3567,11 +3567,11 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
   /* function exit code */
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_WriteUnraisable("Orange.preprocess._relieff.k_nearest_reg", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 1);
+  __Pyx_WriteUnraisable("Arithmos.preprocess._relieff.k_nearest_reg", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 1);
   __pyx_L0:;
 }
 
-/* "Orange/preprocess/_relieff.pyx":182
+/* "Arithmos/preprocess/_relieff.pyx":182
  * 
  * 
  * cdef void k_nearest_per_class(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3579,22 +3579,22 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_t_6Orange
  *                               Py_ssize_t i,
  */
 
-static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_k_nearest, Py_ssize_t __pyx_v_n_classes, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_weights_adj, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_difference) {
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_y, Py_ssize_t __pyx_v_i, Py_ssize_t __pyx_v_k_nearest, Py_ssize_t __pyx_v_n_classes, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_weights_adj, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_difference) {
   Py_ssize_t __pyx_v_j;
   Py_ssize_t __pyx_v_a;
   Py_ssize_t __pyx_v_cls;
   CYTHON_UNUSED Py_ssize_t __pyx_v__;
   Py_ssize_t __pyx_v_yi;
-  __pyx_t_6Orange_10preprocess_8_relieff_HeapPair __pyx_v_hp;
-  std::vector<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> >  __pyx_v_nearest;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair __pyx_v_hp;
+  std::vector<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> >  __pyx_v_nearest;
   double __pyx_v_difference_sum;
   Py_ssize_t __pyx_t_1;
-  std::vector<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> >  __pyx_t_2;
+  std::vector<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> >  __pyx_t_2;
   Py_ssize_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   Py_ssize_t __pyx_t_5;
   Py_ssize_t __pyx_t_6;
-  __pyx_t_6Orange_10preprocess_8_relieff_HeapPair __pyx_t_7;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair __pyx_t_7;
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
   Py_ssize_t __pyx_t_10;
@@ -3605,7 +3605,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   Py_ssize_t __pyx_t_15;
   Py_ssize_t __pyx_t_16;
 
-  /* "Orange/preprocess/_relieff.pyx":194
+  /* "Arithmos/preprocess/_relieff.pyx":194
  *     """The k-nearest search for ReliefF."""
  *     cdef:
  *         Py_ssize_t j, a, cls, _, yi = int(y[i])             # <<<<<<<<<<<<<<
@@ -3615,7 +3615,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   __pyx_t_1 = __pyx_v_i;
   __pyx_v_yi = ((Py_ssize_t)(*((double *) ( /* dim=0 */ (__pyx_v_y.data + __pyx_t_1 * __pyx_v_y.strides[0]) ))));
 
-  /* "Orange/preprocess/_relieff.pyx":196
+  /* "Arithmos/preprocess/_relieff.pyx":196
  *         Py_ssize_t j, a, cls, _, yi = int(y[i])
  *         HeapPair hp
  *         vector[vector[HeapPair]] nearest = vector[vector[HeapPair]](n_classes)             # <<<<<<<<<<<<<<
@@ -3623,7 +3623,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  *     for j in range(X.shape[0]):
  */
   try {
-    __pyx_t_2 = std::vector<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> > (__pyx_v_n_classes);
+    __pyx_t_2 = std::vector<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> > (__pyx_v_n_classes);
   } catch(...) {
     #ifdef WITH_THREAD
     PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
@@ -3636,7 +3636,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   }
   __pyx_v_nearest = __pyx_t_2;
 
-  /* "Orange/preprocess/_relieff.pyx":197
+  /* "Arithmos/preprocess/_relieff.pyx":197
  *         HeapPair hp
  *         vector[vector[HeapPair]] nearest = vector[vector[HeapPair]](n_classes)
  *         double difference_sum = 0             # <<<<<<<<<<<<<<
@@ -3645,7 +3645,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  */
   __pyx_v_difference_sum = 0.0;
 
-  /* "Orange/preprocess/_relieff.pyx":198
+  /* "Arithmos/preprocess/_relieff.pyx":198
  *         vector[vector[HeapPair]] nearest = vector[vector[HeapPair]](n_classes)
  *         double difference_sum = 0
  *     for j in range(X.shape[0]):             # <<<<<<<<<<<<<<
@@ -3657,16 +3657,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_j = __pyx_t_5;
 
-    /* "Orange/preprocess/_relieff.pyx":200
+    /* "Arithmos/preprocess/_relieff.pyx":200
  *     for j in range(X.shape[0]):
  *         # Calculate difference between i-th and j-th instance
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)             # <<<<<<<<<<<<<<
  *         # Map the manhattan distance to the instance
  *         nearest[<Py_ssize_t>y[j]].push_back(HeapPair(-difference_sum, j))
  */
-    __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
+    __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_j, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
 
-    /* "Orange/preprocess/_relieff.pyx":202
+    /* "Arithmos/preprocess/_relieff.pyx":202
  *         calc_difference(X, y, i, j, is_discrete, attr_stats, contingencies, difference, &difference_sum)
  *         # Map the manhattan distance to the instance
  *         nearest[<Py_ssize_t>y[j]].push_back(HeapPair(-difference_sum, j))             # <<<<<<<<<<<<<<
@@ -3675,7 +3675,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  */
     __pyx_t_6 = __pyx_v_j;
     try {
-      __pyx_t_7 = __pyx_t_6Orange_10preprocess_8_relieff_HeapPair((-__pyx_v_difference_sum), __pyx_v_j);
+      __pyx_t_7 = __pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair((-__pyx_v_difference_sum), __pyx_v_j);
     } catch(...) {
       #ifdef WITH_THREAD
       PyGILState_STATE __pyx_gilstate_save = __Pyx_PyGILState_Ensure();
@@ -3700,7 +3700,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":204
+  /* "Arithmos/preprocess/_relieff.pyx":204
  *         nearest[<Py_ssize_t>y[j]].push_back(HeapPair(-difference_sum, j))
  *     # Heapify the nearest vectors and extract the k nearest neighbors
  *     for cls in range(n_classes):             # <<<<<<<<<<<<<<
@@ -3712,26 +3712,26 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_cls = __pyx_t_5;
 
-    /* "Orange/preprocess/_relieff.pyx":205
+    /* "Arithmos/preprocess/_relieff.pyx":205
  *     # Heapify the nearest vectors and extract the k nearest neighbors
  *     for cls in range(n_classes):
  *         make_heap(nearest[cls].begin(), nearest[cls].end())             # <<<<<<<<<<<<<<
  *     # First, pop the i-th instance, "distance to self"
  *     pop_heap(nearest[yi].begin(), nearest[yi].end())
  */
-    std::make_heap<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_cls]).begin(), (__pyx_v_nearest[__pyx_v_cls]).end());
+    std::make_heap<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_cls]).begin(), (__pyx_v_nearest[__pyx_v_cls]).end());
   }
 
-  /* "Orange/preprocess/_relieff.pyx":207
+  /* "Arithmos/preprocess/_relieff.pyx":207
  *         make_heap(nearest[cls].begin(), nearest[cls].end())
  *     # First, pop the i-th instance, "distance to self"
  *     pop_heap(nearest[yi].begin(), nearest[yi].end())             # <<<<<<<<<<<<<<
  *     nearest[yi].pop_back()
  * 
  */
-  std::pop_heap<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_yi]).begin(), (__pyx_v_nearest[__pyx_v_yi]).end());
+  std::pop_heap<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_yi]).begin(), (__pyx_v_nearest[__pyx_v_yi]).end());
 
-  /* "Orange/preprocess/_relieff.pyx":208
+  /* "Arithmos/preprocess/_relieff.pyx":208
  *     # First, pop the i-th instance, "distance to self"
  *     pop_heap(nearest[yi].begin(), nearest[yi].end())
  *     nearest[yi].pop_back()             # <<<<<<<<<<<<<<
@@ -3740,7 +3740,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  */
   (__pyx_v_nearest[__pyx_v_yi]).pop_back();
 
-  /* "Orange/preprocess/_relieff.pyx":210
+  /* "Arithmos/preprocess/_relieff.pyx":210
  *     nearest[yi].pop_back()
  * 
  *     for cls in range(n_classes):             # <<<<<<<<<<<<<<
@@ -3752,7 +3752,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_cls = __pyx_t_5;
 
-    /* "Orange/preprocess/_relieff.pyx":211
+    /* "Arithmos/preprocess/_relieff.pyx":211
  * 
  *     for cls in range(n_classes):
  *         for _ in range(min(k_nearest, <Py_ssize_t>nearest[cls].size())):             # <<<<<<<<<<<<<<
@@ -3771,7 +3771,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
     for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_10; __pyx_t_9+=1) {
       __pyx_v__ = __pyx_t_9;
 
-      /* "Orange/preprocess/_relieff.pyx":212
+      /* "Arithmos/preprocess/_relieff.pyx":212
  *     for cls in range(n_classes):
  *         for _ in range(min(k_nearest, <Py_ssize_t>nearest[cls].size())):
  *             hp = nearest[cls].front()             # <<<<<<<<<<<<<<
@@ -3780,16 +3780,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  */
       __pyx_v_hp = (__pyx_v_nearest[__pyx_v_cls]).front();
 
-      /* "Orange/preprocess/_relieff.pyx":213
+      /* "Arithmos/preprocess/_relieff.pyx":213
  *         for _ in range(min(k_nearest, <Py_ssize_t>nearest[cls].size())):
  *             hp = nearest[cls].front()
  *             pop_heap(nearest[cls].begin(), nearest[cls].end())             # <<<<<<<<<<<<<<
  *             nearest[cls].pop_back()
  *             # Recalculate the distance that was thrown away before.
  */
-      std::pop_heap<std::vector<__pyx_t_6Orange_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_cls]).begin(), (__pyx_v_nearest[__pyx_v_cls]).end());
+      std::pop_heap<std::vector<__pyx_t_6Arithmos_10preprocess_8_relieff_HeapPair> ::iterator>((__pyx_v_nearest[__pyx_v_cls]).begin(), (__pyx_v_nearest[__pyx_v_cls]).end());
 
-      /* "Orange/preprocess/_relieff.pyx":214
+      /* "Arithmos/preprocess/_relieff.pyx":214
  *             hp = nearest[cls].front()
  *             pop_heap(nearest[cls].begin(), nearest[cls].end())
  *             nearest[cls].pop_back()             # <<<<<<<<<<<<<<
@@ -3798,16 +3798,16 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  */
       (__pyx_v_nearest[__pyx_v_cls]).pop_back();
 
-      /* "Orange/preprocess/_relieff.pyx":216
+      /* "Arithmos/preprocess/_relieff.pyx":216
  *             nearest[cls].pop_back()
  *             # Recalculate the distance that was thrown away before.
  *             calc_difference(X, y, i, hp.second, is_discrete, attr_stats, contingencies, difference, &difference_sum)             # <<<<<<<<<<<<<<
  *             # Adjust the weights of the class
  *             for a in range(X.shape[1]):
  */
-      __pyx_f_6Orange_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_hp.second, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
+      __pyx_f_6Arithmos_10preprocess_8_relieff_calc_difference(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_hp.second, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_difference_sum));
 
-      /* "Orange/preprocess/_relieff.pyx":218
+      /* "Arithmos/preprocess/_relieff.pyx":218
  *             calc_difference(X, y, i, hp.second, is_discrete, attr_stats, contingencies, difference, &difference_sum)
  *             # Adjust the weights of the class
  *             for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -3819,7 +3819,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
       for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=1) {
         __pyx_v_a = __pyx_t_13;
 
-        /* "Orange/preprocess/_relieff.pyx":219
+        /* "Arithmos/preprocess/_relieff.pyx":219
  *             # Adjust the weights of the class
  *             for a in range(X.shape[1]):
  *                 weights_adj[cls, a] += difference[a]             # <<<<<<<<<<<<<<
@@ -3834,7 +3834,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":182
+  /* "Arithmos/preprocess/_relieff.pyx":182
  * 
  * 
  * cdef void k_nearest_per_class(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3845,11 +3845,11 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
   /* function exit code */
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_WriteUnraisable("Orange.preprocess._relieff.k_nearest_per_class", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 1);
+  __Pyx_WriteUnraisable("Arithmos.preprocess._relieff.k_nearest_per_class", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 1);
   __pyx_L0:;
 }
 
-/* "Orange/preprocess/_relieff.pyx":223
+/* "Arithmos/preprocess/_relieff.pyx":223
  * 
  * 
  * cdef arr_f1_t _relieff_reg_(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -3857,24 +3857,24 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_t_6
  *                             arr_intp_t R,
  */
 
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff__relieff_reg_(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_y, __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_v_R, int __pyx_v_k_nearest, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_reg_(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_y, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_v_R, int __pyx_v_k_nearest, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_v_a;
   Py_ssize_t __pyx_v_ri;
   double __pyx_v_Nc;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_Na = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_Nca = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_difference = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_Na = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_Nca = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_difference = { 0, 0, { 0 }, { 0 }, { 0 } };
   Py_ssize_t __pyx_v_n_iter;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
   Py_ssize_t __pyx_t_7;
   int __pyx_t_8;
   Py_ssize_t __pyx_t_9;
@@ -3886,7 +3886,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   Py_ssize_t __pyx_t_15;
   __Pyx_RefNannySetupContext("_relieff_reg_", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":235
+  /* "Arithmos/preprocess/_relieff.pyx":235
  *     cdef:
  *         Py_ssize_t i, a, ri
  *         double Nc = 0             # <<<<<<<<<<<<<<
@@ -3895,7 +3895,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  */
   __pyx_v_Nc = 0.0;
 
-  /* "Orange/preprocess/_relieff.pyx":236
+  /* "Arithmos/preprocess/_relieff.pyx":236
  *         Py_ssize_t i, a, ri
  *         double Nc = 0
  *         arr_f1_t Na = np.zeros(X.shape[1])             # <<<<<<<<<<<<<<
@@ -3961,7 +3961,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":237
+  /* "Arithmos/preprocess/_relieff.pyx":237
  *         double Nc = 0
  *         arr_f1_t Na = np.zeros(X.shape[1])
  *         arr_f1_t Nca = np.zeros(X.shape[1])             # <<<<<<<<<<<<<<
@@ -4027,7 +4027,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":239
+  /* "Arithmos/preprocess/_relieff.pyx":239
  *         arr_f1_t Nca = np.zeros(X.shape[1])
  * 
  *         arr_f1_t weights = np.empty(X.shape[1])             # <<<<<<<<<<<<<<
@@ -4093,7 +4093,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":240
+  /* "Arithmos/preprocess/_relieff.pyx":240
  * 
  *         arr_f1_t weights = np.empty(X.shape[1])
  *         arr_f1_t difference = np.empty(X.shape[1])             # <<<<<<<<<<<<<<
@@ -4159,7 +4159,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":241
+  /* "Arithmos/preprocess/_relieff.pyx":241
  *         arr_f1_t weights = np.empty(X.shape[1])
  *         arr_f1_t difference = np.empty(X.shape[1])
  *         Py_ssize_t n_iter = R.shape[0]             # <<<<<<<<<<<<<<
@@ -4168,7 +4168,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  */
   __pyx_v_n_iter = (__pyx_v_R.shape[0]);
 
-  /* "Orange/preprocess/_relieff.pyx":243
+  /* "Arithmos/preprocess/_relieff.pyx":243
  *         Py_ssize_t n_iter = R.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4183,7 +4183,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
       #endif
       /*try:*/ {
 
-        /* "Orange/preprocess/_relieff.pyx":244
+        /* "Arithmos/preprocess/_relieff.pyx":244
  * 
  *     with nogil:
  *         k_nearest = min(k_nearest, X.shape[0] - 1)             # <<<<<<<<<<<<<<
@@ -4199,7 +4199,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         }
         __pyx_v_k_nearest = __pyx_t_9;
 
-        /* "Orange/preprocess/_relieff.pyx":245
+        /* "Arithmos/preprocess/_relieff.pyx":245
  *     with nogil:
  *         k_nearest = min(k_nearest, X.shape[0] - 1)
  *         for ri in range(n_iter):             # <<<<<<<<<<<<<<
@@ -4211,7 +4211,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_7; __pyx_t_10+=1) {
           __pyx_v_ri = __pyx_t_10;
 
-          /* "Orange/preprocess/_relieff.pyx":247
+          /* "Arithmos/preprocess/_relieff.pyx":247
  *         for ri in range(n_iter):
  *             # Select a random instance
  *             i = R[ri]             # <<<<<<<<<<<<<<
@@ -4221,17 +4221,17 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           __pyx_t_11 = __pyx_v_ri;
           __pyx_v_i = (*((__pyx_t_5numpy_intp_t *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_11 * __pyx_v_R.strides[0]) )));
 
-          /* "Orange/preprocess/_relieff.pyx":249
+          /* "Arithmos/preprocess/_relieff.pyx":249
  *             i = R[ri]
  *             # Find its k nearest neighbors and update the Nx counts
  *             k_nearest_reg(X, y, i, k_nearest,             # <<<<<<<<<<<<<<
  *                           is_discrete, attr_stats, contingencies, difference,
  *                           &Nc, Na, Nca)
  */
-          __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_reg(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_Nc), __pyx_v_Na, __pyx_v_Nca);
+          __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_reg(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_difference, (&__pyx_v_Nc), __pyx_v_Na, __pyx_v_Nca);
         }
 
-        /* "Orange/preprocess/_relieff.pyx":253
+        /* "Arithmos/preprocess/_relieff.pyx":253
  *                           &Nc, Na, Nca)
  *         # Update weights
  *         for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -4243,7 +4243,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_7; __pyx_t_10+=1) {
           __pyx_v_a = __pyx_t_10;
 
-          /* "Orange/preprocess/_relieff.pyx":254
+          /* "Arithmos/preprocess/_relieff.pyx":254
  *         # Update weights
  *         for a in range(X.shape[1]):
  *             weights[a] = Nca[a] / Nc - (Na[a] - Nca[a]) / (n_iter - Nc)             # <<<<<<<<<<<<<<
@@ -4258,7 +4258,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         }
       }
 
-      /* "Orange/preprocess/_relieff.pyx":243
+      /* "Arithmos/preprocess/_relieff.pyx":243
  *         Py_ssize_t n_iter = R.shape[0]
  * 
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4277,7 +4277,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
       }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":255
+  /* "Arithmos/preprocess/_relieff.pyx":255
  *         for a in range(X.shape[1]):
  *             weights[a] = Nca[a] / Nc - (Na[a] - Nca[a]) / (n_iter - Nc)
  *     return weights             # <<<<<<<<<<<<<<
@@ -4288,7 +4288,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_r = __pyx_v_weights;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":223
+  /* "Arithmos/preprocess/_relieff.pyx":223
  * 
  * 
  * cdef arr_f1_t _relieff_reg_(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -4306,7 +4306,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("Orange.preprocess._relieff._relieff_reg_", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff._relieff_reg_", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -4322,7 +4322,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":258
+/* "Arithmos/preprocess/_relieff.pyx":258
  * 
  * 
  * cdef arr_f1_t _relieff_cls_(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -4330,26 +4330,26 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  *                             arr_intp_t R,
  */
 
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff__relieff_cls_(__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_y, __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_v_R, int __pyx_v_n_classes, int __pyx_v_k_nearest, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_prior_proba, __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_cls_(__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_X, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_y, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_v_R, int __pyx_v_n_classes, int __pyx_v_k_nearest, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_prior_proba, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_attr_stats, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
   double __pyx_v_p;
   Py_ssize_t __pyx_v_cls;
   Py_ssize_t __pyx_v_a;
   Py_ssize_t __pyx_v_i;
   Py_ssize_t __pyx_v_yi;
   Py_ssize_t __pyx_v_ri;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_weights_adj = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_v_difference = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_weights = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_weights_adj = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_v_difference = { 0, 0, { 0 }, { 0 }, { 0 } };
   Py_ssize_t __pyx_v_n_iter;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_7 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_7 = { 0, 0, { 0 }, { 0 }, { 0 } };
   size_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
   int __pyx_t_10;
@@ -4374,7 +4374,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   Py_ssize_t __pyx_t_29;
   __Pyx_RefNannySetupContext("_relieff_cls_", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":273
+  /* "Arithmos/preprocess/_relieff.pyx":273
  *         double p
  *         Py_ssize_t cls, a, i, yi, ri
  *         arr_f1_t weights = np.zeros(X.shape[1])             # <<<<<<<<<<<<<<
@@ -4440,7 +4440,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":274
+  /* "Arithmos/preprocess/_relieff.pyx":274
  *         Py_ssize_t cls, a, i, yi, ri
  *         arr_f1_t weights = np.zeros(X.shape[1])
  *         arr_f2_t weights_adj = np.empty((n_classes, X.shape[1]))             # <<<<<<<<<<<<<<
@@ -4516,7 +4516,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":275
+  /* "Arithmos/preprocess/_relieff.pyx":275
  *         arr_f1_t weights = np.zeros(X.shape[1])
  *         arr_f2_t weights_adj = np.empty((n_classes, X.shape[1]))
  *         arr_f1_t difference = np.empty(X.shape[1])             # <<<<<<<<<<<<<<
@@ -4582,7 +4582,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":276
+  /* "Arithmos/preprocess/_relieff.pyx":276
  *         arr_f2_t weights_adj = np.empty((n_classes, X.shape[1]))
  *         arr_f1_t difference = np.empty(X.shape[1])
  *         Py_ssize_t n_iter = len(R)             # <<<<<<<<<<<<<<
@@ -4592,7 +4592,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_8 = __Pyx_MemoryView_Len(__pyx_v_R); 
   __pyx_v_n_iter = __pyx_t_8;
 
-  /* "Orange/preprocess/_relieff.pyx":277
+  /* "Arithmos/preprocess/_relieff.pyx":277
  *         arr_f1_t difference = np.empty(X.shape[1])
  *         Py_ssize_t n_iter = len(R)
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4607,7 +4607,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
       #endif
       /*try:*/ {
 
-        /* "Orange/preprocess/_relieff.pyx":278
+        /* "Arithmos/preprocess/_relieff.pyx":278
  *         Py_ssize_t n_iter = len(R)
  *     with nogil:
  *         k_nearest = min(k_nearest, X.shape[0] - 1)             # <<<<<<<<<<<<<<
@@ -4623,7 +4623,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         }
         __pyx_v_k_nearest = __pyx_t_11;
 
-        /* "Orange/preprocess/_relieff.pyx":280
+        /* "Arithmos/preprocess/_relieff.pyx":280
  *         k_nearest = min(k_nearest, X.shape[0] - 1)
  *         # TODO: stratify per class value?
  *         for ri in range(n_iter):             # <<<<<<<<<<<<<<
@@ -4635,7 +4635,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_9; __pyx_t_12+=1) {
           __pyx_v_ri = __pyx_t_12;
 
-          /* "Orange/preprocess/_relieff.pyx":282
+          /* "Arithmos/preprocess/_relieff.pyx":282
  *         for ri in range(n_iter):
  *             # Clear weight adjustment buffer
  *             weights_adj[:, :] = 0             # <<<<<<<<<<<<<<
@@ -4665,7 +4665,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
               }
           }
 
-          /* "Orange/preprocess/_relieff.pyx":284
+          /* "Arithmos/preprocess/_relieff.pyx":284
  *             weights_adj[:, :] = 0
  *             # Select a random instance
  *             i = R[ri]             # <<<<<<<<<<<<<<
@@ -4675,16 +4675,16 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           __pyx_t_13 = __pyx_v_ri;
           __pyx_v_i = (*((__pyx_t_5numpy_intp_t *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_13 * __pyx_v_R.strides[0]) )));
 
-          /* "Orange/preprocess/_relieff.pyx":286
+          /* "Arithmos/preprocess/_relieff.pyx":286
  *             i = R[ri]
  *             # Put the weight adjustments k-nearest-of-each-class make into weights_adj
  *             k_nearest_per_class(X, y, i, k_nearest, n_classes,             # <<<<<<<<<<<<<<
  *                                 is_discrete, attr_stats, contingencies, weights_adj, difference)
  *             # Update the weights for each class
  */
-          __pyx_f_6Orange_10preprocess_8_relieff_k_nearest_per_class(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_k_nearest, __pyx_v_n_classes, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_weights_adj, __pyx_v_difference);
+          __pyx_f_6Arithmos_10preprocess_8_relieff_k_nearest_per_class(__pyx_v_X, __pyx_v_y, __pyx_v_i, __pyx_v_k_nearest, __pyx_v_n_classes, __pyx_v_is_discrete, __pyx_v_attr_stats, __pyx_v_contingencies, __pyx_v_weights_adj, __pyx_v_difference);
 
-          /* "Orange/preprocess/_relieff.pyx":289
+          /* "Arithmos/preprocess/_relieff.pyx":289
  *                                 is_discrete, attr_stats, contingencies, weights_adj, difference)
  *             # Update the weights for each class
  *             yi = <Py_ssize_t>y[i]             # <<<<<<<<<<<<<<
@@ -4694,7 +4694,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           __pyx_t_14 = __pyx_v_i;
           __pyx_v_yi = ((Py_ssize_t)(*((double *) ( /* dim=0 */ (__pyx_v_y.data + __pyx_t_14 * __pyx_v_y.strides[0]) ))));
 
-          /* "Orange/preprocess/_relieff.pyx":290
+          /* "Arithmos/preprocess/_relieff.pyx":290
  *             # Update the weights for each class
  *             yi = <Py_ssize_t>y[i]
  *             for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -4706,7 +4706,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
             __pyx_v_a = __pyx_t_17;
 
-            /* "Orange/preprocess/_relieff.pyx":291
+            /* "Arithmos/preprocess/_relieff.pyx":291
  *             yi = <Py_ssize_t>y[i]
  *             for a in range(X.shape[1]):
  *                 weights[a] -= weights_adj[yi, a]             # <<<<<<<<<<<<<<
@@ -4719,7 +4719,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
             *((double *) ( /* dim=0 */ (__pyx_v_weights.data + __pyx_t_20 * __pyx_v_weights.strides[0]) )) -= (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_weights_adj.data + __pyx_t_18 * __pyx_v_weights_adj.strides[0]) ) + __pyx_t_19 * __pyx_v_weights_adj.strides[1]) )));
           }
 
-          /* "Orange/preprocess/_relieff.pyx":292
+          /* "Arithmos/preprocess/_relieff.pyx":292
  *             for a in range(X.shape[1]):
  *                 weights[a] -= weights_adj[yi, a]
  *             for cls in range(n_classes):             # <<<<<<<<<<<<<<
@@ -4731,7 +4731,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_21; __pyx_t_15+=1) {
             __pyx_v_cls = __pyx_t_15;
 
-            /* "Orange/preprocess/_relieff.pyx":293
+            /* "Arithmos/preprocess/_relieff.pyx":293
  *                 weights[a] -= weights_adj[yi, a]
  *             for cls in range(n_classes):
  *                 if cls == yi: continue             # <<<<<<<<<<<<<<
@@ -4743,7 +4743,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
               goto __pyx_L10_continue;
             }
 
-            /* "Orange/preprocess/_relieff.pyx":294
+            /* "Arithmos/preprocess/_relieff.pyx":294
  *             for cls in range(n_classes):
  *                 if cls == yi: continue
  *                 p = prior_proba[cls] / (1 - prior_proba[yi])             # <<<<<<<<<<<<<<
@@ -4754,7 +4754,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
             __pyx_t_24 = __pyx_v_yi;
             __pyx_v_p = ((*((double *) ( /* dim=0 */ (__pyx_v_prior_proba.data + __pyx_t_23 * __pyx_v_prior_proba.strides[0]) ))) / (1.0 - (*((double *) ( /* dim=0 */ (__pyx_v_prior_proba.data + __pyx_t_24 * __pyx_v_prior_proba.strides[0]) )))));
 
-            /* "Orange/preprocess/_relieff.pyx":295
+            /* "Arithmos/preprocess/_relieff.pyx":295
  *                 if cls == yi: continue
  *                 p = prior_proba[cls] / (1 - prior_proba[yi])
  *                 for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -4766,7 +4766,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
             for (__pyx_t_25 = 0; __pyx_t_25 < __pyx_t_17; __pyx_t_25+=1) {
               __pyx_v_a = __pyx_t_25;
 
-              /* "Orange/preprocess/_relieff.pyx":296
+              /* "Arithmos/preprocess/_relieff.pyx":296
  *                 p = prior_proba[cls] / (1 - prior_proba[yi])
  *                 for a in range(X.shape[1]):
  *                     weights[a] += p * weights_adj[cls, a]             # <<<<<<<<<<<<<<
@@ -4782,7 +4782,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
           }
         }
 
-        /* "Orange/preprocess/_relieff.pyx":297
+        /* "Arithmos/preprocess/_relieff.pyx":297
  *                 for a in range(X.shape[1]):
  *                     weights[a] += p * weights_adj[cls, a]
  *         for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -4794,7 +4794,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_9; __pyx_t_12+=1) {
           __pyx_v_a = __pyx_t_12;
 
-          /* "Orange/preprocess/_relieff.pyx":298
+          /* "Arithmos/preprocess/_relieff.pyx":298
  *                     weights[a] += p * weights_adj[cls, a]
  *         for a in range(X.shape[1]):
  *             weights[a] /= (n_iter * k_nearest)             # <<<<<<<<<<<<<<
@@ -4806,7 +4806,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
         }
       }
 
-      /* "Orange/preprocess/_relieff.pyx":277
+      /* "Arithmos/preprocess/_relieff.pyx":277
  *         arr_f1_t difference = np.empty(X.shape[1])
  *         Py_ssize_t n_iter = len(R)
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4825,7 +4825,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
       }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":299
+  /* "Arithmos/preprocess/_relieff.pyx":299
  *         for a in range(X.shape[1]):
  *             weights[a] /= (n_iter * k_nearest)
  *     return weights             # <<<<<<<<<<<<<<
@@ -4836,7 +4836,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_r = __pyx_v_weights;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":258
+  /* "Arithmos/preprocess/_relieff.pyx":258
  * 
  * 
  * cdef arr_f1_t _relieff_cls_(arr_f2_t X,             # <<<<<<<<<<<<<<
@@ -4855,7 +4855,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("Orange.preprocess._relieff._relieff_cls_", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff._relieff_cls_", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -4870,7 +4870,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":302
+/* "Arithmos/preprocess/_relieff.pyx":302
  * 
  * 
  * cdef inline void _contingency_table(np.ndarray x1,             # <<<<<<<<<<<<<<
@@ -4878,7 +4878,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  *                                     np.ndarray x2,
  */
 
-static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_table(PyArrayObject *__pyx_v_x1, int __pyx_v_n_unique1, PyArrayObject *__pyx_v_x2, int __pyx_v_n_unique2, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_tables, Py_ssize_t __pyx_v_attribute) {
+static CYTHON_INLINE void __pyx_f_6Arithmos_10preprocess_8_relieff__contingency_table(PyArrayObject *__pyx_v_x1, int __pyx_v_n_unique1, PyArrayObject *__pyx_v_x2, int __pyx_v_n_unique2, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_tables, Py_ssize_t __pyx_v_attribute) {
   PyArrayObject *__pyx_v_table = 0;
   PyArrayObject *__pyx_v_row_sums = 0;
   double __pyx_v_x1i;
@@ -4896,10 +4896,10 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   double __pyx_t_9;
   int __pyx_t_10;
   int __pyx_t_11;
-  std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __pyx_t_12;
+  std::pair<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t>  __pyx_t_12;
   __Pyx_RefNannySetupContext("_contingency_table", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":309
+  /* "Arithmos/preprocess/_relieff.pyx":309
  *                                     Py_ssize_t attribute):
  *     cdef:
  *         np.ndarray table = np.zeros((n_unique1, n_unique2))             # <<<<<<<<<<<<<<
@@ -4973,7 +4973,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __pyx_v_table = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":312
+  /* "Arithmos/preprocess/_relieff.pyx":312
  *         np.ndarray row_sums
  *         double x1i, x2i
  *     for i in range(x1.shape[0]):             # <<<<<<<<<<<<<<
@@ -5028,7 +5028,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":313
+    /* "Arithmos/preprocess/_relieff.pyx":313
  *         double x1i, x2i
  *     for i in range(x1.shape[0]):
  *         x1i, x2i = x1[i], x2[i]             # <<<<<<<<<<<<<<
@@ -5046,34 +5046,34 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
     __pyx_v_x1i = __pyx_t_8;
     __pyx_v_x2i = __pyx_t_9;
 
-    /* "Orange/preprocess/_relieff.pyx":314
+    /* "Arithmos/preprocess/_relieff.pyx":314
  *     for i in range(x1.shape[0]):
  *         x1i, x2i = x1[i], x2[i]
  *         if isnan(x1i) and isnan(x2i): pass             # <<<<<<<<<<<<<<
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1
  */
-    __pyx_t_11 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_x1i) != 0);
+    __pyx_t_11 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_x1i) != 0);
     if (__pyx_t_11) {
     } else {
       __pyx_t_10 = __pyx_t_11;
       goto __pyx_L6_bool_binop_done;
     }
-    __pyx_t_11 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_x2i) != 0);
+    __pyx_t_11 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_x2i) != 0);
     __pyx_t_10 = __pyx_t_11;
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_10) {
       goto __pyx_L5;
     }
 
-    /* "Orange/preprocess/_relieff.pyx":315
+    /* "Arithmos/preprocess/_relieff.pyx":315
  *         x1i, x2i = x1[i], x2[i]
  *         if isnan(x1i) and isnan(x2i): pass
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1             # <<<<<<<<<<<<<<
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1
  */
-    __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_x1i) != 0);
+    __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_x1i) != 0);
     if (__pyx_t_10) {
       __pyx_t_3 = PyInt_FromSsize_t(((Py_ssize_t)__pyx_v_x2i)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -5096,14 +5096,14 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
       goto __pyx_L5;
     }
 
-    /* "Orange/preprocess/_relieff.pyx":316
+    /* "Arithmos/preprocess/_relieff.pyx":316
  *         if isnan(x1i) and isnan(x2i): pass
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1             # <<<<<<<<<<<<<<
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1
  *     row_sums = table.sum(0)
  */
-    __pyx_t_10 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_x2i) != 0);
+    __pyx_t_10 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_x2i) != 0);
     if (__pyx_t_10) {
       __pyx_t_2 = PyInt_FromSsize_t(((Py_ssize_t)__pyx_v_x1i)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
@@ -5126,7 +5126,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
       goto __pyx_L5;
     }
 
-    /* "Orange/preprocess/_relieff.pyx":317
+    /* "Arithmos/preprocess/_relieff.pyx":317
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1             # <<<<<<<<<<<<<<
@@ -5157,7 +5157,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
     }
     __pyx_L5:;
 
-    /* "Orange/preprocess/_relieff.pyx":312
+    /* "Arithmos/preprocess/_relieff.pyx":312
  *         np.ndarray row_sums
  *         double x1i, x2i
  *     for i in range(x1.shape[0]):             # <<<<<<<<<<<<<<
@@ -5167,7 +5167,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":318
+  /* "Arithmos/preprocess/_relieff.pyx":318
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1
  *     row_sums = table.sum(0)             # <<<<<<<<<<<<<<
@@ -5183,7 +5183,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __pyx_v_row_sums = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":319
+  /* "Arithmos/preprocess/_relieff.pyx":319
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1
  *     row_sums = table.sum(0)
  *     row_sums[row_sums == 0] = np.inf  # Avoid zero-division             # <<<<<<<<<<<<<<
@@ -5200,7 +5200,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":320
+  /* "Arithmos/preprocess/_relieff.pyx":320
  *     row_sums = table.sum(0)
  *     row_sums[row_sums == 0] = np.inf  # Avoid zero-division
  *     table /= row_sums             # <<<<<<<<<<<<<<
@@ -5213,7 +5213,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __Pyx_DECREF_SET(__pyx_v_table, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":321
+  /* "Arithmos/preprocess/_relieff.pyx":321
  *     row_sums[row_sums == 0] = np.inf  # Avoid zero-division
  *     table /= row_sums
  *     tables.insert((attribute, table))             # <<<<<<<<<<<<<<
@@ -5230,7 +5230,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __Pyx_GIVEREF(((PyObject *)__pyx_v_table));
   PyTuple_SET_ITEM(__pyx_t_2, 1, ((PyObject *)__pyx_v_table));
   __pyx_t_1 = 0;
-  __pyx_t_12 = __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 321, __pyx_L1_error)
+  __pyx_t_12 = __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(__pyx_t_2); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 321, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   try {
     __pyx_v_tables.insert(__pyx_t_12);
@@ -5239,7 +5239,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
     __PYX_ERR(0, 321, __pyx_L1_error)
   }
 
-  /* "Orange/preprocess/_relieff.pyx":302
+  /* "Arithmos/preprocess/_relieff.pyx":302
  * 
  * 
  * cdef inline void _contingency_table(np.ndarray x1,             # <<<<<<<<<<<<<<
@@ -5255,7 +5255,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_WriteUnraisable("Orange.preprocess._relieff._contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("Arithmos.preprocess._relieff._contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_table);
   __Pyx_XDECREF((PyObject *)__pyx_v_row_sums);
@@ -5263,7 +5263,7 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
   __Pyx_RefNannyFinishContext();
 }
 
-/* "Orange/preprocess/_relieff.pyx":324
+/* "Arithmos/preprocess/_relieff.pyx":324
  * 
  * 
  * def contingency_table(x1, x2):             # <<<<<<<<<<<<<<
@@ -5272,10 +5272,10 @@ static CYTHON_INLINE void __pyx_f_6Orange_10preprocess_8_relieff__contingency_ta
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_1contingency_table(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_8_relieff_contingency_table[] = "contingency_table(x1, x2)\nReturn contingency array between x1 and x2.";
-static PyMethodDef __pyx_mdef_6Orange_10preprocess_8_relieff_1contingency_table = {"contingency_table", (PyCFunction)__pyx_pw_6Orange_10preprocess_8_relieff_1contingency_table, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10preprocess_8_relieff_contingency_table};
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_1contingency_table(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_1contingency_table(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_8_relieff_contingency_table[] = "contingency_table(x1, x2)\nReturn contingency array between x1 and x2.";
+static PyMethodDef __pyx_mdef_6Arithmos_10preprocess_8_relieff_1contingency_table = {"contingency_table", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_8_relieff_1contingency_table, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10preprocess_8_relieff_contingency_table};
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_1contingency_table(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_x1 = 0;
   PyObject *__pyx_v_x2 = 0;
   PyObject *__pyx_r = 0;
@@ -5323,26 +5323,26 @@ static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_1contingency_table(PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("contingency_table", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 324, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.preprocess._relieff.contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(__pyx_self, __pyx_v_x1, __pyx_v_x2);
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_8_relieff_contingency_table(__pyx_self, __pyx_v_x1, __pyx_v_x2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x1, PyObject *__pyx_v_x2) {
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_v_tables;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_contingency_table(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x1, PyObject *__pyx_v_x2) {
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_v_tables;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_v_table = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_n1;
   int __pyx_v_n2;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_t_1;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_2 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_t_1;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_2 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_t_3;
   int __pyx_t_4;
   PyObject *__pyx_t_5 = NULL;
@@ -5350,10 +5350,10 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
   PyObject *__pyx_t_9 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannySetupContext("contingency_table", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":327
+  /* "Arithmos/preprocess/_relieff.pyx":327
  *     """Return contingency array between x1 and x2."""
  *     cdef:
  *         Contingencies tables = Contingencies()             # <<<<<<<<<<<<<<
@@ -5361,14 +5361,14 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
  *         int n1 = int(nanmax(x1) + 1), n2 = int(nanmax(x2) + 1)
  */
   try {
-    __pyx_t_1 = __pyx_t_6Orange_10preprocess_8_relieff_Contingencies();
+    __pyx_t_1 = __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies();
   } catch(...) {
     __Pyx_CppExn2PyErr();
     __PYX_ERR(0, 327, __pyx_L1_error)
   }
   __pyx_v_tables = __pyx_t_1;
 
-  /* "Orange/preprocess/_relieff.pyx":329
+  /* "Arithmos/preprocess/_relieff.pyx":329
  *         Contingencies tables = Contingencies()
  *         arr_f2_t table
  *         int n1 = int(nanmax(x1) + 1), n2 = int(nanmax(x2) + 1)             # <<<<<<<<<<<<<<
@@ -5376,35 +5376,35 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
  *         return np.array([])
  */
   __pyx_t_2 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_x1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_2.memview)) __PYX_ERR(0, 329, __pyx_L1_error)
-  __pyx_v_n1 = ((int)(__pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_2) + 1.0));
+  __pyx_v_n1 = ((int)(__pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_2) + 1.0));
   __PYX_XDEC_MEMVIEW(&__pyx_t_2, 1);
   __pyx_t_2.memview = NULL;
   __pyx_t_2.data = NULL;
   __pyx_t_2 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_x2, PyBUF_WRITABLE); if (unlikely(!__pyx_t_2.memview)) __PYX_ERR(0, 329, __pyx_L1_error)
-  __pyx_v_n2 = ((int)(__pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_2) + 1.0));
+  __pyx_v_n2 = ((int)(__pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_2) + 1.0));
   __PYX_XDEC_MEMVIEW(&__pyx_t_2, 1);
   __pyx_t_2.memview = NULL;
   __pyx_t_2.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":330
+  /* "Arithmos/preprocess/_relieff.pyx":330
  *         arr_f2_t table
  *         int n1 = int(nanmax(x1) + 1), n2 = int(nanmax(x2) + 1)
  *     if isnan(n1) or isnan(n2):             # <<<<<<<<<<<<<<
  *         return np.array([])
  *     _contingency_table(x1, n1, x2, n2, tables, 0)
  */
-  __pyx_t_4 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_n1) != 0);
+  __pyx_t_4 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_n1) != 0);
   if (!__pyx_t_4) {
   } else {
     __pyx_t_3 = __pyx_t_4;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_4 = (__pyx_f_6Orange_10preprocess_8_relieff_isnan(__pyx_v_n2) != 0);
+  __pyx_t_4 = (__pyx_f_6Arithmos_10preprocess_8_relieff_isnan(__pyx_v_n2) != 0);
   __pyx_t_3 = __pyx_t_4;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "Orange/preprocess/_relieff.pyx":331
+    /* "Arithmos/preprocess/_relieff.pyx":331
  *         int n1 = int(nanmax(x1) + 1), n2 = int(nanmax(x2) + 1)
  *     if isnan(n1) or isnan(n2):
  *         return np.array([])             # <<<<<<<<<<<<<<
@@ -5469,7 +5469,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "Orange/preprocess/_relieff.pyx":330
+    /* "Arithmos/preprocess/_relieff.pyx":330
  *         arr_f2_t table
  *         int n1 = int(nanmax(x1) + 1), n2 = int(nanmax(x2) + 1)
  *     if isnan(n1) or isnan(n2):             # <<<<<<<<<<<<<<
@@ -5478,7 +5478,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
  */
   }
 
-  /* "Orange/preprocess/_relieff.pyx":332
+  /* "Arithmos/preprocess/_relieff.pyx":332
  *     if isnan(n1) or isnan(n2):
  *         return np.array([])
  *     _contingency_table(x1, n1, x2, n2, tables, 0)             # <<<<<<<<<<<<<<
@@ -5487,9 +5487,9 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
  */
   if (!(likely(((__pyx_v_x1) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_x1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 332, __pyx_L1_error)
   if (!(likely(((__pyx_v_x2) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_x2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 332, __pyx_L1_error)
-  __pyx_f_6Orange_10preprocess_8_relieff__contingency_table(((PyArrayObject *)__pyx_v_x1), __pyx_v_n1, ((PyArrayObject *)__pyx_v_x2), __pyx_v_n2, __pyx_v_tables, 0);
+  __pyx_f_6Arithmos_10preprocess_8_relieff__contingency_table(((PyArrayObject *)__pyx_v_x1), __pyx_v_n1, ((PyArrayObject *)__pyx_v_x2), __pyx_v_n2, __pyx_v_tables, 0);
 
-  /* "Orange/preprocess/_relieff.pyx":333
+  /* "Arithmos/preprocess/_relieff.pyx":333
  *         return np.array([])
  *     _contingency_table(x1, n1, x2, n2, tables, 0)
  *     table = tables[0]             # <<<<<<<<<<<<<<
@@ -5500,7 +5500,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
   __PYX_INC_MEMVIEW(&(__pyx_v_tables[0]), 0);
   __pyx_v_table = __pyx_t_10;
 
-  /* "Orange/preprocess/_relieff.pyx":334
+  /* "Arithmos/preprocess/_relieff.pyx":334
  *     _contingency_table(x1, n1, x2, n2, tables, 0)
  *     table = tables[0]
  *     return np.asarray(table)             # <<<<<<<<<<<<<<
@@ -5565,7 +5565,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":324
+  /* "Arithmos/preprocess/_relieff.pyx":324
  * 
  * 
  * def contingency_table(x1, x2):             # <<<<<<<<<<<<<<
@@ -5581,7 +5581,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Orange.preprocess._relieff.contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.contingency_table", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_table, 1);
@@ -5590,7 +5590,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":337
+/* "Arithmos/preprocess/_relieff.pyx":337
  * 
  * 
  * cdef void contingency_tables(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -5598,11 +5598,11 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_contingency_table(CYTHO
  *                              arr_i1_t is_discrete,
  */
 
-static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_tables) {
+static void __pyx_f_6Arithmos_10preprocess_8_relieff_contingency_tables(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_tables) {
   Py_ssize_t __pyx_v_a;
   Py_ssize_t __pyx_v_ny;
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   npy_intp __pyx_t_2;
   npy_intp __pyx_t_3;
   Py_ssize_t __pyx_t_4;
@@ -5617,7 +5617,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
   PyObject *__pyx_t_13 = NULL;
   __Pyx_RefNannySetupContext("contingency_tables", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":345
+  /* "Arithmos/preprocess/_relieff.pyx":345
  *     """
  *     cdef:
  *         Py_ssize_t a, ny = int(nanmax(y) + 1)             # <<<<<<<<<<<<<<
@@ -5625,12 +5625,12 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
  *         if (is_discrete[a] and
  */
   __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(((PyObject *)__pyx_v_y), PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 345, __pyx_L1_error)
-  __pyx_v_ny = ((Py_ssize_t)(__pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_1) + 1.0));
+  __pyx_v_ny = ((Py_ssize_t)(__pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_1) + 1.0));
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __pyx_t_1.memview = NULL;
   __pyx_t_1.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":346
+  /* "Arithmos/preprocess/_relieff.pyx":346
  *     cdef:
  *         Py_ssize_t a, ny = int(nanmax(y) + 1)
  *     for a in range(X.shape[1]):             # <<<<<<<<<<<<<<
@@ -5642,7 +5642,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_a = __pyx_t_4;
 
-    /* "Orange/preprocess/_relieff.pyx":347
+    /* "Arithmos/preprocess/_relieff.pyx":347
  *         Py_ssize_t a, ny = int(nanmax(y) + 1)
  *     for a in range(X.shape[1]):
  *         if (is_discrete[a] and             # <<<<<<<<<<<<<<
@@ -5657,7 +5657,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
       goto __pyx_L6_bool_binop_done;
     }
 
-    /* "Orange/preprocess/_relieff.pyx":349
+    /* "Arithmos/preprocess/_relieff.pyx":349
  *         if (is_discrete[a] and
  *             # Don't calculate+store contingencies if not required
  *             np.isnan(X[:, a]).any()):             # <<<<<<<<<<<<<<
@@ -5754,7 +5754,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
     __pyx_t_5 = __pyx_t_7;
     __pyx_L6_bool_binop_done:;
 
-    /* "Orange/preprocess/_relieff.pyx":347
+    /* "Arithmos/preprocess/_relieff.pyx":347
  *         Py_ssize_t a, ny = int(nanmax(y) + 1)
  *     for a in range(X.shape[1]):
  *         if (is_discrete[a] and             # <<<<<<<<<<<<<<
@@ -5763,7 +5763,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
  */
     if (__pyx_t_5) {
 
-      /* "Orange/preprocess/_relieff.pyx":350
+      /* "Arithmos/preprocess/_relieff.pyx":350
  *             # Don't calculate+store contingencies if not required
  *             np.isnan(X[:, a]).any()):
  *             _contingency_table(X[:, a], int(nanmax(X[:, a]) + 1),             # <<<<<<<<<<<<<<
@@ -5800,20 +5800,20 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
       __pyx_t_1 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_t_11, PyBUF_WRITABLE); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 350, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "Orange/preprocess/_relieff.pyx":351
+      /* "Arithmos/preprocess/_relieff.pyx":351
  *             np.isnan(X[:, a]).any()):
  *             _contingency_table(X[:, a], int(nanmax(X[:, a]) + 1),
  *                               y, ny, tables, a)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __pyx_f_6Orange_10preprocess_8_relieff__contingency_table(((PyArrayObject *)__pyx_t_8), ((int)(__pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_1) + 1.0)), __pyx_v_y, __pyx_v_ny, __pyx_v_tables, __pyx_v_a);
+      __pyx_f_6Arithmos_10preprocess_8_relieff__contingency_table(((PyArrayObject *)__pyx_t_8), ((int)(__pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_1) + 1.0)), __pyx_v_y, __pyx_v_ny, __pyx_v_tables, __pyx_v_a);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
       __pyx_t_1.memview = NULL;
       __pyx_t_1.data = NULL;
 
-      /* "Orange/preprocess/_relieff.pyx":347
+      /* "Arithmos/preprocess/_relieff.pyx":347
  *         Py_ssize_t a, ny = int(nanmax(y) + 1)
  *     for a in range(X.shape[1]):
  *         if (is_discrete[a] and             # <<<<<<<<<<<<<<
@@ -5823,7 +5823,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
     }
   }
 
-  /* "Orange/preprocess/_relieff.pyx":337
+  /* "Arithmos/preprocess/_relieff.pyx":337
  * 
  * 
  * cdef void contingency_tables(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -5841,12 +5841,12 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_WriteUnraisable("Orange.preprocess._relieff.contingency_tables", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("Arithmos.preprocess._relieff.contingency_tables", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
 }
 
-/* "Orange/preprocess/_relieff.pyx":354
+/* "Arithmos/preprocess/_relieff.pyx":354
  * 
  * 
  * cdef tuple prepare(X, y, is_discrete, Contingencies &contingencies):             # <<<<<<<<<<<<<<
@@ -5854,7 +5854,7 @@ static void __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(PyArrayObj
  *     is_discrete = np.asarray(is_discrete, dtype=np.bool8)
  */
 
-static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_v_X, PyObject *__pyx_v_y, PyObject *__pyx_v_is_discrete, __pyx_t_6Orange_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
+static PyObject *__pyx_f_6Arithmos_10preprocess_8_relieff_prepare(PyObject *__pyx_v_X, PyObject *__pyx_v_y, PyObject *__pyx_v_is_discrete, __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies &__pyx_v_contingencies) {
   PyObject *__pyx_v_is_continuous = 0;
   PyObject *__pyx_v_row_min = 0;
   PyObject *__pyx_v_row_ptp = 0;
@@ -5871,13 +5871,13 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   int __pyx_t_7;
   PyObject *__pyx_t_8 = NULL;
   PyObject *__pyx_t_9 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannySetupContext("prepare", 0);
   __Pyx_INCREF(__pyx_v_X);
   __Pyx_INCREF(__pyx_v_y);
   __Pyx_INCREF(__pyx_v_is_discrete);
 
-  /* "Orange/preprocess/_relieff.pyx":355
+  /* "Arithmos/preprocess/_relieff.pyx":355
  * 
  * cdef tuple prepare(X, y, is_discrete, Contingencies &contingencies):
  *     X = np.array(X, dtype=np.float64, order='C')             # <<<<<<<<<<<<<<
@@ -5912,7 +5912,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_X, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":356
+  /* "Arithmos/preprocess/_relieff.pyx":356
  * cdef tuple prepare(X, y, is_discrete, Contingencies &contingencies):
  *     X = np.array(X, dtype=np.float64, order='C')
  *     is_discrete = np.asarray(is_discrete, dtype=np.bool8)             # <<<<<<<<<<<<<<
@@ -5946,7 +5946,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_is_discrete, __pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":357
+  /* "Arithmos/preprocess/_relieff.pyx":357
  *     X = np.array(X, dtype=np.float64, order='C')
  *     is_discrete = np.asarray(is_discrete, dtype=np.bool8)
  *     is_continuous = ~is_discrete             # <<<<<<<<<<<<<<
@@ -5958,7 +5958,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __pyx_v_is_continuous = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":358
+  /* "Arithmos/preprocess/_relieff.pyx":358
  *     is_discrete = np.asarray(is_discrete, dtype=np.bool8)
  *     is_continuous = ~is_discrete
  *     if is_continuous.any():             # <<<<<<<<<<<<<<
@@ -5989,7 +5989,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_6) {
 
-    /* "Orange/preprocess/_relieff.pyx":359
+    /* "Arithmos/preprocess/_relieff.pyx":359
  *     is_continuous = ~is_discrete
  *     if is_continuous.any():
  *         row_min = np.nanmin(X, 0)             # <<<<<<<<<<<<<<
@@ -6049,7 +6049,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
     __pyx_v_row_min = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":360
+    /* "Arithmos/preprocess/_relieff.pyx":360
  *     if is_continuous.any():
  *         row_min = np.nanmin(X, 0)
  *         row_ptp = np.nanmax(X, 0) - row_min             # <<<<<<<<<<<<<<
@@ -6112,7 +6112,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
     __pyx_v_row_ptp = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":361
+    /* "Arithmos/preprocess/_relieff.pyx":361
  *         row_min = np.nanmin(X, 0)
  *         row_ptp = np.nanmax(X, 0) - row_min
  *         row_ptp[row_ptp == 0] = np.inf  # Avoid zero-division             # <<<<<<<<<<<<<<
@@ -6130,7 +6130,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":362
+    /* "Arithmos/preprocess/_relieff.pyx":362
  *         row_ptp = np.nanmax(X, 0) - row_min
  *         row_ptp[row_ptp == 0] = np.inf  # Avoid zero-division
  *         X[:, is_continuous] -= row_min[is_continuous]             # <<<<<<<<<<<<<<
@@ -6157,7 +6157,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":363
+    /* "Arithmos/preprocess/_relieff.pyx":363
  *         row_ptp[row_ptp == 0] = np.inf  # Avoid zero-division
  *         X[:, is_continuous] -= row_min[is_continuous]
  *         X[:, is_continuous] /= row_ptp[is_continuous]             # <<<<<<<<<<<<<<
@@ -6184,7 +6184,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "Orange/preprocess/_relieff.pyx":358
+    /* "Arithmos/preprocess/_relieff.pyx":358
  *     is_discrete = np.asarray(is_discrete, dtype=np.bool8)
  *     is_continuous = ~is_discrete
  *     if is_continuous.any():             # <<<<<<<<<<<<<<
@@ -6193,7 +6193,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
  */
   }
 
-  /* "Orange/preprocess/_relieff.pyx":364
+  /* "Arithmos/preprocess/_relieff.pyx":364
  *         X[:, is_continuous] -= row_min[is_continuous]
  *         X[:, is_continuous] /= row_ptp[is_continuous]
  *     y = np.array(y, dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -6227,7 +6227,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_y, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":365
+  /* "Arithmos/preprocess/_relieff.pyx":365
  *         X[:, is_continuous] /= row_ptp[is_continuous]
  *     y = np.array(y, dtype=np.float64)
  *     is_defined = np.logical_not(np.isnan(y))             # <<<<<<<<<<<<<<
@@ -6336,7 +6336,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __pyx_v_is_defined = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":366
+  /* "Arithmos/preprocess/_relieff.pyx":366
  *     y = np.array(y, dtype=np.float64)
  *     is_defined = np.logical_not(np.isnan(y))
  *     X = X[is_defined]             # <<<<<<<<<<<<<<
@@ -6348,7 +6348,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_X, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":367
+  /* "Arithmos/preprocess/_relieff.pyx":367
  *     is_defined = np.logical_not(np.isnan(y))
  *     X = X[is_defined]
  *     y = y[is_defined]             # <<<<<<<<<<<<<<
@@ -6360,7 +6360,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_y, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":368
+  /* "Arithmos/preprocess/_relieff.pyx":368
  *     X = X[is_defined]
  *     y = y[is_defined]
  *     attr_stats = np.row_stack((np.nanmean(X, 0), np.nanstd(X, 0)))             # <<<<<<<<<<<<<<
@@ -6529,7 +6529,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __pyx_v_attr_stats = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":369
+  /* "Arithmos/preprocess/_relieff.pyx":369
  *     y = y[is_defined]
  *     attr_stats = np.row_stack((np.nanmean(X, 0), np.nanstd(X, 0)))
  *     is_discrete = np.asarray(is_discrete, dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -6563,7 +6563,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_is_discrete, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":370
+  /* "Arithmos/preprocess/_relieff.pyx":370
  *     attr_stats = np.row_stack((np.nanmean(X, 0), np.nanstd(X, 0)))
  *     is_discrete = np.asarray(is_discrete, dtype=np.int8)
  *     contingency_tables(X, y, is_discrete, contingencies)             # <<<<<<<<<<<<<<
@@ -6573,12 +6573,12 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   if (!(likely(((__pyx_v_X) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_X, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 370, __pyx_L1_error)
   if (!(likely(((__pyx_v_y) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_y, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 370, __pyx_L1_error)
   __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_int8_t(__pyx_v_is_discrete, PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 370, __pyx_L1_error)
-  __pyx_f_6Orange_10preprocess_8_relieff_contingency_tables(((PyArrayObject *)__pyx_v_X), ((PyArrayObject *)__pyx_v_y), __pyx_t_10, __pyx_v_contingencies);
+  __pyx_f_6Arithmos_10preprocess_8_relieff_contingency_tables(((PyArrayObject *)__pyx_v_X), ((PyArrayObject *)__pyx_v_y), __pyx_t_10, __pyx_v_contingencies);
   __PYX_XDEC_MEMVIEW(&__pyx_t_10, 1);
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":371
+  /* "Arithmos/preprocess/_relieff.pyx":371
  *     is_discrete = np.asarray(is_discrete, dtype=np.int8)
  *     contingency_tables(X, y, is_discrete, contingencies)
  *     return X, y, attr_stats, is_discrete             # <<<<<<<<<<<<<<
@@ -6604,7 +6604,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":354
+  /* "Arithmos/preprocess/_relieff.pyx":354
  * 
  * 
  * cdef tuple prepare(X, y, is_discrete, Contingencies &contingencies):             # <<<<<<<<<<<<<<
@@ -6622,7 +6622,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
   __PYX_XDEC_MEMVIEW(&__pyx_t_10, 1);
-  __Pyx_AddTraceback("Orange.preprocess._relieff.prepare", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.prepare", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_is_continuous);
@@ -6638,7 +6638,7 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":374
+/* "Arithmos/preprocess/_relieff.pyx":374
  * 
  * 
  * cpdef arr_f1_t relieff(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -6646,16 +6646,16 @@ static PyObject *__pyx_f_6Orange_10preprocess_8_relieff_prepare(PyObject *__pyx_
  *                        Py_ssize_t n_iter,
  */
 
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff_relieff(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_v_contingencies;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_v_R = { 0, 0, { 0 }, { 0 }, { 0 } };
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff_relieff(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_v_contingencies;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_v_R = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_attr_stats = 0;
   PyObject *__pyx_v_prior_proba = 0;
   PyObject *__pyx_v_n_classes = 0;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_t_1;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_t_4;
@@ -6663,23 +6663,23 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_t_9 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_t_9 = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_t_10 = NULL;
   PyObject *__pyx_t_11 = NULL;
   Py_ssize_t __pyx_t_12;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_13 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_14 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_13 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_14 = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_t_15;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_t_16 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_17 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_18 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_19 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_t_16 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_17 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_18 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_19 = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannySetupContext("relieff", 0);
   __Pyx_INCREF((PyObject *)__pyx_v_X);
   __Pyx_INCREF((PyObject *)__pyx_v_y);
   __Pyx_INCREF((PyObject *)__pyx_v_is_discrete);
 
-  /* "Orange/preprocess/_relieff.pyx":384
+  /* "Arithmos/preprocess/_relieff.pyx":384
  *     """
  *     cdef:
  *         Contingencies contingencies = Contingencies()             # <<<<<<<<<<<<<<
@@ -6687,14 +6687,14 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  *         raise TypeError('rstate')
  */
   try {
-    __pyx_t_1 = __pyx_t_6Orange_10preprocess_8_relieff_Contingencies();
+    __pyx_t_1 = __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies();
   } catch(...) {
     __Pyx_CppExn2PyErr();
     __PYX_ERR(0, 384, __pyx_L1_error)
   }
   __pyx_v_contingencies = __pyx_t_1;
 
-  /* "Orange/preprocess/_relieff.pyx":385
+  /* "Arithmos/preprocess/_relieff.pyx":385
  *     cdef:
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):             # <<<<<<<<<<<<<<
@@ -6714,7 +6714,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_5 = ((!(__pyx_t_4 != 0)) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "Orange/preprocess/_relieff.pyx":386
+    /* "Arithmos/preprocess/_relieff.pyx":386
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):
  *         raise TypeError('rstate')             # <<<<<<<<<<<<<<
@@ -6727,7 +6727,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 386, __pyx_L1_error)
 
-    /* "Orange/preprocess/_relieff.pyx":385
+    /* "Arithmos/preprocess/_relieff.pyx":385
  *     cdef:
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):             # <<<<<<<<<<<<<<
@@ -6736,7 +6736,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  */
   }
 
-  /* "Orange/preprocess/_relieff.pyx":388
+  /* "Arithmos/preprocess/_relieff.pyx":388
  *         raise TypeError('rstate')
  *     cdef:
  *         arr_intp_t R = rstate.randint(X.shape[0], size=n_iter, dtype=np.intp)             # <<<<<<<<<<<<<<
@@ -6776,14 +6776,14 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_9.memview = NULL;
   __pyx_t_9.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":390
+  /* "Arithmos/preprocess/_relieff.pyx":390
  *         arr_intp_t R = rstate.randint(X.shape[0], size=n_iter, dtype=np.intp)
  * 
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)             # <<<<<<<<<<<<<<
  *     prior_proba = np.bincount(y.astype(int)).astype(np.float64) / len(y)
  *     n_classes = int(nanmax(y) + 1)
  */
-  __pyx_t_8 = __pyx_f_6Orange_10preprocess_8_relieff_prepare(((PyObject *)__pyx_v_X), ((PyObject *)__pyx_v_y), ((PyObject *)__pyx_v_is_discrete), __pyx_v_contingencies); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_6Arithmos_10preprocess_8_relieff_prepare(((PyObject *)__pyx_v_X), ((PyObject *)__pyx_v_y), ((PyObject *)__pyx_v_is_discrete), __pyx_v_contingencies); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   if (likely(__pyx_t_8 != Py_None)) {
     PyObject* sequence = __pyx_t_8;
@@ -6829,7 +6829,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __Pyx_DECREF_SET(__pyx_v_is_discrete, ((PyArrayObject *)__pyx_t_7));
   __pyx_t_7 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":391
+  /* "Arithmos/preprocess/_relieff.pyx":391
  * 
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)
  *     prior_proba = np.bincount(y.astype(int)).astype(np.float64) / len(y)             # <<<<<<<<<<<<<<
@@ -6996,7 +6996,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_v_prior_proba = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":392
+  /* "Arithmos/preprocess/_relieff.pyx":392
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)
  *     prior_proba = np.bincount(y.astype(int)).astype(np.float64) / len(y)
  *     n_classes = int(nanmax(y) + 1)             # <<<<<<<<<<<<<<
@@ -7004,7 +7004,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  *                          is_discrete, prior_proba, attr_stats, contingencies)
  */
   __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(((PyObject *)__pyx_v_y), PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 392, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_FromDouble((__pyx_f_6Orange_10preprocess_8_relieff_nanmax(__pyx_t_13) + 1.0)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_FromDouble((__pyx_f_6Arithmos_10preprocess_8_relieff_nanmax(__pyx_t_13) + 1.0)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __PYX_XDEC_MEMVIEW(&__pyx_t_13, 1);
   __pyx_t_13.memview = NULL;
@@ -7012,7 +7012,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_v_n_classes = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":393
+  /* "Arithmos/preprocess/_relieff.pyx":393
  *     prior_proba = np.bincount(y.astype(int)).astype(np.float64) / len(y)
  *     n_classes = int(nanmax(y) + 1)
  *     return _relieff_cls_(X, y, R, n_classes, k_nearest,             # <<<<<<<<<<<<<<
@@ -7023,7 +7023,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(((PyObject *)__pyx_v_y), PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 393, __pyx_L1_error)
   __pyx_t_15 = __Pyx_PyInt_As_int(__pyx_v_n_classes); if (unlikely((__pyx_t_15 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L1_error)
 
-  /* "Orange/preprocess/_relieff.pyx":394
+  /* "Arithmos/preprocess/_relieff.pyx":394
  *     n_classes = int(nanmax(y) + 1)
  *     return _relieff_cls_(X, y, R, n_classes, k_nearest,
  *                          is_discrete, prior_proba, attr_stats, contingencies)             # <<<<<<<<<<<<<<
@@ -7034,14 +7034,14 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_prior_proba, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 394, __pyx_L1_error)
   __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_attr_stats, PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 394, __pyx_L1_error)
 
-  /* "Orange/preprocess/_relieff.pyx":393
+  /* "Arithmos/preprocess/_relieff.pyx":393
  *     prior_proba = np.bincount(y.astype(int)).astype(np.float64) / len(y)
  *     n_classes = int(nanmax(y) + 1)
  *     return _relieff_cls_(X, y, R, n_classes, k_nearest,             # <<<<<<<<<<<<<<
  *                          is_discrete, prior_proba, attr_stats, contingencies)
  * 
  */
-  __pyx_t_19 = __pyx_f_6Orange_10preprocess_8_relieff__relieff_cls_(__pyx_t_14, __pyx_t_13, __pyx_v_R, __pyx_t_15, __pyx_v_k_nearest, __pyx_t_16, __pyx_t_17, __pyx_t_18, __pyx_v_contingencies); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 393, __pyx_L1_error)
+  __pyx_t_19 = __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_cls_(__pyx_t_14, __pyx_t_13, __pyx_v_R, __pyx_t_15, __pyx_v_k_nearest, __pyx_t_16, __pyx_t_17, __pyx_t_18, __pyx_v_contingencies); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 393, __pyx_L1_error)
   __PYX_XDEC_MEMVIEW(&__pyx_t_14, 1);
   __pyx_t_14.memview = NULL;
   __pyx_t_14.data = NULL;
@@ -7062,7 +7062,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_19.data = NULL;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":374
+  /* "Arithmos/preprocess/_relieff.pyx":374
  * 
  * 
  * cpdef arr_f1_t relieff(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -7088,7 +7088,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("Orange.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -7108,9 +7108,9 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_8_relieff_2relieff[] = "relieff(ndarray X, ndarray y, Py_ssize_t n_iter, Py_ssize_t k_nearest, ndarray is_discrete, rstate) -> arr_f1_t\n\n    Score attributes of `X` according to ReliefF and return their weights.\n    ";
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_8_relieff_2relieff[] = "relieff(ndarray X, ndarray y, Py_ssize_t n_iter, Py_ssize_t k_nearest, ndarray is_discrete, rstate) -> arr_f1_t\n\n    Score attributes of `X` according to ReliefF and return their weights.\n    ";
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_3relieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_X = 0;
   PyArrayObject *__pyx_v_y = 0;
   Py_ssize_t __pyx_v_n_iter;
@@ -7202,14 +7202,14 @@ static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_3relieff(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("relieff", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 374, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_X), __pyx_ptype_5numpy_ndarray, 1, "X", 0))) __PYX_ERR(0, 374, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_y), __pyx_ptype_5numpy_ndarray, 1, "y", 0))) __PYX_ERR(0, 375, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_is_discrete), __pyx_ptype_5numpy_ndarray, 1, "is_discrete", 0))) __PYX_ERR(0, 378, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10preprocess_8_relieff_2relieff(__pyx_self, __pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate);
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_8_relieff_2relieff(__pyx_self, __pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7220,14 +7220,14 @@ static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_3relieff(PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_2relieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate) {
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_2relieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("relieff", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6Orange_10preprocess_8_relieff_relieff(__pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6Arithmos_10preprocess_8_relieff_relieff(__pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 374, __pyx_L1_error)
   __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
@@ -7241,7 +7241,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_2relieff(CYTHON_UNUSED 
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("Orange.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.relieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7249,7 +7249,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_2relieff(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "Orange/preprocess/_relieff.pyx":397
+/* "Arithmos/preprocess/_relieff.pyx":397
  * 
  * 
  * cpdef arr_f1_t rrelieff(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -7257,14 +7257,14 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_2relieff(CYTHON_UNUSED 
  *                         Py_ssize_t n_iter,
  */
 
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preprocess_8_relieff_rrelieff(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate, CYTHON_UNUSED int __pyx_skip_dispatch) {
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_v_contingencies;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_v_R = { 0, 0, { 0 }, { 0 }, { 0 } };
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_f_6Arithmos_10preprocess_8_relieff_rrelieff(PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate, CYTHON_UNUSED int __pyx_skip_dispatch) {
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_v_contingencies;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_v_R = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_attr_stats = 0;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_r = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_Contingencies __pyx_t_1;
+  __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_t_4;
@@ -7272,18 +7272,18 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_intp_t __pyx_t_9 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_11 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_i1_t __pyx_t_12 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_13 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_14 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_intp_t __pyx_t_9 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_10 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_11 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_i1_t __pyx_t_12 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_13 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_14 = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_RefNannySetupContext("rrelieff", 0);
   __Pyx_INCREF((PyObject *)__pyx_v_X);
   __Pyx_INCREF((PyObject *)__pyx_v_y);
   __Pyx_INCREF((PyObject *)__pyx_v_is_discrete);
 
-  /* "Orange/preprocess/_relieff.pyx":407
+  /* "Arithmos/preprocess/_relieff.pyx":407
  *     """
  *     cdef:
  *         Contingencies contingencies = Contingencies()             # <<<<<<<<<<<<<<
@@ -7291,14 +7291,14 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  *         raise TypeError('rstate')
  */
   try {
-    __pyx_t_1 = __pyx_t_6Orange_10preprocess_8_relieff_Contingencies();
+    __pyx_t_1 = __pyx_t_6Arithmos_10preprocess_8_relieff_Contingencies();
   } catch(...) {
     __Pyx_CppExn2PyErr();
     __PYX_ERR(0, 407, __pyx_L1_error)
   }
   __pyx_v_contingencies = __pyx_t_1;
 
-  /* "Orange/preprocess/_relieff.pyx":408
+  /* "Arithmos/preprocess/_relieff.pyx":408
  *     cdef:
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):             # <<<<<<<<<<<<<<
@@ -7318,7 +7318,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_5 = ((!(__pyx_t_4 != 0)) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "Orange/preprocess/_relieff.pyx":409
+    /* "Arithmos/preprocess/_relieff.pyx":409
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):
  *         raise TypeError('rstate')             # <<<<<<<<<<<<<<
@@ -7331,7 +7331,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 409, __pyx_L1_error)
 
-    /* "Orange/preprocess/_relieff.pyx":408
+    /* "Arithmos/preprocess/_relieff.pyx":408
  *     cdef:
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):             # <<<<<<<<<<<<<<
@@ -7340,7 +7340,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
  */
   }
 
-  /* "Orange/preprocess/_relieff.pyx":412
+  /* "Arithmos/preprocess/_relieff.pyx":412
  * 
  *     cdef:
  *         arr_intp_t R = rstate.randint(X.shape[0], size=n_iter, dtype=np.intp)             # <<<<<<<<<<<<<<
@@ -7380,14 +7380,14 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_9.memview = NULL;
   __pyx_t_9.data = NULL;
 
-  /* "Orange/preprocess/_relieff.pyx":413
+  /* "Arithmos/preprocess/_relieff.pyx":413
  *     cdef:
  *         arr_intp_t R = rstate.randint(X.shape[0], size=n_iter, dtype=np.intp)
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)             # <<<<<<<<<<<<<<
  *     y = (y - np.min(y)) / np.ptp(y)
  *     return _relieff_reg_(X, y, R, k_nearest,
  */
-  __pyx_t_8 = __pyx_f_6Orange_10preprocess_8_relieff_prepare(((PyObject *)__pyx_v_X), ((PyObject *)__pyx_v_y), ((PyObject *)__pyx_v_is_discrete), __pyx_v_contingencies); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_6Arithmos_10preprocess_8_relieff_prepare(((PyObject *)__pyx_v_X), ((PyObject *)__pyx_v_y), ((PyObject *)__pyx_v_is_discrete), __pyx_v_contingencies); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 413, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   if (likely(__pyx_t_8 != Py_None)) {
     PyObject* sequence = __pyx_t_8;
@@ -7433,7 +7433,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __Pyx_DECREF_SET(__pyx_v_is_discrete, ((PyArrayObject *)__pyx_t_7));
   __pyx_t_7 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":414
+  /* "Arithmos/preprocess/_relieff.pyx":414
  *         arr_intp_t R = rstate.randint(X.shape[0], size=n_iter, dtype=np.intp)
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)
  *     y = (y - np.min(y)) / np.ptp(y)             # <<<<<<<<<<<<<<
@@ -7547,7 +7547,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __Pyx_DECREF_SET(__pyx_v_y, ((PyArrayObject *)__pyx_t_7));
   __pyx_t_7 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":415
+  /* "Arithmos/preprocess/_relieff.pyx":415
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)
  *     y = (y - np.min(y)) / np.ptp(y)
  *     return _relieff_reg_(X, y, R, k_nearest,             # <<<<<<<<<<<<<<
@@ -7556,7 +7556,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(((PyObject *)__pyx_v_X), PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 415, __pyx_L1_error)
   __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(((PyObject *)__pyx_v_y), PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 415, __pyx_L1_error)
 
-  /* "Orange/preprocess/_relieff.pyx":416
+  /* "Arithmos/preprocess/_relieff.pyx":416
  *     y = (y - np.min(y)) / np.ptp(y)
  *     return _relieff_reg_(X, y, R, k_nearest,
  *                          is_discrete, attr_stats, contingencies)             # <<<<<<<<<<<<<<
@@ -7564,13 +7564,13 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_int8_t(((PyObject *)__pyx_v_is_discrete), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 416, __pyx_L1_error)
   __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_attr_stats, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 416, __pyx_L1_error)
 
-  /* "Orange/preprocess/_relieff.pyx":415
+  /* "Arithmos/preprocess/_relieff.pyx":415
  *     X, y, attr_stats, is_discrete = prepare(X, y, is_discrete, contingencies)
  *     y = (y - np.min(y)) / np.ptp(y)
  *     return _relieff_reg_(X, y, R, k_nearest,             # <<<<<<<<<<<<<<
  *                          is_discrete, attr_stats, contingencies)
  */
-  __pyx_t_14 = __pyx_f_6Orange_10preprocess_8_relieff__relieff_reg_(__pyx_t_10, __pyx_t_11, __pyx_v_R, __pyx_v_k_nearest, __pyx_t_12, __pyx_t_13, __pyx_v_contingencies); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_14 = __pyx_f_6Arithmos_10preprocess_8_relieff__relieff_reg_(__pyx_t_10, __pyx_t_11, __pyx_v_R, __pyx_v_k_nearest, __pyx_t_12, __pyx_t_13, __pyx_v_contingencies); if (unlikely(!__pyx_t_14.memview)) __PYX_ERR(0, 415, __pyx_L1_error)
   __PYX_XDEC_MEMVIEW(&__pyx_t_10, 1);
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
@@ -7588,7 +7588,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __pyx_t_14.data = NULL;
   goto __pyx_L0;
 
-  /* "Orange/preprocess/_relieff.pyx":397
+  /* "Arithmos/preprocess/_relieff.pyx":397
  * 
  * 
  * cpdef arr_f1_t rrelieff(np.ndarray X,             # <<<<<<<<<<<<<<
@@ -7611,7 +7611,7 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
   __PYX_XDEC_MEMVIEW(&__pyx_t_14, 1);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("Orange.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
 
   goto __pyx_L2;
   __pyx_L0:;
@@ -7629,9 +7629,9 @@ static __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_f_6Orange_10preproc
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_10preprocess_8_relieff_4rrelieff[] = "rrelieff(ndarray X, ndarray y, Py_ssize_t n_iter, Py_ssize_t k_nearest, ndarray is_discrete, rstate) -> arr_f1_t\n\n    Score attributes of `X` according to RReliefF and return their weights.\n    ";
-static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_10preprocess_8_relieff_4rrelieff[] = "rrelieff(ndarray X, ndarray y, Py_ssize_t n_iter, Py_ssize_t k_nearest, ndarray is_discrete, rstate) -> arr_f1_t\n\n    Score attributes of `X` according to RReliefF and return their weights.\n    ";
+static PyObject *__pyx_pw_6Arithmos_10preprocess_8_relieff_5rrelieff(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_X = 0;
   PyArrayObject *__pyx_v_y = 0;
   Py_ssize_t __pyx_v_n_iter;
@@ -7723,14 +7723,14 @@ static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("rrelieff", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 397, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_X), __pyx_ptype_5numpy_ndarray, 1, "X", 0))) __PYX_ERR(0, 397, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_y), __pyx_ptype_5numpy_ndarray, 1, "y", 0))) __PYX_ERR(0, 398, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_is_discrete), __pyx_ptype_5numpy_ndarray, 1, "is_discrete", 0))) __PYX_ERR(0, 401, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_10preprocess_8_relieff_4rrelieff(__pyx_self, __pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate);
+  __pyx_r = __pyx_pf_6Arithmos_10preprocess_8_relieff_4rrelieff(__pyx_self, __pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7741,14 +7741,14 @@ static PyObject *__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff(PyObject *__p
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_4rrelieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate) {
+static PyObject *__pyx_pf_6Arithmos_10preprocess_8_relieff_4rrelieff(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_X, PyArrayObject *__pyx_v_y, Py_ssize_t __pyx_v_n_iter, Py_ssize_t __pyx_v_k_nearest, PyArrayObject *__pyx_v_is_discrete, PyObject *__pyx_v_rstate) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f1_t __pyx_t_1 = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("rrelieff", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6Orange_10preprocess_8_relieff_rrelieff(__pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_6Arithmos_10preprocess_8_relieff_rrelieff(__pyx_v_X, __pyx_v_y, __pyx_v_n_iter, __pyx_v_k_nearest, __pyx_v_is_discrete, __pyx_v_rstate, 0); if (unlikely(!__pyx_t_1.memview)) __PYX_ERR(0, 397, __pyx_L1_error)
   __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_t_1, 1, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
@@ -7762,7 +7762,7 @@ static PyObject *__pyx_pf_6Orange_10preprocess_8_relieff_4rrelieff(CYTHON_UNUSED
   __pyx_L1_error:;
   __PYX_XDEC_MEMVIEW(&__pyx_t_1, 1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("Orange.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.preprocess._relieff.rrelieff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10234,28 +10234,28 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 
 /* "pair.from_py":145
  * 
- * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t")
- * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(object o) except *:             # <<<<<<<<<<<<<<
+ * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t")
+ * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(object o) except *:             # <<<<<<<<<<<<<<
  *     x, y = o
  *     return pair[X,Y](<X>x, <Y>y)
  */
 
-static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(PyObject *__pyx_v_o) {
+static std::pair<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t>  __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(PyObject *__pyx_v_o) {
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
-  std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __pyx_r;
+  std::pair<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t>  __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *(*__pyx_t_4)(PyObject *);
   Py_ssize_t __pyx_t_5;
-  __pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_RefNannySetupContext("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t", 0);
+  __pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t __pyx_t_6 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_RefNannySetupContext("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t", 0);
 
   /* "pair.from_py":146
- * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t")
- * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(object o) except *:
+ * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t")
+ * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(object o) except *:
  *     x, y = o             # <<<<<<<<<<<<<<
  *     return pair[X,Y](<X>x, <Y>y)
  * 
@@ -10310,7 +10310,7 @@ static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __
   __pyx_t_2 = 0;
 
   /* "pair.from_py":147
- * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(object o) except *:
+ * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(object o) except *:
  *     x, y = o
  *     return pair[X,Y](<X>x, <Y>y)             # <<<<<<<<<<<<<<
  * 
@@ -10318,7 +10318,7 @@ static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __
  */
   __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_v_x); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(2, 147, __pyx_L1_error)
   __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_v_y, PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(2, 147, __pyx_L1_error)
-  __pyx_r = std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t> (((Py_ssize_t)__pyx_t_5), ((__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t)__pyx_t_6));
+  __pyx_r = std::pair<Py_ssize_t,__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t> (((Py_ssize_t)__pyx_t_5), ((__pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t)__pyx_t_6));
   __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
@@ -10326,8 +10326,8 @@ static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __
 
   /* "pair.from_py":145
  * 
- * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t")
- * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t(object o) except *:             # <<<<<<<<<<<<<<
+ * @cname("__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t")
+ * cdef pair[X,Y] __pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t(object o) except *:             # <<<<<<<<<<<<<<
  *     x, y = o
  *     return pair[X,Y](<X>x, <Y>y)
  */
@@ -10338,7 +10338,7 @@ static std::pair<Py_ssize_t,__pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t>  __
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
-  __Pyx_AddTraceback("pair.from_py.__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Orange_10preprocess_8_relieff_arr_f2_t", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pair.from_py.__pyx_convert_pair_from_py_Py_ssize_t__and___pyx_t_6Arithmos_10preprocess_8_relieff_arr_f2_t", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_pretend_to_initialize(&__pyx_r);
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_x);
@@ -23385,7 +23385,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.preprocess._relieff.array", /*tp_name*/
+  "Arithmos.preprocess._relieff.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -23493,7 +23493,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.preprocess._relieff.Enum", /*tp_name*/
+  "Arithmos.preprocess._relieff.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -23743,7 +23743,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.preprocess._relieff.memoryview", /*tp_name*/
+  "Arithmos.preprocess._relieff.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -23870,7 +23870,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.preprocess._relieff._memoryviewslice", /*tp_name*/
+  "Arithmos.preprocess._relieff._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -23935,8 +23935,8 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"relieff", (PyCFunction)__pyx_pw_6Orange_10preprocess_8_relieff_3relieff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10preprocess_8_relieff_2relieff},
-  {"rrelieff", (PyCFunction)__pyx_pw_6Orange_10preprocess_8_relieff_5rrelieff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_10preprocess_8_relieff_4rrelieff},
+  {"relieff", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_8_relieff_3relieff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10preprocess_8_relieff_2relieff},
+  {"rrelieff", (PyCFunction)__pyx_pw_6Arithmos_10preprocess_8_relieff_5rrelieff, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_10preprocess_8_relieff_4rrelieff},
   {0, 0, 0, 0}
 };
 
@@ -23995,8 +23995,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_MemoryView_of_r_object, __pyx_k_MemoryView_of_r_object, sizeof(__pyx_k_MemoryView_of_r_object), 0, 0, 1, 0},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_b_O, __pyx_k_O, sizeof(__pyx_k_O), 0, 0, 0, 1},
-  {&__pyx_n_s_Orange_preprocess__relieff, __pyx_k_Orange_preprocess__relieff, sizeof(__pyx_k_Orange_preprocess__relieff), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_preprocess__relieff_pyx, __pyx_k_Orange_preprocess__relieff_pyx, sizeof(__pyx_k_Orange_preprocess__relieff_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_preprocess__relieff, __pyx_k_Arithmos_preprocess__relieff, sizeof(__pyx_k_Arithmos_preprocess__relieff), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_preprocess__relieff_pyx, __pyx_k_Arithmos_preprocess__relieff_pyx, sizeof(__pyx_k_Arithmos_preprocess__relieff_pyx), 0, 0, 1, 0},
   {&__pyx_kp_s_Out_of_bounds_on_buffer_access_a, __pyx_k_Out_of_bounds_on_buffer_access_a, sizeof(__pyx_k_Out_of_bounds_on_buffer_access_a), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_RandomState, __pyx_k_RandomState, sizeof(__pyx_k_RandomState), 0, 0, 1, 1},
@@ -24137,7 +24137,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Orange/preprocess/_relieff.pyx":315
+  /* "Arithmos/preprocess/_relieff.pyx":315
  *         x1i, x2i = x1[i], x2[i]
  *         if isnan(x1i) and isnan(x2i): pass
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1             # <<<<<<<<<<<<<<
@@ -24148,7 +24148,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice_);
   __Pyx_GIVEREF(__pyx_slice_);
 
-  /* "Orange/preprocess/_relieff.pyx":316
+  /* "Arithmos/preprocess/_relieff.pyx":316
  *         if isnan(x1i) and isnan(x2i): pass
  *         elif isnan(x1i): table[:, <Py_ssize_t>x2i] += 1
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1             # <<<<<<<<<<<<<<
@@ -24159,7 +24159,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
 
-  /* "Orange/preprocess/_relieff.pyx":318
+  /* "Arithmos/preprocess/_relieff.pyx":318
  *         elif isnan(x2i): table[<Py_ssize_t>x1i, :] += 1
  *         else: table[<Py_ssize_t>x1i, <Py_ssize_t>x2i] += 1
  *     row_sums = table.sum(0)             # <<<<<<<<<<<<<<
@@ -24170,7 +24170,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "Orange/preprocess/_relieff.pyx":349
+  /* "Arithmos/preprocess/_relieff.pyx":349
  *         if (is_discrete[a] and
  *             # Don't calculate+store contingencies if not required
  *             np.isnan(X[:, a]).any()):             # <<<<<<<<<<<<<<
@@ -24181,7 +24181,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "Orange/preprocess/_relieff.pyx":350
+  /* "Arithmos/preprocess/_relieff.pyx":350
  *             # Don't calculate+store contingencies if not required
  *             np.isnan(X[:, a]).any()):
  *             _contingency_table(X[:, a], int(nanmax(X[:, a]) + 1),             # <<<<<<<<<<<<<<
@@ -24195,7 +24195,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
 
-  /* "Orange/preprocess/_relieff.pyx":362
+  /* "Arithmos/preprocess/_relieff.pyx":362
  *         row_ptp = np.nanmax(X, 0) - row_min
  *         row_ptp[row_ptp == 0] = np.inf  # Avoid zero-division
  *         X[:, is_continuous] -= row_min[is_continuous]             # <<<<<<<<<<<<<<
@@ -24206,7 +24206,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
-  /* "Orange/preprocess/_relieff.pyx":363
+  /* "Arithmos/preprocess/_relieff.pyx":363
  *         row_ptp[row_ptp == 0] = np.inf  # Avoid zero-division
  *         X[:, is_continuous] -= row_min[is_continuous]
  *         X[:, is_continuous] /= row_ptp[is_continuous]             # <<<<<<<<<<<<<<
@@ -24217,7 +24217,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "Orange/preprocess/_relieff.pyx":386
+  /* "Arithmos/preprocess/_relieff.pyx":386
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):
  *         raise TypeError('rstate')             # <<<<<<<<<<<<<<
@@ -24228,7 +24228,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "Orange/preprocess/_relieff.pyx":409
+  /* "Arithmos/preprocess/_relieff.pyx":409
  *         Contingencies contingencies = Contingencies()
  *     if not isinstance(rstate, np.random.RandomState):
  *         raise TypeError('rstate')             # <<<<<<<<<<<<<<
@@ -24561,7 +24561,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
 
-  /* "Orange/preprocess/_relieff.pyx":324
+  /* "Arithmos/preprocess/_relieff.pyx":324
  * 
  * 
  * def contingency_table(x1, x2):             # <<<<<<<<<<<<<<
@@ -24571,7 +24571,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__41 = PyTuple_Pack(6, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_tables, __pyx_n_s_table, __pyx_n_s_n1, __pyx_n_s_n2); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_preprocess__relieff_pyx, __pyx_n_s_contingency_table, 324, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_preprocess__relieff_pyx, __pyx_n_s_contingency_table, 324, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 324, __pyx_L1_error)
 
   /* "View.MemoryView":285
  *         return self.name
@@ -24931,14 +24931,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__preprocess___relieff) {
+  if (__pyx_module_is_main_Arithmos__preprocess___relieff) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.preprocess._relieff")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.preprocess._relieff", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.preprocess._relieff")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.preprocess._relieff", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -24959,7 +24959,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/preprocess/_relieff.pyx":18
+  /* "Arithmos/preprocess/_relieff.pyx":18
  * 
  * cimport numpy as np
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -24971,19 +24971,19 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":324
+  /* "Arithmos/preprocess/_relieff.pyx":324
  * 
  * 
  * def contingency_table(x1, x2):             # <<<<<<<<<<<<<<
  *     """Return contingency array between x1 and x2."""
  *     cdef:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_10preprocess_8_relieff_1contingency_table, NULL, __pyx_n_s_Orange_preprocess__relieff); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_10preprocess_8_relieff_1contingency_table, NULL, __pyx_n_s_Arithmos_preprocess__relieff); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_contingency_table, __pyx_t_1) < 0) __PYX_ERR(0, 324, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/preprocess/_relieff.pyx":1
+  /* "Arithmos/preprocess/_relieff.pyx":1
  * #cython: boundscheck=False             # <<<<<<<<<<<<<<
  * #cython: wraparound=False
  * #cython: initializedcheck=False
@@ -25153,11 +25153,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.preprocess._relieff", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.preprocess._relieff", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.preprocess._relieff");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.preprocess._relieff");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

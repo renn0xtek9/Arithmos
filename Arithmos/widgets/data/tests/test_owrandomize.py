@@ -4,9 +4,9 @@ from unittest.mock import patch, Mock
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.widgets.data.owrandomize import OWRandomize
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.data import Table
+from Arithmos.widgets.data.owrandomize import OWRandomize
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 class TestOWRandomize(WidgetTest):

@@ -1,11 +1,11 @@
 from AnyQt.QtCore import Qt
 
-from Orange.data import Table
-from Orange.modelling import RandomForestLearner
-from Orange.widgets import settings, gui
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Msg
+from Arithmos.data import Table
+from Arithmos.modelling import RandomForestLearner
+from Arithmos.widgets import settings, gui
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Msg
 
 
 class OWRandomForest(OWBaseLearner):
@@ -13,8 +13,8 @@ class OWRandomForest(OWBaseLearner):
     description = "Predict using an ensemble of decision trees."
     icon = "icons/RandomForest.svg"
     replaces = [
-        "Orange.widgets.classify.owrandomforest.OWRandomForest",
-        "Orange.widgets.regression.owrandomforestregression.OWRandomForestRegression",
+        "Arithmos.widgets.classify.owrandomforest.OWRandomForest",
+        "Arithmos.widgets.regression.owrandomforestregression.OWRandomForestRegression",
     ]
     priority = 40
     keywords = []

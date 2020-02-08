@@ -1,10 +1,10 @@
 from AnyQt.QtCore import Qt
 
-from Orange.data import ContinuousVariable
-from Orange.widgets import gui
-from Orange.widgets.tests.base import GuiTest
-from Orange.widgets.utils.itemmodels import VariableListModel
-from Orange.widgets.widget import OWWidget
+from Arithmos.data import ContinuousVariable
+from Arithmos.widgets import gui
+from Arithmos.widgets.tests.base import GuiTest
+from Arithmos.widgets.utils.itemmodels import VariableListModel
+from Arithmos.widgets.widget import OWWidget
 
 
 class TestDoubleSpin(GuiTest):

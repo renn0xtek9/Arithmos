@@ -8,11 +8,11 @@ import numpy as np
 from AnyQt.QtCore import QEvent, QPoint, Qt
 from AnyQt.QtGui import QMouseEvent
 
-from Orange.data import Table, DiscreteVariable, Domain, ContinuousVariable, \
+from Arithmos.data import Table, DiscreteVariable, Domain, ContinuousVariable, \
     StringVariable
-from Orange.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
-from Orange.widgets.visualize.owmosaic import OWMosaicDisplay
-from Orange.widgets.tests.utils import simulate
+from Arithmos.widgets.tests.base import WidgetTest, WidgetOutputsTestMixin
+from Arithmos.widgets.visualize.owmosaic import OWMosaicDisplay
+from Arithmos.widgets.tests.utils import simulate
 
 
 class TestOWMosaicDisplay(WidgetTest, WidgetOutputsTestMixin):
@@ -97,8 +97,8 @@ class TestOWMosaicDisplay(WidgetTest, WidgetOutputsTestMixin):
         self.send_signal(self.widget.Inputs.data, None)
         assertCount(1, [0, 1, 1, 1], 0)
 
-    @patch('Orange.widgets.visualize.owmosaic.CanvasRectangle')
-    @patch('Orange.widgets.visualize.owmosaic.QGraphicsItemGroup.addToGroup')
+    @patch('Arithmos.widgets.visualize.owmosaic.CanvasRectangle')
+    @patch('Arithmos.widgets.visualize.owmosaic.QGraphicsItemGroup.addToGroup')
     def test_different_number_of_attributes(self, _, canvas_rectangle):
         domain = Domain([DiscreteVariable(c, values="01") for c in "abcd"])
         data = Table.from_list(
@@ -129,7 +129,7 @@ class TestOWMosaicDisplay(WidgetTest, WidgetOutputsTestMixin):
         output = self.get_output(self.widget.Outputs.annotated_data)
         np.testing.assert_array_equal(output.X, self.data[:1].X)
 
-    @patch('Orange.widgets.visualize.owmosaic.MosaicVizRank.on_manual_change')
+    @patch('Arithmos.widgets.visualize.owmosaic.MosaicVizRank.on_manual_change')
     def test_vizrank_receives_manual_change(self, on_manual_change):
         # Recreate the widget so the patch kicks in
         self.widget = self.create_widget(OWMosaicDisplay)

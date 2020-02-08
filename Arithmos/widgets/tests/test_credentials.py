@@ -5,7 +5,7 @@ import keyring
 import keyring.errors
 import keyring.backend
 
-from Orange.widgets.credentials import CredentialManager
+from Arithmos.widgets.credentials import CredentialManager
 
 
 # minimal in-memory keyring implementation so the test is not dependent on
@@ -33,13 +33,13 @@ class TestCredentialManager(unittest.TestCase):
     def setUp(self):
         self._ring = keyring.get_keyring()
         keyring.set_keyring(Keyring())
-        self.cm = CredentialManager('Orange')
+        self.cm = CredentialManager('Arithmos')
 
     def tearDown(self):
         keyring.set_keyring(self._ring)
 
     def test_credential_manager(self):
-        cm = CredentialManager('Orange')
+        cm = CredentialManager('Arithmos')
         cm.key = 'Foo'
         self.assertEqual(cm.key, 'Foo')
         del cm.key
@@ -51,7 +51,7 @@ class TestCredentialManager(unittest.TestCase):
         GH-2354
         """
         with patch("keyring.set_password", side_effect=Exception), \
-                patch("Orange.widgets.credentials.log.exception") as log:
+                patch("Arithmos.widgets.credentials.log.exception") as log:
             self.cm.key = ""
             log.assert_called()
 
@@ -61,7 +61,7 @@ class TestCredentialManager(unittest.TestCase):
         GH-2354
         """
         with patch("keyring.delete_password", side_effect=Exception), \
-                patch("Orange.widgets.credentials.log.exception") as log:
+                patch("Arithmos.widgets.credentials.log.exception") as log:
             del self.cm.key
             log.assert_called()
 
@@ -71,6 +71,6 @@ class TestCredentialManager(unittest.TestCase):
         GH-2354
         """
         with patch("keyring.get_password", side_effect=Exception), \
-                patch("Orange.widgets.credentials.log.exception") as log:
+                patch("Arithmos.widgets.credentials.log.exception") as log:
             self.assertEqual(self.cm.key, None)
             log.assert_called()

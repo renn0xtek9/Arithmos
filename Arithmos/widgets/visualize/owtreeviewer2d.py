@@ -13,9 +13,9 @@ from AnyQt.QtCore import (
     pyqtSignal, pyqtProperty
 )
 
-from Orange.widgets import gui
-from Orange.widgets.widget import OWWidget
-from Orange.widgets.settings import Setting
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import OWWidget
+from Arithmos.widgets.settings import Setting
 
 DefDroppletBrush = QBrush(Qt.darkGray)
 

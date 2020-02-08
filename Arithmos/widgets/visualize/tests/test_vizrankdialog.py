@@ -5,11 +5,11 @@ from queue import Queue
 
 from AnyQt.QtGui import QStandardItem
 
-from Orange.data import Table
-from Orange.widgets.visualize.utils import (
+from Arithmos.data import Table
+from Arithmos.widgets.visualize.utils import (
     VizRankDialog, Result, run_vizrank, QueuedScore
 )
-from Orange.widgets.tests.base import WidgetTest
+from Arithmos.widgets.tests.base import WidgetTest
 
 
 def compute_score(x):

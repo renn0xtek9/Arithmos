@@ -1,4 +1,4 @@
-from orangewidget.utils.signals import (
+from arithmoswidget.utils.signals import (
     Input, Output, Single, Multiple, Default, NonDefault, Explicit, Dynamic,
     InputSignal, OutputSignal, WidgetSignalsMixin
 )

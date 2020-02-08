@@ -9,11 +9,11 @@ from AnyQt.QtCore import QRectF, Qt, QTimer
 # It will fail with an import error if imported (first time) after.
 import AnyQt.QtWebEngineWidgets  # pylint: disable=unused-import
 
-from orangecanvas.canvas.items import NodeItem
-from orangecanvas.help import HelpManager
-from orangecanvas.registry import WidgetRegistry
+from arithmoscanvas.canvas.items import NodeItem
+from arithmoscanvas.help import HelpManager
+from arithmoscanvas.registry import WidgetRegistry
 
-from Orange.canvas.config import Config as OConfig
+from Arithmos.canvas.config import Config as OConfig
 
 
 class WidgetCatalog:

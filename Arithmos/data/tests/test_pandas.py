@@ -1,7 +1,7 @@
 # pylint: disable=import-outside-toplevel
 import unittest
 import numpy as np
-from Orange.data import ContinuousVariable, DiscreteVariable, TimeVariable, Table
+from Arithmos.data import ContinuousVariable, DiscreteVariable, TimeVariable, Table
 
 try:
     import pandas as pd
@@ -12,7 +12,7 @@ except ImportError:
 @unittest.skipIf(pd is None, "Missing package 'pandas'")
 class TestPandasCompat(unittest.TestCase):
     def test_table_from_frame(self):
-        from Orange.data.pandas_compat import table_from_frame
+        from Arithmos.data.pandas_compat import table_from_frame
 
         nan = np.nan
         df = pd.DataFrame([['a', 1, pd.Timestamp('2017-12-19')],
@@ -64,7 +64,7 @@ class TestPandasCompat(unittest.TestCase):
         self.assertEqual(types, [DiscreteVariable, ContinuousVariable, TimeVariable])
 
     def test_table_to_frame(self):
-        from Orange.data.pandas_compat import table_to_frame
+        from Arithmos.data.pandas_compat import table_to_frame
         table = Table("iris")
         df = table_to_frame(table)
         table_column_names = [var.name for var in table.domain.variables]
@@ -76,7 +76,7 @@ class TestPandasCompat(unittest.TestCase):
         self.assertEqual(list(df['iris'])[0:2], ['Iris-setosa', 'Iris-setosa'])
 
     def test_table_to_frame_metas(self):
-        from Orange.data.pandas_compat import table_to_frame
+        from Arithmos.data.pandas_compat import table_to_frame
 
         table = Table("zoo")
         domain = table.domain
@@ -89,22 +89,22 @@ class TestPandasCompat(unittest.TestCase):
         cols = pd.Index([var.name for var in domain.variables + domain.metas])
         pd.testing.assert_index_equal(df.columns, cols)
 
-    @unittest.skip("Convert all Orange demo dataset. It takes about 5s which is way to slow")
-    def test_table_to_frame_on_all_orange_dataset(self):
+    @unittest.skip("Convert all Arithmos demo dataset. It takes about 5s which is way to slow")
+    def test_table_to_frame_on_all_arithmos_dataset(self):
         from os import listdir
-        from Orange.data.pandas_compat import table_to_frame
+        from Arithmos.data.pandas_compat import table_to_frame
         import pandas as pd
 
-        dataset_directory = "Orange/datasets/"
+        dataset_directory = "Arithmos/datasets/"
 
         def _filename_to_dataset_name(f):
             return f.split('.')[0]
 
-        def _get_orange_demo_datasets():
+        def _get_arithmos_demo_datasets():
             x = [_filename_to_dataset_name(f) for f in listdir(dataset_directory) if '.tab' in f]
             return x
 
-        for name in _get_orange_demo_datasets():
+        for name in _get_arithmos_demo_datasets():
             table = Table(name)
             df = table_to_frame(table)
             assert_message = "Failed to process Table('{}')".format(name)

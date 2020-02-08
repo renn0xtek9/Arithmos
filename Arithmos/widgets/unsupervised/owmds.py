@@ -8,19 +8,19 @@ from AnyQt.QtCore import Qt
 
 import pyqtgraph as pg
 
-from Orange.data import ContinuousVariable, Domain, Table, StringVariable
-from Orange.data.util import array_equal
-from Orange.distance import Euclidean
-from Orange.misc import DistMatrix
-from Orange.projection.manifold import torgerson, MDS
+from Arithmos.data import ContinuousVariable, Domain, Table, StringVariable
+from Arithmos.data.util import array_equal
+from Arithmos.distance import Euclidean
+from Arithmos.misc import DistMatrix
+from Arithmos.projection.manifold import torgerson, MDS
 
-from Orange.widgets import gui, settings
-from Orange.widgets.settings import SettingProvider
-from Orange.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
-from Orange.widgets.visualize.utils.widget import OWDataProjectionWidget
-from Orange.widgets.widget import Msg, Input
+from Arithmos.widgets import gui, settings
+from Arithmos.widgets.settings import SettingProvider
+from Arithmos.widgets.utils.concurrent import TaskState, ConcurrentWidgetMixin
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.owscatterplotgraph import OWScatterPlotBase
+from Arithmos.widgets.visualize.utils.widget import OWDataProjectionWidget
+from Arithmos.widgets.widget import Msg, Input
 
 
 def stress(X, distD):
@@ -258,7 +258,7 @@ class OWMDS(OWDataProjectionWidget, ConcurrentWidgetMixin):
 
         Parameters
         ----------
-        matrix : Optional[Orange.misc.DistMatrix]
+        matrix : Optional[Arithmos.misc.DistMatrix]
         """
 
         if matrix is not None and len(matrix) < 2:

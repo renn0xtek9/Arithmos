@@ -7,7 +7,7 @@ import unittest
 
 import numpy as np
 
-from Orange.data import _io
+from Arithmos.data import _io
 
 
 simple_file = """\

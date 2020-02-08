@@ -1,15 +1,15 @@
 import os
 import json
 
-import Orange
+import Arithmos
 
 external_datasets = [
-    ("iris_url", "https://raw.githubusercontent.com/biolab/arithmos/master/Orange/datasets/iris.tab"),
+    ("iris_url", "https://raw.githubusercontent.com/biolab/arithmos/master/Arithmos/datasets/iris.tab"),
 ]
 
 
 def data_info(name, location):
-    data = Orange.data.Table(location)
+    data = Arithmos.data.Table(location)
     domain = data.domain
     attr = data.domain.attributes
     class_var = data.domain.class_var

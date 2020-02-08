@@ -8,7 +8,7 @@ import unittest
 
 import numpy as np
 
-from Orange.data.io import BasketReader
+from Arithmos.data.io import BasketReader
 
 
 def with_file(s):

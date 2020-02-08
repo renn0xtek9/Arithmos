@@ -1,14 +1,14 @@
-"""Tree inducers: SKL and Orange's own inducer"""
+"""Tree inducers: SKL and Arithmos's own inducer"""
 
 import numpy as np
 import scipy.sparse as sp
 import sklearn.tree as skl_tree
 
-from Orange.base import TreeModel as TreeModelInterface
-from Orange.tree import Node, DiscreteNode, MappedDiscreteNode, \
+from Arithmos.base import TreeModel as TreeModelInterface
+from Arithmos.tree import Node, DiscreteNode, MappedDiscreteNode, \
     NumericNode, TreeModel
-from Orange.regression import SklLearner, SklModel, Learner
-from Orange.classification import _tree_scorers
+from Arithmos.regression import SklLearner, SklModel, Learner
+from Arithmos.classification import _tree_scorers
 
 __all__ = ["SklTreeRegressionLearner", "TreeLearner"]
 
@@ -43,7 +43,7 @@ class TreeLearner(Learner):
 
     Returns
     -------
-    instance of OrangeTreeModel
+    instance of ArithmosTreeModel
     """
     __returns__ = TreeModel
 

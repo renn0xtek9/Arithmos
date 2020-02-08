@@ -1,7 +1,7 @@
 import unittest
 
-from Orange.data import Domain, ContinuousVariable
-from Orange.data.util import get_unique_names, get_unique_names_duplicates
+from Arithmos.data import Domain, ContinuousVariable
+from Arithmos.data.util import get_unique_names, get_unique_names_duplicates
 
 
 class TestGetUniqueNames(unittest.TestCase):

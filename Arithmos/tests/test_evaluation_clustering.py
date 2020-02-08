@@ -5,16 +5,16 @@ import unittest
 
 import numpy as np
 
-import Orange
-from Orange.evaluation.clustering import Silhouette, \
+import Arithmos
+from Arithmos.evaluation.clustering import Silhouette, \
     AdjustedMutualInfoScore, ClusteringEvaluation, ClusteringResults
-from Orange.clustering.kmeans import KMeans, KMeansModel
+from Arithmos.clustering.kmeans import KMeans, KMeansModel
 
 
 class TestClusteringResults(unittest.TestCase):
     @staticmethod
     def test_init():
-        data = Orange.data.Table.from_numpy(
+        data = Arithmos.data.Table.from_numpy(
             None, np.arange(100).reshape((100, 1)))
         res = ClusteringResults(data=data, nmethods=2, nrows=100)
         res.actual[:50] = 0
@@ -30,7 +30,7 @@ class TestClusteringEvaluation(unittest.TestCase):
         self.assertEqual(res.k, 42)
 
     def test_kmeans(self):
-        table = Orange.data.Table('iris')
+        table = Arithmos.data.Table('iris')
         cr = ClusteringEvaluation(k=3)(table, learners=[KMeans(n_clusters=2),
                                                         KMeans(n_clusters=3),
                                                         KMeans(n_clusters=5)])

@@ -1,9 +1,9 @@
-.. currentmodule:: Orange.widgets.utils.concurrent
+.. currentmodule:: Arithmos.widgets.utils.concurrent
 
-:mod:`Orange.widgets.utils.concurrent`
+:mod:`Arithmos.widgets.utils.concurrent`
 --------------------------------------
 
-.. automodule:: Orange.widgets.utils.concurrent
+.. automodule:: Arithmos.widgets.utils.concurrent
 
 .. autoclass:: ThreadExecutor
     :show-inheritance:

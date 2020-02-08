@@ -204,8 +204,8 @@ Var StartMenuFolder
 !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchApplication"
 !define MUI_FINISHPAGE_RUN_TEXT "Start ${APPLICATIONNAME}"
 # - add link at the bottom
-!define MUI_FINISHPAGE_LINK "orange.biolab.si"
-!define MUI_FINISHPAGE_LINK_LOCATION "http://orange.biolab.si"
+!define MUI_FINISHPAGE_LINK "arithmos.biolab.si"
+!define MUI_FINISHPAGE_LINK_LOCATION "http://arithmos.biolab.si"
 
 !insertmacro MUI_PAGE_FINISH
 
@@ -565,14 +565,14 @@ Section -Launchers
     # Startup shortcut
     CreateShortCut \
         "$InstDir\${LAUNCHER_SHORTCUT_NAME}.lnk" \
-        "$PythonExecPrefix\pythonw.exe" "-m Orange.canvas" \
-        "$PythonPrefix\share\arithmos\icons\orange.ico" 0
+        "$PythonExecPrefix\pythonw.exe" "-m Arithmos.canvas" \
+        "$PythonPrefix\share\arithmos\icons\arithmos.ico" 0
     # Utility shortcut to launch the application with max log level attached
     # to the console that remains visible after exit
     CreateShortCut \
         "$InstDir\${LAUNCHER_SHORTCUT_NAME} Debug.lnk" \
-        "%COMSPEC%" '/K "$PythonExecPrefix\python.exe" -m Orange.canvas -l4' \
-        "$PythonPrefix\share\arithmos\icons\orange.ico" 0
+        "%COMSPEC%" '/K "$PythonExecPrefix\python.exe" -m Arithmos.canvas -l4' \
+        "$PythonPrefix\share\arithmos\icons\arithmos.ico" 0
 !if ${PYINSTALL_TYPE} == Normal
     # A utility shortcut for activating the environment
     CreateShortCut \
@@ -605,8 +605,8 @@ Section "Start Menu Shortcuts" SectionStartMenu
         CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
         CreateShortCut \
             "$SMPROGRAMS\$StartMenuFolder\${LAUNCHER_SHORTCUT_NAME}.lnk" \
-            "$PythonExecPrefix\pythonw.exe" "-m Orange.canvas" \
-            "$PythonPrefix\share\arithmos\icons\orange.ico" 0
+            "$PythonExecPrefix\pythonw.exe" "-m Arithmos.canvas" \
+            "$PythonPrefix\share\arithmos\icons\arithmos.ico" 0
 !if ${PYINSTALL_TYPE} == Normal
         # A utility shortcut for activating the environment
         CreateShortCut \
@@ -630,8 +630,8 @@ Section "Desktop Shortcuts" SectionDesktop
     DetailPrint "Installing Desktop shortcurt"
     CreateShortCut \
         "$DESKTOP\${LAUNCHER_SHORTCUT_NAME}.lnk" \
-        "$PythonExecPrefix\pythonw.exe" "-m Orange.canvas" \
-        "$PythonPrefix\share\arithmos\icons\orange.ico" 0
+        "$PythonExecPrefix\pythonw.exe" "-m Arithmos.canvas" \
+        "$PythonPrefix\share\arithmos\icons\arithmos.ico" 0
 SectionEnd
 
 SectionGroupEnd
@@ -679,15 +679,15 @@ Section -Register SectionRegister
 
     ${LogWrite} "Register .ows filetype"
     WriteRegStr SHELL_CONTEXT \
-        "Software\Classes\.ows" "" "OrangeCanvas"
+        "Software\Classes\.ows" "" "ArithmosCanvas"
     WriteRegStr SHELL_CONTEXT \
-        "Software\Classes\OrangeCanvas" "" "Orange Workflow"
+        "Software\Classes\ArithmosCanvas" "" "Arithmos Workflow"
     WriteRegStr SHELL_CONTEXT \
-        "Software\Classes\OrangeCanvas\DefaultIcon" "" \
-        "$PythonPrefix\share\arithmos\icons\OrangeOWS.ico"
+        "Software\Classes\ArithmosCanvas\DefaultIcon" "" \
+        "$PythonPrefix\share\arithmos\icons\ArithmosOWS.ico"
     WriteRegStr SHELL_CONTEXT \
-        "Software\Classes\OrangeCanvas\Shell\Open\Command\" "" \
-        '"$PythonExecPrefix\pythonw.exe" -m Orange.canvas "%1"'
+        "Software\Classes\ArithmosCanvas\Shell\Open\Command\" "" \
+        '"$PythonExecPrefix\pythonw.exe" -m Arithmos.canvas "%1"'
 
     WriteUninstaller "$InstDir\${UNINSTALL_EXEFILE}"
 
@@ -717,7 +717,7 @@ Section -Register SectionRegister
                 InstallLocation "$InstDir"
     WriteRegStr SHELL_CONTEXT \
                 "${WINDOWS_UNINSTALL_REGKEY}\${APPNAME}" \
-                URLInfoAbout http://orange.biolab.si
+                URLInfoAbout http://arithmos.biolab.si
 
     WriteRegDWORD SHELL_CONTEXT \
                   "${WINDOWS_UNINSTALL_REGKEY}\${APPNAME}" \
@@ -737,8 +737,8 @@ Function un.Register
     ${AndIf} $un.InstallDir == $InstDir
         ${LogWrite} "Deleting reg key: ${INSTALL_SETTINGS_KEY}"
         DeleteRegKey SHCTX "${INSTALL_SETTINGS_KEY}"
-        ${LogWrite} "Deleting reg key: Software\Classes\OrangeCanvas"
-        DeleteRegKey SHCTX Software\Classes\OrangeCanvas
+        ${LogWrite} "Deleting reg key: Software\Classes\ArithmosCanvas"
+        DeleteRegKey SHCTX Software\Classes\ArithmosCanvas
     ${Else}
         ${LogWrite} "InstallDir from ${INSTALL_SETTINGS_KEY} does not match \
                     InstDir ($un.InstallDir != $InstDir). Leaving it."
@@ -758,7 +758,7 @@ Function un.Register
 FunctionEnd
 
 Function LaunchApplication
-    ExecShell "open" "$PythonExecPrefix\pythonw.exe" "-m Orange.canvas"
+    ExecShell "open" "$PythonExecPrefix\pythonw.exe" "-m Arithmos.canvas"
 FunctionEnd
 
 

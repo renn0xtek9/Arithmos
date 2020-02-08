@@ -2,14 +2,14 @@
 # pylint: disable=missing-docstring
 from scipy.sparse import csr_matrix
 
-from Orange.widgets.model.owsvm import OWSVM
-from Orange.widgets.tests.base import (
+from Arithmos.widgets.model.owsvm import OWSVM
+from Arithmos.widgets.tests.base import (
     WidgetTest,
     DefaultParameterMapping,
     ParameterMapping,
     WidgetLearnerTestMixin
 )
-from Orange.data import Table
+from Arithmos.data import Table
 
 
 class TestOWSVMClassification(WidgetTest, WidgetLearnerTestMixin):

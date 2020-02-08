@@ -4,7 +4,7 @@ from collections import defaultdict
 import numpy as np
 from chardet.universaldetector import UniversalDetector
 
-from Orange.data import (
+from Arithmos.data import (
     is_discrete_values, MISSING_VALUES, Variable,
     DiscreteVariable, StringVariable, ContinuousVariable, TimeVariable,
 )

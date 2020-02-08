@@ -1,5 +1,5 @@
-from Orange.widgets.model.owlinearregression import OWLinearRegression
-from Orange.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
+from Arithmos.widgets.model.owlinearregression import OWLinearRegression
+from Arithmos.widgets.tests.base import WidgetTest, WidgetLearnerTestMixin
 
 
 class TestOWLinearRegression(WidgetTest, WidgetLearnerTestMixin):

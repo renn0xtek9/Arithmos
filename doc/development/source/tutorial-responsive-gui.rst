@@ -26,11 +26,11 @@ continue, and if not return early (in our case by raising an exception).
 Setting up
 **********
 
-We use :class:`Orange.widgets.utils.concurrent.ThreadExecutor` for thread
+We use :class:`Arithmos.widgets.utils.concurrent.ThreadExecutor` for thread
 allocation/management (but could easily replace it with stdlib's
 :class:`concurrent.futures.ThreadPoolExecutor`).
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-1
    :end-before: end-snippet-1
 
@@ -39,7 +39,7 @@ We will reorganize our code to make the learner evaluation an explicit
 task as we will need to track its progress and state. For this we define
 a `Task` class.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-2
    :end-before: end-snippet-2
 
@@ -47,11 +47,11 @@ a `Task` class.
 In the widget's ``__init__`` we create an instance of the `ThreadExector`
 and initialize the task field.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-3
    :end-before: end-snippet-3
 
-All code snippets are from :download:`OWLearningCurveC.py <orange-demo/orangedemo/OWLearningCurveC.py>`.
+All code snippets are from :download:`OWLearningCurveC.py <arithmos-demo/arithmosdemo/OWLearningCurveC.py>`.
 
 
 ***************************
@@ -60,15 +60,15 @@ Starting a task in a thread
 
 In `handleNewSignals` we call `_update`.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-4
    :end-before: end-snippet-4
 
 
-And finally the `_update` function (from :download:`OWLearningCurveC.py <orange-demo/orangedemo/OWLearningCurveC.py>`)
+And finally the `_update` function (from :download:`OWLearningCurveC.py <arithmos-demo/arithmosdemo/OWLearningCurveC.py>`)
 that will start/schedule all updates.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-5
    :end-before: end-snippet-5
 
@@ -81,7 +81,7 @@ there is nothing to be done.
 Continue by setting up the learner evaluations as a partial function
 capturing the necessary arguments:
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-6
    :end-before: end-snippet-6
 
@@ -92,27 +92,27 @@ The only `state` flowing from the GUI to the worker thread is the
 `learning_curve`'s callback argument to raise an exception. In the other
 direction we report the `percent` of work done.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-7
    :end-before: end-snippet-7
 
 .. seealso::
-   :func:`~Orange.widgets.widget.OWWidget.progressBarInit`,
-   :func:`~Orange.widgets.widget.OWWidget.progressBarSet`,
-   :func:`~Orange.widgets.widget.OWWidget.progressBarFinished`
+   :func:`~Arithmos.widgets.widget.OWWidget.progressBarInit`,
+   :func:`~Arithmos.widgets.widget.OWWidget.progressBarSet`,
+   :func:`~Arithmos.widgets.widget.OWWidget.progressBarFinished`
 
 
 Next, we submit the function to be run in a worker thread and instrument
 a FutureWatcher instance to notify us when the task completes (via a
 `_task_finished` slot).
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-8
    :end-before: end-snippet-8
 
 For the above code to work, the `setProgressValue` needs defined as a pyqtSlot.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-progress
    :end-before: end-snippet-progress
 
@@ -121,10 +121,10 @@ For the above code to work, the `setProgressValue` needs defined as a pyqtSlot.
 Collecting results
 ******************
 
-In `_task_finished` (from :download:`OWLearningCurveC.py <orange-demo/orangedemo/OWLearningCurveC.py>`)
+In `_task_finished` (from :download:`OWLearningCurveC.py <arithmos-demo/arithmosdemo/OWLearningCurveC.py>`)
 we handle the completed task (either success or failure) and then update the displayed score table.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-9
    :end-before: end-snippet-9
 
@@ -137,13 +137,13 @@ Also of interest is the `cancel` method. Note that we also disconnect the
 `_task_finished` slot so that `_task_finished` does not receive stale
 results.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-10
    :end-before: end-snippet-10
 
-We also use cancel in :func:`~Orange.widgets.widget.OWWidget.onDeleteWidget`
+We also use cancel in :func:`~Arithmos.widgets.widget.OWWidget.onDeleteWidget`
 to stop if/when the widget is removed from the canvas.
 
-.. literalinclude:: orange-demo/orangedemo/OWLearningCurveC.py
+.. literalinclude:: arithmos-demo/arithmosdemo/OWLearningCurveC.py
    :start-after: start-snippet-11
    :end-before: end-snippet-11

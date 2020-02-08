@@ -14,16 +14,16 @@ from AnyQt.QtCore import Qt
 
 import pyqtgraph as pg
 
-import Orange
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.evaluate.contexthandlers import \
+import Arithmos
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.evaluate.contexthandlers import \
     EvaluationResultsContextHandler
-from Orange.widgets.evaluate.utils import check_results_adequacy
-from Orange.widgets.utils import colorpalette, colorbrewer
-from Orange.widgets.evaluate.owrocanalysis import convex_hull
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input
-from Orange.widgets import report
+from Arithmos.widgets.evaluate.utils import check_results_adequacy
+from Arithmos.widgets.utils import colorpalette, colorbrewer
+from Arithmos.widgets.evaluate.owrocanalysis import convex_hull
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input
+from Arithmos.widgets import report
 
 
 CurvePoints = namedtuple(
@@ -64,7 +64,7 @@ class OWLiftCurve(widget.OWWidget):
     keywords = []
 
     class Inputs:
-        evaluation_results = Input("Evaluation Results", Orange.evaluation.Results)
+        evaluation_results = Input("Evaluation Results", Arithmos.evaluation.Results)
 
     settingsHandler = EvaluationResultsContextHandler()
     target_index = settings.ContextSetting(0)
@@ -265,5 +265,5 @@ def lift_curve(ytrue, ypred, target=1):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.widgets.evaluate.utils import results_for_preview
+    from Arithmos.widgets.evaluate.utils import results_for_preview
     WidgetPreview(OWLiftCurve).run(results_for_preview())

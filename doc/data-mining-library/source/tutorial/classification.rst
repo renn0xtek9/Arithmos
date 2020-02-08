@@ -5,14 +5,14 @@ Classification
 .. index::
    single: data mining; supervised
 
-Much of Orange is devoted to machine learning methods for classification, or supervised data mining. These methods rely on data with class-labeled instances, like that of senate voting. Here is a code that loads this dataset, displays the first data instance and shows its predicted class (``republican``)::
+Much of Arithmos is devoted to machine learning methods for classification, or supervised data mining. These methods rely on data with class-labeled instances, like that of senate voting. Here is a code that loads this dataset, displays the first data instance and shows its predicted class (``republican``)::
 
-   >>> import Orange
-   >>> data = Orange.data.Table("voting")
+   >>> import Arithmos
+   >>> data = Arithmos.data.Table("voting")
    >>> data[0]
    [n, y, n, y, y, ... | republican]
 
-Orange implements functions for construction of classification models, their evaluation and scoring. In a nutshell, here is the code that reports on cross-validated accuracy and AUC for logistic regression and random forests:
+Arithmos implements functions for construction of classification models, their evaluation and scoring. In a nutshell, here is the code that reports on cross-validated accuracy and AUC for logistic regression and random forests:
 
 .. literalinclude:: code/classification-cv3.py
 
@@ -21,7 +21,7 @@ It turns out that for this domain logistic regression does well::
     Accuracy: [ 0.96321839  0.95632184]
     AUC: [ 0.96233796  0.95671252]
 
-For supervised learning, Orange uses learners. These are objects that receive the data and return classifiers. Learners are passed to evaluation routines, such as cross-validation above.
+For supervised learning, Arithmos uses learners. These are objects that receive the data and return classifiers. Learners are passed to evaluation routines, such as cross-validation above.
 
 Learners and Classifiers
 ------------------------
@@ -35,9 +35,9 @@ Learners and Classifiers
 
 Classification uses two types of objects: learners and classifiers. Learners consider class-labeled data and return a classifier. Given the first three data instances, classifiers return the indexes of predicted class::
 
-    >>> import Orange
-    >>> data = Orange.data.Table("voting")
-    >>> learner = Orange.classification.LogisticRegressionLearner()
+    >>> import Arithmos
+    >>> data = Arithmos.data.Table("voting")
+    >>> learner = Arithmos.classification.LogisticRegressionLearner()
     >>> classifier = learner(data)
     >>> classifier(data[:3])
     array([ 0.,  0.,  1.])
@@ -99,13 +99,13 @@ Cross-validation is expecting a list of learners. The performance estimators als
 Handful of Classifiers
 ----------------------
 
-Orange includes a variety of classification algorithms, most of them wrapped from `scikit-learn <http://scikit-learn.org>`_, including:
+Arithmos includes a variety of classification algorithms, most of them wrapped from `scikit-learn <http://scikit-learn.org>`_, including:
 
-- logistic regression (``Orange.classification.LogisticRegressionLearner``)
-- k-nearest neighbors (``Orange.classification.knn.KNNLearner``)
-- support vector machines (say, ``Orange.classification.svm.LinearSVMLearner``)
-- classification trees (``Orange.classification.tree.SklTreeLearner``)
-- random forest (``Orange.classification.RandomForestLearner``)
+- logistic regression (``Arithmos.classification.LogisticRegressionLearner``)
+- k-nearest neighbors (``Arithmos.classification.knn.KNNLearner``)
+- support vector machines (say, ``Arithmos.classification.svm.LinearSVMLearner``)
+- classification trees (``Arithmos.classification.tree.SklTreeLearner``)
+- random forest (``Arithmos.classification.RandomForestLearner``)
 
 Some of these are included in the code that estimates the probability of a target class on a testing data. This time, training and test datasets are disjoint:
 

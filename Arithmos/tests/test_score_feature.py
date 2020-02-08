@@ -6,13 +6,13 @@ import warnings
 
 import numpy as np
 
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange import preprocess
-from Orange.modelling import RandomForestLearner
-from Orange.preprocess.score import InfoGain, GainRatio, Gini, Chi2, ANOVA,\
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos import preprocess
+from Arithmos.modelling import RandomForestLearner
+from Arithmos.preprocess.score import InfoGain, GainRatio, Gini, Chi2, ANOVA,\
     UnivariateLinearRegression, ReliefF, FCBF, RReliefF
-from Orange.projection import PCA
-from Orange.tests import test_filename
+from Arithmos.projection import PCA
+from Arithmos.tests import test_filename
 
 
 class FeatureScoringTest(unittest.TestCase):

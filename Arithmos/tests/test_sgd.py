@@ -7,10 +7,10 @@ import warnings
 import numpy as np
 from sklearn.exceptions import ConvergenceWarning
 
-from Orange.data import Table
-from Orange.classification import SGDClassificationLearner
-from Orange.regression import SGDRegressionLearner
-from Orange.evaluation import CrossValidation, RMSE, AUC
+from Arithmos.data import Table
+from Arithmos.classification import SGDClassificationLearner
+from Arithmos.regression import SGDRegressionLearner
+from Arithmos.evaluation import CrossValidation, RMSE, AUC
 
 
 class TestSGDRegressionLearner(unittest.TestCase):

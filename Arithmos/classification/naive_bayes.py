@@ -1,10 +1,10 @@
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.classification import Learner, Model
-from Orange.data import Instance, Storage, Table
-from Orange.statistics import contingency
-from Orange.preprocess import Discretize, RemoveNaNColumns
+from Arithmos.classification import Learner, Model
+from Arithmos.data import Instance, Storage, Table
+from Arithmos.statistics import contingency
+from Arithmos.preprocess import Discretize, RemoveNaNColumns
 
 __all__ = ["NaiveBayesLearner"]
 
@@ -16,7 +16,7 @@ class NaiveBayesLearner(Learner):
 
     Parameters
     ----------
-    preprocessors : list, optional (default="[Orange.preprocess.Discretize]")
+    preprocessors : list, optional (default="[Arithmos.preprocess.Discretize]")
         An ordered list of preprocessors applied to data before training
         or testing.
     """
@@ -25,7 +25,7 @@ class NaiveBayesLearner(Learner):
 
     def fit_storage(self, table):
         if not isinstance(table, Storage):
-            raise TypeError("Data is not a subclass of Orange.data.Storage.")
+            raise TypeError("Data is not a subclass of Arithmos.data.Storage.")
         if not all(var.is_discrete
                    for var in table.domain.variables):
             raise NotImplementedError("Only discrete variables are supported.")
@@ -39,7 +39,7 @@ class NaiveBayesLearner(Learner):
 
         # Laplacian smoothing considers only classes that appear in the data,
         # in part to avoid cases where the probabilities are affected by empty
-        # (or completely spurious) classes that appear because of Orange's reuse
+        # (or completely spurious) classes that appear because of Arithmos's reuse
         # of variables. See GH-2943.
         # The corresponding elements of class_probs are set to zero only after
         # mock non-zero values are used in computation of log_cont_prob to

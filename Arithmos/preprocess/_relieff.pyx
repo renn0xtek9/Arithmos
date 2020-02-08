@@ -143,7 +143,7 @@ cdef void k_nearest_reg(arr_f2_t X,
         # but didn't work at all with common UCI regression datasets.
         # Setting influence to proposed alternatives (ibid., eq. 10, eq. 11)
         # didn't work, and neither did setting it to 1/k_nearest (all
-        # instances have the same, constant influence), which is what Orange2
+        # instances have the same, constant influence), which is what Arithmos2
         # uses.
         # The following, however, does work, for reasons unknown. The constant
         # denominator is arbitrary, but must be, for k_nearest=50, > ~5.

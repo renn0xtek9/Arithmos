@@ -2,9 +2,9 @@ from collections import namedtuple
 
 import numpy as np
 
-from Orange.data import Domain, DiscreteVariable, Table
-from Orange.preprocess.transformation import Lookup
-from Orange.statistics.util import nanunique
+from Arithmos.data import Domain, DiscreteVariable, Table
+from Arithmos.preprocess.transformation import Lookup
+from Arithmos.statistics.util import nanunique
 from .preprocess import Preprocess
 
 __all__ = ["Remove"]
@@ -39,8 +39,8 @@ class Remove(Preprocess):
 
     Examples
     --------
-    >>> from Orange.data import Table
-    >>> from Orange.preprocess import Remove
+    >>> from Arithmos.data import Table
+    >>> from Arithmos.preprocess import Remove
     >>> data = Table("zoo")[:10]
     >>> flags = sum([Remove.SortValues, Remove.RemoveConstant, Remove.RemoveUnusedValues])
     >>> remover = Remove(attr_flags=flags, class_flags=flags)
@@ -65,12 +65,12 @@ class Remove(Preprocess):
 
         Parameters
         ----------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             A data table to remove features or classes from.
 
         Returns
         -------
-        data : Orange.data.Table
+        data : Arithmos.data.Table
             New data table.
         """
         if data is None:

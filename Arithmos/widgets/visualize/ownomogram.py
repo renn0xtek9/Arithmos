@@ -16,17 +16,17 @@ from AnyQt.QtWidgets import (
 from AnyQt.QtGui import QColor, QPainter, QFont, QPen, QBrush
 from AnyQt.QtCore import Qt, QRectF, QSize
 
-from Orange.data import Table, Domain, DiscreteVariable, ContinuousVariable
-from Orange.statistics.util import nanmin, nanmax, nanmean, unique
-from Orange.classification import Model
-from Orange.classification.naive_bayes import NaiveBayesModel
-from Orange.classification.logistic_regression import \
+from Arithmos.data import Table, Domain, DiscreteVariable, ContinuousVariable
+from Arithmos.statistics.util import nanmin, nanmax, nanmean, unique
+from Arithmos.classification import Model
+from Arithmos.classification.naive_bayes import NaiveBayesModel
+from Arithmos.classification.logistic_regression import \
     LogisticRegressionClassifier
-from Orange.widgets.settings import Setting, ContextSetting, \
+from Arithmos.widgets.settings import Setting, ContextSetting, \
     ClassValuesContextHandler
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg, Input, Output, AttributeList
-from Orange.widgets import gui
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg, Input, Output, AttributeList
+from Arithmos.widgets import gui
 
 
 def collides(item, items):
@@ -1250,7 +1250,7 @@ class OWNomogram(OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.classification import NaiveBayesLearner  #, LogisticRegressionLearner
+    from Arithmos.classification import NaiveBayesLearner  #, LogisticRegressionLearner
     data = Table("heart_disease")
     clf = NaiveBayesLearner()(data)
     # clf = LogisticRegressionLearner()(data)

@@ -47,11 +47,11 @@ class SharedComputeValue:
 
     Parameters
     ----------
-    compute_shared: Callable[[Orange.data.Table], object]
+    compute_shared: Callable[[Arithmos.data.Table], object]
         A callable that performs computation that is shared between
         multiple variables. Variables sharing computation need to set
         the same instance.
-    variable: Orange.data.Variable
+    variable: Arithmos.data.Variable
         The original variable on which this compute value is set. Optional.
     """
 
@@ -185,7 +185,7 @@ def get_unique_names(names, proposed):
     Return:
         str or list of str
     """
-    from Orange.data import Domain  # prevent cyclic import
+    from Arithmos.data import Domain  # prevent cyclic import
     if isinstance(names, Domain):
         names = [var.name for var in chain(names.variables, names.metas)]
     if isinstance(proposed, str):

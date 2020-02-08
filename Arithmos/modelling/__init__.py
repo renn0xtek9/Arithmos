@@ -1,4 +1,4 @@
-# Pull members from modules to Orange.modelling namespace
+# Pull members from modules to Arithmos.modelling namespace
 # pylint: disable=wildcard-import
 
 from .base import *

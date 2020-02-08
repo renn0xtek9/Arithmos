@@ -9,13 +9,13 @@ import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
-from Orange import data
+from Arithmos import data
 
-from Orange.data.io import FileFormat, TabReader, CSVReader, PickleReader
-from Orange.data.io_base import PICKLE_PROTOCOL
-from Orange.data.table import get_sample_datasets_dir
-from Orange.data import Table, Variable
-from Orange.tests import test_dirname
+from Arithmos.data.io import FileFormat, TabReader, CSVReader, PickleReader
+from Arithmos.data.io_base import PICKLE_PROTOCOL
+from Arithmos.data.table import get_sample_datasets_dir
+from Arithmos.data import Table, Variable
+from Arithmos.tests import test_dirname
 
 
 class WildcardReader(FileFormat):
@@ -158,18 +158,18 @@ class TestReader(unittest.TestCase):
 
     def test_load_pickle(self):
         """
-        This function tests whether pickled files in older Orange loads
-        correctly with newer version of Orange.
+        This function tests whether pickled files in older Arithmos loads
+        correctly with newer version of Arithmos.
         """
-        # load pickles created with Orange 3.20
+        # load pickles created with Arithmos 3.20
         # in next version there is a change in variables.py - line 738
         # which broke back compatibility - tests were introduced after the fix
-        data1 = Table("datasets/sailing-orange-3-20.pkl")
-        data2 = Table("datasets/sailing-orange-3-20.pkl.gz")
+        data1 = Table("datasets/sailing-arithmos-3-20.pkl")
+        data2 = Table("datasets/sailing-arithmos-3-20.pkl.gz")
 
-        # load pickles created with Orange 3.21
-        data3 = Table("datasets/sailing-orange-3-21.pkl")
-        data4 = Table("datasets/sailing-orange-3-21.pkl.gz")
+        # load pickles created with Arithmos 3.21
+        data3 = Table("datasets/sailing-arithmos-3-21.pkl")
+        data4 = Table("datasets/sailing-arithmos-3-21.pkl.gz")
 
         examples_count = 20
         self.assertEqual(examples_count, len(data1))
@@ -185,7 +185,7 @@ class TestReader(unittest.TestCase):
 
     def test_pickle_version(self):
         """
-        Orange uses a fixed PICKLE_PROTOCOL (currently set to 4)
+        Arithmos uses a fixed PICKLE_PROTOCOL (currently set to 4)
         for pickling data files and possibly elsewhere for consistent
         behaviour across different python versions (e.g. 3.6 - 3.8).
         When the default protocol is increased in a future version of python

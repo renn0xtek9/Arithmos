@@ -7,12 +7,12 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 
-from Orange.data import Table
-from Orange.distance import Euclidean
-from Orange.projection import (MDS, Isomap, LocallyLinearEmbedding,
+from Arithmos.data import Table
+from Arithmos.distance import Euclidean
+from Arithmos.projection import (MDS, Isomap, LocallyLinearEmbedding,
                                SpectralEmbedding, TSNE)
-from Orange.projection.manifold import torgerson
-from Orange.tests import test_filename
+from Arithmos.projection.manifold import torgerson
+from Arithmos.tests import test_filename
 
 
 np.random.seed(42)

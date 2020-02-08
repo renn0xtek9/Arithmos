@@ -1,11 +1,11 @@
 from AnyQt.QtCore import Qt
-from Orange.data import Table
-from Orange.preprocess.remove import Remove
-from Orange.widgets import gui, widget
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.data import Table
+from Arithmos.preprocess.remove import Remove
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 class OWPurgeDomain(widget.OWWidget):

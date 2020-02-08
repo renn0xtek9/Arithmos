@@ -13,18 +13,18 @@ from AnyQt.QtCore import Qt, QEvent, QRectF, QSize
 import scipy.special
 from scipy.stats import f_oneway, chi2_contingency
 
-import Orange.data
-from Orange.data.filter import FilterDiscrete, FilterContinuous, Values
-from Orange.statistics import contingency, distribution
+import Arithmos.data
+from Arithmos.data.filter import FilterDiscrete, FilterContinuous, Values
+from Arithmos.statistics import contingency, distribution
 
-from Orange.widgets import widget, gui
-from Orange.widgets.settings import (Setting, DomainContextHandler,
+from Arithmos.widgets import widget, gui
+from Arithmos.widgets.settings import (Setting, DomainContextHandler,
                                      ContextSetting)
-from Orange.widgets.utils.itemmodels import VariableListModel
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.widgets.utils.itemmodels import VariableListModel
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output
 
 
 def compute_scale(min_, max_):
@@ -139,11 +139,11 @@ class OWBoxPlot(widget.OWWidget):
     keywords = ["whisker"]
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        selected_data = Output("Selected Data", Orange.data.Table, default=True)
-        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Orange.data.Table)
+        selected_data = Output("Selected Data", Arithmos.data.Table, default=True)
+        annotated_data = Output(ANNOTATED_DATA_SIGNAL_NAME, Arithmos.data.Table)
 
     #: Comparison types for continuous variables
     CompareNone, CompareMedians, CompareMeans = 0, 1, 2
@@ -1220,4 +1220,4 @@ class OWBoxPlot(widget.OWWidget):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    WidgetPreview(OWBoxPlot).run(Orange.data.Table("heart_disease.tab"))
+    WidgetPreview(OWBoxPlot).run(Arithmos.data.Table("heart_disease.tab"))

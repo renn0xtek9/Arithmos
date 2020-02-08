@@ -1,9 +1,9 @@
-from Orange.data import ContinuousVariable, Domain
-from Orange.statistics import distribution
-from Orange.util import Reprable
-from Orange.preprocess.transformation import \
+from Arithmos.data import ContinuousVariable, Domain
+from Arithmos.statistics import distribution
+from Arithmos.util import Reprable
+from Arithmos.preprocess.transformation import \
     Identity, Indicator, Indicator1, Normalizer
-from Orange.preprocess.preprocess import Continuize
+from Arithmos.preprocess.preprocess import Continuize
 
 __all__ = ["DomainContinuizer"]
 

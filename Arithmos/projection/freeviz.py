@@ -2,8 +2,8 @@
 import numpy as np
 import scipy.spatial
 
-from Orange.preprocess.preprocess import RemoveNaNRows, Continuize, Scale
-from Orange.projection import LinearProjector, DomainProjection
+from Arithmos.preprocess.preprocess import RemoveNaNRows, Continuize, Scale
+from Arithmos.projection import LinearProjector, DomainProjection
 
 __all__ = ["FreeViz"]
 

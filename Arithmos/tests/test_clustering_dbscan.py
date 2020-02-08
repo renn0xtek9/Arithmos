@@ -6,9 +6,9 @@ import unittest
 import numpy as np
 from scipy.sparse import csc_matrix, csr_matrix
 
-from Orange.clustering.clustering import ClusteringModel
-from Orange.data import Table
-from Orange.clustering.dbscan import DBSCAN
+from Arithmos.clustering.clustering import ClusteringModel
+from Arithmos.data import Table
+from Arithmos.clustering.dbscan import DBSCAN
 
 
 class TestDBSCAN(unittest.TestCase):

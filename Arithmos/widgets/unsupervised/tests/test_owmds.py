@@ -7,16 +7,16 @@ from unittest.mock import patch, Mock
 
 import numpy as np
 
-from Orange.data import Table
-from Orange.distance import Euclidean
-from Orange.misc import DistMatrix
-from Orange.projection.manifold import torgerson
-from Orange.widgets.settings import Context
-from Orange.widgets.tests.base import (
+from Arithmos.data import Table
+from Arithmos.distance import Euclidean
+from Arithmos.misc import DistMatrix
+from Arithmos.projection.manifold import torgerson
+from Arithmos.widgets.settings import Context
+from Arithmos.widgets.tests.base import (
     WidgetTest, WidgetOutputsTestMixin, datasets, ProjectionWidgetTestMixin
 )
-from Orange.widgets.tests.utils import simulate
-from Orange.widgets.unsupervised.owmds import OWMDS, run_mds, Result
+from Arithmos.widgets.tests.utils import simulate
+from Arithmos.widgets.unsupervised.owmds import OWMDS, run_mds, Result
 
 
 class TestOWMDS(WidgetTest, ProjectionWidgetTestMixin,
@@ -99,14 +99,14 @@ class TestOWMDS(WidgetTest, ProjectionWidgetTestMixin,
         self.send_signal(self.widget.Inputs.data, data, wait=1000)
         combobox_run_through_all()
 
-    @patch("Orange.projection.MDS.__call__", Mock(side_effect=MemoryError))
+    @patch("Arithmos.projection.MDS.__call__", Mock(side_effect=MemoryError))
     def test_out_of_memory(self):
         with patch("sys.excepthook", Mock()) as hook:
             self.send_signal(self.widget.Inputs.data, self.data, wait=1000)
             hook.assert_not_called()
             self.assertTrue(self.widget.Error.out_of_memory.is_shown())
 
-    @patch("Orange.projection.MDS.__call__", Mock(side_effect=ValueError))
+    @patch("Arithmos.projection.MDS.__call__", Mock(side_effect=ValueError))
     def test_other_error(self):
         with patch("sys.excepthook", Mock()) as hook:
             self.send_signal(self.widget.Inputs.data, self.data, wait=1000)

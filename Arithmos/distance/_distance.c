@@ -590,8 +590,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Orange__distance___distance
-#define __PYX_HAVE_API__Orange__distance___distance
+#define __PYX_HAVE__Arithmos__distance___distance
+#define __PYX_HAVE_API__Arithmos__distance___distance
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -832,7 +832,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "Orange/distance/_distance.pyx",
+  "Arithmos/distance/_distance.pyx",
   "__init__.pxd",
   "stringsource",
   "type.pxd",
@@ -2117,7 +2117,7 @@ static PyTypeObject *__pyx_ptype_5numpy_ndarray = 0;
 static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, char *, char *, int *); /*proto*/
 
-/* Module declarations from 'Orange.distance._distance' */
+/* Module declarations from 'Arithmos.distance._distance' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -2165,11 +2165,11 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, 
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int8_t = { "int8_t", NULL, sizeof(__pyx_t_5numpy_int8_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int8_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int8_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "Orange.distance._distance"
-extern int __pyx_module_is_main_Orange__distance___distance;
-int __pyx_module_is_main_Orange__distance___distance = 0;
+#define __Pyx_MODULE_NAME "Arithmos.distance._distance"
+extern int __pyx_module_is_main_Arithmos__distance___distance;
+int __pyx_module_is_main_Arithmos__distance___distance = 0;
 
-/* Implementation of 'Orange.distance._distance' */
+/* Implementation of 'Arithmos.distance._distance' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -2316,10 +2316,10 @@ static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>
 static const char __pyx_k_euclidean_rows_discrete[] = "euclidean_rows_discrete";
 static const char __pyx_k_Cannot_index_with_type_s[] = "Cannot index with type '%s'";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
-static const char __pyx_k_Orange_distance__distance[] = "Orange.distance._distance";
+static const char __pyx_k_Arithmos_distance__distance[] = "Arithmos.distance._distance";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
-static const char __pyx_k_Orange_distance__distance_pyx[] = "Orange/distance/_distance.pyx";
+static const char __pyx_k_Arithmos_distance__distance_pyx[] = "Arithmos/distance/_distance.pyx";
 static const char __pyx_k_fix_euclidean_cols_normalized[] = "fix_euclidean_cols_normalized";
 static const char __pyx_k_fix_euclidean_rows_normalized[] = "fix_euclidean_rows_normalized";
 static const char __pyx_k_fix_manhattan_rows_normalized[] = "fix_manhattan_rows_normalized";
@@ -2366,8 +2366,8 @@ static PyObject *__pyx_kp_s_MemoryView_of_r_at_0x_x;
 static PyObject *__pyx_kp_s_MemoryView_of_r_object;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_b_O;
-static PyObject *__pyx_n_s_Orange_distance__distance;
-static PyObject *__pyx_kp_s_Orange_distance__distance_pyx;
+static PyObject *__pyx_n_s_Arithmos_distance__distance;
+static PyObject *__pyx_kp_s_Arithmos_distance__distance_pyx;
 static PyObject *__pyx_kp_s_Out_of_bounds_on_buffer_access_a;
 static PyObject *__pyx_n_s_PickleError;
 static PyObject *__pyx_n_s_RuntimeError;
@@ -2512,20 +2512,20 @@ static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_x1;
 static PyObject *__pyx_n_s_x2;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_distances, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, __Pyx_memviewslice __pyx_v_dist_missing, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_means, PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, CYTHON_UNUSED PyArrayObject *__pyx_v_means, CYTHON_UNUSED PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, __Pyx_memviewslice __pyx_v_means, __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_means, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, PyArrayObject *__pyx_v_dist_missing2_cont, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, char __pyx_v_normalize, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyObject *__pyx_v_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros1, PyArrayObject *__pyx_v_nonzeros2, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_nans1, PyArrayObject *__pyx_v_nans2, PyArrayObject *__pyx_v_ps, char __pyx_v_two_tables, PyObject *__pyx_v_callback, PyObject *__pyx_v_next_callback); /* proto */
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_nans, PyArrayObject *__pyx_v_ps, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_lower_to_symmetric(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_distances, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_2euclidean_rows_discrete(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, __Pyx_memviewslice __pyx_v_dist_missing, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_4fix_euclidean_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_means, PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_6fix_euclidean_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, CYTHON_UNUSED PyArrayObject *__pyx_v_means, CYTHON_UNUSED PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_8fix_euclidean_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, __Pyx_memviewslice __pyx_v_means, __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_10fix_euclidean_cols_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_means, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_12manhattan_rows_cont(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_14fix_manhattan_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, PyArrayObject *__pyx_v_dist_missing2_cont, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_16fix_manhattan_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_18manhattan_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, char __pyx_v_normalize, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_20p_nonzero(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_22any_nan_row(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyObject *__pyx_v_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_24jaccard_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros1, PyArrayObject *__pyx_v_nonzeros2, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_nans1, PyArrayObject *__pyx_v_nans2, PyArrayObject *__pyx_v_ps, char __pyx_v_two_tables, PyObject *__pyx_v_callback, PyObject *__pyx_v_next_callback); /* proto */
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_26jaccard_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_nans, PyArrayObject *__pyx_v_ps, PyObject *__pyx_v_callback); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
@@ -2640,7 +2640,7 @@ static PyObject *__pyx_codeobj__53;
 static PyObject *__pyx_codeobj__60;
 /* Late includes */
 
-/* "Orange/distance/_distance.pyx":18
+/* "Arithmos/distance/_distance.pyx":18
  * 
  * 
  * def lower_to_symmetric(double [:, :] distances, callback):             # <<<<<<<<<<<<<<
@@ -2649,10 +2649,10 @@ static PyObject *__pyx_codeobj__60;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_1lower_to_symmetric(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_lower_to_symmetric[] = "lower_to_symmetric(double[:, :] distances, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_1lower_to_symmetric = {"lower_to_symmetric", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_1lower_to_symmetric, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_lower_to_symmetric};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_1lower_to_symmetric(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_1lower_to_symmetric(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_lower_to_symmetric[] = "lower_to_symmetric(double[:, :] distances, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_1lower_to_symmetric = {"lower_to_symmetric", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_1lower_to_symmetric, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_lower_to_symmetric};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_1lower_to_symmetric(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_distances = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_v_callback = 0;
   PyObject *__pyx_r = 0;
@@ -2700,18 +2700,18 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_1lower_to_symmetric(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("lower_to_symmetric", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 18, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.lower_to_symmetric", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.lower_to_symmetric", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(__pyx_self, __pyx_v_distances, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_lower_to_symmetric(__pyx_self, __pyx_v_distances, __pyx_v_callback);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_distances, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_lower_to_symmetric(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_distances, PyObject *__pyx_v_callback) {
   int __pyx_v_row1;
   int __pyx_v_row2;
   int __pyx_v_step;
@@ -2739,7 +2739,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
   Py_ssize_t __pyx_t_18;
   __Pyx_RefNannySetupContext("lower_to_symmetric", 0);
 
-  /* "Orange/distance/_distance.pyx":21
+  /* "Arithmos/distance/_distance.pyx":21
  *     cdef int row1, row2, step, n_rows1
  * 
  *     n_rows1 = distances.shape[0]             # <<<<<<<<<<<<<<
@@ -2748,7 +2748,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
  */
   __pyx_v_n_rows1 = (__pyx_v_distances.shape[0]);
 
-  /* "Orange/distance/_distance.pyx":22
+  /* "Arithmos/distance/_distance.pyx":22
  * 
  *     n_rows1 = distances.shape[0]
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -2764,7 +2764,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
   }
   __pyx_v_step = __pyx_t_3;
 
-  /* "Orange/distance/_distance.pyx":23
+  /* "Arithmos/distance/_distance.pyx":23
  *     n_rows1 = distances.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -2833,7 +2833,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_row_start = __pyx_t_3;
 
-    /* "Orange/distance/_distance.pyx":24
+    /* "Arithmos/distance/_distance.pyx":24
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -2861,7 +2861,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "Orange/distance/_distance.pyx":25
+    /* "Arithmos/distance/_distance.pyx":25
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2876,7 +2876,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
         #endif
         /*try:*/ {
 
-          /* "Orange/distance/_distance.pyx":26
+          /* "Arithmos/distance/_distance.pyx":26
  *         callback(row_start * 100 / n_rows1)
  *         with nogil:
  *             for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -2895,7 +2895,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
           for (__pyx_t_11 = __pyx_v_row_start; __pyx_t_11 < __pyx_t_1; __pyx_t_11+=1) {
             __pyx_v_row1 = __pyx_t_11;
 
-            /* "Orange/distance/_distance.pyx":27
+            /* "Arithmos/distance/_distance.pyx":27
  *         with nogil:
  *             for row1 in range(row_start, min(row_start + step, n_rows1)):
  *                 for row2 in range(row1):             # <<<<<<<<<<<<<<
@@ -2907,7 +2907,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
             for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
               __pyx_v_row2 = __pyx_t_14;
 
-              /* "Orange/distance/_distance.pyx":28
+              /* "Arithmos/distance/_distance.pyx":28
  *             for row1 in range(row_start, min(row_start + step, n_rows1)):
  *                 for row2 in range(row1):
  *                     distances[row2, row1] = distances[row1, row2]             # <<<<<<<<<<<<<<
@@ -2923,7 +2923,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
           }
         }
 
-        /* "Orange/distance/_distance.pyx":25
+        /* "Arithmos/distance/_distance.pyx":25
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2942,7 +2942,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
         }
     }
 
-    /* "Orange/distance/_distance.pyx":23
+    /* "Arithmos/distance/_distance.pyx":23
  *     n_rows1 = distances.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -2952,7 +2952,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "Orange/distance/_distance.pyx":18
+  /* "Arithmos/distance/_distance.pyx":18
  * 
  * 
  * def lower_to_symmetric(double [:, :] distances, callback):             # <<<<<<<<<<<<<<
@@ -2969,7 +2969,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("Orange.distance._distance.lower_to_symmetric", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.lower_to_symmetric", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_distances, 1);
@@ -2978,7 +2978,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":31
+/* "Arithmos/distance/_distance.pyx":31
  * 
  * 
  * def euclidean_rows_discrete(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -2987,10 +2987,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_lower_to_symmetric(CYTHON
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_2euclidean_rows_discrete[] = "euclidean_rows_discrete(ndarray distances, ndarray x1, ndarray x2, double[:, :] dist_missing, ndarray dist_missing2, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_3euclidean_rows_discrete = {"euclidean_rows_discrete", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_2euclidean_rows_discrete};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_3euclidean_rows_discrete(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_2euclidean_rows_discrete[] = "euclidean_rows_discrete(ndarray distances, ndarray x1, ndarray x2, double[:, :] dist_missing, ndarray dist_missing2, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_3euclidean_rows_discrete = {"euclidean_rows_discrete", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_3euclidean_rows_discrete, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_2euclidean_rows_discrete};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_3euclidean_rows_discrete(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
@@ -3093,7 +3093,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete(
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("euclidean_rows_discrete", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 31, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.euclidean_rows_discrete", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.euclidean_rows_discrete", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -3101,7 +3101,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete(
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x1), __pyx_ptype_5numpy_ndarray, 1, "x1", 0))) __PYX_ERR(0, 32, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x2), __pyx_ptype_5numpy_ndarray, 1, "x2", 0))) __PYX_ERR(0, 33, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dist_missing2), __pyx_ptype_5numpy_ndarray, 1, "dist_missing2", 0))) __PYX_ERR(0, 35, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_dist_missing, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_2euclidean_rows_discrete(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_dist_missing, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3112,7 +3112,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_3euclidean_rows_discrete(
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, __Pyx_memviewslice __pyx_v_dist_missing, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_2euclidean_rows_discrete(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, __Pyx_memviewslice __pyx_v_dist_missing, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -3207,7 +3207,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
   }
   __pyx_pybuffernd_dist_missing2.diminfo[0].strides = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist_missing2.diminfo[0].shape = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":43
+  /* "Arithmos/distance/_distance.pyx":43
  *         int ival1, ival2
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -3219,7 +3219,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":44
+  /* "Arithmos/distance/_distance.pyx":44
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]             # <<<<<<<<<<<<<<
@@ -3228,7 +3228,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
  */
   __pyx_v_n_rows2 = (__pyx_v_x2->dimensions[0]);
 
-  /* "Orange/distance/_distance.pyx":45
+  /* "Arithmos/distance/_distance.pyx":45
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -3244,7 +3244,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":46
+  /* "Arithmos/distance/_distance.pyx":46
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -3313,7 +3313,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_row_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":47
+    /* "Arithmos/distance/_distance.pyx":47
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -3341,7 +3341,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":48
+    /* "Arithmos/distance/_distance.pyx":48
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -3360,7 +3360,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
     for (__pyx_t_13 = __pyx_v_row_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_row1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":49
+      /* "Arithmos/distance/_distance.pyx":49
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -3375,7 +3375,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":50
+            /* "Arithmos/distance/_distance.pyx":50
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -3391,7 +3391,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_row2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":51
+              /* "Arithmos/distance/_distance.pyx":51
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     d = 0             # <<<<<<<<<<<<<<
@@ -3400,7 +3400,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
  */
               __pyx_v_d = 0.0;
 
-              /* "Orange/distance/_distance.pyx":52
+              /* "Arithmos/distance/_distance.pyx":52
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     d = 0
  *                     for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -3412,7 +3412,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_col = __pyx_t_19;
 
-                /* "Orange/distance/_distance.pyx":53
+                /* "Arithmos/distance/_distance.pyx":53
  *                     d = 0
  *                     for col in range(n_cols):
  *                         val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -3428,7 +3428,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_v_val1 = __pyx_t_22;
                 __pyx_v_val2 = __pyx_t_25;
 
-                /* "Orange/distance/_distance.pyx":54
+                /* "Arithmos/distance/_distance.pyx":54
  *                     for col in range(n_cols):
  *                         val1, val2 = x1[row1, col], x2[row2, col]
  *                         ival1, ival2 = int(val1), int(val2)             # <<<<<<<<<<<<<<
@@ -3438,7 +3438,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_v_ival1 = ((int)__pyx_v_val1);
                 __pyx_v_ival2 = ((int)__pyx_v_val2);
 
-                /* "Orange/distance/_distance.pyx":55
+                /* "Arithmos/distance/_distance.pyx":55
  *                         val1, val2 = x1[row1, col], x2[row2, col]
  *                         ival1, ival2 = int(val1), int(val2)
  *                         if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -3448,7 +3448,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_t_26 = (npy_isnan(__pyx_v_val1) != 0);
                 if (__pyx_t_26) {
 
-                  /* "Orange/distance/_distance.pyx":56
+                  /* "Arithmos/distance/_distance.pyx":56
  *                         ival1, ival2 = int(val1), int(val2)
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -3458,7 +3458,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                   __pyx_t_26 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_26) {
 
-                    /* "Orange/distance/_distance.pyx":57
+                    /* "Arithmos/distance/_distance.pyx":57
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):
  *                                 d += dist_missing2[col]             # <<<<<<<<<<<<<<
@@ -3468,7 +3468,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                     __pyx_t_27 = __pyx_v_col;
                     __pyx_v_d = (__pyx_v_d + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_dist_missing2.diminfo[0].strides)));
 
-                    /* "Orange/distance/_distance.pyx":56
+                    /* "Arithmos/distance/_distance.pyx":56
  *                         ival1, ival2 = int(val1), int(val2)
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -3478,7 +3478,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":59
+                  /* "Arithmos/distance/_distance.pyx":59
  *                                 d += dist_missing2[col]
  *                             else:
  *                                 d += dist_missing[col, ival2]             # <<<<<<<<<<<<<<
@@ -3492,7 +3492,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                   }
                   __pyx_L17:;
 
-                  /* "Orange/distance/_distance.pyx":55
+                  /* "Arithmos/distance/_distance.pyx":55
  *                         val1, val2 = x1[row1, col], x2[row2, col]
  *                         ival1, ival2 = int(val1), int(val2)
  *                         if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -3502,7 +3502,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                   goto __pyx_L16;
                 }
 
-                /* "Orange/distance/_distance.pyx":60
+                /* "Arithmos/distance/_distance.pyx":60
  *                             else:
  *                                 d += dist_missing[col, ival2]
  *                         elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -3512,7 +3512,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_t_26 = (npy_isnan(__pyx_v_val2) != 0);
                 if (__pyx_t_26) {
 
-                  /* "Orange/distance/_distance.pyx":61
+                  /* "Arithmos/distance/_distance.pyx":61
  *                                 d += dist_missing[col, ival2]
  *                         elif npy_isnan(val2):
  *                             d += dist_missing[col, ival1]             # <<<<<<<<<<<<<<
@@ -3523,7 +3523,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                   __pyx_t_31 = __pyx_v_ival1;
                   __pyx_v_d = (__pyx_v_d + (*((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_dist_missing.data + __pyx_t_30 * __pyx_v_dist_missing.strides[0]) ) + __pyx_t_31 * __pyx_v_dist_missing.strides[1]) ))));
 
-                  /* "Orange/distance/_distance.pyx":60
+                  /* "Arithmos/distance/_distance.pyx":60
  *                             else:
  *                                 d += dist_missing[col, ival2]
  *                         elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -3533,7 +3533,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                   goto __pyx_L16;
                 }
 
-                /* "Orange/distance/_distance.pyx":62
+                /* "Arithmos/distance/_distance.pyx":62
  *                         elif npy_isnan(val2):
  *                             d += dist_missing[col, ival1]
  *                         elif ival1 != ival2:             # <<<<<<<<<<<<<<
@@ -3543,7 +3543,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_t_26 = ((__pyx_v_ival1 != __pyx_v_ival2) != 0);
                 if (__pyx_t_26) {
 
-                  /* "Orange/distance/_distance.pyx":63
+                  /* "Arithmos/distance/_distance.pyx":63
  *                             d += dist_missing[col, ival1]
  *                         elif ival1 != ival2:
  *                             d += 1             # <<<<<<<<<<<<<<
@@ -3552,7 +3552,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
  */
                   __pyx_v_d = (__pyx_v_d + 1.0);
 
-                  /* "Orange/distance/_distance.pyx":62
+                  /* "Arithmos/distance/_distance.pyx":62
  *                         elif npy_isnan(val2):
  *                             d += dist_missing[col, ival1]
  *                         elif ival1 != ival2:             # <<<<<<<<<<<<<<
@@ -3563,7 +3563,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
                 __pyx_L16:;
               }
 
-              /* "Orange/distance/_distance.pyx":64
+              /* "Arithmos/distance/_distance.pyx":64
  *                         elif ival1 != ival2:
  *                             d += 1
  *                     distances[row1, row2] += d             # <<<<<<<<<<<<<<
@@ -3576,7 +3576,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
             }
           }
 
-          /* "Orange/distance/_distance.pyx":49
+          /* "Arithmos/distance/_distance.pyx":49
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -3596,7 +3596,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
       }
     }
 
-    /* "Orange/distance/_distance.pyx":46
+    /* "Arithmos/distance/_distance.pyx":46
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -3606,7 +3606,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":31
+  /* "Arithmos/distance/_distance.pyx":31
  * 
  * 
  * def euclidean_rows_discrete(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -3632,7 +3632,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.euclidean_rows_discrete", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.euclidean_rows_discrete", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -3647,7 +3647,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":67
+/* "Arithmos/distance/_distance.pyx":67
  * 
  * 
  * def fix_euclidean_rows(             # <<<<<<<<<<<<<<
@@ -3656,10 +3656,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_2euclidean_rows_discrete(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_4fix_euclidean_rows[] = "fix_euclidean_rows(ndarray distances, ndarray x1, ndarray x2, ndarray means, ndarray vars, ndarray dist_missing2, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_5fix_euclidean_rows = {"fix_euclidean_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_4fix_euclidean_rows};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_5fix_euclidean_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_4fix_euclidean_rows[] = "fix_euclidean_rows(ndarray distances, ndarray x1, ndarray x2, ndarray means, ndarray vars, ndarray dist_missing2, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_5fix_euclidean_rows = {"fix_euclidean_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_5fix_euclidean_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_4fix_euclidean_rows};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_5fix_euclidean_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
@@ -3773,7 +3773,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_euclidean_rows", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 67, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -3783,7 +3783,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows(PyObj
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_means), __pyx_ptype_5numpy_ndarray, 1, "means", 0))) __PYX_ERR(0, 71, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vars), __pyx_ptype_5numpy_ndarray, 1, "vars", 0))) __PYX_ERR(0, 72, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dist_missing2), __pyx_ptype_5numpy_ndarray, 1, "dist_missing2", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_means, __pyx_v_vars, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_4fix_euclidean_rows(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_means, __pyx_v_vars, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3794,7 +3794,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_5fix_euclidean_rows(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_means, PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_4fix_euclidean_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_means, PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -3913,7 +3913,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
   }
   __pyx_pybuffernd_dist_missing2.diminfo[0].strides = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist_missing2.diminfo[0].shape = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":80
+  /* "Arithmos/distance/_distance.pyx":80
  *         double val1, val2, d
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -3925,7 +3925,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":81
+  /* "Arithmos/distance/_distance.pyx":81
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]             # <<<<<<<<<<<<<<
@@ -3934,7 +3934,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
  */
   __pyx_v_n_rows2 = (__pyx_v_x2->dimensions[0]);
 
-  /* "Orange/distance/_distance.pyx":82
+  /* "Arithmos/distance/_distance.pyx":82
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -3950,7 +3950,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":83
+  /* "Arithmos/distance/_distance.pyx":83
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -4019,7 +4019,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_row_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":84
+    /* "Arithmos/distance/_distance.pyx":84
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -4047,7 +4047,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":85
+    /* "Arithmos/distance/_distance.pyx":85
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -4066,7 +4066,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
     for (__pyx_t_13 = __pyx_v_row_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_row1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":86
+      /* "Arithmos/distance/_distance.pyx":86
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -4081,7 +4081,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":87
+            /* "Arithmos/distance/_distance.pyx":87
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -4097,7 +4097,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_row2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":88
+              /* "Arithmos/distance/_distance.pyx":88
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -4109,7 +4109,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":89
+                /* "Arithmos/distance/_distance.pyx":89
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -4118,7 +4118,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":90
+                /* "Arithmos/distance/_distance.pyx":90
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0
  *                         for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -4130,7 +4130,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_col = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":91
+                  /* "Arithmos/distance/_distance.pyx":91
  *                         d = 0
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -4146,7 +4146,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":92
+                  /* "Arithmos/distance/_distance.pyx":92
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -4156,7 +4156,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":93
+                    /* "Arithmos/distance/_distance.pyx":93
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4166,7 +4166,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":94
+                      /* "Arithmos/distance/_distance.pyx":94
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += dist_missing2[col]             # <<<<<<<<<<<<<<
@@ -4176,7 +4176,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                       __pyx_t_29 = __pyx_v_col;
                       __pyx_v_d = (__pyx_v_d + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_dist_missing2.diminfo[0].strides)));
 
-                      /* "Orange/distance/_distance.pyx":93
+                      /* "Arithmos/distance/_distance.pyx":93
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4186,7 +4186,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":96
+                    /* "Arithmos/distance/_distance.pyx":96
  *                                     d += dist_missing2[col]
  *                                 else:
  *                                     d += (val2 - means[col]) ** 2 + vars[col]             # <<<<<<<<<<<<<<
@@ -4200,7 +4200,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":92
+                    /* "Arithmos/distance/_distance.pyx":92
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -4210,7 +4210,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":97
+                  /* "Arithmos/distance/_distance.pyx":97
  *                                 else:
  *                                     d += (val2 - means[col]) ** 2 + vars[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4220,7 +4220,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":98
+                    /* "Arithmos/distance/_distance.pyx":98
  *                                     d += (val2 - means[col]) ** 2 + vars[col]
  *                             elif npy_isnan(val2):
  *                                 d += (val1 - means[col]) ** 2 + vars[col]             # <<<<<<<<<<<<<<
@@ -4231,7 +4231,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                     __pyx_t_33 = __pyx_v_col;
                     __pyx_v_d = (__pyx_v_d + (pow((__pyx_v_val1 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_means.rcbuffer->pybuffer.buf, __pyx_t_32, __pyx_pybuffernd_means.diminfo[0].strides))), 2.0) + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_vars.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_vars.diminfo[0].strides))));
 
-                    /* "Orange/distance/_distance.pyx":97
+                    /* "Arithmos/distance/_distance.pyx":97
  *                                 else:
  *                                     d += (val2 - means[col]) ** 2 + vars[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4241,7 +4241,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":100
+                  /* "Arithmos/distance/_distance.pyx":100
  *                                 d += (val1 - means[col]) ** 2 + vars[col]
  *                             else:
  *                                 d += (val1 - val2) ** 2             # <<<<<<<<<<<<<<
@@ -4254,7 +4254,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":101
+                /* "Arithmos/distance/_distance.pyx":101
  *                             else:
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d             # <<<<<<<<<<<<<<
@@ -4265,7 +4265,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                 __pyx_t_35 = __pyx_v_row2;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_34, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_35, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":102
+                /* "Arithmos/distance/_distance.pyx":102
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d
  *                         if not two_tables:             # <<<<<<<<<<<<<<
@@ -4275,7 +4275,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                 __pyx_t_19 = ((!(__pyx_v_two_tables != 0)) != 0);
                 if (__pyx_t_19) {
 
-                  /* "Orange/distance/_distance.pyx":103
+                  /* "Arithmos/distance/_distance.pyx":103
  *                         distances[row1, row2] = d
  *                         if not two_tables:
  *                             distances[row2, row1] = d             # <<<<<<<<<<<<<<
@@ -4286,7 +4286,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
                   __pyx_t_37 = __pyx_v_row1;
                   *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_37, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                  /* "Orange/distance/_distance.pyx":102
+                  /* "Arithmos/distance/_distance.pyx":102
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d
  *                         if not two_tables:             # <<<<<<<<<<<<<<
@@ -4295,7 +4295,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
  */
                 }
 
-                /* "Orange/distance/_distance.pyx":88
+                /* "Arithmos/distance/_distance.pyx":88
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -4306,7 +4306,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
             }
           }
 
-          /* "Orange/distance/_distance.pyx":86
+          /* "Arithmos/distance/_distance.pyx":86
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -4326,7 +4326,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
       }
     }
 
-    /* "Orange/distance/_distance.pyx":83
+    /* "Arithmos/distance/_distance.pyx":83
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -4336,7 +4336,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":67
+  /* "Arithmos/distance/_distance.pyx":67
  * 
  * 
  * def fix_euclidean_rows(             # <<<<<<<<<<<<<<
@@ -4364,7 +4364,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4380,7 +4380,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":106
+/* "Arithmos/distance/_distance.pyx":106
  * 
  * 
  * def fix_euclidean_rows_normalized(             # <<<<<<<<<<<<<<
@@ -4389,10 +4389,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_4fix_euclidean_rows(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_6fix_euclidean_rows_normalized[] = "fix_euclidean_rows_normalized(ndarray distances, ndarray x1, ndarray x2, ndarray means, ndarray vars, ndarray dist_missing2, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_7fix_euclidean_rows_normalized = {"fix_euclidean_rows_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_6fix_euclidean_rows_normalized};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_7fix_euclidean_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_6fix_euclidean_rows_normalized[] = "fix_euclidean_rows_normalized(ndarray distances, ndarray x1, ndarray x2, ndarray means, ndarray vars, ndarray dist_missing2, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_7fix_euclidean_rows_normalized = {"fix_euclidean_rows_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_7fix_euclidean_rows_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_6fix_euclidean_rows_normalized};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_7fix_euclidean_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
@@ -4506,7 +4506,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_norma
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_euclidean_rows_normalized", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 106, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -4516,7 +4516,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_norma
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_means), __pyx_ptype_5numpy_ndarray, 1, "means", 0))) __PYX_ERR(0, 110, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vars), __pyx_ptype_5numpy_ndarray, 1, "vars", 0))) __PYX_ERR(0, 111, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dist_missing2), __pyx_ptype_5numpy_ndarray, 1, "dist_missing2", 0))) __PYX_ERR(0, 112, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_means, __pyx_v_vars, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_6fix_euclidean_rows_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_means, __pyx_v_vars, __pyx_v_dist_missing2, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4527,7 +4527,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_7fix_euclidean_rows_norma
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, CYTHON_UNUSED PyArrayObject *__pyx_v_means, CYTHON_UNUSED PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_6fix_euclidean_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, CYTHON_UNUSED PyArrayObject *__pyx_v_means, CYTHON_UNUSED PyArrayObject *__pyx_v_vars, PyArrayObject *__pyx_v_dist_missing2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -4642,7 +4642,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
   }
   __pyx_pybuffernd_dist_missing2.diminfo[0].strides = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist_missing2.diminfo[0].shape = __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":119
+  /* "Arithmos/distance/_distance.pyx":119
  *         double val1, val2, d
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -4654,7 +4654,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":120
+  /* "Arithmos/distance/_distance.pyx":120
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]             # <<<<<<<<<<<<<<
@@ -4663,7 +4663,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
  */
   __pyx_v_n_rows2 = (__pyx_v_x2->dimensions[0]);
 
-  /* "Orange/distance/_distance.pyx":121
+  /* "Arithmos/distance/_distance.pyx":121
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -4679,7 +4679,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":122
+  /* "Arithmos/distance/_distance.pyx":122
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -4748,7 +4748,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_row_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":123
+    /* "Arithmos/distance/_distance.pyx":123
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -4776,7 +4776,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":124
+    /* "Arithmos/distance/_distance.pyx":124
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -4795,7 +4795,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
     for (__pyx_t_13 = __pyx_v_row_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_row1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":125
+      /* "Arithmos/distance/_distance.pyx":125
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -4810,7 +4810,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":126
+            /* "Arithmos/distance/_distance.pyx":126
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -4826,7 +4826,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_row2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":127
+              /* "Arithmos/distance/_distance.pyx":127
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -4838,7 +4838,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":128
+                /* "Arithmos/distance/_distance.pyx":128
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -4847,7 +4847,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":129
+                /* "Arithmos/distance/_distance.pyx":129
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0
  *                         for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -4859,7 +4859,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_col = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":130
+                  /* "Arithmos/distance/_distance.pyx":130
  *                         d = 0
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -4875,7 +4875,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":131
+                  /* "Arithmos/distance/_distance.pyx":131
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -4885,7 +4885,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":132
+                    /* "Arithmos/distance/_distance.pyx":132
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4895,7 +4895,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":133
+                      /* "Arithmos/distance/_distance.pyx":133
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += dist_missing2[col]             # <<<<<<<<<<<<<<
@@ -4905,7 +4905,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                       __pyx_t_29 = __pyx_v_col;
                       __pyx_v_d = (__pyx_v_d + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist_missing2.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_dist_missing2.diminfo[0].strides)));
 
-                      /* "Orange/distance/_distance.pyx":132
+                      /* "Arithmos/distance/_distance.pyx":132
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4915,7 +4915,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":135
+                    /* "Arithmos/distance/_distance.pyx":135
  *                                     d += dist_missing2[col]
  *                                 else:
  *                                     d += val2 ** 2 + 0.5             # <<<<<<<<<<<<<<
@@ -4927,7 +4927,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":131
+                    /* "Arithmos/distance/_distance.pyx":131
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -4937,7 +4937,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":136
+                  /* "Arithmos/distance/_distance.pyx":136
  *                                 else:
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4947,7 +4947,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":137
+                    /* "Arithmos/distance/_distance.pyx":137
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):
  *                                 d += val1 ** 2 + 0.5             # <<<<<<<<<<<<<<
@@ -4956,7 +4956,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
  */
                     __pyx_v_d = (__pyx_v_d + (pow(__pyx_v_val1, 2.0) + 0.5));
 
-                    /* "Orange/distance/_distance.pyx":136
+                    /* "Arithmos/distance/_distance.pyx":136
  *                                 else:
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -4966,7 +4966,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":139
+                  /* "Arithmos/distance/_distance.pyx":139
  *                                 d += val1 ** 2 + 0.5
  *                             else:
  *                                 d += (val1 - val2) ** 2             # <<<<<<<<<<<<<<
@@ -4979,7 +4979,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":140
+                /* "Arithmos/distance/_distance.pyx":140
  *                             else:
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d             # <<<<<<<<<<<<<<
@@ -4990,7 +4990,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                 __pyx_t_31 = __pyx_v_row2;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_31, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":141
+                /* "Arithmos/distance/_distance.pyx":141
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d
  *                         if not two_tables:             # <<<<<<<<<<<<<<
@@ -5000,7 +5000,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                 __pyx_t_19 = ((!(__pyx_v_two_tables != 0)) != 0);
                 if (__pyx_t_19) {
 
-                  /* "Orange/distance/_distance.pyx":142
+                  /* "Arithmos/distance/_distance.pyx":142
  *                         distances[row1, row2] = d
  *                         if not two_tables:
  *                             distances[row2, row1] = d             # <<<<<<<<<<<<<<
@@ -5011,7 +5011,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
                   __pyx_t_33 = __pyx_v_row1;
                   *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_32, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_33, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                  /* "Orange/distance/_distance.pyx":141
+                  /* "Arithmos/distance/_distance.pyx":141
  *                                 d += (val1 - val2) ** 2
  *                         distances[row1, row2] = d
  *                         if not two_tables:             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
  */
                 }
 
-                /* "Orange/distance/_distance.pyx":127
+                /* "Arithmos/distance/_distance.pyx":127
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -5031,7 +5031,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
             }
           }
 
-          /* "Orange/distance/_distance.pyx":125
+          /* "Arithmos/distance/_distance.pyx":125
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -5051,7 +5051,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
       }
     }
 
-    /* "Orange/distance/_distance.pyx":122
+    /* "Arithmos/distance/_distance.pyx":122
  *     n_rows2 = x2.shape[0]
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -5061,7 +5061,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":106
+  /* "Arithmos/distance/_distance.pyx":106
  * 
  * 
  * def fix_euclidean_rows_normalized(             # <<<<<<<<<<<<<<
@@ -5089,7 +5089,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5105,7 +5105,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":145
+/* "Arithmos/distance/_distance.pyx":145
  * 
  * 
  * def fix_euclidean_cols(             # <<<<<<<<<<<<<<
@@ -5114,10 +5114,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_6fix_euclidean_rows_norma
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_9fix_euclidean_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_8fix_euclidean_cols[] = "fix_euclidean_cols(ndarray distances, ndarray x, double[:] means, double[:] vars, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_9fix_euclidean_cols = {"fix_euclidean_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_9fix_euclidean_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_8fix_euclidean_cols};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_9fix_euclidean_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_9fix_euclidean_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_8fix_euclidean_cols[] = "fix_euclidean_cols(ndarray distances, ndarray x, double[:] means, double[:] vars, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_9fix_euclidean_cols = {"fix_euclidean_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_9fix_euclidean_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_8fix_euclidean_cols};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_9fix_euclidean_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x = 0;
   __Pyx_memviewslice __pyx_v_means = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -5198,13 +5198,13 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_9fix_euclidean_cols(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_euclidean_cols", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 145, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_distances), __pyx_ptype_5numpy_ndarray, 1, "distances", 0))) __PYX_ERR(0, 146, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 147, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(__pyx_self, __pyx_v_distances, __pyx_v_x, __pyx_v_means, __pyx_v_vars, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_8fix_euclidean_cols(__pyx_self, __pyx_v_distances, __pyx_v_x, __pyx_v_means, __pyx_v_vars, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5215,7 +5215,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_9fix_euclidean_cols(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, __Pyx_memviewslice __pyx_v_means, __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_8fix_euclidean_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, __Pyx_memviewslice __pyx_v_means, __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows;
   int __pyx_v_n_cols;
   int __pyx_v_col1;
@@ -5292,7 +5292,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
   }
   __pyx_pybuffernd_x.diminfo[0].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x.diminfo[0].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_x.diminfo[1].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_x.diminfo[1].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/distance/_distance.pyx":155
+  /* "Arithmos/distance/_distance.pyx":155
  *         double val1, val2, d
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]             # <<<<<<<<<<<<<<
@@ -5304,7 +5304,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
   __pyx_v_n_rows = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":156
+  /* "Arithmos/distance/_distance.pyx":156
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)             # <<<<<<<<<<<<<<
@@ -5320,7 +5320,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":157
+  /* "Arithmos/distance/_distance.pyx":157
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -5389,7 +5389,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_col_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":158
+    /* "Arithmos/distance/_distance.pyx":158
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)             # <<<<<<<<<<<<<<
@@ -5417,7 +5417,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":159
+    /* "Arithmos/distance/_distance.pyx":159
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):             # <<<<<<<<<<<<<<
@@ -5436,7 +5436,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
     for (__pyx_t_13 = __pyx_v_col_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_col1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":160
+      /* "Arithmos/distance/_distance.pyx":160
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -5451,7 +5451,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":161
+            /* "Arithmos/distance/_distance.pyx":161
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:
  *                 for col2 in range(col1):             # <<<<<<<<<<<<<<
@@ -5463,7 +5463,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_col2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":162
+              /* "Arithmos/distance/_distance.pyx":162
  *             with nogil:
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):             # <<<<<<<<<<<<<<
@@ -5475,7 +5475,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":163
+                /* "Arithmos/distance/_distance.pyx":163
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -5484,7 +5484,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":164
+                /* "Arithmos/distance/_distance.pyx":164
  *                     if npy_isnan(distances[col1, col2]):
  *                         d = 0
  *                         for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -5496,7 +5496,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_row = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":165
+                  /* "Arithmos/distance/_distance.pyx":165
  *                         d = 0
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]             # <<<<<<<<<<<<<<
@@ -5512,7 +5512,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":166
+                  /* "Arithmos/distance/_distance.pyx":166
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -5522,7 +5522,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":167
+                    /* "Arithmos/distance/_distance.pyx":167
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -5532,7 +5532,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":168
+                      /* "Arithmos/distance/_distance.pyx":168
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += vars[col1] + vars[col2] \             # <<<<<<<<<<<<<<
@@ -5542,7 +5542,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                       __pyx_t_29 = __pyx_v_col1;
                       __pyx_t_30 = __pyx_v_col2;
 
-                      /* "Orange/distance/_distance.pyx":169
+                      /* "Arithmos/distance/_distance.pyx":169
  *                                 if npy_isnan(val2):
  *                                     d += vars[col1] + vars[col2] \
  *                                          + (means[col1] - means[col2]) ** 2             # <<<<<<<<<<<<<<
@@ -5552,7 +5552,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                       __pyx_t_31 = __pyx_v_col1;
                       __pyx_t_32 = __pyx_v_col2;
 
-                      /* "Orange/distance/_distance.pyx":168
+                      /* "Arithmos/distance/_distance.pyx":168
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += vars[col1] + vars[col2] \             # <<<<<<<<<<<<<<
@@ -5561,7 +5561,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
  */
                       __pyx_v_d = (__pyx_v_d + (((*((double *) ( /* dim=0 */ (__pyx_v_vars.data + __pyx_t_29 * __pyx_v_vars.strides[0]) ))) + (*((double *) ( /* dim=0 */ (__pyx_v_vars.data + __pyx_t_30 * __pyx_v_vars.strides[0]) )))) + pow(((*((double *) ( /* dim=0 */ (__pyx_v_means.data + __pyx_t_31 * __pyx_v_means.strides[0]) ))) - (*((double *) ( /* dim=0 */ (__pyx_v_means.data + __pyx_t_32 * __pyx_v_means.strides[0]) )))), 2.0)));
 
-                      /* "Orange/distance/_distance.pyx":167
+                      /* "Arithmos/distance/_distance.pyx":167
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -5571,7 +5571,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":171
+                    /* "Arithmos/distance/_distance.pyx":171
  *                                          + (means[col1] - means[col2]) ** 2
  *                                 else:
  *                                     d += (val2 - means[col1]) ** 2 + vars[col1]             # <<<<<<<<<<<<<<
@@ -5585,7 +5585,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":166
+                    /* "Arithmos/distance/_distance.pyx":166
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -5595,7 +5595,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":172
+                  /* "Arithmos/distance/_distance.pyx":172
  *                                 else:
  *                                     d += (val2 - means[col1]) ** 2 + vars[col1]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -5605,7 +5605,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":173
+                    /* "Arithmos/distance/_distance.pyx":173
  *                                     d += (val2 - means[col1]) ** 2 + vars[col1]
  *                             elif npy_isnan(val2):
  *                                 d += (val1 - means[col2]) ** 2 + vars[col2]             # <<<<<<<<<<<<<<
@@ -5616,7 +5616,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                     __pyx_t_36 = __pyx_v_col2;
                     __pyx_v_d = (__pyx_v_d + (pow((__pyx_v_val1 - (*((double *) ( /* dim=0 */ (__pyx_v_means.data + __pyx_t_35 * __pyx_v_means.strides[0]) )))), 2.0) + (*((double *) ( /* dim=0 */ (__pyx_v_vars.data + __pyx_t_36 * __pyx_v_vars.strides[0]) )))));
 
-                    /* "Orange/distance/_distance.pyx":172
+                    /* "Arithmos/distance/_distance.pyx":172
  *                                 else:
  *                                     d += (val2 - means[col1]) ** 2 + vars[col1]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -5626,7 +5626,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":175
+                  /* "Arithmos/distance/_distance.pyx":175
  *                                 d += (val1 - means[col2]) ** 2 + vars[col2]
  *                             else:
  *                                 d += (val1 - val2) ** 2             # <<<<<<<<<<<<<<
@@ -5639,7 +5639,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":176
+                /* "Arithmos/distance/_distance.pyx":176
  *                             else:
  *                                 d += (val1 - val2) ** 2
  *                         distances[col1, col2] = distances[col2, col1] = d             # <<<<<<<<<<<<<<
@@ -5653,7 +5653,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
                 __pyx_t_40 = __pyx_v_col1;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_39, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_40, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":162
+                /* "Arithmos/distance/_distance.pyx":162
  *             with nogil:
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):             # <<<<<<<<<<<<<<
@@ -5664,7 +5664,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
             }
           }
 
-          /* "Orange/distance/_distance.pyx":160
+          /* "Arithmos/distance/_distance.pyx":160
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -5684,7 +5684,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
       }
     }
 
-    /* "Orange/distance/_distance.pyx":157
+    /* "Arithmos/distance/_distance.pyx":157
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -5694,7 +5694,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":145
+  /* "Arithmos/distance/_distance.pyx":145
  * 
  * 
  * def fix_euclidean_cols(             # <<<<<<<<<<<<<<
@@ -5718,7 +5718,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_distances.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5732,7 +5732,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":179
+/* "Arithmos/distance/_distance.pyx":179
  * 
  * 
  * def fix_euclidean_cols_normalized(             # <<<<<<<<<<<<<<
@@ -5741,10 +5741,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_8fix_euclidean_cols(CYTHO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_11fix_euclidean_cols_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_10fix_euclidean_cols_normalized[] = "fix_euclidean_cols_normalized(ndarray distances, ndarray x, double[:] means, double[:] vars, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_11fix_euclidean_cols_normalized = {"fix_euclidean_cols_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_11fix_euclidean_cols_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_10fix_euclidean_cols_normalized};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_11fix_euclidean_cols_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_11fix_euclidean_cols_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_10fix_euclidean_cols_normalized[] = "fix_euclidean_cols_normalized(ndarray distances, ndarray x, double[:] means, double[:] vars, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_11fix_euclidean_cols_normalized = {"fix_euclidean_cols_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_11fix_euclidean_cols_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_10fix_euclidean_cols_normalized};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_11fix_euclidean_cols_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x = 0;
   CYTHON_UNUSED __Pyx_memviewslice __pyx_v_means = { 0, 0, { 0 }, { 0 }, { 0 } };
@@ -5825,13 +5825,13 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_11fix_euclidean_cols_norm
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_euclidean_cols_normalized", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 179, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_cols_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_cols_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_distances), __pyx_ptype_5numpy_ndarray, 1, "distances", 0))) __PYX_ERR(0, 180, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 181, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x, __pyx_v_means, __pyx_v_vars, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_10fix_euclidean_cols_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x, __pyx_v_means, __pyx_v_vars, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5842,7 +5842,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_11fix_euclidean_cols_norm
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_means, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_10fix_euclidean_cols_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_means, CYTHON_UNUSED __Pyx_memviewslice __pyx_v_vars, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows;
   int __pyx_v_n_cols;
   int __pyx_v_col1;
@@ -5911,7 +5911,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
   }
   __pyx_pybuffernd_x.diminfo[0].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x.diminfo[0].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_x.diminfo[1].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_x.diminfo[1].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/distance/_distance.pyx":189
+  /* "Arithmos/distance/_distance.pyx":189
  *         double val1, val2, d
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]             # <<<<<<<<<<<<<<
@@ -5923,7 +5923,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
   __pyx_v_n_rows = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":190
+  /* "Arithmos/distance/_distance.pyx":190
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)             # <<<<<<<<<<<<<<
@@ -5939,7 +5939,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":191
+  /* "Arithmos/distance/_distance.pyx":191
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -6008,7 +6008,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_col_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":192
+    /* "Arithmos/distance/_distance.pyx":192
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)             # <<<<<<<<<<<<<<
@@ -6036,7 +6036,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":193
+    /* "Arithmos/distance/_distance.pyx":193
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):             # <<<<<<<<<<<<<<
@@ -6055,7 +6055,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
     for (__pyx_t_13 = __pyx_v_col_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_col1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":194
+      /* "Arithmos/distance/_distance.pyx":194
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -6070,7 +6070,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":195
+            /* "Arithmos/distance/_distance.pyx":195
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:
  *                 for col2 in range(col1):             # <<<<<<<<<<<<<<
@@ -6082,7 +6082,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_col2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":196
+              /* "Arithmos/distance/_distance.pyx":196
  *             with nogil:
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):             # <<<<<<<<<<<<<<
@@ -6094,7 +6094,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":197
+                /* "Arithmos/distance/_distance.pyx":197
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -6103,7 +6103,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":198
+                /* "Arithmos/distance/_distance.pyx":198
  *                     if npy_isnan(distances[col1, col2]):
  *                         d = 0
  *                         for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -6115,7 +6115,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_row = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":199
+                  /* "Arithmos/distance/_distance.pyx":199
  *                         d = 0
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]             # <<<<<<<<<<<<<<
@@ -6131,7 +6131,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":200
+                  /* "Arithmos/distance/_distance.pyx":200
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -6141,7 +6141,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":201
+                    /* "Arithmos/distance/_distance.pyx":201
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -6151,7 +6151,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":202
+                      /* "Arithmos/distance/_distance.pyx":202
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += 1             # <<<<<<<<<<<<<<
@@ -6160,7 +6160,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
  */
                       __pyx_v_d = (__pyx_v_d + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":201
+                      /* "Arithmos/distance/_distance.pyx":201
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -6170,7 +6170,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":204
+                    /* "Arithmos/distance/_distance.pyx":204
  *                                     d += 1
  *                                 else:
  *                                     d += val2 ** 2 + 0.5             # <<<<<<<<<<<<<<
@@ -6182,7 +6182,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":200
+                    /* "Arithmos/distance/_distance.pyx":200
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -6192,7 +6192,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":205
+                  /* "Arithmos/distance/_distance.pyx":205
  *                                 else:
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -6202,7 +6202,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":206
+                    /* "Arithmos/distance/_distance.pyx":206
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):
  *                                 d += val1 ** 2 + 0.5             # <<<<<<<<<<<<<<
@@ -6211,7 +6211,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
  */
                     __pyx_v_d = (__pyx_v_d + (pow(__pyx_v_val1, 2.0) + 0.5));
 
-                    /* "Orange/distance/_distance.pyx":205
+                    /* "Arithmos/distance/_distance.pyx":205
  *                                 else:
  *                                     d += val2 ** 2 + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -6221,7 +6221,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":208
+                  /* "Arithmos/distance/_distance.pyx":208
  *                                 d += val1 ** 2 + 0.5
  *                             else:
  *                                 d += (val1 - val2) ** 2             # <<<<<<<<<<<<<<
@@ -6234,7 +6234,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":209
+                /* "Arithmos/distance/_distance.pyx":209
  *                             else:
  *                                 d += (val1 - val2) ** 2
  *                         distances[col1, col2] = distances[col2, col1] = d             # <<<<<<<<<<<<<<
@@ -6248,7 +6248,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
                 __pyx_t_32 = __pyx_v_col1;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":196
+                /* "Arithmos/distance/_distance.pyx":196
  *             with nogil:
  *                 for col2 in range(col1):
  *                     if npy_isnan(distances[col1, col2]):             # <<<<<<<<<<<<<<
@@ -6259,7 +6259,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
             }
           }
 
-          /* "Orange/distance/_distance.pyx":194
+          /* "Arithmos/distance/_distance.pyx":194
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -6279,7 +6279,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
       }
     }
 
-    /* "Orange/distance/_distance.pyx":191
+    /* "Arithmos/distance/_distance.pyx":191
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -6289,7 +6289,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":179
+  /* "Arithmos/distance/_distance.pyx":179
  * 
  * 
  * def fix_euclidean_cols_normalized(             # <<<<<<<<<<<<<<
@@ -6313,7 +6313,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_distances.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_euclidean_cols_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_euclidean_cols_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6327,7 +6327,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":212
+/* "Arithmos/distance/_distance.pyx":212
  * 
  * 
  * def manhattan_rows_cont(np.ndarray[np.float64_t, ndim=2] x1,             # <<<<<<<<<<<<<<
@@ -6336,10 +6336,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_10fix_euclidean_cols_norm
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_13manhattan_rows_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_12manhattan_rows_cont[] = "manhattan_rows_cont(ndarray x1, ndarray x2, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_13manhattan_rows_cont = {"manhattan_rows_cont", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_13manhattan_rows_cont, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_12manhattan_rows_cont};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_13manhattan_rows_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_13manhattan_rows_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_12manhattan_rows_cont[] = "manhattan_rows_cont(ndarray x1, ndarray x2, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_13manhattan_rows_cont = {"manhattan_rows_cont", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_13manhattan_rows_cont, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_12manhattan_rows_cont};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_13manhattan_rows_cont(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
   char __pyx_v_two_tables;
@@ -6409,13 +6409,13 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_13manhattan_rows_cont(PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("manhattan_rows_cont", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 212, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.manhattan_rows_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.manhattan_rows_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x1), __pyx_ptype_5numpy_ndarray, 1, "x1", 0))) __PYX_ERR(0, 212, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x2), __pyx_ptype_5numpy_ndarray, 1, "x2", 0))) __PYX_ERR(0, 213, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(__pyx_self, __pyx_v_x1, __pyx_v_x2, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_12manhattan_rows_cont(__pyx_self, __pyx_v_x1, __pyx_v_x2, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6426,7 +6426,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_13manhattan_rows_cont(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_12manhattan_rows_cont(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -6498,7 +6498,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   }
   __pyx_pybuffernd_x2.diminfo[0].strides = __pyx_pybuffernd_x2.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x2.diminfo[0].shape = __pyx_pybuffernd_x2.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_x2.diminfo[1].strides = __pyx_pybuffernd_x2.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_x2.diminfo[1].shape = __pyx_pybuffernd_x2.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/distance/_distance.pyx":221
+  /* "Arithmos/distance/_distance.pyx":221
  *         np.ndarray[np.float64_t, ndim=2] distances
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -6510,7 +6510,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":222
+  /* "Arithmos/distance/_distance.pyx":222
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]             # <<<<<<<<<<<<<<
@@ -6519,7 +6519,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
  */
   __pyx_v_n_rows2 = (__pyx_v_x2->dimensions[0]);
 
-  /* "Orange/distance/_distance.pyx":223
+  /* "Arithmos/distance/_distance.pyx":223
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0]
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)             # <<<<<<<<<<<<<<
@@ -6579,7 +6579,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   __pyx_v_distances = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "Orange/distance/_distance.pyx":224
+  /* "Arithmos/distance/_distance.pyx":224
  *     n_rows2 = x2.shape[0]
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -6595,7 +6595,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   }
   __pyx_v_step = __pyx_t_14;
 
-  /* "Orange/distance/_distance.pyx":225
+  /* "Arithmos/distance/_distance.pyx":225
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -6664,7 +6664,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_row_start = __pyx_t_14;
 
-    /* "Orange/distance/_distance.pyx":226
+    /* "Arithmos/distance/_distance.pyx":226
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -6692,7 +6692,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "Orange/distance/_distance.pyx":227
+    /* "Arithmos/distance/_distance.pyx":227
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -6711,7 +6711,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
     for (__pyx_t_8 = __pyx_v_row_start; __pyx_t_8 < __pyx_t_12; __pyx_t_8+=1) {
       __pyx_v_row1 = __pyx_t_8;
 
-      /* "Orange/distance/_distance.pyx":228
+      /* "Arithmos/distance/_distance.pyx":228
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -6726,7 +6726,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":229
+            /* "Arithmos/distance/_distance.pyx":229
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -6742,7 +6742,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
             for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
               __pyx_v_row2 = __pyx_t_20;
 
-              /* "Orange/distance/_distance.pyx":230
+              /* "Arithmos/distance/_distance.pyx":230
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     d = 0             # <<<<<<<<<<<<<<
@@ -6751,7 +6751,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
  */
               __pyx_v_d = 0.0;
 
-              /* "Orange/distance/_distance.pyx":231
+              /* "Arithmos/distance/_distance.pyx":231
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     d = 0
  *                     for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -6763,7 +6763,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
               for (__pyx_t_23 = 0; __pyx_t_23 < __pyx_t_22; __pyx_t_23+=1) {
                 __pyx_v_col = __pyx_t_23;
 
-                /* "Orange/distance/_distance.pyx":232
+                /* "Arithmos/distance/_distance.pyx":232
  *                     d = 0
  *                     for col in range(n_cols):
  *                         d += fabs(x1[row1, col] - x2[row2, col])             # <<<<<<<<<<<<<<
@@ -6777,7 +6777,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
                 __pyx_v_d = (__pyx_v_d + fabs(((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x1.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_x1.diminfo[0].strides, __pyx_t_25, __pyx_pybuffernd_x1.diminfo[1].strides)) - (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x2.rcbuffer->pybuffer.buf, __pyx_t_26, __pyx_pybuffernd_x2.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_x2.diminfo[1].strides)))));
               }
 
-              /* "Orange/distance/_distance.pyx":233
+              /* "Arithmos/distance/_distance.pyx":233
  *                     for col in range(n_cols):
  *                         d += fabs(x1[row1, col] - x2[row2, col])
  *                     distances[row1, row2] = d             # <<<<<<<<<<<<<<
@@ -6790,7 +6790,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
             }
           }
 
-          /* "Orange/distance/_distance.pyx":228
+          /* "Arithmos/distance/_distance.pyx":228
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -6810,7 +6810,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
       }
     }
 
-    /* "Orange/distance/_distance.pyx":225
+    /* "Arithmos/distance/_distance.pyx":225
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -6820,7 +6820,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "Orange/distance/_distance.pyx":234
+  /* "Arithmos/distance/_distance.pyx":234
  *                         d += fabs(x1[row1, col] - x2[row2, col])
  *                     distances[row1, row2] = d
  *     return distances             # <<<<<<<<<<<<<<
@@ -6832,7 +6832,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   __pyx_r = ((PyObject *)__pyx_v_distances);
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":212
+  /* "Arithmos/distance/_distance.pyx":212
  * 
  * 
  * def manhattan_rows_cont(np.ndarray[np.float64_t, ndim=2] x1,             # <<<<<<<<<<<<<<
@@ -6855,7 +6855,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.manhattan_rows_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.manhattan_rows_cont", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6869,7 +6869,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":236
+/* "Arithmos/distance/_distance.pyx":236
  *     return distances
  * 
  * def fix_manhattan_rows(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -6878,10 +6878,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_12manhattan_rows_cont(CYT
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_14fix_manhattan_rows[] = "fix_manhattan_rows(ndarray distances, ndarray x1, ndarray x2, ndarray medians, ndarray mads, ndarray dist_missing2_cont, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_15fix_manhattan_rows = {"fix_manhattan_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_14fix_manhattan_rows};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_15fix_manhattan_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_14fix_manhattan_rows[] = "fix_manhattan_rows(ndarray distances, ndarray x1, ndarray x2, ndarray medians, ndarray mads, ndarray dist_missing2_cont, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_15fix_manhattan_rows = {"fix_manhattan_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_15fix_manhattan_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_14fix_manhattan_rows};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_15fix_manhattan_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
@@ -6995,7 +6995,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows(PyOb
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_manhattan_rows", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 236, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_manhattan_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_manhattan_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -7005,7 +7005,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows(PyOb
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_medians), __pyx_ptype_5numpy_ndarray, 1, "medians", 0))) __PYX_ERR(0, 239, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mads), __pyx_ptype_5numpy_ndarray, 1, "mads", 0))) __PYX_ERR(0, 240, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dist_missing2_cont), __pyx_ptype_5numpy_ndarray, 1, "dist_missing2_cont", 0))) __PYX_ERR(0, 241, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_medians, __pyx_v_mads, __pyx_v_dist_missing2_cont, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_14fix_manhattan_rows(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_medians, __pyx_v_mads, __pyx_v_dist_missing2_cont, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7016,7 +7016,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_15fix_manhattan_rows(PyOb
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, PyArrayObject *__pyx_v_dist_missing2_cont, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_14fix_manhattan_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, PyArrayObject *__pyx_v_dist_missing2_cont, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -7133,7 +7133,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   }
   __pyx_pybuffernd_dist_missing2_cont.diminfo[0].strides = __pyx_pybuffernd_dist_missing2_cont.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist_missing2_cont.diminfo[0].shape = __pyx_pybuffernd_dist_missing2_cont.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":248
+  /* "Arithmos/distance/_distance.pyx":248
  *         double val1, val2, d
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -7145,7 +7145,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":249
+  /* "Arithmos/distance/_distance.pyx":249
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0] if two_tables else 0             # <<<<<<<<<<<<<<
@@ -7159,7 +7159,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   }
   __pyx_v_n_rows2 = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":250
+  /* "Arithmos/distance/_distance.pyx":250
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -7175,7 +7175,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":251
+  /* "Arithmos/distance/_distance.pyx":251
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -7244,7 +7244,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_row_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":252
+    /* "Arithmos/distance/_distance.pyx":252
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -7272,7 +7272,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":253
+    /* "Arithmos/distance/_distance.pyx":253
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -7291,7 +7291,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
     for (__pyx_t_13 = __pyx_v_row_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_row1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":254
+      /* "Arithmos/distance/_distance.pyx":254
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -7306,7 +7306,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":255
+            /* "Arithmos/distance/_distance.pyx":255
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -7322,7 +7322,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_row2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":256
+              /* "Arithmos/distance/_distance.pyx":256
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -7334,7 +7334,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":257
+                /* "Arithmos/distance/_distance.pyx":257
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -7343,7 +7343,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":258
+                /* "Arithmos/distance/_distance.pyx":258
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0
  *                         for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -7355,7 +7355,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_col = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":259
+                  /* "Arithmos/distance/_distance.pyx":259
  *                         d = 0
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -7371,7 +7371,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":260
+                  /* "Arithmos/distance/_distance.pyx":260
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -7381,7 +7381,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":261
+                    /* "Arithmos/distance/_distance.pyx":261
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -7391,7 +7391,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":262
+                      /* "Arithmos/distance/_distance.pyx":262
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += dist_missing2_cont[col]             # <<<<<<<<<<<<<<
@@ -7401,7 +7401,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                       __pyx_t_29 = __pyx_v_col;
                       __pyx_v_d = (__pyx_v_d + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_dist_missing2_cont.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_dist_missing2_cont.diminfo[0].strides)));
 
-                      /* "Orange/distance/_distance.pyx":261
+                      /* "Arithmos/distance/_distance.pyx":261
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -7411,7 +7411,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":264
+                    /* "Arithmos/distance/_distance.pyx":264
  *                                     d += dist_missing2_cont[col]
  *                                 else:
  *                                     d += fabs(val2 - medians[col]) + mads[col]             # <<<<<<<<<<<<<<
@@ -7425,7 +7425,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":260
+                    /* "Arithmos/distance/_distance.pyx":260
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -7435,7 +7435,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":265
+                  /* "Arithmos/distance/_distance.pyx":265
  *                                 else:
  *                                     d += fabs(val2 - medians[col]) + mads[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -7445,7 +7445,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":266
+                    /* "Arithmos/distance/_distance.pyx":266
  *                                     d += fabs(val2 - medians[col]) + mads[col]
  *                             elif npy_isnan(val2):
  *                                 d += fabs(val1 - medians[col]) + mads[col]             # <<<<<<<<<<<<<<
@@ -7456,7 +7456,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                     __pyx_t_33 = __pyx_v_col;
                     __pyx_v_d = (__pyx_v_d + (fabs((__pyx_v_val1 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_medians.rcbuffer->pybuffer.buf, __pyx_t_32, __pyx_pybuffernd_medians.diminfo[0].strides)))) + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_mads.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_mads.diminfo[0].strides))));
 
-                    /* "Orange/distance/_distance.pyx":265
+                    /* "Arithmos/distance/_distance.pyx":265
  *                                 else:
  *                                     d += fabs(val2 - medians[col]) + mads[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -7466,7 +7466,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":268
+                  /* "Arithmos/distance/_distance.pyx":268
  *                                 d += fabs(val1 - medians[col]) + mads[col]
  *                             else:
  *                                 d += fabs(val1 - val2)             # <<<<<<<<<<<<<<
@@ -7479,7 +7479,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":269
+                /* "Arithmos/distance/_distance.pyx":269
  *                             else:
  *                                 d += fabs(val1 - val2)
  *                         distances[row1, row2] = d             # <<<<<<<<<<<<<<
@@ -7490,7 +7490,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
                 __pyx_t_35 = __pyx_v_row2;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_34, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_35, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":256
+                /* "Arithmos/distance/_distance.pyx":256
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -7501,7 +7501,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
             }
           }
 
-          /* "Orange/distance/_distance.pyx":254
+          /* "Arithmos/distance/_distance.pyx":254
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -7521,7 +7521,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
       }
     }
 
-    /* "Orange/distance/_distance.pyx":251
+    /* "Arithmos/distance/_distance.pyx":251
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -7531,7 +7531,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":270
+  /* "Arithmos/distance/_distance.pyx":270
  *                                 d += fabs(val1 - val2)
  *                         distances[row1, row2] = d
  *     return distances             # <<<<<<<<<<<<<<
@@ -7543,7 +7543,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   __pyx_r = ((PyObject *)__pyx_v_distances);
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":236
+  /* "Arithmos/distance/_distance.pyx":236
  *     return distances
  * 
  * def fix_manhattan_rows(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -7569,7 +7569,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_manhattan_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_manhattan_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7585,7 +7585,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":273
+/* "Arithmos/distance/_distance.pyx":273
  * 
  * 
  * def fix_manhattan_rows_normalized(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -7594,10 +7594,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_14fix_manhattan_rows(CYTH
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_17fix_manhattan_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_16fix_manhattan_rows_normalized[] = "fix_manhattan_rows_normalized(ndarray distances, ndarray x1, ndarray x2, char two_tables, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_17fix_manhattan_rows_normalized = {"fix_manhattan_rows_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_17fix_manhattan_rows_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_16fix_manhattan_rows_normalized};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_17fix_manhattan_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_17fix_manhattan_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_16fix_manhattan_rows_normalized[] = "fix_manhattan_rows_normalized(ndarray distances, ndarray x1, ndarray x2, char two_tables, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_17fix_manhattan_rows_normalized = {"fix_manhattan_rows_normalized", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_17fix_manhattan_rows_normalized, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_16fix_manhattan_rows_normalized};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_17fix_manhattan_rows_normalized(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_distances = 0;
   PyArrayObject *__pyx_v_x1 = 0;
   PyArrayObject *__pyx_v_x2 = 0;
@@ -7678,14 +7678,14 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_17fix_manhattan_rows_norm
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fix_manhattan_rows_normalized", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 273, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.fix_manhattan_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_manhattan_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_distances), __pyx_ptype_5numpy_ndarray, 1, "distances", 0))) __PYX_ERR(0, 273, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x1), __pyx_ptype_5numpy_ndarray, 1, "x1", 0))) __PYX_ERR(0, 274, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x2), __pyx_ptype_5numpy_ndarray, 1, "x2", 0))) __PYX_ERR(0, 275, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_two_tables, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_16fix_manhattan_rows_normalized(__pyx_self, __pyx_v_distances, __pyx_v_x1, __pyx_v_x2, __pyx_v_two_tables, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7696,7 +7696,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_17fix_manhattan_rows_norm
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_16fix_manhattan_rows_normalized(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_distances, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, char __pyx_v_two_tables, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -7775,7 +7775,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   }
   __pyx_pybuffernd_x2.diminfo[0].strides = __pyx_pybuffernd_x2.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x2.diminfo[0].shape = __pyx_pybuffernd_x2.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_x2.diminfo[1].strides = __pyx_pybuffernd_x2.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_x2.diminfo[1].shape = __pyx_pybuffernd_x2.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/distance/_distance.pyx":282
+  /* "Arithmos/distance/_distance.pyx":282
  *         double val1, val2, d
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]             # <<<<<<<<<<<<<<
@@ -7787,7 +7787,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":283
+  /* "Arithmos/distance/_distance.pyx":283
  * 
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0] if two_tables else 0             # <<<<<<<<<<<<<<
@@ -7801,7 +7801,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   }
   __pyx_v_n_rows2 = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":284
+  /* "Arithmos/distance/_distance.pyx":284
  *     n_rows1, n_cols = x1.shape[0], x1.shape[1]
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -7817,7 +7817,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":285
+  /* "Arithmos/distance/_distance.pyx":285
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -7886,7 +7886,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_row_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":286
+    /* "Arithmos/distance/_distance.pyx":286
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -7914,7 +7914,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "Orange/distance/_distance.pyx":287
+    /* "Arithmos/distance/_distance.pyx":287
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -7933,7 +7933,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
     for (__pyx_t_13 = __pyx_v_row_start; __pyx_t_13 < __pyx_t_3; __pyx_t_13+=1) {
       __pyx_v_row1 = __pyx_t_13;
 
-      /* "Orange/distance/_distance.pyx":288
+      /* "Arithmos/distance/_distance.pyx":288
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -7948,7 +7948,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":289
+            /* "Arithmos/distance/_distance.pyx":289
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -7964,7 +7964,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
             for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
               __pyx_v_row2 = __pyx_t_16;
 
-              /* "Orange/distance/_distance.pyx":290
+              /* "Arithmos/distance/_distance.pyx":290
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -7976,7 +7976,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
               __pyx_t_19 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_distances.diminfo[1].strides))) != 0);
               if (__pyx_t_19) {
 
-                /* "Orange/distance/_distance.pyx":291
+                /* "Arithmos/distance/_distance.pyx":291
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0             # <<<<<<<<<<<<<<
@@ -7985,7 +7985,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
  */
                 __pyx_v_d = 0.0;
 
-                /* "Orange/distance/_distance.pyx":292
+                /* "Arithmos/distance/_distance.pyx":292
  *                     if npy_isnan(distances[row1, row2]):
  *                         d = 0
  *                         for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -7997,7 +7997,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_col = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":293
+                  /* "Arithmos/distance/_distance.pyx":293
  *                         d = 0
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -8013,7 +8013,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":294
+                  /* "Arithmos/distance/_distance.pyx":294
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -8023,7 +8023,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                   __pyx_t_19 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":295
+                    /* "Arithmos/distance/_distance.pyx":295
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8033,7 +8033,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                     __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_19) {
 
-                      /* "Orange/distance/_distance.pyx":296
+                      /* "Arithmos/distance/_distance.pyx":296
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     d += 1             # <<<<<<<<<<<<<<
@@ -8042,7 +8042,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
  */
                       __pyx_v_d = (__pyx_v_d + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":295
+                      /* "Arithmos/distance/_distance.pyx":295
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8052,7 +8052,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":298
+                    /* "Arithmos/distance/_distance.pyx":298
  *                                     d += 1
  *                                 else:
  *                                     d += fabs(val2) + 0.5             # <<<<<<<<<<<<<<
@@ -8064,7 +8064,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":294
+                    /* "Arithmos/distance/_distance.pyx":294
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -8074,7 +8074,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":299
+                  /* "Arithmos/distance/_distance.pyx":299
  *                                 else:
  *                                     d += fabs(val2) + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8084,7 +8084,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                   __pyx_t_19 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_19) {
 
-                    /* "Orange/distance/_distance.pyx":300
+                    /* "Arithmos/distance/_distance.pyx":300
  *                                     d += fabs(val2) + 0.5
  *                             elif npy_isnan(val2):
  *                                 d += fabs(val1) + 0.5             # <<<<<<<<<<<<<<
@@ -8093,7 +8093,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
  */
                     __pyx_v_d = (__pyx_v_d + (fabs(__pyx_v_val1) + 0.5));
 
-                    /* "Orange/distance/_distance.pyx":299
+                    /* "Arithmos/distance/_distance.pyx":299
  *                                 else:
  *                                     d += fabs(val2) + 0.5
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8103,7 +8103,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":302
+                  /* "Arithmos/distance/_distance.pyx":302
  *                                 d += fabs(val1) + 0.5
  *                             else:
  *                                 d += fabs(val1 - val2)             # <<<<<<<<<<<<<<
@@ -8116,7 +8116,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":303
+                /* "Arithmos/distance/_distance.pyx":303
  *                             else:
  *                                 d += fabs(val1 - val2)
  *                         distances[row1, row2] = d             # <<<<<<<<<<<<<<
@@ -8127,7 +8127,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
                 __pyx_t_30 = __pyx_v_row2;
                 *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_distances.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_distances.diminfo[0].strides, __pyx_t_30, __pyx_pybuffernd_distances.diminfo[1].strides) = __pyx_v_d;
 
-                /* "Orange/distance/_distance.pyx":290
+                /* "Arithmos/distance/_distance.pyx":290
  *             with nogil:
  *                 for row2 in range(n_rows2 if two_tables else row1):
  *                     if npy_isnan(distances[row1, row2]):             # <<<<<<<<<<<<<<
@@ -8138,7 +8138,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
             }
           }
 
-          /* "Orange/distance/_distance.pyx":288
+          /* "Arithmos/distance/_distance.pyx":288
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -8158,7 +8158,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
       }
     }
 
-    /* "Orange/distance/_distance.pyx":285
+    /* "Arithmos/distance/_distance.pyx":285
  *     n_rows2 = x2.shape[0] if two_tables else 0
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -8168,7 +8168,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":304
+  /* "Arithmos/distance/_distance.pyx":304
  *                                 d += fabs(val1 - val2)
  *                         distances[row1, row2] = d
  *     return distances             # <<<<<<<<<<<<<<
@@ -8180,7 +8180,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   __pyx_r = ((PyObject *)__pyx_v_distances);
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":273
+  /* "Arithmos/distance/_distance.pyx":273
  * 
  * 
  * def fix_manhattan_rows_normalized(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -8203,7 +8203,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.fix_manhattan_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.fix_manhattan_rows_normalized", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8216,7 +8216,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":307
+/* "Arithmos/distance/_distance.pyx":307
  * 
  * 
  * def manhattan_cols(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -8225,10 +8225,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_16fix_manhattan_rows_norm
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_19manhattan_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_18manhattan_cols[] = "manhattan_cols(ndarray x, ndarray medians, ndarray mads, char normalize, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_19manhattan_cols = {"manhattan_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_19manhattan_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_18manhattan_cols};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_19manhattan_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_19manhattan_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_18manhattan_cols[] = "manhattan_cols(ndarray x, ndarray medians, ndarray mads, char normalize, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_19manhattan_cols = {"manhattan_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_19manhattan_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_18manhattan_cols};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_19manhattan_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_x = 0;
   PyArrayObject *__pyx_v_medians = 0;
   PyArrayObject *__pyx_v_mads = 0;
@@ -8309,14 +8309,14 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_19manhattan_cols(PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("manhattan_cols", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 307, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.manhattan_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.manhattan_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 307, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_medians), __pyx_ptype_5numpy_ndarray, 1, "medians", 0))) __PYX_ERR(0, 308, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_mads), __pyx_ptype_5numpy_ndarray, 1, "mads", 0))) __PYX_ERR(0, 309, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(__pyx_self, __pyx_v_x, __pyx_v_medians, __pyx_v_mads, __pyx_v_normalize, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_18manhattan_cols(__pyx_self, __pyx_v_x, __pyx_v_medians, __pyx_v_mads, __pyx_v_normalize, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -8327,7 +8327,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_19manhattan_cols(PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, char __pyx_v_normalize, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_18manhattan_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_medians, PyArrayObject *__pyx_v_mads, char __pyx_v_normalize, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows;
   int __pyx_v_n_cols;
   int __pyx_v_col1;
@@ -8415,7 +8415,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   }
   __pyx_pybuffernd_mads.diminfo[0].strides = __pyx_pybuffernd_mads.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_mads.diminfo[0].shape = __pyx_pybuffernd_mads.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":317
+  /* "Arithmos/distance/_distance.pyx":317
  *         double [:, :] distances
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]             # <<<<<<<<<<<<<<
@@ -8427,7 +8427,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   __pyx_v_n_rows = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":318
+  /* "Arithmos/distance/_distance.pyx":318
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)             # <<<<<<<<<<<<<<
@@ -8443,7 +8443,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   }
   __pyx_v_step = __pyx_t_5;
 
-  /* "Orange/distance/_distance.pyx":319
+  /* "Arithmos/distance/_distance.pyx":319
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     step = max(n_cols // 100, 100)
  *     distances = np.zeros((n_cols, n_cols), dtype=float)             # <<<<<<<<<<<<<<
@@ -8486,7 +8486,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "Orange/distance/_distance.pyx":320
+  /* "Arithmos/distance/_distance.pyx":320
  *     step = max(n_cols // 100, 100)
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -8555,7 +8555,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_v_col_start = __pyx_t_5;
 
-    /* "Orange/distance/_distance.pyx":321
+    /* "Arithmos/distance/_distance.pyx":321
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)             # <<<<<<<<<<<<<<
@@ -8583,7 +8583,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "Orange/distance/_distance.pyx":322
+    /* "Arithmos/distance/_distance.pyx":322
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):             # <<<<<<<<<<<<<<
@@ -8602,7 +8602,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
     for (__pyx_t_14 = __pyx_v_col_start; __pyx_t_14 < __pyx_t_3; __pyx_t_14+=1) {
       __pyx_v_col1 = __pyx_t_14;
 
-      /* "Orange/distance/_distance.pyx":323
+      /* "Arithmos/distance/_distance.pyx":323
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -8617,7 +8617,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":324
+            /* "Arithmos/distance/_distance.pyx":324
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:
  *                 for col2 in range(col1):             # <<<<<<<<<<<<<<
@@ -8629,7 +8629,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
             for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
               __pyx_v_col2 = __pyx_t_17;
 
-              /* "Orange/distance/_distance.pyx":325
+              /* "Arithmos/distance/_distance.pyx":325
  *             with nogil:
  *                 for col2 in range(col1):
  *                     d = 0             # <<<<<<<<<<<<<<
@@ -8638,7 +8638,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
  */
               __pyx_v_d = 0.0;
 
-              /* "Orange/distance/_distance.pyx":326
+              /* "Arithmos/distance/_distance.pyx":326
  *                 for col2 in range(col1):
  *                     d = 0
  *                     for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -8650,7 +8650,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
               for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
                 __pyx_v_row = __pyx_t_20;
 
-                /* "Orange/distance/_distance.pyx":327
+                /* "Arithmos/distance/_distance.pyx":327
  *                     d = 0
  *                     for row in range(n_rows):
  *                         val1, val2 = x[row, col1], x[row, col2]             # <<<<<<<<<<<<<<
@@ -8666,7 +8666,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                 __pyx_v_val1 = __pyx_t_23;
                 __pyx_v_val2 = __pyx_t_26;
 
-                /* "Orange/distance/_distance.pyx":328
+                /* "Arithmos/distance/_distance.pyx":328
  *                     for row in range(n_rows):
  *                         val1, val2 = x[row, col1], x[row, col2]
  *                         if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -8676,7 +8676,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                 __pyx_t_27 = (npy_isnan(__pyx_v_val1) != 0);
                 if (__pyx_t_27) {
 
-                  /* "Orange/distance/_distance.pyx":329
+                  /* "Arithmos/distance/_distance.pyx":329
  *                         val1, val2 = x[row, col1], x[row, col2]
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8686,7 +8686,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                   __pyx_t_27 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_27) {
 
-                    /* "Orange/distance/_distance.pyx":330
+                    /* "Arithmos/distance/_distance.pyx":330
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8696,7 +8696,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     __pyx_t_27 = (__pyx_v_normalize != 0);
                     if (__pyx_t_27) {
 
-                      /* "Orange/distance/_distance.pyx":331
+                      /* "Arithmos/distance/_distance.pyx":331
  *                             if npy_isnan(val2):
  *                                 if normalize:
  *                                     d += 1             # <<<<<<<<<<<<<<
@@ -8705,7 +8705,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
  */
                       __pyx_v_d = (__pyx_v_d + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":330
+                      /* "Arithmos/distance/_distance.pyx":330
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8715,7 +8715,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":333
+                    /* "Arithmos/distance/_distance.pyx":333
  *                                     d += 1
  *                                 else:
  *                                     d += mads[col1] + mads[col2] \             # <<<<<<<<<<<<<<
@@ -8726,7 +8726,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                       __pyx_t_28 = __pyx_v_col1;
                       __pyx_t_29 = __pyx_v_col2;
 
-                      /* "Orange/distance/_distance.pyx":334
+                      /* "Arithmos/distance/_distance.pyx":334
  *                                 else:
  *                                     d += mads[col1] + mads[col2] \
  *                                         + fabs(medians[col1] - medians[col2])             # <<<<<<<<<<<<<<
@@ -8736,7 +8736,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                       __pyx_t_30 = __pyx_v_col1;
                       __pyx_t_31 = __pyx_v_col2;
 
-                      /* "Orange/distance/_distance.pyx":333
+                      /* "Arithmos/distance/_distance.pyx":333
  *                                     d += 1
  *                                 else:
  *                                     d += mads[col1] + mads[col2] \             # <<<<<<<<<<<<<<
@@ -8747,7 +8747,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":329
+                    /* "Arithmos/distance/_distance.pyx":329
  *                         val1, val2 = x[row, col1], x[row, col2]
  *                         if npy_isnan(val1):
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8757,7 +8757,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":336
+                  /* "Arithmos/distance/_distance.pyx":336
  *                                         + fabs(medians[col1] - medians[col2])
  *                             else:
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8768,7 +8768,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     __pyx_t_27 = (__pyx_v_normalize != 0);
                     if (__pyx_t_27) {
 
-                      /* "Orange/distance/_distance.pyx":337
+                      /* "Arithmos/distance/_distance.pyx":337
  *                             else:
  *                                 if normalize:
  *                                     d += fabs(val2) + 0.5             # <<<<<<<<<<<<<<
@@ -8777,7 +8777,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
  */
                       __pyx_v_d = (__pyx_v_d + (fabs(__pyx_v_val2) + 0.5));
 
-                      /* "Orange/distance/_distance.pyx":336
+                      /* "Arithmos/distance/_distance.pyx":336
  *                                         + fabs(medians[col1] - medians[col2])
  *                             else:
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8787,7 +8787,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                       goto __pyx_L19;
                     }
 
-                    /* "Orange/distance/_distance.pyx":339
+                    /* "Arithmos/distance/_distance.pyx":339
  *                                     d += fabs(val2) + 0.5
  *                                 else:
  *                                     d += fabs(val2 - medians[col1]) + mads[col1]             # <<<<<<<<<<<<<<
@@ -8803,7 +8803,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                   }
                   __pyx_L17:;
 
-                  /* "Orange/distance/_distance.pyx":328
+                  /* "Arithmos/distance/_distance.pyx":328
  *                     for row in range(n_rows):
  *                         val1, val2 = x[row, col1], x[row, col2]
  *                         if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -8813,7 +8813,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                   goto __pyx_L16;
                 }
 
-                /* "Orange/distance/_distance.pyx":341
+                /* "Arithmos/distance/_distance.pyx":341
  *                                     d += fabs(val2 - medians[col1]) + mads[col1]
  *                         else:
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8824,7 +8824,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                   __pyx_t_27 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_27) {
 
-                    /* "Orange/distance/_distance.pyx":342
+                    /* "Arithmos/distance/_distance.pyx":342
  *                         else:
  *                             if npy_isnan(val2):
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8834,7 +8834,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     __pyx_t_27 = (__pyx_v_normalize != 0);
                     if (__pyx_t_27) {
 
-                      /* "Orange/distance/_distance.pyx":343
+                      /* "Arithmos/distance/_distance.pyx":343
  *                             if npy_isnan(val2):
  *                                 if normalize:
  *                                     d += fabs(val1) + 0.5             # <<<<<<<<<<<<<<
@@ -8843,7 +8843,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
  */
                       __pyx_v_d = (__pyx_v_d + (fabs(__pyx_v_val1) + 0.5));
 
-                      /* "Orange/distance/_distance.pyx":342
+                      /* "Arithmos/distance/_distance.pyx":342
  *                         else:
  *                             if npy_isnan(val2):
  *                                 if normalize:             # <<<<<<<<<<<<<<
@@ -8853,7 +8853,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                       goto __pyx_L21;
                     }
 
-                    /* "Orange/distance/_distance.pyx":345
+                    /* "Arithmos/distance/_distance.pyx":345
  *                                     d += fabs(val1) + 0.5
  *                                 else:
  *                                     d += fabs(val1 - medians[col2]) + mads[col2]             # <<<<<<<<<<<<<<
@@ -8867,7 +8867,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     }
                     __pyx_L21:;
 
-                    /* "Orange/distance/_distance.pyx":341
+                    /* "Arithmos/distance/_distance.pyx":341
  *                                     d += fabs(val2 - medians[col1]) + mads[col1]
  *                         else:
  *                             if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -8877,7 +8877,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                     goto __pyx_L20;
                   }
 
-                  /* "Orange/distance/_distance.pyx":347
+                  /* "Arithmos/distance/_distance.pyx":347
  *                                     d += fabs(val1 - medians[col2]) + mads[col2]
  *                             else:
  *                                 d += fabs(val1 - val2)             # <<<<<<<<<<<<<<
@@ -8892,7 +8892,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
                 __pyx_L16:;
               }
 
-              /* "Orange/distance/_distance.pyx":348
+              /* "Arithmos/distance/_distance.pyx":348
  *                             else:
  *                                 d += fabs(val1 - val2)
  *                     distances[col1, col2] = distances[col2, col1] = d             # <<<<<<<<<<<<<<
@@ -8908,7 +8908,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
             }
           }
 
-          /* "Orange/distance/_distance.pyx":323
+          /* "Arithmos/distance/_distance.pyx":323
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -8928,7 +8928,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
       }
     }
 
-    /* "Orange/distance/_distance.pyx":320
+    /* "Arithmos/distance/_distance.pyx":320
  *     step = max(n_cols // 100, 100)
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -8938,7 +8938,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   }
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "Orange/distance/_distance.pyx":349
+  /* "Arithmos/distance/_distance.pyx":349
  *                                 d += fabs(val1 - val2)
  *                     distances[col1, col2] = distances[col2, col1] = d
  *     return distances             # <<<<<<<<<<<<<<
@@ -8952,7 +8952,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   __pyx_t_8 = 0;
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":307
+  /* "Arithmos/distance/_distance.pyx":307
  * 
  * 
  * def manhattan_cols(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -8976,7 +8976,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_medians.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.manhattan_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.manhattan_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8990,7 +8990,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":352
+/* "Arithmos/distance/_distance.pyx":352
  * 
  * 
  * def p_nonzero(np.ndarray[np.float64_t, ndim=1] x):             # <<<<<<<<<<<<<<
@@ -8999,15 +8999,15 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_18manhattan_cols(CYTHON_U
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_21p_nonzero(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_20p_nonzero[] = "p_nonzero(ndarray x)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_21p_nonzero = {"p_nonzero", (PyCFunction)__pyx_pw_6Orange_8distance_9_distance_21p_nonzero, METH_O, __pyx_doc_6Orange_8distance_9_distance_20p_nonzero};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_21p_nonzero(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_21p_nonzero(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_20p_nonzero[] = "p_nonzero(ndarray x)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_21p_nonzero = {"p_nonzero", (PyCFunction)__pyx_pw_6Arithmos_8distance_9_distance_21p_nonzero, METH_O, __pyx_doc_6Arithmos_8distance_9_distance_20p_nonzero};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_21p_nonzero(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("p_nonzero (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 352, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_20p_nonzero(__pyx_self, ((PyArrayObject *)__pyx_v_x));
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_20p_nonzero(__pyx_self, ((PyArrayObject *)__pyx_v_x));
 
   /* function exit code */
   goto __pyx_L0;
@@ -9018,7 +9018,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_21p_nonzero(PyObject *__p
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_20p_nonzero(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x) {
   int __pyx_v_row;
   int __pyx_v_nonzeros;
   int __pyx_v_nonnans;
@@ -9044,7 +9044,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
   }
   __pyx_pybuffernd_x.diminfo[0].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x.diminfo[0].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":357
+  /* "Arithmos/distance/_distance.pyx":357
  *         double val
  * 
  *     nonzeros = nonnans = 0             # <<<<<<<<<<<<<<
@@ -9054,7 +9054,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
   __pyx_v_nonzeros = 0;
   __pyx_v_nonnans = 0;
 
-  /* "Orange/distance/_distance.pyx":358
+  /* "Arithmos/distance/_distance.pyx":358
  * 
  *     nonzeros = nonnans = 0
  *     for row in range(len(x)):             # <<<<<<<<<<<<<<
@@ -9066,7 +9066,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_row = __pyx_t_3;
 
-    /* "Orange/distance/_distance.pyx":359
+    /* "Arithmos/distance/_distance.pyx":359
  *     nonzeros = nonnans = 0
  *     for row in range(len(x)):
  *         val = x[row]             # <<<<<<<<<<<<<<
@@ -9076,7 +9076,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
     __pyx_t_4 = __pyx_v_row;
     __pyx_v_val = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_x.diminfo[0].strides));
 
-    /* "Orange/distance/_distance.pyx":360
+    /* "Arithmos/distance/_distance.pyx":360
  *     for row in range(len(x)):
  *         val = x[row]
  *         if not npy_isnan(val):             # <<<<<<<<<<<<<<
@@ -9086,7 +9086,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
     __pyx_t_5 = ((!(npy_isnan(__pyx_v_val) != 0)) != 0);
     if (__pyx_t_5) {
 
-      /* "Orange/distance/_distance.pyx":361
+      /* "Arithmos/distance/_distance.pyx":361
  *         val = x[row]
  *         if not npy_isnan(val):
  *             nonnans += 1             # <<<<<<<<<<<<<<
@@ -9095,7 +9095,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
  */
       __pyx_v_nonnans = (__pyx_v_nonnans + 1);
 
-      /* "Orange/distance/_distance.pyx":362
+      /* "Arithmos/distance/_distance.pyx":362
  *         if not npy_isnan(val):
  *             nonnans += 1
  *             if val != 0:             # <<<<<<<<<<<<<<
@@ -9105,7 +9105,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
       __pyx_t_5 = ((__pyx_v_val != 0.0) != 0);
       if (__pyx_t_5) {
 
-        /* "Orange/distance/_distance.pyx":363
+        /* "Arithmos/distance/_distance.pyx":363
  *             nonnans += 1
  *             if val != 0:
  *                 nonzeros += 1             # <<<<<<<<<<<<<<
@@ -9114,7 +9114,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
  */
         __pyx_v_nonzeros = (__pyx_v_nonzeros + 1);
 
-        /* "Orange/distance/_distance.pyx":362
+        /* "Arithmos/distance/_distance.pyx":362
  *         if not npy_isnan(val):
  *             nonnans += 1
  *             if val != 0:             # <<<<<<<<<<<<<<
@@ -9123,7 +9123,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
  */
       }
 
-      /* "Orange/distance/_distance.pyx":360
+      /* "Arithmos/distance/_distance.pyx":360
  *     for row in range(len(x)):
  *         val = x[row]
  *         if not npy_isnan(val):             # <<<<<<<<<<<<<<
@@ -9133,7 +9133,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
     }
   }
 
-  /* "Orange/distance/_distance.pyx":364
+  /* "Arithmos/distance/_distance.pyx":364
  *             if val != 0:
  *                 nonzeros += 1
  *     return float(nonzeros) / nonnans             # <<<<<<<<<<<<<<
@@ -9147,7 +9147,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":352
+  /* "Arithmos/distance/_distance.pyx":352
  * 
  * 
  * def p_nonzero(np.ndarray[np.float64_t, ndim=1] x):             # <<<<<<<<<<<<<<
@@ -9164,7 +9164,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.p_nonzero", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.p_nonzero", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9175,7 +9175,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":366
+/* "Arithmos/distance/_distance.pyx":366
  *     return float(nonzeros) / nonnans
  * 
  * def any_nan_row(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -9184,10 +9184,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_20p_nonzero(CYTHON_UNUSED
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_23any_nan_row(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_22any_nan_row[] = "any_nan_row(ndarray x, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_23any_nan_row = {"any_nan_row", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_23any_nan_row, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_22any_nan_row};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_23any_nan_row(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_23any_nan_row(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_22any_nan_row[] = "any_nan_row(ndarray x, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_23any_nan_row = {"any_nan_row", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_23any_nan_row, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_22any_nan_row};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_23any_nan_row(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_x = 0;
   PyObject *__pyx_v_callback = 0;
   PyObject *__pyx_r = 0;
@@ -9235,12 +9235,12 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_23any_nan_row(PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("any_nan_row", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 366, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.any_nan_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.any_nan_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 366, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_22any_nan_row(__pyx_self, __pyx_v_x, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_22any_nan_row(__pyx_self, __pyx_v_x, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9251,7 +9251,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_23any_nan_row(PyObject *_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_22any_nan_row(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_x, PyObject *__pyx_v_callback) {
   int __pyx_v_row;
   int __pyx_v_n_cols;
   int __pyx_v_n_rows;
@@ -9304,7 +9304,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   }
   __pyx_pybuffernd_x.diminfo[0].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x.diminfo[0].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_x.diminfo[1].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_x.diminfo[1].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[1];
 
-  /* "Orange/distance/_distance.pyx":372
+  /* "Arithmos/distance/_distance.pyx":372
  *         np.ndarray[np.int8_t, ndim=1] flags
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]             # <<<<<<<<<<<<<<
@@ -9316,7 +9316,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   __pyx_v_n_rows = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":373
+  /* "Arithmos/distance/_distance.pyx":373
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     flags = np.zeros(x.shape[0], dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -9372,7 +9372,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   __pyx_v_flags = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "Orange/distance/_distance.pyx":374
+  /* "Arithmos/distance/_distance.pyx":374
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     flags = np.zeros(x.shape[0], dtype=np.int8)
  *     step = max(n_cols // 100, 100)             # <<<<<<<<<<<<<<
@@ -9388,7 +9388,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   }
   __pyx_v_step = __pyx_t_15;
 
-  /* "Orange/distance/_distance.pyx":375
+  /* "Arithmos/distance/_distance.pyx":375
  *     flags = np.zeros(x.shape[0], dtype=np.int8)
  *     step = max(n_cols // 100, 100)
  *     for row_start in range(0, n_rows, step):             # <<<<<<<<<<<<<<
@@ -9457,7 +9457,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_row_start = __pyx_t_15;
 
-    /* "Orange/distance/_distance.pyx":376
+    /* "Arithmos/distance/_distance.pyx":376
  *     step = max(n_cols // 100, 100)
  *     for row_start in range(0, n_rows, step):
  *         callback(row_start * 100 / n_rows)             # <<<<<<<<<<<<<<
@@ -9485,7 +9485,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "Orange/distance/_distance.pyx":377
+    /* "Arithmos/distance/_distance.pyx":377
  *     for row_start in range(0, n_rows, step):
  *         callback(row_start * 100 / n_rows)
  *         for row in range(row_start, min(row_start + step, n_rows)):             # <<<<<<<<<<<<<<
@@ -9504,7 +9504,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
     for (__pyx_t_9 = __pyx_v_row_start; __pyx_t_9 < __pyx_t_13; __pyx_t_9+=1) {
       __pyx_v_row = __pyx_t_9;
 
-      /* "Orange/distance/_distance.pyx":378
+      /* "Arithmos/distance/_distance.pyx":378
  *         callback(row_start * 100 / n_rows)
  *         for row in range(row_start, min(row_start + step, n_rows)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -9519,7 +9519,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":379
+            /* "Arithmos/distance/_distance.pyx":379
  *         for row in range(row_start, min(row_start + step, n_rows)):
  *             with nogil:
  *                 for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -9531,7 +9531,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
             for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
               __pyx_v_col = __pyx_t_20;
 
-              /* "Orange/distance/_distance.pyx":380
+              /* "Arithmos/distance/_distance.pyx":380
  *             with nogil:
  *                 for col in range(n_cols):
  *                     if npy_isnan(x[row, col]):             # <<<<<<<<<<<<<<
@@ -9543,7 +9543,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
               __pyx_t_23 = (npy_isnan((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_x.diminfo[0].strides, __pyx_t_22, __pyx_pybuffernd_x.diminfo[1].strides))) != 0);
               if (__pyx_t_23) {
 
-                /* "Orange/distance/_distance.pyx":381
+                /* "Arithmos/distance/_distance.pyx":381
  *                 for col in range(n_cols):
  *                     if npy_isnan(x[row, col]):
  *                         flags[row] = 1             # <<<<<<<<<<<<<<
@@ -9553,7 +9553,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
                 __pyx_t_24 = __pyx_v_row;
                 *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_flags.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_flags.diminfo[0].strides) = 1;
 
-                /* "Orange/distance/_distance.pyx":382
+                /* "Arithmos/distance/_distance.pyx":382
  *                     if npy_isnan(x[row, col]):
  *                         flags[row] = 1
  *                         break             # <<<<<<<<<<<<<<
@@ -9562,7 +9562,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
  */
                 goto __pyx_L13_break;
 
-                /* "Orange/distance/_distance.pyx":380
+                /* "Arithmos/distance/_distance.pyx":380
  *             with nogil:
  *                 for col in range(n_cols):
  *                     if npy_isnan(x[row, col]):             # <<<<<<<<<<<<<<
@@ -9574,7 +9574,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
             __pyx_L13_break:;
           }
 
-          /* "Orange/distance/_distance.pyx":378
+          /* "Arithmos/distance/_distance.pyx":378
  *         callback(row_start * 100 / n_rows)
  *         for row in range(row_start, min(row_start + step, n_rows)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -9594,7 +9594,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
       }
     }
 
-    /* "Orange/distance/_distance.pyx":375
+    /* "Arithmos/distance/_distance.pyx":375
  *     flags = np.zeros(x.shape[0], dtype=np.int8)
  *     step = max(n_cols // 100, 100)
  *     for row_start in range(0, n_rows, step):             # <<<<<<<<<<<<<<
@@ -9604,7 +9604,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "Orange/distance/_distance.pyx":383
+  /* "Arithmos/distance/_distance.pyx":383
  *                         flags[row] = 1
  *                         break
  *     return flags             # <<<<<<<<<<<<<<
@@ -9616,7 +9616,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   __pyx_r = ((PyObject *)__pyx_v_flags);
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":366
+  /* "Arithmos/distance/_distance.pyx":366
  *     return float(nonzeros) / nonnans
  * 
  * def any_nan_row(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -9638,7 +9638,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_flags.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.any_nan_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.any_nan_row", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9651,7 +9651,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":386
+/* "Arithmos/distance/_distance.pyx":386
  * 
  * 
  * def jaccard_rows(np.ndarray[np.int8_t, ndim=2] nonzeros1,             # <<<<<<<<<<<<<<
@@ -9660,10 +9660,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_22any_nan_row(CYTHON_UNUS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_24jaccard_rows[] = "jaccard_rows(ndarray nonzeros1, ndarray nonzeros2, ndarray x1, ndarray x2, ndarray nans1, ndarray nans2, ndarray ps, char two_tables, callback, next_callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_25jaccard_rows = {"jaccard_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_24jaccard_rows};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_25jaccard_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_24jaccard_rows[] = "jaccard_rows(ndarray nonzeros1, ndarray nonzeros2, ndarray x1, ndarray x2, ndarray nans1, ndarray nans2, ndarray ps, char two_tables, callback, next_callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_25jaccard_rows = {"jaccard_rows", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_25jaccard_rows, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_24jaccard_rows};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_25jaccard_rows(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_nonzeros1 = 0;
   PyArrayObject *__pyx_v_nonzeros2 = 0;
   PyArrayObject *__pyx_v_x1 = 0;
@@ -9799,7 +9799,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows(PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("jaccard_rows", 1, 10, 10, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 386, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.jaccard_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.jaccard_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -9810,7 +9810,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows(PyObject *
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_nans1), __pyx_ptype_5numpy_ndarray, 1, "nans1", 0))) __PYX_ERR(0, 390, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_nans2), __pyx_ptype_5numpy_ndarray, 1, "nans2", 0))) __PYX_ERR(0, 391, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ps), __pyx_ptype_5numpy_ndarray, 1, "ps", 0))) __PYX_ERR(0, 392, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(__pyx_self, __pyx_v_nonzeros1, __pyx_v_nonzeros2, __pyx_v_x1, __pyx_v_x2, __pyx_v_nans1, __pyx_v_nans2, __pyx_v_ps, __pyx_v_two_tables, __pyx_v_callback, __pyx_v_next_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_24jaccard_rows(__pyx_self, __pyx_v_nonzeros1, __pyx_v_nonzeros2, __pyx_v_x1, __pyx_v_x2, __pyx_v_nans1, __pyx_v_nans2, __pyx_v_ps, __pyx_v_two_tables, __pyx_v_callback, __pyx_v_next_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9821,7 +9821,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_25jaccard_rows(PyObject *
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros1, PyArrayObject *__pyx_v_nonzeros2, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_nans1, PyArrayObject *__pyx_v_nans2, PyArrayObject *__pyx_v_ps, char __pyx_v_two_tables, PyObject *__pyx_v_callback, PyObject *__pyx_v_next_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_24jaccard_rows(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros1, PyArrayObject *__pyx_v_nonzeros2, PyArrayObject *__pyx_v_x1, PyArrayObject *__pyx_v_x2, PyArrayObject *__pyx_v_nans1, PyArrayObject *__pyx_v_nans2, PyArrayObject *__pyx_v_ps, char __pyx_v_two_tables, PyObject *__pyx_v_callback, PyObject *__pyx_v_next_callback) {
   int __pyx_v_n_rows1;
   int __pyx_v_n_rows2;
   int __pyx_v_n_cols;
@@ -9971,7 +9971,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   }
   __pyx_pybuffernd_ps.diminfo[0].strides = __pyx_pybuffernd_ps.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ps.diminfo[0].shape = __pyx_pybuffernd_ps.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":402
+  /* "Arithmos/distance/_distance.pyx":402
  *         double [:, :] distances
  * 
  *     n_rows1, n_cols = x1.shape[0], x2.shape[1]             # <<<<<<<<<<<<<<
@@ -9983,7 +9983,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   __pyx_v_n_rows1 = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":403
+  /* "Arithmos/distance/_distance.pyx":403
  * 
  *     n_rows1, n_cols = x1.shape[0], x2.shape[1]
  *     n_rows2 = x2.shape[0]             # <<<<<<<<<<<<<<
@@ -9992,7 +9992,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
   __pyx_v_n_rows2 = (__pyx_v_x2->dimensions[0]);
 
-  /* "Orange/distance/_distance.pyx":404
+  /* "Arithmos/distance/_distance.pyx":404
  *     n_rows1, n_cols = x1.shape[0], x2.shape[1]
  *     n_rows2 = x2.shape[0]
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)             # <<<<<<<<<<<<<<
@@ -10035,7 +10035,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/distance/_distance.pyx":405
+  /* "Arithmos/distance/_distance.pyx":405
  *     n_rows2 = x2.shape[0]
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)             # <<<<<<<<<<<<<<
@@ -10051,7 +10051,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   }
   __pyx_v_step = __pyx_t_10;
 
-  /* "Orange/distance/_distance.pyx":406
+  /* "Arithmos/distance/_distance.pyx":406
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -10120,7 +10120,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_row_start = __pyx_t_10;
 
-    /* "Orange/distance/_distance.pyx":407
+    /* "Arithmos/distance/_distance.pyx":407
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)             # <<<<<<<<<<<<<<
@@ -10148,7 +10148,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "Orange/distance/_distance.pyx":408
+    /* "Arithmos/distance/_distance.pyx":408
  *     for row_start in range(0, n_rows1, step):
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):             # <<<<<<<<<<<<<<
@@ -10167,7 +10167,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
     for (__pyx_t_14 = __pyx_v_row_start; __pyx_t_14 < __pyx_t_8; __pyx_t_14+=1) {
       __pyx_v_row1 = __pyx_t_14;
 
-      /* "Orange/distance/_distance.pyx":409
+      /* "Arithmos/distance/_distance.pyx":409
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -10182,7 +10182,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":410
+            /* "Arithmos/distance/_distance.pyx":410
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 if nans1[row1]:             # <<<<<<<<<<<<<<
@@ -10193,7 +10193,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
             __pyx_t_16 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nans1.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_nans1.diminfo[0].strides)) != 0);
             if (__pyx_t_16) {
 
-              /* "Orange/distance/_distance.pyx":411
+              /* "Arithmos/distance/_distance.pyx":411
  *             with nogil:
  *                 if nans1[row1]:
  *                     for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -10209,7 +10209,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_row2 = __pyx_t_19;
 
-                /* "Orange/distance/_distance.pyx":412
+                /* "Arithmos/distance/_distance.pyx":412
  *                 if nans1[row1]:
  *                     for row2 in range(n_rows2 if two_tables else row1):
  *                         union = intersection = 0             # <<<<<<<<<<<<<<
@@ -10219,7 +10219,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 __pyx_v_union = 0.0;
                 __pyx_v_intersection = 0.0;
 
-                /* "Orange/distance/_distance.pyx":413
+                /* "Arithmos/distance/_distance.pyx":413
  *                     for row2 in range(n_rows2 if two_tables else row1):
  *                         union = intersection = 0
  *                         for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -10231,7 +10231,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_col = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":414
+                  /* "Arithmos/distance/_distance.pyx":414
  *                         union = intersection = 0
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]             # <<<<<<<<<<<<<<
@@ -10247,7 +10247,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":415
+                  /* "Arithmos/distance/_distance.pyx":415
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -10257,7 +10257,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_t_16 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_16) {
 
-                    /* "Orange/distance/_distance.pyx":416
+                    /* "Arithmos/distance/_distance.pyx":416
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10267,7 +10267,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":417
+                      /* "Arithmos/distance/_distance.pyx":417
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     intersection += ps[col] ** 2             # <<<<<<<<<<<<<<
@@ -10277,7 +10277,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_29 = __pyx_v_col;
                       __pyx_v_intersection = (__pyx_v_intersection + pow((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_ps.diminfo[0].strides)), 2.0));
 
-                      /* "Orange/distance/_distance.pyx":418
+                      /* "Arithmos/distance/_distance.pyx":418
  *                                 if npy_isnan(val2):
  *                                     intersection += ps[col] ** 2
  *                                     union += 1 - (1 - ps[col]) ** 2             # <<<<<<<<<<<<<<
@@ -10287,7 +10287,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_30 = __pyx_v_col;
                       __pyx_v_union = (__pyx_v_union + (1.0 - pow((1.0 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_ps.diminfo[0].strides))), 2.0)));
 
-                      /* "Orange/distance/_distance.pyx":416
+                      /* "Arithmos/distance/_distance.pyx":416
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10297,7 +10297,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":419
+                    /* "Arithmos/distance/_distance.pyx":419
  *                                     intersection += ps[col] ** 2
  *                                     union += 1 - (1 - ps[col]) ** 2
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10307,7 +10307,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = ((__pyx_v_val2 != 0.0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":420
+                      /* "Arithmos/distance/_distance.pyx":420
  *                                     union += 1 - (1 - ps[col]) ** 2
  *                                 elif val2 != 0:
  *                                     intersection += ps[col]             # <<<<<<<<<<<<<<
@@ -10317,7 +10317,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_31 = __pyx_v_col;
                       __pyx_v_intersection = (__pyx_v_intersection + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_ps.diminfo[0].strides)));
 
-                      /* "Orange/distance/_distance.pyx":421
+                      /* "Arithmos/distance/_distance.pyx":421
  *                                 elif val2 != 0:
  *                                     intersection += ps[col]
  *                                     union += 1             # <<<<<<<<<<<<<<
@@ -10326,7 +10326,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                       __pyx_v_union = (__pyx_v_union + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":419
+                      /* "Arithmos/distance/_distance.pyx":419
  *                                     intersection += ps[col] ** 2
  *                                     union += 1 - (1 - ps[col]) ** 2
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10336,7 +10336,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":423
+                    /* "Arithmos/distance/_distance.pyx":423
  *                                     union += 1
  *                                 else:
  *                                     union += ps[col]             # <<<<<<<<<<<<<<
@@ -10349,7 +10349,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":415
+                    /* "Arithmos/distance/_distance.pyx":415
  *                         for col in range(n_cols):
  *                             val1, val2 = x1[row1, col], x2[row2, col]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -10359,7 +10359,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":424
+                  /* "Arithmos/distance/_distance.pyx":424
  *                                 else:
  *                                     union += ps[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10369,7 +10369,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_16) {
 
-                    /* "Orange/distance/_distance.pyx":425
+                    /* "Arithmos/distance/_distance.pyx":425
  *                                     union += ps[col]
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:             # <<<<<<<<<<<<<<
@@ -10379,7 +10379,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = ((__pyx_v_val1 != 0.0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":426
+                      /* "Arithmos/distance/_distance.pyx":426
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:
  *                                     intersection += val1 * ps[col]             # <<<<<<<<<<<<<<
@@ -10389,7 +10389,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_33 = __pyx_v_col;
                       __pyx_v_intersection = (__pyx_v_intersection + (__pyx_v_val1 * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_ps.diminfo[0].strides))));
 
-                      /* "Orange/distance/_distance.pyx":427
+                      /* "Arithmos/distance/_distance.pyx":427
  *                                 if val1 != 0:
  *                                     intersection += val1 * ps[col]
  *                                     union += 1             # <<<<<<<<<<<<<<
@@ -10398,7 +10398,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                       __pyx_v_union = (__pyx_v_union + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":425
+                      /* "Arithmos/distance/_distance.pyx":425
  *                                     union += ps[col]
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:             # <<<<<<<<<<<<<<
@@ -10408,7 +10408,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       goto __pyx_L19;
                     }
 
-                    /* "Orange/distance/_distance.pyx":429
+                    /* "Arithmos/distance/_distance.pyx":429
  *                                     union += 1
  *                                 else:
  *                                     union += ps[col]             # <<<<<<<<<<<<<<
@@ -10421,7 +10421,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     }
                     __pyx_L19:;
 
-                    /* "Orange/distance/_distance.pyx":424
+                    /* "Arithmos/distance/_distance.pyx":424
  *                                 else:
  *                                     union += ps[col]
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10431,7 +10431,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":431
+                  /* "Arithmos/distance/_distance.pyx":431
  *                                     union += ps[col]
  *                             else:
  *                                 ival1 = nonzeros1[row1, col]             # <<<<<<<<<<<<<<
@@ -10443,7 +10443,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_36 = __pyx_v_col;
                     __pyx_v_ival1 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros1.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_nonzeros1.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_nonzeros1.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":432
+                    /* "Arithmos/distance/_distance.pyx":432
  *                             else:
  *                                 ival1 = nonzeros1[row1, col]
  *                                 ival2 = nonzeros2[row2, col]             # <<<<<<<<<<<<<<
@@ -10454,7 +10454,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_38 = __pyx_v_col;
                     __pyx_v_ival2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros2.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_nonzeros2.diminfo[0].strides, __pyx_t_38, __pyx_pybuffernd_nonzeros2.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":433
+                    /* "Arithmos/distance/_distance.pyx":433
  *                                 ival1 = nonzeros1[row1, col]
  *                                 ival2 = nonzeros2[row2, col]
  *                                 union += ival1 | ival2             # <<<<<<<<<<<<<<
@@ -10463,7 +10463,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                     __pyx_v_union = (__pyx_v_union + (__pyx_v_ival1 | __pyx_v_ival2));
 
-                    /* "Orange/distance/_distance.pyx":434
+                    /* "Arithmos/distance/_distance.pyx":434
  *                                 ival2 = nonzeros2[row2, col]
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2             # <<<<<<<<<<<<<<
@@ -10475,7 +10475,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":435
+                /* "Arithmos/distance/_distance.pyx":435
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -10485,7 +10485,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 __pyx_t_16 = ((__pyx_v_union != 0.0) != 0);
                 if (__pyx_t_16) {
 
-                  /* "Orange/distance/_distance.pyx":436
+                  /* "Arithmos/distance/_distance.pyx":436
  *                                 intersection += ival1 & ival2
  *                         if union != 0:
  *                             distances[row1, row2] = 1 - intersection / union             # <<<<<<<<<<<<<<
@@ -10496,7 +10496,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_t_40 = __pyx_v_row2;
                   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_distances.data + __pyx_t_39 * __pyx_v_distances.strides[0]) ) + __pyx_t_40 * __pyx_v_distances.strides[1]) )) = (1.0 - (__pyx_v_intersection / __pyx_v_union));
 
-                  /* "Orange/distance/_distance.pyx":435
+                  /* "Arithmos/distance/_distance.pyx":435
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -10506,7 +10506,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 }
               }
 
-              /* "Orange/distance/_distance.pyx":410
+              /* "Arithmos/distance/_distance.pyx":410
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:
  *                 if nans1[row1]:             # <<<<<<<<<<<<<<
@@ -10516,7 +10516,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
               goto __pyx_L12;
             }
 
-            /* "Orange/distance/_distance.pyx":438
+            /* "Arithmos/distance/_distance.pyx":438
  *                             distances[row1, row2] = 1 - intersection / union
  *                 else:
  *                     for row2 in range(n_rows2 if two_tables else row1):             # <<<<<<<<<<<<<<
@@ -10533,7 +10533,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_row2 = __pyx_t_19;
 
-                /* "Orange/distance/_distance.pyx":439
+                /* "Arithmos/distance/_distance.pyx":439
  *                 else:
  *                     for row2 in range(n_rows2 if two_tables else row1):
  *                         union = intersection = 0             # <<<<<<<<<<<<<<
@@ -10543,7 +10543,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 __pyx_v_union = 0.0;
                 __pyx_v_intersection = 0.0;
 
-                /* "Orange/distance/_distance.pyx":441
+                /* "Arithmos/distance/_distance.pyx":441
  *                         union = intersection = 0
  *                         # This case is slightly different since val1 can't be nan
  *                         if nans2[row2]:             # <<<<<<<<<<<<<<
@@ -10554,7 +10554,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 __pyx_t_16 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nans2.rcbuffer->pybuffer.buf, __pyx_t_41, __pyx_pybuffernd_nans2.diminfo[0].strides)) != 0);
                 if (__pyx_t_16) {
 
-                  /* "Orange/distance/_distance.pyx":442
+                  /* "Arithmos/distance/_distance.pyx":442
  *                         # This case is slightly different since val1 can't be nan
  *                         if nans2[row2]:
  *                             for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -10566,7 +10566,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                     __pyx_v_col = __pyx_t_22;
 
-                    /* "Orange/distance/_distance.pyx":443
+                    /* "Arithmos/distance/_distance.pyx":443
  *                         if nans2[row2]:
  *                             for col in range(n_cols):
  *                                 val2 = x2[row2, col]             # <<<<<<<<<<<<<<
@@ -10577,7 +10577,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_43 = __pyx_v_col;
                     __pyx_v_val2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x2.rcbuffer->pybuffer.buf, __pyx_t_42, __pyx_pybuffernd_x2.diminfo[0].strides, __pyx_t_43, __pyx_pybuffernd_x2.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":444
+                    /* "Arithmos/distance/_distance.pyx":444
  *                             for col in range(n_cols):
  *                                 val2 = x2[row2, col]
  *                                 if nonzeros1[row1, col] != 0:             # <<<<<<<<<<<<<<
@@ -10589,7 +10589,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = (((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros1.rcbuffer->pybuffer.buf, __pyx_t_44, __pyx_pybuffernd_nonzeros1.diminfo[0].strides, __pyx_t_45, __pyx_pybuffernd_nonzeros1.diminfo[1].strides)) != 0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":445
+                      /* "Arithmos/distance/_distance.pyx":445
  *                                 val2 = x2[row2, col]
  *                                 if nonzeros1[row1, col] != 0:
  *                                     union += 1             # <<<<<<<<<<<<<<
@@ -10598,7 +10598,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                       __pyx_v_union = (__pyx_v_union + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":446
+                      /* "Arithmos/distance/_distance.pyx":446
  *                                 if nonzeros1[row1, col] != 0:
  *                                     union += 1
  *                                     if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10608,7 +10608,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                       if (__pyx_t_16) {
 
-                        /* "Orange/distance/_distance.pyx":447
+                        /* "Arithmos/distance/_distance.pyx":447
  *                                     union += 1
  *                                     if npy_isnan(val2):
  *                                         intersection += ps[col]             # <<<<<<<<<<<<<<
@@ -10618,7 +10618,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                         __pyx_t_46 = __pyx_v_col;
                         __pyx_v_intersection = (__pyx_v_intersection + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_46, __pyx_pybuffernd_ps.diminfo[0].strides)));
 
-                        /* "Orange/distance/_distance.pyx":446
+                        /* "Arithmos/distance/_distance.pyx":446
  *                                 if nonzeros1[row1, col] != 0:
  *                                     union += 1
  *                                     if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10628,7 +10628,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                         goto __pyx_L27;
                       }
 
-                      /* "Orange/distance/_distance.pyx":448
+                      /* "Arithmos/distance/_distance.pyx":448
  *                                     if npy_isnan(val2):
  *                                         intersection += ps[col]
  *                                     elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10638,7 +10638,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_16 = ((__pyx_v_val2 != 0.0) != 0);
                       if (__pyx_t_16) {
 
-                        /* "Orange/distance/_distance.pyx":449
+                        /* "Arithmos/distance/_distance.pyx":449
  *                                         intersection += ps[col]
  *                                     elif val2 != 0:
  *                                         intersection += 1             # <<<<<<<<<<<<<<
@@ -10647,7 +10647,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                         __pyx_v_intersection = (__pyx_v_intersection + 1.0);
 
-                        /* "Orange/distance/_distance.pyx":448
+                        /* "Arithmos/distance/_distance.pyx":448
  *                                     if npy_isnan(val2):
  *                                         intersection += ps[col]
  *                                     elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10657,7 +10657,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       }
                       __pyx_L27:;
 
-                      /* "Orange/distance/_distance.pyx":444
+                      /* "Arithmos/distance/_distance.pyx":444
  *                             for col in range(n_cols):
  *                                 val2 = x2[row2, col]
  *                                 if nonzeros1[row1, col] != 0:             # <<<<<<<<<<<<<<
@@ -10667,7 +10667,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       goto __pyx_L26;
                     }
 
-                    /* "Orange/distance/_distance.pyx":450
+                    /* "Arithmos/distance/_distance.pyx":450
  *                                     elif val2 != 0:
  *                                         intersection += 1
  *                                 elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10677,7 +10677,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":451
+                      /* "Arithmos/distance/_distance.pyx":451
  *                                         intersection += 1
  *                                 elif npy_isnan(val2):
  *                                     union += ps[col]             # <<<<<<<<<<<<<<
@@ -10687,7 +10687,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       __pyx_t_47 = __pyx_v_col;
                       __pyx_v_union = (__pyx_v_union + (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_47, __pyx_pybuffernd_ps.diminfo[0].strides)));
 
-                      /* "Orange/distance/_distance.pyx":450
+                      /* "Arithmos/distance/_distance.pyx":450
  *                                     elif val2 != 0:
  *                                         intersection += 1
  *                                 elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -10697,7 +10697,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                       goto __pyx_L26;
                     }
 
-                    /* "Orange/distance/_distance.pyx":452
+                    /* "Arithmos/distance/_distance.pyx":452
  *                                 elif npy_isnan(val2):
  *                                     union += ps[col]
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10707,7 +10707,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_16 = ((__pyx_v_val2 != 0.0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":453
+                      /* "Arithmos/distance/_distance.pyx":453
  *                                     union += ps[col]
  *                                 elif val2 != 0:
  *                                     union += 1             # <<<<<<<<<<<<<<
@@ -10716,7 +10716,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                       __pyx_v_union = (__pyx_v_union + 1.0);
 
-                      /* "Orange/distance/_distance.pyx":452
+                      /* "Arithmos/distance/_distance.pyx":452
  *                                 elif npy_isnan(val2):
  *                                     union += ps[col]
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -10727,7 +10727,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_L26:;
                   }
 
-                  /* "Orange/distance/_distance.pyx":441
+                  /* "Arithmos/distance/_distance.pyx":441
  *                         union = intersection = 0
  *                         # This case is slightly different since val1 can't be nan
  *                         if nans2[row2]:             # <<<<<<<<<<<<<<
@@ -10737,7 +10737,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   goto __pyx_L23;
                 }
 
-                /* "Orange/distance/_distance.pyx":455
+                /* "Arithmos/distance/_distance.pyx":455
  *                                     union += 1
  *                         else:
  *                             for col in range(n_cols):             # <<<<<<<<<<<<<<
@@ -10750,7 +10750,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                     __pyx_v_col = __pyx_t_22;
 
-                    /* "Orange/distance/_distance.pyx":456
+                    /* "Arithmos/distance/_distance.pyx":456
  *                         else:
  *                             for col in range(n_cols):
  *                                 ival1 = nonzeros1[row1, col]             # <<<<<<<<<<<<<<
@@ -10761,7 +10761,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_49 = __pyx_v_col;
                     __pyx_v_ival1 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros1.rcbuffer->pybuffer.buf, __pyx_t_48, __pyx_pybuffernd_nonzeros1.diminfo[0].strides, __pyx_t_49, __pyx_pybuffernd_nonzeros1.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":457
+                    /* "Arithmos/distance/_distance.pyx":457
  *                             for col in range(n_cols):
  *                                 ival1 = nonzeros1[row1, col]
  *                                 ival2 = nonzeros2[row2, col]             # <<<<<<<<<<<<<<
@@ -10772,7 +10772,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                     __pyx_t_51 = __pyx_v_col;
                     __pyx_v_ival2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros2.rcbuffer->pybuffer.buf, __pyx_t_50, __pyx_pybuffernd_nonzeros2.diminfo[0].strides, __pyx_t_51, __pyx_pybuffernd_nonzeros2.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":458
+                    /* "Arithmos/distance/_distance.pyx":458
  *                                 ival1 = nonzeros1[row1, col]
  *                                 ival2 = nonzeros2[row2, col]
  *                                 union += ival1 | ival2             # <<<<<<<<<<<<<<
@@ -10781,7 +10781,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
                     __pyx_v_union = (__pyx_v_union + (__pyx_v_ival1 | __pyx_v_ival2));
 
-                    /* "Orange/distance/_distance.pyx":459
+                    /* "Arithmos/distance/_distance.pyx":459
  *                                 ival2 = nonzeros2[row2, col]
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2             # <<<<<<<<<<<<<<
@@ -10793,7 +10793,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 }
                 __pyx_L23:;
 
-                /* "Orange/distance/_distance.pyx":460
+                /* "Arithmos/distance/_distance.pyx":460
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -10803,7 +10803,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                 __pyx_t_16 = ((__pyx_v_union != 0.0) != 0);
                 if (__pyx_t_16) {
 
-                  /* "Orange/distance/_distance.pyx":461
+                  /* "Arithmos/distance/_distance.pyx":461
  *                                 intersection += ival1 & ival2
  *                         if union != 0:
  *                             distances[row1, row2] = 1 - intersection / union             # <<<<<<<<<<<<<<
@@ -10814,7 +10814,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
                   __pyx_t_53 = __pyx_v_row2;
                   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_distances.data + __pyx_t_52 * __pyx_v_distances.strides[0]) ) + __pyx_t_53 * __pyx_v_distances.strides[1]) )) = (1.0 - (__pyx_v_intersection / __pyx_v_union));
 
-                  /* "Orange/distance/_distance.pyx":460
+                  /* "Arithmos/distance/_distance.pyx":460
  *                                 union += ival1 | ival2
  *                                 intersection += ival1 & ival2
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -10827,7 +10827,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
             __pyx_L12:;
           }
 
-          /* "Orange/distance/_distance.pyx":409
+          /* "Arithmos/distance/_distance.pyx":409
  *         callback(row_start * 100 / n_rows1)
  *         for row1 in range(row_start, min(row_start + step, n_rows1)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -10847,7 +10847,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
       }
     }
 
-    /* "Orange/distance/_distance.pyx":406
+    /* "Arithmos/distance/_distance.pyx":406
  *     distances = np.zeros((n_rows1, n_rows2), dtype=float)
  *     step = max(n_rows1 // 100, 100)
  *     for row_start in range(0, n_rows1, step):             # <<<<<<<<<<<<<<
@@ -10857,7 +10857,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "Orange/distance/_distance.pyx":462
+  /* "Arithmos/distance/_distance.pyx":462
  *                         if union != 0:
  *                             distances[row1, row2] = 1 - intersection / union
  *     if not two_tables:             # <<<<<<<<<<<<<<
@@ -10867,7 +10867,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   __pyx_t_16 = ((!(__pyx_v_two_tables != 0)) != 0);
   if (__pyx_t_16) {
 
-    /* "Orange/distance/_distance.pyx":463
+    /* "Arithmos/distance/_distance.pyx":463
  *                             distances[row1, row2] = 1 - intersection / union
  *     if not two_tables:
  *         lower_to_symmetric(distances, next_callback)             # <<<<<<<<<<<<<<
@@ -10927,7 +10927,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "Orange/distance/_distance.pyx":462
+    /* "Arithmos/distance/_distance.pyx":462
  *                         if union != 0:
  *                             distances[row1, row2] = 1 - intersection / union
  *     if not two_tables:             # <<<<<<<<<<<<<<
@@ -10936,7 +10936,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
   }
 
-  /* "Orange/distance/_distance.pyx":464
+  /* "Arithmos/distance/_distance.pyx":464
  *     if not two_tables:
  *         lower_to_symmetric(distances, next_callback)
  *     return distances             # <<<<<<<<<<<<<<
@@ -10950,7 +10950,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":386
+  /* "Arithmos/distance/_distance.pyx":386
  * 
  * 
  * def jaccard_rows(np.ndarray[np.int8_t, ndim=2] nonzeros1,             # <<<<<<<<<<<<<<
@@ -10978,7 +10978,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x1.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x2.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.jaccard_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.jaccard_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -10996,7 +10996,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "Orange/distance/_distance.pyx":467
+/* "Arithmos/distance/_distance.pyx":467
  * 
  * 
  * def jaccard_cols(np.ndarray[np.int8_t, ndim=2] nonzeros,             # <<<<<<<<<<<<<<
@@ -11005,10 +11005,10 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_24jaccard_rows(CYTHON_UNU
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6Orange_8distance_9_distance_26jaccard_cols[] = "jaccard_cols(ndarray nonzeros, ndarray x, ndarray nans, ndarray ps, callback)";
-static PyMethodDef __pyx_mdef_6Orange_8distance_9_distance_27jaccard_cols = {"jaccard_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Orange_8distance_9_distance_26jaccard_cols};
-static PyObject *__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_27jaccard_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6Arithmos_8distance_9_distance_26jaccard_cols[] = "jaccard_cols(ndarray nonzeros, ndarray x, ndarray nans, ndarray ps, callback)";
+static PyMethodDef __pyx_mdef_6Arithmos_8distance_9_distance_27jaccard_cols = {"jaccard_cols", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_6Arithmos_8distance_9_distance_27jaccard_cols, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6Arithmos_8distance_9_distance_26jaccard_cols};
+static PyObject *__pyx_pw_6Arithmos_8distance_9_distance_27jaccard_cols(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_nonzeros = 0;
   PyArrayObject *__pyx_v_x = 0;
   PyArrayObject *__pyx_v_nans = 0;
@@ -11089,7 +11089,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols(PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("jaccard_cols", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 467, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("Orange.distance._distance.jaccard_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.jaccard_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -11097,7 +11097,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols(PyObject *
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_x), __pyx_ptype_5numpy_ndarray, 1, "x", 0))) __PYX_ERR(0, 468, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_nans), __pyx_ptype_5numpy_ndarray, 1, "nans", 0))) __PYX_ERR(0, 469, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ps), __pyx_ptype_5numpy_ndarray, 1, "ps", 0))) __PYX_ERR(0, 470, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(__pyx_self, __pyx_v_nonzeros, __pyx_v_x, __pyx_v_nans, __pyx_v_ps, __pyx_v_callback);
+  __pyx_r = __pyx_pf_6Arithmos_8distance_9_distance_26jaccard_cols(__pyx_self, __pyx_v_nonzeros, __pyx_v_x, __pyx_v_nans, __pyx_v_ps, __pyx_v_callback);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11108,7 +11108,7 @@ static PyObject *__pyx_pw_6Orange_8distance_9_distance_27jaccard_cols(PyObject *
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_nans, PyArrayObject *__pyx_v_ps, PyObject *__pyx_v_callback) {
+static PyObject *__pyx_pf_6Arithmos_8distance_9_distance_26jaccard_cols(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_nonzeros, PyArrayObject *__pyx_v_x, PyArrayObject *__pyx_v_nans, PyArrayObject *__pyx_v_ps, PyObject *__pyx_v_callback) {
   int __pyx_v_n_rows;
   int __pyx_v_n_cols;
   int __pyx_v_col1;
@@ -11250,7 +11250,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   }
   __pyx_pybuffernd_ps.diminfo[0].strides = __pyx_pybuffernd_ps.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ps.diminfo[0].shape = __pyx_pybuffernd_ps.rcbuffer->pybuffer.shape[0];
 
-  /* "Orange/distance/_distance.pyx":479
+  /* "Arithmos/distance/_distance.pyx":479
  *         double [:, :] distances
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]             # <<<<<<<<<<<<<<
@@ -11262,7 +11262,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   __pyx_v_n_rows = __pyx_t_1;
   __pyx_v_n_cols = __pyx_t_2;
 
-  /* "Orange/distance/_distance.pyx":480
+  /* "Arithmos/distance/_distance.pyx":480
  * 
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     distances = np.zeros((n_cols, n_cols), dtype=float)             # <<<<<<<<<<<<<<
@@ -11305,7 +11305,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "Orange/distance/_distance.pyx":481
+  /* "Arithmos/distance/_distance.pyx":481
  *     n_rows, n_cols = x.shape[0], x.shape[1]
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     step = max(n_cols // 100, 100)             # <<<<<<<<<<<<<<
@@ -11321,7 +11321,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   }
   __pyx_v_step = __pyx_t_10;
 
-  /* "Orange/distance/_distance.pyx":482
+  /* "Arithmos/distance/_distance.pyx":482
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -11390,7 +11390,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_col_start = __pyx_t_10;
 
-    /* "Orange/distance/_distance.pyx":483
+    /* "Arithmos/distance/_distance.pyx":483
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)             # <<<<<<<<<<<<<<
@@ -11418,7 +11418,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "Orange/distance/_distance.pyx":484
+    /* "Arithmos/distance/_distance.pyx":484
  *     for col_start in range(0, n_cols, step):
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):             # <<<<<<<<<<<<<<
@@ -11437,7 +11437,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
     for (__pyx_t_14 = __pyx_v_col_start; __pyx_t_14 < __pyx_t_8; __pyx_t_14+=1) {
       __pyx_v_col1 = __pyx_t_14;
 
-      /* "Orange/distance/_distance.pyx":485
+      /* "Arithmos/distance/_distance.pyx":485
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -11452,7 +11452,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
           #endif
           /*try:*/ {
 
-            /* "Orange/distance/_distance.pyx":486
+            /* "Arithmos/distance/_distance.pyx":486
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:
  *                 if nans[col1]:             # <<<<<<<<<<<<<<
@@ -11463,7 +11463,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
             __pyx_t_16 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nans.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_nans.diminfo[0].strides)) != 0);
             if (__pyx_t_16) {
 
-              /* "Orange/distance/_distance.pyx":487
+              /* "Arithmos/distance/_distance.pyx":487
  *             with nogil:
  *                 if nans[col1]:
  *                     for col2 in range(col1):             # <<<<<<<<<<<<<<
@@ -11475,7 +11475,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_col2 = __pyx_t_19;
 
-                /* "Orange/distance/_distance.pyx":488
+                /* "Arithmos/distance/_distance.pyx":488
  *                 if nans[col1]:
  *                     for col2 in range(col1):
  *                         in_both = in_any = 0             # <<<<<<<<<<<<<<
@@ -11485,7 +11485,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 __pyx_v_in_both = 0;
                 __pyx_v_in_any = 0;
 
-                /* "Orange/distance/_distance.pyx":489
+                /* "Arithmos/distance/_distance.pyx":489
  *                     for col2 in range(col1):
  *                         in_both = in_any = 0
  *                         in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0             # <<<<<<<<<<<<<<
@@ -11498,7 +11498,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 __pyx_v_unk1_not2 = 0;
                 __pyx_v_not1_unk2 = 0;
 
-                /* "Orange/distance/_distance.pyx":490
+                /* "Arithmos/distance/_distance.pyx":490
  *                         in_both = in_any = 0
  *                         in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0
  *                         for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -11510,7 +11510,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_row = __pyx_t_22;
 
-                  /* "Orange/distance/_distance.pyx":491
+                  /* "Arithmos/distance/_distance.pyx":491
  *                         in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]             # <<<<<<<<<<<<<<
@@ -11526,7 +11526,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_v_val1 = __pyx_t_25;
                   __pyx_v_val2 = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":492
+                  /* "Arithmos/distance/_distance.pyx":492
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -11536,7 +11536,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_16 = (npy_isnan(__pyx_v_val1) != 0);
                   if (__pyx_t_16) {
 
-                    /* "Orange/distance/_distance.pyx":493
+                    /* "Arithmos/distance/_distance.pyx":493
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11546,7 +11546,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":494
+                      /* "Arithmos/distance/_distance.pyx":494
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):
  *                                     unk1_unk2 += 1             # <<<<<<<<<<<<<<
@@ -11555,7 +11555,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                       __pyx_v_unk1_unk2 = (__pyx_v_unk1_unk2 + 1);
 
-                      /* "Orange/distance/_distance.pyx":493
+                      /* "Arithmos/distance/_distance.pyx":493
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11565,7 +11565,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":495
+                    /* "Arithmos/distance/_distance.pyx":495
  *                                 if npy_isnan(val2):
  *                                     unk1_unk2 += 1
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -11575,7 +11575,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_16 = ((__pyx_v_val2 != 0.0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":496
+                      /* "Arithmos/distance/_distance.pyx":496
  *                                     unk1_unk2 += 1
  *                                 elif val2 != 0:
  *                                     unk1_in2 += 1             # <<<<<<<<<<<<<<
@@ -11584,7 +11584,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                       __pyx_v_unk1_in2 = (__pyx_v_unk1_in2 + 1);
 
-                      /* "Orange/distance/_distance.pyx":495
+                      /* "Arithmos/distance/_distance.pyx":495
  *                                 if npy_isnan(val2):
  *                                     unk1_unk2 += 1
  *                                 elif val2 != 0:             # <<<<<<<<<<<<<<
@@ -11594,7 +11594,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       goto __pyx_L18;
                     }
 
-                    /* "Orange/distance/_distance.pyx":498
+                    /* "Arithmos/distance/_distance.pyx":498
  *                                     unk1_in2 += 1
  *                                 else:
  *                                     unk1_not2 += 1             # <<<<<<<<<<<<<<
@@ -11606,7 +11606,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     }
                     __pyx_L18:;
 
-                    /* "Orange/distance/_distance.pyx":492
+                    /* "Arithmos/distance/_distance.pyx":492
  *                         for row in range(n_rows):
  *                             val1, val2 = x[row, col1], x[row, col2]
  *                             if npy_isnan(val1):             # <<<<<<<<<<<<<<
@@ -11616,7 +11616,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":499
+                  /* "Arithmos/distance/_distance.pyx":499
  *                                 else:
  *                                     unk1_not2 += 1
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11626,7 +11626,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                   if (__pyx_t_16) {
 
-                    /* "Orange/distance/_distance.pyx":500
+                    /* "Arithmos/distance/_distance.pyx":500
  *                                     unk1_not2 += 1
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:             # <<<<<<<<<<<<<<
@@ -11636,7 +11636,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_16 = ((__pyx_v_val1 != 0.0) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":501
+                      /* "Arithmos/distance/_distance.pyx":501
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:
  *                                     in1_unk2 += 1             # <<<<<<<<<<<<<<
@@ -11645,7 +11645,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                       __pyx_v_in1_unk2 = (__pyx_v_in1_unk2 + 1);
 
-                      /* "Orange/distance/_distance.pyx":500
+                      /* "Arithmos/distance/_distance.pyx":500
  *                                     unk1_not2 += 1
  *                             elif npy_isnan(val2):
  *                                 if val1 != 0:             # <<<<<<<<<<<<<<
@@ -11655,7 +11655,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       goto __pyx_L19;
                     }
 
-                    /* "Orange/distance/_distance.pyx":503
+                    /* "Arithmos/distance/_distance.pyx":503
  *                                     in1_unk2 += 1
  *                                 else:
  *                                     not1_unk2 += 1             # <<<<<<<<<<<<<<
@@ -11667,7 +11667,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     }
                     __pyx_L19:;
 
-                    /* "Orange/distance/_distance.pyx":499
+                    /* "Arithmos/distance/_distance.pyx":499
  *                                 else:
  *                                     unk1_not2 += 1
  *                             elif npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11677,7 +11677,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     goto __pyx_L17;
                   }
 
-                  /* "Orange/distance/_distance.pyx":505
+                  /* "Arithmos/distance/_distance.pyx":505
  *                                     not1_unk2 += 1
  *                             else:
  *                                 ival1 = nonzeros[row, col1]             # <<<<<<<<<<<<<<
@@ -11689,7 +11689,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_30 = __pyx_v_col1;
                     __pyx_v_ival1 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_30, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":506
+                    /* "Arithmos/distance/_distance.pyx":506
  *                             else:
  *                                 ival1 = nonzeros[row, col1]
  *                                 ival2 = nonzeros[row, col2]             # <<<<<<<<<<<<<<
@@ -11700,7 +11700,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_32 = __pyx_v_col2;
                     __pyx_v_ival2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_31, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_32, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":507
+                    /* "Arithmos/distance/_distance.pyx":507
  *                                 ival1 = nonzeros[row, col1]
  *                                 ival2 = nonzeros[row, col2]
  *                                 in_both += ival1 & ival2             # <<<<<<<<<<<<<<
@@ -11709,7 +11709,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                     __pyx_v_in_both = (__pyx_v_in_both + (__pyx_v_ival1 & __pyx_v_ival2));
 
-                    /* "Orange/distance/_distance.pyx":508
+                    /* "Arithmos/distance/_distance.pyx":508
  *                                 ival2 = nonzeros[row, col2]
  *                                 in_both += ival1 & ival2
  *                                 in_any += ival1 | ival2             # <<<<<<<<<<<<<<
@@ -11721,7 +11721,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_L17:;
                 }
 
-                /* "Orange/distance/_distance.pyx":510
+                /* "Arithmos/distance/_distance.pyx":510
  *                                 in_any += ival1 | ival2
  *                         union = (in_any + unk1_in2 + in1_unk2
  *                                  + ps[col1] * unk1_not2             # <<<<<<<<<<<<<<
@@ -11730,7 +11730,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                 __pyx_t_33 = __pyx_v_col1;
 
-                /* "Orange/distance/_distance.pyx":511
+                /* "Arithmos/distance/_distance.pyx":511
  *                         union = (in_any + unk1_in2 + in1_unk2
  *                                  + ps[col1] * unk1_not2
  *                                  + ps[col2] * not1_unk2             # <<<<<<<<<<<<<<
@@ -11739,7 +11739,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                 __pyx_t_34 = __pyx_v_col2;
 
-                /* "Orange/distance/_distance.pyx":512
+                /* "Arithmos/distance/_distance.pyx":512
  *                                  + ps[col1] * unk1_not2
  *                                  + ps[col2] * not1_unk2
  *                                  + (1 - (1 - ps[col1]) * (1 - ps[col2])) * unk1_unk2)             # <<<<<<<<<<<<<<
@@ -11750,7 +11750,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 __pyx_t_36 = __pyx_v_col2;
                 __pyx_v_union = (((((__pyx_v_in_any + __pyx_v_unk1_in2) + __pyx_v_in1_unk2) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_unk1_not2)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_34, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_not1_unk2)) + ((1.0 - ((1.0 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_35, __pyx_pybuffernd_ps.diminfo[0].strides))) * (1.0 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_ps.diminfo[0].strides))))) * __pyx_v_unk1_unk2));
 
-                /* "Orange/distance/_distance.pyx":513
+                /* "Arithmos/distance/_distance.pyx":513
  *                                  + ps[col2] * not1_unk2
  *                                  + (1 - (1 - ps[col1]) * (1 - ps[col2])) * unk1_unk2)
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -11760,7 +11760,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 __pyx_t_16 = ((__pyx_v_union != 0.0) != 0);
                 if (__pyx_t_16) {
 
-                  /* "Orange/distance/_distance.pyx":515
+                  /* "Arithmos/distance/_distance.pyx":515
  *                         if union != 0:
  *                             intersection = (in_both
  *                                             + ps[col1] * unk1_in2 +             # <<<<<<<<<<<<<<
@@ -11769,7 +11769,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_37 = __pyx_v_col1;
 
-                  /* "Orange/distance/_distance.pyx":516
+                  /* "Arithmos/distance/_distance.pyx":516
  *                             intersection = (in_both
  *                                             + ps[col1] * unk1_in2 +
  *                                             + ps[col2] * in1_unk2 +             # <<<<<<<<<<<<<<
@@ -11778,7 +11778,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_38 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":517
+                  /* "Arithmos/distance/_distance.pyx":517
  *                                             + ps[col1] * unk1_in2 +
  *                                             + ps[col2] * in1_unk2 +
  *                                             + ps[col1] * ps[col2] * unk1_unk2)             # <<<<<<<<<<<<<<
@@ -11788,7 +11788,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_39 = __pyx_v_col1;
                   __pyx_t_40 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":516
+                  /* "Arithmos/distance/_distance.pyx":516
  *                             intersection = (in_both
  *                                             + ps[col1] * unk1_in2 +
  *                                             + ps[col2] * in1_unk2 +             # <<<<<<<<<<<<<<
@@ -11797,7 +11797,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_v_intersection = (((__pyx_v_in_both + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_unk1_in2)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_38, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_in1_unk2)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_39, __pyx_pybuffernd_ps.diminfo[0].strides)) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_40, __pyx_pybuffernd_ps.diminfo[0].strides))) * __pyx_v_unk1_unk2));
 
-                  /* "Orange/distance/_distance.pyx":519
+                  /* "Arithmos/distance/_distance.pyx":519
  *                                             + ps[col1] * ps[col2] * unk1_unk2)
  *                             distances[col1, col2] = distances[col2, col1] = \
  *                                 1 - intersection / union             # <<<<<<<<<<<<<<
@@ -11806,7 +11806,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_41 = (1.0 - (__pyx_v_intersection / __pyx_v_union));
 
-                  /* "Orange/distance/_distance.pyx":518
+                  /* "Arithmos/distance/_distance.pyx":518
  *                                             + ps[col2] * in1_unk2 +
  *                                             + ps[col1] * ps[col2] * unk1_unk2)
  *                             distances[col1, col2] = distances[col2, col1] = \             # <<<<<<<<<<<<<<
@@ -11820,7 +11820,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_45 = __pyx_v_col1;
                   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_distances.data + __pyx_t_44 * __pyx_v_distances.strides[0]) ) + __pyx_t_45 * __pyx_v_distances.strides[1]) )) = __pyx_t_41;
 
-                  /* "Orange/distance/_distance.pyx":513
+                  /* "Arithmos/distance/_distance.pyx":513
  *                                  + ps[col2] * not1_unk2
  *                                  + (1 - (1 - ps[col1]) * (1 - ps[col2])) * unk1_unk2)
  *                         if union != 0:             # <<<<<<<<<<<<<<
@@ -11830,7 +11830,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 }
               }
 
-              /* "Orange/distance/_distance.pyx":486
+              /* "Arithmos/distance/_distance.pyx":486
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:
  *                 if nans[col1]:             # <<<<<<<<<<<<<<
@@ -11840,7 +11840,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
               goto __pyx_L12;
             }
 
-            /* "Orange/distance/_distance.pyx":521
+            /* "Arithmos/distance/_distance.pyx":521
  *                                 1 - intersection / union
  *                 else:
  *                     for col2 in range(col1):             # <<<<<<<<<<<<<<
@@ -11853,7 +11853,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
               for (__pyx_t_19 = 0; __pyx_t_19 < __pyx_t_18; __pyx_t_19+=1) {
                 __pyx_v_col2 = __pyx_t_19;
 
-                /* "Orange/distance/_distance.pyx":522
+                /* "Arithmos/distance/_distance.pyx":522
  *                 else:
  *                     for col2 in range(col1):
  *                         if nans[col2]:             # <<<<<<<<<<<<<<
@@ -11864,7 +11864,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                 __pyx_t_16 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nans.rcbuffer->pybuffer.buf, __pyx_t_46, __pyx_pybuffernd_nans.diminfo[0].strides)) != 0);
                 if (__pyx_t_16) {
 
-                  /* "Orange/distance/_distance.pyx":523
+                  /* "Arithmos/distance/_distance.pyx":523
  *                     for col2 in range(col1):
  *                         if nans[col2]:
  *                             in_both = in_any = 0             # <<<<<<<<<<<<<<
@@ -11874,7 +11874,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_v_in_both = 0;
                   __pyx_v_in_any = 0;
 
-                  /* "Orange/distance/_distance.pyx":524
+                  /* "Arithmos/distance/_distance.pyx":524
  *                         if nans[col2]:
  *                             in_both = in_any = 0
  *                             in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0             # <<<<<<<<<<<<<<
@@ -11887,7 +11887,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_v_unk1_not2 = 0;
                   __pyx_v_not1_unk2 = 0;
 
-                  /* "Orange/distance/_distance.pyx":525
+                  /* "Arithmos/distance/_distance.pyx":525
  *                             in_both = in_any = 0
  *                             in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0
  *                             for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -11899,7 +11899,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                     __pyx_v_row = __pyx_t_22;
 
-                    /* "Orange/distance/_distance.pyx":526
+                    /* "Arithmos/distance/_distance.pyx":526
  *                             in1_unk2 = unk1_in2 = unk1_unk2 = unk1_not2 = not1_unk2 = 0
  *                             for row in range(n_rows):
  *                                 ival1 = nonzeros[row, col1]             # <<<<<<<<<<<<<<
@@ -11910,7 +11910,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_48 = __pyx_v_col1;
                     __pyx_v_ival1 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_47, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_48, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":527
+                    /* "Arithmos/distance/_distance.pyx":527
  *                             for row in range(n_rows):
  *                                 ival1 = nonzeros[row, col1]
  *                                 val2 = x[row, col2]             # <<<<<<<<<<<<<<
@@ -11921,7 +11921,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_50 = __pyx_v_col2;
                     __pyx_v_val2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_x.rcbuffer->pybuffer.buf, __pyx_t_49, __pyx_pybuffernd_x.diminfo[0].strides, __pyx_t_50, __pyx_pybuffernd_x.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":528
+                    /* "Arithmos/distance/_distance.pyx":528
  *                                 ival1 = nonzeros[row, col1]
  *                                 val2 = x[row, col2]
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11931,7 +11931,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_16 = (npy_isnan(__pyx_v_val2) != 0);
                     if (__pyx_t_16) {
 
-                      /* "Orange/distance/_distance.pyx":529
+                      /* "Arithmos/distance/_distance.pyx":529
  *                                 val2 = x[row, col2]
  *                                 if npy_isnan(val2):
  *                                     if ival1:             # <<<<<<<<<<<<<<
@@ -11941,7 +11941,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       __pyx_t_16 = (__pyx_v_ival1 != 0);
                       if (__pyx_t_16) {
 
-                        /* "Orange/distance/_distance.pyx":530
+                        /* "Arithmos/distance/_distance.pyx":530
  *                                 if npy_isnan(val2):
  *                                     if ival1:
  *                                         in1_unk2 += 1             # <<<<<<<<<<<<<<
@@ -11950,7 +11950,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                         __pyx_v_in1_unk2 = (__pyx_v_in1_unk2 + 1);
 
-                        /* "Orange/distance/_distance.pyx":529
+                        /* "Arithmos/distance/_distance.pyx":529
  *                                 val2 = x[row, col2]
  *                                 if npy_isnan(val2):
  *                                     if ival1:             # <<<<<<<<<<<<<<
@@ -11960,7 +11960,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                         goto __pyx_L27;
                       }
 
-                      /* "Orange/distance/_distance.pyx":532
+                      /* "Arithmos/distance/_distance.pyx":532
  *                                         in1_unk2 += 1
  *                                     else:
  *                                         not1_unk2 += 1             # <<<<<<<<<<<<<<
@@ -11972,7 +11972,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       }
                       __pyx_L27:;
 
-                      /* "Orange/distance/_distance.pyx":528
+                      /* "Arithmos/distance/_distance.pyx":528
  *                                 ival1 = nonzeros[row, col1]
  *                                 val2 = x[row, col2]
  *                                 if npy_isnan(val2):             # <<<<<<<<<<<<<<
@@ -11982,7 +11982,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       goto __pyx_L26;
                     }
 
-                    /* "Orange/distance/_distance.pyx":534
+                    /* "Arithmos/distance/_distance.pyx":534
  *                                         not1_unk2 += 1
  *                                 else:
  *                                     ival2 = nonzeros[row, col2]             # <<<<<<<<<<<<<<
@@ -11994,7 +11994,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                       __pyx_t_52 = __pyx_v_col2;
                       __pyx_v_ival2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_51, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_52, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                      /* "Orange/distance/_distance.pyx":535
+                      /* "Arithmos/distance/_distance.pyx":535
  *                                 else:
  *                                     ival2 = nonzeros[row, col2]
  *                                     in_both += ival1 & ival2             # <<<<<<<<<<<<<<
@@ -12003,7 +12003,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                       __pyx_v_in_both = (__pyx_v_in_both + (__pyx_v_ival1 & __pyx_v_ival2));
 
-                      /* "Orange/distance/_distance.pyx":536
+                      /* "Arithmos/distance/_distance.pyx":536
  *                                     ival2 = nonzeros[row, col2]
  *                                     in_both += ival1 & ival2
  *                                     in_any += ival1 | ival2             # <<<<<<<<<<<<<<
@@ -12015,7 +12015,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_L26:;
                   }
 
-                  /* "Orange/distance/_distance.pyx":539
+                  /* "Arithmos/distance/_distance.pyx":539
  *                             distances[col1, col2] = distances[col2, col1] = \
  *                                 1 - float(in_both
  *                                           + ps[col1] * unk1_in2 +             # <<<<<<<<<<<<<<
@@ -12024,7 +12024,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_53 = __pyx_v_col1;
 
-                  /* "Orange/distance/_distance.pyx":540
+                  /* "Arithmos/distance/_distance.pyx":540
  *                                 1 - float(in_both
  *                                           + ps[col1] * unk1_in2 +
  *                                           + ps[col2] * in1_unk2 +             # <<<<<<<<<<<<<<
@@ -12033,7 +12033,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_54 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":541
+                  /* "Arithmos/distance/_distance.pyx":541
  *                                           + ps[col1] * unk1_in2 +
  *                                           + ps[col2] * in1_unk2 +
  *                                           + ps[col1] * ps[col2] * unk1_unk2) / \             # <<<<<<<<<<<<<<
@@ -12043,7 +12043,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_55 = __pyx_v_col1;
                   __pyx_t_56 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":543
+                  /* "Arithmos/distance/_distance.pyx":543
  *                                           + ps[col1] * ps[col2] * unk1_unk2) / \
  *                                 (in_any + unk1_in2 + in1_unk2 +
  *                                  + ps[col1] * unk1_not2             # <<<<<<<<<<<<<<
@@ -12052,7 +12052,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_57 = __pyx_v_col1;
 
-                  /* "Orange/distance/_distance.pyx":544
+                  /* "Arithmos/distance/_distance.pyx":544
  *                                 (in_any + unk1_in2 + in1_unk2 +
  *                                  + ps[col1] * unk1_not2
  *                                  + ps[col2] * not1_unk2             # <<<<<<<<<<<<<<
@@ -12061,7 +12061,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_58 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":545
+                  /* "Arithmos/distance/_distance.pyx":545
  *                                  + ps[col1] * unk1_not2
  *                                  + ps[col2] * not1_unk2
  *                                  + (1 - (1 - ps[col1]) * (1 - ps[col2])) * unk1_unk2)             # <<<<<<<<<<<<<<
@@ -12071,7 +12071,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_59 = __pyx_v_col1;
                   __pyx_t_60 = __pyx_v_col2;
 
-                  /* "Orange/distance/_distance.pyx":538
+                  /* "Arithmos/distance/_distance.pyx":538
  *                                     in_any += ival1 | ival2
  *                             distances[col1, col2] = distances[col2, col1] = \
  *                                 1 - float(in_both             # <<<<<<<<<<<<<<
@@ -12080,7 +12080,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                   __pyx_t_28 = (1.0 - (((double)(((__pyx_v_in_both + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_53, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_unk1_in2)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_54, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_in1_unk2)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_55, __pyx_pybuffernd_ps.diminfo[0].strides)) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_56, __pyx_pybuffernd_ps.diminfo[0].strides))) * __pyx_v_unk1_unk2))) / (((((__pyx_v_in_any + __pyx_v_unk1_in2) + __pyx_v_in1_unk2) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_57, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_unk1_not2)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_58, __pyx_pybuffernd_ps.diminfo[0].strides)) * __pyx_v_not1_unk2)) + ((1.0 - ((1.0 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_59, __pyx_pybuffernd_ps.diminfo[0].strides))) * (1.0 - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_ps.rcbuffer->pybuffer.buf, __pyx_t_60, __pyx_pybuffernd_ps.diminfo[0].strides))))) * __pyx_v_unk1_unk2))));
 
-                  /* "Orange/distance/_distance.pyx":537
+                  /* "Arithmos/distance/_distance.pyx":537
  *                                     in_both += ival1 & ival2
  *                                     in_any += ival1 | ival2
  *                             distances[col1, col2] = distances[col2, col1] = \             # <<<<<<<<<<<<<<
@@ -12094,7 +12094,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_64 = __pyx_v_col1;
                   *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_distances.data + __pyx_t_63 * __pyx_v_distances.strides[0]) ) + __pyx_t_64 * __pyx_v_distances.strides[1]) )) = __pyx_t_28;
 
-                  /* "Orange/distance/_distance.pyx":522
+                  /* "Arithmos/distance/_distance.pyx":522
  *                 else:
  *                     for col2 in range(col1):
  *                         if nans[col2]:             # <<<<<<<<<<<<<<
@@ -12104,7 +12104,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   goto __pyx_L23;
                 }
 
-                /* "Orange/distance/_distance.pyx":547
+                /* "Arithmos/distance/_distance.pyx":547
  *                                  + (1 - (1 - ps[col1]) * (1 - ps[col2])) * unk1_unk2)
  *                         else:
  *                             in_both = in_any = 0             # <<<<<<<<<<<<<<
@@ -12115,7 +12115,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_v_in_both = 0;
                   __pyx_v_in_any = 0;
 
-                  /* "Orange/distance/_distance.pyx":548
+                  /* "Arithmos/distance/_distance.pyx":548
  *                         else:
  *                             in_both = in_any = 0
  *                             for row in range(n_rows):             # <<<<<<<<<<<<<<
@@ -12127,7 +12127,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                     __pyx_v_row = __pyx_t_22;
 
-                    /* "Orange/distance/_distance.pyx":549
+                    /* "Arithmos/distance/_distance.pyx":549
  *                             in_both = in_any = 0
  *                             for row in range(n_rows):
  *                                 ival1 = nonzeros[row, col1]             # <<<<<<<<<<<<<<
@@ -12138,7 +12138,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_66 = __pyx_v_col1;
                     __pyx_v_ival1 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_65, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_66, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":550
+                    /* "Arithmos/distance/_distance.pyx":550
  *                             for row in range(n_rows):
  *                                 ival1 = nonzeros[row, col1]
  *                                 ival2 = nonzeros[row, col2]             # <<<<<<<<<<<<<<
@@ -12149,7 +12149,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_68 = __pyx_v_col2;
                     __pyx_v_ival2 = (*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_int8_t *, __pyx_pybuffernd_nonzeros.rcbuffer->pybuffer.buf, __pyx_t_67, __pyx_pybuffernd_nonzeros.diminfo[0].strides, __pyx_t_68, __pyx_pybuffernd_nonzeros.diminfo[1].strides));
 
-                    /* "Orange/distance/_distance.pyx":551
+                    /* "Arithmos/distance/_distance.pyx":551
  *                                 ival1 = nonzeros[row, col1]
  *                                 ival2 = nonzeros[row, col2]
  *                                 in_both += ival1 & ival2             # <<<<<<<<<<<<<<
@@ -12158,7 +12158,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                     __pyx_v_in_both = (__pyx_v_in_both + (__pyx_v_ival1 & __pyx_v_ival2));
 
-                    /* "Orange/distance/_distance.pyx":552
+                    /* "Arithmos/distance/_distance.pyx":552
  *                                 ival2 = nonzeros[row, col2]
  *                                 in_both += ival1 & ival2
  *                                 in_any += ival1 | ival2             # <<<<<<<<<<<<<<
@@ -12168,7 +12168,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_v_in_any = (__pyx_v_in_any + (__pyx_v_ival1 | __pyx_v_ival2));
                   }
 
-                  /* "Orange/distance/_distance.pyx":553
+                  /* "Arithmos/distance/_distance.pyx":553
  *                                 in_both += ival1 & ival2
  *                                 in_any += ival1 | ival2
  *                             if in_any != 0:             # <<<<<<<<<<<<<<
@@ -12178,7 +12178,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                   __pyx_t_16 = ((__pyx_v_in_any != 0) != 0);
                   if (__pyx_t_16) {
 
-                    /* "Orange/distance/_distance.pyx":555
+                    /* "Arithmos/distance/_distance.pyx":555
  *                             if in_any != 0:
  *                                 distances[col1, col2] = distances[col2, col1] = \
  *                                     1 - float(in_both) / in_any             # <<<<<<<<<<<<<<
@@ -12187,7 +12187,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
  */
                     __pyx_t_41 = (1.0 - (((double)__pyx_v_in_both) / __pyx_v_in_any));
 
-                    /* "Orange/distance/_distance.pyx":554
+                    /* "Arithmos/distance/_distance.pyx":554
  *                                 in_any += ival1 | ival2
  *                             if in_any != 0:
  *                                 distances[col1, col2] = distances[col2, col1] = \             # <<<<<<<<<<<<<<
@@ -12201,7 +12201,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
                     __pyx_t_72 = __pyx_v_col1;
                     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_distances.data + __pyx_t_71 * __pyx_v_distances.strides[0]) ) + __pyx_t_72 * __pyx_v_distances.strides[1]) )) = __pyx_t_41;
 
-                    /* "Orange/distance/_distance.pyx":553
+                    /* "Arithmos/distance/_distance.pyx":553
  *                                 in_both += ival1 & ival2
  *                                 in_any += ival1 | ival2
  *                             if in_any != 0:             # <<<<<<<<<<<<<<
@@ -12216,7 +12216,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
             __pyx_L12:;
           }
 
-          /* "Orange/distance/_distance.pyx":485
+          /* "Arithmos/distance/_distance.pyx":485
  *         callback(col_start * 100 / n_cols)
  *         for col1 in range(col_start, min(col_start + step, n_cols)):
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -12236,7 +12236,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
       }
     }
 
-    /* "Orange/distance/_distance.pyx":482
+    /* "Arithmos/distance/_distance.pyx":482
  *     distances = np.zeros((n_cols, n_cols), dtype=float)
  *     step = max(n_cols // 100, 100)
  *     for col_start in range(0, n_cols, step):             # <<<<<<<<<<<<<<
@@ -12246,7 +12246,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "Orange/distance/_distance.pyx":557
+  /* "Arithmos/distance/_distance.pyx":557
  *                                     1 - float(in_both) / in_any
  * 
  *     return distances             # <<<<<<<<<<<<<<
@@ -12258,7 +12258,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "Orange/distance/_distance.pyx":467
+  /* "Arithmos/distance/_distance.pyx":467
  * 
  * 
  * def jaccard_cols(np.ndarray[np.int8_t, ndim=2] nonzeros,             # <<<<<<<<<<<<<<
@@ -12283,7 +12283,7 @@ static PyObject *__pyx_pf_6Orange_8distance_9_distance_26jaccard_cols(CYTHON_UNU
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_ps.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("Orange.distance._distance.jaccard_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Arithmos.distance._distance.jaccard_cols", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -27651,7 +27651,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.distance._distance.array", /*tp_name*/
+  "Arithmos.distance._distance.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -27762,7 +27762,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.distance._distance.Enum", /*tp_name*/
+  "Arithmos.distance._distance.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -28015,7 +28015,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.distance._distance.memoryview", /*tp_name*/
+  "Arithmos.distance._distance.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -28145,7 +28145,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "Orange.distance._distance._memoryviewslice", /*tp_name*/
+  "Arithmos.distance._distance._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -28279,8 +28279,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_MemoryView_of_r_object, __pyx_k_MemoryView_of_r_object, sizeof(__pyx_k_MemoryView_of_r_object), 0, 0, 1, 0},
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_b_O, __pyx_k_O, sizeof(__pyx_k_O), 0, 0, 0, 1},
-  {&__pyx_n_s_Orange_distance__distance, __pyx_k_Orange_distance__distance, sizeof(__pyx_k_Orange_distance__distance), 0, 0, 1, 1},
-  {&__pyx_kp_s_Orange_distance__distance_pyx, __pyx_k_Orange_distance__distance_pyx, sizeof(__pyx_k_Orange_distance__distance_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_Arithmos_distance__distance, __pyx_k_Arithmos_distance__distance, sizeof(__pyx_k_Arithmos_distance__distance), 0, 0, 1, 1},
+  {&__pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_k_Arithmos_distance__distance_pyx, sizeof(__pyx_k_Arithmos_distance__distance_pyx), 0, 0, 1, 0},
   {&__pyx_kp_s_Out_of_bounds_on_buffer_access_a, __pyx_k_Out_of_bounds_on_buffer_access_a, sizeof(__pyx_k_Out_of_bounds_on_buffer_access_a), 0, 0, 1, 0},
   {&__pyx_n_s_PickleError, __pyx_k_PickleError, sizeof(__pyx_k_PickleError), 0, 0, 1, 1},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
@@ -28716,7 +28716,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
 
-  /* "Orange/distance/_distance.pyx":18
+  /* "Arithmos/distance/_distance.pyx":18
  * 
  * 
  * def lower_to_symmetric(double [:, :] distances, callback):             # <<<<<<<<<<<<<<
@@ -28726,9 +28726,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__26 = PyTuple_Pack(7, __pyx_n_s_distances, __pyx_n_s_callback, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_step, __pyx_n_s_n_rows1, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_lower_to_symmetric, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_lower_to_symmetric, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 18, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":31
+  /* "Arithmos/distance/_distance.pyx":31
  * 
  * 
  * def euclidean_rows_discrete(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -28738,9 +28738,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(20, __pyx_n_s_distances, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_dist_missing, __pyx_n_s_dist_missing2, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_ival1, __pyx_n_s_ival2, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(7, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_euclidean_rows_discrete, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(7, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_euclidean_rows_discrete, 31, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 31, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":67
+  /* "Arithmos/distance/_distance.pyx":67
  * 
  * 
  * def fix_euclidean_rows(             # <<<<<<<<<<<<<<
@@ -28750,9 +28750,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(19, __pyx_n_s_distances, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_means, __pyx_n_s_vars, __pyx_n_s_dist_missing2, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_euclidean_rows, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_euclidean_rows, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":106
+  /* "Arithmos/distance/_distance.pyx":106
  * 
  * 
  * def fix_euclidean_rows_normalized(             # <<<<<<<<<<<<<<
@@ -28762,9 +28762,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__32 = PyTuple_Pack(19, __pyx_n_s_distances, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_means, __pyx_n_s_vars, __pyx_n_s_dist_missing2, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_euclidean_rows_normalized, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_euclidean_rows_normalized, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 106, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":145
+  /* "Arithmos/distance/_distance.pyx":145
  * 
  * 
  * def fix_euclidean_cols(             # <<<<<<<<<<<<<<
@@ -28774,9 +28774,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__34 = PyTuple_Pack(15, __pyx_n_s_distances, __pyx_n_s_x, __pyx_n_s_means, __pyx_n_s_vars, __pyx_n_s_callback, __pyx_n_s_n_rows, __pyx_n_s_n_cols, __pyx_n_s_col1, __pyx_n_s_col2, __pyx_n_s_row, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_col_start); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(5, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_euclidean_cols, 145, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(5, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_euclidean_cols, 145, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 145, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":179
+  /* "Arithmos/distance/_distance.pyx":179
  * 
  * 
  * def fix_euclidean_cols_normalized(             # <<<<<<<<<<<<<<
@@ -28786,9 +28786,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__36 = PyTuple_Pack(15, __pyx_n_s_distances, __pyx_n_s_x, __pyx_n_s_means, __pyx_n_s_vars, __pyx_n_s_callback, __pyx_n_s_n_rows, __pyx_n_s_n_cols, __pyx_n_s_col1, __pyx_n_s_col2, __pyx_n_s_row, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_col_start); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(5, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_euclidean_cols_normalized, 179, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(5, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_euclidean_cols_normalized, 179, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 179, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":212
+  /* "Arithmos/distance/_distance.pyx":212
  * 
  * 
  * def manhattan_rows_cont(np.ndarray[np.float64_t, ndim=2] x1,             # <<<<<<<<<<<<<<
@@ -28798,9 +28798,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__38 = PyTuple_Pack(16, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_distances, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(4, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_manhattan_rows_cont, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(4, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_manhattan_rows_cont, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 212, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":236
+  /* "Arithmos/distance/_distance.pyx":236
  *     return distances
  * 
  * def fix_manhattan_rows(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -28810,9 +28810,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__40 = PyTuple_Pack(19, __pyx_n_s_distances, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_medians, __pyx_n_s_mads, __pyx_n_s_dist_missing2_cont, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_manhattan_rows, 236, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(8, 0, 19, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_manhattan_rows, 236, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 236, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":273
+  /* "Arithmos/distance/_distance.pyx":273
  * 
  * 
  * def fix_manhattan_rows_normalized(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
@@ -28822,9 +28822,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__42 = PyTuple_Pack(16, __pyx_n_s_distances, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(5, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_fix_manhattan_rows_normalized, 273, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(5, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_fix_manhattan_rows_normalized, 273, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 273, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":307
+  /* "Arithmos/distance/_distance.pyx":307
  * 
  * 
  * def manhattan_cols(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -28834,9 +28834,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__44 = PyTuple_Pack(16, __pyx_n_s_x, __pyx_n_s_medians, __pyx_n_s_mads, __pyx_n_s_normalize, __pyx_n_s_callback, __pyx_n_s_n_rows, __pyx_n_s_n_cols, __pyx_n_s_col1, __pyx_n_s_col2, __pyx_n_s_row, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_d, __pyx_n_s_distances, __pyx_n_s_col_start); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__44);
   __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(5, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_manhattan_cols, 307, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(5, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_manhattan_cols, 307, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 307, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":352
+  /* "Arithmos/distance/_distance.pyx":352
  * 
  * 
  * def p_nonzero(np.ndarray[np.float64_t, ndim=1] x):             # <<<<<<<<<<<<<<
@@ -28846,9 +28846,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__46 = PyTuple_Pack(5, __pyx_n_s_x, __pyx_n_s_row, __pyx_n_s_nonzeros, __pyx_n_s_nonnans, __pyx_n_s_val); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_p_nonzero, 352, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_p_nonzero, 352, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 352, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":366
+  /* "Arithmos/distance/_distance.pyx":366
  *     return float(nonzeros) / nonnans
  * 
  * def any_nan_row(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
@@ -28858,9 +28858,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__48 = PyTuple_Pack(9, __pyx_n_s_x, __pyx_n_s_callback, __pyx_n_s_row, __pyx_n_s_n_cols, __pyx_n_s_n_rows, __pyx_n_s_step, __pyx_n_s_flags, __pyx_n_s_row_start, __pyx_n_s_col); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_any_nan_row, 366, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_any_nan_row, 366, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 366, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":386
+  /* "Arithmos/distance/_distance.pyx":386
  * 
  * 
  * def jaccard_rows(np.ndarray[np.int8_t, ndim=2] nonzeros1,             # <<<<<<<<<<<<<<
@@ -28870,9 +28870,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__50 = PyTuple_Pack(25, __pyx_n_s_nonzeros1, __pyx_n_s_nonzeros2, __pyx_n_s_x1, __pyx_n_s_x2, __pyx_n_s_nans1, __pyx_n_s_nans2, __pyx_n_s_ps, __pyx_n_s_two_tables, __pyx_n_s_callback, __pyx_n_s_next_callback, __pyx_n_s_n_rows1, __pyx_n_s_n_rows2, __pyx_n_s_n_cols, __pyx_n_s_row1, __pyx_n_s_row2, __pyx_n_s_col, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_intersection, __pyx_n_s_union, __pyx_n_s_ival1, __pyx_n_s_ival2, __pyx_n_s_distances, __pyx_n_s_row_start); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(10, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_jaccard_rows, 386, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 386, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(10, 0, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_jaccard_rows, 386, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 386, __pyx_L1_error)
 
-  /* "Orange/distance/_distance.pyx":467
+  /* "Arithmos/distance/_distance.pyx":467
  * 
  * 
  * def jaccard_cols(np.ndarray[np.int8_t, ndim=2] nonzeros,             # <<<<<<<<<<<<<<
@@ -28882,7 +28882,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__52 = PyTuple_Pack(26, __pyx_n_s_nonzeros, __pyx_n_s_x, __pyx_n_s_nans, __pyx_n_s_ps, __pyx_n_s_callback, __pyx_n_s_n_rows, __pyx_n_s_n_cols, __pyx_n_s_col1, __pyx_n_s_col2, __pyx_n_s_row, __pyx_n_s_step, __pyx_n_s_val1, __pyx_n_s_val2, __pyx_n_s_intersection, __pyx_n_s_union, __pyx_n_s_ival1, __pyx_n_s_ival2, __pyx_n_s_in_both, __pyx_n_s_in_any, __pyx_n_s_in1_unk2, __pyx_n_s_unk1_in2, __pyx_n_s_unk1_unk2, __pyx_n_s_unk1_not2, __pyx_n_s_not1_unk2, __pyx_n_s_distances, __pyx_n_s_col_start); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(5, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Orange_distance__distance_pyx, __pyx_n_s_jaccard_cols, 467, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(5, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Arithmos_distance__distance_pyx, __pyx_n_s_jaccard_cols, 467, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 467, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -29288,14 +29288,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Orange__distance___distance) {
+  if (__pyx_module_is_main_Arithmos__distance___distance) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Orange.distance._distance")) {
-      if (unlikely(PyDict_SetItemString(modules, "Orange.distance._distance", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "Arithmos.distance._distance")) {
+      if (unlikely(PyDict_SetItemString(modules, "Arithmos.distance._distance", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -29316,7 +29316,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Orange/distance/_distance.pyx":7
+  /* "Arithmos/distance/_distance.pyx":7
  * #cython: wraparound=False
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -29328,175 +29328,175 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":18
+  /* "Arithmos/distance/_distance.pyx":18
  * 
  * 
  * def lower_to_symmetric(double [:, :] distances, callback):             # <<<<<<<<<<<<<<
  *     cdef int row1, row2, step, n_rows1
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_1lower_to_symmetric, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_1lower_to_symmetric, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_lower_to_symmetric, __pyx_t_1) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":31
+  /* "Arithmos/distance/_distance.pyx":31
  * 
  * 
  * def euclidean_rows_discrete(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
  *                             np.ndarray[np.float64_t, ndim=2] x1,
  *                             np.ndarray[np.float64_t, ndim=2] x2,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_3euclidean_rows_discrete, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_3euclidean_rows_discrete, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_euclidean_rows_discrete, __pyx_t_1) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":67
+  /* "Arithmos/distance/_distance.pyx":67
  * 
  * 
  * def fix_euclidean_rows(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2] distances,
  *     np.ndarray[np.float64_t, ndim=2] x1,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_5fix_euclidean_rows, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_5fix_euclidean_rows, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_euclidean_rows, __pyx_t_1) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":106
+  /* "Arithmos/distance/_distance.pyx":106
  * 
  * 
  * def fix_euclidean_rows_normalized(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2] distances,
  *     np.ndarray[np.float64_t, ndim=2] x1,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_7fix_euclidean_rows_normalized, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_7fix_euclidean_rows_normalized, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_euclidean_rows_normalized, __pyx_t_1) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":145
+  /* "Arithmos/distance/_distance.pyx":145
  * 
  * 
  * def fix_euclidean_cols(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2] distances,
  *     np.ndarray[np.float64_t, ndim=2] x,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_9fix_euclidean_cols, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_9fix_euclidean_cols, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_euclidean_cols, __pyx_t_1) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":179
+  /* "Arithmos/distance/_distance.pyx":179
  * 
  * 
  * def fix_euclidean_cols_normalized(             # <<<<<<<<<<<<<<
  *     np.ndarray[np.float64_t, ndim=2] distances,
  *     np.ndarray[np.float64_t, ndim=2] x,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_11fix_euclidean_cols_normalized, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_11fix_euclidean_cols_normalized, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_euclidean_cols_normalized, __pyx_t_1) < 0) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":212
+  /* "Arithmos/distance/_distance.pyx":212
  * 
  * 
  * def manhattan_rows_cont(np.ndarray[np.float64_t, ndim=2] x1,             # <<<<<<<<<<<<<<
  *                         np.ndarray[np.float64_t, ndim=2] x2,
  *                         char two_tables,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_13manhattan_rows_cont, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_13manhattan_rows_cont, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_manhattan_rows_cont, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":236
+  /* "Arithmos/distance/_distance.pyx":236
  *     return distances
  * 
  * def fix_manhattan_rows(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
  *                        np.ndarray[np.float64_t, ndim=2] x1,
  *                        np.ndarray[np.float64_t, ndim=2] x2,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_15fix_manhattan_rows, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_15fix_manhattan_rows, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_manhattan_rows, __pyx_t_1) < 0) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":273
+  /* "Arithmos/distance/_distance.pyx":273
  * 
  * 
  * def fix_manhattan_rows_normalized(np.ndarray[np.float64_t, ndim=2] distances,             # <<<<<<<<<<<<<<
  *                                   np.ndarray[np.float64_t, ndim=2] x1,
  *                                   np.ndarray[np.float64_t, ndim=2] x2,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_17fix_manhattan_rows_normalized, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_17fix_manhattan_rows_normalized, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fix_manhattan_rows_normalized, __pyx_t_1) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":307
+  /* "Arithmos/distance/_distance.pyx":307
  * 
  * 
  * def manhattan_cols(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
  *                    np.ndarray[np.float64_t, ndim=1] medians,
  *                    np.ndarray[np.float64_t, ndim=1] mads,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_19manhattan_cols, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_19manhattan_cols, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_manhattan_cols, __pyx_t_1) < 0) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":352
+  /* "Arithmos/distance/_distance.pyx":352
  * 
  * 
  * def p_nonzero(np.ndarray[np.float64_t, ndim=1] x):             # <<<<<<<<<<<<<<
  *     cdef:
  *         int row, nonzeros, nonnans
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_21p_nonzero, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_21p_nonzero, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_p_nonzero, __pyx_t_1) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":366
+  /* "Arithmos/distance/_distance.pyx":366
  *     return float(nonzeros) / nonnans
  * 
  * def any_nan_row(np.ndarray[np.float64_t, ndim=2] x,             # <<<<<<<<<<<<<<
  *                 callback):
  *     cdef:
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_23any_nan_row, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_23any_nan_row, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_any_nan_row, __pyx_t_1) < 0) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":386
+  /* "Arithmos/distance/_distance.pyx":386
  * 
  * 
  * def jaccard_rows(np.ndarray[np.int8_t, ndim=2] nonzeros1,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.int8_t, ndim=2] nonzeros2,
  *                  np.ndarray[np.float64_t, ndim=2] x1,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_25jaccard_rows, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 386, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_25jaccard_rows, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_jaccard_rows, __pyx_t_1) < 0) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":467
+  /* "Arithmos/distance/_distance.pyx":467
  * 
  * 
  * def jaccard_cols(np.ndarray[np.int8_t, ndim=2] nonzeros,             # <<<<<<<<<<<<<<
  *                  np.ndarray[np.float64_t, ndim=2] x,
  *                  np.ndarray[np.int8_t, ndim=1] nans,
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Orange_8distance_9_distance_27jaccard_cols, NULL, __pyx_n_s_Orange_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_6Arithmos_8distance_9_distance_27jaccard_cols, NULL, __pyx_n_s_Arithmos_distance__distance); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_jaccard_cols, __pyx_t_1) < 0) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "Orange/distance/_distance.pyx":1
+  /* "Arithmos/distance/_distance.pyx":1
  * #cython: embedsignature=True             # <<<<<<<<<<<<<<
  * #cython: infer_types=True
  * #cython: cdivision=True
@@ -29666,11 +29666,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init Orange.distance._distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init Arithmos.distance._distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Orange.distance._distance");
+    PyErr_SetString(PyExc_ImportError, "init Arithmos.distance._distance");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

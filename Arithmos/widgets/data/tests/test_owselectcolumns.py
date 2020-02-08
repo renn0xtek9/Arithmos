@@ -4,16 +4,16 @@ from unittest.mock import Mock
 from AnyQt.QtCore import QMimeData, QPoint, Qt
 from AnyQt.QtGui import QDragEnterEvent
 
-from Orange.data import Table, ContinuousVariable, DiscreteVariable, Domain
-from Orange.widgets.data.contexthandlers import \
+from Arithmos.data import Table, ContinuousVariable, DiscreteVariable, Domain
+from Arithmos.widgets.data.contexthandlers import \
     SelectAttributesDomainContextHandler
-from Orange.widgets.settings import ContextSetting
-from Orange.widgets.utils import vartype
-from Orange.widgets.tests.base import WidgetTest
-from Orange.widgets.data.owselectcolumns \
+from Arithmos.widgets.settings import ContextSetting
+from Arithmos.widgets.utils import vartype
+from Arithmos.widgets.tests.base import WidgetTest
+from Arithmos.widgets.data.owselectcolumns \
     import OWSelectAttributes, VariablesListItemModel
-from Orange.widgets.data.owrank import OWRank
-from Orange.widgets.widget import AttributeList
+from Arithmos.widgets.data.owrank import OWRank
+from Arithmos.widgets.widget import AttributeList
 
 Continuous = vartype(ContinuousVariable("c"))
 Discrete = vartype(DiscreteVariable("d"))

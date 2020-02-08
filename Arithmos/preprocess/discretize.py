@@ -8,11 +8,11 @@ from itertools import count
 import numpy as np
 import scipy.sparse as sp
 
-from Orange.data import DiscreteVariable, Domain
-from Orange.data.sql.table import SqlTable
-from Orange.statistics import distribution, contingency, util as ut
-from Orange.statistics.basic_stats import BasicStats
-from Orange.util import Reprable
+from Arithmos.data import DiscreteVariable, Domain
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.statistics import distribution, contingency, util as ut
+from Arithmos.statistics.basic_stats import BasicStats
+from Arithmos.util import Reprable
 from .transformation import Transformation
 from . import _discretize
 
@@ -108,8 +108,8 @@ class Discretization(Reprable):
         """
         Compute discretization of the given variable on the given data.
         Return a new variable with the appropriate domain
-        (:obj:`Orange.data.DiscreteVariable.values`) and transformer
-        (:obj:`Orange.data.Variable.compute_value`).
+        (:obj:`Arithmos.data.DiscreteVariable.values`) and transformer
+        (:obj:`Arithmos.data.Variable.compute_value`).
         """
         raise NotImplementedError(
             "Subclasses of 'Discretization' need to implement "
@@ -693,8 +693,8 @@ class DomainDiscretizer(Reprable):
     .. attribute:: method
 
         Feature discretization method (instance of
-        :obj:`Orange.preprocess.Discretization`). If `None` (default),
-        :class:`Orange.preprocess.EqualFreq` with 4 intervals is
+        :obj:`Arithmos.preprocess.Discretization`). If `None` (default),
+        :class:`Arithmos.preprocess.EqualFreq` with 4 intervals is
         used.
 
     .. attribute:: clean
@@ -702,7 +702,7 @@ class DomainDiscretizer(Reprable):
         If `True`, features discretized into a single interval constant are
         removed. This is useful for discretization methods that infer the
         number of intervals from the data, such as
-        :class:`Orange.preprocess.EntropyMDL` (default: `True`).
+        :class:`Arithmos.preprocess.EntropyMDL` (default: `True`).
 
     .. attribute:: discretize_class
 

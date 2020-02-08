@@ -1,5 +1,5 @@
 """
-Orange Canvas main entry point
+Arithmos Canvas main entry point
 
 """
 import uuid
@@ -32,33 +32,33 @@ from AnyQt.QtCore import (
 )
 import pyqtgraph
 
-import orangecanvas
-from orangecanvas import config as canvasconfig
-from orangecanvas.registry import qt, WidgetRegistry, set_global_registry, cache
-from orangecanvas.application.application import CanvasApplication
-from orangecanvas.application.outputview import TextStream, ExceptHook
-from orangecanvas.document.usagestatistics import UsageStatistics
-from orangecanvas.gui.splashscreen import SplashScreen
-from orangecanvas.utils.overlay import Notification, NotificationServer
-from orangecanvas.main import (
+import arithmoscanvas
+from arithmoscanvas import config as canvasconfig
+from arithmoscanvas.registry import qt, WidgetRegistry, set_global_registry, cache
+from arithmoscanvas.application.application import CanvasApplication
+from arithmoscanvas.application.outputview import TextStream, ExceptHook
+from arithmoscanvas.document.usagestatistics import UsageStatistics
+from arithmoscanvas.gui.splashscreen import SplashScreen
+from arithmoscanvas.utils.overlay import Notification, NotificationServer
+from arithmoscanvas.main import (
     fix_win_pythonw_std_stream, fix_set_proxy_env, fix_macos_nswindow_tabbing,
     breeze_dark,
 )
 
-from orangewidget.workflow.errorreporting import handle_exception
+from arithmoswidget.workflow.errorreporting import handle_exception
 
-from Orange import canvas
-from Orange.util import literal_eval, requirementsSatisfied, resource_filename
-from Orange.version import version as current, release as is_release
-from Orange.canvas import config
-from Orange.canvas.mainwindow import MainWindow
-from Orange.widgets.settings import widget_settings_dir
+from Arithmos import canvas
+from Arithmos.util import literal_eval, requirementsSatisfied, resource_filename
+from Arithmos.version import version as current, release as is_release
+from Arithmos.canvas import config
+from Arithmos.canvas.mainwindow import MainWindow
+from Arithmos.widgets.settings import widget_settings_dir
 
 
 log = logging.getLogger(__name__)
 
 statistics_server_url = os.getenv(
-    'ORANGE_STATISTICS_API_URL', "https://orange.biolab.si/usage-statistics"
+    'ORANGE_STATISTICS_API_URL', "https://arithmos.biolab.si/usage-statistics"
 )
 
 
@@ -67,8 +67,8 @@ def ua_string():
 
     is_anaconda = 'Continuum' in sys.version or 'conda' in sys.version
     machine_id = settings.value("reporting/machine-id", "", str)
-    return 'Orange{orange_version}:Python{py_version}:{platform}:{conda}:{uuid}'.format(
-        orange_version=current,
+    return 'Arithmos{arithmos_version}:Python{py_version}:{platform}:{conda}:{uuid}'.format(
+        arithmos_version=current,
         py_version='.'.join(str(a) for a in sys.version_info[:3]),
         platform=sys.platform,
         conda='Anaconda' if is_anaconda else '',
@@ -106,14 +106,14 @@ def check_for_updates():
 
             def run(self):
                 try:
-                    request = Request('https://orange.biolab.si/version/',
+                    request = Request('https://arithmos.biolab.si/version/',
                                       headers={
                                           'Accept': 'text/plain',
                                           'Accept-Encoding': 'gzip, deflate',
                                           'Connection': 'close',
                                           'User-Agent': ua_string()})
                     contents = urlopen(request, timeout=10).read().decode()
-                # Nothing that this fails with should make Orange crash
+                # Nothing that this fails with should make Arithmos crash
                 except Exception:  # pylint: disable=broad-except
                     log.exception('Failed to check for updates')
                 else:
@@ -126,7 +126,7 @@ def check_for_updates():
                     latest == skipped:
                 return
 
-            notif = Notification(title='Orange Update Available',
+            notif = Notification(title='Arithmos Update Available',
                                  text='Current version: <b>{}</b><br>'
                                       'Latest version: <b>{}</b>'.format(current, latest),
                                  accept_button_label="Download",
@@ -137,7 +137,7 @@ def check_for_updates():
                 if role == notif.RejectRole:
                     settings.setValue('startup/latest-skipped-version', latest)
                 if role == notif.AcceptRole:
-                    QDesktopServices.openUrl(QUrl("https://orange.biolab.si/download/"))
+                    QDesktopServices.openUrl(QUrl("https://arithmos.biolab.si/download/"))
 
             notif.clicked.connect(handle_click)
             canvas.notification_server_instance.registerNotification(notif)
@@ -150,8 +150,8 @@ def check_for_updates():
 
 
 def open_link(url: QUrl):
-    if url.scheme() == "orange":
-        # define custom actions within Orange here
+    if url.scheme() == "arithmos":
+        # define custom actions within Arithmos here
         if url.host() == "enable-statistics":
             settings = QSettings()
 
@@ -228,7 +228,7 @@ def pull_notifications():
 
         def run(self):
             try:
-                request = Request('https://orange.biolab.si/notification-feed',
+                request = Request('https://arithmos.biolab.si/notification-feed',
                                   headers={
                                       'Accept': 'text/plain',
                                       'Connection': 'close',
@@ -236,7 +236,7 @@ def pull_notifications():
                                       'Cache-Control': 'no-cache',
                                       'Pragma': 'no-cache'})
                 contents = urlopen(request, timeout=10).read().decode()
-            # Nothing that this fails with should make Orange crash
+            # Nothing that this fails with should make Arithmos crash
             except Exception:  # pylint: disable=broad-except
                 log.exception('Failed to pull notification feed')
             else:
@@ -267,7 +267,7 @@ def pull_notifications():
 
         # check requirements
         reqs = YAMLnotif.requirements
-        # Orange/addons version
+        # Arithmos/addons version
         if reqs and 'installed' in reqs and \
                 not requirementsSatisfied(reqs['installed'], installed, req_type=Version):
             return
@@ -333,7 +333,7 @@ def send_usage_statistics():
 
         data = UsageStatistics.load()
         for d in data:
-            d["Orange Version"] = d.pop("Application Version", "")
+            d["Arithmos Version"] = d.pop("Application Version", "")
             d["Anaconda"] = is_anaconda
             d["UUID"] = machine_id
         try:
@@ -356,7 +356,7 @@ def send_usage_statistics():
             try:
                 send_statistics(statistics_server_url)
             except Exception:  # pylint: disable=broad-except
-                # exceptions in threads would crash Orange
+                # exceptions in threads would crash Arithmos
                 log.warning("Failed to send usage statistics.")
 
     thread = SendUsageStatistics()
@@ -428,12 +428,12 @@ def main(argv=None):
     # set default application configuration
     config_ = config.Config()
     canvasconfig.set_default(config_)
-    log.info("Starting 'Orange Canvas' application.")
+    log.info("Starting 'Arithmos Canvas' application.")
 
     qt_argv = argv[:1]
 
     style = options.style
-    defaultstylesheet = "orange.qss"
+    defaultstylesheet = "arithmos.qss"
     fusiontheme = None
 
     if style is not None:
@@ -457,12 +457,12 @@ def main(argv=None):
     if app.style().metaObject().className() == "QFusionStyle":
         if fusiontheme == "breeze-dark":
             app.setPalette(breeze_dark())
-            defaultstylesheet = "darkorange.qss"
+            defaultstylesheet = "darkarithmos.qss"
 
     palette = app.palette()
     if style is None and palette.color(QPalette.Window).value() < 127:
-        log.info("Switching default stylesheet to darkorange")
-        defaultstylesheet = "darkorange.qss"
+        log.info("Switching default stylesheet to darkarithmos")
+        defaultstylesheet = "darkarithmos.qss"
 
     # Initialize SQL query and execution time logger (in SqlTable)
     sql_level = min(levels[options.log_level], logging.INFO)
@@ -490,7 +490,7 @@ def main(argv=None):
     )
     file_handler.setLevel(level)
 
-    for namespace in ["orangecanvas", "orangewidget", "Orange"]:
+    for namespace in ["arithmoscanvas", "arithmoswidget", "Arithmos"]:
         logger = logging.getLogger(namespace)
         logger.setLevel(level)
         logger.addHandler(file_handler)
@@ -529,7 +529,7 @@ def main(argv=None):
                 # no extension
                 stylesheet = os.path.extsep.join([stylesheet, "qss"])
 
-            pkg_name = orangecanvas.__name__
+            pkg_name = arithmoscanvas.__name__
             resource = "styles/" + stylesheet
 
             if pkg_resources.resource_exists(pkg_name, resource):
@@ -556,7 +556,7 @@ def main(argv=None):
                 log.info("%r style sheet not found.", stylesheet)
 
     # Add the default canvas_icons search path
-    dirpath = os.path.abspath(os.path.dirname(orangecanvas.__file__))
+    dirpath = os.path.abspath(os.path.dirname(arithmoscanvas.__file__))
     QDir.addSearchPath("canvas_icons", os.path.join(dirpath, "icons"))
 
     canvas_window = MainWindow()

@@ -4,14 +4,14 @@ from AnyQt.QtCore import Qt
 from AnyQt.QtWidgets import QLabel, QGridLayout
 import scipy.sparse as sp
 
-from Orange.data import Table
-from Orange.modelling import SVMLearner, NuSVMLearner
-from Orange.widgets import gui
-from Orange.widgets.widget import Msg
-from Orange.widgets.settings import Setting
-from Orange.widgets.utils.owlearnerwidget import OWBaseLearner
-from Orange.widgets.utils.signals import Output
-from Orange.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.data import Table
+from Arithmos.modelling import SVMLearner, NuSVMLearner
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import Msg
+from Arithmos.widgets.settings import Setting
+from Arithmos.widgets.utils.owlearnerwidget import OWBaseLearner
+from Arithmos.widgets.utils.signals import Output
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
 
 
 class OWSVM(OWBaseLearner):
@@ -20,8 +20,8 @@ class OWSVM(OWBaseLearner):
                   "feature spaces."
     icon = "icons/SVM.svg"
     replaces = [
-        "Orange.widgets.classify.owsvmclassification.OWSVMClassification",
-        "Orange.widgets.regression.owsvmregression.OWSVMRegression",
+        "Arithmos.widgets.classify.owsvmclassification.OWSVMClassification",
+        "Arithmos.widgets.regression.owsvmregression.OWSVMRegression",
     ]
     priority = 50
     keywords = ["support vector machines"]

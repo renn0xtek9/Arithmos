@@ -11,22 +11,22 @@ import pyqtgraph as pg
 from pyqtgraph.functions import mkPen
 from pyqtgraph.graphicsItems.ViewBox import ViewBox
 
-from Orange.data import Table, DiscreteVariable
-from Orange.data.sql.table import SqlTable
-from Orange.statistics.util import countnans, nanmean, nanmin, nanmax, nanstd
-from Orange.widgets import gui, report
-from Orange.widgets.settings import (
+from Arithmos.data import Table, DiscreteVariable
+from Arithmos.data.sql.table import SqlTable
+from Arithmos.statistics.util import countnans, nanmean, nanmin, nanmax, nanstd
+from Arithmos.widgets import gui, report
+from Arithmos.widgets.settings import (
     Setting, ContextSetting, DomainContextHandler
 )
-from Orange.widgets.utils.annotated_data import (
+from Arithmos.widgets.utils.annotated_data import (
     create_annotated_table, ANNOTATED_DATA_SIGNAL_NAME
 )
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.plot import OWPlotGUI, SELECT, PANNING, ZOOMING
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.visualize.owdistributions import LegendItem
-from Orange.widgets.widget import OWWidget, Input, Output, Msg
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.plot import OWPlotGUI, SELECT, PANNING, ZOOMING
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.visualize.owdistributions import LegendItem
+from Arithmos.widgets.widget import OWWidget, Input, Output, Msg
 
 
 def ccw(a, b, c):

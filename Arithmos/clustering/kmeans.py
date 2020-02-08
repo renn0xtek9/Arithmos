@@ -2,8 +2,8 @@ import warnings
 
 import sklearn.cluster
 
-from Orange.clustering.clustering import Clustering, ClusteringModel
-from Orange.data import Table
+from Arithmos.clustering.clustering import Clustering, ClusteringModel
+from Arithmos.data import Table
 
 
 __all__ = ["KMeans"]

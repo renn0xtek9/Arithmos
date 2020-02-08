@@ -24,17 +24,17 @@ from AnyQt.QtGui import (
 from AnyQt.QtCore import Qt, QPointF, QRectF, QLineF
 from AnyQt.QtCore import pyqtSignal as Signal
 
-from Orange.data import (
+from Arithmos.data import (
     Table, Domain, StringVariable, DiscreteVariable,
     ContinuousVariable)
-from Orange.statistics import util
-from Orange.widgets import widget, gui, settings
-from Orange.widgets.utils import itemmodels, colorpalette
-from Orange.widgets.utils.annotated_data import (create_annotated_table,
+from Arithmos.statistics import util
+from Arithmos.widgets import widget, gui, settings
+from Arithmos.widgets.utils import itemmodels, colorpalette
+from Arithmos.widgets.utils.annotated_data import (create_annotated_table,
                                                  ANNOTATED_DATA_SIGNAL_NAME)
-from Orange.widgets.utils.sql import check_sql_input
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import Input, Output, Msg
+from Arithmos.widgets.utils.sql import check_sql_input
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import Input, Output, Msg
 
 
 _InputData = namedtuple("_InputData", ["key", "name", "table"])
@@ -677,7 +677,7 @@ def reshape_wide(table, varlist, idvarlist, groupvarlist):
     """
     Reshape a data table into a wide format.
 
-    :param Orange.data.Table table:
+    :param Arithmos.data.Table table:
         Source data table in long format.
     :param varlist:
         A list of variables to reshape.
@@ -1595,10 +1595,10 @@ def arrays_equal(a, b, type_):
         return True
 
 if __name__ == "__main__":  # pragma: no cover
-    from Orange.evaluation import ShuffleSplit
+    from Arithmos.evaluation import ShuffleSplit
 
     data = Table("brown-selected")
-    # data1 = Orange.data.Table("brown-selected")
+    # data1 = Arithmos.data.Table("brown-selected")
     # datasets = [(data, 1), (data, 2)]
 
     data = append_column(data, "M", StringVariable("Test"),

@@ -14,12 +14,12 @@ from time import sleep, time
 import numpy as np
 import scipy.sparse as sp
 
-from Orange import data
-from Orange.data import (filter, Unknown, Variable, Table, DiscreteVariable,
+from Arithmos import data
+from Arithmos.data import (filter, Unknown, Variable, Table, DiscreteVariable,
                          ContinuousVariable, Domain, StringVariable)
-from Orange.data.util import SharedComputeValue
-from Orange.tests import test_dirname
-from Orange.data.table import _optimize_indices
+from Arithmos.data.util import SharedComputeValue
+from Arithmos.tests import test_dirname
+from Arithmos.data.table import _optimize_indices
 
 
 class TableTestCase(unittest.TestCase):
@@ -1209,13 +1209,13 @@ class CreateTableWithFilename(TableTests):
         with self.assertRaises(IOError):
             data.Table.from_file("file.invalid_extension")
 
-    @patch("Orange.data.table.Table.from_file")
+    @patch("Arithmos.data.table.Table.from_file")
     def test_calling_new_with_string_argument_calls_read_data(self, read_data):
         data.Table(self.filename)
 
         read_data.assert_called_with(self.filename)
 
-    @patch("Orange.data.table.Table.from_file")
+    @patch("Arithmos.data.table.Table.from_file")
     def test_calling_new_with_keyword_argument_filename_calls_read_data(
             self, read_data):
         data.Table(self.filename)
@@ -1231,7 +1231,7 @@ class CreateTableWithUrl(TableTests):
         mock_urlopen = Mock(side_effect=SkipRest())
         url = 'www.foo.bar/xx.csv'
 
-        with patch('Orange.data.io.UrlReader.urlopen', mock_urlopen):
+        with patch('Arithmos.data.io.UrlReader.urlopen', mock_urlopen):
             try:
                 Table.from_url(url)
             except SkipRest:
@@ -1256,7 +1256,7 @@ a\tb\tc
 
     urlopen = _MockUrlOpen()
 
-    @patch('Orange.data.io.urlopen', urlopen)
+    @patch('Arithmos.data.io.urlopen', urlopen)
     def test_trimmed_urls(self):
         for url in ('https://docs.google.com/spreadsheets/d/ABCD/edit',
                     'https://www.dropbox.com/s/ABCD/filename.csv'):
@@ -1313,7 +1313,7 @@ class CreateTableWithDomain(TableTests):
 
         self.assertEqual(table.W.shape, (self.nrows, 0))
 
-    @patch("Orange.data.table.Table.from_domain")
+    @patch("Arithmos.data.table.Table.from_domain")
     def test_calling_new_with_domain_calls_new_from_domain(
             self, new_from_domain):
         domain = self.mock_domain()
@@ -1520,7 +1520,7 @@ class CreateTableWithData(TableTests):
                                     np.zeros((1, len(self.metas)))))
             data.Table(domain, self.data, self.class_data, meta_data_)
 
-    @patch("Orange.data.table.Table.from_numpy")
+    @patch("Arithmos.data.table.Table.from_numpy")
     def test_calling_new_with_domain_and_numpy_arrays_calls_new_from_numpy(
             self, new_from_numpy):
         domain = self.mock_domain()

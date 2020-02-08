@@ -1,9 +1,9 @@
 import numpy
 
-import Orange.data
-from Orange.widgets.widget import OWWidget, Input, Output, settings
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets import gui
+import Arithmos.data
+from Arithmos.widgets.widget import OWWidget, Input, Output, settings
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets import gui
 
 
 # [start-snippet-1]
@@ -14,10 +14,10 @@ class OWDataSamplerB(OWWidget):
     priority = 20
 
     class Inputs:
-        data = Input("Data", Orange.data.Table)
+        data = Input("Data", Arithmos.data.Table)
 
     class Outputs:
-        sample = Output("Sampled Data", Orange.data.Table)
+        sample = Output("Sampled Data", Arithmos.data.Table)
 
     proportion = settings.Setting(50)
     commitOnChange = settings.Setting(0)
@@ -97,4 +97,4 @@ class OWDataSamplerB(OWWidget):
 
 
 if __name__ == "__main__":
-    WidgetPreview(OWDataSamplerB).run(Orange.data.Table("iris"))
+    WidgetPreview(OWDataSamplerB).run(Arithmos.data.Table("iris"))

@@ -2,11 +2,11 @@ import unittest
 
 import numpy as np
 
-from Orange.data import (
+from Arithmos.data import (
     ContinuousVariable, DiscreteVariable, StringVariable,
     Domain, Table, IsDefined, FilterContinuous, Values, FilterString,
     FilterDiscrete, FilterStringList, FilterRegex)
-from Orange.util import OrangeDeprecationWarning
+from Arithmos.util import ArithmosDeprecationWarning
 
 
 class TestTableInit(unittest.TestCase):
@@ -22,10 +22,10 @@ class TestTableInit(unittest.TestCase):
 
     def test_warnings(self):
         domain = Domain([ContinuousVariable("x")])
-        self.assertWarns(OrangeDeprecationWarning, Table, domain)
-        self.assertWarns(OrangeDeprecationWarning, Table, domain, Table())
-        self.assertWarns(OrangeDeprecationWarning, Table, domain, [[12]])
-        self.assertWarns(OrangeDeprecationWarning, Table, np.zeros((5, 5)))
+        self.assertWarns(ArithmosDeprecationWarning, Table, domain)
+        self.assertWarns(ArithmosDeprecationWarning, Table, domain, Table())
+        self.assertWarns(ArithmosDeprecationWarning, Table, domain, [[12]])
+        self.assertWarns(ArithmosDeprecationWarning, Table, np.zeros((5, 5)))
 
     def test_invalid_call_with_kwargs(self):
         self.assertRaises(TypeError, Table, Y=[])

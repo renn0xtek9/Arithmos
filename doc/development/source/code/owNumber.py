@@ -1,6 +1,6 @@
-from Orange.widgets import gui
-from Orange.widgets.widget import OWWidget, Output
-from Orange.widgets.settings import Setting
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import OWWidget, Output
+from Arithmos.widgets.settings import Setting
 from PyQt4.QtGui import QIntValidator
 
 

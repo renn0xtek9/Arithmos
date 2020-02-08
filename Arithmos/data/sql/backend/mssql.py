@@ -4,9 +4,9 @@ from contextlib import contextmanager
 
 import pymssql  # pylint: disable=import-error
 
-from Orange.data import StringVariable, TimeVariable, ContinuousVariable, DiscreteVariable
-from Orange.data.sql.backend import Backend
-from Orange.data.sql.backend.base import ToSql, BackendError
+from Arithmos.data import StringVariable, TimeVariable, ContinuousVariable, DiscreteVariable
+from Arithmos.data.sql.backend import Backend
+from Arithmos.data.sql.backend.base import ToSql, BackendError
 
 
 def parse_ex(ex: Exception) -> str:

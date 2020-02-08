@@ -1,20 +1,20 @@
 """
 Retrive basic library/application data/cache locations.
 
-The basic FS layout for Orange data files is
+The basic FS layout for Arithmos data files is
 
-$DATA_HOME/Orange/$VERSION/
+$DATA_HOME/Arithmos/$VERSION/
     widgets/
     canvas/
 
 where DATA_HOME is a platform dependent application directory
-(:ref:`data_dir_base`) and VERSION is Orange.__version__ string.
+(:ref:`data_dir_base`) and VERSION is Arithmos.__version__ string.
 """
 import os
 import sys
 import warnings
 
-import Orange
+import Arithmos
 
 
 def data_dir_base():
@@ -41,16 +41,16 @@ def data_dir_base():
 
 def data_dir(versioned=True):
     """
-    Return the platform dependent Orange data directory.
+    Return the platform dependent Arithmos data directory.
 
-    This is ``data_dir_base()``/Orange/__VERSION__/ directory if versioned is
-    `True` and ``data_dir_base()``/Orange/ otherwise.
+    This is ``data_dir_base()``/Arithmos/__VERSION__/ directory if versioned is
+    `True` and ``data_dir_base()``/Arithmos/ otherwise.
     """
     base = data_dir_base()
     if versioned:
-        return os.path.join(base, "Orange", Orange.__version__)
+        return os.path.join(base, "Arithmos", Arithmos.__version__)
     else:
-        return os.path.join(base, "Orange")
+        return os.path.join(base, "Arithmos")
 
 
 def widget_settings_dir(versioned=True):
@@ -63,13 +63,13 @@ def widget_settings_dir(versioned=True):
         f"'{__name__}.widget_settings_dir' is deprecated.",
         DeprecationWarning, stacklevel=2
     )
-    import orangewidget.settings
-    return orangewidget.settings.widget_settings_dir(versioned)
+    import arithmoswidget.settings
+    return arithmoswidget.settings.widget_settings_dir(versioned)
 
 
 def cache_dir(*args):
     """
-    Return the platform dependent Orange cache directory.
+    Return the platform dependent Arithmos cache directory.
     """
     if sys.platform == "darwin":
         base = os.path.expanduser("~/Library/Caches")
@@ -80,7 +80,7 @@ def cache_dir(*args):
     else:
         base = os.path.expanduser("~/.cache")
 
-    base = os.path.join(base, "Orange", Orange.__version__)
+    base = os.path.join(base, "Arithmos", Arithmos.__version__)
     if sys.platform == "win32":
         # On Windows cache and data dir are the same.
         # Microsoft suggest using a Cache subdirectory

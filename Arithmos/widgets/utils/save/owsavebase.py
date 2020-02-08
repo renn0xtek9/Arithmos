@@ -4,8 +4,8 @@ import re
 
 from AnyQt.QtWidgets import QFileDialog, QGridLayout, QMessageBox
 
-from Orange.widgets import gui, widget
-from Orange.widgets.settings import Setting
+from Arithmos.widgets import gui, widget
+from Arithmos.widgets.settings import Setting
 
 
 _userhome = os.path.expanduser(f"~{os.sep}")
@@ -33,9 +33,9 @@ class OWSaveBase(widget.OWWidget, openclass=True):
     the writer corresponding to the currently chosen filter.
 
     A minimum example of derived class is
-    `Orange.widgets.model.owsavemodel.OWSaveModel`.
+    `Arithmos.widgets.model.owsavemodel.OWSaveModel`.
     A more advanced widget that overrides a lot of base class behaviour is
-    `Orange.widgets.data.owsave.OWSave`.
+    `Arithmos.widgets.data.owsave.OWSave`.
     """
 
     class Information(widget.OWWidget.Information):

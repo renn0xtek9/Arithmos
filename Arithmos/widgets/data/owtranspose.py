@@ -1,11 +1,11 @@
-from Orange.data import Table, ContinuousVariable, StringVariable
-from Orange.widgets.settings import (Setting, ContextSetting,
+from Arithmos.data import Table, ContinuousVariable, StringVariable
+from Arithmos.widgets.settings import (Setting, ContextSetting,
                                      DomainContextHandler)
-from Orange.widgets.utils.itemmodels import DomainModel
-from Orange.widgets.utils.widgetpreview import WidgetPreview
-from Orange.widgets.widget import OWWidget, Msg
-from Orange.widgets import gui
-from Orange.widgets.widget import Input, Output
+from Arithmos.widgets.utils.itemmodels import DomainModel
+from Arithmos.widgets.utils.widgetpreview import WidgetPreview
+from Arithmos.widgets.widget import OWWidget, Msg
+from Arithmos.widgets import gui
+from Arithmos.widgets.widget import Input, Output
 
 
 class OWTranspose(OWWidget):

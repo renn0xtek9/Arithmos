@@ -3,11 +3,11 @@
 
 import unittest
 
-from Orange.data import Table, Variable
-from Orange.preprocess.score import ANOVA, Gini, UnivariateLinearRegression, \
+from Arithmos.data import Table, Variable
+from Arithmos.preprocess.score import ANOVA, Gini, UnivariateLinearRegression, \
     Chi2
-from Orange.preprocess import SelectBestFeatures, Impute, SelectRandomFeatures
-from Orange.tests import test_filename
+from Arithmos.preprocess import SelectBestFeatures, Impute, SelectRandomFeatures
+from Arithmos.tests import test_filename
 
 
 class TestFSS(unittest.TestCase):

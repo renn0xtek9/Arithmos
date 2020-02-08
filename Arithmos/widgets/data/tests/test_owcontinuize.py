@@ -5,12 +5,12 @@ from unittest.mock import Mock
 
 import numpy as np
 
-from Orange.data import Table, DiscreteVariable
-from Orange.preprocess import transformation
-from Orange.widgets.data import owcontinuize
-from Orange.widgets.data.owcontinuize import OWContinuize
-from Orange.widgets.tests.base import WidgetTest
-from orangewidget.widget import StateInfo
+from Arithmos.data import Table, DiscreteVariable
+from Arithmos.preprocess import transformation
+from Arithmos.widgets.data import owcontinuize
+from Arithmos.widgets.data.owcontinuize import OWContinuize
+from Arithmos.widgets.tests.base import WidgetTest
+from arithmoswidget.widget import StateInfo
 
 
 class TestOWContinuize(WidgetTest):

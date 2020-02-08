@@ -1,8 +1,8 @@
 import numpy as np
 
 # pylint: disable=unused-import
-from Orange.base import Learner, Model, SklLearner
-from Orange.data import Table, Domain
+from Arithmos.base import Learner, Model, SklLearner
+from Arithmos.data import Table, Domain
 
 
 class Fitter(Learner):

@@ -53,8 +53,8 @@ from PyQt5.QtWidgets import (
     QApplication, QAbstractItemView, QToolTip, QStyleOption
 )
 
-from Orange.widgets.utils import encodings
-from Orange.widgets.utils.overlay import OverlayWidget
+from Arithmos.widgets.utils import encodings
+from Arithmos.widgets.utils.overlay import OverlayWidget
 
 
 __all__ = ["ColumnType", "RowSpec", "CSVOptionsWidget", "CSVImportWidget"]
