@@ -10,7 +10,7 @@ Reads data from an SQL database.
 
 The **SQL** widget accesses data stored in an SQL database. It can connect to PostgreSQL (requires [psycopg2](http://initd.org/psycopg/) module) or [SQL Server](https://www.microsoft.com/en-us/sql-server/) (requires [pymssql](http://pymssql.org/en/stable/) module).
 
-To handle large databases, Orange attempts to execute a part of the computation in the database itself without downloading the data. This only works with PostgreSQL database and requires quantile and tsm_system_time [extensions](https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions) installed on server. If these extensions are not installed, the data will be downloaded locally.
+To handle large databases, Orange attempts to execute a part of the computation in the database itself without downloading the data. This only works with PostgreSQL database and requires quantile and tsm_system_time [extensions](https://github.com/biolab/arithmos/wiki/Installation-of-SQL-extensions) installed on server. If these extensions are not installed, the data will be downloaded locally.
 
 ![](images/SQLTable-stamped.png)
 
@@ -32,7 +32,7 @@ Install the backend.
 
 Alternatively, you can follow [these instructions](https://blog.biolab.si/2018/02/16/how-to-enable-sql-widget-in-orange/) for installing the backend.
 
-[Install the extensions](https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions). [optional]
+[Install the extensions](https://github.com/biolab/arithmos/wiki/Installation-of-SQL-extensions). [optional]
 
 ###MSSQL
 
@@ -40,7 +40,7 @@ Install the backend.
 
     pip install pymssql
 
-If you are encountering issues, follow [these instructions](https://github.com/biolab/orange3/wiki/Installation-of-SQL-extensions#mssql).
+If you are encountering issues, follow [these instructions](https://github.com/biolab/arithmos/wiki/Installation-of-SQL-extensions#mssql).
 
 ##Example
 

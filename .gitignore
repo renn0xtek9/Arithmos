@@ -1,7 +1,7 @@
 # Build files
 build
 dist
-Orange3.egg-info
+Arithmos.egg-info
 Orange/version.py
 doc/build
 *.so
@@ -30,4 +30,4 @@ htmlcov/*
 .coverage
 .coverage.*
 *.kdev4
-orange3venv/*
+arithmosvenv/*

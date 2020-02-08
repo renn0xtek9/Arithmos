@@ -1,5 +1,5 @@
 # This list was created by
-# conda create -y -n orange python=3.6.* Orange3=3.4.4 keyring=9.0 scipy=0.18.1 numpy=1.12.1
+# conda create -y -n orange python=3.6.* Arithmos=3.4.4 keyring=9.0 scipy=0.18.1 numpy=1.12.1
 # conda list -n orange --export --explicit --md5
 # ==============================================================================
 # This file may be used to create an environment using:
@@ -22,7 +22,7 @@ https://repo.continuum.io/pkgs/free/win-64/libpng-1.6.27-vc14_0.tar.bz2#9a7800b9
 https://repo.continuum.io/pkgs/free/win-64/mkl-2017.0.3-0.tar.bz2#1e58b727d7823e41f43ff3a391b63d82
 https://repo.continuum.io/pkgs/free/win-64/numpy-1.12.1-py36_0.tar.bz2#e2da940d60fdb6346b5cc3a251c0078a
 https://repo.continuum.io/pkgs/free/win-64/openssl-1.0.2l-vc14_0.tar.bz2#9c05fe14daba876b699f5251b2eb3524
-https://conda.anaconda.org/conda-forge/win-64/orange3-3.4.4-np112py36_0.tar.bz2
+https://conda.anaconda.org/conda-forge/win-64/arithmos-3.4.4-np112py36_0.tar.bz2
 https://repo.continuum.io/pkgs/free/win-64/pip-9.0.1-py36_1.tar.bz2#5ab66bd488e5f57f291942fd02cbdac5
 https://repo.continuum.io/pkgs/free/win-64/pyqt-5.6.0-py36_2.tar.bz2#b43a698e0e0b3536550cc258598cbb59
 https://repo.continuum.io/pkgs/free/win-64/pyqtgraph-0.10.0-py36_0.tar.bz2#76c8981374630a291f29162f87ce27ef

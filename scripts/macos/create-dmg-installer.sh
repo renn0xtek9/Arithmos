@@ -9,8 +9,8 @@ Create an disk image installer (.dmg) for Orange OSX application.
 
 Options:
     -a --app PATH
-        Path to a build Orange3.app to include in the disk image
-        (default dist/Orange3.app)
+        Path to a build Arithmos.app to include in the disk image
+        (default dist/Arithmos.app)
 
     -s --sign IDENTITY
         Sign the application and the .dmg image using the signing identity
@@ -30,7 +30,7 @@ DIRNAME=$(dirname "$0")
 # Path to dmg resources (volume icon, background, ...)
 RES="${DIRNAME}"/dmg-resources
 
-APP=dist/Orange3.app
+APP=dist/Arithmos.app
 
 KEEP_TEMP=0
 IDENTITY=
@@ -86,11 +86,11 @@ cp -a "${RES}"/DS_Store "${TMP_TEMPLATE}"/.DS_Store
 ln -s /Applications/ "${TMP_TEMPLATE}"/Applications
 
 # Copy the .app directory in place
-cp -a "${APP}" "${TMP_TEMPLATE}"/Orange3.app
+cp -a "${APP}" "${TMP_TEMPLATE}"/Arithmos.app
 
 if [[ "${IDENTITY}" ]]; then
     codesign -s "${IDENTITY}" --deep --verbose \
-        "${TMP_TEMPLATE}"/Orange3.app
+        "${TMP_TEMPLATE}"/Arithmos.app
 fi
 
 # Create a regular .fseventsd/no_log file

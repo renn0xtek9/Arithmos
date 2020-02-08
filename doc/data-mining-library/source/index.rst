@@ -4,7 +4,7 @@ Orange Data Mining Library
 Tutorial
 --------
 
-This is a gentle introduction on scripting in `Orange <http://orange.biolab.si>`_ , a Python 3 data mining library. We here assume you have already downloaded and installed Orange from its `github repository <https://github.com/biolab/orange3>`_ and have a working version of Python. In the command line or any Python environment, try to import Orange. Below, we used a Python shell::
+This is a gentle introduction on scripting in `Orange <http://orange.biolab.si>`_ , a Python 3 data mining library. We here assume you have already downloaded and installed Orange from its `github repository <https://github.com/biolab/arithmos>`_ and have a working version of Python. In the command line or any Python environment, try to import Orange. Below, we used a Python shell::
 
    % python
    >>> import Orange

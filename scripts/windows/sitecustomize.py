@@ -1,5 +1,5 @@
 #
-# sitecustomize added by orange3 installer.
+# sitecustomize added by arithmos installer.
 #
 # (Ana)conda python distribution expects it is 'activated', it does not really
 # support unactivated invocations (although a similar facility to this was

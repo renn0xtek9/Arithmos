@@ -38,7 +38,7 @@ Examples
 "
 }
 
-NAME=Orange3
+NAME=Arithmos
 # version is determined from the ENV_SPEC_FILE
 VERSION=
 
@@ -344,7 +344,7 @@ EOF
              -DPYINSTALLER=${pyinstaller} \
              -DINSTALL_REGISTRY_KEY=OrangeCanvas \
              -DINSTALLERICON=scripts/windows/Orange.ico \
-             -DICONDIR="orange3\icons" \
+             -DICONDIR="arithmos\icons" \
              -DLICENSE_FILE="${BASEDIR}"/license.txt \
              -DLAUNCHERMODULE="Orange.canvas" \
              "${extransisparams[@]}" \
@@ -360,15 +360,15 @@ if [[ "${ONLINE}" == yes ]]; then
     cat > "${BASEDIR}"/conda-spec.txt < "${ENV_SPEC_FILE}"
     # extract the orange version from env spec
     VERSION=$(cat < "${BASEDIR}"/conda-spec.txt |
-              grep -E 'orange3-.*tar.bz2' |
-              sed -e 's@^.*orange3-\([^-]*\)-.*tar.bz2.*@\1@')
+              grep -E 'arithmos-.*tar.bz2' |
+              sed -e 's@^.*arithmos-\([^-]*\)-.*tar.bz2.*@\1@')
     PYTHON_VERSION=$(conda-env-spec-python-version \
                      < "${BASEDIR:?}"/conda-spec.txt)
 else
     conda-fetch-packages "${BASEDIR:?}"/conda-pkgs "${ENV_SPEC_FILE}"
     # extract the orange version from env spec
     VERSION=$(cat < "${BASEDIR:?}"/conda-pkgs/conda-spec.txt |
-              grep -E 'orange3-.*tar.bz2' |
+              grep -E 'arithmos-.*tar.bz2' |
               cut -d "-" -f 2)
     PYTHON_VERSION=$(conda-env-spec-python-version \
                      < "${BASEDIR:?}"/conda-pkgs/conda-spec.txt)

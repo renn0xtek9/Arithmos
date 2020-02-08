@@ -34,18 +34,18 @@ Options:
 Examples:
     $ ./scripts/windows/build-win-installer.sh \
         --python-version 3.4.4 --platform win32 \
-        --pip-arg={-r,scripts/windows/specs/PY34-win32.txt,orange3==3.4.2}
+        --pip-arg={-r,scripts/windows/specs/PY34-win32.txt,arithmos==3.4.2}
 
     # Build the installer using a local wheels cache containing a set of
     # binary packages (for instance from Christoph Gohlke`s pythonlibs)
     $ ./scripts/windows/build/win-installer.sh \
         --python-version 3.6.1 --platform win_amd64 \
         --no-index --find-links=./wheels \
-        --pip-arg=orange3~=3.3.12
+        --pip-arg=arithmos~=3.3.12
 '
 }
 
-NAME=Orange3
+NAME=Arithmos
 # version is determined at the end when all packages are available
 VERSION=
 

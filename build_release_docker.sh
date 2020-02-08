@@ -1,4 +1,4 @@
 #!/bin/bash
 cd Docker 
-docker build -t orange3:latest .
-docker run -it orange3
+docker build -t arithmos:latest .
+docker run -it arithmos

@@ -75,7 +75,7 @@ The third example introduces some Gaussian noise to the data. Again we make a co
 
 ![](images/PythonScript-gauss.png)
 
-The final example uses Orange3-Text add-on. **Python Script** is very useful for custom preprocessing in text mining, extracting new features from strings, or utilizing advanced *nltk* or *gensim* functions. Below, we simply tokenized our input data from *deerwester.tab* by splitting them by whitespace.
+The final example uses Arithmos-Text add-on. **Python Script** is very useful for custom preprocessing in text mining, extracting new features from strings, or utilizing advanced *nltk* or *gensim* functions. Below, we simply tokenized our input data from *deerwester.tab* by splitting them by whitespace.
 
     print('Running Preprocessing ...')
     tokens = [doc.split(' ') for doc in in_data.documents]

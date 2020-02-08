@@ -13,26 +13,26 @@ Options:
     --pip-arg  ARG
         Pip install arguments to populate the python environemnt in the
         application bundle. Can be used multiple times.
-        If not supplied then by default the latest PyPi published Orange3 is
+        If not supplied then by default the latest PyPi published Arithmos is
         used.
 
     -h|--help
         Print this help
 
 Examples
-    build-macos-app.sh ~/Applications/Orange3.app
+    build-macos-app.sh ~/Applications/Arithmos.app
         Build the application using the latest published version on pypi
 
-    build-macos-app.sh --pip-arg={Orange3==3.3.12,PyQt5} ~/Applications/Orange3.app
+    build-macos-app.sh --pip-arg={Arithmos==3.3.12,PyQt5} ~/Applications/Arithmos.app
         Build the application using the specified Orange version
 
-    build-macos-app.sh --pip-arg=path-tolocal-checkout ~/Applications/Orange3-Dev.app
+    build-macos-app.sh --pip-arg=path-tolocal-checkout ~/Applications/Arithmos-Dev.app
         Build the application using a local source checkout
 
-    build-macos-app.sh --pip-arg={-e,path-tolocal-checkout}  ~/Applications/Orange3-Dev.app
+    build-macos-app.sh --pip-arg={-e,path-tolocal-checkout}  ~/Applications/Arithmos-Dev.app
         Build the application and install orange in editable mode
 
-    buils-macos-app.sh --pip-arg={-r,requirements.txt} /Applications/Orange3.app
+    buils-macos-app.sh --pip-arg={-r,requirements.txt} /Applications/Arithmos.app
         Build the application using a fixed set of locked requirements.
 '
 }
@@ -72,7 +72,7 @@ APPDIR=${1:?"Target APPDIR argument is missing"}
 PYVER=${PYTHON_VERSION%.*}  # Major.Minor
 
 if [[ ${#PIP_REQ_ARGS[@]} -eq 0 ]]; then
-    PIP_REQ_ARGS+=( Orange3 'PyQt5~=5.12.0' 'PyQtWebEngine~=5.12.0' )
+    PIP_REQ_ARGS+=( Arithmos 'PyQt5~=5.12.0' 'PyQtWebEngine~=5.12.0' )
 fi
 
 mkdir -p "${APPDIR}"/Contents/MacOS
@@ -132,7 +132,7 @@ PYTHON="${APPDIR}"/Contents/MacOS/python
 
 "${PYTHON}" -m pip install --no-warn-script-location "${PIP_REQ_ARGS[@]}"
 
-VERSION=$("${PYTHON}" -m pip show orange3 | grep -E '^Version:' |
+VERSION=$("${PYTHON}" -m pip show arithmos | grep -E '^Version:' |
           cut -d " " -f 2)
 
 m4 -D__VERSION__="${VERSION:?}" "${APPDIR}"/Contents/Info.plist.in \
@@ -146,6 +146,6 @@ rm "${APPDIR}"/Contents/Info.plist.in
     cleanup() { rm -r "${tempdir}"; }
     trap cleanup EXIT
     cd "${tempdir}"
-    "${PYTHON}" -m pip install --no-cache-dir --no-index orange3 PyQt5
+    "${PYTHON}" -m pip install --no-cache-dir --no-index arithmos PyQt5
     "${PYTHON}" -m Orange.canvas --help > /dev/null
 )

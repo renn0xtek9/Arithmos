@@ -548,7 +548,7 @@ time,continuous
                          output_csv.getvalue().splitlines())
 
     def test_repr_value(self):
-        # https://github.com/biolab/orange3/pull/1760
+        # https://github.com/biolab/arithmos/pull/1760
         var = TimeVariable('time')
         self.assertEqual(var.repr_val(Value(var, 416.3)), '416.3')
 

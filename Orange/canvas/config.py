@@ -24,7 +24,7 @@ from orangewidget.workflow import config
 
 import Orange
 
-# generated from biolab/orange3-addons repository
+# generated from biolab/arithmos-addons repository
 OFFICIAL_ADDON_LIST = "https://orange.biolab.si/addons/list"
 
 WIDGETS_ENTRY = "orange.widgets"
@@ -122,7 +122,7 @@ class Config(config.Config):
         all_eps = sorted(
             pkg_resources.iter_entry_points(WIDGETS_ENTRY),
             key=lambda ep:
-                0 if ep.dist.project_name.lower() == "orange3" else 1
+                0 if ep.dist.project_name.lower() == "arithmos" else 1
         )
         return iter(all_eps)
 
@@ -151,7 +151,7 @@ class Config(config.Config):
         be updated. The package that defines the application's `main()` entry
         point must always be in this list.
         """
-        return ["Orange3 >=3.20,<4.0a"]
+        return ["Arithmos >=3.20,<4.0a"]
 
     @staticmethod
     def examples_entry_points():
@@ -162,8 +162,8 @@ class Config(config.Config):
         # `iter_entry_points` yields them in unspecified order, so we insert
         # our first
         default_ep = pkg_resources.EntryPoint(
-            "Orange3", "Orange.canvas.workflows",
-            dist=pkg_resources.get_distribution("Orange3"))
+            "Arithmos", "Orange.canvas.workflows",
+            dist=pkg_resources.get_distribution("Arithmos"))
 
         return itertools.chain(
             (default_ep,),
@@ -172,7 +172,7 @@ class Config(config.Config):
 
     APPLICATION_URLS = {
         #: Submit a bug report action in the Help menu
-        "Bug Report": "https://github.com/biolab/orange3/issues",
+        "Bug Report": "https://github.com/biolab/arithmos/issues",
         #: A url quick tour/getting started url
         "Quick Start": "https://orange.biolab.si/getting-started/",
         #: The 'full' documentation, should be something like current /docs/

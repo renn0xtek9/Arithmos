@@ -1,9 +1,9 @@
-<kbd height=36><img src=https://raw.githubusercontent.com/irgolic/orange3/master/distribute/icon-48.png alt=img height=36/></kbd> Orange
+<kbd height=36><img src=https://raw.githubusercontent.com/irgolic/arithmos/master/distribute/icon-48.png alt=img height=36/></kbd> Orange
 ======
 
 [![Discord Chat](https://img.shields.io/discord/633376992607076354?style=for-the-badge&logo=discord&color=orange&labelColor=black)](https://discord.gg/FWrfeXV)
-[![build: passing](https://img.shields.io/travis/biolab/orange3?style=for-the-badge&labelColor=black)](https://travis-ci.org/biolab/orange3)
-[![codecov](https://img.shields.io/codecov/c/github/biolab/orange3?style=for-the-badge&labelColor=black)](https://codecov.io/gh/biolab/orange3)
+[![build: passing](https://img.shields.io/travis/biolab/arithmos?style=for-the-badge&labelColor=black)](https://travis-ci.org/biolab/arithmos)
+[![codecov](https://img.shields.io/codecov/c/github/biolab/arithmos?style=for-the-badge&labelColor=black)](https://codecov.io/gh/biolab/arithmos)
 
 [Orange] is a component-based data mining software. It includes a range of data
 visualization, exploration, preprocessing and modeling techniques. It can be
@@ -24,21 +24,21 @@ Orange requires Python 3.6 or newer.
 
 First, install [Miniconda] for your OS. Create virtual environment for Orange:
 
-    conda create python=3 --name orange3
+    conda create python=3 --name arithmos
 
 In your Anaconda Prompt add conda-forge to your channels:pip3
 
     conda config --add channels conda-forge
 
-This will enable access to the latest Orange release. Then install Orange3:
+This will enable access to the latest Orange release. Then install Arithmos:
 
-    conda install orange3
+    conda install arithmos
 
 [Miniconda]: https://docs.conda.io/en/latest/miniconda.html
 
 To install the add-ons, follow a similar recipe:
 
-    conda install orange3-<addon name>
+    conda install arithmos-<addon name>
 
 See specific add-on repositories for details.
 
@@ -51,15 +51,15 @@ To install Orange with pip, run the following.
     sudo apt install virtualenv build-essential python3-dev
 
     # Create a separate Python environment for Orange and its dependencies ...
-    virtualenv --python=python3 --system-site-packages orange3venv
+    virtualenv --python=python3 --system-site-packages arithmosvenv
     # ... and make it the active one
-    source orange3venv/bin/activate
+    source arithmosvenv/bin/activate
 
     # Install Qt dependencies for the GUI
     pip install PyQt5 PyQtWebEngine
 
     # Install Orange
-    pip install orange3
+    pip install arithmos
 
 Starting Orange GUI
 -------------------

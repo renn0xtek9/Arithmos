@@ -25,11 +25,11 @@ Source code
 
 Get the source code by cloning the git repository
 
-    git clone https://github.com/biolab/orange3.git
+    git clone https://github.com/biolab/arithmos.git
 
 or, alternatively, download and unpack the [ZIP archive] of the source code from [GitHub].
 
-[ZIP archive]: https://github.com/biolab/orange3/archive/master.zip
+[ZIP archive]: https://github.com/biolab/arithmos/archive/master.zip
 
 Building
 --------
@@ -69,5 +69,5 @@ If you've made improvements that you want to contribute, you'll need your own fo
 
 You can view the list of open [pull requests] and known [issues] on GitHub.
 
-[pull requests]: https://github.com/biolab/orange3/pulls
-[issues]: https://github.com/biolab/orange3/issues
+[pull requests]: https://github.com/biolab/arithmos/pulls
+[issues]: https://github.com/biolab/arithmos/issues

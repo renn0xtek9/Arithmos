@@ -37,7 +37,7 @@ Note that we declare our *orangedemo* package as containing widgets
 from an ad hoc defined category *Demo*.
 
 .. seealso::
-   https://github.com/biolab/orange3/wiki/Add-Ons
+   https://github.com/biolab/arithmos/wiki/Add-Ons
 
 ..
    TODO: Additional tutorial for Add-on declaration

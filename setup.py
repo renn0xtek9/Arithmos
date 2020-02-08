@@ -266,7 +266,7 @@ class build_ext_error(build_ext):
 
 
 # ${prefix} relative install path for html help files
-DATAROOTDIR = "share/help/en/orange3/htmlhelp"
+DATAROOTDIR = "share/help/en/arithmos/htmlhelp"
 
 
 def findall(startdir, followlinks=False, ):

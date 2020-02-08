@@ -65,7 +65,7 @@
             "discrete": 0,
             "meta": 0
         },
-        "location": "https://raw.githubusercontent.com/biolab/orange3/master/Orange/datasets/iris.tab",
+        "location": "https://raw.githubusercontent.com/biolab/arithmos/master/Orange/datasets/iris.tab",
         "missing": false,
         "name": "iris_url",
         "rows": 150,

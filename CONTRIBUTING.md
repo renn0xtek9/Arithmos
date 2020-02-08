@@ -13,11 +13,11 @@ Installing for development
 --------------------------
 Install Orange as suggested in [README]. Then:
 
-    git clone https://github.com/biolab/orange3.git
-    cd orange3
+    git clone https://github.com/biolab/arithmos.git
+    cd arithmos
     python setup.py develop
 
-[README]: https://github.com/biolab/orange3/blob/master/README.md
+[README]: https://github.com/biolab/arithmos/blob/master/README.md
 
 
 Reporting bugs
@@ -77,7 +77,7 @@ Please ensure your commits pass code quality assurance by executing:
 [Napoleon]: http://www.sphinx-doc.org/en/stable/ext/napoleon.html
 [keyword args to the constructor]: http://pyqt.sourceforge.net/Docs/PyQt5/qt_properties.html
 [Python data model documentation]: https://docs.python.org/3/reference/datamodel.html#object.__repr__
-[`Orange.util.Reprable`]: https://github.com/biolab/orange3/search?q="class+Reprable"&type=Code
+[`Orange.util.Reprable`]: https://github.com/biolab/arithmos/search?q="class+Reprable"&type=Code
 
 
 Human Interface Guidelines
@@ -146,7 +146,7 @@ Python package, module, or class the introduced change pertains to.
 messages most probably acceptable to that project.
 
 [Commit Guidelines]: http://git-scm.com/book/ch5-2.html#Commit-Guidelines
-[commit history]: https://github.com/biolab/orange3/commits/master
+[commit history]: https://github.com/biolab/arithmos/commits/master
 
 
 Pull requests
