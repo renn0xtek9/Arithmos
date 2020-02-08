@@ -36,7 +36,7 @@ except ImportError:
 
 NAME = 'Arithmos'
 
-VERSION = '3.25.0'
+VERSION = '1.0'
 ISRELEASED = False
 # full version identifier including a git revision identifier for development
 # build/releases (this is filled/updated in `write_version_py`)
@@ -46,9 +46,9 @@ DESCRIPTION = 'Orange, a component-based data mining framework.'
 README_FILE = os.path.join(os.path.dirname(__file__), 'README.pypi')
 LONG_DESCRIPTION = open(README_FILE).read()
 LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown'
-AUTHOR = 'Bioinformatics Laboratory, FRI UL'
-AUTHOR_EMAIL = 'info@biolab.si'
-URL = 'http://orange.biolab.si/'
+AUTHOR = 'Arithmos'
+AUTHOR_EMAIL = 'renn0xtek9@laposte.net'
+URL = 'https://github.com/renn0xtek9/Arithmos/'
 LICENSE = 'GPLv3+'
 
 KEYWORDS = [
@@ -159,7 +159,9 @@ if not release:
         GIT_REVISION = "Unknown"
 
     if not ISRELEASED:
-        FULLVERSION += '.dev0+' + GIT_REVISION[:7]
+        FULLVERSION
+        #FULLVERSION += GIT_REVISION[:7]
+        #FULLVERSION += '.dev' + GIT_REVISION[:7]
 
     a = open(filename, 'w')
     try:
@@ -232,7 +234,7 @@ class LintCommand(Command):
         sys.exit(subprocess.call(r'''
         set -eu
         upstream="$(git remote -v |
-                    awk '/[@\/]github.com[:\/]biolab\/orange3[\. ]/{ print $1; exit }')"
+                    awk '/[@\/]github.com[:\/]renn0xtek9\/Arithmos[\. ]/{ print $1; exit }')"
         git fetch -q $upstream master
         best_ancestor=$(git merge-base HEAD refs/remotes/$upstream/master)
         .travis/check_pylint_diff $best_ancestor
